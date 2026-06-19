@@ -19,7 +19,7 @@ Rebel Privacy Policy
 Apr 16, 2026
 
 Rebel Privacy Policy
-This Privacy Policy explains how Mindstone AI Limited ("Mindstone", "we", "us", "our") handles your personal data when you use the Rebel desktop application ("Rebel") and what to expect when connecting third‑party AI services and integrations. This policy is intended for external customers, enterprise buyers, and prospective users.
+This Privacy Policy explains how Mindstone Learning Limited ("Mindstone", "we", "us", "our") handles your personal data when you use the Rebel desktop application ("Rebel") and what to expect when connecting third‑party AI services and integrations. This policy is intended for external customers, enterprise buyers, and prospective users.
 
 Rebel is distributed in two builds — the **managed app** that Mindstone operates, and an **open-source build** that you install and run yourself. A few parts of this policy apply differently to each. Unless a section says otherwise, it describes the managed app; see "Open-Source / Self-Hosted Build" below for what differs.
 
@@ -695,9 +695,7 @@ Compliance with legal obligations
 
 Legal obligation (Article 6(1)(c))
 
-The data controller for users in the EEA and UK is: Mindstone AI Limited, 85 Great Portland Street, First Floor, London, W1W 7LT. Contact: hello@mindstone.com.
-
-[LEGAL — Josh: confirm the correct controller entity and reconcile naming. This policy names "Mindstone AI Limited"; Rebel's open-source licensing materials name "Mindstone Learning Limited". These may legitimately differ (for example, data controller vs IP holder) or one may be out of date. Please confirm which entity is Rebel's data controller and align the two. Both names are left visible pending confirmation. Note also that the controller analysis differs for a self-hosted open build — see "Open-Source / Self-Hosted Build".]
+The data controller for users in the EEA and UK is: Mindstone Learning Limited, 85 Great Portland Street, First Floor, London, W1W 7LT. Contact: hello@mindstone.com.
 
 For the open-source build, the telemetry basis differs from the managed app: at launch the open build collects no telemetry by default. The planned post-launch pseudonymous, opt-out telemetry channel routed through Mindstone has its lawful basis (legitimate interests vs consent) and any UK PECR / EU ePrivacy implications still to be confirmed — see the legal note in "Open-Source / Self-Hosted Build". This policy will be updated to state the basis before that channel is enabled.
 
@@ -742,7 +740,7 @@ Material change — Version 3.2 (18 Jun 2026, draft): Adds an "Open-Source / Sel
 Contact Us
 If you have questions about this policy or our practices, contact: hello@mindstone.com
 
-Data controller: Mindstone AI Limited 85 Great Portland Street, First Floor, London, W1W 7LT
+Data controller: Mindstone Learning Limited 85 Great Portland Street, First Floor, London, W1W 7LT
 
 Further Reading
 Platform-specific details:
@@ -773,8 +771,6 @@ Cursor Privacy Policy - Comprehensive details on Cursor's privacy modes, data co
 Cursor Setup Guide - Configuration and usage
 
 Note: External IDE support is considered legacy functionality. The Rebel desktop app is the recommended interface for most users.
-
-Document status: V3.2 (DRAFT — pending legal sign-off, Greg + Josh) — 18 Jun 2026
 
 
 
