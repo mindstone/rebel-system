@@ -75,17 +75,23 @@ By default, Google Drive streams files from the cloud. Some applications need fi
 
 ## Multi-Computer Behavior
 
-If the same Rebel workspace is open on more than one computer and that workspace lives in Google Drive, Rebel lets Google Drive deliver new workspace folders between computers.
+If a Rebel workspace lives in Google Drive (or Dropbox, iCloud, OneDrive, or Box), Rebel now lets your cloud app handle keeping those files in step between your computers, instead of writing them itself. Your cloud app is already syncing that folder; having Rebel write the same files at the same time is exactly what makes Google Drive mint duplicate `"(1)"` copies. So Rebel steps back and lets the cloud app do the delivering.
 
-That can be a little slower than writing those folders directly, but it prevents duplicate `"(1)"` folder copies.
+That can be a touch slower than Rebel writing the files directly, but it stops the duplicate pile-ups for good.
 
-This does **not** turn off phone/browser continuity — it only changes how desktop folder delivery works for Drive-synced workspaces.
+This does **not** turn off phone/browser continuity — Rebel still sends your changes up so your phone and the web app can read them. It only changes how files come **back down** to your computers, for workspaces that live in cloud storage.
 
-> **Running on two computers? Keep both on the latest Rebel.** A shared-Drive workspace open on
-> more than one machine is exactly where Google Drive can mint duplicate `note (1).md` /
-> `Project (1)/` copies, and an out-of-date computer can let them multiply. Keep **every** computer
-> updated, and try not to have two of them editing the **same** shared-Drive file at once — let one
-> finish syncing before the other picks it up. If duplicates have already piled up, see
+### "Newer version available" — when you edit on your phone or the web
+
+There's one case your cloud app can't cover: a file you edited on your **phone or in the web app**. That edit goes to Rebel's cloud, but it never reaches your Google Drive folder, so your cloud app has nothing to deliver — and your computer keeps showing the older version.
+
+When that happens, Rebel notices and shows a calm note: **"Newer version available — you edited this on another device."** Click **Update to newest** and your computer fast-forwards to the version you made elsewhere. There's nothing to lose and nothing to choose — you're just one click away from up to date.
+
+> **Running on two computers? Keep both on the latest Rebel.** Recent versions of Rebel stop the
+> runaway `note (1).md` / `Project (1)/` duplicate pile-ups by letting your cloud app handle file
+> delivery — but that only works once **every** computer is up to date, so keep them all current. It's
+> still wise not to have two machines editing the **same** shared-Drive file at the exact same moment;
+> let one finish syncing before the other picks it up. If duplicates have already piled up, see
 > [Cleaning up duplicate files from cloud sync](cleaning-up-duplicate-files-from-cloud-sync.md).
 
 See [Using Rebel on Multiple Devices](library://rebel-system/help-for-humans/using-rebel-on-multiple-devices.md#if-your-workspace-is-in-google-drive) for the full multi-device setup picture.

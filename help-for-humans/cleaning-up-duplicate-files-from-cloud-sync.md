@@ -29,14 +29,27 @@ amplification is what turned a handful of copies into thousands.
 
 ## What Rebel now does about it
 
-- **It no longer multiplies them.** Rebel recognises these conflict copies and refuses to
-  pass them around between your machines, so the runaway pile-up can't happen again. This now
-  covers conflict copies of whole **folders** too (like `Project (1)/`), not just individual
-  files — so a single conflicted folder can't quietly breed copies across your computers either.
+- **It stops fighting your cloud drive.** For workspaces that live in cloud storage (Google
+  Drive, Dropbox, iCloud, OneDrive, Box), Rebel now lets your cloud app handle delivering file
+  changes between your computers, instead of writing the same files itself. Two programs writing
+  the same file at once is what made the duplicates in the first place — so with only one of them
+  doing the writing, the `(1)` copies stop being minted at all. This is the real cure, and it
+  applies automatically once you update.
+- **It no longer multiplies them.** As before, Rebel also recognises any conflict copies that do
+  exist and refuses to pass them around between your machines, so an old stray copy can't breed
+  more. This covers whole **folders** too (like `Project (1)/`), not just individual files.
 - **It offers to tidy up.** If Rebel notices conflict copies in your folders, it shows a
   one-time note — *"Tidy up duplicate files? Rebel found N duplicate files from a cloud-sync
   issue."* — with a **Move … to cleanup folder** button. If you have none, you'll see
   nothing.
+
+> **A side effect worth knowing about.** Because Rebel now leaves cloud-folder delivery to your
+> cloud app, there's one thing your cloud app can't do: deliver an edit you made on your **phone or
+> in the web app** (that change never lands in your Drive folder). When that happens, Rebel shows a
+> gentle **"Newer version available — you edited this on another device"** note; click **Update to
+> newest** to bring your computer current. Nothing to lose, one click. See
+> [Google Drive desktop & local sync](rebel://library/rebel-system%2Fhelp-for-humans%2Fgoogle-drive-desktop-local-sync.md)
+> for more.
 
 **The tidy-up is deliberately cautious:**
 - It only moves copies that are **exactly identical** to your real file.
@@ -76,7 +89,7 @@ left for your review.
 
 Don't want to wait? Just ask Rebel, in plain language:
 
-> "Clean up the duplicate files in my Opti space."
+> "Clean up the duplicate files in my Acme space."
 
 Rebel will **preview first** (a dry run — it shows you exactly what it would move and moves
 nothing), and only tidy up once you say go. Under the hood it runs a small, careful tool
@@ -100,10 +113,13 @@ It's safe to run more than once, and on one folder at a time if you'd rather go 
 
 ## Avoiding it going forward
 
-The main fix is already built in — Rebel won't amplify conflict copies any more. To keep
-even the occasional one from appearing, try not to have **both** computers actively editing
-the **same** shared-drive file at the same moment; let one finish syncing before the other
-picks it up.
+The main fix is already built in — for cloud-storage workspaces, Rebel now leaves file delivery
+to your cloud app, so the two of them no longer write over each other and the duplicates stop
+being created. (Rebel also still refuses to amplify any copies that already exist.) To keep even
+the occasional one from appearing, try not to have **both** computers actively editing the
+**same** shared-drive file at the same moment; let one finish syncing before the other picks it
+up. And keep **every** computer on the latest Rebel — the fix only holds when none of your
+machines is running an old version that still writes the files itself.
 
 ## Troubleshooting
 
