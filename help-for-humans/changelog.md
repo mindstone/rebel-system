@@ -4,6 +4,23 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ---
 
+## Unreleased
+
+### Improvements
+
+<!-- detail: Conversation-search reliability work (260619). F1: buildConversationResults no longer drops genuine keyword/title (FTS) matches via a vector-only cosine floor — keep-rule is lexicalHit||cosine>=threshold, ranked by RRF rankScore; lexical exemption is opt-in (sidebar + rebel_conversations_search), auto-context stays strict. F3: rename re-embeds so the new title is findable. F5: 1-2 char / proper-noun queries get an instant title-substring floor. -->
+- **Sidebar search actually finds the conversation you mean** — Searching your conversations now reliably surfaces exact title and keyword matches instead of quietly hiding them behind a "close enough?" similarity score. Short names and acronyms return results instantly, and renaming a conversation makes it findable by its new name right away. Type the word you remember; get the conversation you meant.
+
+<!-- detail: F2: the recency chip now constrains the actual search for both quick search (deeper candidate pool + fresh-timestamp filter) and "Search all messages" (updatedAfter bound), with a muted "within the last 7 days" qualifier on the deep-search button. F7: automation conversations are now indexed and searchable under the Automations filter. -->
+- **The time filter actually filters** — "Last 24 hours / 7 days / 30 days" now narrows the search itself instead of just trimming a handful of results after the fact, so time-boxed searches surface far more of what's actually in that window. Need every last match? "Search all messages" scans the whole window. Automation runs are searchable too, under the Automations filter.
+
+### Fixes
+
+<!-- detail: F4: search:conversations-semantic returns { status, results }; useSessionSearch surfaces index_not_ready / embedding_unavailable / error distinctly from a genuine no-match. Sidebar shows "Getting search ready…" (warming, auto-resolves) and "Search is taking a breather" + Try again (error), never implying conversations are gone. -->
+- **"No results" now means no results** — When search is still warming up or briefly unavailable, the sidebar says so ("Getting search ready…" or a calm "taking a breather" with a Try again) instead of claiming nothing matched. Your conversations were never gone — search just wasn't ready yet.
+
+---
+
 ## v0.4.49 — Jun 16-18, 2026
 
 ### Highlights
