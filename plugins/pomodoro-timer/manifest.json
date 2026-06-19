@@ -1,0 +1,15 @@
+{
+  "id": "pomodoro-timer",
+  "name": "Focus Timer",
+  "description": "A focus timer with circular progress ring, configurable durations, session tracking, and animated states. Showcases lifecycle management, persistent storage, and SVG rendering.",
+  "version": "0.1.0",
+  "entryPoint": "index.tsx",
+  "maturity": "labs",
+  "role": "utility",
+  "permissions": [],
+  "externalDomains": [],
+  "surfaces": {
+    "sidebar": { "enabled": true },
+    "homepageWidget": { "enabled": false, "defaultSize": "medium" }
+  }
+}

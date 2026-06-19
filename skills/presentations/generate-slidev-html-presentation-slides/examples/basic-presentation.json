@@ -1,0 +1,136 @@
+{
+  "metadata": {
+    "title": "Demo Presentation",
+    "author": "Your Name",
+    "date": "2026-01-14",
+    "description": "A demonstration of Slidev-style HTML presentations"
+  },
+  "theme": {
+    "colors": {
+      "primary": "#7c3aed",
+      "accent": "#6466f1",
+      "background": "#0f172a",
+      "text": "#f9fafb",
+      "heading": "#ffffff",
+      "codeBackground": "#1e293b",
+      "codeBorder": "#7c3aed"
+    },
+    "fonts": {
+      "heading": "Inter, sans-serif",
+      "body": "Inter, sans-serif",
+      "code": "Fira Code, monospace"
+    },
+    "effects": {
+      "particles": true,
+      "glassMorphism": true,
+      "gradientText": true,
+      "transitions": "smooth"
+    }
+  },
+  "slides": [
+    {
+      "layout": "cover",
+      "data": {
+        "title": "Slidev-Style Presentations",
+        "subtitle": "Zero Build · Static HTML · Beautiful Slides",
+        "author": "Your Name",
+        "date": "2026-01-14"
+      }
+    },
+    {
+      "layout": "section",
+      "data": {
+        "title": "Introduction",
+        "subtitle": "What this skill does"
+      }
+    },
+    {
+      "layout": "twoColumn",
+      "data": {
+        "title": "Features Overview",
+        "leftContent": "## What You Get\n\n- 20+ professional layouts\n- Code syntax highlighting\n- Progressive disclosure\n- Visual effects\n- Single-file bundling",
+        "rightContent": "## How It Works\n\n1. Create JSON config\n2. Run generator\n3. Open in browser\n4. (Optional) Bundle\n5. Share anywhere"
+      }
+    },
+    {
+      "layout": "code",
+      "data": {
+        "title": "Code Example",
+        "language": "javascript",
+        "code": "// Generate a presentation\nconst config = {\n  metadata: { title: \"My Slides\" },\n  slides: [\n    { layout: \"cover\", data: { title: \"Hello\" } }\n  ]\n};\n\ngeneratePresentation(config, 'output/');",
+        "highlights": "2,3,5"
+      }
+    },
+    {
+      "layout": "bullets",
+      "data": {
+        "title": "Key Benefits",
+        "items": [
+          "No build tools required - just Node.js",
+          "Works offline once generated",
+          "Easy to customize and brand",
+          "Share as single HTML file"
+        ],
+        "progressive": true
+      }
+    },
+    {
+      "layout": "quote",
+      "data": {
+        "quote": "The best presentations are the ones that just work.",
+        "author": "Anonymous Developer",
+        "role": "Someone who's tired of complex build systems"
+      }
+    },
+    {
+      "layout": "fact",
+      "data": {
+        "fact": "20+",
+        "description": "Professional layouts ready to use"
+      }
+    },
+    {
+      "layout": "timeline",
+      "data": {
+        "title": "Development Process",
+        "events": [
+          {
+            "date": "Step 1",
+            "title": "Create Config",
+            "description": "Define your slides in JSON format"
+          },
+          {
+            "date": "Step 2",
+            "title": "Generate",
+            "description": "Run the generator script"
+          },
+          {
+            "date": "Step 3",
+            "title": "Preview",
+            "description": "Open in browser and iterate"
+          },
+          {
+            "date": "Step 4",
+            "title": "Bundle & Share",
+            "description": "Create single file and distribute"
+          }
+        ]
+      }
+    },
+    {
+      "layout": "statement",
+      "data": {
+        "statement": "Ready to create your own?",
+        "subtitle": "Just edit this config and regenerate"
+      }
+    },
+    {
+      "layout": "end",
+      "data": {
+        "title": "Thank You",
+        "subtitle": "Questions?",
+        "contact": "github.com/your-repo"
+      }
+    }
+  ]
+}

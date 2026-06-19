@@ -1,0 +1,847 @@
+<!doctype html>
+<html lang="en">
+
+<!--
+    Tutorial: Understanding Spaces and MCPs
+    Generated: 2026-01-06
+    Audience: All Rebel users
+-->
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Guide to understanding how Rebel Spaces organize information and how MCPs (Model Context Protocol) connect Rebel to external tools like Gmail, Slack, and calendars" />
+    <title>Spaces and MCPs: How Rebel Organizes Your World and Connects to Your Tools</title>
+
+    <style>
+        /* Base styling */
+        body {
+            font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+            line-height: 1.7;
+            padding: 2rem;
+            max-width: 900px;
+            margin: auto;
+            color: #1e293b;
+            background: #fefefe;
+        }
+
+        h1, h2, h3, h4 {
+            line-height: 1.25;
+            margin-top: 2rem;
+        }
+
+        h1 {
+            border-bottom: 3px solid #2563eb;
+            padding-bottom: 0.5rem;
+            font-size: 2rem;
+        }
+
+        h2 {
+            border-bottom: 1px solid #cbd5e1;
+            padding-bottom: 0.3rem;
+            font-size: 1.5rem;
+        }
+
+        h3 {
+            font-size: 1.2rem;
+            color: #334155;
+        }
+
+        /* Code styling */
+        code {
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+            background: #f1f5f9;
+            color: #0f172a;
+            padding: 0.2em 0.4em;
+            border-radius: 3px;
+            font-size: 0.9em;
+        }
+
+        pre {
+            background: #0f172a;
+            color: #e2e8f0;
+            padding: 1rem;
+            border-radius: 6px;
+            overflow: auto;
+            margin: 1rem 0;
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+            font-size: 0.9rem;
+        }
+
+        /* Links */
+        a {
+            color: #0b67ff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Callout boxes */
+        .callout {
+            background: #f8fafc;
+            border-left: 4px solid #2563eb;
+            padding: 1rem 1.25rem;
+            margin: 1.5rem 0;
+            border-radius: 4px;
+        }
+
+        .callout.mental-model {
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+        }
+
+        .callout.warning {
+            background: #fee2e2;
+            border-left: 4px solid #dc2626;
+        }
+
+        .callout.tip {
+            background: #dcfce7;
+            border-left: 4px solid #16a34a;
+        }
+
+        .callout.example {
+            background: #e0f2fe;
+            border-left: 4px solid #0284c7;
+        }
+
+        .callout h3, .callout h4 {
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Small text for metadata */
+        .small {
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+
+        /* Table of contents */
+        ul.toc {
+            list-style: none;
+            padding-left: 0;
+            background: #f8fafc;
+            padding: 1rem;
+            border-radius: 6px;
+        }
+
+        ul.toc > li {
+            margin: 0.5rem 0;
+        }
+
+        ul.toc ul {
+            list-style: none;
+            padding-left: 1.5rem;
+            margin-top: 0.25rem;
+        }
+
+        ul.toc a {
+            color: #334155;
+        }
+
+        /* Progressive disclosure */
+        details {
+            background: #f8fafc;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+
+        details summary {
+            font-weight: 600;
+            cursor: pointer;
+            user-select: none;
+            color: #1e40af;
+            padding: 0.25rem;
+        }
+
+        details summary:hover {
+            color: #1e3a8a;
+        }
+
+        details[open] summary {
+            margin-bottom: 1rem;
+            border-bottom: 1px solid #cbd5e1;
+            padding-bottom: 0.5rem;
+        }
+
+        /* Tables */
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+
+        th, td {
+            border: 1px solid #cbd5e1;
+            padding: 0.75rem;
+            text-align: left;
+        }
+
+        th {
+            background: #f1f5f9;
+            font-weight: 600;
+        }
+
+        tr:nth-child(even) {
+            background: #f8fafc;
+        }
+
+        /* Diagram */
+        .diagram-box {
+            background: #f8fafc;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+            font-size: 0.85rem;
+            white-space: pre;
+            overflow-x: auto;
+        }
+
+        /* Icon-like badges */
+        .badge {
+            display: inline-block;
+            padding: 0.25em 0.6em;
+            font-size: 0.85em;
+            border-radius: 4px;
+            font-weight: 500;
+        }
+
+        .badge-private { background: #dbeafe; color: #1e40af; }
+        .badge-shared { background: #dcfce7; color: #166534; }
+        .badge-mcp { background: #fef3c7; color: #92400e; }
+
+        /* Analogy section styling */
+        .analogy {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            border: 1px solid #bae6fd;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .analogy h4 {
+            margin-top: 0;
+            color: #0369a1;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>Spaces and MCPs: How Rebel Organizes Your World and Connects to Your Tools</h1>
+
+<p class="small">
+    <strong>Reading time:</strong> 15-20 minutes &nbsp;|&nbsp;
+    <strong>Last updated:</strong> January 2026
+</p>
+
+<div class="callout">
+    <h4>TL;DR</h4>
+    <p><strong>Spaces</strong> are folders that organize your information by context (personal, work, team). <strong>MCPs</strong> (Model Context Protocol) are connections that let Rebel talk to external services like Gmail, Slack, and calendars. Together, they let Rebel know <em>where</em> to store things and <em>which tools</em> to use depending on what you're working on.</p>
+</div>
+
+<h2 id="toc">Table of Contents</h2>
+<ul class="toc">
+    <li><a href="#what-are-spaces">1. What Are Spaces?</a>
+        <ul>
+            <li><a href="#spaces-analogy">The Filing Cabinet Analogy</a></li>
+            <li><a href="#space-types">Types of Spaces</a></li>
+            <li><a href="#chief-of-staff">Chief-of-Staff: Your Personal Router</a></li>
+        </ul>
+    </li>
+    <li><a href="#what-are-mcps">2. What Are MCPs?</a>
+        <ul>
+            <li><a href="#mcp-analogy">The Connector Analogy</a></li>
+            <li><a href="#common-mcps">Common MCPs You'll Encounter</a></li>
+            <li><a href="#multi-account">Multiple Accounts</a></li>
+        </ul>
+    </li>
+    <li><a href="#how-they-work-together">3. How Spaces and MCPs Work Together</a>
+        <ul>
+            <li><a href="#email-associations">Email Associations</a></li>
+            <li><a href="#disambiguation">How Rebel Knows Which Account to Use</a></li>
+        </ul>
+    </li>
+    <li><a href="#practical-examples">4. Practical Examples</a></li>
+    <li><a href="#technical-intuitions">5. Technical Intuitions</a>
+        <ul>
+            <li><a href="#frontmatter">What is Frontmatter?</a></li>
+            <li><a href="#frontmatter-fields">Key Frontmatter Fields</a></li>
+            <li><a href="#mcp-protocol">How MCP Actually Works</a></li>
+            <li><a href="#system-prompt">How Rebel Sees All This</a></li>
+        </ul>
+    </li>
+    <li><a href="#faq">6. FAQ</a></li>
+</ul>
+
+<hr>
+
+<h2 id="what-are-spaces">1. What Are Spaces?</h2>
+
+<div class="callout mental-model">
+    <h4>Mental Model: Spaces = Organized Drawers</h4>
+    <p>Think of Spaces as <strong>separate drawers in a filing cabinet</strong>. Each drawer holds different types of documents, has different access rules, and you open different drawers depending on what you're working on.</p>
+</div>
+
+<h3 id="spaces-analogy">The Filing Cabinet Analogy</h3>
+
+<div class="analogy">
+    <h4>Imagine Your Work Life as a Filing Cabinet</h4>
+    <p>You have:</p>
+    <ul>
+        <li><strong>A personal drawer</strong> (your Chief-of-Staff) - contains your preferences, priorities, personal notes</li>
+        <li><strong>A company drawer</strong> - shared with everyone at the company (most team content goes here!)</li>
+        <li><strong>A restricted drawer</strong> - for sensitive groups like HR or the Exec team who need limited sharing</li>
+        <li><strong>Maybe a family drawer</strong> - completely separate from work</li>
+    </ul>
+    <p>When someone asks you for the "Q4 marketing plan," you know to look in the company drawer (where marketing keeps their stuff), not your personal drawer. <strong>Spaces work the same way for Rebel.</strong></p>
+</div>
+
+<h3 id="space-types">Types of Spaces</h3>
+
+<table>
+    <tr>
+        <th>Space Type</th>
+        <th>Who Can See It</th>
+        <th>Example</th>
+    </tr>
+    <tr>
+        <td><span class="badge badge-private">Personal</span></td>
+        <td>Only you</td>
+        <td>Your Chief-of-Staff space with personal preferences</td>
+    </tr>
+    <tr>
+        <td><span class="badge badge-shared">Company</span></td>
+        <td>Everyone at the company</td>
+        <td><code>work/YourCompany/General/</code> - company-wide knowledge (includes Marketing, Sales, Product subfolders)</td>
+    </tr>
+    <tr>
+        <td><span class="badge badge-shared">Team (Restricted)</span></td>
+        <td>Limited group only</td>
+        <td><code>work/YourCompany/Exec/</code> or <code>work/YourCompany/HR/</code> - sensitive info with restricted access</td>
+    </tr>
+</table>
+
+<div class="callout tip">
+    <h4>Where Should Teams Like Marketing or Sales Keep Their Stuff?</h4>
+    <p>Most teams (Marketing, Sales, Product, Engineering) should use <strong>subfolders within the company-wide space</strong> rather than separate team spaces. This keeps information discoverable and avoids silos.</p>
+    <p>Separate team spaces are only needed when you have <strong>genuinely restricted content</strong> - like HR personnel files, Exec compensation discussions, or legal matters that shouldn't be visible company-wide.</p>
+</div>
+
+<div class="callout warning">
+    <h4>Why Exec vs Company-Wide Matters</h4>
+    <p>Even if you don't use Rebel for personal stuff, the distinction between <strong>Exec-only</strong> and <strong>Company-wide</strong> spaces is critical:</p>
+    <ul>
+        <li><strong>Exec space:</strong> Board prep, compensation discussions, M&A exploration, sensitive personnel matters</li>
+        <li><strong>Company space:</strong> Playbooks, policies, team knowledge - things everyone should be able to find</li>
+    </ul>
+    <p>If an exec asks Rebel "summarize our acquisition targets," that information must <em>not</em> come from a company-wide space where any employee's Rebel could access it. Spaces enforce these boundaries.</p>
+</div>
+
+<h3 id="chief-of-staff">Chief-of-Staff: Your Personal Router</h3>
+
+<p>Every Rebel user has a special space called <strong>Chief-of-Staff</strong>. Think of it as your personal command center that:</p>
+
+<ul>
+    <li><strong>Knows your preferences</strong> - communication style, working hours, priorities</li>
+    <li><strong>Spans all other spaces</strong> - it's the "router" that helps Rebel decide where to look</li>
+    <li><strong>Is always private</strong> - only you can see what's in your Chief-of-Staff</li>
+</ul>
+
+<div class="callout tip">
+    <h4>Why It Matters</h4>
+    <p>When you ask Rebel "prep me for tomorrow's meeting," it looks at your Chief-of-Staff to understand <em>your</em> priorities and style, then looks at the relevant work space for the meeting details.</p>
+</div>
+
+<hr>
+
+<h2 id="what-are-mcps">2. What Are MCPs?</h2>
+
+<div class="callout mental-model">
+    <h4>Mental Model: MCPs = Connectors</h4>
+    <p>MCPs are <strong>connectors that plug Rebel into other services</strong>. Think of them like USB adapters - each one lets Rebel talk to a different external system (Gmail, Slack, Calendar, etc.).</p>
+</div>
+
+<h3 id="mcp-analogy">The Connector Analogy</h3>
+
+<div class="analogy">
+    <h4>Imagine Rebel as Your Computer</h4>
+    <p>Your computer can't talk to a printer, camera, or external drive without the right cable or adapter. MCPs are those adapters for Rebel:</p>
+    <ul>
+        <li>The <strong>Google Workspace connector</strong> plugs Rebel into Gmail, Calendar, and Drive</li>
+        <li>The <strong>Slack connector</strong> plugs Rebel into your Slack workspaces</li>
+        <li>The <strong>Fathom connector</strong> plugs Rebel into your meeting recordings</li>
+    </ul>
+    <p>Without these connectors, Rebel can't access any of these services - it would be like trying to print without a printer cable.</p>
+</div>
+
+<h3 id="common-mcps">Common MCPs You'll Encounter</h3>
+
+<table>
+    <tr>
+        <th>MCP</th>
+        <th>What It Connects To</th>
+        <th>What Users Can Do</th>
+    </tr>
+    <tr>
+        <td><span class="badge badge-mcp">Google Workspace</span></td>
+        <td>Gmail, Calendar, Drive</td>
+        <td>Read emails, schedule meetings, search documents</td>
+    </tr>
+    <tr>
+        <td><span class="badge badge-mcp">Slack</span></td>
+        <td>Slack workspaces</td>
+        <td>Read/send messages, search channels</td>
+    </tr>
+    <tr>
+        <td><span class="badge badge-mcp">Fathom</span></td>
+        <td>Meeting recordings</td>
+        <td>Search transcripts, find action items</td>
+    </tr>
+    <tr>
+        <td><span class="badge badge-mcp">Notion</span></td>
+        <td>Notion pages</td>
+        <td>Read/update documents, search wiki</td>
+    </tr>
+    <tr>
+        <td><span class="badge badge-mcp">HubSpot</span></td>
+        <td>CRM data</td>
+        <td>Look up contacts, deals, company info</td>
+    </tr>
+</table>
+
+<h3 id="multi-account">Multiple Accounts</h3>
+
+<p>Many people have multiple accounts - a work Gmail and a personal Gmail, or Slack workspaces for different organizations. Rebel handles this by creating <strong>separate instances</strong> of each MCP.</p>
+
+<div class="diagram-box">
+Connected to your Rebel:
+
+┌──────────────────────────────────────────────────────────┐
+│  GoogleWorkspace-you-yourcompany-com                     │
+│  → you@yourcompany.com (work email, calendar, drive)     │
+├──────────────────────────────────────────────────────────┤
+│  GoogleWorkspace-you-gmail-com                           │
+│  → you@gmail.com (personal email, calendar)              │
+├──────────────────────────────────────────────────────────┤
+│  Slack-yourcompany                                       │
+│  → Your Company workspace                                │
+├──────────────────────────────────────────────────────────┤
+│  Fathom-you-yourcompany-com                              │
+│  → Work meeting recordings                               │
+└──────────────────────────────────────────────────────────┘
+</div>
+
+<hr>
+
+<h2 id="how-they-work-together">3. How Spaces and MCPs Work Together</h2>
+
+<p>Here's where it gets interesting. Spaces help Rebel understand <em>the context of your conversation</em>, and MCPs give Rebel <em>tools to work with</em>. By connecting them via <strong>email associations</strong>, Rebel can automatically know which tools to use.</p>
+
+<h3 id="email-associations">Email Associations</h3>
+
+<div class="callout mental-model">
+    <h4>Mental Model: Space Memberships</h4>
+    <p>Think of email associations like <strong>membership cards</strong>. Your work space has a membership card that says "anyone with an @yourcompany.com email belongs here." When your conversation seems related to work (you mention a client, a colleague, a work project), Rebel looks at which spaces might be relevant and uses their email associations to pick the right MCP account.</p>
+</div>
+
+<p>Spaces can be associated with emails in two ways:</p>
+
+<table>
+    <tr>
+        <th>Format</th>
+        <th>What It Means</th>
+        <th>Example</th>
+    </tr>
+    <tr>
+        <td><code>you@yourcompany.com</code></td>
+        <td>Exact email match</td>
+        <td>Only this specific email is associated</td>
+    </tr>
+    <tr>
+        <td><code>yourcompany.com</code></td>
+        <td>Domain wildcard</td>
+        <td>Any email ending in @yourcompany.com matches</td>
+    </tr>
+</table>
+
+<div class="callout example">
+    <h4>Example: Company Work Space</h4>
+    <p>Your company space might have these email associations:</p>
+    <pre>emails:
+  - yourcompany.com           # Any @yourcompany.com email
+  - alice@contractor.io       # A specific contractor</pre>
+    <p>When you're working in this space and ask Rebel to "check my calendar," it knows to use the GoogleWorkspace MCP connected to your @yourcompany.com email, not your personal Gmail.</p>
+</div>
+
+<h3 id="disambiguation">How Rebel Knows Which Account to Use</h3>
+
+<p>When you ask Rebel to do something that requires an external tool, here's what happens:</p>
+
+<ol>
+    <li><strong>Rebel infers which Space is relevant</strong> - Based on what you're asking about (a client meeting? personal dinner? HR matter?)</li>
+    <li><strong>Rebel looks at that Space's email associations</strong> - What emails/domains are associated with this space?</li>
+    <li><strong>Rebel matches to connected MCPs</strong> - Which connected MCPs have matching emails?</li>
+    <li><strong>Rebel uses the right one</strong> - Or asks you if it's unclear</li>
+</ol>
+
+<div class="diagram-box">
+User asks: "Find action items from yesterday's client meeting"
+
+┌─────────────────────────────────────────────────────────────────┐
+│ Step 1: "client meeting" → probably work-related                │
+│         Relevant space: work/YourCompany (emails: yourcompany.com)  │
+├─────────────────────────────────────────────────────────────────┤
+│ Step 2: Available MCPs with email yourcompany.com:              │
+│         - GoogleWorkspace-you-yourcompany-com                   │
+│         - Fathom-you-yourcompany-com                            │
+│         - Slack-yourcompany                                     │
+├─────────────────────────────────────────────────────────────────┤
+│ Step 3: User asked about "meeting" → Fathom is best match       │
+│         Email matches space → High confidence                   │
+├─────────────────────────────────────────────────────────────────┤
+│ Step 4: Query Fathom for yesterday's meetings and action items  │
+└─────────────────────────────────────────────────────────────────┘
+</div>
+
+<hr>
+
+<h2 id="practical-examples">4. Practical Examples</h2>
+
+<details>
+    <summary>Example 1: "Prep me for tomorrow's meeting with ACME Corp"</summary>
+    <div style="padding-top: 1rem;">
+        <p><strong>What happens:</strong></p>
+        <ol>
+            <li>Rebel recognizes "ACME Corp" as a client → this is work-related</li>
+            <li>It uses your work Google Calendar MCP to find the meeting details</li>
+            <li>It uses your work HubSpot MCP to look up ACME Corp and your history with them</li>
+            <li>It uses Fathom to find transcripts from past meetings with ACME</li>
+            <li>It saves the prep doc to the company space's memory folder</li>
+        </ol>
+        <p><strong>Why it works:</strong> All these MCPs are connected via your work email, which matches the work space's email associations.</p>
+    </div>
+</details>
+
+<details>
+    <summary>Example 2: "Schedule dinner with my partner for Saturday"</summary>
+    <div style="padding-top: 1rem;">
+        <p><strong>What happens:</strong></p>
+        <ol>
+            <li>Rebel notices this is personal (mentions "partner," "dinner," "Saturday")</li>
+            <li>If you have a personal Google Calendar connected (you@gmail.com), it uses that</li>
+            <li>If you only have work calendar, Rebel asks which one to use</li>
+        </ol>
+        <p><strong>Why it asks:</strong> Personal events shouldn't go on your work calendar. Rebel is careful about privacy boundaries.</p>
+    </div>
+</details>
+
+<details>
+    <summary>Example 3: "Post the weekly update to #marketing"</summary>
+    <div style="padding-top: 1rem;">
+        <p><strong>What happens:</strong></p>
+        <ol>
+            <li>Rebel recognizes "#marketing" as a work Slack channel</li>
+            <li>It looks for a Slack MCP connected to your company's workspace</li>
+            <li>It posts to #marketing in that workspace</li>
+        </ol>
+        <p><strong>Note:</strong> Slack uses workspace identity rather than email, but the principle is the same.</p>
+    </div>
+</details>
+
+<details>
+    <summary>Example 4: "Block 2 hours Thursday afternoon for a medical appointment"</summary>
+    <div style="padding-top: 1rem;">
+        <p><strong>This is tricky - it bleeds across personal and work:</strong></p>
+        <ol>
+            <li>Rebel recognizes this needs to block your <em>work</em> calendar (so colleagues don't book over it)</li>
+            <li>But "medical appointment" is personal - the details shouldn't be visible to coworkers</li>
+            <li>Rebel creates a calendar block on your work calendar, but labels it generically ("Busy" or "Personal") rather than "Dr. Smith - Cardiology"</li>
+            <li>If you have a personal calendar connected, Rebel might offer to add the detailed appointment there too</li>
+        </ol>
+        <p><strong>Why this matters:</strong> Real life doesn't fit neatly into "work" and "personal" boxes. Rebel tries to respect privacy while still being practical - you need the time blocked at work, but your manager doesn't need to know it's a therapist appointment.</p>
+    </div>
+</details>
+
+<hr>
+
+<h2 id="technical-intuitions">5. Technical Intuitions</h2>
+
+<p class="small">This section provides more technical detail for those who want to understand how things work "under the hood." Skip this if you just want to use Rebel without worrying about implementation details.</p>
+
+<h3 id="frontmatter">What is Frontmatter?</h3>
+
+<div class="callout mental-model">
+    <h4>Mental Model: Frontmatter = The Label on a Folder</h4>
+    <p>Imagine a folder with a label stuck on the front that says "Marketing Team / Shared / Sensitive." That's frontmatter - metadata <em>about</em> the content, written at the very top of the file.</p>
+</div>
+
+<p>Frontmatter is a block of structured data at the top of a file, surrounded by <code>---</code> markers. It uses a format called YAML (Yet Another Markup Language), which is designed to be human-readable.</p>
+
+<pre>---
+rebel_space_description: "Company-wide skills and memory for our team"
+space_type: company
+sharing: company-wide
+emails:
+  - yourcompany.com
+  - alice@contractor.io
+---
+
+# The rest of the document goes here...
+
+This is the actual content of the README.</pre>
+
+<p><strong>Why does Rebel use frontmatter?</strong></p>
+<ul>
+    <li>It's at the top of the file, so Rebel can read it quickly without parsing the whole document</li>
+    <li>It's structured, so Rebel can reliably extract specific values</li>
+    <li>It's human-readable, so you can edit it if needed</li>
+    <li>It travels with the file if you move or share it</li>
+</ul>
+
+<h3 id="frontmatter-fields">Key Frontmatter Fields for Spaces</h3>
+
+<p>Every Space has a <code>README.md</code> file at its root with frontmatter that tells Rebel about the space:</p>
+
+<table>
+    <tr>
+        <th>Field</th>
+        <th>What It Means</th>
+        <th>Example Values</th>
+    </tr>
+    <tr>
+        <td><code>rebel_space_description</code></td>
+        <td>Human-readable description of what this space is for</td>
+        <td>"Client projects for ACME Corp"</td>
+    </tr>
+    <tr>
+        <td><code>space_type</code></td>
+        <td>Category of space</td>
+        <td>personal, company, team, project</td>
+    </tr>
+    <tr>
+        <td><code>sharing</code></td>
+        <td>Who can access this space</td>
+        <td>private, team, company-wide, public</td>
+    </tr>
+    <tr>
+        <td><code>emails</code></td>
+        <td>Associated email accounts (for MCP matching)</td>
+        <td>List of emails or domain wildcards</td>
+    </tr>
+
+    <tr>
+        <td><code>sensitivity</code></td>
+        <td>How sensitive the data in this space is</td>
+        <td>standard, confidential, restricted</td>
+    </tr>
+</table>
+
+<details>
+    <summary>Full Example: Work Space README.md</summary>
+    <pre>---
+rebel_space_description: "Company-wide knowledge, playbooks, and memory"
+space_type: company
+sharing: company-wide
+emails:
+  - yourcompany.com
+sensitivity: standard
+related_spaces: ["Chief-of-Staff", "Exec"]
+owner: you@yourcompany.com
+---
+
+# Company Space
+
+This space contains company-wide information accessible to all employees.
+
+## What belongs here
+- Company policies and procedures
+- Shared playbooks and workflows
+- Team-agnostic knowledge
+
+## What doesn't belong here
+- Personal notes (use Chief-of-Staff)
+- Sensitive HR/legal info (use restricted team spaces)
+- Draft work (use your personal space until ready to share)</pre>
+</details>
+
+<h3 id="mcp-protocol">How MCP Actually Works</h3>
+
+<p>MCP stands for <strong>Model Context Protocol</strong>. It's a standard (created by Anthropic) for how AI assistants communicate with external tools. Think of it as a universal adapter.</p>
+
+<div class="diagram-box">
+How Rebel talks to Gmail via MCP:
+
+┌───────────────────────────────────────────────────────────────────┐
+│                         REBEL                                     │
+│  "I need to search emails for 'budget proposal'"                  │
+└───────────────────────────────┬───────────────────────────────────┘
+                                │
+                                ▼
+┌───────────────────────────────────────────────────────────────────┐
+│                    Google Workspace MCP                           │
+│  Translates request into Gmail API call:                          │
+│  GET /users/me/messages?q=budget%20proposal                       │
+└───────────────────────────────┬───────────────────────────────────┘
+                                │
+                                ▼
+┌───────────────────────────────────────────────────────────────────┐
+│                         GMAIL API                                 │
+│  Returns: [{ id: "abc", subject: "Q4 Budget Proposal" }, ...]     │
+└───────────────────────────────┬───────────────────────────────────┘
+                                │
+                                ▼
+┌───────────────────────────────────────────────────────────────────┐
+│                    Google Workspace MCP                           │
+│  Translates response back to Rebel-friendly format                │
+└───────────────────────────────┬───────────────────────────────────┘
+                                │
+                                ▼
+┌───────────────────────────────────────────────────────────────────┐
+│                         REBEL                                     │
+│  "Found 3 emails about budget proposals. The most recent is..."   │
+└───────────────────────────────────────────────────────────────────┘
+</div>
+
+<p><strong>Key technical points:</strong></p>
+<ul>
+    <li><strong>MCPs run as separate processes</strong> - They're not part of Rebel itself, they run alongside it</li>
+    <li><strong>Authentication is per-MCP</strong> - When you connect Google Workspace, you OAuth into your Google account</li>
+    <li><strong>Rebel can have multiple MCPs</strong> - Each one connects to a different service (or different account)</li>
+    <li><strong>MCPs expose "tools"</strong> - Each tool is a specific capability (search_emails, send_message, create_event)</li>
+</ul>
+
+<h3 id="system-prompt">How Rebel Sees All This</h3>
+
+<p>When you start a conversation with Rebel, it builds a "system prompt" that includes information about your spaces and connected tools. Here's a simplified version of what Rebel sees:</p>
+
+<pre>CURRENT CONTEXT:
+================
+
+Current Space: work/YourCompany/Marketing
+  Type: team
+  Sharing: team
+  Associated accounts: yourcompany.com
+
+Connected Tool Packages:
+  - `GoogleWorkspace-you-yourcompany-com`: you@yourcompany.com - Calendar, Drive, Gmail access
+  - `Slack-yourcompany`: Your Company workspace - Team messaging and channels
+  - `Fathom-you-yourcompany-com`: you@yourcompany.com - Meeting recordings and transcripts
+  - `RebelInbox`: Save tasks for later execution
+
+Spaces available:
+  - Chief-of-Staff (personal, private)
+  - work/YourCompany/General (company, company-wide)
+  - work/YourCompany/Marketing (team, team) ← YOU ARE HERE
+  - work/YourCompany/Sales (team, team)</pre>
+
+<p>This context helps Rebel make smart decisions about:</p>
+<ul>
+    <li>Which MCP to use when you ask for something</li>
+    <li>Where to save files and notes</li>
+    <li>What level of privacy to maintain</li>
+    <li>Which related spaces might have relevant information</li>
+</ul>
+
+<div class="callout tip">
+    <h4>The Email Matching in Action</h4>
+    <p>Notice how <code>you@yourcompany.com</code> appears in multiple places:</p>
+    <ul>
+        <li>The Marketing space is associated with <code>yourcompany.com</code> domain</li>
+        <li>The Google Workspace and Fathom MCPs are connected via <code>you@yourcompany.com</code></li>
+    </ul>
+    <p>When you ask Rebel to "find yesterday's meeting notes," it sees that you're in the Marketing space (associated with yourcompany.com), and Fathom is connected via you@yourcompany.com (which matches yourcompany.com), so it confidently queries Fathom.</p>
+</div>
+
+<hr>
+
+<h2 id="faq">6. FAQ</h2>
+
+<details>
+    <summary>Can I have multiple work spaces?</summary>
+    <div style="padding-top: 1rem;">
+        <p>Yes! You might have:</p>
+        <ul>
+            <li><code>work/YourCompany/General/</code> - company-wide</li>
+            <li><code>work/YourCompany/Marketing/</code> - your team</li>
+            <li><code>work/YourCompany/Website-Redesign/</code> - a specific project</li>
+        </ul>
+        <p>Each can have its own email associations if needed, though often they'll share the same domain (e.g., yourcompany.com).</p>
+    </div>
+</details>
+
+<details>
+    <summary>What if I'm a contractor working with multiple companies?</summary>
+    <div style="padding-top: 1rem;">
+        <p>You can have spaces for each company, each with their own email associations:</p>
+        <ul>
+            <li><code>work/Acme/</code> - associated with <code>you@contractor.io</code> (your contractor email used with Acme)</li>
+            <li><code>work/BigCorp/</code> - associated with <code>you@bigcorp.com</code> (if they gave you an account)</li>
+        </ul>
+        <p>Rebel will use the right tools based on which space you're working in.</p>
+    </div>
+</details>
+
+<details>
+    <summary>What happens if Rebel can't figure out which account to use?</summary>
+    <div style="padding-top: 1rem;">
+        <p>Rebel asks! It won't just guess. You'll see something like:</p>
+        <p><em>"I see you have two Fathom accounts connected. Would you like me to search meeting recordings from you@yourcompany.com (work) or you@gmail.com (personal)?"</em></p>
+    </div>
+</details>
+
+<details>
+    <summary>Do I need to set up email associations for every space?</summary>
+    <div style="padding-top: 1rem;">
+        <p>No, it's optional but helpful. Without email associations:</p>
+        <ul>
+            <li>Rebel will still work, but may ask more clarifying questions</li>
+            <li>You'll see "(not configured)" in the system context</li>
+            <li>Rebel uses other context clues (space name, content, your request) to make good guesses</li>
+        </ul>
+        <p>Setting up email associations just makes Rebel more confident and faster.</p>
+    </div>
+</details>
+
+<details>
+    <summary>Where can I see and edit my space settings?</summary>
+    <div style="padding-top: 1rem;">
+        <p><strong>In the Rebel app:</strong> Settings → Spaces</p>
+        <p>You can:</p>
+        <ul>
+            <li>Add new spaces</li>
+            <li>Edit descriptions and email associations</li>
+            <li>Change memory trust levels</li>
+            <li>Remove spaces</li>
+        </ul>
+    </div>
+</details>
+
+<details>
+    <summary>Where can I see my connected MCPs?</summary>
+    <div style="padding-top: 1rem;">
+        <p><strong>In the Rebel app:</strong> Settings → Connectors</p>
+        <p>You'll see all your connected services, grouped by account email. You can:</p>
+        <ul>
+            <li>Add new connections</li>
+            <li>Add additional accounts for the same service</li>
+            <li>Remove connections</li>
+            <li>Re-authenticate if something breaks</li>
+        </ul>
+    </div>
+</details>
+
+<hr>
+
+<p class="small" style="text-align: center; margin-top: 3rem;">
+    <em>Questions or feedback on this guide? Just ask Rebel!</em>
+</p>
+
+</body>
+</html>

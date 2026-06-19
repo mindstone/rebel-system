@@ -1,0 +1,316 @@
+#!/usr/bin/env bash
+#
+# Rebel CLI Setup
+#
+# Interactive setup for the Rebel CLI:
+# 1. Adds the 'rebel' command to your shell
+# 2. Configures your Anthropic API key
+# 3. Creates your personal workspace
+#
+# Usage:
+#   ./setup
+#
+# After running, restart your terminal or run:
+#   source ~/.zshrc   (or ~/.bash_profile)
+
+set -e
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+REBEL_SYSTEM_DIR="$(cd "$SCRIPT_DIR/.." && pwd)"
+REBEL_PATH="$SCRIPT_DIR/rebel"
+DEFAULT_WORKSPACE="$HOME/rebel-workspace"
+
+# Markers for idempotent config
+ALIAS_MARKER="# rebel-cli alias"
+APIKEY_MARKER="# rebel-cli api-key"
+WORKSPACE_MARKER="# rebel-cli workspace"
+
+# ============================================================================
+# Helper Functions
+# ============================================================================
+
+detect_shell_rc() {
+  # Prefer zsh (default on modern macOS)
+  if [[ -n "$ZSH_VERSION" ]] || [[ "$SHELL" == */zsh ]]; then
+    echo "$HOME/.zshrc"
+  # For bash, prefer .bash_profile for login shells (macOS default)
+  elif [[ -n "$BASH_VERSION" ]] || [[ "$SHELL" == */bash ]]; then
+    if [[ -f "$HOME/.bash_profile" ]]; then
+      echo "$HOME/.bash_profile"
+    else
+      echo "$HOME/.bashrc"
+    fi
+  else
+    echo "$HOME/.bashrc"
+  fi
+}
+
+# Check if a marker exists in shell rc
+has_config() {
+  local marker="$1"
+  grep -q "$marker" "$SHELL_RC" 2>/dev/null
+}
+
+# Get existing value for a marker (line after marker)
+get_existing_value() {
+  local marker="$1"
+  grep -A1 "$marker" "$SHELL_RC" 2>/dev/null | tail -1
+}
+
+# Remove existing config block (marker + following line)
+remove_config() {
+  local marker="$1"
+  local temp_file=$(mktemp)
+  # Remove marker line and the line after it
+  awk -v marker="$marker" '
+    $0 ~ marker { skip=1; next }
+    skip { skip=0; next }
+    { print }
+  ' "$SHELL_RC" > "$temp_file"
+  mv "$temp_file" "$SHELL_RC"
+}
+
+# Add config to shell rc
+add_config() {
+  local marker="$1"
+  local value="$2"
+  echo "" >> "$SHELL_RC"
+  echo "$marker" >> "$SHELL_RC"
+  echo "$value" >> "$SHELL_RC"
+}
+
+# Prompt for yes/no with default
+prompt_yn() {
+  local prompt="$1"
+  local default="$2"
+  local response
+  
+  if [[ "$default" == "y" ]]; then
+    read -r -p "$prompt [Y/n]: " response
+    [[ -z "$response" || "$response" =~ ^[Yy] ]]
+  else
+    read -r -p "$prompt [y/N]: " response
+    [[ "$response" =~ ^[Yy] ]]
+  fi
+}
+
+# ============================================================================
+# Main Setup
+# ============================================================================
+
+echo ""
+echo "Rebel CLI Setup"
+echo "==============="
+echo ""
+
+SHELL_RC=$(detect_shell_rc)
+SHELL_RC_NAME=$(basename "$SHELL_RC")
+
+# ============================================================================
+# Step 0: Install Dependencies
+# ============================================================================
+
+echo "Step 0: Installing Dependencies"
+
+if [[ ! -d "$REBEL_SYSTEM_DIR/node_modules" ]]; then
+  echo "  Running npm install..."
+  (cd "$REBEL_SYSTEM_DIR" && npm install --silent)
+  echo "  Dependencies installed"
+else
+  echo "  Dependencies already installed"
+fi
+echo ""
+
+# ============================================================================
+# Step 1: Shell Alias
+# ============================================================================
+
+echo "Step 1: Shell Alias"
+
+if has_config "$ALIAS_MARKER"; then
+  existing=$(get_existing_value "$ALIAS_MARKER")
+  echo "  Found existing alias: $existing"
+  if prompt_yn "  Update alias?" "n"; then
+    remove_config "$ALIAS_MARKER"
+    add_config "$ALIAS_MARKER" "alias rebel='$REBEL_PATH'"
+    echo "  Updated alias in $SHELL_RC_NAME"
+  else
+    echo "  Keeping existing alias"
+  fi
+else
+  add_config "$ALIAS_MARKER" "alias rebel='$REBEL_PATH'"
+  echo "  Added 'rebel' command to $SHELL_RC_NAME"
+fi
+echo ""
+
+# ============================================================================
+# Step 2: Anthropic API Key
+# ============================================================================
+
+echo "Step 2: Anthropic API Key"
+echo "  The 'run' command requires an Anthropic API key to call Claude."
+echo "  Get one at: https://console.anthropic.com/"
+echo ""
+
+if has_config "$APIKEY_MARKER"; then
+  echo "  Found existing API key configuration."
+  if prompt_yn "  Update API key?" "n"; then
+    remove_config "$APIKEY_MARKER"
+    # Fall through to prompt for new key
+  else
+    echo "  Keeping existing API key"
+    SKIP_APIKEY=true
+  fi
+fi
+
+if [[ -z "$SKIP_APIKEY" ]]; then
+  echo -n "  Enter your API key (or press Enter to skip): "
+  read -r -s api_key
+  echo ""  # newline after silent input
+  
+  if [[ -n "$api_key" ]]; then
+    # Trim whitespace
+    api_key=$(echo "$api_key" | xargs)
+    
+    # Warn if format doesn't look right
+    if [[ ! "$api_key" =~ ^sk-ant- ]]; then
+      echo "  Warning: Key doesn't start with 'sk-ant-'. Proceeding anyway."
+    fi
+    
+    add_config "$APIKEY_MARKER" "export ANTHROPIC_API_KEY='$api_key'"
+    echo "  Added API key to $SHELL_RC_NAME"
+  else
+    echo "  Skipped. You can set ANTHROPIC_API_KEY manually later."
+  fi
+fi
+echo ""
+
+# ============================================================================
+# Step 3: Workspace
+# ============================================================================
+
+echo "Step 3: Workspace"
+echo "  Your workspace is where your Chief-of-Staff space will live."
+echo "  This includes your personal skills, memories, and AI instructions."
+echo ""
+
+if has_config "$WORKSPACE_MARKER"; then
+  existing=$(get_existing_value "$WORKSPACE_MARKER")
+  # Extract path from export line
+  existing_path=$(echo "$existing" | sed 's/export REBEL_WORKSPACE=//' | tr -d '"' | tr -d "'")
+  # Expand $HOME if present
+  existing_path=$(eval echo "$existing_path")
+  echo "  Found existing workspace: $existing_path"
+  if prompt_yn "  Update workspace path?" "n"; then
+    remove_config "$WORKSPACE_MARKER"
+    # Fall through to prompt for new path
+  else
+    echo "  Keeping existing workspace"
+    WORKSPACE_PATH="$existing_path"
+    SKIP_WORKSPACE_PROMPT=true
+  fi
+fi
+
+if [[ -z "$SKIP_WORKSPACE_PROMPT" ]]; then
+  read -r -p "  Enter workspace path [$DEFAULT_WORKSPACE]: " workspace_input
+  
+  if [[ -z "$workspace_input" ]]; then
+    WORKSPACE_PATH="$DEFAULT_WORKSPACE"
+  else
+    # Expand ~ to $HOME
+    WORKSPACE_PATH="${workspace_input/#\~/$HOME}"
+  fi
+  
+  # Store with $HOME for portability
+  workspace_for_rc="${WORKSPACE_PATH/#$HOME/\$HOME}"
+  add_config "$WORKSPACE_MARKER" "export REBEL_WORKSPACE=\"$workspace_for_rc\""
+  echo "  Added workspace path to $SHELL_RC_NAME"
+fi
+
+# Create workspace structure if it doesn't exist
+if [[ ! -d "$WORKSPACE_PATH" ]]; then
+  echo "  Creating workspace at $WORKSPACE_PATH..."
+  mkdir -p "$WORKSPACE_PATH/Chief-of-Staff/skills"
+  mkdir -p "$WORKSPACE_PATH/Chief-of-Staff/memory"
+  
+  # Create Chief-of-Staff README
+  cat > "$WORKSPACE_PATH/Chief-of-Staff/README.md" << 'EOF'
+---
+rebel_space_description: "Router and cross-space context"
+space_type: "router"
+sharing: "private"
+sensitivity: "standard"
+---
+
+# Chief of Staff
+
+This is your personal router space. Add instructions here that should apply to all your conversations with Rebel.
+
+## About Me
+
+<!-- Add information about yourself, your role, preferences -->
+
+## My Workflows
+
+<!-- Add common workflows or instructions -->
+
+## Notes
+
+<!-- The AI can add notes and memories here -->
+EOF
+  
+  echo "  Created Chief-of-Staff/README.md"
+  echo "  Created Chief-of-Staff/skills/"
+  echo "  Created Chief-of-Staff/memory/"
+elif [[ ! -d "$WORKSPACE_PATH/Chief-of-Staff" ]]; then
+  echo "  Workspace exists but Chief-of-Staff not found. Creating..."
+  mkdir -p "$WORKSPACE_PATH/Chief-of-Staff/skills"
+  mkdir -p "$WORKSPACE_PATH/Chief-of-Staff/memory"
+  
+  if [[ ! -f "$WORKSPACE_PATH/Chief-of-Staff/README.md" ]]; then
+    cat > "$WORKSPACE_PATH/Chief-of-Staff/README.md" << 'EOF'
+---
+rebel_space_description: "Router and cross-space context"
+space_type: "router"
+sharing: "private"
+sensitivity: "standard"
+---
+
+# Chief of Staff
+
+This is your personal router space. Add instructions here that should apply to all your conversations with Rebel.
+
+## About Me
+
+<!-- Add information about yourself, your role, preferences -->
+
+## My Workflows
+
+<!-- Add common workflows or instructions -->
+
+## Notes
+
+<!-- The AI can add notes and memories here -->
+EOF
+    echo "  Created Chief-of-Staff/README.md"
+  fi
+else
+  echo "  Workspace already exists at $WORKSPACE_PATH"
+fi
+
+echo ""
+
+# ============================================================================
+# Done
+# ============================================================================
+
+echo "Setup complete!"
+echo ""
+echo "To start using rebel, run:"
+echo "  source $SHELL_RC"
+echo ""
+echo "Then try:"
+echo "  rebel list              # List all skills"
+echo "  rebel validate          # Validate rebel-system"
+echo "  rebel run --help        # See run command options"
+echo ""

@@ -1,0 +1,24 @@
+{
+  "name": "outlook-email-parser",
+  "version": "1.0.0",
+  "description": "Parse Outlook PST and OLM exports into searchable JSON files",
+  "main": "parse_pst.js",
+  "scripts": {
+    "parse:pst": "node parse_pst.js",
+    "parse:olm": "node parse_olm.js"
+  },
+  "keywords": [
+    "outlook",
+    "pst",
+    "olm",
+    "email",
+    "parser",
+    "export"
+  ],
+  "author": "Mindstone",
+  "license": "MIT",
+  "dependencies": {
+    "pst-extractor": "^1.12.0",
+    "olm-reader": "^1.0.0"
+  }
+}

@@ -1,0 +1,518 @@
+<!doctype html>
+<html lang="en">
+
+<!--
+    TUTORIAL REQUEST
+    
+    User prompt: Friendly, non-technical getting started tutorial for Rebel desktop app.
+    Updated from "Company OS" terminology to "Rebel" as the primary interface.
+    
+    Generated: 2025-10-23
+    Updated: 2026-01-05 (Rebel-first, removed Cursor-as-primary references)
+    Audience: Non-technical business users new to Rebel
+    Complexity: simple to medium (pedagogical, accessible)
+    
+    Source files analyzed:
+    - help/getting-started.md - Setup walkthrough
+    - help/Rebel-interface.md - Primary interface docs
+    - help/how-it-works.md - Mental model overview
+    
+    Related resources:
+    - help/external-IDE-OBSOLETE/Cursor.md - For developers who prefer an IDE
+    - help/architecture-technical-description.md - Reference architecture doc
+-->
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description"
+        content="Friendly, non-technical introduction to Rebel - a personal AI assistant that helps you work smarter with shared knowledge, automated workflows, and intelligent memory." />
+    <title>Getting Started with Rebel</title>
+
+    <!-- Highlight.js for syntax highlighting -->
+    <link rel="stylesheet" href="lib/highlight-a11y-dark.css">
+    <script src="lib/highlight.min.js"></script>
+    <script src="lib/highlight-init.js"></script>
+
+    <style>
+        /* Base styling */
+        body {
+            font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+            line-height: 1.7;
+            padding: 2rem;
+            max-width: 900px;
+            margin: auto;
+            color: #1e293b;
+            font-size: 17px;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            line-height: 1.3;
+            margin-top: 2rem;
+        }
+
+        h1 {
+            border-bottom: 3px solid #2563eb;
+            padding-bottom: 0.5rem;
+            font-size: 2.2em;
+        }
+
+        h2 {
+            border-bottom: 1px solid #cbd5e1;
+            padding-bottom: 0.3rem;
+            color: #1e40af;
+        }
+
+        h3 {
+            color: #3b82f6;
+        }
+
+        /* Code and pre blocks */
+        code,
+        pre {
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+        }
+
+        pre {
+            background: #0f172a;
+            color: #e2e8f0;
+            padding: 1rem;
+            border-radius: 8px;
+            overflow: auto;
+            margin: 1rem 0;
+            font-size: 0.95em;
+        }
+
+        code:not(pre code) {
+            background: #f1f5f9;
+            color: #0f172a;
+            padding: 0.2em 0.5em;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+
+        /* Links */
+        a {
+            color: #0b67ff;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+        }
+
+        a:hover {
+            border-bottom: 1px solid #0b67ff;
+        }
+
+        /* Callout boxes */
+        .callout {
+            background: #f8fafc;
+            border-left: 4px solid #2563eb;
+            padding: 1.25rem 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 6px;
+        }
+
+        .callout.tip {
+            background: #dcfce7;
+            border-left: 4px solid #16a34a;
+        }
+
+        .callout.important {
+            background: #fff7ed;
+            border-left: 4px solid #f59e0b;
+        }
+
+        .callout.example {
+            background: #eff6ff;
+            border-left: 4px solid #3b82f6;
+        }
+
+        .callout h3 {
+            margin-top: 0;
+            margin-bottom: 0.75rem;
+        }
+
+        /* Small text for metadata */
+        .small {
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+
+        /* Diagram images */
+        img.diagram {
+            max-width: 100%;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Table of contents */
+        ul.toc {
+            list-style: none;
+            padding-left: 0;
+            background: #f8fafc;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+        }
+
+        ul.toc>li {
+            margin: 0.75rem 0;
+            font-size: 1.05em;
+        }
+
+        ul.toc a {
+            font-weight: 500;
+        }
+
+        /* Progressive disclosure */
+        details {
+            background: #f8fafc;
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            padding: 1.25rem;
+            margin: 1rem 0;
+        }
+
+        details summary {
+            font-weight: 600;
+            cursor: pointer;
+            user-select: none;
+            color: #1e40af;
+            padding: 0.5rem;
+            font-size: 1.05em;
+        }
+
+        details summary:hover {
+            color: #1e3a8a;
+        }
+
+        details[open] summary {
+            margin-bottom: 1rem;
+            border-bottom: 1px solid #cbd5e1;
+            padding-bottom: 0.75rem;
+        }
+
+        /* Step-by-step flow */
+        .step {
+            background: #eff6ff;
+            border-left: 4px solid #3b82f6;
+            padding: 1rem 1.25rem;
+            margin: 1.25rem 0;
+            border-radius: 6px;
+        }
+
+        .step-number {
+            font-weight: bold;
+            color: #1e40af;
+            font-size: 1.2em;
+        }
+
+        /* Lists */
+        ul,
+        ol {
+            line-height: 1.8;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem;
+                font-size: 16px;
+            }
+
+            pre {
+                font-size: 0.85em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- TITLE AND METADATA -->
+    <h1>Getting Started with Rebel</h1>
+    <p class="small">
+        <strong>For</strong>: Anyone new to Rebel (no tech background needed!)<br>
+        <strong>Reading time</strong>: 10-15 minutes<br>
+        <strong>What you need</strong>: The Rebel desktop app installed
+    </p>
+
+    <!-- TL;DR -->
+    <div class="callout">
+        <h3>What is Rebel?</h3>
+        <p>Rebel is your AI-powered assistant that lives on your computer. It knows about your work, your preferences,
+            and your tools—and can handle tasks like prepping for meetings, drafting documents, or researching topics.
+            Instead of starting from scratch every conversation, Rebel remembers context and learns over time.</p>
+        <p><strong>Example</strong>: Say "Prep me for tomorrow's call with ACME Corp" and get a complete briefing with
+            company research, talking points, and background on who you're meeting.</p>
+    </div>
+
+    <!-- TABLE OF CONTENTS -->
+    <h2>What's in This Guide</h2>
+    <ul class="toc">
+        <li><a href="#what-it-does">What Can Rebel Do?</a></li>
+        <li><a href="#how-it-works">How Does It Work? (The Simple Version)</a></li>
+        <li><a href="#getting-started">Getting Started: Your First 10 Minutes</a></li>
+        <li><a href="#using-it">Using Rebel Day-to-Day</a></li>
+        <li><a href="#common-tasks">Common Tasks You Can Do</a></li>
+        <li><a href="#help">Getting Help</a></li>
+    </ul>
+
+    <!-- WHAT IT DOES -->
+    <h2 id="what-it-does">What Can Rebel Do?</h2>
+
+    <p>Rebel gives you access to AI workflows (we call them "skills") that handle common tasks. Here are some
+        examples:</p>
+
+    <div class="callout example">
+        <h3>Finding Information</h3>
+        <p><strong>You say</strong>: "Search Slack for discussions about the new browser extension"</p>
+        <p><strong>Rebel</strong>: Searches through Slack channels and summarizes what it finds</p>
+    </div>
+
+    <div class="callout example">
+        <h3>Meeting Preparation</h3>
+        <p><strong>You say</strong>: "Prep me for my 2pm meeting with Sarah at TechCorp"</p>
+        <p><strong>Rebel</strong>: Researches TechCorp, pulls up past conversations, creates a briefing document with
+            talking points</p>
+    </div>
+
+    <div class="callout example">
+        <h3>Drafting Communication</h3>
+        <p><strong>You say</strong>: "Draft an email to Sarah about our Q4 renewal discussion"</p>
+        <p><strong>Rebel</strong>: Creates a draft with relevant context and talking points</p>
+    </div>
+
+    <h3>What Makes Rebel Different?</h3>
+    <p>You might be thinking "I can already ask ChatGPT to do these things." Here's what's special about Rebel:</p>
+    <ul>
+        <li><strong>It remembers you</strong>: Your priorities, projects, preferences persist across conversations</li>
+        <li><strong>It connects to your tools</strong>: Slack, Gmail, Calendar, Notion—Rebel can actually use them</li>
+        <li><strong>It knows your context</strong>: Workspaces and spaces organize information by project or team</li>
+        <li><strong>It speaks and listens</strong>: Full voice interaction, not just text</li>
+        <li><strong>It asks before acting</strong>: Safety guardrails prevent accidental damage</li>
+        <li><strong>It works in the background</strong>: Schedule recurring tasks like daily briefings</li>
+    </ul>
+    <p><strong>More details</strong>: See <a href="../why-rebel.md">Why Rebel?</a> for a full comparison with
+        alternatives.</p>
+
+    <!-- HOW IT WORKS -->
+    <h2 id="how-it-works">How Does It Work? (The Simple Version)</h2>
+
+    <h3>The Five-Second Explanation</h3>
+    <p>Rebel is a desktop app that connects to a workspace folder on your computer. The workspace contains your files,
+        skills (AI instructions), and memory. When you ask Rebel to do something, it reads the relevant context, runs
+        the appropriate skills, and shows you the result.</p>
+
+    <h3>Key Concepts (In Plain English)</h3>
+
+    <details>
+        <summary>What's a "Workspace"?</summary>
+        <p>A workspace is a folder on your computer that Rebel uses as its home base. It contains:</p>
+        <ul>
+            <li><strong>rebel-system/</strong>: Core instructions and help docs (read-only)</li>
+            <li><strong>Spaces</strong>: Folders for different areas of your work (personal, team, projects)</li>
+            <li><strong>Skills</strong>: Reusable AI instructions for common tasks</li>
+        </ul>
+        <p>If your team uses a shared workspace (via Google Drive, Dropbox, etc.), you'll all see the same shared
+            content while keeping your personal stuff private.</p>
+    </details>
+
+    <details>
+        <summary>What's a "Space"?</summary>
+        <p>Spaces are areas within your workspace for different parts of your work. Think of them like folders with
+            superpowers:</p>
+        <ul>
+            <li><strong>Chief-of-Staff</strong>: Your personal space (private to you)</li>
+            <li><strong>Team spaces</strong>: Shared with your team</li>
+            <li><strong>Project spaces</strong>: For specific initiatives</li>
+        </ul>
+        <p>Each space can have its own skills, memory, and sharing settings.</p>
+    </details>
+
+    <details>
+        <summary>What's a "Skill"?</summary>
+        <p>A skill is like a recipe for the AI. It's step-by-step instructions for handling a specific task. For
+            example, the "Meeting Prep" skill tells Rebel: "First, research the company. Second, check past
+            interactions. Third, compile a briefing document."</p>
+        <p>Skills are just text files you can read and customize.</p>
+    </details>
+
+    <details>
+        <summary>What's "Memory"?</summary>
+        <p>Memory is what Rebel learns about you over time—your preferences, ongoing projects, key contacts. It's stored
+            in your spaces and referenced automatically, so Rebel doesn't start from scratch every conversation.</p>
+        <p>You control what's in your memory, and Rebel asks before adding sensitive information.</p>
+    </details>
+
+    <details>
+        <summary>What are "Connectors"?</summary>
+        <p>Connectors let Rebel access your work tools—Gmail, Slack, Calendar, Notion, and more. Once connected, Rebel
+            can actually DO things in these tools, not just talk about them.</p>
+        <p>Set these up in Settings → Connectors.</p>
+    </details>
+
+    <!-- GETTING STARTED -->
+    <h2 id="getting-started">Getting Started: Your First 10 Minutes</h2>
+
+    <div class="callout important">
+        <h3>Before You Start</h3>
+        <p>Make sure you have:</p>
+        <ul>
+            <li>Rebel desktop app installed</li>
+            <li>About 10 minutes of uninterrupted time</li>
+        </ul>
+    </div>
+
+    <div class="step">
+        <span class="step-number">Step 1:</span> Launch Rebel
+        <p>Open the Rebel app. On first launch, you'll choose or create a workspace folder.</p>
+    </div>
+
+    <div class="step">
+        <span class="step-number">Step 2:</span> Follow the Onboarding Checklist
+        <p>Rebel walks you through setup with an interactive checklist:</p>
+        <ul>
+            <li>Grant permissions (folder access, microphone if you want voice)</li>
+            <li>Create your profile</li>
+            <li>Quick tour of the interface</li>
+        </ul>
+    </div>
+
+    <div class="step">
+        <span class="step-number">Step 3:</span> Connect Your Tools (Optional)
+        <p>Go to <strong>Settings → Connectors</strong> to connect services like Gmail, Slack, or Calendar. This lets
+            Rebel access your real data.</p>
+        <p class="small">See <a href="../mcp-connectors-tools-and-integrations.md">Connectors and Tools</a> for
+            details.</p>
+    </div>
+
+    <div class="step">
+        <span class="step-number">Step 4:</span> Start Your First Conversation
+        <p>Click <strong>New Conversation</strong> (or press <strong>Cmd/Ctrl+N</strong>) and try something like:</p>
+        <ul>
+            <li>"What can you help me with?"</li>
+            <li>"Summarize my calendar for this week" (if calendar connected)</li>
+            <li>"Help me draft an email about [topic]"</li>
+        </ul>
+    </div>
+
+    <div class="callout tip">
+        <h3>Quick Question vs On the Case</h3>
+        <p>Use the mode toggle in the composer:</p>
+        <ul>
+            <li><strong>Quick Question</strong>: Fast answers without tool access</li>
+            <li><strong>On the Case</strong>: Full agent with tools and memory</li>
+        </ul>
+    </div>
+
+    <!-- USING IT -->
+    <h2 id="using-it">Using Rebel Day-to-Day</h2>
+
+    <h3>The Basic Pattern</h3>
+    <ol>
+        <li>Open Rebel</li>
+        <li>Start a new conversation or continue an existing one</li>
+        <li>Tell Rebel what you want in plain English</li>
+        <li>Rebel does it and shows you the result</li>
+    </ol>
+
+    <h3>Voice Interaction</h3>
+    <p>Rebel supports full voice interaction:</p>
+    <ul>
+        <li><strong>Listen mode</strong>: Press the global hotkey (default: Ctrl+Alt+Space) to speak your request</li>
+        <li><strong>Speak mode</strong>: Rebel reads responses aloud</li>
+    </ul>
+    <p>Configure voice settings and custom vocabulary in Settings → Agents & Voice.</p>
+
+    <h3>Running Skills</h3>
+    <p>To run a specific skill, mention it in your message:</p>
+    <pre><code>Run the meeting prep skill for my call with Sarah at TechCorp</code></pre>
+    <p>Or browse skills in the Library drawer.</p>
+
+    <h3>Keeping Memory Updated</h3>
+    <p>Rebel learns about you over time. You can:</p>
+    <ul>
+        <li><strong>Let Rebel update automatically</strong>: It asks before saving important context</li>
+        <li><strong>Update manually</strong>: Say "Update my memory with [information]"</li>
+        <li><strong>Review in Settings</strong>: See what Rebel knows in the Memory panel</li>
+    </ul>
+
+    <!-- COMMON TASKS -->
+    <h2 id="common-tasks">Common Tasks You Can Do</h2>
+
+    <details>
+        <summary><strong>Prepare for a Meeting</strong></summary>
+        <p><strong>What to say</strong>: "Prep me for my call tomorrow with John Smith at ACME Corp"</p>
+        <p><strong>What you get</strong>: Company background, person info, talking points, past interactions</p>
+    </details>
+
+    <details>
+        <summary><strong>Research a Topic</strong></summary>
+        <p><strong>What to say</strong>: "Research TechCorp - business, size, recent news"</p>
+        <p><strong>What you get</strong>: Research brief with sources</p>
+    </details>
+
+    <details>
+        <summary><strong>Draft Communication</strong></summary>
+        <p><strong>What to say</strong>: "Draft an email to Sarah about our Q4 renewal"</p>
+        <p><strong>What you get</strong>: Draft with relevant context</p>
+    </details>
+
+    <details>
+        <summary><strong>Search Your Tools</strong></summary>
+        <p><strong>What to say</strong>: "Search Slack for discussions about the browser extension"</p>
+        <p><strong>What you get</strong>: Summary of relevant conversations</p>
+    </details>
+
+    <details>
+        <summary><strong>Schedule Recurring Tasks</strong></summary>
+        <p><strong>Where to go</strong>: Settings → Automations</p>
+        <p><strong>What you can do</strong>: Daily briefings, weekly summaries, regular check-ins</p>
+    </details>
+
+    <!-- HELP -->
+    <h2 id="help">Getting Help</h2>
+
+    <h3>When You're Stuck</h3>
+    <ul>
+        <li><strong>Ask Rebel</strong>: Type "I'm confused about [thing]" and it will explain</li>
+        <li><strong>Read the docs</strong>: The help files are in rebel-system/help-for-humans/</li>
+        <li><strong>Troubleshooting</strong>: See <a href="../troubleshooting.md">Common Problems & Solutions</a></li>
+    </ul>
+
+    <h3>Useful Links</h3>
+    <ul>
+        <li><a href="../getting-started.md">Getting Started</a> - Detailed setup guide</li>
+        <li><a href="../how-it-works.md">How Rebel Works</a> - Mental model overview</li>
+        <li><a href="../why-rebel.md">Why Rebel?</a> - Comparison with alternatives</li>
+        <li><a href="../keyboard-shortcuts-and-hotkeys.md">Keyboard Shortcuts</a> - Quick reference</li>
+        <li><a href="../terminology.md">Terminology</a> - Glossary of terms</li>
+    </ul>
+
+    <h3>For Developers</h3>
+    <p>Prefer working in an IDE? Rebel also supports <a href="../external-IDE-OBSOLETE/Cursor.md">Cursor</a> and Claude Code as
+        alternative interfaces. Note: some features work best in the desktop app.</p>
+
+    <div class="callout">
+        <h3>Remember: It Gets Easier!</h3>
+        <p>The first few times you use Rebel, it might feel unfamiliar. That's normal! After a week, you'll wonder how
+            you worked without it.</p>
+        <p><strong>Start small</strong>: Pick one workflow (maybe meeting prep?) and use Rebel just for that. Once
+            comfortable, add more.</p>
+    </div>
+
+    <!-- FOOTER -->
+    <hr />
+    <p class="small">
+        <strong>Tutorial created</strong>: 2025-10-23<br>
+        <strong>Last updated</strong>: 2026-01-05<br>
+        <strong>Questions?</strong> Ask Rebel or check the help docs
+    </p>
+
+</body>
+
+</html>

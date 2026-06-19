@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+#
+# Rebel CLI - Entry point for rebel-system commands
+#
+# Usage:
+#   ./rebel list [--json] [--flat] [--category <name>]
+#   ./rebel validate [--json] [--strict]
+#   ./rebel run <skill> [message] [--dry-run]
+#
+# Run './rebel --help' for full documentation.
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+REBEL_SYSTEM_DIR="$(cd "$SCRIPT_DIR/.." && pwd)"
+
+# Check if node_modules exists, if not prompt to run npm install
+if [[ ! -d "$REBEL_SYSTEM_DIR/node_modules" ]]; then
+  echo "Dependencies not installed. Run this first:"
+  echo "  cd $REBEL_SYSTEM_DIR && npm install"
+  exit 1
+fi
+
+# Use local tsx from node_modules
+exec "$REBEL_SYSTEM_DIR/node_modules/.bin/tsx" "$SCRIPT_DIR/rebel-cli.ts" "$@"

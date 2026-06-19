@@ -1,0 +1,17 @@
+{
+  "name": "pdf-fill-form",
+  "version": "1.0.0",
+  "description": "Fill out fillable AcroForm PDF forms with pdf-lib (Node.js, no Python required)",
+  "main": "fill-fillable.js",
+  "scripts": {
+    "check": "node check-fillable.js",
+    "extract": "node extract-fields.js",
+    "fill": "node fill-fillable.js"
+  },
+  "keywords": ["pdf", "form", "fill", "acroform", "pdf-lib"],
+  "author": "Mindstone",
+  "license": "MIT",
+  "dependencies": {
+    "pdf-lib": "^1.17.1"
+  }
+}

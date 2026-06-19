@@ -1,0 +1,34 @@
+{
+    "files.autoSave": "onFocusChange",
+    "editor.wordWrap": "on",
+    "markdown.preview.breaks": true,
+    "markdown.extension.toc.levels": "2..3",
+    "markdown.extension.orderedList.autoRenumber": true,
+    "editor.minimap.enabled": true,
+    "editor.formatOnSave": true,
+    "[markdown]": {
+        "editor.defaultFormatter": "yzhang.markdown-all-in-one",
+        "editor.quickSuggestions": {
+            "other": "on"
+        }
+    },
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "cursor.chat.maxTabCount": -1,
+    "cursor.chat.webSearchEnabled": true,
+    "cursor.chat.todoEnabled": true,
+    "cursor.chat.defaultMode": "Agent",
+    "cursor.privacyMode": true,
+    "cursor.completionSound.enabled": true,
+    "agent.queueMessages": "send",
+    "agent.autoRunMode": "useAllowlist",
+    "cursor.context.excludeFiles": [
+        "CLAUDE.md"
+    ],
+    "notifications.alert.banner": true,
+    "notifications.alert.toast": true
+}

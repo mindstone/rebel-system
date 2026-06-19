@@ -1,0 +1,137 @@
+%% Mindstone Rebel v3 Architecture Diagram
+%% Represents the five-layer architecture: Storage (single-root Rebel workspace + spaces) → Interface (Rebel app, Cursor, Claude Code) → Context (3-tier) → Execution (skills) → Integration (MCPs)
+%% Shows how entry points (README.md for humans, AGENTS.md for AI) lead through Rebel workspace + spaces, then into skills and MCP integrations
+%% Updated 251116: aligned with v3 spaces + `rebel-system/` model; replaced scratchpad/ + playbooks/ with memory/ + skills/, clarified Rebel vs Cursor roles
+
+graph TB
+    %% Entry Points
+    subgraph ENTRY["📚 Entry Points"]
+        README["<b>README.md</b><br/><i>for humans</i>"]
+        AGENTS["<b>AGENTS.md</b><br/><i>for AI agents</i><br/>references context,<br/>playbooks, MCPs"]
+        ONBOARD["<b>getting-started.md</b><br/><i>first-time setup</i>"]
+    end
+
+    %% Layer 1: Storage
+    subgraph STORAGE["💾 Storage Layer – Rebel workspace + spaces"]
+        GDRIVE["<b>Rebel workspace root</b><br/>Single folder on disk<br/>Contains <code>rebel-system/</code> core + spaces"]
+    end
+
+    %% Layer 2: Interface
+    subgraph INTERFACE["🖥️ Interface Layer"]
+        CURSOR["<b>Rebel app + Cursor/Claude</b><br/>Rebel (primary UI), Cursor &amp; Claude Code<br/>open the same Rebel workspace folder"]
+        MODELS["<b>AI Models</b><br/><code>claude-4.5-sonnet</code><br/><code>gpt-5-high-fast</code><br/><code>gemini-2.5-pro</code>"]
+    end
+
+    %% Layer 3: Context (3-tier)
+    subgraph CONTEXT["📖 Context Layer (3-tier hierarchy)"]
+        direction TB
+        TIER1["<b>Tier 1: Global Context</b><br/>Shared spaces + <code>rebel-system/</code><br/>Company info, teams, programs, personas"]
+        TIER2["<b>Tier 2: Personal Auto-Loaded</b><br/>Chief-of-Staff/README.md sections<br/>50%+ utility: priorities, projects, contacts"]
+        TIER3["<b>Tier 3: On-Demand</b><br/><code>memory/topics/*.md</code> in a space<br/>&lt;50% utility: deep-dives, archived decisions"]
+        
+        TIER1 -.auto-loaded.-> TIER2
+        TIER2 -.auto-loaded.-> TIER3
+    end
+    
+    subgraph HELP["📚 Documentation"]
+        TOC["<b>Table of Contents</b><br/>Master index"]
+        HELPDOCS["<code>help/</code><br/>Architecture, MCPs,<br/>onboarding, guides"]
+    end
+
+    %% Layer 4: Execution
+    subgraph EXECUTION["⚙️ Execution Layer (Skills)"]
+        direction LR
+        PLAYCO["<b>skills/ (spaces + rebel-system/)</b><br/>Meeting prep, CRM research,<br/>sales proposals, AI use cases"]
+        PLAYGEN["<b>skills/documentation + utilities</b><br/>Docs, diagrams, research,<br/>file ops, sounding board"]
+        PLAYSKILL["<b>skills/system/</b><br/>Technical optimization patterns<br/>(e.g., efficient Notion reading)"]
+    end
+
+    %% Layer 5: Integration
+    subgraph INTEGRATION["🔌 Integration Layer (MCPs)"]
+        direction TB
+        MCPSHARED["<b>Shared MCPs</b><br/>Settings → Connectors<br/>• Notion, Linear, Sentry, etc."]
+        MCPINDIV["<b>Individual MCPs</b><br/>Settings → Connectors<br/>• Built-in connectors (Gmail, Slack,<br/>  Calendar, HubSpot, etc.)<br/>• Mindstone Platform (VPN req'd)"]
+    end
+
+    %% Working Files
+    subgraph WORKING["📝 Working Files (spaces)"]
+        PERSONAL["<code>memory/</code> in a personal space<br/><b>README.md</b> (profile + auto-loaded context sections)<br/><b>topics/</b> (on-demand context)"]
+        TEAM["<code>memory/teams/</code> in team spaces<br/>Team-specific docs &amp; output"]
+    end
+
+    %% Connections - Entry to Setup
+    README --> ONBOARD
+    AGENTS -.references.-> TIER1
+    AGENTS -.references.-> EXECUTION
+    AGENTS -.references.-> HELP
+    AGENTS -.references.-> INTEGRATION
+    ONBOARD --> GDRIVE
+    ONBOARD --> CURSOR
+    
+    %% Storage to Interface
+    GDRIVE --> CURSOR
+    
+    %% Interface to Models and Context
+    CURSOR --> MODELS
+    MODELS --> CONTEXT
+    
+    %% Context to Execution
+    TIER1 --> EXECUTION
+    TIER2 --> EXECUTION
+    
+    %% Execution patterns
+    PLAYCO -.calls.-> PLAYGEN
+    PLAYCO -.uses.-> PLAYSKILL
+    PLAYGEN -.uses.-> PLAYSKILL
+    
+    %% Execution to Integration
+    EXECUTION --> INTEGRATION
+    
+    %% Execution to Working Files
+    EXECUTION --> WORKING
+    
+    %% Documentation indexing
+    TOC -.indexes.-> TIER1
+    TOC -.indexes.-> HELP
+    TOC -.indexes.-> EXECUTION
+    TOC -.indexes.-> WORKING
+    
+    %% Working files relationship
+    PERSONAL -.feeds.-> TIER2
+    PERSONAL -.feeds.-> TIER3
+
+    %% Styling by layer/function
+    style README fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    style AGENTS fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    style ONBOARD fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    
+    style GDRIVE fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px
+    
+    style CURSOR fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px
+    style MODELS fill:#e1f5fe,stroke:#0277bd,stroke-width:2px
+    
+    style TIER1 fill:#fff9c4,stroke:#f9a825,stroke-width:2px
+    style TIER2 fill:#fff9c4,stroke:#f9a825,stroke-width:2px
+    style TIER3 fill:#fff9c4,stroke:#f9a825,stroke-width:2px
+    style TOC fill:#e8f5e9,stroke:#388e3c,stroke-width:2px
+    style HELPDOCS fill:#e8f5e9,stroke:#388e3c,stroke-width:2px
+    
+    style PLAYCO fill:#ffe0b2,stroke:#e65100,stroke-width:2px
+    style PLAYGEN fill:#ffe0b2,stroke:#e65100,stroke-width:2px
+    style PLAYSKILL fill:#ffe0b2,stroke:#e65100,stroke-width:2px
+    
+    style MCPSHARED fill:#e0f2f1,stroke:#00695c,stroke-width:2px
+    style MCPINDIV fill:#e0f2f1,stroke:#00695c,stroke-width:2px
+    
+    style PERSONAL fill:#fce4ec,stroke:#c2185b,stroke-width:2px
+    style TEAM fill:#fce4ec,stroke:#c2185b,stroke-width:2px
+    
+    style ENTRY fill:#ffffff,stroke:#424242,stroke-width:3px
+    style STORAGE fill:#ffffff,stroke:#424242,stroke-width:3px
+    style INTERFACE fill:#ffffff,stroke:#424242,stroke-width:3px
+    style CONTEXT fill:#ffffff,stroke:#424242,stroke-width:3px
+    style HELP fill:#ffffff,stroke:#424242,stroke-width:3px
+    style EXECUTION fill:#ffffff,stroke:#424242,stroke-width:3px
+    style INTEGRATION fill:#ffffff,stroke:#424242,stroke-width:3px
+    style WORKING fill:#ffffff,stroke:#424242,stroke-width:3px
+

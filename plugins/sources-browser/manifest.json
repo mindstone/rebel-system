@@ -1,0 +1,15 @@
+{
+  "id": "sources-browser",
+  "name": "My Sources",
+  "description": "Browse, search, and explore your meeting notes, recordings, and imported sources. Rich detail views with summaries, key takeaways, and related sources.",
+  "version": "0.1.0",
+  "entryPoint": "index.tsx",
+  "maturity": "labs",
+  "role": "hero",
+  "permissions": [],
+  "externalDomains": [],
+  "surfaces": {
+    "sidebar": { "enabled": true },
+    "homepageWidget": { "enabled": false, "defaultSize": "medium" }
+  }
+}

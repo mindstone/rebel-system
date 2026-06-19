@@ -1,0 +1,1336 @@
+<!doctype html>
+<html lang="en">
+
+<!--
+    TUTORIAL: Rebel Memory System
+
+    Generated: 2025-12-16
+    Audience: Rebel users (knowledge workers) concerned about where information gets saved and privacy boundaries
+    Complexity: complex
+
+    Source files analyzed:
+    - rebel-system/AGENTS.md - Platform agent instructions with privacy rules
+    - rebel-system/help-for-humans/memory-folders-and-approvals.md - Memory folder overview
+    - rebel-system/help-for-humans/spaces.md - Space architecture
+    - rebel-system/help-for-humans/space-shared-folders.md - Shared folder setup
+    - rebel-system/help-for-humans/Rebel-privacy-policy.md - Privacy policy
+    - rebel-system/skills/memory/*.md - Memory management skills
+
+    Related resources:
+    - rebel-system/skills/memory/ - Memory management skills
+    - rebel-system/skills/documentation/signposting-to-single-source-of-truth/ - SSOT principle
+    - rebel-system/help-for-humans/architecture-technical-description.md - Technical architecture
+-->
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Guide to how Rebel's memory system works, where information gets saved (Chief-of-Staff for private, work spaces for shared), and how to manage privacy boundaries using the two-tier memory model" />
+    <title>Rebel Memory System: Understanding Storage, Privacy, and Space Boundaries</title>
+
+    <!-- Highlight.js for syntax highlighting -->
+    <link rel="stylesheet" href="lib/highlight-a11y-dark.css">
+    <script src="lib/highlight.min.js"></script>
+    <script src="lib/highlight-init.js"></script>
+
+    <style>
+        /* Base styling */
+        body {
+            font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+            line-height: 1.6;
+            padding: 2rem;
+            max-width: 1000px;
+            margin: auto;
+            color: #1e293b;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            line-height: 1.25;
+            margin-top: 2rem;
+        }
+
+        h1 {
+            border-bottom: 3px solid #2563eb;
+            padding-bottom: 0.5rem;
+        }
+
+        h2 {
+            border-bottom: 1px solid #cbd5e1;
+            padding-bottom: 0.3rem;
+        }
+
+        /* Code and pre blocks */
+        code,
+        pre {
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+        }
+
+        pre {
+            background: #0f172a;
+            color: #e2e8f0;
+            padding: 1rem;
+            border-radius: 6px;
+            overflow: auto;
+            margin: 1rem 0;
+        }
+
+        code:not(pre code) {
+            background: #f1f5f9;
+            color: #0f172a;
+            padding: 0.2em 0.4em;
+            border-radius: 3px;
+            font-size: 0.9em;
+        }
+
+        /* Links */
+        a {
+            color: #0b67ff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Callout boxes */
+        .callout {
+            background: #f8fafc;
+            border-left: 4px solid #2563eb;
+            padding: 1rem 1.25rem;
+            margin: 1.5rem 0;
+            border-radius: 4px;
+        }
+
+        .callout.mental-model {
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+        }
+
+        .callout.warning {
+            background: #fee2e2;
+            border-left: 4px solid #dc2626;
+        }
+
+        .callout.tip {
+            background: #dcfce7;
+            border-left: 4px solid #16a34a;
+        }
+
+        .callout h3 {
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Small text for metadata */
+        .small {
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+
+        /* Diagram images */
+        img.diagram {
+            max-width: 100%;
+            border: 1px solid #e5e7eb;
+            border-radius: 6px;
+            margin: 1rem 0;
+        }
+
+        /* Table of contents */
+        ul.toc {
+            list-style: none;
+            padding-left: 0;
+            background: #f8fafc;
+            padding: 1rem;
+            border-radius: 6px;
+        }
+
+        ul.toc>li {
+            margin: 0.5rem 0;
+        }
+
+        ul.toc ul {
+            list-style: none;
+            padding-left: 1.5rem;
+            margin-top: 0.25rem;
+        }
+
+        /* Progressive disclosure */
+        details {
+            background: #f8fafc;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+
+        details summary {
+            font-weight: 600;
+            cursor: pointer;
+            user-select: none;
+            color: #1e40af;
+            padding: 0.25rem;
+        }
+
+        details summary:hover {
+            color: #1e3a8a;
+        }
+
+        details[open] summary {
+            margin-bottom: 1rem;
+            border-bottom: 1px solid #cbd5e1;
+            padding-bottom: 0.5rem;
+        }
+
+        /* Code catalogue styling */
+        .code-ref {
+            font-family: monospace;
+            background: #f1f5f9;
+            padding: 0.5rem;
+            margin: 0.25rem 0;
+            border-left: 3px solid #3b82f6;
+            border-radius: 3px;
+        }
+
+        .code-ref .file-path {
+            color: #1e40af;
+            font-weight: 600;
+        }
+
+        .code-ref .line-nums {
+            color: #64748b;
+            font-size: 0.85em;
+        }
+
+        /* Data structure boxes */
+        .data-structure {
+            background: #eff6ff;
+            border: 1px solid #3b82f6;
+            border-radius: 6px;
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+
+        .data-structure h4 {
+            margin-top: 0;
+            color: #1e40af;
+        }
+
+        /* Step-by-step flow */
+        .step {
+            background: #f1f5f9;
+            border-left: 3px solid #3b82f6;
+            padding: 0.75rem 1rem;
+            margin: 1rem 0;
+        }
+
+        .step-number {
+            font-weight: bold;
+            color: #3b82f6;
+            font-size: 1.1em;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem;
+            }
+
+            pre {
+                font-size: 0.85em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- TITLE AND METADATA -->
+    <h1>Rebel Memory System: Understanding Storage, Privacy, and Space Boundaries</h1>
+    <p class="small">
+        <strong>Audience</strong>: Rebel users (knowledge workers) concerned about where information gets saved and privacy boundaries<br>
+        <strong>Reading time</strong>: 25-30 minutes<br>
+        <strong>Prerequisites</strong>: Basic familiarity with Rebel workspace and spaces
+    </p>
+
+    <!-- TL;DR -->
+    <div class="callout">
+        <strong>TL;DR</strong>: Rebel uses a two-tier memory system: essential facts auto-load from README.md every conversation, while detailed topics load on-demand. Information is organised across two privacy zones: Chief-of-Staff/ (private to you) and work/Company/ (shared with your team). Memory files act as <em>pointers to sources</em> rather than copies of content.
+    </div>
+
+    <!-- TABLE OF CONTENTS -->
+    <h2>Table of contents</h2>
+    <ul class="toc">
+        <li><a href="#mental-models">Key Mental Models</a></li>
+        <li><a href="#overview">Overview: What is Rebel Memory?</a></li>
+        <li><a href="#visual-flow">Visual Flow Diagram</a></li>
+        <li><a href="#pass1">Pass 1: High-Level Overview</a></li>
+        <li><a href="#pass2">Pass 2: Memory Architecture</a>
+            <ul>
+                <li><a href="#tier1">Auto-Loaded Context (README.md)</a></li>
+                <li><a href="#tier2">On-Demand Topics (memory/topics/)</a></li>
+                <li><a href="#sources">Sources (memory/sources/)</a></li>
+            </ul>
+        </li>
+        <li><a href="#pass3">Pass 3: Space Boundaries and Privacy</a>
+            <ul>
+                <li><a href="#spaces-overview">Understanding Spaces</a></li>
+                <li><a href="#sensitivity-markers">Sensitivity Markers</a></li>
+                <li><a href="#storage-decisions">Making Storage Decisions</a></li>
+            </ul>
+        </li>
+        <li><a href="#pass4">Pass 4: Memory Management in Practice</a>
+            <ul>
+                <li><a href="#memory-files">Memory File Structure</a></li>
+                <li><a href="#ssot-principle">The SSOT Principle</a></li>
+                <li><a href="#when-to-update">When to Update Memory</a></li>
+            </ul>
+        </li>
+        <li><a href="#cookbook">Cookbook: Common Scenarios</a></li>
+        <li><a href="#catalogue">File Reference Catalogue</a></li>
+        <li><a href="#references">References & Related Resources</a></li>
+    </ul>
+
+    <!-- MENTAL MODELS -->
+    <h2 id="mental-models">Key Mental Models</h2>
+    <p>Four core concepts for understanding Rebel's memory system:</p>
+
+    <div class="callout mental-model">
+        <h3>Mental Model #1: The Two-Tier System</h3>
+        <p>Think of Rebel's memory like a <strong>library with two sections</strong>:</p>
+        <ul>
+            <li><strong>Auto-loaded (README.md)</strong>: Essential facts always present — your identity, preferences, current focus (50%+ utility)</li>
+            <li><strong>On-demand (memory/topics/)</strong>: Detailed context loaded when needed — project details, client history, workflows (&lt;50% utility)</li>
+        </ul>
+        <p>Topic files often <em>point to</em> external sources (Gmail, Notion, files) rather than duplicating content.</p>
+        <p><strong>Why this matters</strong>: Keeps context manageable while ensuring essential facts are always available and detailed context is just a search away.</p>
+    </div>
+
+    <div class="callout mental-model">
+        <h3>Mental Model #2: Topics vs Sources</h3>
+        <p>Memory has two parallel systems:</p>
+        <ul>
+            <li><strong>Topics (memory/topics/)</strong>: Curated knowledge — synthesized facts with source citations</li>
+            <li><strong>Sources (memory/sources/)</strong>: First-party captures — meetings, emails, Slack threads preserved with provenance</li>
+        </ul>
+        <p><strong>Key rule</strong>: Topics cite sources for provenance, but sources don't backlink to topics. This keeps sources stable when you reorganize topics.</p>
+        <p><strong>Why this matters</strong>: You can trace any fact back to its original source, and sources stay clean even as your knowledge evolves.</p>
+    </div>
+
+    <div class="callout mental-model">
+        <h3>Mental Model #3: Pointers, Not Copies</h3>
+        <p>Don't think of memory files as <em>storing information</em>. Instead, think of them as a <strong>library catalog system</strong>:</p>
+        <ul>
+            <li>❌ <strong>Not this</strong>: Copy email content into memory files</li>
+            <li>✅ <strong>This instead</strong>: Store Gmail query strings that retrieve current emails</li>
+        </ul>
+        <p><strong>The SSOT Principle</strong>: Every fact lives in ONE canonical place (Single Source Of Truth). Memory files <em>point to</em> that place, they don't duplicate it.</p>
+        <p><strong>Why this matters</strong>: Prevents information from going stale, reduces duplication, and keeps memory files lightweight.</p>
+    </div>
+
+    <div class="callout mental-model">
+        <h3>Mental Model #4: Two Privacy Zones</h3>
+        <p>Think of your Rebel workspace as having <strong>two main privacy zones</strong>:</p>
+        <ol>
+            <li><strong>Chief-of-Staff/</strong> 🔒 - Your private space (never shared with anyone)</li>
+            <li><strong>work/Company/</strong> 👥 - Shared work space (visible to your team)</li>
+        </ol>
+        <p><strong>Simple rule</strong>: Personal and sensitive information goes in Chief-of-Staff. Work content that your team should see goes in the work space.</p>
+        <p><strong>Why this matters</strong>: Keeps decision-making simple — ask yourself "should my team see this?" and you'll know where to save it.</p>
+    </div>
+
+    <!-- OVERVIEW -->
+    <h2 id="overview">Overview: What is Rebel Memory?</h2>
+    <p>Rebel's memory system is a <strong>structured knowledge architecture</strong> that helps the AI assistant maintain context about you, your work, and your preferences across conversations. Unlike simple chat history, it's organized into tiers, respects privacy boundaries, and uses pointers to avoid duplicating information.</p>
+
+    <p><strong>The core problem it solves</strong>: You don't want to repeat yourself in every conversation ("I work at Company X", "My timezone is Y", "Here's how I prefer emails drafted"). But you also don't want <em>everything</em> loaded into every conversation (too much context), and you definitely don't want sensitive personal information accidentally shared in company spaces.</p>
+
+    <p><strong>The solution</strong>: A two-tier memory system (auto-loaded + on-demand) with sources for first-party content, all organized across privacy-bounded spaces.</p>
+
+    <details>
+        <summary>Comparison to traditional note-taking systems</summary>
+        <p>If you're familiar with tools like Notion, Evernote, or Obsidian, here's how Rebel memory compares:</p>
+        <ul>
+            <li><strong>Notion/Evernote</strong>: Full content storage - you write entire notes. <strong>Rebel</strong>: Pointer system - you signpost to where info lives.</li>
+            <li><strong>Obsidian</strong>: Flat file structure with links. <strong>Rebel</strong>: Hierarchical tiers (auto-load vs on-demand) plus space boundaries.</li>
+            <li><strong>Traditional wikis</strong>: Human-centric organization. <strong>Rebel</strong>: Optimized for AI context management with utility thresholds.</li>
+        </ul>
+        <p><strong>Key difference</strong>: Rebel memory is designed for <em>AI consumption</em> first, not human browsing. It prioritizes source attribution, utility-based tiering, and privacy boundaries.</p>
+    </details>
+
+    <!-- VISUAL FLOW DIAGRAM -->
+    <h2 id="visual-flow">Visual Flow Diagram</h2>
+    <p>This diagram shows how information flows from sources through the memory model, gets organized across space boundaries, and follows privacy rules to determine storage location:</p>
+
+    <img class="diagram" src="251216a_rebel_memory_system.svg" alt="Rebel memory system architecture flow diagram" />
+
+    <p class="small">
+        Source: <a href="251216a_rebel_memory_system.mermaid">View Mermaid source</a>
+    </p>
+
+    <!-- PASS 1: HIGH-LEVEL OVERVIEW -->
+    <h2 id="pass1">Pass 1: High-Level Overview</h2>
+    <p>Let's understand what happens when you interact with Rebel and memory gets created or accessed.</p>
+
+    <h3>The Basic Flow</h3>
+    <ol>
+        <li><strong>You start a conversation</strong> → Rebel automatically loads your <code>Chief-of-Staff/README.md</code> (auto-loaded context)</li>
+        <li><strong>You ask about a specific topic</strong> → Rebel searches and reads relevant <code>memory/topics/*.md</code> files (on-demand)</li>
+        <li><strong>You provide new information</strong> → Rebel decides where to save it based on sensitivity and utility</li>
+        <li><strong>Rebel needs source details</strong> → It fetches from external systems using signposted queries/URLs (SSOT)</li>
+    </ol>
+
+    <div class="callout tip">
+        <h3>Key Insight</h3>
+        <p>Memory isn't just <em>storage</em> - it's a <strong>routing and retrieval system</strong>. The AI uses it to know where to look for information when you ask questions.</p>
+    </div>
+
+    <h3>What Gets Stored Where?</h3>
+    <p>At a high level:</p>
+    <ul>
+        <li><strong>Chief-of-Staff/README.md</strong>: Your identity, preferences, cross-space context</li>
+        <li><strong>Chief-of-Staff/memory/topics/</strong>: Personal deep-dives, salary info, private reflections</li>
+        <li><strong>work/Company/README.md</strong>: Team-wide auto-loaded facts</li>
+        <li><strong>work/Company/memory/topics/</strong>: Detailed project info, client details, team documentation</li>
+    </ul>
+
+    <!-- PASS 2: MEMORY ARCHITECTURE -->
+    <h2 id="pass2">Pass 2: Memory Architecture</h2>
+    <p>Now let's understand each component of the memory system more deeply.</p>
+
+    <h3 id="tier1">Auto-Loaded Context (README.md)</h3>
+    <p><strong>Purpose</strong>: Essential facts that should be present in 50%+ of conversations.</p>
+    <p><strong>Location</strong>: <code>Chief-of-Staff/README.md</code>, <code>work/Company/README.md</code></p>
+    <p><strong>Size limit</strong>: Keep concise - this is loaded into every conversation's context window</p>
+
+    <details>
+        <summary>What belongs in auto-loaded context?</summary>
+        <ul>
+            <li>Your name, email, timezone, location</li>
+            <li>Current role and teams</li>
+            <li>Active priorities this month</li>
+            <li>Frequently referenced projects or clients</li>
+            <li>Communication preferences (e.g., "draft emails, don't send")</li>
+            <li><strong>Links to topic files</strong> for detailed context</li>
+        </ul>
+        <p><strong>Example auto-loaded section from Chief-of-Staff/README.md:</strong></p>
+        <pre><code class="language-markdown">## Profile
+
+Key facts:
+- Name: [Your Name]
+- Email: [your.email@company.com]
+- Teams: [Your teams]
+- Location/timezone: [Your timezone]
+
+## AI Working Context
+
+- Communication preferences: [e.g., "Prefers concise, actionable responses"]
+- Current focus: [Active projects, priorities]
+- Working on: [[topics/Current-Project]]
+
+## Frequently Useful References
+
+- [[topics/Project-Name]] - Brief description (25%+ utility topics only)</code></pre>
+        <p><strong>Note</strong>: Details live in topic files, not here. This section just signposts to detailed context.</p>
+    </details>
+
+    <details>
+        <summary>How Rebel loads this automatically</summary>
+        <p>During Rebel's startup process for every conversation:</p>
+        <ol>
+            <li>Reads root workspace <code>AGENTS.md</code> (symlink to rebel-system/)</li>
+            <li>Follows instruction to read <code>Chief-of-Staff/README.md</code></li>
+            <li>Loads any space-specific README.md if you're working in a particular context</li>
+            <li>All of this happens <em>before</em> Rebel responds to your first message</li>
+        </ol>
+        <p>You don't need to @ mention these files - they're always present.</p>
+    </details>
+
+    <h3 id="tier2">On-Demand Topics (memory/topics/)</h3>
+    <p><strong>Purpose</strong>: Detailed context loaded only when relevant (&lt;50% conversation utility).</p>
+    <p><strong>Location</strong>: <code>Chief-of-Staff/memory/topics/</code>, <code>work/Company/memory/topics/</code></p>
+    <p><strong>Access pattern</strong>: Rebel searches for relevant files using semantic search (<code>@files</code>) or you @ mention them explicitly</p>
+
+    <details>
+        <summary>What belongs in on-demand topics?</summary>
+        <ul>
+            <li>Deep-dives on specific projects or technologies</li>
+            <li>Client relationship history and notes</li>
+            <li>Meeting patterns and recurring workflows</li>
+            <li>Detailed technical specifications</li>
+            <li>Historical decisions and their rationale</li>
+            <li><strong>Signposts to original sources</strong> (Gmail queries, Notion URLs, file paths)</li>
+        </ul>
+        <p><strong>Example topic file structure:</strong></p>
+        <pre><code class="language-markdown">---
+updated: 251026
+tags: [client, consulting, acmeconsulting]
+sensitivity: 0.3
+description: "Client relationship context for Acme Corp"
+---
+
+# Acme Corp Client Context
+
+## Quick summary
+Tech startup client since March 2024, AI enablement project, monthly retainer.
+
+## Signposts (SSOT)
+- Primary: Gmail query: `from:contact@acme.com OR to:contact@acme.com newer_than:6m`
+- Contract: /Users/jane/Documents/Contracts/Acme-2024.pdf
+- Project board: https://notion.so/acme-project-board
+
+## Key facts
+- Contact: Sarah Johnson (CTO)
+  - SSOT: Gmail query above | Updated: 251026 | Confidence: high
+- Contract value: $8k/month retainer
+  - SSOT: /Users/jane/Documents/Contracts/Acme-2024.pdf | Updated: 251026 | Confidence: high
+
+## See also
+- [[topics/AcmeConsulting/services]] - Service offerings
+- [[skills/client-management/meeting-prep]] - Meeting prep workflow</code></pre>
+        <p><strong>Note</strong>: Facts include source attribution. No email content is duplicated here.</p>
+    </details>
+
+    <details>
+        <summary>Single file vs folder structure decision</summary>
+        <p><strong>Use single file</strong> (<code>memory/topics/topic-name.md</code>) when:</p>
+        <ul>
+            <li>Topic is simple with &lt;2 subtopics</li>
+            <li>No supporting artifacts needed</li>
+            <li>Content likely &lt;50 lines</li>
+        </ul>
+        <p><strong>Use folder</strong> (<code>memory/topics/topic-name/</code>) when:</p>
+        <ul>
+            <li>2+ distinct subtopics (each &gt;20 lines), OR</li>
+            <li>Supporting artifacts needed (CSVs, images), OR</li>
+            <li>Items benefit from individual @-mentionability</li>
+        </ul>
+        <p><strong>Example folder structure:</strong></p>
+        <pre><code>memory/topics/AcmeConsulting/
+  AcmeConsulting.md              # Main overview (entry point)
+  services.md               # Service catalog
+  client-Acme.md            # Client-specific detail
+  client-BetaCorp.md        # Another client
+  invoicing-workflow.md     # Process documentation</code></pre>
+        <p>The main <code>AcmeConsulting.md</code> file acts as an index signposting to the detail files.</p>
+    </details>
+
+    <h3 id="sources">Sources (memory/sources/)</h3>
+    <p><strong>Purpose</strong>: Capture first-party content (meetings, emails, Slack threads) with provenance metadata for traceability.</p>
+    <p><strong>Location</strong>: <code>memory/sources/YYYY/MM-MMM/DD/</code> (organized by date)</p>
+    <p><strong>Access pattern</strong>: Topics cite sources for provenance; sources don't backlink to topics (one-way linking)</p>
+
+    <details>
+        <summary>What qualifies as a source?</summary>
+        <p>Any raw, original content that could be cited as evidence or detail for a topic:</p>
+        <ul>
+            <li><strong>Meetings</strong> — Transcripts from Fireflies, Otter, Fathom, Zoom (always create source files for meetings)</li>
+            <li><strong>Slack/Teams threads</strong> — Substantive discussions (5+ messages, decisions made)</li>
+            <li><strong>Email threads</strong> — Important negotiations, decisions, long threads</li>
+            <li><strong>Notion/Confluence docs</strong> — Rich, frequently-referenced documents</li>
+            <li><strong>PDFs</strong> — Reports, contracts, research papers worth referencing</li>
+            <li><strong>Linear/Jira tickets</strong> — Major features, architectural decisions</li>
+        </ul>
+        <p><strong>When NOT to create a source file</strong>: Quick Q&A, routine updates, ephemeral chat, bug fixes, simple pages. For these, just extract relevant facts directly to topic files.</p>
+    </details>
+
+    <details>
+        <summary>Source file structure</summary>
+        <p><strong>Filename format</strong>: <code>yyMMdd_HHmm_source-type_description.md</code></p>
+        <p>Example: <code>memory/sources/2025/12-Dec/15/251215_1000_meeting_q3-review.md</code></p>
+        <pre><code class="language-markdown">---
+description: Q3 quarterly review with leadership
+source_type: meeting
+source_system: fireflies
+source_account: user@company.com
+source_uid: abc123xyz
+source_url: https://app.fireflies.ai/view/abc123xyz
+stored_at: 2025-12-15
+occurred_at: 2025-12-15
+participants: [Jane Smith, Bob Chen, Carol Davis]
+duration_minutes: 45
+---
+
+# Q3 Quarterly Review
+
+## Summary
+
+Brief 3-5 sentence summary of key outcomes and decisions.
+
+## Key Takeaways
+
+- Important decision 1
+- Important decision 2
+- Action item assigned
+
+## Full Content
+
+[Complete meeting transcript with speaker attribution]</code></pre>
+        <p>For full details, see <a href="../../../skills/memory/source-capture/SKILL.md">source-capture skill</a>.</p>
+    </details>
+
+    <details>
+        <summary>Topics cite sources for provenance</summary>
+        <p>When you add facts to a topic file, cite the source:</p>
+        <pre><code class="language-markdown">## Key facts
+
+- Budget: $500k (confirmed in [[sources/2024/10-Oct/15/241015_1000_meeting_q3-review]])
+- Timeline: Q1 launch (from [[sources/2024/11-Nov/03/241103_1430_email_timeline-discussion]])</code></pre>
+        <p><strong>One-way linking</strong>: Topics cite sources, but sources do NOT backlink to topics. This keeps source files stable when you reorganize your knowledge.</p>
+    </details>
+
+    <div class="callout tip">
+        <h3>Sources vs External SSOT</h3>
+        <p><strong>Sources</strong> are first-party content you've captured and preserved in your workspace (meeting transcripts, saved emails). <strong>External SSOT</strong> (Single Source of Truth) refers to live data in external systems that you point to rather than copy — like Gmail queries that fetch current emails, or Notion URLs. Both approaches avoid duplication, but sources preserve a snapshot while SSOT pointers always fetch current data.</p>
+    </div>
+
+    <!-- PASS 3: SPACE BOUNDARIES AND PRIVACY -->
+    <h2 id="pass3">Pass 3: Space Boundaries and Privacy</h2>
+    <p>Now that you understand the memory architecture, let's explore <em>where</em> to save information based on privacy requirements.</p>
+
+    <h3 id="spaces-overview">Understanding Spaces</h3>
+    <p><strong>Spaces</strong> are folders within your Rebel workspace that have different sharing settings. Think of them as security zones.</p>
+
+    <div class="data-structure">
+        <h4>Standard Space Structure</h4>
+        <pre><code>Rebel-workspace/
+  Chief-of-Staff/           🔒 Your private space
+    README.md               (Your identity, preferences)
+    memory/topics/          (Personal topics, sensitive info)
+    memory/sources/         (Personal source captures)
+
+  work/Company/             👥 Shared work space
+    README.md               (Team can see this)
+    memory/topics/          (Team-visible project context)
+    memory/sources/         (Shared source captures)
+    skills/                 (Shared workflows)
+
+  rebel-system/             🌍 Platform (read-only)
+    skills/
+    help-for-humans/</code></pre>
+    </div>
+
+    <details>
+        <summary>Space types and their privacy levels</summary>
+        <p><strong>Chief-of-Staff/ (Your private space)</strong>:</p>
+        <ul>
+            <li><strong>Privacy</strong>: 🔒 Private - Never shared with anyone</li>
+            <li><strong>Purpose</strong>: Your personal command center for cross-space context</li>
+            <li><strong>What goes here</strong>: Personal identity, preferences, compensation info, private reflections</li>
+            <li><strong>Created</strong>: Automatically during Rebel onboarding</li>
+        </ul>
+
+        <p><strong>work/Company/ (Shared work space)</strong>:</p>
+        <ul>
+            <li><strong>Privacy</strong>: 👥 Shared with your team/company</li>
+            <li><strong>Purpose</strong>: Team skills, client context, project documentation</li>
+            <li><strong>What goes here</strong>: Anything your colleagues should have access to</li>
+            <li><strong>Usually connected from</strong>: Google Drive, OneDrive, or Dropbox shared folder</li>
+        </ul>
+
+        <p><strong>rebel-system/ (Platform core)</strong>:</p>
+        <ul>
+            <li><strong>Privacy</strong>: 🌍 Public (read-only)</li>
+            <li><strong>Purpose</strong>: Platform skills, templates, documentation maintained by Mindstone</li>
+            <li><strong>Note</strong>: You cannot modify these files</li>
+        </ul>
+    </details>
+
+    <details>
+        <summary>Space frontmatter (how AI identifies spaces)</summary>
+        <p>Each space's README.md includes YAML frontmatter to help Rebel route correctly:</p>
+        <pre><code class="language-yaml">---
+rebel_space_description: "Company-wide skills and memory for Mindstone"
+space_type: "company"        # personal | company | team | shared | project | router
+sharing: "company-wide"      # private | team | company-wide | public
+sensitivity: "standard"      # standard | confidential | restricted
+related_spaces: ["Exec", "Chief-of-Staff"]
+owner: "jane@company.com"
+---</code></pre>
+        <p><strong>How Rebel uses this</strong>:</p>
+        <ul>
+            <li><code>sharing</code> field → Determines if content can be referenced in team contexts</li>
+            <li><code>sensitivity</code> → Affects how carefully Rebel handles information</li>
+            <li><code>related_spaces</code> → Helps Rebel know which other spaces might have relevant context</li>
+        </ul>
+    </details>
+
+    <h3 id="sensitivity-markers">Sensitivity Markers</h3>
+    <p>Even within a single space, you can mark different sections with different privacy levels.</p>
+
+    <div class="callout tip">
+        <h3>Example: Custom Privacy Rules</h3>
+        <p>You can add your own privacy rules to your <code>Chief-of-Staff/README.md</code>. For example:</p>
+        <ul>
+            <li>"Compensation information is PERSONAL — never save salary, equity, or financial negotiations to shared memory"</li>
+            <li>"Health information stays private"</li>
+            <li>"Draft ideas stay in Chief-of-Staff until I explicitly share them"</li>
+        </ul>
+        <p>Rebel will follow these rules when deciding where to save information.</p>
+    </div>
+
+    <details>
+        <summary>Section-level sensitivity markers</summary>
+        <p>Within any memory topic file, you can use section headers to separate content by visibility:</p>
+        <pre><code class="language-markdown"># Client Meeting Notes - Acme Corp
+
+## SHAREABLE
+- Meeting date: Jan 15, 2026
+- Attendees: Jane (me), Sarah (Acme CTO), Tom (colleague)
+- Topics discussed: Q1 roadmap, API integration timeline
+- Next steps: Draft technical proposal by Jan 22
+
+## PERSONAL
+- My concerns: Timeline is aggressive, might need to push back
+- Personal note: Sarah's communication style reminds me of previous client
+- Mental reminder: Don't commit to deadline without checking team capacity</code></pre>
+        <p><strong>Rule</strong>: Only create sections when content exists for that sensitivity level. When unclear about sensitivity, ask the user - never assume something is shareable.</p>
+        <p><strong>Section header patterns</strong>:</p>
+        <ul>
+            <li><code>## PERSONAL</code> - Never leaves Chief-of-Staff/, even if file is elsewhere (salary, equity, private reflections)</li>
+            <li><code>## SHAREABLE</code> - Can be shared in the work space (client facts, project status)</li>
+        </ul>
+    </details>
+
+    <details>
+        <summary>File-level sensitivity (frontmatter)</summary>
+        <p>You can also mark entire files with a sensitivity score (0.0-1.0 scale):</p>
+        <pre><code class="language-yaml">---
+updated: 251026
+tags: [compensation, personal]
+sensitivity: 0.9  # High - careful handling required
+description: "Salary and equity compensation details"
+---</code></pre>
+        <p><strong>Sensitivity scale interpretation</strong>:</p>
+        <ul>
+            <li><strong>0.0-0.3</strong>: Low - General work information (project updates, client names)</li>
+            <li><strong>0.4-0.6</strong>: Medium - Internal company info (strategy, roadmaps)</li>
+            <li><strong>0.7-1.0</strong>: High - Sensitive personal/confidential (salary, HR matters, legal)</li>
+        </ul>
+        <p><strong>How Rebel uses this</strong>: When sensitivity &gt;0.7, Rebel will be extra cautious about where it references this information and will ask before sharing details.</p>
+    </details>
+
+    <h3 id="storage-decisions">Making Storage Decisions</h3>
+    <p>When new information needs to be saved, here's a simple two-question flow:</p>
+
+    <div class="step">
+        <span class="step-number">Question 1:</span> Is this information sensitive or personal?
+        <p><strong>Examples of sensitive/personal</strong>:</p>
+        <ul>
+            <li>Salary, equity, compensation negotiations</li>
+            <li>Personal health information</li>
+            <li>Private reflections or feelings about colleagues</li>
+            <li>Financial details (bank info, personal expenses)</li>
+        </ul>
+        <p><strong>If YES</strong> → Save to <code>Chief-of-Staff/</code></p>
+        <p><strong>If NO</strong> → Continue to Question 2</p>
+    </div>
+
+    <div class="step">
+        <span class="step-number">Question 2:</span> Should your team have access to this?
+        <p><strong>Examples of team-shareable work content</strong>:</p>
+        <ul>
+            <li>Client relationship history (so colleagues can context-switch)</li>
+            <li>Project documentation (so team understands status)</li>
+            <li>Workflow guides and skills (so team can follow same process)</li>
+        </ul>
+        <p><strong>If YES</strong> → Save to <code>work/Company/</code> (shared work space)</p>
+        <p><strong>If NO</strong> → Save to <code>Chief-of-Staff/</code> (your private space)</p>
+    </div>
+
+    <div class="callout tip">
+        <h3>When in Doubt, Ask</h3>
+        <p>Rebel will ask you before saving potentially sensitive information to shared spaces. It's always better to start more private and move outward with explicit permission than to accidentally leak sensitive info.</p>
+    </div>
+
+    <!-- PASS 4: MEMORY MANAGEMENT IN PRACTICE -->
+    <h2 id="pass4">Pass 4: Memory Management in Practice</h2>
+    <p>Now let's see how memory files are actually structured and managed.</p>
+
+    <h3 id="memory-files">Memory File Structure</h3>
+    <p>Every memory topic file follows a standard template to ensure consistency and proper source attribution.</p>
+
+    <details>
+        <summary>Standard memory file template (explained)</summary>
+        <pre><code class="language-markdown">---
+updated: yyMMdd              # Last modified date (251026 format)
+tags: [topic, domain, workflow]
+sensitivity: 0.0-1.0         # Privacy score
+description: "Single-line summary of what this file contains"
+---
+
+# [Topic Name]
+
+## Quick summary
+2-3 sentences with main takeaways. Keep details out; link to SSOT below.
+This section should give someone the gist without reading further.
+
+## Signposts (SSOT)
+- Primary SSOT: /path/to/file OR https://notion.so/... OR Gmail query: ...
+- Related: Additional canonical sources
+- See also: Related memory files and skills
+
+## Key facts (with per-fact SSOT)
+- Fact: {short factual statement}
+  - SSOT: {canonical link/path/query}
+  - Updated: yyMMdd
+  - Confidence: low | med | high
+
+- Another fact: {statement}
+  - SSOT: {source}
+  - Updated: yyMMdd
+  - Confidence: med
+
+## See also
+- [[topics/related-topic]] - Description of relation
+- [[skills/category/skill-name]] - Related workflow
+- https://external-resource.com - External reference</code></pre>
+        <p><strong>Section explanations</strong>:</p>
+        <ul>
+            <li><strong>Frontmatter</strong>: Metadata for programmatic filtering and search</li>
+            <li><strong>Quick summary</strong>: Elevator pitch - what's the essential takeaway?</li>
+            <li><strong>Signposts</strong>: Where does the canonical information live? (Critical section)</li>
+            <li><strong>Key facts</strong>: Individual facts with per-fact source attribution and confidence</li>
+            <li><strong>See also</strong>: Cross-references to related context (helps Rebel find connected info)</li>
+        </ul>
+    </details>
+
+    <details>
+        <summary>Real example: Client context file</summary>
+        <pre><code class="language-markdown">---
+updated: 251026
+tags: [client, consulting, acmeconsulting]
+sensitivity: 0.3
+description: "Acme Corp client relationship context and project status"
+---
+
+# Acme Corp Client Context
+
+## Quick summary
+Tech startup client since March 2024 for AI enablement consulting. Monthly $8k retainer, primary contact Sarah Johnson (CTO). Current focus: Q1 roadmap and API integration.
+
+## Signposts (SSOT)
+- Primary: Gmail query: `(from:sarah@acme.com OR to:sarah@acme.com OR cc:sarah@acme.com) newer_than:6m`
+- Contract: /Users/jane/Documents/Contracts/Acme-2024-03-15.pdf
+- Project board: https://notion.so/acme-project-board-abc123
+- Invoices: /Users/jane/Documents/Invoices/Acme/
+
+## Key facts (with per-fact SSOT)
+- Client name: Acme Corp
+  - SSOT: Contract above | Updated: 251026 | Confidence: high
+
+- Primary contact: Sarah Johnson, CTO (sarah@acme.com)
+  - SSOT: Gmail query above | Updated: 251026 | Confidence: high
+
+- Contract: $8,000/month retainer, started March 2024
+  - SSOT: /Users/jane/Documents/Contracts/Acme-2024-03-15.pdf | Updated: 251026 | Confidence: high
+
+- Recent meeting: Jan 10, 2026 - discussed Q1 priorities
+  - SSOT: Gmail query: `from:sarah@acme.com subject:"meeting notes" after:2026-01-01` | Updated: 251026 | Confidence: high
+
+- Next deliverable: Technical proposal due Jan 22, 2026
+  - SSOT: Gmail thread "Re: Q1 Planning" Jan 10 | Updated: 251026 | Confidence: med
+
+## See also
+- [[topics/AcmeConsulting/services]] - Service catalog
+- [[topics/AcmeConsulting/invoicing-workflow]] - How to invoice clients
+- [[skills/client-management/meeting-prep]] - Meeting preparation workflow</code></pre>
+        <p><strong>Note what's NOT here</strong>: Full email transcripts, entire meeting notes, complete contract text. Those live in the SSOT locations. This file just summarizes and points.</p>
+    </details>
+
+    <h3 id="ssot-principle">The SSOT Principle (Single Source of Truth)</h3>
+    <p>The most critical principle in Rebel's memory system: <strong>Every fact must have a traceable source</strong>.</p>
+
+    <div class="callout warning">
+        <h3>⚠️ NEVER MAKE STUFF UP</h3>
+        <p>Rebel is explicitly instructed: <strong>No assumptions, guesses, or inferences</strong> in memory files. If uncertain about any detail, ask the user first. It's always better to ask than to assume.</p>
+    </div>
+
+    <details>
+        <summary>Why SSOT matters</summary>
+        <p><strong>Problem scenario without SSOT</strong>:</p>
+        <ol>
+            <li>You tell Rebel: "Client Acme's budget is $10k/month"</li>
+            <li>Rebel saves it to memory</li>
+            <li>Three months later, client actually confirms $12k/month via email</li>
+            <li>Memory file still says $10k (now incorrect)</li>
+            <li>You ask Rebel: "What's Acme's budget?" → Gets wrong answer</li>
+        </ol>
+        <p><strong>Solution with SSOT</strong>:</p>
+        <ol>
+            <li>You tell Rebel: "Client mentioned $10k in our call"</li>
+            <li>Rebel saves: "Budget: ~$10k (preliminary) - SSOT: Personal note from call Jan 5 | Confidence: low"</li>
+            <li>Three months later, email confirms $12k</li>
+            <li>Rebel updates: "Budget: $12k/month - SSOT: Gmail query: from:client@acme.com subject:contract | Confidence: high"</li>
+            <li>You ask Rebel: "What's Acme's budget?" → Gets correct answer from source</li>
+        </ol>
+        <p><strong>Benefits</strong>:</p>
+        <ul>
+            <li>Trust in memory accuracy</li>
+            <li>Easy verification path</li>
+            <li>Clear confidence levels</li>
+            <li>Graceful handling of uncertainty</li>
+        </ul>
+    </details>
+
+    <details>
+        <summary>SSOT source format examples</summary>
+        <p><strong>Gmail query format</strong>:</p>
+        <pre><code class="language-markdown">SSOT: Gmail query: `from:client@acme.com subject:"contract" newer_than:3m`</code></pre>
+        <p>Rebel can execute this query to fetch current emails when needed.</p>
+
+        <p><strong>Notion URL format</strong>:</p>
+        <pre><code class="language-markdown">SSOT: https://notion.so/workspace/page-title-abc123def456</code></pre>
+        <p>Direct link to Notion page (Rebel can fetch via built-in Notion connector).</p>
+
+        <p><strong>File path format</strong>:</p>
+        <pre><code class="language-markdown">SSOT: /Users/jane/Documents/Contracts/Acme-2024-03-15.pdf</code></pre>
+        <p>Absolute path to local file (Rebel can read).</p>
+
+        <p><strong>Folder location format</strong>:</p>
+        <pre><code class="language-markdown">SSOT: /Users/jane/Documents/ProjectX/ (see README.md and specs/)</code></pre>
+        <p>Directory containing multiple related files.</p>
+
+        <p><strong>Slack search format</strong>:</p>
+        <pre><code class="language-markdown">SSOT: Slack #engineering channel, search: "database migration" after:2025-12-01</code></pre>
+        <p>Slack search query that retrieves relevant thread.</p>
+
+        <p><strong>Web URL format</strong>:</p>
+        <pre><code class="language-markdown">SSOT: https://company.com/docs/technical-specs (retrieved 2025-12-16)</code></pre>
+        <p>External public URL (include retrieval date since web content changes).</p>
+    </details>
+
+    <h3 id="when-to-update">When to Update Memory</h3>
+    <p>Not every conversation results in memory updates. Here are the guidelines Rebel follows:</p>
+
+    <details>
+        <summary>✅ DO update memory when...</summary>
+        <ul>
+            <li><strong>User explicitly states biographical facts</strong>: "I work at Acme Corp as Engineering Manager"</li>
+            <li><strong>User expresses clear preferences</strong>: "Always draft emails for my review, never send directly"</li>
+            <li><strong>User corrects Rebel multiple times</strong>: "No, the meeting is Thursday, not Wednesday" (pattern suggests memory gap)</li>
+            <li><strong>User provides context to remember</strong>: "Save this - our design system uses Tailwind CSS"</li>
+            <li><strong>User explicitly requests memory update</strong>: "Add this to my memory" or "Remember this"</li>
+        </ul>
+    </details>
+
+    <details>
+        <summary>❌ DON'T update memory when...</summary>
+        <ul>
+            <li><strong>Making assumptions or inferences</strong>: User mentions "project deadline" → Don't assume which project without confirmation</li>
+            <li><strong>Recording temporary session details</strong>: "I'm debugging this script today" → Too transient for memory</li>
+            <li><strong>Capturing conversational back-and-forth</strong>: Don't log every message exchange, only key factual outcomes</li>
+            <li><strong>Speculating about preferences</strong>: User used formal tone once → Don't assume they always prefer formal communication</li>
+            <li><strong>Duplicating information from SSOT</strong>: Don't copy entire email threads, just signpost to them</li>
+        </ul>
+    </details>
+
+    <details>
+        <summary>Memory update process (how Rebel does it)</summary>
+        <ol>
+            <li><strong>Determine what to update</strong>: Biographical, preference, domain-specific context?</li>
+            <li><strong>Check if file exists</strong>: Read the current file first (never blindly overwrite)</li>
+            <li><strong>Make minimal, precise updates</strong>: Surgeon mode - change only what needs changing</li>
+            <li><strong>Maintain cross-references</strong>: Check if other files should link to this new information</li>
+            <li><strong>Verify with user if uncertain</strong>: When in doubt about where or what to save, ask first</li>
+        </ol>
+        <p><strong>Example conversation triggering memory update</strong>:</p>
+        <blockquote>
+            <p><strong>User</strong>: "I've joined the Executive team at Acme as of this month."</p>
+            <p><strong>Rebel</strong>: "I'll update your Chief-of-Staff/README.md to reflect your new team membership. Should I also note this in work/Acme/Exec/README.md for team-visible context?"</p>
+            <p><strong>User</strong>: "Yes, please."</p>
+            <p><strong>Rebel</strong>: Updates both files with minimal changes:</p>
+            <ul>
+                <li>Chief-of-Staff/README.md: Adds "Exec" to TEAMS list</li>
+                <li>work/Acme/Exec/README.md: Adds you to team member list</li>
+            </ul>
+        </blockquote>
+    </details>
+
+    <!-- COOKBOOK -->
+    <h2 id="cookbook">Cookbook: Common Scenarios</h2>
+    <p>Practical examples of how to handle common memory situations.</p>
+
+    <details>
+        <summary>Scenario 1: You got a raise - where to save it?</summary>
+        <p><strong>Situation</strong>: Your manager just confirmed a salary increase to $120k/year plus 1.5% equity.</p>
+        <p><strong>Solution</strong>:</p>
+        <ol>
+            <li><strong>Location</strong>: <code>Chief-of-Staff/memory/topics/Compensation-YourName.md</code> (NOT in any work space)</li>
+            <li><strong>Section</strong>: <code>## PERSONAL</code> (even though file is already private)</li>
+            <li><strong>Include SSOT</strong>: Link to email from manager or contract document</li>
+        </ol>
+        <pre><code class="language-markdown">---
+updated: 251216
+tags: [compensation, personal, confidential]
+sensitivity: 0.9
+description: "Salary and equity compensation details - HIGHLY SENSITIVE"
+---
+
+# Compensation - Jane Smith
+
+## PERSONAL
+
+### Current compensation (as of Dec 2025)
+- Base salary: $120,000/year (increased from $100k)
+  - SSOT: Email from manager@company.com "Re: Salary Adjustment" Dec 15, 2025
+  - Updated: 251216 | Confidence: high
+
+- Equity: 1.5% of company (vested over 4 years)
+  - SSOT: /Users/jane/Documents/Employment/Equity-Agreement-2025-12-15.pdf
+  - Updated: 251216 | Confidence: high
+
+## Signposts
+- Primary: /Users/jane/Documents/Employment/
+- Related: Gmail query: `from:manager@company.com subject:salary OR subject:compensation`</code></pre>
+        <p><strong>Why this works</strong>: Completely private, clear SSOT, high sensitivity marking, never touches company-shared spaces.</p>
+    </details>
+
+    <details>
+        <summary>Scenario 2: Client relationship context - shared or private?</summary>
+        <p><strong>Situation</strong>: You're the account lead for client "Acme Corp". Your colleagues need context to jump in if you're unavailable.</p>
+        <p><strong>Solution</strong>: Use section markers to separate team-shareable from personal notes.</p>
+        <ol>
+            <li><strong>Location</strong>: <code>work/Company/memory/topics/clients/Acme-Corp.md</code> (shared work space)</li>
+            <li><strong>Sections</strong>: <code>## SHAREABLE</code> for facts, <code>## PERSONAL</code> for your private notes</li>
+        </ol>
+        <pre><code class="language-markdown">---
+updated: 251216
+tags: [client, account-management]
+sensitivity: 0.4
+description: "Acme Corp client relationship context and history"
+---
+
+# Acme Corp Client Context
+
+## SHAREABLE
+
+### Quick summary
+B2B SaaS client since March 2024, $12k/month retainer for AI consulting. Primary contact: Sarah Johnson (CTO). Current project: API integration for Q1 launch.
+
+### Key contacts
+- Sarah Johnson, CTO (sarah@acme.com) - Decision maker, technical
+- Mike Chen, Product Lead (mike@acme.com) - Day-to-day collaboration
+- SSOT: Gmail query: `from:*@acme.com OR to:*@acme.com` | Updated: 251216
+
+### Contract details
+- Value: $12,000/month retainer
+- Start date: March 15, 2024
+- SSOT: Company shared drive Contracts folder | Updated: 251216
+
+### Recent activity
+- Dec 10 meeting: Discussed Q1 roadmap priorities
+- Next milestone: Technical proposal due Dec 22
+- SSOT: Notion project board | Updated: 251216
+
+## PERSONAL
+
+### My private notes
+- Sarah can be direct/blunt - don't take it personally, just her communication style
+- They're budget-conscious - always emphasize ROI in proposals
+- Mike is enthusiastic but needs technical validation from Sarah before committing
+- Remind myself: Don't commit to deadlines without checking team capacity first
+- Potential upsell opportunity: They mentioned interest in training package (pursue in Q1)</code></pre>
+        <p><strong>Why this works</strong>:</p>
+        <ul>
+            <li>Team members can read the SHAREABLE section for context to cover you</li>
+            <li>Your personal observations stay private (nobody sees them but you)</li>
+            <li>Clear SSOT references for verification</li>
+            <li>Upsell notes captured without revealing to team (competitive/premature)</li>
+        </ul>
+    </details>
+
+    <details>
+        <summary>Scenario 3: Project status - should it be auto-loaded?</summary>
+        <p><strong>Situation</strong>: You're working on "Project Phoenix" - a major Q1 initiative. Should this be in README.md (auto-loaded) or topics/?</p>
+        <p><strong>Decision framework</strong>:</p>
+        <p><strong>Ask yourself</strong>: Will I reference Project Phoenix in &gt;50% of my conversations with Rebel over the next month?</p>
+        <ul>
+            <li><strong>If YES</strong> → Auto-load it in README.md with a link to detailed topic file</li>
+            <li><strong>If NO</strong> → Keep detailed context in topics/ only</li>
+        </ul>
+        <p><strong>Recommended approach</strong> (best of both worlds):</p>
+        <p><strong>In Chief-of-Staff/README.md</strong> (auto-loaded):</p>
+        <pre><code class="language-markdown">## Current Priorities (Dec 2025)
+- **Project Phoenix** - Q1 flagship initiative, launch target Feb 1
+  - Details: [[topics/Project-Phoenix]] (on-demand)
+  - Status: Development phase, 60% complete</code></pre>
+        <p><strong>In Chief-of-Staff/memory/topics/Project-Phoenix.md</strong> (on-demand):</p>
+        <pre><code class="language-markdown">---
+updated: 251216
+tags: [project, q1-priority, product-launch]
+sensitivity: 0.5
+description: "Project Phoenix Q1 initiative - detailed context and status"
+---
+
+# Project Phoenix
+
+## Quick summary
+Major product launch initiative for Q1 2026. Goal: Ship AI-powered analytics dashboard by Feb 1. Cross-functional team of 8, budget $150k.
+
+## Signposts
+- Primary: Notion project board: https://notion.so/project-phoenix-board
+- Technical specs: /Users/jane/Documents/Projects/Phoenix/specs/
+- Slack channel: #project-phoenix
+- Weekly updates: Gmail label: "phoenix-updates"
+
+## Key facts
+[Detailed project information with SSOT references...]
+
+## See also
+- [[topics/Q1-OKRs]] - How this ties to company objectives
+- [[skills/project-management/weekly-standup-prep]] - Prep workflow</code></pre>
+        <p><strong>Why this works</strong>:</p>
+        <ul>
+            <li>Essential facts (name, status) always available in every conversation</li>
+            <li>Detailed context loaded only when working on Phoenix-specific tasks</li>
+            <li>Keeps auto-loaded section concise</li>
+            <li>Easy to remove from auto-load when project completes (just delete from README.md, keep topic file for archive)</li>
+        </ul>
+    </details>
+
+    <details>
+        <summary>Scenario 4: Email patterns vs email content</summary>
+        <p><strong>Situation</strong>: You frequently email with several clients. Should you save email threads to memory?</p>
+        <p><strong>Solution</strong>: Store <em>query patterns</em>, not email content.</p>
+        <p><strong>Example memory file</strong> (<code>memory/topics/email-context.md</code>):</p>
+        <pre><code class="language-markdown">---
+updated: 251216
+tags: [email, communication, contacts]
+sensitivity: 0.3
+description: "Email contact patterns and Gmail query strings for frequent correspondents"
+---
+
+# Email Context and Patterns
+
+## Client Communication Patterns
+
+### Acme Corp (SaaS client)
+- **Primary contact**: Sarah Johnson (sarah@acme.com)
+- **Gmail query**: `from:sarah@acme.com OR to:sarah@acme.com OR subject:"acme" newer_than:90d`
+- **Cadence**: Weekly check-ins, monthly formal reports
+- **Recent**: Q1 planning discussion (Dec 10)
+
+### BetaCorp (Consulting client)
+- **Primary contact**: Mike Lee (mike@betacorp.com)
+- **Gmail query**: `from:mike@betacorp.com OR to:mike@betacorp.com newer_than:90d`
+- **Cadence**: Bi-weekly sprints
+- **Recent**: Sprint planning email (Dec 8)
+
+## Internal Team Communication
+
+### Manager 1:1s
+- **Contact**: Manager Name (manager@company.com)
+- **Gmail query**: `from:manager@company.com subject:"1:1" OR subject:"check-in" newer_than:180d`
+- **Cadence**: Bi-weekly
+- **Recent**: Career development discussion (Dec 5)</code></pre>
+        <p><strong>What NOT to do</strong>:</p>
+        <pre><code class="language-markdown">❌ DON'T DO THIS:
+
+## Email from Sarah (Dec 10)
+
+Hi Jane,
+
+Following up on our call yesterday. Here are the Q1 priorities:
+1. API integration
+2. Dashboard redesign
+3. Mobile app beta
+
+Let me know your thoughts.
+
+Best,
+Sarah</code></pre>
+        <p><strong>Why?</strong> This email content will become stale. Instead, store the query that retrieves current emails when needed.</p>
+        <p><strong>When you ask Rebel</strong>: "What did Sarah say about Q1 priorities?"</p>
+        <p>Rebel will:</p>
+        <ol>
+            <li>Read email-context.md to find Sarah's Gmail query</li>
+            <li>Execute the query to fetch recent emails</li>
+            <li>Analyze current email content to answer your question</li>
+        </ol>
+        <p><strong>Benefits</strong>:</p>
+        <ul>
+            <li>Always fetches current information</li>
+            <li>Captures follow-ups and updates automatically</li>
+            <li>Lightweight memory file (just queries, not content)</li>
+        </ul>
+    </details>
+
+    <details>
+        <summary>Scenario 5: Transitioning from personal to shared space</summary>
+        <p><strong>Situation</strong>: You've been developing a workflow skill in your personal space. Now your team wants to use it too.</p>
+        <p><strong>Solution</strong>: Move the skill, update references, add team context.</p>
+        <ol>
+            <li><strong>Original location</strong>: <code>Chief-of-Staff/skills/meeting-prep.md</code></li>
+            <li><strong>New location</strong>: <code>work/Company/skills/meeting-prep.md</code></li>
+        </ol>
+        <p><strong>Process</strong>:</p>
+        <pre><code class="language-bash"># 1. Copy file to new location
+cp Chief-of-Staff/skills/meeting-prep.md \
+   work/Company/skills/meeting-prep.md
+
+# 2. Update file frontmatter in new location
+# Change sensitivity from 0.9 (personal) to 0.3 (team-shareable)
+
+# 3. Remove any PERSONAL sections
+# Review content for anything private (personal preferences, etc.)
+
+# 4. Update cross-references
+# Find files that reference the old location and update them</code></pre>
+        <p><strong>Update old file</strong>: Replace with redirect/deprecation notice:</p>
+        <pre><code class="language-markdown">---
+deprecated: true
+redirect: work/Company/skills/meeting-prep.md
+---
+
+# Meeting Prep [DEPRECATED]
+
+This skill has moved to the shared work space.
+
+**New location**: [[work/Company/skills/meeting-prep]]
+
+This file will be removed after [DATE].</code></pre>
+        <p><strong>Why this works</strong>:</p>
+        <ul>
+            <li>Team gets access to the skill</li>
+            <li>Old references still work (for now) with redirect</li>
+            <li>Clear deprecation path</li>
+            <li>Sensitive personal notes removed before sharing</li>
+        </ul>
+    </details>
+
+    <!-- FILE REFERENCE CATALOGUE -->
+    <h2 id="catalogue">File Reference Catalogue</h2>
+    <p>Key files and directories in Rebel's memory system:</p>
+
+    <details>
+        <summary>Layer 1: Core Platform Files</summary>
+        <div class="code-ref">
+            <div class="file-path">rebel-system/AGENTS.md</div>
+            <div>Platform agent instructions</div>
+            <p>Contains the base system prompt that all Rebel agents load, including privacy rules and memory management guidelines. Read-only, maintained by Mindstone.</p>
+            <p><a href="#tier1">→ Auto-Loaded Context</a></p>
+        </div>
+
+        <div class="code-ref">
+            <div class="file-path">rebel-system/help-for-humans/memory-folders-and-approvals.md</div>
+            <div>Memory folder overview documentation</div>
+            <p>Explains the memory/ folder structure for personal and team-specific working files.</p>
+        </div>
+
+        <div class="code-ref">
+            <div class="file-path">rebel-system/help-for-humans/spaces.md</div>
+            <div>Space architecture documentation</div>
+            <p>Describes space types, sharing settings, and organization patterns.</p>
+            <p><a href="#spaces-overview">→ Space Boundaries</a></p>
+        </div>
+
+        <div class="code-ref">
+            <div class="file-path">rebel-system/help-for-humans/Rebel-privacy-policy.md</div>
+            <div>Privacy policy and data handling</div>
+            <p>Comprehensive privacy policy covering data storage, third-party AI APIs, MCP services, and best practices.</p>
+        </div>
+    </details>
+
+    <details>
+        <summary>Layer 2: Memory Management Skills</summary>
+        <div class="code-ref">
+            <div class="file-path">rebel-system/skills/memory/memory-update/SKILL.md</div>
+            <div>Ongoing memory maintenance skill</div>
+            <p>Automatically maintains memory after conversations, extracting and organizing facts based on utility thresholds. Runs in the background after each turn.</p>
+            <p><a href="#ssot-principle">→ SSOT Principle</a> | <a href="#when-to-update">→ When to Update</a></p>
+        </div>
+
+        <div class="code-ref">
+            <div class="file-path">rebel-system/skills/memory/source-capture/SKILL.md</div>
+            <div>Source capture skill</div>
+            <p>Captures first-party sources (meetings, emails, Slack threads) as structured files with provenance metadata. Used when preserving important content.</p>
+            <p><a href="#sources">→ Sources</a></p>
+        </div>
+    </details>
+
+    <details>
+        <summary>Layer 3: User Space Files</summary>
+        <div class="code-ref">
+            <div class="file-path">Chief-of-Staff/README.md</div>
+            <div>Personal auto-loaded context</div>
+            <p>Your identity, preferences, cross-space context. Loaded automatically in every conversation. Keep concise (50%+ utility facts only).</p>
+            <p><a href="#tier1">→ Auto-Loaded Context</a></p>
+        </div>
+
+        <div class="code-ref">
+            <div class="file-path">Chief-of-Staff/memory/topics/</div>
+            <div>Personal on-demand topics directory</div>
+            <p>Detailed personal context loaded when @ mentioned or via semantic search (<code>@files</code>). Examples: compensation info, personal projects, private reflections.</p>
+            <p><a href="#tier2">→ On-Demand Topics</a></p>
+        </div>
+
+        <div class="code-ref">
+            <div class="file-path">Chief-of-Staff/memory/sources/</div>
+            <div>Personal source captures</div>
+            <p>First-party content captures (meetings, emails, Slack threads) organized by date. Topics cite these for provenance.</p>
+            <p><a href="#sources">→ Sources</a></p>
+        </div>
+
+        <div class="code-ref">
+            <div class="file-path">work/Company/README.md</div>
+            <div>Shared work space auto-loaded context</div>
+            <p>Team-visible facts loaded automatically when working in this space. Company info, team structure, shared priorities.</p>
+        </div>
+
+        <div class="code-ref">
+            <div class="file-path">work/Company/memory/topics/</div>
+            <div>Shared work space on-demand topics</div>
+            <p>Detailed company/team context. Examples: client relationships, project documentation, team workflows. Visible to your team.</p>
+        </div>
+
+        <div class="code-ref">
+            <div class="file-path">work/Company/memory/sources/</div>
+            <div>Shared source captures</div>
+            <p>Team-visible source content (meeting transcripts, important email threads). Topics cite these for provenance.</p>
+        </div>
+    </details>
+
+    <!-- REFERENCES -->
+    <h2 id="references">References & Related Resources</h2>
+    <ul>
+        <li><strong>Core documentation</strong>:
+            <ul>
+                <li><a href="../spaces.md">spaces.md</a> - Space architecture and organization</li>
+                <li><a href="../memory-folders-and-approvals.md">memory-folders-and-approvals.md</a> - Memory folder structure overview</li>
+                <li><a href="../Rebel-privacy-policy.md">Rebel-privacy-policy.md</a> - Privacy and data handling policy</li>
+                <li><a href="../architecture-technical-description.md">architecture-technical-description.md</a> - Technical architecture overview</li>
+            </ul>
+        </li>
+        <li><strong>Memory management skills</strong>:
+            <ul>
+                <li><a href="../../skills/memory/memory-update/SKILL.md">memory-update</a> - Automatic memory maintenance after conversations</li>
+                <li><a href="../../skills/memory/source-capture/SKILL.md">source-capture</a> - Capturing first-party sources with provenance</li>
+            </ul>
+        </li>
+        <li><strong>Related skills</strong>:
+            <ul>
+                <li><a href="../../skills/documentation/signposting-to-single-source-of-truth/SKILL.md">signposting-to-single-source-of-truth</a> - SSOT principle and implementation</li>
+                <li><a href="../../skills/system/space-add/SKILL.md">space-add</a> - Adding new spaces</li>
+                <li><a href="../space-shared-folders.md">space-shared-folders</a> - Connecting shared folders as spaces</li>
+            </ul>
+        </li>
+        <li><strong>Finding memory content</strong>:
+            <ul>
+                <li>Use <code>@files</code> in your message to trigger semantic search across your workspace</li>
+                <li>Use <code>@path/to/file.md</code> to explicitly mention a specific memory file</li>
+            </ul>
+        </li>
+    </ul>
+
+    <!-- FOOTER -->
+    <hr />
+    <p class="small">
+        Last updated: 2026-01-06<br>
+        For questions or corrections, see the <code>help-for-humans/</code> docs or <a href="https://mindstone.com">mindstone.com</a>
+    </p>
+
+</body>
+
+</html>

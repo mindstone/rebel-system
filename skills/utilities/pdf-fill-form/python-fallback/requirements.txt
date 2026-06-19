@@ -1,0 +1,16 @@
+# Python fallback for pdf-fill-form skill.
+#
+# Used only when the Node form-filling path can't handle a PDF:
+# - XFA forms (Adobe LiveCycle Designer output)
+# - Encrypted / password-protected PDFs
+# - Scanned / non-fillable PDFs needing OCR or visual annotation
+#
+# These pins match the Anthropic PDF skill's expected versions
+# (rebel-system/skills/Anthropic-official-skills/document-skills/pdf/).
+# Re-pin when bumping; check that the Anthropic skill's scripts still work
+# against the new versions before merging.
+
+pypdf>=5.7.0,<6.0.0
+pdfplumber>=0.11.0,<0.12.0
+pdf2image>=1.17.0,<2.0.0
+Pillow>=10.4.0,<12.0.0

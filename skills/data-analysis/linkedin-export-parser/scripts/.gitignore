@@ -1,0 +1,3 @@
+# Ignore parsed output (contains personal data)
+parsed_data/
+node_modules/

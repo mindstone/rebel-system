@@ -1,0 +1,79 @@
+# Python Dependencies Template
+#
+# This file lists all external Python packages your project needs.
+# Use this template as a starting point for your own requirements.txt
+#
+# Usage:
+#   1. Copy this file to your project root as 'requirements.txt'
+#   2. Uncomment and modify the packages you need
+#   3. Add new packages as needed
+#   4. Install with: pip install -r requirements.txt
+#
+# Best practices:
+#   - Pin versions for reproducibility (e.g., requests==2.31.0)
+#   - Use >= for flexible minor updates (e.g., requests>=2.31.0)
+#   - Group related packages together
+#   - Comment why you need each package
+#
+# Generate from current environment:
+#   pip freeze > requirements.txt
+
+# ============================================
+# Web & API
+# ============================================
+# requests==2.31.0          # HTTP requests library
+# httpx==0.24.1             # Modern async HTTP client
+# beautifulsoup4==4.12.2    # HTML/XML parsing
+# lxml==4.9.3               # XML/HTML processing
+
+# ============================================
+# Data Processing
+# ============================================
+# pandas==2.1.0             # Data analysis and manipulation
+# numpy==1.25.2             # Numerical computing
+# openpyxl==3.1.2           # Excel file handling (.xlsx)
+# python-docx==0.8.11       # Word document (.docx) handling
+
+# ============================================
+# PDF Processing
+# ============================================
+# pdfplumber==0.10.2        # PDF extraction (recommended)
+# PyPDF2==3.0.1             # PDF reading/writing
+# reportlab==4.0.4          # PDF generation
+
+# ============================================
+# AI & Machine Learning
+# ============================================
+# openai==1.3.0             # OpenAI API (GPT models)
+# anthropic==0.5.0          # Anthropic API (Claude)
+# tiktoken==0.5.1           # Token counting for OpenAI
+
+# ============================================
+# Utilities
+# ============================================
+# python-dotenv==1.0.0      # Load environment variables from .env files
+# click==8.1.7              # CLI argument parsing
+# rich==13.5.2              # Beautiful terminal output
+# tqdm==4.66.1              # Progress bars
+
+# ============================================
+# Database
+# ============================================
+# psycopg2-binary==2.9.7    # PostgreSQL adapter
+# pymongo==4.5.0            # MongoDB driver
+# redis==5.0.0              # Redis client
+
+# ============================================
+# Testing & Development (optional)
+# ============================================
+# pytest==7.4.2             # Testing framework
+# black==23.9.1             # Code formatting
+# flake8==6.1.0             # Linting
+# mypy==1.5.1               # Type checking
+
+# ============================================
+# Project-Specific Packages
+# ============================================
+# Add your specific packages here
+# package-name==version     # Description of why you need it
+

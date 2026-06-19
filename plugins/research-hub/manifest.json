@@ -1,0 +1,15 @@
+{
+  "id": "research-hub",
+  "name": "Research Hub",
+  "description": "Semantic search across your workspace files and memories, with related conversations for quick follow-up. Showcases useMemorySearch, useConversations, and persistent recent searches.",
+  "version": "0.1.0",
+  "entryPoint": "index.tsx",
+  "maturity": "labs",
+  "role": "utility",
+  "permissions": [],
+  "externalDomains": [],
+  "surfaces": {
+    "sidebar": { "enabled": true },
+    "homepageWidget": { "enabled": false, "defaultSize": "medium" }
+  }
+}

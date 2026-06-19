@@ -1,0 +1,23 @@
+{
+  "name": "linkedin-export-parser",
+  "version": "2.0.0",
+  "description": "Parse and query LinkedIn full data export archives",
+  "main": "parse_linkedin_export.js",
+  "scripts": {
+    "parse": "node parse_linkedin_export.js",
+    "query": "node query_linkedin_data.js"
+  },
+  "keywords": [
+    "linkedin",
+    "data-export",
+    "parser",
+    "csv",
+    "analytics"
+  ],
+  "author": "Mindstone",
+  "license": "MIT",
+  "dependencies": {
+    "adm-zip": "^0.5.10",
+    "csv-parse": "^5.5.3"
+  }
+}

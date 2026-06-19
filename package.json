@@ -1,0 +1,17 @@
+{
+  "name": "rebel-system-cli",
+  "version": "0.1.0",
+  "description": "CLI tools for rebel-system skill development and testing",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "rebel": "tsx cli/rebel-cli.ts",
+    "run": "tsx cli/commands/run.ts"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.39.0",
+    "nunjucks": "^3.2.4",
+    "tsx": "^4.0.0"
+  }
+}

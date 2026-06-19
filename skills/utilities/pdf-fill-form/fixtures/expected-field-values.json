@@ -1,0 +1,7 @@
+[
+  { "field_id": "applicant_name", "value": "Ada Lovelace" },
+  { "field_id": "address", "value": "10 Downing Street" },
+  { "field_id": "agree_to_terms", "value": true },
+  { "field_id": "employment_type", "value": "employee" },
+  { "field_id": "department", "value": "sales" }
+]
