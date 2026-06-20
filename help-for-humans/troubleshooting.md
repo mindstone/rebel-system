@@ -32,6 +32,9 @@ Open **Settings → Advanced** and click **Run System Check**. This tests your c
 **Export diagnostics**
 If you need to share details with support, use **Settings → Advanced → Download Enhanced (.zip)** to create a diagnostic bundle. Review [diagnostics-logging.md](diagnostics-logging.md) for what's included and how to check for sensitive data before sharing.
 
+**Disk full**
+If your computer runs out of disk space, Rebel now shows a calm warning saying so plainly, rather than failing in confusing ways. Free up some space (empty the trash, clear large downloads) and the warning clears on its own.
+
 
 ---
 
@@ -86,6 +89,11 @@ If Rebel won't start at all:
 3. **Windows: Check firewall** — Windows Firewall may prompt you to allow Rebel network access. If you dismissed this prompt, go to Windows Security → Firewall → Allow an app through firewall.
 
 4. **Reinstall** — If nothing else works, reinstall Rebel. Your conversations and settings are stored separately from the app, so they should be preserved. For a full clean start, see [Clean Reinstall and Factory Reset](clean-reinstall-and-factory-reset.md).
+
+
+### Problems updating
+
+If you'd moved Rebel after installing it, an update could previously leave it half-installed and in a broken state. Updates are more robust now — they handle a relocated app gracefully, and if something does go wrong, Rebel reports the problem clearly instead of failing quietly. If an update ever seems stuck, quit and relaunch Rebel, then try updating again.
 
 
 ---

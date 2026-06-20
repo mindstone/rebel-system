@@ -10,6 +10,8 @@ Same Rebel underneath — same agent, same voice, same safety layer, the same Sp
 
 If you didn't go out of your way to install Rebel from its public source code, you almost certainly have the managed app, and this guide is just good background reading.
 
+One part is open to *everyone*, managed app included: **rebel-system** — the bundled library of skills, help docs, and agent instructions Rebel runs on — is MIT-licensed and developed in the open. Anyone can read, fork, or contribute to the exact skills and instructions powering their copy of Rebel. Nothing up our sleeve.
+
 ## Who it's for
 
 The open build is aimed at **individuals and small teams** who want Rebel running entirely on their own terms — their own AI accounts, their own infrastructure, and no usage data reported back to Mindstone. If that sounds like a lot of switches to set, it is, a little. The reward is that nothing is hidden, and nothing reaches Mindstone unless you ask it to.

@@ -138,8 +138,8 @@ This is separate from very large libraries that show a **partial Library** notic
 
 - Wait for indexing to complete (can take a few minutes for large workspaces)
 - Ensure the file type is supported (text-based files)
-- If Rebel says **"search is temporarily unavailable"**, search itself can't run right now — that's not the same as having no matches. Try again shortly.
-- If Rebel reports **no matching files**, it searched and found nothing for that query — try rephrasing or check the file isn't excluded
+- If Rebel says search is **temporarily unavailable**, search itself can't run right now — the index may still be warming up or briefly unavailable. Your files aren't gone, and this is **not** the same as having no matches; try again shortly.
+- If Rebel reports **no matching files** with no such notice, it searched and genuinely found nothing for that query — try rephrasing or check the file isn't excluded
 
 ### Results seem off
 
