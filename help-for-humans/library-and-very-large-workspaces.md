@@ -1,6 +1,6 @@
 ---
-description: "What Rebel's partial Library notice means on huge workspaces, why cloud folders no longer hang scanning, and how to tell search-unavailable from no matches"
-last_updated: "2026-06-18"
+description: "What Rebel's partial Library notice means on huge workspaces, how cloud spaces stay searchable (and show Reconnecting when a mount is flaky), and how to tell search-unavailable from no matches"
+last_updated: "2026-06-20"
 ---
 
 # Library and Very Large Workspaces
@@ -17,11 +17,17 @@ If your workspace holds an enormous number of files — common when everything l
 - You'll still see plenty; you just won't get the full tree in every view
 - Quick Open and Library search work within what's loaded
 
-## Cloud-synced folders no longer hang forever
+## Cloud spaces: searchable when healthy, honest when not
 
-On Google Drive, iCloud, or OneDrive workspaces, Rebel used to sit on **"Scanning your files and folders…"** indefinitely while chasing shortcuts into cloud storage that never resolved. It now knows when to stop probing those folders and moves on to your actual files.
+Spaces that live on Google Drive, iCloud, OneDrive, Dropbox, or Box are indexed and searchable just like local folders — Rebel keeps them up to date so your cloud documents show up in search and the Library.
 
-Your files were never at risk — Rebel was just being overly thorough in the wrong places. Scanning should finish normally now.
+If one of those cloud mounts goes slow or unreachable (Drive logged out, network dropped, mid-reconnect), Rebel doesn't freeze and doesn't pretend the files vanished. It does three calm things:
+
+- **Shows "Reconnecting"** on that space, so you know it isn't fully in sync right now.
+- **Keeps serving your last-known files** for it — search still finds the documents Rebel indexed before, tagged so you know they may not be the very latest.
+- **Recovers on its own** — once the mount responds again, Rebel quietly re-syncs and the "Reconnecting" note disappears. There's a **Re-check** button if you'd rather not wait.
+
+A flaky Drive can no longer freeze Rebel: the checking happens off to the side, so a stuck cloud folder never wedges the rest of the app. Your files are never at risk — nothing is deleted while a space is reconnecting.
 
 ## Search: unavailable vs no matches
 

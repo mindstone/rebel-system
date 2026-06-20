@@ -4,9 +4,12 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ---
 
-## v0.4.49 — Jun 16-18, 2026
+## v0.4.49 — Jun 16-20, 2026
 
 ### Highlights
+
+<!-- detail: Restores full indexing/watching/search for HEALTHY cloud-symlinked spaces (Google Drive / Dropbox / iCloud / OneDrive / Box) that 0.4.48→0.4.49's library-scan-freeze fix had unconditionally excluded. An off-main-thread liveness prober (separate OS process, own libuv pool, parent-side timeout+kill) decides per-space health; a HEALTHY space is admitted to the normal walk/watch/index behind the experimental.cloudSymlinkIndexing flag; a slow/dead mount can't hang Rebel by construction (the main process never issues an unbounded blocking syscall against a cloud mount). A non-healthy space shows a per-space "Reconnecting" signal, keeps serving the last-known index (search never fs-checks a cloud entry; index removals are verdict-gated through one Removal Coordinator so a transient blip can't wipe it), and auto-recovers + re-indexes when the mount responds. -->
+- **Your cloud spaces are searchable and up to date again — and a flaky Drive can't freeze Rebel** — When a recent fix stopped a stuck cloud folder from hanging the Library, it also stopped indexing your *healthy* Google Drive (and iCloud / Dropbox / OneDrive / Box) spaces, so cloud documents quietly dropped out of search. Now a healthy cloud space is fully indexed and searchable like a local one — while a slow or dead mount still can't wedge the app. If a mount goes flaky, that space shows a calm **Reconnecting** note, keeps serving your last-known files, and quietly re-syncs when it comes back. Searchable when it can be, honest when it can't.
 
 <!-- detail: Open build only. Settings → Meetings → "Set up recorder" installs Recall's Desktop SDK for you (install → progress → "Restart Rebel"), with a plain-language error + retry, an honest macOS/Windows-only note, and the old copy-the-command path kept as a fallback. -->
 - **One-click meeting recorder** — Setting up Rebel's meeting recorder used to mean pasting a command into a terminal and restarting by hand. Now there's a button for it in Settings → Meetings. Your meetings, captured without the chore.
