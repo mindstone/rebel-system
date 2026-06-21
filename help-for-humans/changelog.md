@@ -4,7 +4,48 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ---
 
-## v0.4.49 — Jun 16-20, 2026
+## Unreleased
+
+### Highlights
+
+<!-- detail: rebel-system — the bundled library of skills, help docs, and agent instructions that Rebel runs on — is now MIT-licensed and developed in the open. Anyone can read, fork, or contribute to the exact skills and instructions your copy of Rebel uses. Part of Rebel's ongoing move to open up its building blocks. -->
+- **Rebel's skills and instructions are now open source** — The library of skills, help, and instructions that Rebel runs on is now MIT-licensed and out in the open, so anyone can read, fork, or contribute to it. Nothing up our sleeve.
+
+### Improvements
+
+<!-- detail: Conversation-search reliability work (260619). F1: buildConversationResults no longer drops genuine keyword/title (FTS) matches via a vector-only cosine floor — keep-rule is lexicalHit||cosine>=threshold, ranked by RRF rankScore; lexical exemption is opt-in (sidebar + rebel_conversations_search), auto-context stays strict. F3: rename re-embeds so the new title is findable. F5: 1-2 char / proper-noun queries get an instant title-substring floor. -->
+- **Sidebar search actually finds the conversation you mean** — Searching your conversations now reliably surfaces exact title and keyword matches instead of quietly hiding them behind a "close enough?" similarity score. Short names and acronyms return results instantly, and renaming a conversation makes it findable by its new name right away. Type the word you remember; get the conversation you meant.
+
+<!-- detail: F2 (260619) + exhaustive-within-window (260620): the recency chip constrains the actual search. Quick search now scopes to the EXACT set of in-window conversations (from fresh session-summary timestamps, sessionId IN (...) on the LanceDB query) and ranks the whole windowed set — so a relevant match ranked beyond the old top-100 candidate pool now appears, and the type filter operates over the full in-window set. Above 500 in-window conversations it falls back to a 24h-grace prefilter (logged). "Search all messages" gets an updatedAfter bound + a muted "within the last 7 days" qualifier. F7: automations are indexed/searchable under the Automations filter. -->
+- **The time filter actually filters — and checks everything in the window** — "Last 24 hours / 7 days / 30 days" now narrows the search itself, and within that window quick search looks at *every* matching conversation rather than ranking a sample and time-filtering the leftovers. So a relevant conversation from last week shows up even if hundreds of newer ones pile on top. Need to go wider? "Search all messages" scans the whole window. Automation runs are searchable too, under the Automations filter.
+
+<!-- detail: FU-1 (260621) — cloud-executed turns write safety-activity-log entries to the cloud's own store; the desktop now pulls them via a server-allowlisted safety-activity-log:get catch-up (reconnect + panel open) and merges them into the local store (dedup by id, audit-immutable, local flag preserved). Cloud entries carry a muted "Cloud" execution-surface marker; a quiet sync-state note appears if the cloud sync hasn't landed. NOT a moot allowlist of the refresh signal — the data itself travels. -->
+- **Your Safety Activity log now includes cloud-run work** — If Rebel runs a task in the cloud, the safety decisions it made there now show up in your Safety Activity log on this device, tagged with a quiet "Cloud" marker so you can tell where each check happened. Your safety history is complete again, not just the part that ran on your machine.
+
+### Fixes
+
+<!-- detail: In the installed app, PDF previews in the document editor could come up blank. Rebel now displays them through the same reliable path it already uses for video and audio, and always offers an "Open in default app" button as a fallback. -->
+- **PDFs preview properly again** — Opening a PDF in the document editor could show a blank grey panel in the installed app. It renders the PDF now, with an "Open in default app" button always on hand. Look at that — a PDF.
+
+- **A way out of Find Similar** — "Find similar conversations" had no obvious exit. Now there's a "Back to all conversations" button and the Escape key works. You're not trapped.
+
+<!-- detail: Occasionally a message could get stuck before Rebel even began working on it (for example when the app was busy scanning a cloud-synced folder), leaving an endless spinner. Rebel now notices and lets you retry instead. Different from the "taking longer than usual" notice you'd see while waiting on the model. -->
+- **Turns that never start now recover** — Occasionally a message would sit on a spinner without Rebel ever actually getting going. It catches that now and lets you retry instead of hanging forever. No more false starts.
+
+<!-- detail: When your computer runs low on disk space, Rebel now shows a calm warning instead of failing in confusing ways, and is more resilient on very busy machines. -->
+- **A heads-up when your disk is full** — When your machine runs out of disk space, Rebel now says so plainly instead of failing in puzzling ways. Forewarned is forearmed.
+
+- **A tidier What's New card** — The "Try it" button no longer covers the info tooltip on the What's New card, and long titles wrap instead of overflowing. Less clutter, more news.
+
+<!-- detail: If the app had been moved after installing, an update could leave it in a broken, half-installed state. Updates are now more careful, and report problems clearly instead of failing quietly. -->
+- **Sturdier updates** — If Rebel has been moved after you installed it, an update could occasionally leave it half-installed. Updates are more robust now, and problems speak up instead of failing quietly. Update with confidence.
+
+<!-- detail: F4: search:conversations-semantic returns { status, results }; useSessionSearch surfaces index_not_ready / embedding_unavailable / error distinctly from a genuine no-match. Sidebar shows "Getting search ready…" (warming, auto-resolves) and "Search is taking a breather" + Try again (error), never implying conversations are gone. -->
+- **"No results" now means no results** — When search is still warming up or briefly unavailable, the sidebar says so ("Getting search ready…" or a calm "taking a breather" with a Try again) instead of claiming nothing matched. Your conversations were never gone — search just wasn't ready yet.
+
+---
+
+## v0.4.49 — Jun 16-18, 2026
 
 ### Highlights
 
