@@ -46,6 +46,9 @@ What's new in Rebel. We ship fast, so there's always something.
 <!-- detail: If the app had been moved after installing, an update could leave it in a broken, half-installed state. Updates are now more careful, and report problems clearly instead of failing quietly. -->
 - **Sturdier updates** — If Rebel has been moved after you installed it, an update could occasionally leave it half-installed. Updates are more robust now, and problems speak up instead of failing quietly. Update with confidence.
 
+<!-- detail: On macOS, an update could occasionally download but never install, leaving the app stuck until it was force-quit and reopened. The updater now sees that through and completes the install on its own. -->
+- **Updates that no longer get stuck** — Occasionally an update would download but quietly refuse to install, and the only way forward was to force-quit Rebel and open it again. It now sees the install through by itself. Restart and you're on the new version.
+
 <!-- detail: F4: search:conversations-semantic returns { status, results }; useSessionSearch surfaces index_not_ready / embedding_unavailable / error distinctly from a genuine no-match. Sidebar shows "Getting search ready…" (warming, auto-resolves) and "Search is taking a breather" + Try again (error), never implying conversations are gone. -->
 - **"No results" now means no results** — When search is still warming up or briefly unavailable, the sidebar says so ("Getting search ready…" or a calm "taking a breather" with a Try again) instead of claiming nothing matched. Your conversations were never gone — search just wasn't ready yet.
 
