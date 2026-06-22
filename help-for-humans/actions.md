@@ -162,11 +162,21 @@ When Rebel is busy working on something and you want to send another message, yo
 
 **Queue it:** Press **Enter** or click **Queue** to line up your message. It'll be sent automatically when Rebel finishes. (Alt/Option+Enter also works.)
 
-**Send now:** Click **Send Now** to interrupt Rebel and send immediately. The current task will stop to handle your new message.
+**Send now:** Click **Send Now** to interrupt Rebel and send immediately. The current task stops, and your new message becomes the next thing Rebel works on.
 
 **Clear the queue:** If you change your mind, remove individual messages or clear all queued messages from the tray above the composer.
 
 This is handy when you're on a roll and want to chain multiple requests without waiting.
+
+### What happens to the work in progress when you Send Now?
+
+Short version: it isn't thrown away, and Rebel doesn't literally rewind — it stops, keeps what it had so far, and carries on from there with your new instruction.
+
+- **Nothing already done is lost.** Whatever Rebel had written or worked out up to the moment you interrupted stays in the conversation. You don't start from a blank slate.
+- **It's steering, not a fresh start.** Your new message isn't a brand-new, amnesiac request. Rebel can see everything it was doing and picks up with your new instruction in mind — so Send Now is the right tool for "actually, do it this way instead" or "also keep in mind X".
+- **One thing to watch: interrupting mid-action.** If Rebel was part-way through an *action* with real-world effects — sending an email, editing a file, posting a message — interrupting can stop it partway. That step might not finish, or it might have already gone through. If Rebel is mid-action on something you care about, prefer **Queue** so it finishes cleanly first, or interrupt and then ask Rebel to double-check what actually happened before moving on.
+
+**Rule of thumb:** Use **Send Now** to redirect or add information; use **Queue** when Rebel is mid-task on something you'd rather not leave half-done.
 
 
 ## Sharing Content
