@@ -1,28 +1,38 @@
 ---
-description: "How to connect ChatGPT Pro, OpenRouter, or Anthropic, then choose Rebel's Planner, Main work, and Behind the Scenes models, plus the per-conversation Quality Tier selector"
-last_updated: "2026-06-18"
+description: "How to power Rebel's AI — a flat-fee Mindstone plan or bring your own (ChatGPT Pro, OpenRouter, Anthropic) — then choose Rebel's Planner, Main work, and Behind the Scenes models, plus the per-conversation Quality Tier selector"
+last_updated: "2026-06-22"
 ---
 
 # AI models
 
-Rebel currently has three main first-class AI provider options:
+Rebel gives you two ways to power its AI:
 
-- **ChatGPT Pro**
-- **OpenRouter**
-- **Anthropic**
+- **Let Mindstone handle it** — a flat-fee [Mindstone plan](rebel://library/rebel-system%2Fhelp-for-humans%2Fmindstone-plans-and-billing.md) where Mindstone covers the AI bill. No API keys, no separate accounts. The simplest option.
+- **Bring your own** — connect an AI account or key you already have. Three first-class choices: **ChatGPT Pro**, **OpenRouter**, or **Anthropic**.
 
-You only need **one** of them connected to get started.
+You only need **one** of these to get started.
 
-In onboarding and in [Settings → Agent & Voice → Intelligence](rebel://settings/agents), you pick a provider from these **provider cards**, then choose which models Rebel should use for **Planner**, **Main work**, and **Behind the Scenes**.
+In onboarding and in [Settings → Agent & Voice → Intelligence](rebel://settings/agents), you pick how you want to power Rebel, then choose which models Rebel should use for **Planner**, **Main work**, and **Behind the Scenes**.
 
 ## See also
 
-- [Settings and configuration](library://rebel-system/help-for-humans/settings-and-configuration.md) — where these controls live
-- [Council Mode](library://rebel-system/help-for-humans/multi-model-council-mode.md) — getting second opinions from multiple models
-- [Troubleshooting](library://rebel-system/help-for-humans/troubleshooting.md) — if model setup goes sideways
-- [The Open-Source Build](rebel://library/rebel-system%2Fhelp-for-humans%2Fopen-source-build.md) — in the open build you bring your own AI account or access code; there's no Mindstone-managed plan
+- [Mindstone plans](rebel://library/rebel-system%2Fhelp-for-humans%2Fmindstone-plans-and-billing.md) — the flat-fee subscription, monthly allowance, and billing
+- [Settings and configuration](rebel://library/rebel-system%2Fhelp-for-humans%2Fsettings-and-configuration.md) — where these controls live
+- [Council Mode](rebel://library/rebel-system%2Fhelp-for-humans%2Fmulti-model-council-mode.md) — getting second opinions from multiple models
+- [Troubleshooting](rebel://library/rebel-system%2Fhelp-for-humans%2Ftroubleshooting.md) — if model setup goes sideways
+- [The Open-Source Build](rebel://library/rebel-system%2Fhelp-for-humans%2Fopen-source-build.md) — in the open build you bring your own AI account or access code; there's no Mindstone plan
 
-## The three main provider choices
+## Letting Mindstone handle it
+
+The simplest path: pick a flat-fee **Mindstone plan** and Mindstone covers the AI bill — no keys, no separate accounts. Two plans (**Dash** and **Rogue**) share the same monthly usage allowance and differ in the calibre of models you get.
+
+Subscribe from onboarding's **"Let Mindstone handle it"** option, or in [Settings → Agent & Voice → Intelligence](rebel://settings/agents). Full details — plans, allowance, billing, upgrades, and cancellation — are in [Mindstone plans](rebel://library/rebel-system%2Fhelp-for-humans%2Fmindstone-plans-and-billing.md).
+
+The rest of this page covers the **bring-your-own** route.
+
+## Bringing your own: ChatGPT Pro, OpenRouter, or Anthropic
+
+If you'd rather use an account or key you already have, Rebel has three first-class choices:
 
 | Provider | Best for | What you need |
 |---|---|---|
@@ -77,7 +87,7 @@ Use Anthropic if you want direct Claude access.
 
 Good fit if you want the most direct Claude setup and pay-as-you-go pricing.
 
-If you want extra help with Anthropic-specific setup, see [Claude Max setup](library://rebel-system/help-for-humans/claude-max-setup.md).
+If you want extra help with Anthropic-specific setup, see [Claude Max setup](rebel://library/rebel-system%2Fhelp-for-humans%2Fclaude-max-setup.md).
 
 ## Model roles: Planner, Main work, and Behind the Scenes
 
@@ -124,7 +134,7 @@ The roles within a team are:
 - **Main work** — the model you talk to most, handling writing, editing, and tool use
 - **Deep thinking** — an optional planning model that thinks harder before Main work starts (leave it Off for simple tasks)
 - **Behind the Scenes** — background jobs like safety checks, memory updates, and file indexing
-- **Council** — multiple models consulted in parallel for important decisions (see [Council Mode](library://rebel-system/help-for-humans/multi-model-council-mode.md))
+- **Council** — multiple models consulted in parallel for important decisions (see [Council Mode](rebel://library/rebel-system%2Fhelp-for-humans%2Fmulti-model-council-mode.md))
 - **Recovery** — a fallback that steps in when something hiccups, so work keeps going rather than stopping cold
 
 If a chosen model can't be found, Rebel quietly switches to a working one and carries on instead of stopping with an error. And if a reply stutters mid-stream for a moment, Rebel retries on its own — you usually won't even notice.
@@ -202,7 +212,7 @@ If you want to go further, Rebel also lets you add:
 
 These appear in the more advanced parts of **Settings → Agent & Voice → Intelligence**. They're optional — useful if you like tinkering, unnecessary if you don't.
 
-Connecting your own model or a company gateway? See [Custom models and gateways](library://rebel-system/help-for-humans/custom-models-and-gateways.md) — it covers setup, what the **Test** button checks, and how Rebel handles gateways that can't take certain settings.
+Connecting your own model or a company gateway? See [Custom models and gateways](rebel://library/rebel-system%2Fhelp-for-humans%2Fcustom-models-and-gateways.md) — it covers setup, what the **Test** button checks, and how Rebel handles gateways that can't take certain settings.
 
 ## Cost tracking
 
