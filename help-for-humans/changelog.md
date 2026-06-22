@@ -24,6 +24,9 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+<!-- detail: Mobile (iOS): on a brand-new conversation, switching to text entry brought up the keyboard but the empty message list didn't fill the screen, so the keyboard could sit on top of the send button with no way to dismiss it — sending was impossible until the conversation already had a couple of exchanges. The empty conversation now flex-fills the viewport like a populated one, so the input/send dock stays put above the keyboard and you can swipe the list to dismiss the keyboard. -->
+- **You can send the very first message on mobile again** — On a new conversation, tapping into the text box used to bring up the keyboard right on top of the send button, with no way to shoo it away — so you couldn't actually send anything until the chat already had a few messages in it. The send button now stays put above the keyboard from message one. First word, sent.
+
 <!-- detail: In the installed app, PDF previews in the document editor could come up blank. Rebel now displays them through the same reliable path it already uses for video and audio, and always offers an "Open in default app" button as a fallback. -->
 - **PDFs preview properly again** — Opening a PDF in the document editor could show a blank grey panel in the installed app. It renders the PDF now, with an "Open in default app" button always on hand. Look at that — a PDF.
 
