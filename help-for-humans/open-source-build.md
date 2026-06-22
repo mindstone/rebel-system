@@ -24,7 +24,7 @@ It is *not* trying to be the easy option for a large organisation to roll out ac
 |---|---|---|
 | Who runs it | Mindstone | You |
 | Sign-in and accounts | Mindstone account | None — Rebel runs as a guest on your machine |
-| AI models | Use a Mindstone plan, or bring your own | **Bring your own** (your AI accounts or access codes) |
+| AI models | Use a [Mindstone plan](rebel://library/rebel-system%2Fhelp-for-humans%2Fmindstone-plans-and-billing.md), or bring your own | **Bring your own** (your AI accounts or access codes) |
 | Connectors (Slack, Google, etc.) | Ready to connect out of the box | **You supply each connection's credentials** (see below) |
 | Cloud continuity & mobile | Mindstone Cloud, or your own | **Your own cloud only** (self-hosted) |
 | Usage data (telemetry) | On, to keep the service reliable | **Off by default** — opt-in only |
