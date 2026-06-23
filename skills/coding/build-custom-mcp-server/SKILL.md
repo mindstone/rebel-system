@@ -227,7 +227,7 @@ First, classify the user's intent into one of three categories. Route immediatel
 
 Determine where the connector lives and route accordingly:
 
-**a) Connector is in the `mcp-servers` repo** — The connector's source code is in the open-source `[mcp-servers](https://github.com/mindstone-engineering/mcp-servers)` repository under `connectors/<name>/`.
+**a) Connector is in the `mcp-servers` repo** — The connector's source code is in the open-source `[mcp-servers](https://github.com/mindstone/mcp-servers)` repository under `connectors/<name>/`.
 
 → **Redirect to the [extend-mcp-server](../extend-mcp-server/SKILL.md) skill.** It handles the full extension flow: eligibility check, fork/clone, connector research, implementation, local testing, and PR submission. **Stop here — do not proceed with this skill.**
 
@@ -557,7 +557,7 @@ mkdir -p ~/mcp-servers/<api-name>-mcp/src ~/mcp-servers/<api-name>-mcp/docs
 
 Then **read each starter template file** and **write its contents** to the project directory. Do not guess or approximate the content — read the actual files from the starter template:
 
-1. Read `references/starter-template/package.json` → Write to `~/mcp-servers/<api-name>-mcp/package.json`. **Change the `name` field to `@mindstone-engineering/mcp-server-<api-name>`** (e.g. `@mindstone-engineering/mcp-server-apple-shortcuts`) — this is the scoped name the package will be published under. Also update the `description` field to describe what the connector does. Using the scoped `@mindstone-engineering/mcp-server-<api-name>` prefix from the start means the PR reviewer sees the final published name, the catalog entry matches the `npx` specifier byte-for-byte, and the maintainer's publish workflow doesn't have to rename anything.
+1. Read `references/starter-template/package.json` → Write to `~/mcp-servers/<api-name>-mcp/package.json`. **Change the `name` field to `@mindstone/mcp-server-<api-name>`** (e.g. `@mindstone/mcp-server-apple-shortcuts`) — this is the public scoped name the package will be published under. Also update the `description` field to describe what the connector does. Using the scoped `@mindstone/mcp-server-<api-name>` prefix from the start means the PR reviewer sees the final published name, the catalog entry matches the `npx` specifier byte-for-byte, and the maintainer's publish workflow doesn't have to rename anything.
 2. Read `references/starter-template/tsconfig.json` → Write verbatim to `~/mcp-servers/<api-name>-mcp/tsconfig.json`
 3. Read `references/starter-template/.gitignore` → Write verbatim to `~/mcp-servers/<api-name>-mcp/.gitignore`
 4. Read `references/starter-template/.env.example` → Write verbatim to `~/mcp-servers/<api-name>-mcp/.env.example`
@@ -1028,4 +1028,3 @@ User needs to create `.env` file with credentials
 
 - Restart Rebel after adding MCP config
 - Check Rebel logs for MCP startup errors
-

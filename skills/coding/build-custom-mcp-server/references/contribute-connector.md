@@ -48,7 +48,7 @@ The recommended way to contribute your connector is through the in-app "Add to t
 1. **Authenticate** — The in-app flow uses a separate GitHub OAuth flow with `public_repo` scope (independent from any existing Rebel GitHub connection). Click "Add to the community" in the MCPBuildCard and complete the GitHub authorization when prompted.
 
 2. **Automatic submission** — The contribution service handles everything:
-   - Forks the [`mcp-servers`](https://github.com/mindstone-engineering/mcp-servers) repository to your GitHub account (or reuses an existing fork)
+   - Forks the [`mcp-servers`](https://github.com/mindstone/mcp-servers) repository to your GitHub account (or reuses an existing fork)
    - Creates a `contribution/<connector-name>` branch
    - Pushes your connector files under `connectors/<service-name>/` via the Git Data API (single atomic commit)
    - Opens a pull request with a structured description
@@ -150,7 +150,7 @@ The `publish.yml` workflow triggers on the release tag:
 
 > **Future direction:** The publish pipeline is transitioning to npm OIDC trusted publishing with provenance attestations for stronger supply-chain security. The `NPM_TOKEN` secret flow is the current mechanism but will be replaced.
 
-The connector is now available as `@mindstone-engineering/mcp-server-<service-name>` on npm.
+The connector is now available as `@mindstone/mcp-server-<service-name>` on npm.
 
 ### C.5 Catalog Entry
 
@@ -194,7 +194,7 @@ After the connector is published to npm, you *may* switch from your local build 
 ### To switch:
 
 1. **Disconnect your local MCP** in Rebel: Settings → Connectors → remove the custom MCP entry pointing to your local `dist/index.js`
-2. **Reconnect via the catalog**: The connector should now appear in Settings → Connectors as a one-click install (uses `npx @mindstone-engineering/mcp-server-<name>` under the hood)
+2. **Reconnect via the catalog**: The connector should now appear in Settings → Connectors as a one-click install (uses `npx @mindstone/mcp-server-<name>` under the hood)
 3. **Re-enter credentials**: The published version uses the same environment variables, but you'll need to configure them in the new connector entry
 
 ### Why this isn't automatic:
@@ -377,7 +377,7 @@ The description answers four questions a reviewer needs: **Is it useful?** (Summ
 
 ## CI Pipeline
 
-The [`mcp-servers`](https://github.com/mindstone-engineering/mcp-servers) repository uses two GitHub Actions workflows:
+The [`mcp-servers`](https://github.com/mindstone/mcp-servers) repository uses two GitHub Actions workflows:
 
 ### ci.yml — Continuous Integration
 
@@ -404,7 +404,7 @@ The [`mcp-servers`](https://github.com/mindstone-engineering/mcp-servers) reposi
 4. Verifies package contents (no source maps)
 5. Runs `npm publish --access public` with the `NPM_TOKEN` secret
 
-**For contributors:** You don't trigger this — the maintainer does after merging your PR. The published package appears at `@mindstone-engineering/mcp-server-<name>` on npm.
+**For contributors:** You don't trigger this — the maintainer does after merging your PR. The published package appears at `@mindstone/mcp-server-<name>` on npm.
 
 ### What this means for your PR:
 
