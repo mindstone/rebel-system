@@ -13,6 +13,9 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Improvements
 
+<!-- detail: 260623_oss-identity-ask-lead-capture. The open build's onboarding now includes an optional "About you" step (first name + email), OSS-only. Name/email are stored locally via the existing settings path to personalise Rebel. If the user fills in the email, it's also sent to Mindstone as a consented, best-effort lead capture (fire-and-forget; never blocks onboarding) — disclosed at the point of entry. Privacy policy + open-source-build help doc updated in the same change. Do NOT mention the endpoint, IPC, or internals in public copy. -->
+- **The open build can learn your name now (if you'd like)** — Setting up the open-source build now offers an optional "About you" step: tell Rebel your first name and email and it'll address you properly and tell your meetings apart from everyone else's. Pop in the email and you'll also let us keep in touch about the open build — entirely your call, skippable in one click, and easy to undo. Skip it and everything still works.
+
 <!-- detail: 260622 settings reorg (dd072e4ef5). The Backup connections section now sits below the AI provider section in Settings, with clearer wording on the custom-profile caveat. -->
 - **A tidier Settings layout** — Backup connections now sit just below your AI provider in Settings, with clearer wording about the custom-profile caveat. Easier to find, easier to follow.
 

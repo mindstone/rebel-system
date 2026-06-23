@@ -18,7 +18,7 @@ This article focuses on **Fly.io**, which is the simplest of the three providers
 - [Cloud Continuity and Mobile](rebel://library/rebel-system%2Fhelp-for-humans%2Fcloud-continuity-and-mobile.md) — the main cloud continuity guide (what it does, how to pair phones, privacy, troubleshooting)
 - [Using Rebel on Multiple Devices](rebel://library/rebel-system%2Fhelp-for-humans%2Fusing-rebel-on-multiple-devices.md) — what syncs across desktops, web, and mobile
 - [Settings and Configuration](rebel://library/rebel-system%2Fhelp-for-humans%2Fsettings-and-configuration.md) — full settings reference
-- [The Open-Source Build](rebel://library/rebel-system%2Fhelp-for-humans%2Fopen-source-build.md) — the open build runs cloud continuity on your own cloud only (this BYOK route)
+- [The Open Build](rebel://library/rebel-system%2Fhelp-for-humans%2Ffair-source-and-open-source-build.md) — the open build runs cloud continuity on your own cloud only (this BYOK route)
 
 
 ---

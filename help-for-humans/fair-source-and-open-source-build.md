@@ -1,10 +1,10 @@
 ---
-description: "The open-source (open build) of Rebel — how it differs from the managed app, bring-your-own-credentials for AI models and connectors, and why telemetry is off by default (opt-in)."
+description: "The fair-source open build of Rebel — how it differs from the managed app, bring-your-own-credentials for AI models and connectors, and why telemetry is off by default (opt-in)."
 ---
 
-# The Open-Source Build
+# The Open Build
 
-Rebel comes in two flavours. Most people use the **managed app** — the one Mindstone looks after for you, with a plan, sign-in, and the comfortable defaults already wired up. This guide is about the other one: the **open build**, Rebel's open-source edition that you run yourself.
+Rebel comes in two flavours. Most people use the **managed app** — the one Mindstone looks after for you, with a plan, sign-in, and the comfortable defaults already wired up. This guide is about the other one: the **open build**, Rebel's fair-source edition that you run yourself.
 
 Same Rebel underneath — same agent, same voice, same safety layer, the same Spaces and skills and connectors. The difference isn't what Rebel *can* do. It's who holds the keys, who pays the bills, and who keeps the lights on. In the open build, that's you.
 
@@ -14,7 +14,7 @@ One part is open to *everyone*, managed app included: **rebel-system** — the b
 
 ## Who it's for
 
-The open build is aimed at **individuals and small teams** who want Rebel running entirely on their own terms — their own AI accounts, their own infrastructure, and no usage data reported back to Mindstone. If that sounds like a lot of switches to set, it is, a little. The reward is that nothing is hidden, and nothing reaches Mindstone unless you ask it to.
+The open build is aimed at **individuals and small teams** who want Rebel running entirely on their own terms — their own AI accounts, their own infrastructure, and no usage data reported back to Mindstone. If that sounds like a lot of switches to set, it is, a little. The reward is that nothing is hidden, and nothing reaches Mindstone unless you ask it to — with one small, optional exception you control during setup (see [What does go to Mindstone — if you choose](#what-does-go-to-mindstone--if-you-choose)).
 
 It is *not* trying to be the easy option for a large organisation to roll out across hundreds of people. The features that make Rebel tidy to deploy at company scale — central accounts, managed billing, shared administration — stay with the managed app on purpose.
 
@@ -67,7 +67,11 @@ If you *do* want usage and error data — say you run Rebel for a small team and
 
 In short: it's off, it's yours to switch on, and switching it on points it at you, not us.
 
-## The meeting recorder
+## What does go to Mindstone — if you choose
+
+There's one small thing the open build *can* send us, and only if you decide to. When you set Rebel up, it offers an optional **"About you"** step asking for your first name and email. Your name lets Rebel address you; your email helps it tell your meetings and messages apart from everyone else's. Both are used locally, on your machine, to personalise how Rebel works for you.
+
+If you fill in the email, that detail — your email, plus your first name if you gave it, and a little minimal source metadata (that it came from open-build onboarding, plus the app version and your platform) — is also shared with Mindstone, so we can keep in touch with you about the open build. It's the single exception to "nothing reaches Mindstone": it goes to us on purpose, because you chose to share it. It's separate from telemetry (which stays off), it doesn't create a Mindstone account, and it's entirely skippable — leave the email blank and nothing is sent. Change your mind later? Just ask us to delete it (hello@mindstone.com) and we will.
 
 Rebel can capture and transcribe your meetings in the open build too — but it goes about it differently from the managed app.
 
