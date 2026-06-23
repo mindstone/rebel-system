@@ -13,6 +13,9 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Improvements
 
+<!-- detail: 260622 settings reorg (dd072e4ef5). The Backup connections section now sits below the AI provider section in Settings, with clearer wording on the custom-profile caveat. -->
+- **A tidier Settings layout** — Backup connections now sit just below your AI provider in Settings, with clearer wording about the custom-profile caveat. Easier to find, easier to follow.
+
 <!-- detail: Conversation-search reliability work (260619). F1: buildConversationResults no longer drops genuine keyword/title (FTS) matches via a vector-only cosine floor — keep-rule is lexicalHit||cosine>=threshold, ranked by RRF rankScore; lexical exemption is opt-in (sidebar + rebel_conversations_search), auto-context stays strict. F3: rename re-embeds so the new title is findable. F5: 1-2 char / proper-noun queries get an instant title-substring floor. -->
 - **Sidebar search actually finds the conversation you mean** — Searching your conversations now reliably surfaces exact title and keyword matches instead of quietly hiding them behind a "close enough?" similarity score. Short names and acronyms return results instantly, and renaming a conversation makes it findable by its new name right away. Type the word you remember; get the conversation you meant.
 
@@ -26,6 +29,21 @@ What's new in Rebel. We ship fast, so there's always something.
 - **Library tells you what "reconnecting" means — and how to nudge it** — When a cloud folder (Dropbox, Google Drive, iCloud) is briefly out of reach, Library shows your last-known results with a calm note. Now there's a little (i) you can hover for a plain-English explanation of what's happening, plus a "Manage in Settings" button that takes you straight to Spaces, where you can give it a push. No more wondering whether something's broken — nothing is.
 
 ### Fixes
+
+<!-- detail: 260623_conflict-dialog-false-positives, Stage 1. Rebel's "Resolve file conflicts / you edited this on another device" dialog was firing for AI memory files the user never edited — the notes Rebel keeps for itself change a little every turn, and the sync's conflict check couldn't tell that apart from a real two-device edit. Stage 1 fixes the false alarms with honest, source-neutral wording, compresses pending-update churn, and preserves orphaned edits. A deeper lossless auto-merge is a planned follow-up. Do NOT mention internal class names. -->
+- **Fewer bogus "you edited this on another device" alerts** — Rebel sometimes warned you about a file conflict for files you never touched — usually the notes Rebel keeps for itself, which change a little on every turn. It now tells the difference, so you're only asked to resolve a conflict when there's a real one. Less crying wolf.
+
+<!-- detail: 260623_fsevents-nodepath-hoist. In the installed macOS app, Rebel's file-watcher was quietly falling back to a constant-polling mode that pegged a CPU core (and spun up the fan) even when Rebel was idle, and it weakened a safety guard on quit. Fixed so file-watching uses the efficient native path again. Do NOT mention fsevents / polling / chokidar / NODE_PATH internals in public copy. -->
+- **No more idle fan spin on Mac** — The installed Mac app could keep a CPU core busy (and the fan going) even when Rebel was just sitting there. It now watches your files the efficient way again, so idle means idle. Your laptop thanks you.
+
+<!-- detail: 260623 GPT reasoning-leak fix. When using GPT models, the model's internal reasoning-summary text could appear inside the answer instead of in the separate thinking area. Now routed to the thinking channel where it belongs, including for non-streaming responses. -->
+- **GPT's thinking stays in the thinking area** — With GPT models, snippets of the model's internal reasoning could occasionally spill into the answer itself. That text now stays tucked in the thinking area where it belongs, so your answers read clean.
+
+<!-- detail: 260623_mobile-managed-subscription. Recording from the phone could finish with no response (and occasionally a misleading "Original conversation deleted" message). Two causes: the mobile app treated a failed turn as if it had succeeded, and a turn on a Mindstone-managed plan couldn't be served through the cloud. Both fixed: failures now surface honestly and recoverably, and managed-plan turns are served on the cloud. Do NOT mention internal route names. -->
+- **Recording on your phone reliably gets a response** — Recording a message on mobile could sometimes end in silence — no answer, and once in a while a misleading "conversation deleted" note. Now your phone reliably gets a response back (including on Mindstone-managed plans), and if something genuinely fails, Rebel says so and lets you try again instead of pretending all is well. Speak, and Rebel answers.
+
+<!-- detail: 260623_preview-drawer-single-tab-close. Clicking the "X" on the only open document in the preview drawer closed it and then immediately reopened it. Now closing the last tab closes the drawer for good. -->
+- **Closing the last document actually closes it** — In the document preview, clicking the "X" on your only open document used to close it… and then pop it right back open. Now the last one closes for good. Gone means gone.
 
 <!-- detail: 260623_fix-cloud-space-indexing. Files in Spaces backed by Google Drive (and similar cloud drives — Dropbox/iCloud/OneDrive/Box) weren't being indexed, so the Space appeared empty in the Library and its files were missing from search even though they existed on disk. Fixed so healthy cloud-backed Spaces are indexed and searchable like local ones. Smaller related improvement: very large or deeply-nested folders now index more completely. Do NOT mention symlinks/FUSE/liveness-probe/prewarm or other internals in public copy. -->
 - **Files in your cloud Spaces show up again** — If a Space lived on Google Drive (or Dropbox, iCloud, OneDrive, Box), its files could quietly fail to appear in your Library and stay missing from search — even though they were sitting right there. Rebel now indexes those cloud-based Spaces too, so their files turn up and are searchable like everything else. As a bonus, very large or deeply-nested folders now index more thoroughly. Nothing's hiding anymore.
