@@ -12,7 +12,7 @@ version: "3.2"
 - **[`GDPR-PII-tag-files.md`](../skills/system/gdpr-pii-tag-files/SKILL.md)** - GDPR compliance tagging for candidate/personal data
 - **[`permissions.md`](permissions.md)** - AI agent command execution permissions
 - **[`secrets-and-passwords.md`](secrets-and-passwords.md)** - Credential management practices
-- **[`open-source-build.md`](open-source-build.md)** - The open-source build: bring-your-own-credentials and how telemetry differs
+- **[`fair-source-and-open-source-build.md`](fair-source-and-open-source-build.md)** - The open-source build: bring-your-own-credentials and how telemetry differs
 
 Rebel Privacy Policy
 This Privacy Policy explains how Mindstone Learning Limited ("Mindstone", "we", "us", "our") handles your personal data when you use the Rebel desktop application ("Rebel") and what to expect when connecting third‑party AI services and integrations. This policy is intended for external customers, enterprise buyers, and prospective users.
@@ -147,7 +147,7 @@ Rebel ships in two builds, and a few parts of this policy apply differently depe
 
 The managed app — the standard Rebel application distributed and operated by Mindstone, with a Mindstone account, managed billing, and Mindstone-supplied service credentials. Unless a section says otherwise, this policy describes the managed app.
 
-The open-source build (the "open build") — Rebel's open-source edition, which you install from its public source code and run yourself. It carries no Mindstone-supplied credentials: you bring your own AI provider accounts, your own connector credentials, and (optionally) your own self-hosted cloud. You can run it with no Mindstone account at all. For a plain-language overview, see open-source-build.md.
+The open-source build (the "open build") — Rebel's open-source edition, which you install from its public source code and run yourself. It carries no Mindstone-supplied credentials: you bring your own AI provider accounts, your own connector credentials, and (optionally) your own self-hosted cloud. You can run it with no Mindstone account at all. For a plain-language overview, see fair-source-and-open-source-build.md.
 
 What's different in the open build:
 

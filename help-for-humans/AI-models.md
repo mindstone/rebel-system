@@ -20,7 +20,7 @@ In onboarding and in [Settings → Agent & Voice → Intelligence](rebel://setti
 - [Settings and configuration](rebel://library/rebel-system%2Fhelp-for-humans%2Fsettings-and-configuration.md) — where these controls live
 - [Council Mode](rebel://library/rebel-system%2Fhelp-for-humans%2Fmulti-model-council-mode.md) — getting second opinions from multiple models
 - [Troubleshooting](rebel://library/rebel-system%2Fhelp-for-humans%2Ftroubleshooting.md) — if model setup goes sideways
-- [The Open-Source Build](rebel://library/rebel-system%2Fhelp-for-humans%2Fopen-source-build.md) — in the open build you bring your own AI account or access code; there's no Mindstone plan
+- [The Open Build](rebel://library/rebel-system%2Fhelp-for-humans%2Ffair-source-and-open-source-build.md) — in the open build you bring your own AI account or access code; there's no Mindstone plan
 
 ## Letting Mindstone handle it
 

@@ -1,10 +1,10 @@
 ---
-description: "The open-source (open build) of Rebel — how it differs from the managed app, bring-your-own-credentials for AI models and connectors, and why telemetry is off by default (opt-in)."
+description: "The fair-source open build of Rebel — how it differs from the managed app, bring-your-own-credentials for AI models and connectors, and why telemetry is off by default (opt-in)."
 ---
 
-# The Open-Source Build
+# The Open Build
 
-Rebel comes in two flavours. Most people use the **managed app** — the one Mindstone looks after for you, with a plan, sign-in, and the comfortable defaults already wired up. This guide is about the other one: the **open build**, Rebel's open-source edition that you run yourself.
+Rebel comes in two flavours. Most people use the **managed app** — the one Mindstone looks after for you, with a plan, sign-in, and the comfortable defaults already wired up. This guide is about the other one: the **open build**, Rebel's fair-source edition that you run yourself.
 
 Same Rebel underneath — same agent, same voice, same safety layer, the same Spaces and skills and connectors. The difference isn't what Rebel *can* do. It's who holds the keys, who pays the bills, and who keeps the lights on. In the open build, that's you.
 

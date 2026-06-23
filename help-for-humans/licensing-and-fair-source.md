@@ -20,7 +20,7 @@ Rebel uses the best-known fair-source licence, the **Business Source License (BS
 
 - **Read the published source.** Learn from it, audit it, satisfy yourself about what it does.
 - **Modify it and build on it.** Tinker, extend, fix, fork.
-- **Run it yourself.** Self-host the open build on your own machines and accounts — see [The open build](rebel://library/rebel-system%2Fhelp-for-humans%2Fopen-source-build.md).
+- **Run it yourself.** Self-host the open build on your own machines and accounts — see [The open build](rebel://library/rebel-system%2Fhelp-for-humans%2Ffair-source-and-open-source-build.md).
 - **Use it at work.** Your organisation may run Rebel for its own internal business, free of charge, **up to 100 people** — counted as everyone authorised to use it (including contractors), not the number of devices. Past 100, you'd need a commercial licence from Mindstone — which, if you're a company that size, is rather the point.
 
 The lines you can't cross without a commercial licence: running Rebel in production beyond 100 people, or offering it to others as a paid service. Inside those lines, it's yours to use.
@@ -52,7 +52,7 @@ Questions about licensing, using Rebel across a larger team, or anything commerc
 
 ## See also
 
-- [The open-source build](rebel://library/rebel-system%2Fhelp-for-humans%2Fopen-source-build.md) — running Rebel entirely on your own terms, with your own accounts and keys
+- [The open build](rebel://library/rebel-system%2Fhelp-for-humans%2Ffair-source-and-open-source-build.md) — running Rebel entirely on your own terms, with your own accounts and keys
 - [How Rebel is built](rebel://library/rebel-system%2Fhelp-for-humans%2Fhow-rebel-is-built.md) — a friendly tour of the architecture
 - [Privacy mode](rebel://library/rebel-system%2Fhelp-for-humans%2Fprivacy-mode.md) — keeping a conversation off the record
 - [Secrets and passwords](rebel://library/rebel-system%2Fhelp-for-humans%2Fsecrets-and-passwords.md) — how Rebel stores your keys and sign-ins

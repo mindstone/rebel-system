@@ -70,5 +70,5 @@ Being on a Mindstone plan doesn't change what Rebel does with your data — it o
 
 - [AI models](rebel://library/rebel-system%2Fhelp-for-humans%2FAI-models.md) — the full provider picture, including the bring-your-own options
 - [Settings and configuration](rebel://library/rebel-system%2Fhelp-for-humans%2Fsettings-and-configuration.md) — where these controls live
-- [The open-source build](rebel://library/rebel-system%2Fhelp-for-humans%2Fopen-source-build.md) — note that the open build has no Mindstone plan; you bring your own AI account
+- [The open build](rebel://library/rebel-system%2Fhelp-for-humans%2Ffair-source-and-open-source-build.md) — note that the open build has no Mindstone plan; you bring your own AI account
 - [Cloud continuity and mobile](rebel://library/rebel-system%2Fhelp-for-humans%2Fcloud-continuity-and-mobile.md) — the separate Mindstone Cloud service
