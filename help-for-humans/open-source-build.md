@@ -80,6 +80,7 @@ Once that's set up, transcripts, summaries, and meeting prep behave as described
 
 ## See also
 
+- [Is Rebel open source? Licensing, explained](rebel://library/rebel-system%2Fhelp-for-humans%2Flicensing-and-fair-source.md) — what licence Rebel uses, what you can do with it, and when each version becomes fully open
 - [AI models](rebel://library/rebel-system%2Fhelp-for-humans%2FAI-models.md) — connecting ChatGPT Pro, OpenRouter, or Anthropic with your own account
 - [Connectors, tools and integrations](rebel://library/rebel-system%2Fhelp-for-humans%2Fmcp-connectors-tools-and-integrations.md) — adding and managing connections
 - [Self-managed cloud setup](rebel://library/rebel-system%2Fhelp-for-humans%2Fself-managed-cloud-setup.md) — running cloud continuity on your own cloud account
