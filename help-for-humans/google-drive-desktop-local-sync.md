@@ -85,7 +85,7 @@ This does **not** turn off phone/browser continuity — Rebel still sends your c
 
 There's one case your cloud app can't cover: a file you edited on your **phone or in the web app**. That edit goes to Rebel's cloud, but it never reaches your Google Drive folder, so your cloud app has nothing to deliver — and your computer keeps showing the older version.
 
-When that happens, Rebel notices and shows a calm note: **"Newer version available — you edited this on another device."** Click **Update to newest** and your computer fast-forwards to the version you made elsewhere. There's nothing to lose and nothing to choose — you're just one click away from up to date.
+When that happens, Rebel notices and shows a calm note under **"Newer versions ready"**: **"A newer version is available from your synced workspace."** Click **Update to newest** and your computer fast-forwards to the version you made elsewhere. There's nothing to lose and nothing to choose — you're just one click away from up to date.
 
 > **Running on two computers? Keep both on the latest Rebel.** Recent versions of Rebel stop the
 > runaway `note (1).md` / `Project (1)/` duplicate pile-ups by letting your cloud app handle file
