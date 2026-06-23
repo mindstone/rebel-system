@@ -15,7 +15,7 @@ Rebel can join your video meetings as a notetaker, capturing transcripts and gen
 - [settings-and-configuration.md](library://rebel-system/help-for-humans/settings-and-configuration.md) — Customize meeting behavior in Settings
 - [automations.md](library://rebel-system/help-for-humans/automations.md) — Trigger workflows automatically when transcripts arrive
 - [voice-and-audio.md](library://rebel-system/help-for-humans/voice-and-audio.md) — Voice recording providers and Plaud transcription options
-- [open-source-build.md](rebel://library/rebel-system%2Fhelp-for-humans%2Fopen-source-build.md) — In the open build the recorder is a one-time add-on you install yourself, using your own recording account
+- [The Open Build](rebel://library/rebel-system%2Fhelp-for-humans%2Ffair-source-and-open-source-build.md) — In the open build the recorder is a one-time add-on you install yourself, using your own recording account
 
 
 ## Getting Started
@@ -28,7 +28,7 @@ New accounts start with the meeting notetaker turned off — no surprise bot app
 
 Once enabled, Rebel detects your video meetings (Zoom, Google Meet, or Microsoft Teams) and offers to send a notetaker. The notetaker joins as a participant, records the conversation, and saves a transcript to your workspace when the meeting ends.
 
-**Open-source build:** The managed notetaker above isn't included there — you install a local recorder add-on instead. See [The Open-Source Build — The meeting recorder](library://rebel-system/help-for-humans/open-source-build.md#the-meeting-recorder) for the one-time **Set up recorder** flow in [Settings → Meetings](rebel://settings/meetings).
+**Open-source build:** The managed notetaker above isn't included there — you install a local recorder add-on instead. See [The Open Build — The meeting recorder](library://rebel-system/help-for-humans/fair-source-and-open-source-build.md#the-meeting-recorder) for the one-time **Set up recorder** flow in [Settings → Meetings](rebel://settings/meetings).
 
 
 ## Sending a Notetaker

@@ -46,8 +46,8 @@ amplification is what turned a handful of copies into thousands.
 > **A side effect worth knowing about.** Because Rebel now leaves cloud-folder delivery to your
 > cloud app, there's one thing your cloud app can't do: deliver an edit you made on your **phone or
 > in the web app** (that change never lands in your Drive folder). When that happens, Rebel shows a
-> gentle **"Newer version available — you edited this on another device"** note; click **Update to
-> newest** to bring your computer current. Nothing to lose, one click. See
+> gentle **"A newer version is available from your synced workspace"** note (under **Newer versions
+> ready**); click **Update to newest** to bring your computer current. Nothing to lose, one click. See
 > [Google Drive desktop & local sync](rebel://library/rebel-system%2Fhelp-for-humans%2Fgoogle-drive-desktop-local-sync.md)
 > for more.
 

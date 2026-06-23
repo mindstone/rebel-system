@@ -288,7 +288,7 @@ This means a temporary Slack outage won't prevent you from using Gmail or Calend
 ## Notes
 
 - **In Rebel**: Manage connectors in Settings → Connectors. You can see connection status, reconnect if needed, and disable/enable connectors without disconnecting them (useful for temporarily pausing a tool).
-- **In the open-source build**: connectors that need their own sign-in credentials stay switched off until you register your own — see [The Open-Source Build](rebel://library/rebel-system%2Fhelp-for-humans%2Fopen-source-build.md).
+- **In the open-source build**: connectors that need their own sign-in credentials stay switched off until you register your own — see [The Open Build](rebel://library/rebel-system%2Fhelp-for-humans%2Ffair-source-and-open-source-build.md).
 - **In Cursor**: Enable/disable MCPs in Settings → Tools & MCP. Click "Open Settings" cog in the top-right → choose `Tools & MCP`.
   - Then you can enable/disable entire MCPs (e.g. `Notion`) by flipping the toggle
   - Or click on the `X tools enabled` to disable specific sub-tools within an MCP (e.g. `notion-update-page`).
