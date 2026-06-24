@@ -33,7 +33,7 @@ Your tenant must have **Data Portal v3** enabled. If you're not sure, ask your P
 
 ## Tips
 
-- **Cross-property rollups**: "Show me RevPAR across all Embassy Suites last month" — Rebel will list your sites, pick the matching ones, and aggregate.
+- **Cross-property rollups**: "Show me RevPAR across all Acme Hotels last month" — Rebel will list your sites, pick the matching ones, and aggregate.
 - **Budget variance**: "Which properties missed labor budget last week?"
 - **Group pace**: "What's the group pace for Q3 at site 100 as of today?"
 - **Narrow the range if a report is slow** — daily P&L across many properties for a long range can be heavy.
