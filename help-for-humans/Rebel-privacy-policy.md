@@ -12,7 +12,7 @@ version: "3.2"
 - **[`GDPR-PII-tag-files.md`](../skills/system/gdpr-pii-tag-files/SKILL.md)** - GDPR compliance tagging for candidate/personal data
 - **[`permissions.md`](permissions.md)** - AI agent command execution permissions
 - **[`secrets-and-passwords.md`](secrets-and-passwords.md)** - Credential management practices
-- **[`open-source-build.md`](open-source-build.md)** - The open-source build: bring-your-own-credentials and how telemetry differs
+- **[`fair-source-and-open-source-build.md`](fair-source-and-open-source-build.md)** - The open-source build: bring-your-own-credentials and how telemetry differs
 
 Rebel Privacy Policy
 This Privacy Policy explains how Mindstone Learning Limited ("Mindstone", "we", "us", "our") handles your personal data when you use the Rebel desktop application ("Rebel") and what to expect when connecting third‑party AI services and integrations. This policy is intended for external customers, enterprise buyers, and prospective users.
@@ -60,6 +60,8 @@ We collect the following categories of personal data:
 
 1. Information You Provide Directly
 Account information: name, email address, and credentials used to create and access your Rebel account
+
+Open-build contact details (optional): during setup, the open-source build can ask — optionally — for your first name and email. If you choose to provide your email, that email (and your first name, if given) is sent to Mindstone as a consented contact, together with minimal source metadata (that it came from open-build onboarding, plus app version and platform). This is a volunteered contact detail, not a Mindstone account. Skip the field and nothing is sent. See "Open-Source / Self-Hosted Build".
 
 Payment information: Mindstone invoices customers directly. We do not collect or store payment card data.
 
@@ -147,11 +149,11 @@ Rebel ships in two builds, and a few parts of this policy apply differently depe
 
 The managed app — the standard Rebel application distributed and operated by Mindstone, with a Mindstone account, managed billing, and Mindstone-supplied service credentials. Unless a section says otherwise, this policy describes the managed app.
 
-The open-source build (the "open build") — Rebel's open-source edition, which you install from its public source code and run yourself. It carries no Mindstone-supplied credentials: you bring your own AI provider accounts, your own connector credentials, and (optionally) your own self-hosted cloud. You can run it with no Mindstone account at all. For a plain-language overview, see open-source-build.md.
+The open-source build (the "open build") — Rebel's open-source edition, which you install from its public source code and run yourself. It carries no Mindstone-supplied credentials: you bring your own AI provider accounts, your own connector credentials, and (optionally) your own self-hosted cloud. You can run it with no Mindstone account at all. For a plain-language overview, see fair-source-and-open-source-build.md.
 
 What's different in the open build:
 
-No Mindstone account required. The open build can run as a guest on your machine. If you never create a Mindstone account, Mindstone does not hold account information (name, email, credentials) for you.
+No Mindstone account required. The open build can run as a guest on your machine. If you never create a Mindstone account, Mindstone does not hold account information (name, email, credentials) for you. One exception, and only if you choose it: if you fill in the optional email in the open build's "About you" setup step, Mindstone holds that email (and your first name, if given) as a consented contact so it can keep in touch about the open build — see "Optional contact details in the open build" below. That is a volunteered contact, not an account, and it is entirely skippable.
 
 Bring your own credentials. Your AI provider keys, connector sign-ins, and any cloud or meeting-recording credentials are yours and are configured by you. Data you send to those services travels to the providers you choose, under their terms — Mindstone is not in that path.
 
@@ -167,9 +169,23 @@ Telemetry in the open build:
 
 "Telemetry" here means usage analytics and error reports sent back to Mindstone — not the data that naturally flows to the AI providers, connectors, or cloud you choose to use.
 
-At launch, the open build sends Mindstone no telemetry. It ships with no Mindstone analytics or error-monitoring credentials built in, and the behavioural-analytics client is not included in the open build at all. With nothing to report to, the open build sends Mindstone no usage analytics or error reports by default. If you want usage and error data for your own deployment, you can wire up your own analytics and/or error-monitoring credentials, in which case the data goes to your own account(s) and is never routed to Mindstone.
+At launch, the open build sends Mindstone no telemetry. It ships with no Mindstone analytics or error-monitoring credentials built in, and the behavioural-analytics client is not included in the open build at all. With nothing to report to, the open build sends Mindstone no usage analytics or error reports by default. If you want usage and error data for your own deployment, you can wire up your own analytics and/or error-monitoring credentials, in which case the data goes to your own account(s) and this usage and error data is never routed to Mindstone.
+
+This telemetry statement is about usage analytics and error reports. It does not cover the optional contact details you may volunteer during setup — if you fill in the optional email in the "About you" step, that contact is sent to Mindstone on purpose, as a separate, consented channel (not analytics). See "Optional contact details in the open build" below.
 
 Planned (after launch): pseudonymous-by-default, opt-out telemetry via Mindstone. Mindstone intends to offer the open build a telemetry channel routed through a Mindstone backend service (rather than a built-in third-party analytics key). The current design is for this to be pseudonymous by default and opt-out — collecting limited product-usage signals to improve reliability and the product, with a setting to turn it off. This is not active at launch. Before it is enabled, this policy will be updated to describe exactly what is collected, the lawful basis, and how to opt out, and the relevant in-app controls and notices will be provided.
+
+Optional contact details in the open build:
+
+The open build's setup includes an optional "About you" step that can ask for your first name and email. This is the one thing the open build can send to Mindstone, and only if you choose it — it is separate from telemetry, which stays off.
+
+What is sent, and when: if (and only if) you fill in the optional email, that email — plus your first name, if you gave one, and minimal source metadata (that it came from open-build onboarding, plus app version and platform) — is sent to Mindstone. Leave the email blank and nothing is sent.
+
+What it is used for: keeping in touch with you about the open build. It does not create a Mindstone account, and it is not used as analytics.
+
+Lawful basis: consent. Submitting the optional details, with this disclosure shown at the point of entry, is how you give that consent. Providing them is entirely voluntary, and the open build works exactly the same if you skip the step.
+
+Retention and deletion: Mindstone keeps a contact you volunteer this way until you ask for it to be deleted. You can request deletion at any time using the contact route in "Your Rights" below (hello@mindstone.com); Mindstone will delete the contact on request.
 
 Privacy Layers
 Rebel involves multiple privacy boundaries. Your data flows through several systems:
@@ -426,7 +442,7 @@ Automatic updates: The cloud service periodically checks for software updates an
 
 Important note on in-app Privacy & Data statements:
 
-Privacy & Data statements in the Safety tab (for example, "No conversation storage" and "Secrets stay local") apply to desktop-only mode. When Cloud Continuity is enabled, data is stored on your cloud instance. In the open-source build, the same Safety-tab statements additionally reflect that telemetry is off — nothing is sent to Mindstone unless you add your own credentials.
+Privacy & Data statements in the Safety tab (for example, "No conversation storage" and "Secrets stay local") apply to desktop-only mode. When Cloud Continuity is enabled, data is stored on your cloud instance. In the open-source build, the same Safety-tab statements additionally reflect that telemetry is off — nothing is sent to Mindstone unless you add your own credentials, with one consented exception: if you fill in the optional email during the "About you" setup step, that contact is sent to Mindstone on purpose (see "Optional contact details in the open build").
 
 8. Meeting Notetaker (Optional)
 Risk level: Medium - Meeting transcription uses dedicated cloud services
@@ -514,7 +530,7 @@ If you enable Cloud Continuity, your data is stored on your dedicated cloud inst
 
 Usage telemetry used to ensure reliability and generate aggregated usage reports is retained for the periods above.
 
-These retention periods apply to data Mindstone actually collects (the managed app). In the open-source build, Mindstone collects no telemetry by default, so there is nothing for Mindstone to retain at launch. The planned post-launch Mindstone telemetry channel (pseudonymous, opt-out, not active at launch) would have its retention described when it is introduced — see "Open-Source / Self-Hosted Build".
+These retention periods apply to data Mindstone actually collects (the managed app). In the open-source build, Mindstone collects no telemetry by default, so there is nothing of that kind for Mindstone to retain at launch. The one exception is a contact you choose to volunteer: if you fill in the optional email during the "About you" setup step, Mindstone keeps that contact until you ask for it to be deleted (see "Optional contact details in the open build"). The planned post-launch Mindstone telemetry channel (pseudonymous, opt-out, not active at launch) would have its retention described when it is introduced — see "Open-Source / Self-Hosted Build".
 
 Retention periods for third‑party providers (cloud storage, MCP connectors, AI APIs) are governed by their policies.
 
@@ -702,7 +718,7 @@ Internet or other electronic network activity (usage telemetry, feature interact
 
 Commercial information (payment and subscription records)
 
-These categories reflect the managed app. In the open-source build, Mindstone does not necessarily collect any of them — for example, if you use Rebel with no Mindstone account and the planned post-launch Mindstone telemetry channel is not in effect (it is not active at launch), Mindstone collects no identifiers, network-activity, or commercial information from you. See "Open-Source / Self-Hosted Build".
+These categories reflect the managed app. In the open-source build, Mindstone does not necessarily collect any of them — for example, if you use Rebel with no Mindstone account and the planned post-launch Mindstone telemetry channel is not in effect (it is not active at launch), Mindstone collects no identifiers, network-activity, or commercial information from you. The one exception is the optional contact details (first name and email) you may volunteer during open-build setup, which are identifiers collected on the basis of your consent — see "Optional contact details in the open build" under "Open-Source / Self-Hosted Build".
 
 We do not sell your personal information. We do not share your personal information for cross-context behavioural advertising.
 
@@ -725,7 +741,7 @@ We do not knowingly sell or share personal information of residents under 16 yea
 Changes to This Policy
 We may update this policy to reflect operational, legal, or regulatory changes. We will indicate the date of the latest update at the top of this page. For material changes, we will make reasonable efforts to notify you (for example, by email or by displaying a prominent notice in the Rebel app).
 
-Material change — Version 3.2 (19 Jun 2026): Adds an "Open-Source / Self-Hosted Build" section and clarifies that, in the open-source build, telemetry is off by default, users bring their own credentials, a Mindstone account may not be required, and meeting recording uses the user's own Recall account; and sets out Mindstone's position that for a self-hosted open build the user or their organisation acts as the data controller and Mindstone is the software provider.
+Material change — Version 3.2 (19 Jun 2026): Adds an "Open-Source / Self-Hosted Build" section and clarifies that, in the open-source build, telemetry is off by default, users bring their own credentials, a Mindstone account may not be required, and meeting recording uses the user's own Recall account; and sets out Mindstone's position that for a self-hosted open build the user or their organisation acts as the data controller and Mindstone is the software provider. It also describes the open build's optional "About you" setup step: if a user chooses to provide their email, that email (and first name, if given) is sent to Mindstone as a consented contact to keep in touch about the open build — separate from telemetry, on the lawful basis of consent, retained until the user requests deletion. This part of the policy is a draft pending broader legal sign-off for the open-build launch.
 
 Contact Us
 If you have questions about this policy or our practices, contact: hello@mindstone.com
