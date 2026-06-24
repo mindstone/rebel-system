@@ -14,6 +14,8 @@ You only need **one** of these to get started.
 
 In onboarding and in [Settings → Agent & Voice → Intelligence](rebel://settings/agents), you pick how you want to power Rebel, then choose which models Rebel should use for **Planner**, **Main work**, and **Behind the Scenes**.
 
+**You're not locked to one model or one provider.** Connect more than one and switch whenever you like — and through OpenRouter alone you can reach Claude, GPT, Gemini, DeepSeek, Grok, and others on a single account. You can also run models on your own machine (e.g. via Ollama or LM Studio) or point Rebel at a company gateway — see [Custom models and gateways](rebel://library/rebel-system%2Fhelp-for-humans%2Fcustom-models-and-gateways.md). And with [Council Mode](rebel://library/rebel-system%2Fhelp-for-humans%2Fmulti-model-council-mode.md) you can put a question to several models at once.
+
 ## See also
 
 - [Mindstone plans](rebel://library/rebel-system%2Fhelp-for-humans%2Fmindstone-plans-and-billing.md) — the flat-fee subscription, monthly allowance, and billing
@@ -47,7 +49,7 @@ The flow is the same in onboarding and in Settings:
 1. **Connect** the provider you want
 2. The card shows as **Connected** and is automatically selected as your active provider
 3. If you have multiple providers connected, click a different card to switch
-4. If you disconnect your active provider, Rebel automatically falls back to another connected provider
+4. If you disconnect your active provider, Rebel switches your active provider to another one you've connected, so you're not left without a model
 
 One connection is enough. More than one is optional.
 

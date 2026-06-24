@@ -48,7 +48,7 @@ In the same settings tab under **Model Profiles**, you have two ways to add coun
 
 #### Quick Add (recommended)
 
-Pre-configured profiles appear as cards below the model list — for example, "GPT-5.2 High Thinking" or "GPT-5.2 Pro Max Thinking." Click one, enter your API key (or reuse the one from your voice settings if it's the same provider), and you're done. The model, thinking level, and council membership are all pre-set.
+Pre-configured profiles appear as cards below the model list — for example, "GPT-5.5 — High Thinking" or "GPT-5 mini — Fast & Affordable." Click one, enter your API key (or reuse the one from your voice settings if it's the same provider), and you're done. The model, thinking level, and council membership are all pre-set.
 
 #### Manual setup
 
@@ -93,7 +93,7 @@ Each council member can be assigned a thinking level that controls how deeply it
 | **Low** | Quick factual lookups, simple questions |
 | **Medium** | Balanced speed and depth (default for most models) |
 | **High** | Complex analysis, important decisions |
-| **Extra High** | Maximum reasoning depth (available on select models like GPT-5.2 Pro) |
+| **Extra High** | Maximum reasoning depth (available on select models like GPT-5.5 Pro) |
 
 Higher thinking levels produce more thorough answers but use more tokens. Quick Add presets come with a sensible default already set.
 
@@ -107,7 +107,7 @@ If a council member hits a problem — an invalid API key, a rate limit, or a pr
 
 Council Mode works with any OpenAI-compatible API endpoint. Built-in presets and Quick Add profiles are available for:
 
-- **OpenAI** — GPT-5.2, GPT-5.2 Pro, and more. Includes ready-made profiles like "GPT-5.2 High Thinking" and "GPT-5.2 Pro Max Thinking."
+- **OpenAI** — GPT-5.5, GPT-5.5 Pro, and more. Includes ready-made profiles like "GPT-5.5 — High Thinking."
 - **Google Gemini** — Gemini 2.5 Flash, Gemini 2.5 Pro, Gemini 3 Flash, Gemini 3.1 Pro.
 - **Together AI** — Open-source models hosted on Together's infrastructure.
 - **Cerebras** — Ultra-fast inference (Llama, Qwen, GPT OSS models).

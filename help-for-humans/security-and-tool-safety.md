@@ -25,20 +25,31 @@ The notification drawer (the panel on the right) groups pending approvals by con
 
 ### Tool approvals
 
-When a tool action needs your OK, you'll see a single **Allow** button. Each prompt also has a **Why?** toggle — tap it to see a plain-language explanation of why Rebel needs your permission for this particular action. Click Allow to approve, or expand the inline scope options to choose how broadly Rebel should remember your preference:
+When a tool action needs your OK, the approval card shows what Rebel wants to do, in plain language, with quick **Allow** and decline buttons right there. Each prompt also has a **Why?** toggle — tap it to see why Rebel is asking for this particular action. Open the request (or expand it) and you get the full set of choices:
 
 | Option | What it means |
 |--------|--------------|
-| **Allow** | Approves just this one action. Rebel will ask again next time. |
-| **Allow for this conversation** | Approves this type of action for the rest of the current conversation. Useful when Rebel needs to use the same tool repeatedly — you approve once and it won't interrupt you again until the conversation ends. |
-| **Allow & choose rule update...** | Approves the action *and* lets you add a rule so similar actions are allowed automatically in the future. See the learning rules from approvals section below. |
-| **Don't run** | Declines the action. Rebel skips it and moves on. |
+| **Allow once** | Approves just this one action. Rebel will ask again next time. (In an automation, this reads **Allow this run only**.) |
+| **Allow for conversation** | Approves this type of action for the rest of the current conversation. Useful when Rebel needs the same tool repeatedly — approve once and it won't interrupt you again until the conversation ends. |
+| **Allow and remember…** | Approves the action *and* opens a quick choice of how broadly to remember it (see [Learning rules from approvals](#learning-rules-from-approvals) below). This appears when Rebel paused because of your Safety Rules. |
+| **Deny once** | Declines this one action. Rebel skips it and moves on. |
+| **Don't allow…** | Declines *and* lets you add a rule so similar actions are declined automatically in future. |
 
-The approval reason and scope descriptions use plain language — no technical jargon. You'll see clear explanations of what Rebel wants to do and why it's asking.
+The reason and option descriptions use plain language — no technical jargon. You'll see clear explanations of what Rebel wants to do and why it's asking.
 
-For memory writes, the wording changes slightly — **Save this once**, **Save for this conversation**, and **Discard** — but the idea is the same. Memory write approvals can also show **Allow & choose rule update...** when the write was blocked by your Safety Rules.
+For memory writes the wording differs slightly — you can allow the save, allow it for the rest of the conversation, keep it private instead, or discard it — but the idea is the same. Memory writes that were paused by your Safety Rules can also show **Allow and remember…**.
 
-The "Allow & choose rule update..." option is available when Rebel blocked something because of your Safety Rules. It won't appear for actions flagged by other checks (like automatic sensitivity detection). It's the fastest way to teach Rebel what you're comfortable with — no need to open Settings.
+The **Allow and remember…** / **Don't allow…** options appear when Rebel paused because of your Safety Rules. They won't appear for actions flagged by other checks (like automatic sensitivity detection). They're the fastest way to teach Rebel what you're comfortable with — no need to open Settings.
+
+### What the approval card tells you
+
+Approval cards are built to be readable at a glance, so you're making a real decision rather than rubber-stamping:
+
+- **A plain-language reason** — what Rebel wants to do, where, and to what. For example: "Post the message 'Q3 numbers are in' to **#leadership** in Slack."
+- **A blast-radius summary** — three quick read-outs: **Where** the action lands (the destination, with the full file path for file actions), **Who can see it** ("Private to you", "Shared workspace", "Company-wide", or "Public"), and **Afterwards** (whether it's easy or hard to undo). Small chips flag the things worth noticing — *Shared*, *Leaves Rebel*, *Hard to undo*.
+- **A risk badge** so high-impact actions stand out.
+
+The single fastest safety check is usually "is that the destination — or the file — I think it is?" The card is designed to answer that in a second.
 
 ### Memory write approvals (staged files)
 
@@ -48,7 +59,7 @@ When Rebel stages a file for your review before saving to memory:
 |--------|--------------|
 | **Allow once** | Publish to the target space. |
 | **Deny** | Redirect to your private memory — the content isn't lost, just kept private. |
-| **Allow & choose rule update...** | Same as above — adjust the rule that flagged it. |
+| **Allow and remember…** | Same as above — adjust the rule that flagged it. |
 | **Preview** | View the content or diff before deciding. |
 
 ### Memory write approvals (direct writes)
@@ -75,9 +86,9 @@ If you update your Safety Rules while approvals are pending, Rebel automatically
 Some actions are considered inherently safe and run without prompting:
 
 - **Read-only operations** — Searching, listing, and retrieving data from connectors
-- **Web search and URL fetch** — Looking things up online and reading web pages
+- **Web search** — Looking things up online
 - **Writing to temporary files** — Scratch work that doesn't touch your important data
-- **Trusted tools** — Tools you've marked as always allowed in [Settings → Privacy & Safety](rebel://settings/safety) skip checks entirely (unless [Privacy Mode](library://rebel-system/help-for-humans/privacy-mode.md) is on)
+- **Trusted tools** — Tools you've marked as always allowed in [Settings → Privacy & Safety](rebel://settings/safety) skip routine checks (with two exceptions: a few especially consequential actions like calendar changes still ask every time, and [Privacy Mode](library://rebel-system/help-for-humans/privacy-mode.md) suspends trusted-tool auto-allow)
 - **Built-in safe tools** — Operations that are safe by design
 
 These skip the approval flow so you're not interrupted by routine lookups.
@@ -99,6 +110,19 @@ By default, these actions trigger an approval prompt — but your Safety Rules a
 - **Bulk operations** — Actions affecting many items at once
 - **Purchases or financial transactions** — If connected to such services
 - **Changing your security settings** — Rebel won't lower its own guardrails without your say-so
+
+
+## How Rebel Decides Whether to Ask
+
+When Rebel is about to use a tool, a fast AI model checks the action against your Safety Rules in the background. A few things shape that decision — and they're worth understanding, because they're what keep approvals meaningful instead of constant.
+
+**It reads the context, not just the action.** The check sees what you actually asked for — your request, and the recent back-and-forth in the conversation — not just the bare tool name. So if you say "reply to Dana and let her know I'll be late," Rebel understands that sending *that* reply is the thing you asked for. In a normal interactive conversation, clearly asking for something is itself permission for that specific action (unless one of your rules says otherwise). This is why Rebel doesn't pester you to approve the very thing you just requested.
+
+**Automations are held to a stricter standard.** When Rebel is working unattended (an automation, or acting in a background role), your earlier messages are treated as helpful context but *not* as standing permission. Anything with real-world effects that your rules don't clearly cover gets staged for your review rather than done on a hunch. (See [Automations](library://rebel-system/help-for-humans/automations.md).)
+
+**Actions with real-world effects clear a higher bar.** For anything that sends, posts, deletes, pays, or otherwise changes something out in the world, Rebel only proceeds if it's *confident* your rules cover the case — not merely that nothing forbids it. If it's only somewhat sure, it asks. For routine, reversible, read-only work the bar is lower, so you're not interrupted for lookups. In short: **silence is not permission for actions that have consequences** — when in doubt, Rebel asks.
+
+**Some actions always ask, even for trusted tools.** A small set of especially consequential actions — creating or changing calendar events is the classic example — pause for your explicit OK every time, regardless of your rules or trusted tools.
 
 
 ## Calendar Safety
@@ -163,6 +187,7 @@ Rules work best when they're specific and actionable. Think about the situations
 | "Never modify files in the Finance folder without asking" | Adds caution around a sensitive area |
 | "Slack messages to #general always need my approval" | Prompts before posting to a high-visibility channel |
 | "Calendar invites with external attendees require approval" | Flags outbound meeting requests |
+| "You can draft emails freely, but always ask before actually sending one" | Lets Rebel prepare work without firing it off |
 | "Don't delete any Google Drive files without asking, even if they look like duplicates" | Prevents overzealous cleanup |
 
 **Less effective rules:**
@@ -187,6 +212,19 @@ Rules work best when they're specific and actionable. Think about the situations
 - **Rules apply to all conversations** — they're a global setting, not per-conversation
 - **Update them as your needs change** — working on something sensitive this week? Add a temporary rule, then remove it later
 
+### Allowing some actions but not others
+
+A common wish is "let Rebel *prepare* things but never *pull the trigger*" — draft the email but don't send it, build the post but don't publish it. You have two ways to do this:
+
+- **Write a rule that distinguishes the actions.** Because your rules are read in plain English, you can say "Drafting emails is fine; always ask before sending" and Rebel will treat the two differently. This is the flexible option — it keeps the helpful half and gates the risky half.
+- **Turn an individual tool off entirely.** In **[Settings → Connectors](rebel://settings/tools)** you can disable a single tool within a connected app — for example, switch off "send email" while leaving "draft email" and "read email" on. A disabled tool simply can't be used; it's the firmest version of "never."
+
+Rules are the right tool when you want nuance; turning a tool off is the right tool when you want a hard, no-exceptions boundary.
+
+### What's personal, and what your team shares
+
+Your Safety Rules are **yours** — they live on your device and aren't shared with or inherited from teammates. Two people on the same team can have completely different rules, and that's fine. If your organisation needs a control that applies to *everyone*, that's done a different way — an administrator can centrally switch specific tools off for the whole company (see [Admin-Disabled Tools](#admin-disabled-tools) above). For the full picture of what's shared versus personal when several people use Rebel together, see [Teams and admin controls](library://rebel-system/help-for-humans/teams-and-admin-controls.md).
+
 ### Learning Rules from Approvals
 
 You don't have to write rules from scratch. The most natural way to build up your rules is from real approval prompts — when Rebel asks for permission and you want it to remember your preference.
@@ -194,30 +232,30 @@ You don't have to write rules from scratch. The most natural way to build up you
 **How it works:**
 
 1. Rebel asks for approval on an action (e.g., "Post message to #general in Slack")
-2. You click **Allow & choose rule update...**
-3. Rebel generates three options at different scopes, plus a free-text option:
-   - **Just this** — a narrow rule for this specific action
+2. You click **Allow and remember…**
+3. Rebel offers three ready-made options at different scopes, plus a free-text option:
+   - **This only** — a narrow rule for this specific action
    - **Similar** — a broader rule covering related actions
-   - **All uses** — trust this tool entirely (skips approval for all its actions)
-   - **Other...** — write your own custom rule
+   - **Always** — trust this tool entirely (skips approval for all its actions)
+   - **Other…** — write your own custom rule
 4. You pick the one that feels right
 5. The rule is saved automatically
 
-**Example:** Rebel asks before posting to Slack. You click "Allow & choose rule update..." and see something like:
+**Example:** Rebel asks before posting to Slack. You click **Allow and remember…** and see something like:
 
 | Option | What it does |
 |--------|-------------|
-| **Just this** | "Allow posting messages to #general in Slack" — adds a specific rule |
+| **This only** | "Allow posting messages to #general in Slack" — adds a specific rule |
 | **Similar** | "Allow posting messages to any Slack channel" — adds a broader rule |
-| **All uses** | Trusts the Slack tool entirely — no more approval prompts for any Slack action |
-| **Other...** | You type a custom rule in your own words |
+| **Always** | Trusts the Slack tool entirely — no more approval prompts for any Slack action |
+| **Other…** | You type a custom rule in your own words |
 
-Pick the one that matches your comfort level. Narrower rules mean Rebel will still ask about related-but-different actions. Broader rules mean fewer interruptions but less oversight.
+Pick the one that matches your comfort level. Narrower rules mean Rebel will still ask about related-but-different actions. Broader rules mean fewer interruptions but less oversight. (Declining works the same way: **Don't allow…** offers the matching **This only / Similar / Always block** scopes so you can teach Rebel what to *stop* doing.)
 
 **Where does the rule go?**
 
-- **Just this**, **Similar**, and **Other...** add a written rule to your Safety Rules (visible in **[Settings → Privacy & Safety](rebel://settings/safety)** → **Your own rules**). You can edit or remove these at any time.
-- **All uses** works differently — it adds the tool to your trusted tools list (or, for memory writes, sets the space to save without asking). This is a separate setting, not a written rule.
+- **This only**, **Similar**, and **Other…** add a written rule to your Safety Rules (visible in **[Settings → Privacy & Safety](rebel://settings/safety)** → **Your own rules**). You can edit or remove these at any time.
+- **Always** works differently — it adds the tool to your trusted tools list (or, for memory writes, sets the space to save without asking). This is a separate setting, not a written rule.
 
 **What happens after you update a rule:**
 

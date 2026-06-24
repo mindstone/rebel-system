@@ -8,6 +8,8 @@ A **Mindstone plan** is the no-fuss way to power Rebel: you pay one flat monthly
 
 If you'd rather use your own AI account instead, that's the [bring-your-own route](rebel://library/rebel-system%2Fhelp-for-humans%2FAI-models.md) (ChatGPT Pro, OpenRouter, or an Anthropic key) — both work, and you can switch between them.
 
+These plans are about **how you power the AI** for one person. Rolling Rebel out across a *team* — central admin controls, recommended connectors, standardised models — is arranged separately with Mindstone; see [Teams and admin controls](rebel://library/rebel-system%2Fhelp-for-humans%2Fteams-and-admin-controls.md) and [Licensing, explained](rebel://library/rebel-system%2Fhelp-for-humans%2Flicensing-and-fair-source.md).
+
 ## What you get
 
 - **We cover the AI bill.** Your plan fee is all you pay for Rebel's AI — there's no separate token bill arriving from another provider.

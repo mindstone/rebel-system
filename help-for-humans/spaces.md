@@ -29,6 +29,8 @@ Each space gives Rebel a clear boundary:
 
 You still open **one workspace folder** overall. Spaces are just the separate areas inside it.
 
+**A note on what the sharing level does.** The sharing level is a *label* that tells Rebel how to treat a space — how to describe it, and how careful to be with it (anything marked as shared automatically gets a stricter check before sensitive things are saved there). It does **not** itself control who can open the folder. Actual access comes from the underlying shared drive or folder's own permissions — see [Shared space access](#shared-space-access-vs-public-file-sharing) below.
+
 ## Common spaces
 
 ### Chief-of-Staff
@@ -122,7 +124,7 @@ Each space has its own memory setting:
 | **Ask, if content is sensitive** | Rebel only stops when something looks risky |
 | **Always ask before saving** | Every memory write needs your OK |
 
-Shared spaces keep a stricter floor for sensitive content, even if you prefer fewer interruptions.
+Shared spaces keep a stricter floor for sensitive content, even if you prefer fewer interruptions — you can't dial a shared space all the way down to "save without asking," because that's where private details are most likely to leak into a group folder by accident.
 
 ### Privacy Mode overrides space settings
 

@@ -29,6 +29,12 @@ The app loses its access immediately. If you change your mind, you can re-author
 
 Revoking an app's permissions does not break other connections or affect unrelated tools. Each app is independent.
 
+## Turning individual tools on or off
+
+Revoking access (above) removes a whole app. If you'd rather keep an app but switch off just *one* of its tools, you can: in **[Settings → Connectors](rebel://settings/tools)**, open a connected app and toggle individual tools. For example, keep "read email" and "draft email" on while turning "send email" off. A tool you switch off simply can't be used.
+
+You may also see tools your **organisation** has switched off for everyone — these show a shield icon and a "Disabled" badge, and can't be turned back on from your machine. That's an admin control rather than a personal one; see [Teams and admin controls](library://rebel-system/help-for-humans/teams-and-admin-controls.md). For how tool approvals work more generally, see [Security and tool safety](library://rebel-system/help-for-humans/security-and-tool-safety.md).
+
 ## Keep it manageable
 
 Only connect apps you actively use. If you connected something for a one-off task and haven't used it since, consider removing its access — it's one less thing to keep track of.

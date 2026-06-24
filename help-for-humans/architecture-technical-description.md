@@ -4,7 +4,7 @@ description: "How Rebel is built under the hood: Electron architecture, privacy-
 
 # Technical Architecture
 
-A look under the hood for the technically curious. Rebel is a desktop application built on Electron with a React frontend, designed around a privacy-first architecture where your workspace files stay on your device, conversations go directly to the AI model you choose, and Mindstone's servers are never in the data path.
+A look under the hood for the technically curious. Rebel is a desktop application built on Electron with a React frontend, designed around a privacy-first architecture where your workspace files stay on your device and — when you bring your own AI account — your conversations go directly to the AI model you choose, with Mindstone's servers out of the path. (On the flat-fee Mindstone plan, prompts route through Mindstone's managed AI pool to reach the model; your files and memory still stay local either way.)
 
 ---
 
@@ -24,11 +24,11 @@ This separation is by design. The renderer never touches the filesystem or netwo
 
 ## Privacy-First Architecture
 
-This is the most important architectural decision in Rebel: **Mindstone never sees your conversations, tool usage, or sensitive data.**
+This is the most important architectural decision in Rebel: **your conversations, files, and sensitive data stay on your device — and when you use your own AI account, nothing about them flows through Mindstone.**
 
 Here's how it works:
 
-- **Direct model connection.** When you talk to Rebel, your messages go straight from your machine to the AI provider (Anthropic, OpenAI, or a local model). Mindstone's servers are not in that path.
+- **Direct model connection.** When you bring your own AI account or key, your messages go straight from your machine to the AI provider (Anthropic, OpenAI, OpenRouter, or a local model) — Mindstone's servers are not in that path. The one exception is the flat-fee Mindstone plan: there, your messages route through Mindstone's managed AI pool to reach the model. (See the [privacy policy](rebel://library/rebel-system%2Fhelp-for-humans%2FRebel-privacy-policy.md) for how that's handled; either way, your files and memory stay local.)
 - **Local storage.** Conversations, memory, files, and settings are stored on your device. Rebel uses a local database (SQLite) for search indexes and `electron-store` for settings and session history.
 - **Local embeddings.** When Rebel indexes your files for semantic search, it uses a local embedding model (BGE) running on your machine — no cloud calls needed. GPU acceleration is used when available.
 - **Connector tokens stay local.** When you connect services like Gmail or Slack, the OAuth tokens live on your device. Rebel connects directly to those services from your machine.
@@ -71,13 +71,14 @@ Each conversation turn is an "agent turn" — the model can think, respond, call
 
 ### Model Flexibility
 
-Rebel defaults to Claude (latest Sonnet) but supports:
+Rebel defaults to Claude (latest Sonnet) but isn't tied to one model or provider. It supports:
 
-- **Anthropic models** via API key or Claude Max subscription
-- **OpenAI models** via API key
-- **Local models** via Ollama, LM Studio, or any OpenAI-compatible endpoint
+- **Anthropic models** via your Anthropic API key
+- **OpenAI models** via ChatGPT Pro (your OpenAI sign-in) or an API key
+- **OpenRouter** — one account reaching Claude, GPT, Gemini, DeepSeek, Grok, and more
+- **Local models** via Ollama, LM Studio, llama.cpp, or any OpenAI-compatible endpoint (including company gateways)
 
-You bring your own API keys. Rebel doesn't charge per-token — you pay the provider directly.
+You can bring your own accounts and keys — Rebel doesn't charge per token; you pay the provider directly — or choose a flat-fee Mindstone plan where Mindstone covers the AI bill. See [AI models](rebel://library/rebel-system%2Fhelp-for-humans%2FAI-models.md).
 
 ### Context Engineering
 
