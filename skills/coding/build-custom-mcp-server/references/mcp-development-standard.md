@@ -464,7 +464,7 @@ Connectors published as open-source packages must not contain internal reference
 | User-Agent | "mcp-server-zendesk/0.2.0" | Product-host-specific User-Agent strings |
 | Environment variables | Service-specific (`ZENDESK_API_TOKEN`) | `REBEL_WORKSPACE_PATH`, `MINDSTONE_REBEL_BRIDGE_STATE` |
 | Bridge code | Not present | `src/bridge.ts`, localhost bridge calls |
-| Package metadata | `@mindstone-engineering` scope (intentional) | Internal repo URLs if not public |
+| Package metadata | `@mindstone` scope (intentional public npm scope) | Internal repo URLs if not public |
 
 Pre-publish grep check:
 

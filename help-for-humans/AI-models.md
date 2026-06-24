@@ -147,20 +147,17 @@ You manage all of this in **Settings → Agent & Voice → Intelligence** under 
 
 ### Smart model picking
 
-**Smart model picking** is Rebel choosing the best model for each step within your Quality Tier. When Rebel plans a job, it works out which model is best suited to the step at hand — given your tier setting and what each model can do — and routes the job there automatically.
+**Smart model picking** lets Rebel choose which of your models runs each step of a job, rather than using one model for everything — a fast, cheap model for routine steps, a stronger one for the hard thinking, without you having to decide.
 
-Smart picking kicks in every turn unless you've already picked a specific model for the conversation. If you've explicitly chosen a working model, Rebel honours that and steps aside.
+It's an **experimental feature and off by default.** Turn it on in **Settings → Agent & Voice → Intelligence**, under the Model team section: flip the **Smart model picking** toggle, then mark each model you want in the pool with its **Included in Smart picking** chip. You need at least two eligible models before it does anything.
 
-The **Quality Tier** slider is your control knob. Smart picking delivers the best available result within the tier you've chosen:
+A few things worth knowing:
 
-| Tier | Smart picking result |
-|---|---|
-| **Quick** | Fastest model that does the job |
-| **Balanced** | Best mix of speed and quality |
-| **Thorough** | Deeper reasoning for complex steps |
-| **Maximum** | The strongest model available |
+- It only kicks in when Rebel is **planning** a job — i.e. you've set a separate Planner model so plan mode is active. For an ordinary one-shot reply, your Main work model handles it.
+- If you've **explicitly picked a model** for the conversation, Rebel honours that and steps aside — Smart picking won't override your choice.
+- It only ever picks from the models *you* marked eligible; it won't reach for something you haven't enabled.
 
-You can also open the advanced panel inside a conversation's model selector and override specific fields directly — Smart picking respects that choice.
+If you'd rather just dial overall quality up or down without thinking about individual models, use the **Quality Tier** slider below — that's the simpler control for most people.
 
 ## Quality Tier selector (per-conversation)
 
@@ -185,7 +182,7 @@ For most people:
 
 - Use your preferred provider card
 - Pick a strong **Main work** model
-- Smart model picking is **on by default** — Rebel automatically picks the best model for each step within your Quality Tier, so you get good results without managing every detail
+- Use the **Quality Tier** slider to set how much quality vs. speed you want per conversation — it's the simplest way to get good results without managing individual models (Smart model picking is a separate, experimental opt-in if you later want per-step routing)
 - Leave **Planner** on **Off (no plan mode)** unless you do lots of complex work — picking a separate model here turns on the planning phase
 - Leave **Behind the Scenes** on the default unless you have a reason to change it
 

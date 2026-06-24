@@ -149,7 +149,7 @@ async function apiRequest<T>(
 // announces to clients). Use `<api-name>-mcp` — e.g. "apple-shortcuts-mcp",
 // "typeform-mcp" — so logs, protocol messages, and the connector directory
 // name all agree. This is *intentionally* different from the published npm
-// package name (`@mindstone-engineering/mcp-server-<api-name>`) — the scope
+// package name (`@mindstone/mcp-server-<api-name>`) — the scope
 // only applies to the npm side, protocol handshakes stay unscoped.
 const server = new McpServer({
   name: "PLACEHOLDER-mcp",
