@@ -14,7 +14,7 @@ One part is open to *everyone*, managed app included: **rebel-system** — the b
 
 ## Who it's for
 
-The open build is aimed at **individuals and small teams** who want Rebel running entirely on their own terms — their own AI accounts, their own infrastructure, and no usage data reported back to Mindstone. If that sounds like a lot of switches to set, it is, a little. The reward is that nothing is hidden, and nothing reaches Mindstone unless you ask it to — with one small, optional exception you control during setup (see [What does go to Mindstone — if you choose](#what-does-go-to-mindstone--if-you-choose)).
+The open build is aimed at **individuals and small teams** who want Rebel running entirely on their own terms — their own AI accounts, their own infrastructure, and no usage data reported back to Mindstone. If that sounds like a lot of switches to set, it is, a little. The reward is that nothing is hidden, and nothing reaches Mindstone unless you ask it to — with a couple of small things you choose to send (see [What does go to Mindstone — if you choose](#what-does-go-to-mindstone--if-you-choose)).
 
 It is *not* trying to be the easy option for a large organisation to roll out across hundreds of people. The features that make Rebel tidy to deploy at company scale — central accounts, managed billing, shared administration — stay with the managed app on purpose.
 
@@ -69,9 +69,11 @@ In short: it's off, it's yours to switch on, and switching it on points it at yo
 
 ## What does go to Mindstone — if you choose
 
-There's one small thing the open build *can* send us, and only if you decide to. When you set Rebel up, it offers an optional **"About you"** step asking for your first name and email. Your name lets Rebel address you; your email helps it tell your meetings and messages apart from everyone else's. Both are used locally, on your machine, to personalise how Rebel works for you.
+There are a couple of things the open build *can* send us, and only if you decide to. The first: when you set Rebel up, it offers an optional **"About you"** step asking for your first name and email. Your name lets Rebel address you; your email helps it tell your meetings and messages apart from everyone else's. Both are used locally, on your machine, to personalise how Rebel works for you.
 
-If you fill in the email, that detail — your email, plus your first name if you gave it, and a little minimal source metadata (that it came from open-build onboarding, plus the app version and your platform) — is also shared with Mindstone, so we can keep in touch with you about the open build. It's the single exception to "nothing reaches Mindstone": it goes to us on purpose, because you chose to share it. It's separate from telemetry (which stays off), it doesn't create a Mindstone account, and it's entirely skippable — leave the email blank and nothing is sent. Change your mind later? Just ask us to delete it (hello@mindstone.com) and we will.
+If you fill in the email, that detail — your email, plus your first name if you gave it, and a little minimal source metadata (that it came from open-build onboarding, plus the app version and your platform) — is also shared with Mindstone, so we can keep in touch with you about the open build. It goes to us on purpose, because you chose to share it. It's separate from telemetry (which stays off), it doesn't create a Mindstone account, and it's entirely skippable — leave the email blank and nothing is sent. Change your mind later? Just ask us to delete it (hello@mindstone.com) and we will.
+
+**Bug reports you send in the open build.** When you use *Feedback & Bugs* to report a bug, the report — what you wrote, plus a screenshot and diagnostics if you opted in, and the name and email you gave Rebel during setup — is sent to Mindstone so the team can look into it. It's separate from automatic telemetry, which stays off. You choose when to send it by submitting a report. Reports submitted before this was switched on stayed on your device and are not sent retroactively.
 
 Rebel can capture and transcribe your meetings in the open build too — but it goes about it differently from the managed app.
 
