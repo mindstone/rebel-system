@@ -4,6 +4,13 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ---
 
+## Unreleased
+
+### Fixes
+
+<!-- detail: super-mcp 2.7.0's owner-liveness watchdog duplicated the app's process-start-time probe; the Windows duplicate computed the time differently from the app (local vs UTC), so it wrongly concluded the owner had gone and self-exited ~30s after every launch. Windows-only, restart-resistant; large fetch-failed spike across many users. Fix: watchdog is now liveness-only (a missing process is the sole shutdown trigger), duplicate probe deleted (single start-time implementation). Do NOT mention PowerShell/ports/internal tickets in public copy. -->
+- **Windows: your connected tools stay connected** — On Windows, your connected services (Gmail, Granola, your inbox, search, and the rest) could go quiet partway through a session — and restarting Rebel didn't help. The tool router was shutting itself down by mistake shortly after each launch. It now stays up, so your tools keep working through the day.
+
 ## v0.4.50 — Jun 18-24, 2026
 
 ### Highlights
