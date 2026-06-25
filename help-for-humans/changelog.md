@@ -4,7 +4,9 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ---
 
-## Unreleased
+## v0.4.51 — Jun 25, 2026
+
+_The current development version. New entries land here as features ship._
 
 ### Fixes
 
