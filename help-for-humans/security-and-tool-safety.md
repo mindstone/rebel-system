@@ -31,7 +31,7 @@ When a tool action needs your OK, the approval card shows what Rebel wants to do
 |--------|--------------|
 | **Allow once** | Approves just this one action. Rebel will ask again next time. (In an automation, this reads **Allow this run only**.) |
 | **Allow for conversation** | Approves this type of action for the rest of the current conversation. Useful when Rebel needs the same tool repeatedly — approve once and it won't interrupt you again until the conversation ends. |
-| **Allow and remember…** | Approves the action *and* opens a quick choice of how broadly to remember it (see [Learning rules from approvals](#learning-rules-from-approvals) below). This appears when Rebel paused because of your Safety Rules. |
+| **Allow and remember…** | Approves the action *and* opens a quick choice of how broadly to remember it (see [Learning rules from approvals](#rule-learning) below). This appears when Rebel paused because of your Safety Rules. |
 | **Deny once** | Declines this one action. Rebel skips it and moves on. |
 | **Don't allow…** | Declines *and* lets you add a rule so similar actions are declined automatically in future. |
 
@@ -224,6 +224,8 @@ Rules are the right tool when you want nuance; turning a tool off is the right t
 ### What's personal, and what your team shares
 
 Your Safety Rules are **yours** — they live on your device and aren't shared with or inherited from teammates. Two people on the same team can have completely different rules, and that's fine. If your organisation needs a control that applies to *everyone*, that's done a different way — an administrator can centrally switch specific tools off for the whole company (see [Admin-Disabled Tools](#admin-disabled-tools) above). For the full picture of what's shared versus personal when several people use Rebel together, see [Teams and admin controls](library://rebel-system/help-for-humans/teams-and-admin-controls.md).
+
+<a id="rule-learning"></a>
 
 ### Learning Rules from Approvals
 
