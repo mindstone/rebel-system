@@ -4,7 +4,7 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ---
 
-## v0.4.51 — Jun 25-26, 2026
+## v0.4.52 — Jun 26, 2026
 
 _The current development version. New entries land here as features ship._
 
@@ -12,6 +12,8 @@ _The current development version. New entries land here as features ship._
 
 <!-- detail: 260626_feedback-header-button. Added a standalone ghost "Feedback" button to the top-right header (right of the Help/? icon, left of "New"), opening the same combined Feedback & Bugs dialog as the existing Help-menu "Feedback & bugs" item via handleOpenBugReport (no new dialog/handler/IPC). Help-menu item unchanged. Tooltip "Share feedback or report a problem". One file (App.tsx). -->
 - **Feedback is now one click away** — There's a "Feedback" button in the top bar, just left of "New". One click opens the same place you'd use to share an idea or flag something that's gone sideways (diagnostics included) — no more hunting through the help menu. The old spot still works, if you've grown fond of it.
+
+## v0.4.51 — Jun 25, 2026
 
 ### Fixes
 
