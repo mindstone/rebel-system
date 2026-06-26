@@ -1,5 +1,6 @@
 ---
-description: "The fair-source open build of Rebel — how it differs from the managed app, bring-your-own-credentials for AI models and connectors, and why telemetry is off by default (opt-in)."
+description: "The fair-source open build of Rebel — how it differs from the managed app, bring-your-own-credentials for AI models and connectors, and the anonymous usage data it shares by default (opt-out)."
+last_updated: "2026-06-26"
 ---
 
 # The Open Build
@@ -14,7 +15,7 @@ One part is open to *everyone*, managed app included: **rebel-system** — the b
 
 ## Who it's for
 
-The open build is aimed at **individuals and small teams** who want Rebel running entirely on their own terms — their own AI accounts, their own infrastructure, and no usage data reported back to Mindstone. If that sounds like a lot of switches to set, it is, a little. The reward is that nothing is hidden, and nothing reaches Mindstone unless you ask it to — with a couple of small things you choose to send (see [What does go to Mindstone — if you choose](#what-does-go-to-mindstone--if-you-choose)).
+The open build is aimed at **individuals and small teams** who want Rebel running entirely on their own terms — their own AI accounts, their own infrastructure, and full control over what leaves their machine. If that sounds like a lot of switches to set, it is, a little. The reward is that nothing is hidden: the one thing the open build sends back automatically is **anonymous usage data** to help us improve Rebel (no personal information, no conversation content), and you can switch even that off in one click. Everything else reaches Mindstone only if you choose to send it (see [What goes to Mindstone](#what-goes-to-mindstone)).
 
 It is *not* trying to be the easy option for a large organisation to roll out across hundreds of people. The features that make Rebel tidy to deploy at company scale — central accounts, managed billing, shared administration — stay with the managed app on purpose.
 
@@ -27,7 +28,7 @@ It is *not* trying to be the easy option for a large organisation to roll out ac
 | AI models | Use a [Mindstone plan](rebel://library/rebel-system%2Fhelp-for-humans%2Fmindstone-plans-and-billing.md), or bring your own | **Bring your own** (your AI accounts or access codes) |
 | Connectors (Slack, Google, etc.) | Ready to connect out of the box | **You supply each connection's credentials** (see below) |
 | Cloud continuity & mobile | Mindstone Cloud, or your own | **Your own cloud only** (self-hosted) |
-| Usage data (telemetry) | On, to keep the service reliable | **Off by default** — opt-in only |
+| Usage data (telemetry) | On, to keep the service reliable | **Anonymous usage data on by default** — opt-out anytime; never includes personal info or conversation content |
 | Meeting recorder | Built in | An optional add-on you install once (see below) |
 | Updates | Arrive automatically | You update it yourself |
 
@@ -35,7 +36,7 @@ The headline: the open build ships with the doors locked and the keys handed to 
 
 ## Bring your own credentials
 
-The single biggest difference. The open build carries **no Mindstone-supplied keys** — not for AI, not for connectors, not for analytics. You bring your own.
+The single biggest difference. The open build carries **no Mindstone-supplied keys** — not for AI, not for connectors. You bring your own. (Anonymous usage data is the one exception that works without you wiring anything up — it's routed through Mindstone for you, and it's described in full under [Anonymous usage data](#anonymous-usage-data-on-by-default) below.)
 
 ### AI models
 
@@ -49,6 +50,8 @@ Connections (MCP) to outside services — Slack, Google Workspace, Notion, and t
 
 Rebel walks you through this in the app, with setup guidance for each connector that needs it as you switch it on. Where setup is required, it's a one-time step. After that, connecting and disconnecting works exactly as it does everywhere else — see [Connectors, tools and integrations](rebel://library/rebel-system%2Fhelp-for-humans%2Fmcp-connectors-tools-and-integrations.md).
 
+For **Google, Microsoft, Slack, and HubSpot**, you paste your own app credentials in [Settings → Connectors](rebel://settings/tools) or during **onboarding** — no editing config files or restarting from a terminal. It's a one-time setup per connector. Change a key later and Rebel reminds you to reconnect so it takes effect.
+
 ### Cloud continuity (phone and browser)
 
 If you want Rebel to follow you onto your phone or browser, the open build supports it — on **your own cloud account**, not Mindstone's. The full how-to is the same one self-hosting users already follow: [Self-managed cloud setup](rebel://library/rebel-system%2Fhelp-for-humans%2Fself-managed-cloud-setup.md).
@@ -57,19 +60,33 @@ If you want Rebel to follow you onto your phone or browser, the open build suppo
 
 On your desktop, your keys and sign-ins stay on your machine — the open build doesn't change that. The one exception is the same as in the managed app: if you switch on cloud continuity to use Rebel on your phone or browser, your connector sign-ins are relayed to **your own** cloud instance so it can do the work for you. For how Rebel stores and protects credentials, see [Secrets and passwords](rebel://library/rebel-system%2Fhelp-for-humans%2Fsecrets-and-passwords.md).
 
-## Telemetry is off by default
+## Anonymous usage data (on by default)
 
-By *telemetry* we mean the usage statistics and error reports that help keep the app reliable. The open build sends Mindstone **none of it**. There are no Mindstone analytics keys built into it, so there's simply nothing for Rebel to report back to — by default, Mindstone receives nothing from you.
+This is the one place the open build phones home automatically, so here's exactly what happens — no fine print.
 
-That's separate from the services you actually use. When you connect an AI provider, link a connector, or run your own cloud, your data naturally travels to *those* places — that's how each feature does its job. Telemetry is specifically about data going back to Mindstone, and in the open build that's switched off.
+To help us understand how Rebel is used and make it better, the open build sends Mindstone **anonymous usage data by default**: which features get used, when something breaks, and similar product signals. You can turn it off in one click (see below), and we tell you about it when you first set Rebel up. We've designed it to be honest about the default-on rather than bury it.
 
-If you *do* want usage and error data — say you run Rebel for a small team and want to keep an eye on reliability — there's an opt-in toggle in Settings ("Send anonymous usage data to help improve Rebel"). In the open build, that data goes to **your own** analytics account, set up with your own credentials. It is never routed to Mindstone.
+**What's actually sent.** Only a fixed, published list of *event names* (like "onboarding step viewed" or "automation created") and a fixed list of *non-identifying properties* — categories, numbers, booleans, and short labels (a step name, a count, how long something took, your app version and operating system). That's it. The list is an allowlist, which means anything not on it simply can't be sent — free text, file paths, the names of your companies, contacts, meetings, or Spaces, and anything you type are all **impossible to include**, not merely filtered out.
 
-In short: it's off, it's yours to switch on, and switching it on points it at you, not us.
+**What's never sent.** No conversation content. No files. No email address. No personal information of any kind. The data isn't tied to your email or any account, even when you're signed in — it carries only a **random per-install ID** that identifies your installation, not you.
 
-## What does go to Mindstone — if you choose
+**Where it goes.** The data travels to a Mindstone endpoint, which forwards it to our analytics provider (RudderStack). The open build doesn't carry any analytics keys itself — Mindstone holds those server-side — so the open source code stays clean, and the only thing on the wire is the anonymous data above.
 
-There are a couple of things the open build *can* send us, and only if you decide to. The first: when you set Rebel up, it offers an optional **"About you"** step asking for your first name and email. Your name lets Rebel address you; your email helps it tell your meetings and messages apart from everyone else's. Both are used locally, on your machine, to personalise how Rebel works for you.
+This is separate from the services you actually use. When you connect an AI provider, link a connector, or run your own cloud, your data naturally travels to *those* places — that's how each feature does its job. This section is only about the anonymous usage data going back to Mindstone.
+
+### Turning it off
+
+Open **Settings → Safety → Privacy & Data** and switch off **"Share anonymous usage data."** It takes effect right away, and Rebel stops sending. Your choice sticks.
+
+### Pointing it at your own analytics instead
+
+Prefer to keep usage data entirely in your own hands — say you run Rebel for a small team and want your own reliability dashboard? You can wire up your **own** analytics credentials in Settings. When you do, Rebel sends to *your* analytics account and the Mindstone anonymous channel switches off for that install — it's one or the other, never both.
+
+In short: anonymous usage data is on by default and easy to switch off, it never carries personal information or your content, and if you'd rather, you can point it at your own analytics instead of ours.
+
+## What goes to Mindstone
+
+Apart from the anonymous usage data above (on by default, opt-out), there are a couple of things the open build *can* send us, and only if you decide to. The first: when you set Rebel up, it offers an optional **"About you"** step asking for your first name and email. Your name lets Rebel address you; your email helps it tell your meetings and messages apart from everyone else's. Both are used locally, on your machine, to personalise how Rebel works for you.
 
 If you fill in the email, that detail — your email, plus your first name if you gave it, and a little minimal source metadata (that it came from open-build onboarding, plus the app version and your platform) — is also shared with Mindstone, so we can keep in touch with you about the open build. It goes to us on purpose, because you chose to share it. It's separate from telemetry (which stays off), it doesn't create a Mindstone account, and it's entirely skippable — leave the email blank and nothing is sent. Change your mind later? Just ask us to delete it (hello@mindstone.com) and we will.
 

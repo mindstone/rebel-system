@@ -4,7 +4,7 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ---
 
-## v0.4.51 — Jun 25, 2026
+## v0.4.51 — Jun 25-26, 2026
 
 _The current development version. New entries land here as features ship._
 
@@ -13,7 +13,13 @@ _The current development version. New entries land here as features ship._
 <!-- detail: 260626_automatic-backups-default-on. Removed experimental.multiProviderRoutingEnabled flag — multi-provider routing is now the default for all users. Opt-in by adding a backup connection in Settings → Agents & Voice → Backup connections. A user with no backups configured gets byte-identical behaviour to before (no failover, no extra spend). With a backup added, Rebel automatically steps in when the main connection is busy (rate-limited or server-side error). Paid-failover notice (once per episode, must-dismiss) already shipped. Mindstone-managed stays excluded from auto-failover by design. Do NOT mention flag names or internal implementation details in public copy. -->
 - **Automatic backups are now standard** — Add a backup connection in Agents & Voice and Rebel will step in automatically if your main connection is busy or hitting its limit. Nothing changes if you haven't added a backup — no extra spend, no surprises. It's opt-in by configuration, not by a setting.
 
+<!-- detail: 260626_feedback-header-button. Added a standalone ghost "Feedback" button to the top-right header (right of the Help/? icon, left of "New"), opening the same combined Feedback & Bugs dialog as the existing Help-menu "Feedback & bugs" item via handleOpenBugReport (no new dialog/handler/IPC). Help-menu item unchanged. Tooltip "Share feedback or report a problem". One file (App.tsx). -->
+- **Feedback is now one click away** — There's a "Feedback" button in the top bar, just left of "New". One click opens the same place you'd use to share an idea or flag something that's gone sideways (diagnostics included) — no more hunting through the help menu. The old spot still works, if you've grown fond of it.
+
 ### Fixes
+
+<!-- detail: 260625_automation-watchdog-failopen-kill. Rebel's turn-watchdog (a cheap-model judge that halts runaway/looping turns) had misleading abort copy ("couldn't reach the time check / send the message again") and an automation variant that told unattended runs to resend a message that never existed; also a judge parse bug let a valid kill fail open (the turn wasn't actually stopped). Fix: honest behaviour-language copy with interactive vs automation variants, threaded through the real AbortError recovery path; judge parser ignores additionalMs on kills and clamps extends. Do NOT mention judge/watchdog internals, additionalMs, or turnErrorRecovery in public copy. -->
+- **Clearer message when Rebel stops a stuck task** — When Rebel halts a task that's looping or running away, it now tells you plainly what happened instead of a confusing retry message that didn't match what actually occurred. And if it's an automation running on its own, it says it'll try again on its next scheduled run, rather than pointing you at a message that was never there. Honest about what just happened.
 
 <!-- detail: super-mcp 2.7.0's owner-liveness watchdog duplicated the app's process-start-time probe; the Windows duplicate computed the time differently from the app (local vs UTC), so it wrongly concluded the owner had gone and self-exited ~30s after every launch. Windows-only, restart-resistant; large fetch-failed spike across many users. Fix: watchdog is now liveness-only (a missing process is the sole shutdown trigger), duplicate probe deleted (single start-time implementation). Do NOT mention PowerShell/ports/internal tickets in public copy. -->
 - **Windows: your connected tools stay connected** — On Windows, your connected services (Gmail, Granola, your inbox, search, and the rest) could go quiet partway through a session — and restarting Rebel didn't help. The tool router was shutting itself down by mistake shortly after each launch. It now stays up, so your tools keep working through the day.
@@ -24,6 +30,9 @@ _The current development version. New entries land here as features ship._
 
 <!-- detail: rebel-system — the bundled library of skills, help docs, and agent instructions that Rebel runs on — is now MIT-licensed and developed in the open. Anyone can read, fork, or contribute to the exact skills and instructions your copy of Rebel uses. Part of Rebel's ongoing move to open up its building blocks. -->
 - **Rebel's skills and instructions are now open source** — The library of skills, help, and instructions that Rebel runs on is now MIT-licensed and out in the open, so anyone can read, fork, or contribute to it. Nothing up our sleeve.
+
+<!-- detail: 260624_oss-telemetry-proxy. OSS/community build only. The open build now sends anonymous product-usage telemetry to Mindstone by default (opt-out), routed through a Mindstone proxy endpoint and forwarded to RudderStack — replacing the previous "no-phone-home unless you bring your own analytics keys" behaviour. Anonymous-by-construction: a per-install random ID only, never email/user identity even when signed in; an allowlist of event names + categorical/numeric/boolean property keys means content (company names, meeting titles, file paths, free text) is unrepresentable on the wire, not merely filtered. Opt-out toggle in Settings → Safety → Privacy & Data ("Share anonymous usage data"), plus a persistent disclosure line at onboarding. Honest about the default-on. Managed app unaffected. Do NOT mention the proxy endpoint, write keys, or internals in public copy. -->
+- **The open build shares anonymous usage data by default now** — To help us make Rebel better, the open-source build now sends Mindstone anonymous usage data — which features get used, and when things break — on by default. No personal information, no email, and no conversation content ever leaves your machine: just a random per-install ID and a fixed list of safe, non-identifying signals. Don't want to? One switch in Settings → Safety → Privacy & Data turns it off, and it's flagged when you first set Rebel up. Honest defaults, your call.
 
 ### Improvements
 
