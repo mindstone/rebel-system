@@ -1,6 +1,6 @@
 ---
 description: "How Rebel protects you from risky actions and what requires your explicit permission"
-last_updated: "2026-06-04"
+last_updated: "2026-06-26"
 ---
 
 # Security and Tool Safety
@@ -281,7 +281,7 @@ If a conversation seems compromised or Rebel is behaving strangely, close it and
 Fine-tune what Rebel can do without asking in [Settings → Privacy & Safety](rebel://settings/safety). Your rules are the primary control.
 
 **Review the Activity log:**
-Check the Activity section in [Settings → Privacy & Safety](rebel://settings/safety) to see what Rebel evaluated and why. If something shouldn't have been allowed, flag it with "This wasn't OK."
+Check the Activity section in [Settings → Privacy & Safety](rebel://settings/safety) to see what Rebel evaluated and why. Safety decisions Rebel makes while running in the cloud now appear here too, tagged **Cloud** so you can tell where each check happened. If something shouldn't have been allowed, flag it with "This wasn't OK."
 
 **Write your own rules:**
 Add custom safety rules to shape when Rebel asks for permission. See [Your Safety Rules](#your-own-rules-custom-safety-instructions) above.

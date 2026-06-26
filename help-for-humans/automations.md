@@ -159,6 +159,12 @@ That includes memory writes as well as tool actions.
 
 Rebel automatically aborts silent runs after a few minutes, so truly hung automations shouldn't sit there forever.
 
+### Provider not ready / your key was rejected
+
+If Rebel tries to run an automation and your AI provider keeps turning down your key, it will try once more. If the rejection keeps happening, Rebel **pauses your automations** and tells you plainly: which provider is the problem, that missed runs **won't be replayed** (so you won't come back to a flood of catch-up work), and what to do — **Update key** takes you straight to the right field.
+
+Once you replace the key and a turn succeeds again, automations resume on their own. This is separate from Rebel halting a run that's looping or stuck — see below.
+
 ### Rebel stopped a run on its own
 
 Sometimes Rebel halts a task that's looping or running away. When that happens, it now says plainly what occurred — not a vague "try again" message that doesn't match what actually happened.

@@ -1,6 +1,6 @@
 ---
 description: "How to set up cloud continuity so Rebel works on your phone, tablet, or browser — step-by-step setup, pairing, privacy, limitations, and troubleshooting"
-last_updated: "2026-05-11"
+last_updated: "2026-06-26"
 ---
 
 # Cloud Continuity: Use Rebel on Your Phone, Tablet, or Browser
@@ -223,6 +223,10 @@ Live in-meeting features (coaching, Q&A, interactive avatar responses) are **in 
 Voice input on mobile is **buffered, not live-streamed** — the app records your clip, transcribes it, then fills in your message for review before sending. It's a couple of seconds slower than desktop voice, but it works offline: recordings are held locally and transcribed when you reconnect.
 
 If you've downloaded the optional on-device speech model (about 430 MB, offered in-app), transcription can run locally on your phone without sending audio to the cloud.
+
+### Mindstone plans on mobile
+
+On a **Mindstone-managed plan**, turns you send or record from your phone — including voice messages — are served through Rebel's cloud. If something genuinely fails, Rebel says so and lets you try again. You won't sit in silence waiting for a response, and you won't see a spurious "conversation deleted" message for a turn that simply didn't complete.
 
 
 ---

@@ -1,6 +1,6 @@
 ---
 description: "Plain-English guide to Spaces — separate areas in your Rebel workspace with their own memory, skills, and sharing rules"
-last_updated: "2026-06-04"
+last_updated: "2026-06-26"
 ---
 
 # Spaces (for sharing with different groups)
@@ -155,3 +155,9 @@ The agent cannot change a space's organisation — only you can, via Settings or
 ## If a space looks broken
 
 If a space is missing its key setup file or something has gone sideways, Rebel will usually flag it and offer to help repair it. If needed, go to [Settings → Workspace → Spaces](rebel://settings/spaces) or ask Rebel to help fix the space.
+
+### Can't find this folder
+
+If the folder behind a Space has been **permanently deleted** (or the Google Drive / Dropbox / iCloud shortcut is gone for good), Rebel shows the Space as a removable card with a plain **"can't find this folder"** note — distinct from the temporary **Reconnecting** state you see when a cloud mount is briefly offline.
+
+**Remove** unlinks the Rebel shortcut only; your cloud files are untouched. Use Remove to tidy up, or reconnect if you simply moved the folder elsewhere.

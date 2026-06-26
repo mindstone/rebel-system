@@ -1,5 +1,6 @@
 ---
 description: "The fair-source open build of Rebel — how it differs from the managed app, bring-your-own-credentials for AI models and connectors, and why telemetry is off by default (opt-in)."
+last_updated: "2026-06-26"
 ---
 
 # The Open Build
@@ -48,6 +49,8 @@ This is the same screen everyone uses, so the full walkthrough applies: see [AI 
 Connections (MCP) to outside services — Slack, Google Workspace, Notion, and the rest — work a little differently in the open build. In the managed app you just click **Connect** and sign in. In the open build, a service that needs its own connection details stays switched off until **you register your own credentials** for it, because Rebel isn't shipping anyone else's.
 
 Rebel walks you through this in the app, with setup guidance for each connector that needs it as you switch it on. Where setup is required, it's a one-time step. After that, connecting and disconnecting works exactly as it does everywhere else — see [Connectors, tools and integrations](rebel://library/rebel-system%2Fhelp-for-humans%2Fmcp-connectors-tools-and-integrations.md).
+
+For **Google, Microsoft, Slack, and HubSpot**, you paste your own app credentials in [Settings → Connectors](rebel://settings/tools) or during **onboarding** — no editing config files or restarting from a terminal. It's a one-time setup per connector. Change a key later and Rebel reminds you to reconnect so it takes effect.
 
 ### Cloud continuity (phone and browser)
 
