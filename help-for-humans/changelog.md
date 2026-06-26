@@ -16,6 +16,11 @@ _The current development version. New entries land here as features ship._
 <!-- detail: 260626_feedback-header-button. Added a standalone ghost "Feedback" button to the top-right header (right of the Help/? icon, left of "New"), opening the same combined Feedback & Bugs dialog as the existing Help-menu "Feedback & bugs" item via handleOpenBugReport (no new dialog/handler/IPC). Help-menu item unchanged. Tooltip "Share feedback or report a problem". One file (App.tsx). -->
 - **Feedback is now one click away** — There's a "Feedback" button in the top bar, just left of "New". One click opens the same place you'd use to share an idea or flag something that's gone sideways (diagnostics included) — no more hunting through the help menu. The old spot still works, if you've grown fond of it.
 
+### Fixes
+
+<!-- detail: 260626_fix-plugin-deletion (internal ticket). deletePluginFromSpace swallowed fs.rm errors and returned false with no log; both callers (Settings → Plugins tab, and the agent-driven delete path) ignored the result and reported success, so a failed delete — commonly a cloud-synced/locked Space folder (iCloud/Dropbox conflicted copies) — showed "Deleted" while the plugin reappeared on the next scan. Now the delete returns {success,error?} and logs the errno; callers honour it; the user sees an honest, actionable error; the agent path returns ok:false instead of false success. Do NOT mention internal function names or fs details in public copy. -->
+- **Deleting a plugin now tells you the truth** — If Rebel can't actually remove a plugin's files — because they're open somewhere, or your Space is mid-sync with a cloud service like iCloud or Dropbox — it now says so and suggests what to try, instead of cheerfully reporting "Deleted" while the plugin quietly reappears.
+
 ## v0.4.51 — Jun 25, 2026
 
 ### Fixes
