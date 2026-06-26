@@ -1,6 +1,6 @@
 ---
 description: "Tips for getting the most out of Rebel on complex, long-running tasks"
-last_updated: "2026-06-18"
+last_updated: "2026-06-26"
 ---
 
 # Running Big Jobs
@@ -135,6 +135,14 @@ For extended tasks:
 - **Message history** — Scroll up to see the full trail of work
 
 If Rebel seems stuck or is going in the wrong direction, stop it, provide course correction, and let it continue.
+
+
+## When Rebel stops on its own
+
+On long or ambitious tasks, Rebel may stop a task that's looping or running away. The message tells you plainly what happened — not a generic retry prompt that doesn't fit.
+
+- **Your conversation:** Read what stopped; send a follow-up, or click **Continue** if it's offered, to have Rebel pick up again.
+- **A scheduled automation:** Rebel says it'll try again on its **next scheduled run**. Nothing for you to resend. Check the run in [Automations](rebel://automations) if you want details before the next run.
 
 
 ## Leverage Memory

@@ -1,6 +1,6 @@
 ---
 description: "How to schedule recurring or event-triggered work in Rebel, including built-in automations, transcript triggers, Focus automations, and run status meanings"
-last_updated: "2026-06-18"
+last_updated: "2026-06-26"
 ---
 
 # Automations
@@ -159,3 +159,10 @@ That includes memory writes as well as tool actions.
 
 Rebel automatically aborts silent runs after a few minutes, so truly hung automations shouldn't sit there forever.
 
+### Rebel stopped a run on its own
+
+Sometimes Rebel halts a task that's looping or running away. When that happens, it now says plainly what occurred — not a vague "try again" message that doesn't match what actually happened.
+
+For a **scheduled automation**, the message explains that Rebel will try again on its **next scheduled run**. You don't need to resend anything; there was no message from you to resend. Open the run in [Automations](rebel://automations) to see what happened, or wait for the next run if you're happy to let it retry.
+
+A **manual "Run now"** or event-triggered run won't retry on a schedule — re-run it from [Automations](rebel://automations) if you want another attempt.
