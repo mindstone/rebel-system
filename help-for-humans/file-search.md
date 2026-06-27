@@ -1,6 +1,6 @@
 ---
 description: "How to use file search in Rebel to find files by meaning, not just keywords"
-last_updated: "2026-06-18"
+last_updated: "2026-06-26"
 ---
 
 # File Search
@@ -133,6 +133,10 @@ When paused, Rebel stops all background indexing work. Your existing index remai
 On workspaces backed by **Google Drive, iCloud, or OneDrive**, the Library used to sit on "Scanning your files and folders…" indefinitely — it would try to follow shortcuts and links that pointed deep into cloud storage and never come back. Rebel now skips those problematic cloud-storage links while still indexing your actual files, so scanning can finish. Your files on disk were never at risk.
 
 This is separate from very large libraries that show a **partial Library** notice — that's a size limit, not a cloud-folder hang.
+
+### Cloud folder briefly unreachable
+
+When a cloud-backed Space is reconnecting, Library may show your **last-known results** with a calm reconnecting note. Hover the (i) for a plain-English explanation, or use **Manage in Settings** to open [Settings → Spaces](rebel://settings/spaces) and nudge a re-check. See [Library and very large workspaces](rebel://library/rebel-system%2Fhelp-for-humans%2Flibrary-and-very-large-workspaces.md) for how reconnecting works, and [Spaces](rebel://library/rebel-system%2Fhelp-for-humans%2Fspaces.md) if the folder is gone for good.
 
 ### Search not finding expected files
 

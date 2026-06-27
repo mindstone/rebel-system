@@ -1,6 +1,6 @@
 ---
 description: "Common problems and solutions for Rebel desktop app: startup issues, tool connection problems, voice and transcription, conversation errors, and getting help"
-last_updated: "2026-06-18"
+last_updated: "2026-06-26"
 ---
 
 # Troubleshooting
@@ -228,6 +228,8 @@ Rebel automatically detects and recovers from these situations. When recovery ki
 **Model unavailable:** If the AI model you're using becomes temporarily unavailable — or can't be found at all — Rebel automatically falls back to a working model and carries on rather than stopping with an error. Brief streaming hiccups partway through a reply are retried on their own too. No action needed.
 
 If a conversation stays stuck despite recovery attempts, start a new conversation and reference the previous one if needed.
+
+**When Rebel stops a task on its own:** If a task is looping or running away, Rebel may stop it automatically. The message is now plain about what happened. In a normal conversation, you'll see what stopped and can send a new message or use **Continue** if that's offered. For a **scheduled automation**, the message says Rebel will try again on its next scheduled run — not that you should resend a message that was never there. See [Automations — Rebel stopped a run on its own](library://rebel-system/help-for-humans/automations.md#rebel-stopped-a-run-on-its-own).
 
 
 ### Understanding Conversation Status Messages

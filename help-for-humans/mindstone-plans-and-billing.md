@@ -1,5 +1,6 @@
 ---
 description: "Mindstone plans — the flat-fee subscription (Dash and Rogue tiers) where Mindstone covers your AI bill, plus how the monthly allowance, billing, upgrades, and cancellation work"
+last_updated: "2026-06-26"
 ---
 
 # Mindstone plans
@@ -63,6 +64,10 @@ In the same **"Let Mindstone handle it"** section you'll find:
 ## A quick note on names
 
 "Mindstone plan" (this page — *who pays for the AI*) is a different thing from **Mindstone Cloud**, the optional hosted service that keeps Rebel running and in sync across your devices (*where Rebel runs*). They just share the word "Mindstone." For the cloud service, see [Cloud continuity and mobile](rebel://library/rebel-system%2Fhelp-for-humans%2Fcloud-continuity-and-mobile.md).
+
+## Using your plan on mobile
+
+On a Mindstone plan, messages and recordings from the Rebel mobile app run through the cloud — same allowance, same models. See [Cloud continuity and mobile](rebel://library/rebel-system%2Fhelp-for-humans%2Fcloud-continuity-and-mobile.md) for setup, pairing, and what to expect when you're away from your desk.
 
 ## Privacy
 

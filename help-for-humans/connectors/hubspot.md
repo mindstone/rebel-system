@@ -1,6 +1,6 @@
 ---
 description: "Connect HubSpot CRM to search contacts, companies, deals, tickets, products, forms, conversations, Knowledge Base articles, and more"
-last_updated: "2026-05-22"
+last_updated: "2026-06-26"
 ---
 
 # HubSpot
@@ -60,6 +60,11 @@ Access your full HubSpot CRM: search and manage contacts, companies, deals, tick
 - **Form submissions**: "Show me the last 10 submissions for our Contact Us form"
 - **Call logging**: "Log a 15-minute call with John about the proposal"
 - **Knowledge Base**: "Show me all draft KB articles" or "Find Knowledge Base articles about account setup"
+
+
+## Troubleshooting
+
+- If HubSpot denies access to a capability (**support tickets** is the common one), reconnecting won't add it — a HubSpot administrator needs to enable that access, or your HubSpot plan may need to include it. Everything else stays connected and working.
 
 
 ## See Also

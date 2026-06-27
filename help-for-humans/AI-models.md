@@ -1,6 +1,6 @@
 ---
 description: "How to power Rebel's AI — a flat-fee Mindstone plan or bring your own (ChatGPT Pro, OpenRouter, Anthropic) — then choose Rebel's Planner, Main work, and Behind the Scenes models, plus the per-conversation Quality Tier selector"
-last_updated: "2026-06-22"
+last_updated: "2026-06-26"
 ---
 
 # AI models
@@ -218,6 +218,12 @@ Connecting your own model or a company gateway? See [Custom models and gateways]
 Rebel tracks AI spend across the providers you use. Open [Settings → Usage](rebel://settings/usage) for an honest **You paid** total (what actually left your wallet, with any subscription coverage shown as context), plus expandable breakdowns by model, provider, automation, and day.
 
 That is especially handy if you use one model for **Planner** and another for **Main work** — or if you want to know which conversation ran up the bill.
+
+## When your key is rejected
+
+If a provider turns down your credentials, Rebel names the **specific provider** and says the **saved** key was rejected — not that you mistyped it this turn. That matters: re-entering the same key won't help if it's been revoked or expired. The error points you to **Update key** and the right field in [Settings → Agent & Voice → Intelligence](rebel://settings/agents).
+
+If the bad key belongs to an automation's provider, scheduled runs may pause until you fix it — see [Automations](rebel://library/rebel-system%2Fhelp-for-humans%2Fautomations.md).
 
 
 
