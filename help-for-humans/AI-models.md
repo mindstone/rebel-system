@@ -20,7 +20,7 @@ In onboarding and in [Settings → Agent & Voice → Intelligence](rebel://setti
 
 In **[Settings → Agent & Voice → Backup connections](rebel://settings/agents)**, you can add a backup connection. If your main connection is busy or hitting its limit, Rebel automatically switches to the backup — no interruption, no extra setup mid-conversation.
 
-If you add no backup, nothing changes: no automatic failover, no extra spend. A Mindstone-managed plan is not used for automatic failover.
+If you add no backup, nothing changes: Rebel won't switch connections on its own, and there's no extra spend. A Mindstone plan isn't used as an automatic backup.
 
 ## See also
 

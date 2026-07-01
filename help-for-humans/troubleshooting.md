@@ -215,6 +215,10 @@ When a conversation exceeds Claude's context limit, Rebel shows this message and
 **To manually reset:** Start a new conversation (⌘/Ctrl+N) when one gets unwieldy.
 
 
+### Window went blank or stopped responding
+
+In rare cases, a conversation could get stuck quietly re-syncing in the background until the window went blank and stopped responding — and could stay that way even after a restart. This is fixed. If a window ever does go down, Rebel now quietly reloads it on its own.
+
 ### Conversation Got Stuck
 
 Occasionally, a conversation may become unresponsive — Rebel seems unable to continue and the conversation appears permanently stuck. This can happen if something went wrong internally during a previous message.
@@ -226,6 +230,8 @@ Rebel automatically detects and recovers from these situations. When recovery ki
 **After sleep or restart:** If your computer sleeps or restarts while a conversation is active, Rebel detects that context may have been lost and automatically reconstructs it from your conversation history. You can continue where you left off without starting over.
 
 **Model unavailable:** If the AI model you're using becomes temporarily unavailable — or can't be found at all — Rebel automatically falls back to a working model and carries on rather than stopping with an error. Brief streaming hiccups partway through a reply are retried on their own too. No action needed.
+
+**Long, tool-heavy tasks:** Tasks that run for a while with lots of tool use now run to completion instead of stopping early with a false "lost connection" message.
 
 If a conversation stays stuck despite recovery attempts, start a new conversation and reference the previous one if needed.
 
