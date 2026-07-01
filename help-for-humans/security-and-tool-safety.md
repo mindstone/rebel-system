@@ -203,6 +203,7 @@ Rules work best when they're specific and actionable. Think about the situations
 - **Version history** — Every edit is saved. You can revert to any previous version if a change doesn't work out.
 - **Reset to defaults** — Start fresh with Rebel's default safety rules if you've strayed too far.
 - **Chat with Rebel about your rules** — Not sure what to write? Click the chat button to discuss your safety needs with Rebel and refine your rules together.
+- **Permanent blocks** — When you choose **Always block** from an approval prompt, the block lands in **[Settings → Privacy & Safety](rebel://settings/safety) → What Rebel will never do**. Rebel enforces it quietly across all conversations — it simply won't do that thing, without asking again. You can remove a block there any time. Each quiet block is noted in your Safety Activity log.
 
 ### Tips
 
@@ -252,7 +253,7 @@ You don't have to write rules from scratch. The most natural way to build up you
 | **Always** | Trusts the Slack tool entirely — no more approval prompts for any Slack action |
 | **Other…** | You type a custom rule in your own words |
 
-Pick the one that matches your comfort level. Narrower rules mean Rebel will still ask about related-but-different actions. Broader rules mean fewer interruptions but less oversight. (Declining works the same way: **Don't allow…** offers the matching **This only / Similar / Always block** scopes so you can teach Rebel what to *stop* doing.)
+Pick the one that matches your comfort level. Narrower rules mean Rebel will still ask about related-but-different actions. Broader rules mean fewer interruptions but less oversight. (Declining works the same way: **Don't allow…** offers the matching **This only / Similar / Always block** scopes so you can teach Rebel what to *stop* doing. **Always block** adds a permanent entry to **[Settings → Privacy & Safety](rebel://settings/safety) → What Rebel will never do** — Rebel won't do it again, anywhere, without re-asking. Remove it there if you change your mind; the Activity log records each quiet block.)
 
 **Where does the rule go?**
 
@@ -266,7 +267,7 @@ Pick the one that matches your comfort level. Narrower rules mean Rebel will sti
 
 **Saving rules from chat:**
 
-You can also state a durable approval directly in the conversation — for example, "you can always read from my Notion personal-projects database without asking." If Rebel is confident the request is specific enough to act on as a rule, it saves it to your Safety Rules and shows a small toast confirming the rule was added. Broader or ambiguous statements still get treated as one-time permissions for the current turn, so accidental approvals don't leak into your global rules.
+You can also state a durable approval directly in the conversation — for example, "you can always read from my Notion personal-projects database without asking." If Rebel is confident the request is specific enough to act on as a rule, it proposes the rule as a card in the notification drawer — **Add rule** or **Skip**, plus a scope choice. Nothing is saved until you confirm. Broader or ambiguous statements still get treated as one-time permissions for the current turn, so accidental approvals don't leak into your global rules. Don't want these suggestions? Turn them off in **[Settings → Privacy & Safety](rebel://settings/safety)**.
 
 
 ## What You Can Do

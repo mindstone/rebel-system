@@ -109,6 +109,8 @@ Ask Rebel to remove it: "Remove the conversation stats plugin." The tab disappea
 
 You can also disable plugins from **Settings → Plugins**.
 
+If Rebel can't fully delete a plugin's files — they're open somewhere, or the Space is mid-sync with a cloud service like iCloud or Dropbox — it tells you plainly and suggests what to try, instead of reporting "Deleted" while the plugin quietly comes back.
+
 
 ## Built-in Plugin Tools
 

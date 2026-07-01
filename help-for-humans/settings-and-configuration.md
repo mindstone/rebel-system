@@ -56,6 +56,7 @@ Use **Settings → Agent & Voice → Intelligence** for:
 - **File indexing** — GPU acceleration and the quick link to Library indexing controls
 - **Learned model limits** — Rebel remembers what it learns about each model's effective context-window limit on your specific setup, so you don't have to re-establish the boundary after restarts or app updates
 - **Daily recommendations** — controls when Rebel generates daily recommendations for you. Three modes: **Ask** (shows a prompt card on your Homepage so you can trigger recommendations on demand), **Automatic** (Rebel generates recommendations daily on its own), or **Off** (disabled entirely)
+- **Backup connections** — add a backup connection and Rebel automatically fails over when your main one is busy or rate-limited. Opt-in by adding one; see [AI models](library://rebel-system/help-for-humans/AI-models.md#backup-connections)
 
 See [AI models](library://rebel-system/help-for-humans/AI-models.md) for the full model guide.
 
@@ -135,6 +136,8 @@ Everything about what Rebel is allowed to do and how it handles your data.
 Use **Settings → Privacy & Safety** for:
 
 - **Safety Rules** — natural-language rules that tell Rebel what's OK and what needs your approval
+- **What Rebel will never do** — your permanent blocks from **Always block** approvals; enforced quietly across all conversations
+- **Rule suggestions from chat** — turn off the consent cards Rebel shows when you state a durable approval in conversation
 - **Trusted tools** — tools you've allowed to run without asking
 - **File approvals and memory-space save permissions** — control over changes to your files and memory
 - **Privacy Mode** — a temporary master switch for extra caution on sensitive work

@@ -35,6 +35,7 @@ In the composer, click the **Flag** icon on the right side of the session contro
 - **Click the icon:** an inline editor opens in the composer area.
 - **Enter your criterion** (up to 500 characters), then **Save**.
 - A **chip** appears above the composer showing "Finish line: {criterion}" — click it to edit again. Click the **×** on the chip to clear it.
+- If you'd started typing a message but hadn't sent it yet, setting a Finish line no longer erases that draft — it stays put.
 
 ---
 
