@@ -32,6 +32,9 @@ A chat session with Rebel. Each conversation has its own history and context, an
 ### @-Model Dispatch
 Mention any AI model by name in your message and Rebel routes it there — no settings changes needed. Type `@` in the composer to see available models, or just name-drop one naturally. ([Council Mode & model routing](library://rebel-system/help-for-humans/multi-model-council-mode.md))
 
+### Operator
+A specialist advisor you activate in a Space (a brand critic, an investor's eye, a skeptical engineer). Rebel consults an Operator's perspective mid-task and folds it into its answer — automatically when the work calls for it, or when you @-mention one. Distinct from Council Mode (which consults multiple AI *models*). ([Operators](library://rebel-system/help-for-humans/operators.md))
+
 ### Annotations (Comments)
 Inline notes you add by selecting text in Rebel's responses or in documents. Select text, right-click (or use the floating toolbar in documents), and choose "Comment" to annotate. Collect multiple comments and send them as a single follow-up message. Also includes "Ask Rebel" for quick quoted replies. ([Reply, Comment & Annotations](reply-comment-annotations.md))
 

@@ -86,7 +86,7 @@ Configure participation behavior in **Settings → Meetings**.
 
 ## Real-Time Meeting Coaching
 
-Rebel can coach you during meetings — surfacing insights, suggestions, and reminders at conversationally relevant moments rather than interrupting at random intervals.
+Rebel can coach you during meetings — surfacing insights, suggestions, and reminders at conversationally relevant moments rather than interrupting at random intervals. Live coaches are set up in the same place as your [Operators](library://rebel-system/help-for-humans/operators.md).
 
 ### How Coaching Works
 
