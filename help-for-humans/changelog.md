@@ -42,6 +42,9 @@ _The current development version. New entries land here as features ship._
 <!-- detail: 260626_fix-plugin-deletion (internal ticket). deletePluginFromSpace swallowed fs.rm errors and returned false with no log; both callers (Settings → Plugins tab, and the agent-driven delete path) ignored the result and reported success, so a failed delete — commonly a cloud-synced/locked Space folder (iCloud/Dropbox conflicted copies) — showed "Deleted" while the plugin reappeared on the next scan. Now the delete returns {success,error?} and logs the errno; callers honour it; the user sees an honest, actionable error; the agent path returns ok:false instead of false success. Do NOT mention internal function names or fs details in public copy. -->
 - **Deleting a plugin now tells you the truth** — If Rebel can't actually remove a plugin's files — because they're open somewhere, or your Space is mid-sync with a cloud service like iCloud or Dropbox — it now says so and suggests what to try, instead of cheerfully reporting "Deleted" while the plugin quietly reappears.
 
+<!-- detail: 260701_fix-finish-line-erases-draft (bug_mode, internal ticket). Opening the finish-line editor rendered it as a composerOverride that unmounted <ComposerWithState>; closing remounted a fresh composer whose TipTap editor emitted a spurious empty change on mount, hitting the immediate-empty draft path that deletes the stored draft. Fix keeps the composer mounted (hidden via the `hidden` attribute) while the finish-line editor renders as a sibling — no remount, no empty emit — scoped to finish-line only; focus returns to the composer on close. Do NOT mention composer/TipTap/remount internals in public copy. -->
+- **Setting a finish line no longer eats your draft** — If you'd typed a message but not sent it yet, then set a finish line for the conversation, your half-written message would vanish. It stays put now.
+
 ## v0.4.51 — Jun 25, 2026
 
 ### Fixes
