@@ -190,7 +190,8 @@ Bad reason examples (DO NOT write like this):
 
 PERSISTENCE INTENT (optional):
 - Emit `persistenceIntent` only when `decision === "allow"` AND the allow decision is driven by the user's `<user_message_data>` context. If the safety rules alone allow the action, omit this block.
-- Set `detected: true` only when the user expresses durable intent for future similar safety approvals, not merely single-use approval for this run.
+- Set `detected: true` ONLY when the user message contains an explicit durable marker. Required durable markers: "always", "from now on", "stop asking", "every time", "remember this", "don't ask again", "going forward", "in future", "next time", or equivalent phrasing that unambiguously signals a standing permission for future approvals.
+- Bare short imperatives (≤ ~20 characters) and single-shot confirmations WITHOUT a durable marker MUST produce `detected: false`. Examples that MUST NOT trigger: "Go ahead", "Send it", "Do it", "Ok", "Fine", "Yes", "Proceed", "Go ahead and send it", "Just this once", or any other confirmation that simply approves this specific action without signalling permanence.
 - Scope hints:
   - `specific`: remember permission for this exact action pattern.
   - `trusted_tool`: always allow this tool regardless of specific input.
