@@ -356,6 +356,10 @@ You should not need to set up SSH or tunnelling yourself unless your IT team has
 - Open the missing conversation on desktop and let it sync again
 - Try pulling down to refresh on mobile
 
+### Blank screen after sync
+
+A rare re-sync freeze that left the window blank has been fixed — Rebel now reloads automatically instead of leaving you stuck on an empty screen.
+
 
 ---
 

@@ -134,6 +134,8 @@ For extended tasks:
 - **Stop button** — Always available if things go sideways
 - **Message history** — Scroll up to see the full trail of work
 
+Long jobs with lots of steps now run to completion instead of stopping early with a false "lost connection" — Rebel keeps going until the work genuinely finishes or hits a real problem.
+
 If Rebel seems stuck or is going in the wrong direction, stop it, provide course correction, and let it continue.
 
 

@@ -9,6 +9,8 @@ Rebel is designed to be helpful without freelancing as your chaos intern. Permis
 
 For the full version, see [Security and Tool Safety](library://rebel-system/help-for-humans/security-and-tool-safety.md).
 
+**Also in Security and Tool Safety:** permanent blocks (**What Rebel will never do** in Settings) and rule suggestions from chat — both go through the same notification drawer as ordinary approvals.
+
 ## The Short Version
 
 - **Safety Rules** decide which actions Rebel can take automatically and which ones need your approval

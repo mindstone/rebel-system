@@ -21,7 +21,7 @@ See [Your Safety Rules](#your-own-rules-custom-safety-instructions) below for de
 
 When Rebel pauses for your approval, a bar appears at the bottom of the conversation: **"Rebel paused. X action(s) need your OK"** — click **View** to open the notification drawer.
 
-The notification drawer (the panel on the right) groups pending approvals by conversation. You can review them one at a time or use **Allow all** / **Deny all** to handle a batch. When the drawer is closed, a subtle notification pill appears to let you know approvals are waiting — it's unobtrusive but hard to miss, so nothing slips through the cracks.
+The notification drawer (the panel on the right) groups pending approvals by conversation. You can review them one at a time or use **Allow all** / **Deny all** to handle a batch. It also surfaces **rule suggestion** cards when Rebel thinks something you said in chat is worth saving as a safety rule — confirm before anything is added (same flow as [Saving rules from chat](#rule-learning) below). When the drawer is closed, a subtle notification pill appears to let you know approvals are waiting — it's unobtrusive but hard to miss, so nothing slips through the cracks.
 
 ### Tool approvals
 

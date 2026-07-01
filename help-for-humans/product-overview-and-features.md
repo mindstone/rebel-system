@@ -87,6 +87,10 @@ Reusable instructions that tell Rebel how to handle specific tasks. Skills are j
 
 **See also:** [Using Skills](library://rebel-system/help-for-humans/using-skills.md)
 
+### Operators
+
+Specialist advisors Rebel consults when their expertise would sharpen your answer — judgment calls, drafting, review, and more. See [Operators](library://rebel-system/help-for-humans/operators.md).
+
 ### Connectors
 
 Integrations with external services, available in Settings → Connectors:

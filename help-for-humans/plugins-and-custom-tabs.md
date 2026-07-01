@@ -180,6 +180,10 @@ Plugin tabs have built-in error recovery. If a plugin crashes:
 
 If a Rebel update changes the plugin system's capabilities, previously saved plugins that rely on older features may not load. Rebel will skip them with a warning. Ask Rebel to recreate the plugin, and it will write a version compatible with the current system.
 
+### Plugin won't delete or keeps reappearing
+
+See [Removing a Plugin](#removing-a-plugin) — Rebel tells you what's blocking deletion instead of reporting success when the files are still open or the Space is mid-sync.
+
 
 ## Tips
 

@@ -20,6 +20,7 @@ When you start typing a message in any conversation and navigate away before sen
 
 - Drafts persist when you switch conversations
 - Drafts persist when you close and reopen Rebel
+- Drafts persist when you set a finish line or use other in-conversation cards — your unsent message stays put
 - Each conversation can have one draft at a time
 - Sending a message clears the draft
 
