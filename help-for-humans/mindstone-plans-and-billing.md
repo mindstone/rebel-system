@@ -1,6 +1,6 @@
 ---
-description: "Mindstone plans — the flat-fee subscription (Dash and Rogue tiers) where Mindstone covers your AI bill, plus how the monthly allowance, billing, upgrades, and cancellation work"
-last_updated: "2026-06-26"
+description: "Mindstone plans — the flat-fee subscription (Dash and Rogue tiers) where Mindstone covers your AI bill, which models each tier includes, monthly allowance, billing, upgrades, and cancellation"
+last_updated: "2026-07-02"
 ---
 
 # Mindstone plans
@@ -28,6 +28,12 @@ Both plans share the **same monthly usage allowance**. The difference is the *ca
 | **Rogue** | $500/mo | Frontier-class models for work that demands the best |
 
 So "Rogue" doesn't mean "more turns" — it means stronger models. If your work is mostly everyday drafting, triage, and research, Dash is plenty. Step up to Rogue when you want the sharpest models on harder problems.
+
+### Models included in your plan
+
+Each tier includes a curated set of models. You can see exactly which ones in **Settings → Agent & Voice → Intelligence** — the "Add a model" picker groups them under **Included with your plan**.
+
+If you pick a model outside your tier mid-conversation, Rebel switches to an included one and says so ("Your plan runs on … Using it for this one.") rather than stopping with an error. Need frontier-class models? **Upgrade to Rogue** from the same settings section. Full behaviour is in [AI models](rebel://library/rebel-system%2Fhelp-for-humans%2FAI-models.md#picking-a-model-outside-your-plan).
 
 ## Subscribing
 

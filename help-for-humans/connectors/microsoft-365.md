@@ -1,6 +1,6 @@
 ---
-description: "Connect Microsoft 365 for Outlook Mail, Calendar, OneDrive, Word, Teams, and SharePoint"
-last_updated: "2026-05-22"
+description: "Connect Microsoft 365 for Outlook Mail, Calendar, OneDrive, Word, Teams, and SharePoint — including what to do when your sign-in expires"
+last_updated: "2026-07-02"
 ---
 
 # Microsoft 365
@@ -69,6 +69,14 @@ For questions about required permissions or security review, contact Mindstone s
 Connect additional Microsoft accounts by clicking **Set up with Rebel** again.
 
 
+## If your sign-in expires
+
+When your Microsoft sign-in genuinely expires, Rebel flags it — currently through your Calendar connection — with a **needs reconnecting** prompt and a **Reconnect** button in [Settings → Connectors](rebel://settings/tools).
+
+Because all Microsoft services share one sign-in, reconnecting once restores **Mail, Calendar, Files, Teams, and SharePoint** together — you don't need to fix each one separately.
+
+For the general reconnect flow (what you'll see, the expiry toast, and other connectors), see [Troubleshooting — Sign-in expired](library://rebel-system/help-for-humans/troubleshooting.md#sign-in-expired--needs-reconnecting).
+
 ## Tips
 
 - **Email search**: Search your inbox with natural language or Outlook-style filters
@@ -79,3 +87,4 @@ Connect additional Microsoft accounts by clicking **Set up with Rebel** again.
 ## See Also
 
 - [MCP-tools-and-other-knowledge-sources](library://rebel-system/help-for-humans/mcp-connectors-tools-and-integrations.md) — overview of all connectors
+- [Troubleshooting](library://rebel-system/help-for-humans/troubleshooting.md) — sign-in expired and other connector issues

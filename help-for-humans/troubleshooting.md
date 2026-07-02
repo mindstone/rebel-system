@@ -1,6 +1,6 @@
 ---
-description: "Common problems and solutions for Rebel desktop app: startup issues, tool connection problems, voice and transcription, conversation errors, and getting help"
-last_updated: "2026-06-26"
+description: "Common problems and solutions for Rebel: startup issues, connector sign-in expiry, voice and transcription, conversation errors, and getting help"
+last_updated: "2026-07-02"
 ---
 
 # Troubleshooting
@@ -131,6 +131,20 @@ Open **Settings → Connectors**, find the affected service, and click to reconn
 You may not have the required permissions in the service you're connecting to. For workspace tools like Slack or Notion, you may need admin approval.
 
 
+### Sign-in expired / needs reconnecting
+
+When a connector's sign-in genuinely expires, Rebel tells you instead of going quiet:
+
+- **In Settings → Connectors** — the affected account shows **Sign-in expired** with a **Reconnect** button. Click it and sign in again.
+- **In the app** — you may see a gentle **needs reconnecting** toast or notice pointing you to the right connector.
+
+This is available for supported sign-in connectors including Notion, Linear, Google Workspace, and Microsoft 365; some may still need disconnecting and reconnecting by hand.
+
+**Microsoft one-reconnect-heals-all:** All Microsoft services (Mail, Calendar, Files, Teams, SharePoint) share one sign-in. Use the reconnect prompt once — currently surfaced through Calendar — and it restores them all together. See [Microsoft 365 — If your sign-in expires](library://rebel-system/help-for-humans/connectors/microsoft-365.md#if-your-sign-in-expires).
+
+For the full connector troubleshooting workflow, see [MCP, Tools & Integrations — Troubleshooting Tools](library://rebel-system/help-for-humans/mcp-connectors-tools-and-integrations.md#troubleshooting-tools).
+
+
 ### Super-MCP Not Running
 
 Super-MCP is the tool router that manages all your connectors. If it's not running:
@@ -153,6 +167,8 @@ Rebel handles connector failures gracefully. If one service is down or misconfig
 ---
 
 ## Voice & Transcription
+
+**OpenRouter or Mindstone transcription:** If you power Rebel through OpenRouter or a Mindstone plan, you can transcribe voice using that same connection — no separate voice API key. See [Voice and Audio](library://rebel-system/help-for-humans/voice-and-audio.md) for setup and provider options.
 
 ### Microphone Not Working
 

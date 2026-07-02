@@ -1,6 +1,6 @@
 ---
-description: "Guide to Rebel's built-in voice features: talking to Rebel, hearing spoken responses, choosing providers, and setting up custom vocabulary"
-last_updated: "2026-04-16"
+description: "Guide to Rebel's voice features: talking to Rebel, hearing spoken responses, choosing transcription providers (including OpenRouter and Mindstone), unified mic buttons, and custom vocabulary"
+last_updated: "2026-07-02"
 ---
 
 # Voice and Audio
@@ -14,9 +14,11 @@ Voice input works on **desktop, web companion, and mobile** — speak to Rebel f
 
 1. **Tap the microphone button** in the composer to start talking
 
-That's it. On desktop, Rebel uses local Moonshine transcription by default — no API key needed. Speak naturally, and Rebel will transcribe what you said and respond.
+That's it. On supported desktop platforms, Rebel uses built-in on-device transcription by default — no API key needed. Speak naturally, and Rebel will transcribe what you said and respond.
 
-For cloud providers with higher accuracy, go to **Settings → Agent & Voice → Voice**, choose a provider, and enter your API key.
+**Already on OpenRouter or a Mindstone plan?** Rebel can transcribe using that connection you already have — no separate voice API key. On a Mindstone subscription, transcription is included. It works on your computer and your phone. Spoken replies (text-to-speech) still need a separate cloud voice provider — OpenRouter isn't wired for speaking back.
+
+For other cloud providers with higher accuracy, go to **Settings → Agent & Voice → Voice**, choose a provider, and enter your API key.
 
 
 ## Talking to Rebel
@@ -24,6 +26,16 @@ For cloud providers with higher accuracy, go to **Settings → Agent & Voice →
 ### Microphone Button
 
 The microphone button appears in the composer area (bottom of the conversation). Tap it to start recording, speak your message, then tap again to stop. Rebel transcribes your speech and treats it like any typed message. This works on desktop, web companion, and mobile.
+
+### Microphones around Rebel
+
+Microphone buttons appear in several places — the main conversation box, your inbox, the Home page, question cards Rebel asks mid-task, and Actions/Today cards. They now look and behave the same everywhere.
+
+Only one can record at a time. If one is already listening, the others grey out with a tooltip: "Finish the other recording first."
+
+On the **Home page**, you can **double-tap the mic while recording** to stop and send immediately — handy when you know what you want to say and don't need to review the transcript first.
+
+See [Rebel Interface — Voice Interaction](library://rebel-system/help-for-humans/Rebel-interface.md#voice-interaction) for where these surfaces live in the app.
 
 ### Voice Mode (Global Hotkey — Desktop)
 
@@ -60,6 +72,7 @@ Spoken responses stream in as they're generated, so you hear Rebel start talking
 
 | Provider | Best For | Requires |
 |----------|----------|----------|
+| **OpenRouter / Mindstone** | Use the AI connection you already have — no extra voice key; works on computer and phone | OpenRouter account, or a Mindstone subscription (transcription included) |
 | **OpenAI Whisper** | Highest accuracy, especially for complex or technical speech | OpenAI API key |
 | **ElevenLabs Scribe** | Faster transcription, variety of TTS voices | ElevenLabs API key |
 | **Local (Moonshine)** | Privacy, offline use, desktop default, mobile local option | One-time model download |
@@ -68,6 +81,8 @@ Spoken responses stream in as they're generated, so you hear Rebel start talking
 **Local (Moonshine)** is the newer built-in option and the default on desktop. It runs entirely on your device with no cloud dependency, and it's also the local transcription option on mobile. No API key required and no audio leaves your device.
 
 **Desktop also includes Local (Parakeet)** as an alternative on-device model. It is desktop-only, older than Moonshine, and uses a larger download, but some people prefer how it handles their voice.
+
+**OpenRouter / Mindstone** is the simplest path if you already power Rebel through OpenRouter or a Mindstone plan — transcription rides on the same connection, including on mobile. It covers turning speech into text only; for Rebel to speak back, pick OpenAI or ElevenLabs (or another voice provider) separately.
 
 **OpenAI Whisper** is recommended if you need the highest accuracy. It handles accents, technical terms, and background noise better than alternatives.
 

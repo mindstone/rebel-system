@@ -1,6 +1,6 @@
 ---
-description: "How to power Rebel's AI — a flat-fee Mindstone plan or bring your own (ChatGPT Pro, OpenRouter, Anthropic) — then choose Rebel's Planner, Main work, and Behind the Scenes models, plus the per-conversation Quality Tier selector"
-last_updated: "2026-06-26"
+description: "How to power Rebel's AI — a flat-fee Mindstone plan or bring your own (ChatGPT Pro, OpenRouter, Anthropic) — then choose Planner, Main work, and Behind the Scenes models, including what happens when you pick a model outside your plan tier"
+last_updated: "2026-07-02"
 ---
 
 # AI models
@@ -35,6 +35,12 @@ If you add no backup, nothing changes: Rebel won't switch connections on its own
 The simplest path: pick a flat-fee **Mindstone plan** and Mindstone covers the AI bill — no keys, no separate accounts. Two plans (**Dash** and **Rogue**) share the same monthly usage allowance and differ in the calibre of models you get.
 
 Subscribe from onboarding's **"Let Mindstone handle it"** option, or in [Settings → Agent & Voice → Intelligence](rebel://settings/agents). Full details — plans, allowance, billing, upgrades, and cancellation — are in [Mindstone plans](rebel://library/rebel-system%2Fhelp-for-humans%2Fmindstone-plans-and-billing.md).
+
+### Picking a model outside your plan
+
+Each Mindstone plan includes certain models. If you pick one your plan's tier doesn't include — mid-conversation or in Settings — Rebel doesn't error out. It switches to an included model and tells you once: "Your plan runs on … Using it for this one." The conversation carries on.
+
+Want access to stronger models? Upgrade **Dash → Rogue** in [Mindstone plans](rebel://library/rebel-system%2Fhelp-for-humans%2Fmindstone-plans-and-billing.md).
 
 The rest of this page covers the **bring-your-own** route.
 

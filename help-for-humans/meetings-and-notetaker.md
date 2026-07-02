@@ -1,6 +1,6 @@
 ---
-description: "How Rebel captures meeting transcripts automatically, participates in discussions with live captions, and helps you prepare for upcoming meetings."
-last_updated: "2026-06-18"
+description: "How Rebel captures meeting transcripts, recognises more meeting links, tracks missed vs scheduled meetings, and helps you prepare for upcoming calls"
+last_updated: "2026-07-02"
 ---
 
 # Meetings and Notetaker
@@ -26,7 +26,9 @@ New accounts start with the meeting notetaker turned off — no surprise bot app
 2. Toggle the notetaker on
 3. Choose your preferred join mode
 
-Once enabled, Rebel detects your video meetings (Zoom, Google Meet, or Microsoft Teams) and offers to send a notetaker. The notetaker joins as a participant, records the conversation, and saves a transcript to your workspace when the meeting ends.
+Once enabled, Rebel detects your video meetings (Zoom, Google Meet, or Microsoft Teams) and offers to send a notetaker. Rebel recognises more meeting-link formats than before — additional Zoom and Teams URL shapes, including some it used to skip. Day boundaries and timezone handling are also more accurate, so today's meetings land on the right day even around midnight or when daylight saving shifts.
+
+The notetaker joins as a participant, records the conversation, and saves a transcript to your workspace when the meeting ends.
 
 **Open-source build:** The managed notetaker above isn't included there — you install a local recorder add-on instead. See [The Open Build — The meeting recorder](library://rebel-system/help-for-humans/fair-source-and-open-source-build.md#the-meeting-recorder) for the one-time **Set up recorder** flow in [Settings → Meetings](rebel://settings/meetings).
 
@@ -38,12 +40,12 @@ When Rebel detects a meeting, a banner appears in the title bar. You have option
 | Join Mode | Behavior |
 |-----------|----------|
 | **Ask me first** (default) | Rebel prompts you before joining — you can configure how many minutes before the meeting to show the prompt |
-| **Auto-join** | Rebel automatically sends a notetaker to all meetings with video links. Meetings starting within 15 minutes use instant join so the bot arrives on time. |
+| **Auto-join** | Rebel automatically sends a notetaker to meetings with recognised video links. Meetings starting within 15 minutes use instant join so the bot arrives on time. |
 | **Auto-schedule** | Rebel schedules the notetaker in advance for your upcoming meetings |
 
 Click **Join with Rebel** to send the notetaker immediately.
 
-**Paste a meeting link:** You can also paste any meeting URL (Zoom, Google Meet, or Teams) directly into the composer to schedule a notetaker instantly — no calendar sync required. Handy for ad-hoc meetings or links someone sends you in Slack.
+**Paste a meeting link:** You can also paste a meeting URL directly into the composer to schedule a notetaker instantly — no calendar sync required. Rebel accepts a wider range of Zoom, Google Meet, and Teams link formats than before. Handy for ad-hoc meetings or links someone sends you in Slack.
 
 **Pre-scheduled meetings:** If a notetaker is already scheduled for an upcoming meeting, you'll see a "pre-scheduled" indicator in the meeting preview. Rebel prevents duplicate bots from being scheduled for the same meeting.
 
@@ -177,8 +179,18 @@ Here's what each status means and what action (if any) you should take:
 | **Upgrading** | Enhanced transcript in progress | May take a few more minutes for higher quality |
 | **Complete** | Ready to view | Check your space for the transcript |
 | **Failed** | Something went wrong | See troubleshooting below |
+| **Missed** | The meeting ended with no transcript | See [Missed meetings](#missed-meetings) below |
 
 **About transcript upgrades:** Rebel captures a basic transcript immediately using closed captions. A higher-quality version is then generated in the background using AI-powered cleanup — improving accuracy, formatting, and readability while extracting decisions and open questions. This "upgrading" phase usually completes within a few minutes but can take up to 3 hours in rare cases. Both versions are usable; the upgrade makes it significantly easier to work with.
+
+
+## Missed meetings
+
+A past calendar meeting is labelled **missed** when Rebel has no transcript for it after the meeting ended. If a notetaker is still actively recording or processing, Rebel keeps it out of **missed** until that finishes.
+
+A meeting stays **scheduled** (not missed) if a notetaker was still on its way, is actively recording, or the transcript is still processing.
+
+Rebel is more accurate about this now — trying to send a notetaker no longer hides a genuine missed meeting. If a transcript turns up later, the status updates automatically.
 
 
 ## After the Meeting
@@ -368,10 +380,11 @@ Select your avatar in **Settings → Meetings**.
 
 | Possible Cause | Solution |
 |----------------|----------|
-| Calendar not connected | Go to **Settings → Connectors** and connect Google Workspace |
+| Calendar not connected | Go to **Settings → Connectors** and connect Google Workspace or Microsoft 365 |
 | Meeting has no video link | Only meetings with Zoom, Meet, or Teams links are detected |
-| Meeting URL not recognized | Ensure the calendar invite includes a valid meeting URL |
+| Meeting URL not recognised | Rebel recognises more link formats now, but the invite still needs a valid join URL — try pasting the link directly into the composer |
 | Join mode set to "Ask" | Check title bar — you may need to click "Join with Rebel" |
+| Auto-join on but no notetaker sent | Check the notetaker is on with Auto-join behaviour, your calendar is connected, and the invite has a recognised video link. If it keeps happening, send a bug report with diagnostics |
 | Corporate security | Some enterprise Zoom/Teams accounts block external bots |
 
 ### Bot Stuck in Waiting Room
