@@ -188,7 +188,7 @@ The tier overrides your global **Planner** and **Main work** settings for that c
 
 If you prefer the old way, power users can still open the advanced panel inside the conversation's model selector to override specific Planner / Main work / effort fields directly.
 
-**Frontier (Claude Fable 5)** briefly topped the line-up for **Maximum** tier — a temporary addition while access was available. That access has been withdrawn for now, so Fable may not appear in your pickers. When it returns, Rebel will surface it again; until then, **Maximum** uses the strongest model Rebel can actually reach for you.
+**Claude Fable 5** is available again (access briefly lapsed in mid-2026). It's Rebel's most capable — and priciest — model, so we keep it a deliberate choice rather than a default: pick it directly in the **Planner** or **Main work** selector, or add it via the model wizard. It's intentionally *not* on the Quality Tier slider, since **Maximum** already gives you the strongest model for most work without the extra cost. Reach for Fable when a task is genuinely hard and worth it.
 
 ## A simple starting point
 
