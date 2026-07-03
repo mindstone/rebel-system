@@ -182,13 +182,13 @@ Inside any conversation, Rebel offers a **Quality Tier** slider that lets you pi
 | **Quick** | $ | Fast responses for simple tasks |
 | **Balanced** | $$ | Everyday work — a good balance of speed and quality |
 | **Thorough** | $$$ | Deep reasoning for complex tasks |
-| **Maximum** | $$$$ | The best available quality when it matters |
+| **Maximum** | $$$$$ | Rebel's most capable model (Claude Fable 5) — for when it really matters |
 
 The tier overrides your global **Planner** and **Main work** settings for that conversation only — your Settings defaults are untouched. Pick the tier that matches the job, not the model catalogue.
 
 If you prefer the old way, power users can still open the advanced panel inside the conversation's model selector to override specific Planner / Main work / effort fields directly.
 
-**Claude Fable 5** is available again (access briefly lapsed in mid-2026). It's Rebel's most capable — and priciest — model, so we keep it a deliberate choice rather than a default: pick it directly in the **Planner** or **Main work** selector, or add it via the model wizard. It's intentionally *not* on the Quality Tier slider, since **Maximum** already gives you the strongest model for most work without the extra cost. Reach for Fable when a task is genuinely hard and worth it.
+**Claude Fable 5** is available again (access briefly lapsed in mid-2026). It's Rebel's most capable — and priciest — model, and it now powers the **Maximum** tier on the slider, so reaching top quality is one drag away. It's the "cost be damned, get this right" setting — Fable is around twice the price of the everyday models and can occasionally decline a request its safety training flags, so keep your routine work on **Balanced** or **Thorough** and save **Maximum** for when a task genuinely warrants it. You can also pick Fable directly in the **Planner** or **Main work** selector, or add it via the model wizard.
 
 ## A simple starting point
 
