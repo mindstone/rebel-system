@@ -78,7 +78,11 @@ On a Mindstone plan, messages and recordings from the Rebel mobile app run throu
 
 ## Privacy
 
-Being on a Mindstone plan doesn't change what Rebel does with your data — it only changes who pays the AI bill. See the [Privacy Policy](rebel://library/rebel-system%2Fhelp-for-humans%2FRebel-privacy-policy.md) for the full picture.
+Being on a Mindstone plan doesn't change what Rebel does with your data — it only changes who pays the AI bill.
+
+Your conversations don't pass through Mindstone's servers. They travel from Rebel straight to OpenRouter — a broker that routes to the underlying model providers — tagged so those providers won't retain your data for training. Mindstone's own servers only get sent metadata (e.g. re your subscription and which models your plan includes); they never see what you ask or discuss.
+
+See the [Privacy Policy](rebel://library/rebel-system%2Fhelp-for-humans%2FRebel-privacy-policy.md) for the full picture.
 
 ## See also
 
