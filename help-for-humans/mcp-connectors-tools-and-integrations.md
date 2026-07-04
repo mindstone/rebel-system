@@ -1,6 +1,6 @@
 ---
 description: "Overview of Model Context Protocol (MCP) tools and external knowledge sources, including built-in connectors, community connectors, smart tool management, and manual configuration"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 # MCPs, Tools & External Knowledge Sources
@@ -230,6 +230,17 @@ This same smart switching applies to other overlapping tools: when you connect a
 
 ## Troubleshooting Tools
 
+### Sign-in expired / needs reconnecting
+
+When a connector's sign-in genuinely expires, Rebel surfaces it clearly instead of letting the connection go dark:
+
+- **Settings → Connectors** — the affected account shows **Sign-in expired** with a **Reconnect** button right on the card. One click, sign back in, done.
+- **In the app** — a gentle **needs reconnecting** toast may appear when Rebel detects the problem, pointing you to the right place.
+
+This is available for supported sign-in connectors including Notion, Linear, Google Workspace, and Microsoft 365; some connectors may still need disconnecting and reconnecting by hand. For Microsoft specifically, reconnecting once restores Mail, Calendar, Files, Teams, and SharePoint together — see [Microsoft 365 — If your sign-in expires](library://rebel-system/help-for-humans/connectors/microsoft-365.md#if-your-sign-in-expires).
+
+For the general troubleshooting walkthrough, see [Troubleshooting — Sign-in expired](library://rebel-system/help-for-humans/troubleshooting.md#sign-in-expired--needs-reconnecting).
+
 ### Tools not showing up
 
 If tools you expect aren't appearing:
@@ -245,9 +256,11 @@ If tools you expect aren't appearing:
 
 4. **Disconnect and reconnect** — Sometimes OAuth tokens expire. Remove the connection and add it again to get fresh credentials.
 
-5. **Update key / Update details** — Some connectors show an **Update key** or **Update details** button directly on the connector tile in Settings → Connectors. If you see it, click it to update your credentials in place without fully disconnecting and reconnecting. A Notice also appears in the conversation itself when credentials have expired, with the same button ready to hand — no need to go hunting in Settings.
+5. **Sign-in expired** — If a connector shows **Sign-in expired** or you see a **needs reconnecting** notice, use the **Reconnect** button on that connector's card. See [Sign-in expired / needs reconnecting](#sign-in-expired--needs-reconnecting) above.
 
-6. **Restart Super-MCP** — Go to Settings → Advanced and use "Restart Super-MCP". This restarts the tool router that manages all your connections. Usually fixes temporary glitches.
+6. **Update key / Update details** — Some connectors show an **Update key** or **Update details** button directly on the connector tile in Settings → Connectors. If you see it, click it to update your credentials in place without fully disconnecting and reconnecting. A Notice also appears in the conversation itself when credentials have expired, with the same button ready to hand — no need to go hunting in Settings.
+
+7. **Restart Super-MCP** — Go to Settings → Advanced and use "Restart Super-MCP". This restarts the tool router that manages all your connections. Usually fixes temporary glitches.
 
 ### "Queued" connector actions
 

@@ -1,6 +1,6 @@
 ---
-description: "Overview of Mindstone Rebel desktop app as an interface to Mindstone Rebel, covering key features, voice interaction, file attachments, and workspace integration"
-last_updated: "2026-06-18"
+description: "Overview of the Rebel desktop app interface: layout, unified voice mic buttons, Homepage, file attachments, and workspace integration"
+last_updated: "2026-07-02"
 ---
 
 # Rebel Interface (Mindstone Rebel desktop app)
@@ -29,11 +29,13 @@ In other words: navigation on the left, work in the middle, extra context on the
 
 Rebel supports independent **Speak** and **Listen** modes—use either separately or combine them for full voice interaction:
 
-- **Listen mode** — Rebel transcribes your speech. Use the global voice hotkey (default: Ctrl+Alt+Space) or click the mic button.
+- **Listen mode** — Rebel transcribes your speech. Use the global voice hotkey (default: Ctrl+Alt+Space) or click any mic button.
 - **Speak mode** — Rebel reads responses aloud using text-to-speech.
 - **Custom vocabulary** — Teach Rebel your domain-specific terms for better transcription accuracy (Settings → Agent & Voice → Voice).
 
-See [voice-dictation-apps](voice-dictation-apps.md) for alternative dictation options.
+**Unified mic buttons** — Microphone buttons across Rebel (main conversation, inbox, Home page, question cards, Actions/Today) now look and behave the same. Only one records at a time; if another is already listening, the rest grey out with "Finish the other recording first." On the **Home page**, double-tap the mic while recording to stop and send immediately.
+
+See [Voice and Audio](library://rebel-system/help-for-humans/voice-and-audio.md) for providers (including OpenRouter and Mindstone transcription), permissions, and troubleshooting. See [voice-dictation-apps](voice-dictation-apps.md) for alternative dictation options.
 
 ### File Attachments
 
@@ -89,8 +91,8 @@ Drag files into the composer or paste from clipboard.
 
 The Homepage is your landing surface — the screen you see when you open Rebel, start a new conversation, or come back after a break. It organises what matters into three sections:
 
-- **Today** — Surfaces what needs your attention right now: calendar events, upcoming meetings, and actionable items from your connected tools. Context fields on Today and Actions cards auto-expand for longer notes, so you can add detailed context without cramping. Refreshes automatically while visible.
-- **Chat** — Shows your recent conversations so you can pick up where you left off.
+- **Today** — Surfaces what needs your attention right now: calendar events, upcoming meetings, and actionable items from your connected tools. Context fields on Today and Actions cards auto-expand for longer notes, so you can add detailed context without cramping. Each card has the same mic button as everywhere else in Rebel — greyed out while another recording is in progress. Refreshes automatically while visible.
+- **Chat** — Shows your recent conversations so you can pick up where you left off. The Home chat input includes a mic button; **double-tap while recording** to send your message straight away.
 - **Coach** — A carousel of insights and suggestions based on your previous conversations and connected tools, including a hero card highlighting what to work on next. Insights expire after 3 days and prioritise by how often you act on them.
 
 At the bottom, find quick links to "What's New", the community, and help. See [Homepage](library://rebel-system/help-for-humans/the-spark.md) for the full guide.

@@ -1,6 +1,6 @@
 ---
-description: "Mindstone plans — the flat-fee subscription (Dash and Rogue tiers) where Mindstone covers your AI bill, plus how the monthly allowance, billing, upgrades, and cancellation work"
-last_updated: "2026-06-26"
+description: "Mindstone plans — the flat-fee subscription (Dash and Rogue tiers) where Mindstone covers your AI bill, which models each tier includes, monthly allowance, billing, upgrades, and cancellation"
+last_updated: "2026-07-02"
 ---
 
 # Mindstone plans
@@ -28,6 +28,12 @@ Both plans share the **same monthly usage allowance**. The difference is the *ca
 | **Rogue** | $500/mo | Frontier-class models for work that demands the best |
 
 So "Rogue" doesn't mean "more turns" — it means stronger models. If your work is mostly everyday drafting, triage, and research, Dash is plenty. Step up to Rogue when you want the sharpest models on harder problems.
+
+### Models included in your plan
+
+Each tier includes a curated set of models. You can see exactly which ones in **Settings → Agent & Voice → Intelligence** — the "Add a model" picker groups them under **Included with your plan**.
+
+If you pick a model outside your tier mid-conversation, Rebel switches to an included one and says so ("Your plan runs on … Using it for this one.") rather than stopping with an error. Need frontier-class models? **Upgrade to Rogue** from the same settings section. Full behaviour is in [AI models](rebel://library/rebel-system%2Fhelp-for-humans%2FAI-models.md#picking-a-model-outside-your-plan).
 
 ## Subscribing
 
@@ -72,7 +78,11 @@ On a Mindstone plan, messages and recordings from the Rebel mobile app run throu
 
 ## Privacy
 
-Being on a Mindstone plan doesn't change what Rebel does with your data — it only changes who pays the AI bill. See the [Privacy Policy](rebel://library/rebel-system%2Fhelp-for-humans%2FRebel-privacy-policy.md) for the full picture.
+Being on a Mindstone plan doesn't change what Rebel does with your data — it only changes who pays the AI bill.
+
+Your conversations don't pass through Mindstone's servers. They travel from Rebel straight to OpenRouter — a broker that routes to the underlying model providers — tagged so those providers won't retain your data for training. Mindstone's own servers only get sent metadata (e.g. re your subscription and which models your plan includes); they never see what you ask or discuss.
+
+See the [Privacy Policy](rebel://library/rebel-system%2Fhelp-for-humans%2FRebel-privacy-policy.md) for the full picture.
 
 ## See also
 

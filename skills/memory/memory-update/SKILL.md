@@ -70,6 +70,7 @@ Two destinations within a space:
   - **Companies**: `memory/topics/companies/Company-Name.md`
   - **Topics/projects**: `memory/topics/Project-Name.md`, `memory/topics/Customer-Acme.md`, etc.
   - Search for an existing file before creating a new one — prefer **update** over **create**.
+  - **Cluster only obvious related topic files.** Before creating a new top-level `memory/topics/*.md` file, check for closely related, recently updated top-level sibling topic file(s) in the same space. If the new file and sibling(s) clearly form one subject cluster, prefer `memory/topics/<cluster>/…` and move the sibling(s) with [rename-or-move-and-update-references](../../system/rename-or-move-and-update-references/SKILL.md). Do not hand-move. If the cluster is not obvious, leave the existing files as-is.
 
 **README write gate:** Before writing to any README, ask whether this fact should be pinned into almost every future agent turn. If not clearly yes, write a topic file or skip. Volatile project/customer details, current deal status, meeting-specific facts, and tool-output-only facts do not belong in README. When uncertain, do not write README.
 
