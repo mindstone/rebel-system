@@ -36,7 +36,7 @@ Rebel will confirm when it's added.
 
 ### Automatic Items
 
-Rebel also adds items on your behalf. **Morning Triage** runs at 07:30 each day and surfaces actionable emails and upcoming meetings as action items, so your day starts with a clear picture. Throughout the day, **Source Capture** watches for new actionable content — emails, notifications, updates — and creates action items as they come in.
+Rebel also adds items on your behalf. **Morning Triage** runs at 07:30 each day and surfaces actionable emails, so your day starts with a clear picture. Throughout the day, **Source Capture** watches for new actionable content — emails, notifications, updates, and prep for your upcoming meetings — and creates action items as they come in.
 
 
 ## Quality Filtering
