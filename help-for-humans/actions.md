@@ -47,7 +47,7 @@ Not everything deserves a spot in your Actions list. Rebel evaluates each item f
 
 - **Low-signal items** — Vague reminders, redundant follow-ups, or items with no clear next step
 - **Other people's tasks** — If a meeting generated an action item assigned to someone else, Rebel keeps it out of your list
-- **Stale items** — Items tied to events that have already passed are automatically cleaned up
+- **Stale items** — Items tied to events that have already passed are tidied away automatically (you're told each time, and they're easy to get back — see **Auto-archived** below)
 
 **Duplicate detection:** Rebel catches near-identical items before they clutter your Actions list — using similarity checks to spot items that say the same thing in slightly different words. If a meeting generates two action items that are essentially the same, only one makes the cut.
 
@@ -77,7 +77,7 @@ Rebel Actions shows three sections:
 
 ### Opening an item
 
-Click any item to open its **detail view** — a focused panel showing the full title, description, any references (files, links, emails), and draft content if Rebel has prepared something. From here you can add context, execute, archive, or delete the item without losing your place.
+Click any item to open its **detail view** — a focused panel showing the full title, description, any references (files, links, emails), and draft content if Rebel has prepared something. From here you can add context, execute, archive, or dismiss the item without losing your place.
 
 Context fields on both Today and Actions cards **auto-expand** as you type, so longer notes don't get cramped into a single line. Just keep typing — the field grows to fit.
 
@@ -130,7 +130,11 @@ Move items between time groups — Today, This Week, Later — to plan when you'
 
 **Batch scheduling:** Select several items at once and schedule them all to the same time group in one action. Useful for triaging a full Actions list in the morning.
 
+**Scheduled means snoozed.** Give an action a future date and it goes quiet: it stays off your Home page until its day arrives, and anything scheduled for **Later** tucks into a collapsed section at the bottom of Actions (with a count — click to peek). When the day comes, the item returns to Today with a subtle highlight so you notice it's back. Items due this week stay visible in Actions, so deadlines keep their lead time. Urgent items never hide.
+
 **Changed your mind?** An **Undo** option appears briefly after scheduling, so you can reverse it before it sticks.
+
+**Auto-archived (what Rebel tidied away).** Rebel quietly clears out stale actions — meeting prep for meetings that already happened, "do this today" items from last week, and the like. So it never does this behind your back, two things are true: you get a small notice every time it happens ("Rebel tidied away 3 stale actions"), and everything it archived lives in its own **Auto-archived** view — separate from the things *you* dismissed — each with the reason it was cleared and a one-click **Restore**. Your own manually-added actions are never auto-archived. If Rebel tidied away something it shouldn't have, restore it — and stay tuned: teaching Rebel *why* is coming next.
 
 
 ## Today Card Actions
@@ -139,7 +143,7 @@ Items that surface on the **Today** section of your homepage have inline actions
 
 - **Done** — Mark an item as complete
 - **Archive** — Put it away for later
-- **Delete** — Remove it entirely
+- **Dismiss** — Clear it from your list (it keeps a short trail in the Dismissed view, and Undo brings it straight back)
 
 **Auto-done:** Toggle this on for items where Rebel has already handled the task (e.g., after executing an action item). When auto-done is enabled, completed items are automatically marked as done so you don't have to.
 

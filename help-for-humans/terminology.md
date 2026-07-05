@@ -109,9 +109,7 @@ What happens when a conversation gets too long for the context window. Instead o
 2. Preserves your original goal, what's been accomplished, and what remains
 3. Continues the conversation with this compressed context
 
-You can toggle this on or off in **Settings → Advanced**. When enabled (the default), Rebel handles long conversations automatically. When disabled, you'll need to manage conversation length yourself — for example, by starting a fresh conversation when things get long.
-
-You'll see a brief "Compacting context..." message when this happens. If it still can't fit after two attempts, Rebel will suggest breaking the task into smaller steps. For sensitive work, consider starting a fresh conversation before hitting this limit.
+This runs automatically — there's nothing to configure. You'll see a brief "Compacting context..." message when it happens. If it still can't fit after two attempts, Rebel will suggest breaking the task into smaller steps. For sensitive work, consider starting a fresh conversation before hitting this limit.
 
 ### Wikilink
 A way to reference files using double brackets: `[[path/to/file]]` corresponds to `path/to/file.md`. Example: `[[help/terminology]]` → `help/terminology.md`.

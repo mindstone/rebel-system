@@ -33,7 +33,7 @@ Rebel supports independent **Speak** and **Listen** modes—use either separatel
 - **Speak mode** — Rebel reads responses aloud using text-to-speech.
 - **Custom vocabulary** — Teach Rebel your domain-specific terms for better transcription accuracy (Settings → Agent & Voice → Voice).
 
-**Unified mic buttons** — Microphone buttons across Rebel (main conversation, inbox, Home page, question cards, Actions/Today) now look and behave the same. Only one records at a time; if another is already listening, the rest grey out with "Finish the other recording first." On the **Home page**, double-tap the mic while recording to stop and send immediately.
+**Unified mic buttons** — Microphone buttons across Rebel (main conversation, Home page, question cards, Actions/Today) now look and behave the same. Only one records at a time; if another is already listening, the rest grey out with "Finish the other recording first." On the **Home page**, double-tap the mic while recording to stop and send immediately.
 
 See [Voice and Audio](library://rebel-system/help-for-humans/voice-and-audio.md) for providers (including OpenRouter and Mindstone transcription), permissions, and troubleshooting. See [voice-dictation-apps](voice-dictation-apps.md) for alternative dictation options.
 
