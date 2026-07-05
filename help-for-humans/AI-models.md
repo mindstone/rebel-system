@@ -16,6 +16,20 @@ In onboarding and in [Settings → Agent & Voice → Intelligence](rebel://setti
 
 **You're not locked to one model or one provider.** Connect more than one and switch whenever you like — and through OpenRouter alone you can reach Claude, GPT, Gemini, DeepSeek, Grok, and others on a single account. You can also run models on your own machine (e.g. via Ollama or LM Studio) or point Rebel at a company gateway — see [Custom models and gateways](rebel://library/rebel-system%2Fhelp-for-humans%2Fcustom-models-and-gateways.md). And with [Council Mode](rebel://library/rebel-system%2Fhelp-for-humans%2Fmulti-model-council-mode.md) you can put a question to several models at once.
 
+## The providers, one by one
+
+- **Bring your own account or key:**
+  - [ChatGPT Pro](rebel://library/rebel-system%2Fhelp-for-humans%2Fproviders%2Fchatgpt-pro.md) — sign in with your ChatGPT account
+  - [OpenRouter](rebel://library/rebel-system%2Fhelp-for-humans%2Fproviders%2Fopenrouter.md) — one account, many model families
+  - [Anthropic (Claude)](rebel://library/rebel-system%2Fhelp-for-humans%2Fproviders%2Fanthropic-claude.md) — direct Claude API access
+  - [OpenAI](rebel://library/rebel-system%2Fhelp-for-humans%2Fproviders%2Fopenai.md) — pay-as-you-go GPT API billing
+  - [Google Gemini](rebel://library/rebel-system%2Fhelp-for-humans%2Fproviders%2Fgoogle-gemini.md) — Gemini API key
+  - [Together AI](rebel://library/rebel-system%2Fhelp-for-humans%2Fproviders%2Ftogether-ai.md) — hosted open-source models
+  - [Cerebras](rebel://library/rebel-system%2Fhelp-for-humans%2Fproviders%2Fcerebras.md) — very fast open-model inference
+  - [Doubleword](rebel://library/rebel-system%2Fhelp-for-humans%2Fproviders%2Fdoubleword.md) — cheap models for background work
+- **Let Mindstone handle it:** [Mindstone plans](rebel://library/rebel-system%2Fhelp-for-humans%2Fmindstone-plans-and-billing.md) — flat-fee subscription, no keys
+- **Your own or company-hosted models:** [Custom models and gateways](rebel://library/rebel-system%2Fhelp-for-humans%2Fcustom-models-and-gateways.md) — Ollama, LM Studio, company gateways
+
 ## Backup connections
 
 In **[Settings → Agent & Voice → Backup connections](rebel://settings/agents)**, you can add a backup connection. If your main connection is busy or hitting its limit, Rebel automatically switches to the backup — no interruption, no extra setup mid-conversation.
