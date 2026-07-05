@@ -130,6 +130,8 @@ Move items between time groups — Today, This Week, Later — to plan when you'
 
 **Batch scheduling:** Select several items at once and schedule them all to the same time group in one action. Useful for triaging a full Actions list in the morning.
 
+**Scheduled means snoozed.** Give an action a future date and it goes quiet: it stays off your Home page until its day arrives, and anything scheduled for **Later** tucks into a collapsed section at the bottom of Actions (with a count — click to peek). When the day comes, the item returns to Today with a subtle highlight so you notice it's back. Items due this week stay visible in Actions, so deadlines keep their lead time. Urgent items never hide.
+
 **Changed your mind?** An **Undo** option appears briefly after scheduling, so you can reverse it before it sticks.
 
 
