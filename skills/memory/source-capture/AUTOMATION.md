@@ -87,7 +87,10 @@ Capture citable sources from recent activity into memory, surface actionable ite
         - Check the relevant tool: Linear `get_issue` for status, GitHub `issues:get` or `pull_requests:get` for state, Asana `search_objects` for completion
         - If the issue/PR/task is closed, merged, or completed → archive
         - Only check when the relevant connector is available
-   - Archive confirmed-complete items via rebel_inbox_update with archived=true
+   - Archive confirmed-complete items via rebel_inbox_update with archived=true, and always pass `resolution` so the archive lands in the right place:
+     - `resolution: 'completed'` — there is evidence the task is genuinely done: a reply/email was sent to the right person, a PR merged, an issue closed, a document finalised, the user did the thing. Lands in Completed, attributed to Rebel.
+     - `resolution: 'stale'` — the item is no longer relevant rather than done: the meeting already happened (case b) so its prep no longer matters, the open loop lapsed, it was superseded, or it was never a real action (system receipts, delegated work). Lands in the Auto-archived log the user reviews.
+     - Always pass the evidence in `evidenceNote` (preferred) or `archiveReason` — one short past-tense sentence naming the source and why it closes the loop (e.g. "Reply sent to jane@example.com in the referenced thread."). It is persisted and shown to the user.
    - Drafts or clarifying questions are a caution flag, not an absolute block. Do not archive a pending draft just because it exists. However, if exact source/reference evidence or a targeted search shows the underlying open loop was already completed by the user or another responsible teammate, archive it. Example: an item drafted as "ask Josh whether Operators is feature-flagged" can resolve if Josh/product already answered that in the referenced thread.
    - After an authorised backlog sweep, add a short result note to the final response: "Rebel found X Actions that were already handled and cleared them." Do not create a new Action for the receipt.
    - Every resolved/dismissed item must have a short evidence note naming the connector/source and why it closes the loop. Receipts must include counts by outcome and connector work performed. Never hide uncertainty; uncertain items stay active or go to needs-user-review.

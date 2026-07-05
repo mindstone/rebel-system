@@ -244,7 +244,8 @@ Do not ask permission — this is automatic maintenance following the source cap
 After completing source capture, check if any active action items have been resolved by activity you observed during capture:
 - Call rebel_inbox_list to get active items
 - Cross-reference against the emails, calendar events, Slack activity, and documents you already retrieved in earlier steps
-- If you find HIGH confidence evidence of completion (e.g., sent email to the exact person, meeting 24h+ past, document finalised), archive the item via rebel_inbox_update with archived=true
+- If you find HIGH confidence evidence of completion (e.g., sent email to the exact person, document finalised), archive the item via rebel_inbox_update with archived=true and `resolution: 'completed'`, plus a short `evidenceNote` naming the evidence
+- If an item is no longer relevant rather than done (e.g., its meeting is 24h+ past), archive with `resolution: 'stale'` plus a short `evidenceNote` — it lands in the Auto-archived log the user reviews, not Completed
 - Only archive when confident. When in doubt, leave it — false positives are worse than stale items
 - Do NOT archive items less than 24 hours old
 

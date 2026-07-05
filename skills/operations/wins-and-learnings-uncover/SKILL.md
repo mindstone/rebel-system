@@ -39,7 +39,7 @@ You are given access to my emails, messages and potentially other systems that h
         - Check calendar for related completed events
         - Only archive when you find HIGH confidence evidence of completion
         - The 24h minimum age guard applies to non-email items
-   - Archive confirmed-complete items via rebel_inbox_update with archived=true
+   - Archive confirmed-complete items via rebel_inbox_update with archived=true and `resolution: 'completed'`, plus a short `evidenceNote` naming the evidence; for items archived because they are no longer relevant rather than done (e.g. case b's passed meetings), pass `resolution: 'stale'` instead
    - When in doubt, leave the item — false positives are worse than stale items
 
 [GREAT_LEARNINGS_AND_WINS]
