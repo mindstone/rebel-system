@@ -29,7 +29,7 @@ The microphone button appears in the composer area (bottom of the conversation).
 
 ### Microphones around Rebel
 
-Microphone buttons appear in several places — the main conversation box, your inbox, the Home page, question cards Rebel asks mid-task, and Actions/Today cards. They now look and behave the same everywhere.
+Microphone buttons appear in several places — the main conversation box, the Home page, question cards Rebel asks mid-task, and Actions/Today cards. They now look and behave the same everywhere.
 
 Only one can record at a time. If one is already listening, the others grey out with a tooltip: "Finish the other recording first."
 

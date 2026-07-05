@@ -77,7 +77,7 @@ Rebel Actions shows three sections:
 
 ### Opening an item
 
-Click any item to open its **detail view** — a focused panel showing the full title, description, any references (files, links, emails), and draft content if Rebel has prepared something. From here you can add context, execute, archive, or delete the item without losing your place.
+Click any item to open its **detail view** — a focused panel showing the full title, description, any references (files, links, emails), and draft content if Rebel has prepared something. From here you can add context, execute, archive, or dismiss the item without losing your place.
 
 Context fields on both Today and Actions cards **auto-expand** as you type, so longer notes don't get cramped into a single line. Just keep typing — the field grows to fit.
 
@@ -139,7 +139,7 @@ Items that surface on the **Today** section of your homepage have inline actions
 
 - **Done** — Mark an item as complete
 - **Archive** — Put it away for later
-- **Delete** — Remove it entirely
+- **Dismiss** — Clear it from your list (it keeps a short trail in the Dismissed view, and Undo brings it straight back)
 
 **Auto-done:** Toggle this on for items where Rebel has already handled the task (e.g., after executing an action item). When auto-done is enabled, completed items are automatically marked as done so you don't have to.
 
