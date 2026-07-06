@@ -18,6 +18,7 @@ Capture citable sources as structured markdown files in `memory/sources/`. Sourc
 
 - [memory-update](../memory-update/SKILL.md) — Extracts facts to topics during conversations; topics should cite sources
 - [memory-cleanup](../beta/memory-cleanup/SKILL.md) — Maintains memory hygiene; handles stale sources
+- [share-across-spaces](../share-across-spaces/SKILL.md) — For user-requested cross-space sharing of a captured source (the automated path is transcript-distribution)
 
 ## Persona
 
