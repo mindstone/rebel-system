@@ -1,6 +1,6 @@
 ---
 description: "Overview of the Rebel desktop app interface: layout, unified voice mic buttons, Homepage, file attachments, and workspace integration"
-last_updated: "2026-07-02"
+last_updated: "2026-07-06"
 ---
 
 # Rebel Interface (Mindstone Rebel desktop app)
@@ -53,7 +53,7 @@ Drag files into the composer or paste from clipboard.
 - **Document Editor** — A unified editor for viewing and editing files inline without leaving Rebel. Files open in edit mode by default, with annotated markdown support and document actions. Seamlessly transitions between Library and conversation views.
 - **Document outline** — Long documents show a navigable outline sidebar in the editor. Click any heading to jump directly to that section.
 - **Memory panel** — See what Rebel knows about you: facts, preferences, and context organized by space
-- **Atlas panel** — Interactive semantic graph visualization of your workspace files. See how files relate by meaning, not just folders. Click a space in the legend to isolate it. Click any file for AI-powered insights: "The gist" for quick summaries or "Zoom out" to see how it connects to nearby files.
+- **Atlas panel** — Browse your skills, memories, spaces, and files in one calm list. Pick any item to see its details and a quiet rail of what's related — "more like this", without the graphics. Start a conversation from any item, or get the gist in one click.
 - **Share files** — Share any file in your library with a public link — password protection and expiry included. Text files are readable right in the browser; other files get a download link. Works just like conversation sharing.
 - **Content search** — Search across your workspace to find files quickly
 - **File search** — Find files by meaning, not just keywords. Use `@files` in the composer
