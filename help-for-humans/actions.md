@@ -1,6 +1,6 @@
 ---
 description: "How to use Rebel Actions to save tasks for later and have Rebel execute them on demand."
-last_updated: "2026-05-22"
+last_updated: "2026-07-06"
 ---
 
 # Rebel Actions
@@ -53,84 +53,61 @@ Not everything deserves a spot in your Actions list. Rebel evaluates each item f
 
 **Meeting-sourced filtering:** Items created from meeting transcripts get extra scrutiny. Rebel filters out noise like vague action items assigned to other people or items that duplicated something you've already captured, keeping only the genuinely actionable items from your meetings.
 
-**Categories:** Each action item is tagged with a category — like *meeting action*, *follow-up*, or *user request* — so you can quickly scan what's what. These categories also help Rebel prioritise items in the Eisenhower Matrix.
+**Categories:** Each action item is tagged with a category — like *meeting action*, *follow-up*, or *user request* — so you can quickly scan what's what. Categories also feed the **Priority** filter, so you can pull up the items that matter most in a click.
 
 This filtering works both for new items and retroactively: when Rebel's filtering improves, it revisits your existing Actions list and tidies up anything that no longer meets the bar. The result is an Actions list that stays lean without you having to maintain it.
 
 
 ## Viewing and Executing
 
-Rebel Actions shows three sections:
+A sidebar down the left lets you switch between four views:
 
-**Today** — Items tied to meetings happening now or soon surface here so you can act on them in the moment.
+**Active** — Everything still waiting for you. Items are grouped by when they're due — **Today**, **This Week**, **Upcoming**, and **Someday** — so the list reads like a plan, not a pile. Each item shows its title and description, when it was added, any referenced files, links, or emails (Linear issues, GitHub PRs, Asana tasks included), and draft content if Rebel prepared something ahead of time.
 
-**Pending** — Tasks waiting for you. Each shows:
-- Title and description
-- When it was added
-- Priority indicator (if set)
-- Any referenced files, links, or emails — including Linear issues, GitHub PRs, and Asana tasks
-- Draft content (if Rebel has prepared something ahead of time)
+**Done** — Tasks you've completed, including ones Rebel finished for you.
 
-**Executed** — Tasks you've run with Rebel, with links to their conversations.
+**Dismissed** — Things you've cleared out. A short trail stays here in case you want them back.
 
-**Archived** — Tasks you've handled outside Rebel or put away for later.
+**Auto-archived** — Stale items Rebel tidied away on your behalf, each with the reason and a one-click **Restore** (see **Auto-archived** below).
+
+Above the list, **Search**, **From** (filter by source), and **Priority** narrow things down. When a filter is on, a **Clear filters** button appears so you're never stuck staring at an empty list wondering where everything went.
 
 ### Opening an item
 
-Click any item to open its **detail view** — a focused panel showing the full title, description, any references (files, links, emails), and draft content if Rebel has prepared something. From here you can add context, execute, archive, or dismiss the item without losing your place.
+Click any item to open its **detail view** — a focused panel showing the full title, description, any references (files, links, emails), and draft content if Rebel has prepared something. From here you can add context, execute, or dismiss the item without losing your place.
 
 Context fields on both Today and Actions cards **auto-expand** as you type, so longer notes don't get cramped into a single line. Just keep typing — the field grows to fit.
 
+### Editing an item
+
+Got the title slightly wrong, or want to tweak a draft before sending? Click into an item's title, description, or draft and edit it in place. Your changes are saved as you go — no separate "edit mode" to toggle.
+
 ### To execute a task:
 
-1. Click the action button on any item — the label adapts to what the item needs:
-   - **Review** — the default for most items
-   - **Send** — when Rebel has a draft ready to go
-   - **Decide** — when Rebel needs your direction on a clarifying question
-   - **Catch up** — for meeting notes and recordings
-2. Optionally add context in the text field or use the **mic button** for voice input
-3. Rebel starts a new conversation to complete the task
-4. While executing, the task shows a progress indicator
+1. Type any extra context into the item's composer (or leave it blank) and hit **Send** — Rebel starts a new conversation to complete the task. The button reads **Send** on every item; whatever Rebel needs to do, you're handing it off the same way.
+2. Prefer to talk? Use the **mic button** for voice input.
+3. While executing, the task shows a progress indicator.
 
-Use the split button dropdown for additional options like **Auto-done** — when on, the conversation is marked done automatically once the task finishes; leave it off to keep the conversation active after completion.
+**Mark done when finished:** Open an item's detail view to toggle **Mark done when finished** — when on, the conversation is marked done automatically once the task completes; leave it off to keep it active. There's a global default in Settings, and each item can override it.
 
-**Voice input:** Click the mic button to dictate your context. Double-tap the mic to send and mark done immediately — great for quick task dispatch.
+**Voice input:** Click the mic button to dictate your context instead of typing it.
 
 When you execute or archive an item, it moves immediately with a smooth animation — no waiting around. Changed your mind? An **Undo** option appears briefly so you can reverse the action before it's final.
 
 
-## Eisenhower Matrix
-
-Actions includes a 2x2 grid for prioritising tasks by urgency and importance — the Eisenhower Matrix.
-
-### The Four Quadrants
-
-| | Urgent | Not Urgent |
-|---|---|---|
-| **Important** | **Do Now** — Handle these immediately | **Schedule** — Plan time for these |
-| **Not Important** | **Delegate** — Pass these to others | **Consider** — Decide if they're worth doing |
-
-Rebel places items into quadrants based on urgency and importance flags. You can drag items between quadrants or set priority explicitly.
-
-### Focus Mode
-
-Click any quadrant header to drill down into just those tasks. Useful when you need to knock out your Do Now items without distraction, or batch-process your Delegate pile.
-
-Press **Esc** or click the header again to return to the full matrix view.
-
-
 ## Scheduling
 
-Move items between time groups — Today, This Week, Later — to plan when you'll get to them.
+Your Active list groups items by **Today**, **This Week**, **Upcoming**, and **Someday** — so when you'll get to something is baked into where it sits.
 
 **Ways to schedule:**
-- **Dropdown** — Click the schedule control on any item and pick a time group
-- **Selection bar** — Select multiple items, then choose a time group from the bar that appears
+- **Presets** — Click the schedule control on any item and pick **Today**, **Tomorrow**, **This Week**, or **Later**
+- **Pick a date** — Choose "Pick a date…" for a specific day
+- **Someday** — For things you'll get to eventually, with no deadline pressure. They tuck into their own group at the bottom, out of the way but not forgotten.
 - **Keyboard shortcut** — Press **S** with an item selected to open the schedule picker
 
-**Batch scheduling:** Select several items at once and schedule them all to the same time group in one action. Useful for triaging a full Actions list in the morning.
+**Batch it.** Select several items and a toolbar appears — schedule, set priority, mark done, or dismiss the whole lot in one go. Handy for triaging a full Actions list in the morning.
 
-**Scheduled means snoozed.** Give an action a future date and it goes quiet: it stays off your Home page until its day arrives, and anything scheduled for **Later** tucks into a collapsed section at the bottom of Actions (with a count — click to peek). When the day comes, the item returns to Today with a subtle highlight so you notice it's back. Items due this week stay visible in Actions, so deadlines keep their lead time. Urgent items never hide.
+**Scheduled means snoozed.** Give an action a future date and it goes quiet: it stays off your Home page until its day arrives, then returns to Today with a subtle highlight so you notice it's back. Items due this week stay visible so deadlines keep their lead time; **Someday** items wait patiently at the bottom until you're ready.
 
 **Changed your mind?** An **Undo** option appears briefly after scheduling, so you can reverse it before it sticks.
 
@@ -183,18 +160,13 @@ Short version: it isn't thrown away, and Rebel doesn't literally rewind — it s
 **Rule of thumb:** Use **Send Now** to redirect or add information; use **Queue** when Rebel is mid-task on something you'd rather not leave half-done.
 
 
-## Sharing Content
-
-Some items include share buttons (Twitter, LinkedIn, Facebook) for content Rebel created — like social posts or summaries. Click to share directly.
-
-
 ## Example Workflow
 
 > **You:** "Add to my actions: write a LinkedIn post about our new feature launch"
 >
 > **Rebel:** Added "Write a LinkedIn post about our new feature launch" to Rebel Actions.
 
-Later, open Rebel Actions, click the item to open it, then click **Review** to have Rebel draft the post. Use the share buttons to post it.
+Later, open Rebel Actions, click the item, and hit **Send** to have Rebel draft the post — then take it from there in the conversation.
 
 
 ## Coaching Insights
