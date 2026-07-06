@@ -137,3 +137,5 @@ That gives you:
 - less duplicated clutter
 
 A transcript is a source. A distilled summary of what matters from that transcript is a topic.
+
+When you ask Rebel to share part of a source with another space, it prefers the least-rewritten version that is safe to share. When the private and shareable parts are cleanly separate, Rebel can prepare a **partial copy** of the original for you to review — the real words, with the removals shown — because the original can't misremember. When they're woven together, a summary is safer. Either way, Rebel shows you the result in the conversation and waits for your approval before saving anything.

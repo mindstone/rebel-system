@@ -35,6 +35,9 @@ Memory example (v3):
 - Signpost to details in `memory/topics/` rather than duplicating.
 - Cross-space topics live in `Chief-of-Staff/memory/topics/` and are linked from the top-level `README.md`.
 - Space-specific topics live in `<Space Name>/memory/topics/` and are linked from that space's `README.md`.
+- Raw sources (`memory/sources/`) are canonical — like code; topics and summaries are derived from them.
+- **Within a space**: signpost to the canonical source rather than duplicating.
+- **Across a privacy boundary** (e.g. Chief-of-Staff → shared space): never link — copy the least-derived safe shape instead. See [share-across-spaces](../../memory/share-across-spaces/SKILL.md).
 
 
 ### Cross-Reference Format

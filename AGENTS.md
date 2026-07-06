@@ -144,6 +144,7 @@ Operators are activated advisors whose perspective is worth getting whenever it 
 - Topic knowledge → `memory/topics/` with descriptive filenames
 - Source captures → `memory/sources/` organized by date
 - When searching for context, check both the relevant space's memory and Chief of Staff `/memory/`
+- Cross-space sharing: copy, never link (a link leaks the existence of private content); choose the least-derived safe shape — see [share-across-spaces](skills/memory/share-across-spaces/SKILL.md)
 
 
 **Memory sensitivity markers:**

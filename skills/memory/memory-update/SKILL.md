@@ -49,7 +49,7 @@ Check **Spaces available** in the system prompt for available spaces and their d
 4. **Cross-cutting**: A single turn may contain facts for MULTIPLE spaces. Split them correctly.
 5. **Privacy override**: When in doubt about sensitivity, route to the MORE private space.
 6. **Sharing default**: Do NOT hide shareable company info in Chief-of-Staff — use the appropriate shared space instead.
-7. **Wrong-space correction**: If existing content is in the wrong space (e.g. company info already saved in Chief-of-Staff), update the CORRECT space rather than reinforcing the duplicate.
+7. **Wrong-space correction**: If existing content is in the wrong space (e.g. company info already saved in Chief-of-Staff), update the CORRECT space rather than reinforcing the duplicate. But when the user asks to move/share/copy source-backed content across spaces, do not paraphrase it into a new summary by default — route via [share-across-spaces](../share-across-spaces/SKILL.md) and its source-copy ladder.
 
 ### Step 3 — Decide save vs. skip per fact
 
