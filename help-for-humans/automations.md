@@ -165,6 +165,14 @@ If Rebel tries to run an automation and your AI provider keeps turning down your
 
 Once you replace the key and a turn succeeds again, automations resume on their own. This is separate from Rebel halting a run that's looping or stuck — see below.
 
+### A scheduled run was delayed by a connection hiccup
+
+If your cloud connection has a rough patch right when a scheduled automation is due, Rebel doesn't just skip it silently. You'll see a calm "on hold" banner while the connection's out, and as soon as it's back, Rebel catches the run up on its own — nothing to do, and nothing's lost.
+
+If you were away while this happened (desktop closed, or mid-reconnect), the run still shows up in your history in [Automations](rebel://automations) once things reconnect — so you're not left wondering whether it actually ran.
+
+This is different from the **provider not ready** case above: a connection hiccup is temporary and safe to catch up automatically, so it does; a rejected AI provider key needs you to fix it first, so those runs are deliberately not replayed.
+
 ### Rebel stopped a run on its own
 
 Sometimes Rebel halts a task that's looping or running away. When that happens, it now says plainly what occurred — not a vague "try again" message that doesn't match what actually happened.
