@@ -40,12 +40,21 @@ If you want the deeper explanation of how approvals, trusted tools, and memory s
 
 Rebel has built-in guardrails:
 
-- **Designed for your workspace** — Rebel is instructed to stay within your workspace folder
+- **Designed for your workspace** — Rebel's default reach is your workspace folder; reading anywhere else on your computer requires your say-so first (see **Reading Beyond Your Workspace** below)
 - **System files protected** — Rebel is instructed not to modify your computer's system files
 - **No destructive commands** — Commands like `rm -rf` require explicit approval
 - **Configuration files protected** — Rebel won't modify its own settings files without asking
 
 Your Safety Rules add another layer — custom natural language rules that tell Rebel when to ask. See [Security and Tool Safety](library://rebel-system/help-for-humans/security-and-tool-safety.md#your-own-rules-custom-safety-instructions) for details.
+
+## Reading Beyond Your Workspace
+
+Point Rebel at a file or folder outside your spaces — say, a Downloads folder or a project on your Desktop — and it'll ask first, in plain language, before reading it. You choose how long that permission lasts: just this once, for the rest of this conversation, or always.
+
+- **Manage what you've allowed** — Go to **Settings → Safety → "Folders Rebel can read"** to see every folder you've granted, and revoke any of them at any time
+- **Attach a file, skip the extra ask** — If you attach or drop a file into a conversation, Rebel can just read it — no separate approval needed for that file
+- **Some places stay off-limits** — Credentials, keychains, and other sensitive app data are never covered by a folder grant, even a broad one
+- **Reading only, for now** — This permission covers reading files outside your workspace; saving or editing outside your spaces isn't available yet
 
 If you ever see an approval request targeting a folder or file you were not expecting, hit **Deny** and treat it as suspicious until you've checked it properly.
 
