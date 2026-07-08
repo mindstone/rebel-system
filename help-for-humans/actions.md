@@ -62,7 +62,7 @@ This filtering works both for new items and retroactively: when Rebel's filterin
 
 A sidebar down the left lets you switch between four views:
 
-**Active** — Everything still waiting for you. Items are grouped by when they're due — **Today**, **This Week**, **Upcoming**, and **Someday** — so the list reads like a plan, not a pile. Each item shows its title and description, when it was added, any referenced files, links, or emails (Linear issues, GitHub PRs, Asana tasks included), and draft content if Rebel prepared something ahead of time.
+**Active** — Everything still waiting for you. Items are grouped by when they're due — **Today**, **This Week**, **Future date**, and **Someday** — so the list reads like a plan, not a pile. Each item shows its title and description, when it was added, any referenced files, links, or emails (Linear issues, GitHub PRs, Asana tasks included), and draft content if Rebel prepared something ahead of time.
 
 **Done** — Tasks you've completed, including ones Rebel finished for you.
 
@@ -97,7 +97,7 @@ When you execute or archive an item, it moves immediately with a smooth animatio
 
 ## Scheduling
 
-Your Active list groups items by **Today**, **This Week**, **Upcoming**, and **Someday** — so when you'll get to something is baked into where it sits.
+Your Active list groups items by **Today**, **This Week**, **Future date**, and **Someday** — so when you'll get to something is baked into where it sits.
 
 **Ways to schedule:**
 - **Presets** — Click the schedule control on any item and pick **Today**, **Tomorrow**, **This Week**, or **Later**
