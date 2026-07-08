@@ -1,11 +1,13 @@
 ---
 description: "Setting a Finish line — a success criterion that tells Rebel when to stop"
-last_updated: "2026-05-16"
+last_updated: "2026-07-08"
 ---
 
 # Finish Line
 
 A Finish line is a short, written criterion that tells Rebel when to consider its work done. Set one when you want Rebel to stop precisely when your goal is met — not before, not after.
+
+> **Trivia for the curious:** the "keep going until the goal is met" pattern has a nickname among AI folks — the **"Ralph Wiggum" loop**, after the cartoon kid who cheerfully keeps helping until someone confirms the job's done. We just call it the Finish line. It's less sticky, but it fits on a button.
 
 ---
 
@@ -95,3 +97,9 @@ When multiple Finish lines are set, the most specific one wins:
 Rebel stops. It doesn't send a special confirmation yet — it simply ends the turn. If it overshot or undershot, you can continue the conversation and clarify.
 
 Future releases will surface an explicit "Crossed the finish line" message when Rebel stops on this criterion.
+
+---
+
+## What happens when it *isn't* confirmed
+
+If a conversation has a Finish line and Rebel had to stop before it could confirm the criterion was actually met — say it ran out of steps, hit a point where it needed your go-ahead, or something went sideways — it **keeps the conversation visible** rather than quietly filing it away as done. You'll get a brief "kept visible — finish line not met yet" note so nothing with an unmet goal slips out of sight. Conversations without a Finish line are unaffected; they behave exactly as before.
