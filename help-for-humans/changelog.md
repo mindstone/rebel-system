@@ -4,7 +4,7 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ---
 
-## v0.4.52 — Jun 26 – Jul 9, 2026
+## v0.4.53 — Jun 26 – Jul 9, 2026
 
 _The current development version. New entries land here as features ship._
 
@@ -15,6 +15,10 @@ _The current development version. New entries land here as features ship._
 
 ### Improvements
 
+<!-- detail: 260709_actions-engine-activation WS3 (plan docs/plans/260709_actions-engine-activation/PLAN.md; CE2 stages 5-7, cross-family review). Mobile parity for the Actions Resolution Engine (rules taught via Dismiss/"Teach Rebel"). (Stage 6) InboxRulesSheet + useResolutionRules hook: view/narrow/enable/disable/delete taught rules from mobile; reads via a new server-only cloud allowlist supplement (inbox:rule:list, inbox:rule:flagged) — desktop rule reads remain local-only (Precedent B unchanged). (Stage 7) RebelResolutionNotes renders the same "Rebel marked this done"/"Rebel cleared this"/"Rebel set this aside" attribution desktop already shows, from the existing synced completedBy/completedReason/dismissedBy/archivedReason fields mobile was dropping. No store-version bump, no shared cloud-policy diff. Keep public copy non-technical — no IPC-channel/allowlist/hook internals. -->
+- **Actions rules and "why Rebel acted" now show up on mobile too** — Taught Rebel a rule about your Actions on desktop? You can now see and manage those rules from your phone as well — narrow one, switch it off, or delete it for good. And when Rebel marks something done, clears it, or sets it aside on your behalf, mobile now tells you why, same as desktop already did. One less reason to reach for your laptop.
+
+- **OpenAI's newest models, ready when you are** — GPT-5.6 (Sol, Terra, and Luna) has joined Rebel's model lineup. If you bring your own OpenAI key or use a Mindstone-managed plan, you can pick the newest reasoning tier — nothing changes for you unless you choose to switch.
 - **Reschedule any action — even the urgent ones** — You can now move any action to a different time — Today, This Week, later — no matter how urgent it is. Urgent actions used to be pinned to Today whether you liked it or not; now you decide when things land.
 
 - **Jump from your Home to an action** — Expand an action on your Home page and choose **Open in Actions** — Rebel takes you right to it in your Actions with the details already open, instead of leaving you to hunt for it. There you are.
@@ -150,6 +154,7 @@ _The current development version. New entries land here as features ship._
 
 ### Fixes
 
+- **Settings no longer blanks out on a file-access log entry** — Opening the file-access activity log could occasionally crash to a blank panel on certain entries. Fixed — it renders cleanly now.
 - **Cloud setup can't hang forever anymore** — Setting up your cloud occasionally stalled partway through with no way forward. Rebel now puts a firm time limit on the slow step, so setup either finishes or fails cleanly — it never leaves you staring at a spinner. Patience has its limits.
 
 - **Actions stuck "working" un-stick themselves** — Once in a while an action could get wedged in a "running…" state that never resolved. Rebel now spots these on its own and quietly clears them. Nothing left spinning.
