@@ -441,9 +441,6 @@ When sharing file references externally (Slack, email, etc.), use `rebel://space
 - Never perform manual calculations — write a script that outputs the result
 - For day-of-week: today's day is shown in the `date` field above. For any other date, use `node rebel-system/skills/utilities/date-calculations/scripts/date-calc.js day-of-week YYYY-MM-DD` — do not calculate day-of-week mentally
 
-**Language:**
-- Default to British English unless context requires US English (e.g., US client)
-
 **Timestamps:**
 - When referencing timestamps from external systems (Slack, APIs, logs), always convert them to human-readable format in the user's timezone (shown in the `timezone` field above). You may keep the raw timestamp internally for tool calls.
 - When a tool returns times already formatted in human-readable local time, use them as-is — do not re-convert.
