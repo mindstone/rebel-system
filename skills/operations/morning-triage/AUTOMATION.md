@@ -70,6 +70,8 @@ c. **Missing tags** — If no tags but the topic is clear, add 1-3 relevant tags
 
 ### 4. Check for completions (bounded, targeted searches only)
 
+When archiving in this step, always pass `resolution` (see Rules) — `'completed'` when there's evidence it's done, `'stale'` when it's no longer relevant.
+
 **Connector/user agnostic:** resolve Actions using the systems this user normally uses for that action type. Infer the likely system from exact references first, then source provenance, `Chief-of-Staff/README.md`, connected tool packages, recent source history, and scoped feedback examples. Do not assume Gmail, Slack, Notion, Linear, GitHub, or any single connector is present.
 
 **Evidence route:** exact reference first; same source thread/page/task second; user's normal tool for that person/topic third; at most one targeted cross-system search last. If those are inconclusive, leave active.
@@ -83,7 +85,7 @@ Build a priority queue and check up to 15 completion candidates per run. Priorit
 For email-action items ("reply to", "follow up with", "email X about"):
 - If the item has an email reference with threadId/messageId, fetch that specific thread first
 - If no thread reference exists, search sent mail for the specific person/company plus subject/topic keywords (last 7 days)
-- If same-thread reply evidence or a high-confidence person+topic match is found, archive via `rebel_inbox_update` with `archived: true`
+- If same-thread reply evidence or a high-confidence person+topic match is found, archive via `rebel_inbox_update` with `archived: true`, `resolution: 'completed'`, and an `evidenceNote` naming the reply evidence
 
 For messaging/communication items ("respond to X in [channel/Teams]", "send X to Y", "share X with Y", "tell Y about X", "let Y know", "message Y", "ping Y", "forward X to Y", "notify Y", "ask Y about X", "loop in Y", "update Y on X", "check with X", "confirm with X"):
 - Use `list_tool_packages()` to discover connected messaging tools (Slack, Microsoft Teams, etc.)
@@ -91,7 +93,8 @@ For messaging/communication items ("respond to X in [channel/Teams]", "send X to
 - Search the user's connected messaging platforms for recent messages (last 7 days) from the user mentioning the person or topic in the item title
 - For communication-derived scheduling/follow-up items ("schedule/sync/call/meet/follow up with X"), use the originating communication system first, then the user's normal communication system for that person/topic. Archive when later same-thread, same-person, or same-topic evidence shows the sync/call happened, was scheduled, was cancelled, or is no longer needed. This applies to Slack, Teams, email, CRM comments, or any connected communication tool — do not hardcode one platform.
 - For "check/confirm with" items, archive when the referenced thread or a targeted recent search shows an explicit answer, decision, confirmation, or "handled/done" update from the named person, the user, or another clearly responsible teammate. A mere topic mention is not enough.
-- If a matching completion message is found with HIGH confidence, archive via `rebel_inbox_update` with `archived: true`
+- If same-thread, same-person, or same-topic evidence shows the sync/call happened or was scheduled, archive via `rebel_inbox_update` with `archived: true`, `resolution: 'completed'`, and an `evidenceNote` naming the completion message
+- If that evidence shows the sync/call was cancelled or is no longer needed, archive via `rebel_inbox_update` with `archived: true`, `resolution: 'stale'`, and an `evidenceNote` naming the cancellation/no-longer-needed evidence
 - Cap at 2 messaging searches per item to keep cost bounded
 
 **Important:** Items created by this automation in step 2 (e.g., "Respond to [person] in [channel] about [topic]") must be checked here — match "respond to" items that mention a channel or "Teams" as messaging items, not email items.
@@ -139,6 +142,8 @@ Log: N new items created, M items enriched, K items archived. Be brief.
 - **Cap at 15 existing items per enrichment run** to keep cost bounded.
 - **Resolve from evidence, not vibes.** Do not archive because a related topic was mentioned; archive only when the evidence closes the user's open loop.
 - **Backlog sweep receipts should be user-facing.** After an authorised backlog sweep, report: "Rebel found X Actions that were already handled and cleared them." Keep the receipt short; do not create a new Action for the receipt.
+- **Every archive passes `resolution`.** Use `resolution: 'completed'` when there is evidence the task is genuinely done (reply sent, PR merged, issue closed, document finalised) — it lands in Completed, attributed to Rebel. Use `resolution: 'stale'` when the item is no longer relevant rather than done (past meeting, non-attendance, superseded, system receipts, delegated work) — it lands in the Auto-archived log the user reviews. Pass the evidence in `evidenceNote` (preferred) or `archiveReason`.
+- **Every archive confirms the item's identity.** When you set `resolution`, also pass `expectedTitle` (the item's exact title, copied verbatim from the list) and `expectedThreadId` when it has an email reference. The server rejects the call if they don't match the id — so when you triage several items in one pass, each item's evidence is applied to *that* item, never another's.
 - **Every resolved/dismissed item needs evidence.** Add a short evidence note naming the connector/source and why it closes the loop. Receipts must include counts by outcome and connector work performed. Never hide uncertainty; uncertain items stay active or go to needs-user-review.
 - **User-request items have the highest bar.** Never resolve explicit user-request items from indirect evidence unless exact-source evidence proves the user's requested outcome is complete, or the user authorises the cleanup result.
-- **Do NOT create meeting prep items** — the homepage already surfaces calendar-driven meeting prep cards. Creating "Prep for [meeting]" items in Actions is redundant.
+- **Do NOT create meeting prep items in this automation** — Source Capture owns meeting-prep creation (it queries the upcoming calendar and creates "Prep for [meeting]" items in Actions). Morning Triage only triages and enriches existing items; creating prep items here too would duplicate them.

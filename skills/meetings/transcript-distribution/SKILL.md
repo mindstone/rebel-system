@@ -160,6 +160,10 @@ description: "<copied from original>"
 source_type: meeting-transcript        # for full copies
 # OR
 source_type: meeting-summary            # for summaries
+# (Reserved — NOT a valid outcome of this automation: source_type: meeting-transcript-excerpt,
+#  distribution_method: excerpt, and the `-excerpt` filename suffix belong to the interactive
+#  share-across-spaces skill. Never generate partial copies from this unattended pipeline,
+#  and never "upgrade" an existing excerpt to a full copy.)
 
 distributed_from: "<workspace-relative path to the original CoS file>"
 distribution_method: full               # or: summary

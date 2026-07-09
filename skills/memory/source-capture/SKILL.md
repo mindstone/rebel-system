@@ -18,6 +18,7 @@ Capture citable sources as structured markdown files in `memory/sources/`. Sourc
 
 - [memory-update](../memory-update/SKILL.md) — Extracts facts to topics during conversations; topics should cite sources
 - [memory-cleanup](../beta/memory-cleanup/SKILL.md) — Maintains memory hygiene; handles stale sources
+- [share-across-spaces](../share-across-spaces/SKILL.md) — For user-requested cross-space sharing of a captured source (the automated path is transcript-distribution)
 
 ## Persona
 
@@ -244,7 +245,8 @@ Do not ask permission — this is automatic maintenance following the source cap
 After completing source capture, check if any active action items have been resolved by activity you observed during capture:
 - Call rebel_inbox_list to get active items
 - Cross-reference against the emails, calendar events, Slack activity, and documents you already retrieved in earlier steps
-- If you find HIGH confidence evidence of completion (e.g., sent email to the exact person, meeting 24h+ past, document finalised), archive the item via rebel_inbox_update with archived=true
+- If you find HIGH confidence evidence of completion (e.g., sent email to the exact person, document finalised), archive the item via rebel_inbox_update with archived=true and `resolution: 'completed'`, plus a short `evidenceNote` naming the evidence, plus `expectedTitle` (the item's exact title, copied verbatim) and `expectedThreadId` when it has an email reference — the server rejects the call if these don't match the id, so you never resolve the wrong item when handling several at once
+- If an item is no longer relevant rather than done (e.g., its meeting is 24h+ past), archive with `resolution: 'stale'` plus a short `evidenceNote`, and — exactly as for `completed` above — `expectedTitle` (the item's exact title, copied verbatim) and `expectedThreadId` when it has an email reference; the server rejects the call if these don't match the id. It lands in the Auto-archived log the user reviews, not Completed
 - Only archive when confident. When in doubt, leave it — false positives are worse than stale items
 - Do NOT archive items less than 24 hours old
 

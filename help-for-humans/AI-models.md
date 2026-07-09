@@ -1,6 +1,6 @@
 ---
 description: "How to power Rebel's AI — a flat-fee Mindstone plan or bring your own (ChatGPT Pro, OpenRouter, Anthropic) — then choose Planner, Main work, and Behind the Scenes models, including what happens when you pick a model outside your plan tier"
-last_updated: "2026-07-02"
+last_updated: "2026-07-03"
 ---
 
 # AI models
@@ -15,6 +15,20 @@ You only need **one** of these to get started.
 In onboarding and in [Settings → Agent & Voice → Intelligence](rebel://settings/agents), you pick how you want to power Rebel, then choose which models Rebel should use for **Planner**, **Main work**, and **Behind the Scenes**.
 
 **You're not locked to one model or one provider.** Connect more than one and switch whenever you like — and through OpenRouter alone you can reach Claude, GPT, Gemini, DeepSeek, Grok, and others on a single account. You can also run models on your own machine (e.g. via Ollama or LM Studio) or point Rebel at a company gateway — see [Custom models and gateways](rebel://library/rebel-system%2Fhelp-for-humans%2Fcustom-models-and-gateways.md). And with [Council Mode](rebel://library/rebel-system%2Fhelp-for-humans%2Fmulti-model-council-mode.md) you can put a question to several models at once.
+
+## The providers, one by one
+
+- **Bring your own account or key:**
+  - [ChatGPT Pro](rebel://library/rebel-system%2Fhelp-for-humans%2Fproviders%2Fchatgpt-pro.md) — sign in with your ChatGPT account
+  - [OpenRouter](rebel://library/rebel-system%2Fhelp-for-humans%2Fproviders%2Fopenrouter.md) — one account, many model families
+  - [Anthropic (Claude)](rebel://library/rebel-system%2Fhelp-for-humans%2Fproviders%2Fanthropic-claude.md) — direct Claude API access
+  - [OpenAI](rebel://library/rebel-system%2Fhelp-for-humans%2Fproviders%2Fopenai.md) — pay-as-you-go GPT API billing
+  - [Google Gemini](rebel://library/rebel-system%2Fhelp-for-humans%2Fproviders%2Fgoogle-gemini.md) — Gemini API key
+  - [Together AI](rebel://library/rebel-system%2Fhelp-for-humans%2Fproviders%2Ftogether-ai.md) — hosted open-source models
+  - [Cerebras](rebel://library/rebel-system%2Fhelp-for-humans%2Fproviders%2Fcerebras.md) — very fast open-model inference
+  - [Doubleword](rebel://library/rebel-system%2Fhelp-for-humans%2Fproviders%2Fdoubleword.md) — cheap models for background work
+- **Let Mindstone handle it:** [Mindstone plans](rebel://library/rebel-system%2Fhelp-for-humans%2Fmindstone-plans-and-billing.md) — flat-fee subscription, no keys
+- **Your own or company-hosted models:** [Custom models and gateways](rebel://library/rebel-system%2Fhelp-for-humans%2Fcustom-models-and-gateways.md) — Ollama, LM Studio, company gateways
 
 ## Backup connections
 
@@ -187,6 +201,8 @@ Inside any conversation, Rebel offers a **Quality Tier** slider that lets you pi
 The tier overrides your global **Planner** and **Main work** settings for that conversation only — your Settings defaults are untouched. Pick the tier that matches the job, not the model catalogue.
 
 If you prefer the old way, power users can still open the advanced panel inside the conversation's model selector to override specific Planner / Main work / effort fields directly.
+
+**Claude Sonnet 5** is Rebel's new everyday workhorse, and it now powers the **Balanced** and **Thorough** tiers on the slider (and the default **Main work** model if you haven't chosen your own). It's the fast, capable, sensibly-priced option for the bulk of your work — same price band as the model it replaces, with sharper reasoning. The previous **Claude Sonnet 4.6** is still fully available if you'd rather stay put: pick it in the **Main work** selector or add it via the model wizard.
 
 **Claude Fable 5** is available again (access briefly lapsed in mid-2026). It's Rebel's most capable — and priciest — model, and it now powers the **Maximum** tier on the slider, so reaching top quality is one drag away. It's the "cost be damned, get this right" setting — Fable is around twice the price of the everyday models and can occasionally decline a request its safety training flags, so keep your routine work on **Balanced** or **Thorough** and save **Maximum** for when a task genuinely warrants it. You can also pick Fable directly in the **Planner** or **Main work** selector, or add it via the model wizard.
 

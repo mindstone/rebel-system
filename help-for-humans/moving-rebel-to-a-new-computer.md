@@ -1,6 +1,6 @@
 ---
 description: "How to move Rebel from one computer to another, keeping your conversations, settings, and memories"
-last_updated: "2026-06-09"
+last_updated: "2026-07-07"
 ---
 
 # Moving Rebel to a New Computer
@@ -16,6 +16,12 @@ Rebel can package your setup into a single **transfer file** that you carry to t
 3. **Sign in again.** For your security, sign-ins don't travel: you'll re-add your AI provider keys, reconnect your connectors (Google, Slack, Salesforce, HubSpot, and so on), and pair cloud continuity again. Rebel shows a **"Finish settling in"** checklist after the move so nothing gets missed. Cloud-synced folders (Google Drive, OneDrive, etc.) re-sync through their own apps -- install those and sign in, and your files reappear.
 
 That's it. Everything else -- conversations, settings, memories, automations, inbox, spaces -- comes across automatically. The transfer only runs on a fresh install; if the new computer already has Rebel set up, Rebel leaves it untouched.
+
+### Lost the old computer? Restore from your cloud
+
+No transfer file because the old machine is gone? If you were running Rebel in the cloud, you can pull everything back from there instead. On the new computer, sign in, then choose **"Already using Rebel? Bring it over" → "From your cloud"**, and enter your cloud address and access token. Rebel downloads a full backup and restores it -- conversations, Library, memories, operators, automations, and your settings -- then shows the same **"Finish settling in"** checklist to re-add AI access and reconnect your services.
+
+If you don't have the access token to hand and your cloud runs in your own Fly.io account, use **"Recover with Fly"** on that screen: paste a Fly API token and Rebel sorts out a fresh access token for you -- no command line needed.
 
 > Prefer to do it by hand (or on an older version without the transfer feature)? The manual method below still works.
 
@@ -61,6 +67,7 @@ If your workspace (or any of your spaces) lives inside a cloud-synced folder -- 
 1. Install the sync app (Google Drive for Desktop, OneDrive, iCloud Drive, etc.) on your new computer.
 2. Sign in and let it finish its initial sync. This can take a while depending on how much is in the folder.
 3. Confirm the synced folder exists on your new machine. Check your sync app's preferences if you're not sure where it stores files locally.
+4. **Make the Rebel folder available offline.** Most sync apps keep files "online only" by default -- they show up in the folder but aren't actually downloaded until something opens them. Rebel needs the real files on disk to work reliably. Right-click the folder that holds your Rebel workspace (and any synced spaces) and choose your sync app's "keep on this device" option -- **Available offline** (Google Drive), **Always keep on this device** (OneDrive), **Make available offline** (Dropbox), or **Download Now** / **Keep Downloaded** (iCloud Drive on Mac) -- then wait for it to finish downloading before launching Rebel.
 
 > **Not using cloud storage?** If your workspace is in a regular local folder (like `~/Documents/Rebel`), skip this step entirely.
 
@@ -96,11 +103,13 @@ To find this folder: press Win+R, type `%APPDATA%`, and press Enter. Look for th
 Copy it using your file manager, a USB drive, AirDrop, network share -- whatever's convenient.
 
 
-## Step 4: Copy Your Workspace
+## Step 4: Copy or Sync Your Workspace
 
-Copy your workspace folder to the new computer. If you're not sure where it is, check `app-settings.json` inside the app data folder you just copied -- look for `coreDirectory`.
+If your workspace is **not** cloud-synced, copy the workspace folder to the new computer. If you're not sure where it is, check `app-settings.json` inside the app data folder you just copied -- look for `coreDirectory`.
 
 You can put the workspace in the same path as before, or choose a new location (you'll fix the path in the next step).
+
+> **Workspace in a cloud-synced folder?** Don't copy it by hand -- it arrives on its own once the sync app has finished and you've set the folder to be available offline (Step 2). Copying on top of a syncing folder can create duplicate or conflicted files.
 
 
 ## Step 5: Fix the Settings File
@@ -148,6 +157,8 @@ After the router reset, your connected services (Google Workspace, Microsoft 365
 
 Go to **Settings → Connectors** and reconnect each service. You'll sign in to each one as you normally would.
 
+If you use Rebel's web or mobile companions, you'll also need to **pair cloud continuity again** on the new machine -- device pairings don't travel. Turn it back on in **[Settings → Workspace → Cloud Sync](rebel://settings/cloud)** and re-pair your phone, tablet, or browser. See [Cloud continuity and mobile](library://rebel-system/help-for-humans/cloud-continuity-and-mobile.md) for the full setup.
+
 
 ## What Carries Over
 
@@ -160,8 +171,9 @@ Go to **Settings → Connectors** and reconnect each service. You'll sign in to 
 | Access codes (API keys) | Preserved |
 | Model preferences | Preserved |
 | Automations | Preserved |
-| Spaces and files | Preserved (if workspace copied) |
+| Spaces and files | Preserved (if workspace copied or fully synced offline) |
 | Connector sign-ins (Google, Slack, etc.) | **Need reconnecting** |
+| Cloud continuity (web/mobile pairing) | **Need re-pairing** |
 
 
 ## Troubleshooting

@@ -26,6 +26,8 @@ Attach files directly to your conversations by dragging them into the composer o
 - Office documents: 50MB max
 - Text files: 5MB max
 
+These limits are soft ceilings for non-image files you attach straight from your own computer — see **Big Files: Linked Instead of Rejected** below. They're hard limits for images, anything pasted from your clipboard, and anything attached through the cloud or mobile app.
+
 
 ## How Attachments Work
 
@@ -37,6 +39,18 @@ When you attach a file, Rebel processes it before sending:
 4. **Text files** are included directly in your message
 
 The AI receives the extracted content as part of your conversation, so it can answer questions, summarize, analyze, or help you work with the material.
+
+
+## Big Files: Linked Instead of Rejected
+
+If a file you attach straight from your own computer is too big to send as a copy, Rebel doesn't just bounce it — it opens the file live from where it lives on your computer instead. No copying it into a folder first, no upload, no size ceiling.
+
+You'll see a small link badge on the attachment. It means: Rebel opens this file from your computer when it runs — leave it where it is (don't move, rename, or delete it) until Rebel's finished with it in that conversation.
+
+This applies to any non-image file you drag or pick from your own computer — PDFs, Word/Excel/PowerPoint documents, RTF, text/code files, videos, archives, design files, and more. It doesn't apply to:
+- **Images** — an oversized image is still rejected; Rebel needs the actual image to look at, not just a pointer to it
+- **Files pasted from your clipboard** — these always travel as a copy, so the size limits above still apply
+- **The cloud and mobile app** — there, every attachment travels as a copy regardless of size, so the usual limits apply too
 
 
 ## What Gets Extracted
@@ -91,10 +105,12 @@ The quick extraction above works well for most tasks. But if you need more from 
 The file format isn't recognized. Try converting to a supported format (e.g., export as PDF or save as .docx).
 
 **"File too large" message:**
-The file exceeds the size limit. For large documents, try:
+For an image, a file pasted from your clipboard, or anything attached through the cloud or mobile app, this means it exceeds the size limit. Try:
 - Splitting into smaller files
 - Saving to your workspace and asking Rebel to read it directly
 - For PDFs, the text will be extracted automatically if over 25MB
+
+For a non-image file you attach directly from your own computer, you shouldn't see this anymore — Rebel links to it instead of rejecting it (see **Big Files: Linked Instead of Rejected** above). If you do see it for a file attached that way, Rebel couldn't get a usable location for the file on disk — try re-attaching it, or save it to your workspace and ask Rebel to read it directly.
 
 **Extracted text looks wrong:**
 Some documents with complex formatting may not extract perfectly. If the content looks garbled:

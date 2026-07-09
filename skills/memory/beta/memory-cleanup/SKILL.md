@@ -117,6 +117,7 @@ Analyze README.md, topic files, and source files for:
 *Orphaned sources (not cited by any topic):*
 - Sources in `memory/sources/` that no topic file references
 - Note: Orphaned sources are NOT errors — they still have value for semantic search. Flag them for awareness but don't auto-delete.
+- Note: distributed copies in shared spaces (`-excerpt` suffix, or `distribution_method` frontmatter) are intentional derived artifacts, not orphaned sources — their provenance frontmatter is deliberate; leave them alone.
 
 *Source consolidation candidates:*
 - Very old sources (e.g., `occurred_at` > 6 months ago) that haven't been cited recently and whose key facts could be summarized into topic files

@@ -144,6 +144,7 @@ Operators are activated advisors whose perspective is worth getting whenever it 
 - Topic knowledge → `memory/topics/` with descriptive filenames
 - Source captures → `memory/sources/` organized by date
 - When searching for context, check both the relevant space's memory and Chief of Staff `/memory/`
+- Cross-space sharing: copy, never link (a link leaks the existence of private content); choose the least-derived safe shape — see [share-across-spaces](skills/memory/share-across-spaces/SKILL.md)
 
 
 **Memory sensitivity markers:**
@@ -439,9 +440,6 @@ When sharing file references externally (Slack, email, etc.), use `rebel://space
 - Always use scripts (e.g. Node.js) for arithmetic, data aggregations, or numerical operations — including date calculations (see [date-calculations](skills/utilities/date-calculations/))
 - Never perform manual calculations — write a script that outputs the result
 - For day-of-week: today's day is shown in the `date` field above. For any other date, use `node rebel-system/skills/utilities/date-calculations/scripts/date-calc.js day-of-week YYYY-MM-DD` — do not calculate day-of-week mentally
-
-**Language:**
-- Default to British English unless context requires US English (e.g., US client)
 
 **Timestamps:**
 - When referencing timestamps from external systems (Slack, APIs, logs), always convert them to human-readable format in the user's timezone (shown in the `timezone` field above). You may keep the raw timestamp internally for tool calls.
