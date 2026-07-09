@@ -4,14 +4,28 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ---
 
-## v0.4.52 — Jun 26, 2026
+## v0.4.53 — Jun 26 – Jul 9, 2026
 
 _The current development version. New entries land here as features ship._
+
+### Highlights
+
+<!-- detail: Cloud self-restore (plan docs/plans/260707_cloud-self-restore/PLAN.md). If you run Rebel in the cloud, your data lives there too. When you set up Rebel on a new computer and connect to your cloud, Rebel now pulls your data back down — conversations, settings, spaces, your Chief of Staff, and memory — instead of treating the new machine as a blank slate. It reuses Rebel's existing transfer-file machinery: it produces a bundle from your cloud and imports it into the fresh install. A fresh install now refuses to overwrite a cloud that already holds your data, and there's an opt-in "replace this computer's data with my cloud" path for a machine that's already set up (your existing data is set aside, not deleted, so it's reversible). Some things can't travel for safety reasons — connected apps like Gmail and Slack need to be signed in again after a restore. -->
+- **Restore Rebel on a new computer from your cloud** — Lost your laptop, or just got a new one? If you run Rebel in the cloud, your Rebel life is safe up there — and now you can bring it back. Set up Rebel on the new machine, connect it to your cloud, and Rebel pulls your conversations, settings, spaces, Chief of Staff, and memory back down instead of starting from a blank slate. Already set this machine up and want to pull your cloud over the top instead? There's an opt-in path for that too — and your old data is set aside as a recoverable backup, not deleted, in case you change your mind. If you've lost your cloud access token, Rebel can help you recover it; connected apps like Gmail and Slack will still ask you to sign in again. Your Rebel, restored.
 
 ### Improvements
 
 <!-- detail: 260709_actions-engine-activation WS3 (plan docs/plans/260709_actions-engine-activation/PLAN.md; CE2 stages 5-7, cross-family review). Mobile parity for the Actions Resolution Engine (rules taught via Dismiss/"Teach Rebel"). (Stage 6) InboxRulesSheet + useResolutionRules hook: view/narrow/enable/disable/delete taught rules from mobile; reads via a new server-only cloud allowlist supplement (inbox:rule:list, inbox:rule:flagged) — desktop rule reads remain local-only (Precedent B unchanged). (Stage 7) RebelResolutionNotes renders the same "Rebel marked this done"/"Rebel cleared this"/"Rebel set this aside" attribution desktop already shows, from the existing synced completedBy/completedReason/dismissedBy/archivedReason fields mobile was dropping. No store-version bump, no shared cloud-policy diff. Keep public copy non-technical — no IPC-channel/allowlist/hook internals. -->
 - **Actions rules and "why Rebel acted" now show up on mobile too** — Taught Rebel a rule about your Actions on desktop? You can now see and manage those rules from your phone as well — narrow one, switch it off, or delete it for good. And when Rebel marks something done, clears it, or sets it aside on your behalf, mobile now tells you why, same as desktop already did. One less reason to reach for your laptop.
+
+- **OpenAI's newest models, ready when you are** — GPT-5.6 (Sol, Terra, and Luna) has joined Rebel's model lineup. If you bring your own OpenAI key or use a Mindstone-managed plan, you can pick the newest reasoning tier — nothing changes for you unless you choose to switch.
+- **Reschedule any action — even the urgent ones** — You can now move any action to a different time — Today, This Week, later — no matter how urgent it is. Urgent actions used to be pinned to Today whether you liked it or not; now you decide when things land.
+
+- **Jump from your Home to an action** — Expand an action on your Home page and choose **Open in Actions** — Rebel takes you right to it in your Actions with the details already open, instead of leaving you to hunt for it. There you are.
+
+- **Hover to see the exact time** — Those friendly "2 hours ago" and "last Tuesday" labels are lovely until you need the actual time. Hover over one now — on your actions and elsewhere — and Rebel shows you the precise timestamp. Vague at a glance, exact on demand.
+
+- **Approve the wider folder when you need to** — When Rebel asks to read something outside your spaces, you can now approve the enclosing folder too — one level wider than the file's own folder — alongside "just this file" and "its folder". For the times "yes" needs a little more room.
 
 <!-- detail: 260707_actions-teach-rebel-rules M2 (plan docs/plans/260707_actions-teach-rebel-rules/PLAN.md; CE2 medium, native-Opus implementers + per-stage cross-family GLM-5.2 review; LLM-prompt changes eval-gated). User-visible surface this milestone = the new 'inactive' / "Rebel set this aside" lifecycle state: the two deterministic janitor passes (periodicFreshnessCheck + retroactiveInboxCleanup) route activeness-expiry (meeting-prep-time-passed, relevantDate-expired) through one shared helper to a set-aside disposition (status:'inactive' + archivedReason, NOT completedBy/dismissedBy) — previously archived done-ish; the deterministic pass judges activeness ONLY, never completion. INBOX store 7→8 (breaking-classified, floor→142, beta-first). Behind-the-scenes groundwork (NOT user-visible, ships flag-off): additive-optional completionSpec/completionCheck/fromEmail/fromDomain on InboxItem; ingest prompt (eval-gated) emits a success criterion + sender facets; new core inboxCompletionChecker + completion-check judge prompt + eval harness, all gated behind inboxCompletionAutoResolveEnabled (default false), fail-safe by construction (missing/ambiguous evidence → unknown → leave in place; mcp-probe never blind-fired). Keep public copy non-technical + focused on set-aside — the completion-checker is off and changes no behaviour yet, so don't advertise it. No completionSpec/completionCheck/store-version/janitor/flag internals in public copy. -->
 - **Rebel can set an action aside — without pretending you did it** — Some things on your list don't get *done* so much as *pass their moment*: the prep for a meeting that's already happened, a nudge tied to a date that's gone by. Rebel used to quietly file those away in a manner that looked suspiciously like "done." Now it does the honest thing — moves them to their own **set aside** spot, clearly *not* claiming you finished them, with a one-line note on why ("meeting time passed"). Your done list stays a real record of what you actually did, and the stuff that simply aged out stops cluttering your view. Rebel only sets something aside when it can tell the moment has genuinely passed; when it isn't sure, it leaves well alone.
@@ -140,6 +154,13 @@ _The current development version. New entries land here as features ship._
 
 ### Fixes
 
+- **Settings no longer blanks out on a file-access log entry** — Opening the file-access activity log could occasionally crash to a blank panel on certain entries. Fixed — it renders cleanly now.
+- **Cloud setup can't hang forever anymore** — Setting up your cloud occasionally stalled partway through with no way forward. Rebel now puts a firm time limit on the slow step, so setup either finishes or fails cleanly — it never leaves you staring at a spinner. Patience has its limits.
+
+- **Actions stuck "working" un-stick themselves** — Once in a while an action could get wedged in a "running…" state that never resolved. Rebel now spots these on its own and quietly clears them. Nothing left spinning.
+
+- **Marking actions done is more dependable** — Closed a few gaps where telling Rebel an action was finished didn't always take. Done means done now.
+
 <!-- detail: 260708_actions-autodone-outcome-aware (fix; commit 42b56a5939). Actions with "Mark done when finished" enabled could auto-complete off a transient isBusy liveness edge rather than the turn genuinely finishing its work — a false-positive auto-done. Now outcome-aware: resolves on the inbox auto-resolve outcome gated by turnEndReason, not on an isBusy edge, so an action is only marked done when its work actually completed. Keep public copy non-technical — no isBusy/turnEndReason/onInboxAutoResolve internals. -->
 - **"Mark done when finished" now waits until it's actually finished** — If you'd asked Rebel to tick an action off once it wrapped up, it could occasionally jump the gun and mark it done before the work had really landed. Now it waits for the work to genuinely complete before crossing anything off — done means done.
 
@@ -211,6 +232,10 @@ _The current development version. New entries land here as features ship._
 
 <!-- detail: 260701_fix-composer-remount-draft-loss (bug_mode + follow-on enhancement). Follow-up to the finish-line fix: the SAME draft-loss mechanism was still live on every other composerOverride surface (agent question cards, connector build/setup cards, auth-required card in SessionSurfaceContent) — each unmounts <ComposerWithState>, and the remounted TipTap editor's mount effect editor.setEditable(!disabled) emitted a spurious empty change (setEditable's emitUpdate defaults true) that the immediate-empty-delete path took as a real clear. Stage 1: fixed at the source (setEditable(!disabled, false)) — kills the typed-draft-loss class by construction for all current + future remount sites; real-editor red→green tests + genuine-clear invariant. Stage 2 (Fix B, user-directed): also keep the composer mounted+hidden under composerOverride so component-local attachments + @-mentions survive too; main mic routes to the (hidden) composer, card mic to the card box; added a single-active-recorder lock (activeRecorderStore.tryClaim, hook-enforced) so two mics can't record at once, plus an "Added to your message" hint when dictation lands in a hidden composer. Do NOT mention composer/TipTap/setEditable internals in public copy. -->
 - **Your draft survives the agent's interruptions too** — Same fix, wider net: if Rebel popped up a question, a connector-setup card, or a sign-in prompt while you had a message half-typed, that message — and any files you'd attached — could vanish when the card cleared. Now it stays put, no matter what interrupts you.
+
+### Under the Hood
+
+- **Rebel finds your actions by meaning** — Ask Rebel about something on your list and it can now search your actions by what they *mean*, not just the exact words — so "that thing about the budget" turns up the right action even if it never literally said "budget". No new buttons; your assistant just got better at finding things.
 
 ## v0.4.51 — Jun 25, 2026
 
