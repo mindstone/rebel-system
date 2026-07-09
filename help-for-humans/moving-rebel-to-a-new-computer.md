@@ -17,6 +17,12 @@ Rebel can package your setup into a single **transfer file** that you carry to t
 
 That's it. Everything else -- conversations, settings, memories, automations, inbox, spaces -- comes across automatically. The transfer only runs on a fresh install; if the new computer already has Rebel set up, Rebel leaves it untouched.
 
+### Lost the old computer? Restore from your cloud
+
+No transfer file because the old machine is gone? If you were running Rebel in the cloud, you can pull everything back from there instead. On the new computer, sign in, then choose **"Already using Rebel? Bring it over" → "From your cloud"**, and enter your cloud address and access token. Rebel downloads a full backup and restores it -- conversations, Library, memories, operators, automations, and your settings -- then shows the same **"Finish settling in"** checklist to re-add AI access and reconnect your services.
+
+If you don't have the access token to hand and your cloud runs in your own Fly.io account, use **"Recover with Fly"** on that screen: paste a Fly API token and Rebel sorts out a fresh access token for you -- no command line needed.
+
 > Prefer to do it by hand (or on an older version without the transfer feature)? The manual method below still works.
 
 ---
