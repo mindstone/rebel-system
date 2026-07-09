@@ -1,6 +1,6 @@
 ---
-description: "How Rebel handles passwords, API keys, and connector sign-ins in desktop-only and cloud continuity mode"
-last_updated: "2026-04-16"
+description: "How Rebel handles passwords, API keys, and connector sign-ins in desktop-only and cloud continuity mode — including stored keys Rebel can use without seeing them"
+last_updated: "2026-07-09"
 ---
 
 # Secrets and Passwords
@@ -35,6 +35,22 @@ When you connect services through **[Settings → Connectors](rebel://settings/t
 ### API keys
 
 If a service needs an API key instead, you add it in Settings. Rebel keeps that key in its local app data, not in your workspace files.
+
+## Keys Rebel can use for you — without ever seeing them
+
+Sometimes you want Rebel to *use* a key on your behalf — pull data from a service that needs an API key, run a script that authenticates with a token. You can hand Rebel a **stored key** for exactly that, and here's the reassuring part: **Rebel uses it without the AI ever seeing the value.**
+
+Add one in **[Settings → Privacy & Safety](rebel://settings/safety)**, in the **"Keys Rebel can use"** section. In plain terms:
+
+- **You paste the key in once, into Settings.** It's encrypted using this computer's secure storage — the same protection your operating system uses for saved passwords.
+- **The AI only sees the *name* you gave it** (e.g. "Payments API key"), never the value. There's deliberately **no** "show me the key" command it can run — so a sneaky instruction hidden in an email or web page has nothing to read.
+- **The real value is unlocked only at the moment a command runs**, and slipped into *that one command's* environment — never into the conversation, your notes, or the logs. When the command finishes, it's gone again.
+
+**An example.** Say a payment service needs an API key to list your transactions. You add it in Settings as "Payments API key". Then you can just ask Rebel, *"grab my last 10 charges."* Rebel runs the request with your key injected for that single call, gets the data, and shows you the result — and the key never appears anywhere you (or the AI) could read it back.
+
+The honest framing: **Rebel gives a tool access to the key while it runs** — not "the key can never be exposed." The key does get used; what's guaranteed is that the AI reading your conversation never gets to look at it, and it doesn't leak into your chat history. For the tightest safety, use a **restricted key** (read-only, minimal scope) where the service offers one — that limits what any single command could ever do.
+
+> **This works on this computer only.** Because it relies on your computer's secure storage, stored keys aren't available when Rebel is running in the cloud or on mobile yet. If you ask for something there that needs one, Rebel will tell you it's desktop-only rather than half-doing it.
 
 ## With cloud continuity enabled
 
