@@ -38,7 +38,7 @@ If you run Rebel in the cloud -- your own self-managed Fly.io instance or a Mind
 
 **What comes back:** conversations, Actions, automations, your Library and spaces, memories, operators, personalisation and preferences, safety rules, usage/stats/feedback, and general settings. Connector sign-ins and device pairings don't travel -- you re-add those in step 7.
 
-> Prefer to do it by hand (or on an older version without cloud restore)? The manual method below still works.
+> Prefer to do it by hand (or on an older version without cloud restore)? The manual method below still works. And if "From your cloud" won't run at all -- and you're comfortable with the command line -- there's an [advanced manual cloud recovery](#advanced-recovering-your-cloud-by-hand) further down. It's the last resort, not the first.
 
 ---
 
@@ -173,6 +173,94 @@ After the router reset, your connected services (Google Workspace, Microsoft 365
 Go to **Settings → Connectors** and reconnect each service. You'll sign in to each one as you normally would.
 
 If you use Rebel's web or mobile companions, you'll also need to **pair cloud continuity again** on the new machine -- device pairings don't travel. Turn it back on in **[Settings → Workspace → Cloud Sync](rebel://settings/cloud)** and re-pair your phone, tablet, or browser. See [Cloud continuity and mobile](library://rebel-system/help-for-humans/cloud-continuity-and-mobile.md) for the full setup.
+
+
+## Advanced: recovering your cloud by hand
+
+This is the **last resort**, for when your machine is gone, the built-in **"From your cloud"** restore won't run, and you (or someone helping you) are comfortable with a terminal. It talks to your cloud instance directly, downloads everything on it, and puts it back into place by hand. It works no matter how old your cloud is, but it's fiddly and involves editing configuration files.
+
+> **Try "From your cloud" first.** The built-in restore (above) does all of this for you -- correctly, and without touching a terminal. Only continue here if it genuinely fails. If it does fail, it's worth [reporting the bug](rebel://feedback/bug) so we can fix it for everyone.
+
+> **⚠️ Read before you start.**
+> - **You'll run terminal commands and edit files by hand.** A wrong path or a stray keystroke can lose data. Make the backups in Step 1 and don't skip them.
+> - **The download may contain old secrets** -- API keys, access tokens -- that were saved on the cloud. Don't paste anything you don't recognise into your setup, and see Step 9 about retiring old keys.
+> - **If you're not comfortable with any of this, stop and contact support.** There's no prize for pressing on.
+
+### What you'll need
+
+- The **Fly command-line tool** (`flyctl`), installed and signed in to the account that owns your cloud instance. If your instance is managed for you rather than self-hosted, whoever manages it needs to run these steps -- your own login won't have access.
+- Your **cloud app name** -- the `rebel-cloud-xxxxxxxx` part of your cloud address (`https://rebel-cloud-xxxxxxxx.fly.dev`). Use the name on its own, **not** the full URL.
+- Enough free disk space for a full copy of everything on your cloud.
+- Rebel **closed**.
+
+### Step 1: Back up this computer first
+
+Before changing anything:
+
+1. Quit Rebel.
+2. Copy your current **app data** folder somewhere safe (your Desktop is fine) -- see the [table above](#what-youre-moving) for the location on your platform.
+3. If this machine already has a workspace or `Chief-of-Staff` folder, copy that too.
+
+If anything goes wrong later, these let you put things back exactly as they were.
+
+### Step 2: Check your workspace is actually on the cloud
+
+Not everything is always synced up. Peek at what's there before downloading (replace `rebel-cloud-xxxxxxxx` with your app name):
+
+```bash
+fly ssh console -a rebel-cloud-xxxxxxxx -C "ls /data"
+```
+
+You should see `workspace`, `sessions`, and `app-settings.json`. **If `workspace` is missing or empty**, your Library, spaces, and memories were never synced to the cloud and can't be recovered this way -- only your conversations and settings will come back. Good to know before you get your hopes up.
+
+### Step 3: Download your cloud data
+
+Run this from your **normal terminal** (not from inside an SSH session):
+
+```bash
+fly ssh console -a rebel-cloud-xxxxxxxx -C "tar czf - -C /data ." > ~/Downloads/rebel-cloud-backup.tgz
+```
+
+What it does: connects to your cloud instance, bundles everything under `/data` into a single compressed archive, and saves it to your `Downloads` folder.
+
+### Step 4: Unpack the archive
+
+```bash
+mkdir -p ~/Downloads/rebel-cloud-backup
+tar xzf ~/Downloads/rebel-cloud-backup.tgz -C ~/Downloads/rebel-cloud-backup
+```
+
+Inside `~/Downloads/rebel-cloud-backup` you'll find `app-settings.json`, a `sessions` folder, a `workspace` folder, and possibly `mcp` and `logs` folders.
+
+### Step 5: Put the files in place
+
+- **App data** -- copy `app-settings.json` and the `sessions` folder into your app data folder (the location from the [table above](#what-youre-moving)).
+- **Workspace** -- copy the `workspace` folder to wherever you'd like your workspace to live. Any regular local folder works. *Optionally*, put it inside a cloud-synced folder (Google Drive, OneDrive, iCloud Drive, Dropbox) so it's backed up going forward -- if you do, make the folder **available offline** afterwards (see [Step 2 of the manual method](#step-2-install-your-cloud-sync-app-if-applicable)).
+- **Don't copy `mcp/` or `logs/`** -- the connector config is full of paths from the cloud and Rebel rebuilds it from scratch; the logs are just history.
+
+### Step 6: Fix the paths in the settings file
+
+Open `app-settings.json` (the one you just copied into your app data folder) in a text editor. The cloud stored everything under `/data`, so a few paths need repointing to where things live on this computer:
+
+| Setting | Change it to |
+|---------|-------------|
+| `coreDirectory` | The actual path where you put the `workspace` folder in Step 5 (it will currently say something like `/data/workspace`) |
+| `spaces` → each entry's `sourcePath` | The matching folder inside your new workspace location (each currently points somewhere under `/data/workspace/...`) |
+| `mcpConfigFile` | **Delete this line entirely** -- Rebel recreates it |
+
+Save the file. The `spaces` source paths are the easy one to miss -- check every entry.
+
+### Step 7: Reset the connector config
+
+If copying left an `mcp` folder in your app data by mistake, delete it (or rename `mcp/super-mcp-router.json` to `super-mcp-router-old.json`). Rebel builds a fresh one with the right paths on the next launch. See [Step 6 of the manual method](#step-6-reset-the-connector-router) for the exact location.
+
+### Step 8: Launch and sign back in
+
+Open Rebel. Sign in again, reconnect your connectors, re-add your AI provider access, and re-pair cloud continuity if you use the web or mobile companions -- none of those travel, by design. Then check the recovery worked: old conversations are there, memories and Chief of Staff are intact, your spaces and files are present, and a test message gets a reply.
+
+### Step 9: Retire any old keys
+
+The download may include an old AI-provider **API key** that was saved on the cloud. Don't reuse a key you no longer recognise -- an old one left active can quietly run up charges. If you find one, revoke it on the provider's own website (for example, in your Anthropic or OpenAI account), and let Rebel use your current subscription or freshly-added keys instead.
 
 
 ## What Carries Over
