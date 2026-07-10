@@ -1,6 +1,6 @@
 ---
 description: "Connect Google Workspace for Gmail, Calendar, Drive, Docs, Sheets, Slides, Contacts, and Forms"
-last_updated: "2026-05-19"
+last_updated: "2026-07-10"
 ---
 
 # Google Workspace
@@ -50,12 +50,13 @@ Connect additional Google accounts (personal + work, or multiple workspaces) by 
 
 - **Email search**: Use Gmail syntax: `from:alice`, `subject:invoice`, `has:attachment`, `newer_than:7d`
 - **Calendar context**: Rebel can see your calendar to help with scheduling and meeting prep. Rebel detects timezone differences between you, your calendar events, and your device — so times are always shown correctly, even when you're travelling or scheduling across zones
-- **Drive access**: Searches files you own or have access to
+- **Drive access**: Searches files you own or have access to, including shared/Team Drives you're a direct member of
+- **Shared/Team Drives**: If you need to browse a large shared drive, search across a shared drive you're not a direct member of, or reliably index shared content for the Library, sync it locally with Google Drive Desktop instead — see [Local File Sync Alternative](#local-file-sync-alternative) below
 
 
 ## Local File Sync Alternative
 
-For offline access or IDE integration, you can also use Google Drive Desktop to sync files locally. See [Google-Drive](library://rebel-system/help-for-humans/google-drive-desktop-local-sync.md) for setup.
+For offline access, IDE integration, or **reliable access to shared/Team Drives** (a large shared drive can be slower or less complete to browse via the connector than one you're a direct member of), you can also use Google Drive Desktop to sync files locally. This is the recommended way to make a shared drive's contents — skills, memories, documents — available to Rebel as regular files, including for Library semantic search. See [Google-Drive](library://rebel-system/help-for-humans/google-drive-desktop-local-sync.md) for setup.
 
 
 ## See Also
