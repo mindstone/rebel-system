@@ -4,7 +4,7 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ---
 
-## v0.4.53 — Jun 26 – Jul 9, 2026
+## v0.4.53 — Jun 26 – Jul 10, 2026
 
 _The current development version. New entries land here as features ship._
 
@@ -14,6 +14,9 @@ _The current development version. New entries land here as features ship._
 - **Restore Rebel on a new computer from your cloud** — Lost your laptop, or just got a new one? If you run Rebel in the cloud, your Rebel life is safe up there — and now you can bring it back. Set up Rebel on the new machine, connect it to your cloud, and Rebel pulls your conversations, settings, spaces, Chief of Staff, and memory back down instead of starting from a blank slate. Already set this machine up and want to pull your cloud over the top instead? There's an opt-in path for that too — and your old data is set aside as a recoverable backup, not deleted, in case you change your mind. If you've lost your cloud access token, Rebel can help you recover it; connected apps like Gmail and Slack will still ask you to sign in again. Your Rebel, restored.
 
 ### Improvements
+
+<!-- detail: 260710_space-link-reliability. Space links now distinguish why they cannot open and offer the matching next step: try again, open the Space, or check Space settings. Temporarily unreachable Spaces can be retried manually, each click performs the lookup once instead of twice, and ambiguous older links stop rather than silently choosing one of several same-named Spaces. -->
+- **Space links now tell the truth when they stumble** — Instead of blaming every failed link on vague syncing, Rebel now explains what actually got in the way and offers the useful next step: try again, open the Space, or check your Space settings. Temporarily unreachable Spaces can be retried, clicks no longer repeat the same work, and older links that match several same-named Spaces now ask you to disambiguate instead of quietly picking one — guesswork has left the building.
 
 <!-- detail: 260709_actions-engine-activation WS3 (plan docs/plans/260709_actions-engine-activation/PLAN.md; CE2 stages 5-7, cross-family review). Mobile parity for the Actions Resolution Engine (rules taught via Dismiss/"Teach Rebel"). (Stage 6) InboxRulesSheet + useResolutionRules hook: view/narrow/enable/disable/delete taught rules from mobile; reads via a new server-only cloud allowlist supplement (inbox:rule:list, inbox:rule:flagged) — desktop rule reads remain local-only (Precedent B unchanged). (Stage 7) RebelResolutionNotes renders the same "Rebel marked this done"/"Rebel cleared this"/"Rebel set this aside" attribution desktop already shows, from the existing synced completedBy/completedReason/dismissedBy/archivedReason fields mobile was dropping. No store-version bump, no shared cloud-policy diff. Keep public copy non-technical — no IPC-channel/allowlist/hook internals. -->
 - **Actions rules and "why Rebel acted" now show up on mobile too** — Taught Rebel a rule about your Actions on desktop? You can now see and manage those rules from your phone as well — narrow one, switch it off, or delete it for good. And when Rebel marks something done, clears it, or sets it aside on your behalf, mobile now tells you why, same as desktop already did. One less reason to reach for your laptop.
