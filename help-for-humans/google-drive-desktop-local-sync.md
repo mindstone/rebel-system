@@ -1,6 +1,6 @@
 ---
 description: "Guide to using Google Drive Desktop for local file sync. For direct Google Drive access via AI, use Settings → Connectors → Google Workspace instead."
-last_updated: "2026-06-18"
+last_updated: "2026-07-10"
 ---
 
 # Using Google Drive Desktop (Local Sync)
@@ -27,6 +27,7 @@ Use Google Drive Desktop when you want:
 - To add a Drive folder as a Rebel Space (see [Spaces: shared folders](space-shared-folders.md))
 - Faster file access for large workspaces
 - Integration with IDEs like Cursor
+- **Reliable access to a shared/Team Drive** — the Google Workspace connector's Drive search mainly surfaces shared drives you're a direct member of, and doesn't offer a way to browse the full list of shared drives available to you. Syncing the drive locally sidesteps that: once it's on disk, Rebel indexes it like any other folder — this is the recommended setup for making a shared drive's skills, memories, or other content available to Rebel
 
 For quick, occasional access to Drive files, the Google Workspace connector in Settings → Connectors may be simpler.
 

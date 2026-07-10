@@ -160,6 +160,9 @@ _The current development version. New entries land here as features ship._
 
 ### Fixes
 
+<!-- detail: 260710_actions-gathering-stuck (bug_mode; plan docs/plans/260710_actions-gathering-stuck/PLAN.md). Race in useInbox: updateFromFullState bumps fetchGenerationRef to invalidate in-flight fetches, which makes the initial load/refresh skip its finally (generation mismatch) and never run setLoading(false) — but updateFromFullState itself never cleared `loading`. A subscription/mutation full-state update landing mid-load left `loading` stuck true forever while `items` was populated → list body stuck on "Gathering items…" with a fully-populated sidebar. Fix: updateFromFullState clears loading+error (authoritative full state ⇒ not loading), killing the class for both initial-load and refresh paths. Regression tests verified to fail pre-fix. Keep public copy non-technical — no fetchGeneration/subscription/finally internals. -->
+- **Your Actions list no longer gets stuck "gathering"** — Now and then the Actions list would sit on "Gathering items…" forever, even though the counts on the left clearly knew how many you had. A timing hiccup left the list convinced it was still loading when your actions had, in fact, already arrived. Fixed — your actions show up as soon as they're ready. No more staring at a list that's secretly already done.
+
 - **Settings no longer blanks out on a file-access log entry** — Opening the file-access activity log could occasionally crash to a blank panel on certain entries. Fixed — it renders cleanly now.
 - **Cloud setup can't hang forever anymore** — Setting up your cloud occasionally stalled partway through with no way forward. Rebel now puts a firm time limit on the slow step, so setup either finishes or fails cleanly — it never leaves you staring at a spinner. Patience has its limits.
 
