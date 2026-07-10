@@ -1,6 +1,6 @@
 ---
 description: "How to move Rebel from one computer to another, keeping your conversations, settings, and memories"
-last_updated: "2026-07-07"
+last_updated: "2026-07-10"
 ---
 
 # Moving Rebel to a New Computer
@@ -17,13 +17,28 @@ Rebel can package your setup into a single **transfer file** that you carry to t
 
 That's it. Everything else -- conversations, settings, memories, automations, inbox, spaces -- comes across automatically. The transfer only runs on a fresh install; if the new computer already has Rebel set up, Rebel leaves it untouched.
 
-### Lost the old computer? Restore from your cloud
+### Restore from your cloud
 
-No transfer file because the old machine is gone? If you were running Rebel in the cloud, you can pull everything back from there instead. On the new computer, sign in, then choose **"Already using Rebel? Bring it over" → "From your cloud"**, and enter your cloud address and access token. Rebel downloads a full backup and restores it -- conversations, Library, memories, operators, automations, and your settings -- then shows the same **"Finish settling in"** checklist to re-add AI access and reconnect your services.
+If you run Rebel in the cloud -- your own self-managed Fly.io instance or a Mindstone-managed one -- you can pull your whole setup back down from there, no transfer file needed. This works whether the old machine is gone for good, or you're rebuilding a machine that already has Rebel on it.
 
-If you don't have the access token to hand and your cloud runs in your own Fly.io account, use **"Recover with Fly"** on that screen: paste a Fly API token and Rebel sorts out a fresh access token for you -- no command line needed.
+**Before you start:**
 
-> Prefer to do it by hand (or on an older version without the transfer feature)? The manual method below still works.
+- **Update Rebel to the latest version** on this computer first. Restore won't run if your cloud was saved by a *newer* Rebel than the one installed here -- time travel remains badly supported.
+- **This replaces what's on this computer.** Rebel keeps an automatic backup of the current data, but if there's anything you can't lose -- a document you dragged in, say -- copy it out somewhere safe first (dragging it onto your desktop is fine; you can add it back afterwards).
+
+**Steps:**
+
+1. **Get to the welcome screen.** On a fresh install it's already there. On a machine that's already set up, open **[Settings → Account](rebel://settings)** and **Sign out** -- you'll land back on the welcome screen.
+2. Choose **"Already using Rebel? Bring it over"**, then **"From your cloud"**.
+3. **Enter your cloud address** -- your instance URL, like `https://rebel-cloud-xxxxxxxx.fly.dev`. If you self-host on Fly.io, it's your app's URL in the Fly dashboard.
+4. **Enter your access token.** Don't have it to hand? Under *"Don't have your access token?"* click **"Recover with Fly"**, paste a **Fly API token** (generate one at [fly.io/user/personal_access_tokens](https://fly.io/user/personal_access_tokens)), and Rebel mints a fresh access token for you -- no command line needed. Then click through.
+5. **If this computer already has Rebel set up**, Rebel checks with you before touching anything: choose **"Replace this computer's data instead"** and confirm the warning. (Choosing *"Continue with this setup"* instead leaves this machine exactly as it was.)
+6. Rebel downloads your backup and restores it, then shows **"Your Rebel is ready."** Click **"Restart and finish"** -- Rebel restarts once.
+7. **Settle back in.** Sign in again, re-add your AI provider access, reconnect your connectors, and -- if you use the web or mobile companions -- pair cloud continuity again. Rebel shows a checklist after the restart so nothing gets missed.
+
+**What comes back:** conversations, Actions, automations, your Library and spaces, memories, operators, personalisation and preferences, safety rules, usage/stats/feedback, and general settings. Connector sign-ins and device pairings don't travel -- you re-add those in step 7.
+
+> Prefer to do it by hand (or on an older version without cloud restore)? The manual method below still works.
 
 ---
 
