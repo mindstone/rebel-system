@@ -11,7 +11,7 @@ Use Brave's independent search index for web searches. Brave Search replaces Reb
 
 - **Web search** — search the web using Brave's own independent index
 - **Local search** — find local businesses, places, and points of interest
-- **No rate limits** — your own API key means no shared usage caps
+- **No shared limits** — your own API key means you're not sharing a usage pool with anyone else
 
 
 ## Why Connect Brave Search?
@@ -29,7 +29,7 @@ If you disconnect Brave Search later, Rebel falls back to the built-in search au
 4. Copy your API key and paste it into Rebel
 5. Done — Rebel will now use Brave Search for all web lookups
 
-> **Free tier**: Brave Search offers a free tier with 2,000 queries per month, which is plenty for most individual use.
+> **Pricing**: Brave Search API is pay-as-you-go (roughly $4–5 per 1,000 queries at time of writing) — you pay Brave directly for what you use. Check [brave.com/search/api](https://brave.com/search/api/) for current plans and rates.
 
 
 ## Tips
