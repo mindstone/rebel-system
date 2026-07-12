@@ -13,6 +13,9 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Improvements
 
+<!-- detail: 260712_max-file-attachments-followup. Raises MAX_FILE_ATTACHMENTS 10->20 (the single shared constant every backend/UI cap derives from). Also closes a gap where three renderer merge sites (composer send, conversation-annotation send, Action execution) combined explicit attachments with auto-resolved @-mention/conversation/inbox references with no combined ceiling — now routed through a shared mergeAndCapAttachments helper that guarantees explicit attachments a slot up to the cap and fills any remaining slots from auto-resolved sources, with a toast when truncation occurs. Keep public copy non-technical — no constant/helper/merge-site internals. -->
+- **Attach twice as many files to a message** — The attachment limit just doubled, from 10 to 20. If you're pulling in a stack of files, @-mentions, or a few different conversations at once, Rebel now only trims the list (with a heads-up) when you genuinely go over — instead of some sources getting silently left out.
+
 <!-- detail: 260712_mobile-actions-add-affordance (plan docs/plans/260712_mobile-actions-add-affordance/PLAN.md). Mobile Actions had no way to manually create an action — desktop had this via InboxAddBar all along. Adds a header "+" button plus an empty-state "Add action" CTA, both opening a bottom-sheet composer (title only for v1; no due date, no mic since OS dictation covers that). Calls the existing addItem store action, which already syncs to desktop/cloud. -->
 - **Add an action from your phone** — Turns out mobile could see your Actions but couldn't add to them. Fixed: tap the **+** in the header (or the "Add action" button when your list is empty), type what needs doing, tap Add. It shows up right alongside everything Rebel or desktop-you created.
 
