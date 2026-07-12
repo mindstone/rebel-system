@@ -13,6 +13,9 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Improvements
 
+<!-- detail: 260712_mobile-actions-add-affordance (plan docs/plans/260712_mobile-actions-add-affordance/PLAN.md). Mobile Actions had no way to manually create an action — desktop had this via InboxAddBar all along. Adds a header "+" button plus an empty-state "Add action" CTA, both opening a bottom-sheet composer (title only for v1; no due date, no mic since OS dictation covers that). Calls the existing addItem store action, which already syncs to desktop/cloud. -->
+- **Add an action from your phone** — Turns out mobile could see your Actions but couldn't add to them. Fixed: tap the **+** in the header (or the "Add action" button when your list is empty), type what needs doing, tap Add. It shows up right alongside everything Rebel or desktop-you created.
+
 <!-- detail: 260710_space-link-reliability. Space links now distinguish why they cannot open and offer the matching next step: try again, open the Space, or check Space settings. Temporarily unreachable Spaces can be retried manually, each click performs the lookup once instead of twice, and links that match several same-named Spaces stop rather than silently choosing one. -->
 - **Space links now tell the truth when they stumble** — Instead of blaming every failed link on vague syncing, Rebel now explains what actually got in the way and offers the useful next step: try again, open the Space, or check your Space settings. Temporarily unreachable Spaces can be retried, clicks no longer repeat the same work, and links that match several same-named Spaces now ask you to disambiguate instead of quietly picking one — guesswork has left the building.
 
