@@ -109,6 +109,7 @@ bundled_rebel_oss_ids:
   - bundled-browser-automation
   - bundled-custom-email
   - bundled-elevenlabs
+  - bundled-elevenlabs-agents
   - bundled-fathom
   - bundled-freshdesk
   - bundled-gamma
