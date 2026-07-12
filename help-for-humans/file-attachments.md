@@ -20,7 +20,7 @@ Attach files directly to your conversations by dragging them into the composer o
 | **Text files** | .txt, .md, .json, .csv, code files | Read directly as text |
 
 **Limits:**
-- Up to 5 files per message
+- Up to 10 files per message
 - Images: 10MB max
 - PDFs: 32MB max  
 - Office documents: 50MB max
