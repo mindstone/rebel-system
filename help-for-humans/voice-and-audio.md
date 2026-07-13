@@ -1,6 +1,6 @@
 ---
 description: "Guide to Rebel's voice features: talking to Rebel, hearing spoken responses, choosing transcription providers (including OpenRouter and Mindstone), unified mic buttons, and custom vocabulary"
-last_updated: "2026-07-02"
+last_updated: "2026-07-13"
 ---
 
 # Voice and Audio
@@ -19,6 +19,17 @@ That's it. On supported desktop platforms, Rebel uses built-in on-device transcr
 **Already on OpenRouter or a Mindstone plan?** Rebel can transcribe using that connection you already have — no separate voice API key. On a Mindstone subscription, transcription is included. It works on your computer and your phone. Spoken replies (text-to-speech) still need a separate cloud voice provider — OpenRouter isn't wired for speaking back.
 
 For other cloud providers with higher accuracy, go to **Settings → Agent & Voice → Voice**, choose a provider, and enter your API key.
+
+
+## How Rebel picks your transcription provider
+
+Rebel tries to match voice transcription to how you already use Rebel — so you are not stuck configuring a second service.
+
+- **Mindstone or OpenRouter plan** — Rebel uses that same connection for transcription when it is available (included on a Mindstone plan, or billed to your OpenRouter account if you connected your own).
+- **ChatGPT with an OpenAI key** — Rebel uses OpenAI Whisper when you have a real OpenAI API key saved.
+- **Everyone else on desktop** — Rebel uses **Built-in** transcription on your computer (free, private, on-device).
+
+If you pick a voice provider yourself in **Settings → Agent & Voice → Voice**, Rebel keeps your choice. Changing your AI plan later will not override a provider you selected on purpose.
 
 
 ## Talking to Rebel
@@ -75,12 +86,9 @@ Spoken responses stream in as they're generated, so you hear Rebel start talking
 | **OpenRouter / Mindstone** | Use the AI connection you already have — no extra voice key; works on computer and phone | OpenRouter account, or a Mindstone subscription (transcription included) |
 | **OpenAI Whisper** | Highest accuracy, especially for complex or technical speech | OpenAI API key |
 | **ElevenLabs Scribe** | Faster transcription, variety of TTS voices | ElevenLabs API key |
-| **Local (Moonshine)** | Privacy, offline use, desktop default, mobile local option | One-time model download |
-| **Local (Parakeet)** | Alternative desktop-only local transcription | One-time model download |
+| **Built-in** | Privacy, offline use, free on-device transcription (desktop) | One-time model download |
 
-**Local (Moonshine)** is the newer built-in option and the default on desktop. It runs entirely on your device with no cloud dependency, and it's also the local transcription option on mobile. No API key required and no audio leaves your device.
-
-**Desktop also includes Local (Parakeet)** as an alternative on-device model. It is desktop-only, older than Moonshine, and uses a larger download, but some people prefer how it handles their voice.
+**Built-in** is Rebel's on-device option on desktop (macOS and Windows). Your audio stays on your computer — no API key and no cloud upload for transcription. Rebel picks it automatically when no cloud connection fits your setup, unless you chose something else yourself.
 
 **OpenRouter / Mindstone** is the simplest path if you already power Rebel through OpenRouter or a Mindstone plan — transcription rides on the same connection, including on mobile. It covers turning speech into text only; for Rebel to speak back, pick OpenAI or ElevenLabs (or another voice provider) separately.
 
@@ -173,7 +181,7 @@ If you see a disabled mic button with a tooltip about API keys:
 
 **Voice button is disabled**
 - Check that your API key is entered correctly
-- For Local provider: ensure the model is downloaded
+- For Built-in: ensure the model is downloaded
 
 **No spoken response**
 - Check that Voice replies is enabled in the session settings menu
@@ -181,30 +189,29 @@ If you see a disabled mic button with a tooltip about API keys:
 - If using a Bluetooth device, ensure it's connected
 
 
-## Local Provider
+## Built-in (on-device) transcription
 
-Rebel offers built-in transcription that runs on your device instead of sending audio to the cloud.
+On desktop, **Built-in** runs transcription on your computer instead of sending audio to the cloud. In **Settings → Agent & Voice → Voice**, it is the option labeled **Built-in** (not a separate Moonshine entry — that engine is used behind the scenes on mobile, not as a desktop setting).
 
-| Model | Works on | Download size | What to know |
-|-------|----------|---------------|--------------|
-| **Moonshine** | Desktop and mobile | About **250MB** on desktop, about **430MB** on mobile | Newer option, desktop default, only local option on mobile |
-| **Parakeet** | Desktop only | About **500-700MB** | Older desktop-only alternative |
+| | Desktop (Built-in) | Mobile app |
+|---|-------------------|------------|
+| **Works on** | macOS and Windows | iOS and Android |
+| **Download size** | About **500–700MB** | About **430MB** |
+| **What to know** | Free, private, no API key | Toggle on-device transcription in the mobile app; uses a separate on-device engine |
 
 **Setup on desktop:**
 1. Go to **Settings → Agent & Voice → Voice**
-2. Choose **Local (Moonshine)** or **Local (Parakeet)**
+2. Choose **Built-in**
 3. Click **Download** if prompted
 4. The mic button enables once the model is ready
 
-**On mobile:** Moonshine is the local option. Download it once, then voice transcription can stay on-device there too.
-
 **Current limitations:**
-- Custom vocabulary not supported for local models
+- Custom vocabulary not supported for Built-in transcription
 - Quality can drop with heavy accents or noisy rooms
-- Local transcription gives you transcription only — spoken replies still use a cloud voice provider
+- Built-in gives you transcription only — spoken replies still use a cloud voice provider
 - Windows users may notice brief pauses during transcription
 
-If privacy or offline use matters most, local transcription is the obvious choice. If you want the highest accuracy, OpenAI Whisper is still the safer bet.
+If privacy or offline use matters most, Built-in is the obvious choice on desktop. If you want the highest accuracy, OpenAI Whisper is still the safer bet.
 
 
 ## See Also
