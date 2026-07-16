@@ -4,6 +4,13 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ---
 
+## v0.4.55 — In development
+
+### Improvements
+
+<!-- detail: 260714_admin-model-selection (plan docs/plans/260714_admin-model-selection/PLAN.md; CE2 heavy, cross-family reviews). Company admins set per-tier model defaults or hard locks for BYOK/ChatGPT-Pro users via config.modelSelection; "Set by {Company}" badge on locked tiers, muted hint + "Use {Company} default" reset on default tiers; locked-but-unservable models fail the turn closed with a Connect CTA (never silently run a different model); defaults apply on change (a user's move-away from an UNCHANGED default is preserved; admin changes deliberately re-apply); Mindstone-managed plans unaffected; enforced on desktop, cloud, and mobile. Keep public copy non-technical — no relay/snapshot/dispatchability/policy-field/poll internals. -->
+- **Your company can pick the models your team runs on** — If your team brings its own AI accounts (Anthropic, OpenAI, or OpenRouter), your company admin can now choose which models everyone uses for each kind of work — as a *default* you're free to change, or as a *set choice* that stays put. Rebel is upfront about it either way: a small **"Set by {your company}"** note appears wherever a choice has been made for you, so a picker that won't budge is never a mystery. Change a default to something you prefer and your pick sticks — Rebel only switches you back if your admin actually changes the company default. And if a required model needs a provider you haven't connected yet, Rebel won't quietly run something else instead — it tells you exactly what's needed and points you to Settings → Agents to connect it. On Mindstone plans, nothing changes.
+
 ## v0.4.54 — Jul 11, 2026
 
 ### Highlights
