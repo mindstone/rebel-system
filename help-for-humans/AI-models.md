@@ -1,6 +1,6 @@
 ---
 description: "How to power Rebel's AI — a flat-fee Mindstone plan or bring your own (ChatGPT Pro, OpenRouter, Anthropic) — then choose Planner, Main work, and Behind the Scenes models, including what happens when you pick a model outside your plan tier"
-last_updated: "2026-07-03"
+last_updated: "2026-07-17"
 ---
 
 # AI models
@@ -26,6 +26,7 @@ In onboarding and in [Settings → Agent & Voice → Intelligence](rebel://setti
   - [Google Gemini](rebel://library/rebel-system%2Fhelp-for-humans%2Fproviders%2Fgoogle-gemini.md) — Gemini API key
   - [Together AI](rebel://library/rebel-system%2Fhelp-for-humans%2Fproviders%2Ftogether-ai.md) — hosted open-source models
   - [Cerebras](rebel://library/rebel-system%2Fhelp-for-humans%2Fproviders%2Fcerebras.md) — very fast open-model inference
+  - [Fireworks AI](rebel://library/rebel-system%2Fhelp-for-humans%2Fproviders%2Ffireworks-ai.md) — pay-per-use Qwen and DeepSeek models
   - [Doubleword](rebel://library/rebel-system%2Fhelp-for-humans%2Fproviders%2Fdoubleword.md) — cheap models for background work
 - **Let Mindstone handle it:** [Mindstone plans](rebel://library/rebel-system%2Fhelp-for-humans%2Fmindstone-plans-and-billing.md) — flat-fee subscription, no keys
 - **Your own or company-hosted models:** [Custom models and gateways](rebel://library/rebel-system%2Fhelp-for-humans%2Fcustom-models-and-gateways.md) — Ollama, LM Studio, company gateways

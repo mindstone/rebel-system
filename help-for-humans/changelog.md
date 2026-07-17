@@ -4,6 +4,13 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ---
 
+## v0.4.55 — Unreleased
+
+### Highlights
+
+<!-- detail: Fireworks AI. Bring-your-own-key provider; Fireworks bills separately. Adds two curated serverless text models: Qwen 3.7 Plus for balanced everyday work and DeepSeek V4 Pro for harder reasoning-heavy work. -->
+- **New provider: Fireworks AI** — Bring your own Fireworks API key and add two curated models to Rebel: Qwen 3.7 Plus for balanced everyday agent work, or DeepSeek V4 Pro when the job needs more reasoning. Fireworks bills you directly for usage, so it sits neatly alongside the other pay-per-use providers: useful when you want another strong lane, not another mystery subscription. More sparks, fewer surprises.
+
 ## v0.4.54 — Jul 11, 2026
 
 ### Highlights
