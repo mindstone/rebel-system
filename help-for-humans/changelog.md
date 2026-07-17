@@ -4,7 +4,12 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ---
 
-## v0.4.55 — In development
+## v0.4.55 — Unreleased
+
+### Highlights
+
+<!-- detail: Fireworks AI. Bring-your-own-key provider; Fireworks bills separately. Adds two curated serverless text models: Qwen 3.7 Plus for balanced everyday work and DeepSeek V4 Pro for harder reasoning-heavy work. -->
+- **New provider: Fireworks AI** — Bring your own Fireworks API key and add two curated models to Rebel: Qwen 3.7 Plus for balanced everyday agent work, or DeepSeek V4 Pro when the job needs more reasoning. Fireworks bills you directly for usage, so it sits neatly alongside the other pay-per-use providers: useful when you want another strong lane, not another mystery subscription. More sparks, fewer surprises.
 
 ### Improvements
 
@@ -19,6 +24,9 @@ What's new in Rebel. We ship fast, so there's always something.
 - **Restore Rebel on a new computer from your cloud** — Lost your laptop, or just got a new one? If you run Rebel in the cloud, your Rebel life is safe up there — and now you can bring it back. Set up Rebel on the new machine, connect it to your cloud, and Rebel pulls your conversations, settings, spaces, Chief of Staff, and memory back down instead of starting from a blank slate. Already set this machine up and want to pull your cloud over the top instead? There's an opt-in path for that too — and your old data is set aside as a recoverable backup, not deleted, in case you change your mind. If you've lost your cloud access token, Rebel can help you recover it; connected apps like Gmail and Slack will still ask you to sign in again. Your Rebel, restored.
 
 ### Improvements
+
+<!-- detail: 260715_openrouter-credit-error (plan docs/plans/260715_rebel-6yv-openrouter-credit/; internal ticket). OpenRouter 402s from a key spending-limit (or from reserving more max_tokens than the key could cover) were classified as account-credit exhaustion and surfaced as "your OpenRouter account has run out of credits" + a "Top up credits" CTA on the primary error UI — wrong and unhelpful for users whose account balance was fine. Fix: classify key-limit / max_tokens-reservation 402s as a key-limit error class with accurate copy (it's the key's spending limit; account balance is separate) and a key-settings CTA on the primary error UI; cap OpenRouter max_tokens reservation at 64k at actual egress with truncation telemetry so a model's full max output is no longer pre-reserved; redact OpenRouter key fingerprints from persisted errors. Keep public copy non-technical — no 402/max_tokens/reservation/key-fingerprint internals. -->
+- **Rebel stops telling you to top up an OpenRouter account that's already funded** — When a request hit the spending limit on the OpenRouter *key* you'd configured, Rebel used to insist your account was out of credit and wave a "Top up" button at you; it now says the honest thing (the limit is on that key, and your account balance is a separate thing) and points you to the key's settings to sort it out. Rebel also stopped setting aside more of a model's output than it actually needs, so most of those false "add credit" rejections no longer happen in the first place.
 
 <!-- detail: 260713_voice-defaults-by-provider (plan docs/plans/260713_voice-defaults-by-provider; internal ticket). Voice STT provider now defaults from the active AI provider via a pure resolver gated by a providerSource provenance marker ('default' moves, 'user'/legacy protected): Mindstone-managed or OpenRouter -> OpenRouter STT (free only via the managed key — BYO OpenRouter bills the user, and the UI copy distinguishes the two), ChatGPT + real OpenAI key -> Whisper, otherwise on-device Built-in (Parakeet). Applied atomically at onboarding, provider activation, OpenRouter connect, and the shared core path for cloud/mobile; auto-speak turns off in the same patch when landing on an STT-only provider. Onboarding/Settings copy per chief-designer: dynamic "(recommended)" tag, permanent option descriptors, managed-vs-BYO microcopy, "Change voice provider" accordion, "Built-in" label. Keep public copy non-technical — no resolver/provenance/managed-key internals. -->
 - **Your voice setup now matches your plan** — When you talk to Rebel, something has to turn your speech into text — and Rebel now picks the option that fits how you've set it up. On a Mindstone plan? You get the cloud transcription that's already included, no extra setup. Signed in with ChatGPT and an OpenAI key? Rebel uses OpenAI. Everyone else keeps the Built-in option, which is free, private, and never sends your voice off your device. And if you've ever chosen a voice provider yourself, Rebel treats that as gospel — your pick stays put, plan or no plan.
