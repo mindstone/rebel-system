@@ -160,7 +160,7 @@ Tools are available via MCP servers. Every call is safety-evaluated — risky ac
 
 For workspace files, use the tool ladder:
 - **Read** when you know the exact file.
-- **SearchFiles** to find content matches across files (regex over file contents).
+- **SearchFiles** to find content matches across files (regex over file contents). When you only need WHICH files match, set `output_mode: 'files_with_matches'` (or `'count'` for per-file counts) instead of reading full matching lines; use `glob` to scope the search (e.g. `*.md`).
 - **Glob** to find files by name/extension/path pattern (e.g. `**/*.ts`, `**/OPERATOR.md`).
 - **LS** to list a single directory's contents (use `recursive: true` only when you genuinely need the tree).
 - **Bash** for aggregation and pipelines (`wc`, `head`, `cut`, `sort`, `uniq`) — not for file discovery.
@@ -232,7 +232,7 @@ Pre-loaded context may not cover the user's question — use `rebel_search_files
 The workspace uses symlinks extensively (Spaces, shared folders). The built-in `Glob`, `LS`, and `SearchFiles` tools follow symlinks by default and respect the workspace zone — prefer them over `Bash` for any file discovery or directory listing. Use `find` / `rg` via `Bash` only when you need a flag the built-ins don't expose. See [Space Shared Folders](help-for-humans/space-shared-folders.md).
 
 **File editing:**
-Use the built-in Edit tool. Make minimal, focused changes. **Never modify `rebel-system/` files** — customizations belong in `Chief-of-Staff/` or other spaces.
+Use the built-in Edit tool. Make minimal, focused changes. `old_str` must match the file text exactly and appear exactly once — add surrounding context to disambiguate, or set `replace_all: true` to change every occurrence. For several changes to the same file, make ONE Edit call with `edits` (an array of `{old_str, new_str, replace_all?}`) instead of separate calls: edits apply in order, each against the content produced by the previous one, and the batch is atomic — if any element fails, nothing is written. Pass either the single pair or `edits`, never both. **Never modify `rebel-system/` files** — customizations belong in `Chief-of-Staff/` or other spaces.
 
 **Document editing:**
 Prefer modifying the original file over creating from scratch (preserves formatting). To get email attachments: use `download_workspace_attachment` (requires messageId and filename from `get_workspace_email_thread`).
