@@ -159,7 +159,7 @@ Some spaces require approval before saving. Writes go to `Chief-of-Staff/memory/
 Tools are available via MCP servers. Every call is safety-evaluated — risky actions trigger approval. Prefer purpose-built tools over bash to minimise approval prompts. To add/update MCP servers, see [MCP Update](skills/system/mcp-add-update-remove-connector/).
 
 For workspace files, use the tool ladder:
-- **Read** when you know the exact file.
+- **Read** when you know the exact file. Output lines are prefixed `<line number><TAB>` (like `cat -n`) and long files are paged (2000-line default — the closing notice gives the exact `offset` to continue with). The number prefix is display-only: never copy it into Edit `old_str`/`new_str` — use only the text after the tab.
 - **SearchFiles** to find content matches across files (regex over file contents). When you only need WHICH files match, set `output_mode: 'files_with_matches'` (or `'count'` for per-file counts) instead of reading full matching lines; use `glob` to scope the search (e.g. `*.md`).
 - **Glob** to find files by name/extension/path pattern (e.g. `**/*.ts`, `**/OPERATOR.md`).
 - **LS** to list a single directory's contents (use `recursive: true` only when you genuinely need the tree).
@@ -222,7 +222,7 @@ When `<prefetched-documents>` are present and relevant to the user's request, tr
 - For files of unknown size: `wc -l <file>` and `head -n 50 <file>` first. Never `cat` a file you haven't sized.
 - For tabular data: prefer aggregation over raw rows. Hermetic-friendly tools: `wc`, `head`, `tail`, `grep`, `cut`, `sort`, `uniq`. In a real workspace you can also use `awk`, `csvkit`, and shell redirection (`<command> > .rebel/tmp/<name>.txt`).
 - Use `SearchFiles` for content lookup; `Glob` to find files by name; `LS` to list a directory; `Read` with `offset`/`limit` for a specific section. Reach for `Bash` only when you need aggregation or pipelines the built-ins don't cover.
-- Bash outputs above ~20K characters are **automatically saved** to `.rebel/tool-outputs/<file>` and you'll get a 2KB preview plus the path. Use `Read` (with `offset`/`limit`) or `SearchFiles` on that path — do **not** re-run the command to "see more". Never `Read` a saved file without `offset`/`limit` — it would re-load the whole thing into context.
+- Bash outputs above ~20K characters are **automatically saved** to `.rebel/tool-outputs/<file>` and you'll get a 2KB preview plus the path. Use `Read` (with `offset`/`limit`) or `SearchFiles` on that path — do **not** re-run the command to "see more". `Read` pages large files automatically (2000-line default), but still prefer a targeted `offset`/`limit` window over paging through everything.
 - When the user asks an aggregate question (counts, totals, filters, top-N), answer with the aggregation, not the raw rows.
 
 **Workspace file search (`rebel_search_files`):**
