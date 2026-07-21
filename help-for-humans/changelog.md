@@ -4,12 +4,9 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ---
 
-## v0.4.55 — Jul 20, 2026
+## v0.4.56 — Jul 21, 2026
 
 ### Highlights
-
-<!-- detail: Fireworks AI. Bring-your-own-key provider; Fireworks bills separately. Adds two curated serverless text models: Qwen 3.7 Plus for balanced everyday work and DeepSeek V4 Pro for harder reasoning-heavy work. -->
-- **New provider: Fireworks AI** — Bring your own Fireworks API key and add two curated models to Rebel: Qwen 3.7 Plus for balanced everyday agent work, or DeepSeek V4 Pro when the job needs more reasoning. Fireworks bills you directly for usage, so it sits neatly alongside the other pay-per-use providers: useful when you want another strong lane, not another mystery subscription. More sparks, fewer surprises.
 
 ### Improvements
 
@@ -18,9 +15,6 @@ What's new in Rebel. We ship fast, so there's always something.
 
 <!-- detail: Copy-only pricing update: onboarding ApiStep + Settings SubscriptionSection now show Dash $199 / Rogue $499 (was $200/$500). Billing amounts unchanged — display now matches charm pricing. Keep public copy non-technical. -->
 - **Dash and Rogue prices now read $199 and $499** — The subscription cards in onboarding and Settings show the same charm prices you'll actually be charged. What you see is what you pay.
-
-<!-- detail: 260714_admin-model-selection (plan docs/plans/260714_admin-model-selection/PLAN.md; CE2 heavy, cross-family reviews). Company admins set per-tier model defaults or hard locks for BYOK/ChatGPT-Pro users via config.modelSelection; "Set by {Company}" badge on locked tiers, muted hint + "Use {Company} default" reset on default tiers; locked-but-unservable models fail the turn closed with a Connect CTA (never silently run a different model); defaults apply on change (a user's move-away from an UNCHANGED default is preserved; admin changes deliberately re-apply); Mindstone-managed plans unaffected; enforced on desktop, cloud, and mobile. Keep public copy non-technical — no relay/snapshot/dispatchability/policy-field/poll internals. -->
-- **Your company can pick the models your team runs on** — If your team brings its own AI accounts (Anthropic, OpenAI, or OpenRouter), your company admin can now choose which models everyone uses for each kind of work — as a *default* you're free to change, or as a *set choice* that stays put. Rebel is upfront about it either way: a small **"Set by {your company}"** note appears wherever a choice has been made for you, so a picker that won't budge is never a mystery. Change a default to something you prefer and your pick sticks — Rebel only switches you back if your admin actually changes the company default. And if a required model needs a provider you haven't connected yet, Rebel won't quietly run something else instead — it tells you exactly what's needed and points you to Settings → Agents to connect it. On Mindstone plans, nothing changes.
 
 <!-- detail: Two new Snowflake connectors (catalog entries snowflake + snowflake-managed; dev doc docs/project/mcps/SNOWFLAKE_MCP.md). snowflake = community entry running Google MCP Toolbox's snowflake prebuilt via npx (@toolbox-sdk/server@1.7.0 pinned; seven SNOWFLAKE_* env setupFields; tools execute_sql + list_tables; added to COMMUNITY_SKIP_LIST in scripts/mcp-discovery.ts because the toolbox binary authenticates eagerly at startup). snowflake-managed = direct HTTPS entry following the n8n/zapier per-customer-URL pattern plus the docusign Bearer-header token pattern; v1 auth is a Programmatic Access Token, OAuth deferred (Snowflake's per-account security integration doesn't fit Rebel's vendor-global OAuth machinery). Security review at docs/research/260718_snowflake_community_mcp_security_review.md. Keep public copy non-technical — no npx/prebuilt/toolbox/token-acronym internals. -->
 - **Two new ways to talk to your Snowflake data** — Ask questions about your Snowflake warehouse in plain language and Rebel runs the queries for you. The self-serve **Snowflake** connector needs just your account details and a token — no admin involved, set up in minutes. If your company runs a tighter ship, **Snowflake (Managed MCP)** connects to the official Snowflake service inside your own account instead: your own Snowflake permissions, tools chosen by your admin, nothing installed on your machine. Your warehouse, finally conversational.
