@@ -159,8 +159,8 @@ Some spaces require approval before saving. Writes go to `Chief-of-Staff/memory/
 Tools are available via MCP servers. Every call is safety-evaluated — risky actions trigger approval. Prefer purpose-built tools over bash to minimise approval prompts. To add/update MCP servers, see [MCP Update](skills/system/mcp-add-update-remove-connector/).
 
 For workspace files, use the tool ladder:
-- **Read** when you know the exact file.
-- **SearchFiles** to find content matches across files (regex over file contents).
+- **Read** when you know the exact file. Output lines are prefixed `<line number><TAB>` (like `cat -n`) and long files are paged (2000-line default — the closing notice gives the exact `offset` to continue with). The number prefix is display-only: never copy it into Edit `old_str`/`new_str` — use only the text after the tab.
+- **SearchFiles** to find content matches across files (regex over file contents). When you only need WHICH files match, set `output_mode: 'files_with_matches'` (or `'count'` for per-file counts) instead of reading full matching lines; use `glob` to scope the search (e.g. `*.md`).
 - **Glob** to find files by name/extension/path pattern (e.g. `**/*.ts`, `**/OPERATOR.md`).
 - **LS** to list a single directory's contents (use `recursive: true` only when you genuinely need the tree).
 - **Bash** for aggregation and pipelines (`wc`, `head`, `cut`, `sort`, `uniq`) — not for file discovery.
@@ -222,7 +222,7 @@ When `<prefetched-documents>` are present and relevant to the user's request, tr
 - For files of unknown size: `wc -l <file>` and `head -n 50 <file>` first. Never `cat` a file you haven't sized.
 - For tabular data: prefer aggregation over raw rows. Hermetic-friendly tools: `wc`, `head`, `tail`, `grep`, `cut`, `sort`, `uniq`. In a real workspace you can also use `awk`, `csvkit`, and shell redirection (`<command> > .rebel/tmp/<name>.txt`).
 - Use `SearchFiles` for content lookup; `Glob` to find files by name; `LS` to list a directory; `Read` with `offset`/`limit` for a specific section. Reach for `Bash` only when you need aggregation or pipelines the built-ins don't cover.
-- Bash outputs above ~20K characters are **automatically saved** to `.rebel/tool-outputs/<file>` and you'll get a 2KB preview plus the path. Use `Read` (with `offset`/`limit`) or `SearchFiles` on that path — do **not** re-run the command to "see more". Never `Read` a saved file without `offset`/`limit` — it would re-load the whole thing into context.
+- Bash outputs above ~20K characters are **automatically saved** to `.rebel/tool-outputs/<file>` and you'll get a 2KB preview plus the path. Use `Read` (with `offset`/`limit`) or `SearchFiles` on that path — do **not** re-run the command to "see more". `Read` pages large files automatically (2000-line default), but still prefer a targeted `offset`/`limit` window over paging through everything.
 - When the user asks an aggregate question (counts, totals, filters, top-N), answer with the aggregation, not the raw rows.
 
 **Workspace file search (`rebel_search_files`):**
@@ -232,7 +232,7 @@ Pre-loaded context may not cover the user's question — use `rebel_search_files
 The workspace uses symlinks extensively (Spaces, shared folders). The built-in `Glob`, `LS`, and `SearchFiles` tools follow symlinks by default and respect the workspace zone — prefer them over `Bash` for any file discovery or directory listing. Use `find` / `rg` via `Bash` only when you need a flag the built-ins don't expose. See [Space Shared Folders](help-for-humans/space-shared-folders.md).
 
 **File editing:**
-Use the built-in Edit tool. Make minimal, focused changes. **Never modify `rebel-system/` files** — customizations belong in `Chief-of-Staff/` or other spaces.
+Use the built-in Edit tool. Make minimal, focused changes. `old_str` must match the file text exactly and appear exactly once — add surrounding context to disambiguate, or set `replace_all: true` to change every occurrence. For several changes to the same file, make ONE Edit call with `edits` (an array of `{old_str, new_str, replace_all?}`) instead of separate calls: edits apply in order, each against the content produced by the previous one, and the batch is atomic — if any element fails, nothing is written. Pass either the single pair or `edits`, never both. **Never modify `rebel-system/` files** — customizations belong in `Chief-of-Staff/` or other spaces.
 
 **Document editing:**
 Prefer modifying the original file over creating from scratch (preserves formatting). To get email attachments: use `download_workspace_attachment` (requires messageId and filename from `get_workspace_email_thread`).
