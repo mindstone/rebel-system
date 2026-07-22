@@ -4,7 +4,7 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ---
 
-## v0.4.55 — Jul 20, 2026
+## v0.4.55 — Jul 22, 2026
 
 ### Highlights
 
@@ -32,6 +32,9 @@ What's new in Rebel. We ship fast, so there's always something.
 - **New connector: Replit** — Replit now runs its own official connector, and setup is a three-second job: click **Connect**, sign in, done — no keys, no terminals. Describe the app you want — a booking page, a team quiz, a dashboard — and Replit Agent builds and hosts it while you get on with your day; ask for changes in plain language whenever you like. Works on any Replit plan, including free. The old SSH-based connector is still around, now wearing the more honest name **Replit (SSH)**.
 
 ### Fixes
+
+<!-- detail: Rebel now applies OpenRouter's zero-retention setting to its known chat and voice request paths when the actual destination is OpenRouter, including custom AI addresses that point there. Configurable AI addresses block redirects before contacting the new destination. -->
+- **OpenRouter privacy now stays consistent on current chat and voice paths** — Rebel applies OpenRouter's zero-retention setting across the chat and voice routes it currently uses when they're actually going to OpenRouter; custom AI addresses now stop before contacting a redirect target. Privacy settings, now less interpretive.
 
 <!-- detail: 260715_fix-meeting-bot-worker-endpoint (plan docs/plans/260715_fix-meeting-bot-worker-endpoint/; bug fix + postmortem). Desktop was pointing at the legacy meeting-bot worker; repointed to the maintained meeting-bot-interactive worker, and the worker now authenticates Recall real-time webhooks the way Recall actually signs them (Svix for the delivery endpoint, a URL token for the real-time stream) instead of a Stripe-style HMAC that was rejecting legitimate traffic. Keep public copy non-technical — no worker/webhook/Svix/HMAC internals. -->
 - **The Meeting Bot is reliably back on duty** — A behind-the-scenes address change meant some Rebel bots quietly stopped joining meetings or reporting back. Fixed, and the sign-in handshake between Rebel and the meeting service was tightened to match what the service actually expects — so legitimate meeting updates stop getting turned away at the door. Your Rebel, restored.
