@@ -2,11 +2,13 @@
 description: "Connect Replit to build hosted websites and apps — Rebel manages the project, Replit Agent does the coding"
 ---
 
-# Replit
+# Replit (SSH)
 
 Build hosted websites, apps, and tools on Replit — without writing code yourself. Just describe what you want, and Rebel prepares the instructions for Replit Agent to build it.
 
 **Desktop app only.** The Replit connector requires the desktop version of Rebel.
+
+> **Which Replit connector?** This doc covers the SSH connector (file access inside a running project). If you want Replit Agent to *build* apps for you — no SSH keys, works on the free plan — use the official [Replit](library://rebel-system/help-for-humans/connectors/replit-official.md) connector instead.
 
 
 ## Setup
