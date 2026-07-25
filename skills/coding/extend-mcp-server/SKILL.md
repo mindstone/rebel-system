@@ -584,7 +584,7 @@ Adds `<tool_name>` tool to the **<connector>** connector.
 ## Build Context
 
 - **Workflow:** Software Engineer → <N> stage(s)
-- **Model:** <e.g., claude-opus-4-7>
+- **Model:** <e.g., claude-opus-4-8>
 - **Code review:** <N> review(s) by <model(s)> — <key outcome, e.g., "1 finding addressed">
 
 Submitted via Rebel's in-app contribution flow.
