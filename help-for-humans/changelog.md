@@ -8,6 +8,9 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Highlights
 
+<!-- detail: Claude Opus 5 is now Rebel's default Planner for direct Anthropic and OpenRouter. It keeps Opus 4.8's per-token price, but Anthropic enables adaptive thinking by default; Rebel can still turn it off at lower effort levels. Cyber-safety refusals end the turn with an honest message rather than silently switching models. Opus 4.8, 4.7, and 4.6 remain selectable. -->
+- **Claude Opus 5 takes the planning chair** — Rebel's default Planner is now smarter at the same per-token price as Opus 4.8. Anthropic starts its thinking by default, so token use may look a little different; if its cyber-safety checks decline a request, Rebel says so rather than quietly swapping models — and Opus 4.8 keeps its seat in the picker.
+
 ### Improvements
 
 <!-- detail: 260714_admin-model-selection A3 amendment, Stages 12–15 (plan docs/plans/260714_admin-model-selection/PLAN.md Amendments A3/A3.1/A3.2). Extends the entry below: a company admin can point a per-tier model choice at a named company connection, and Rebel shows that name in settings and conversations when it can tell which connection the admin meant. When a company-set model can't run, Rebel says whose move it is: a Connect button only when connecting a provider is the user's own fix; otherwise "ask your admin" — naming the connection when Rebel can resolve it, and describing the problem plainly when it can't. For set choices on Main work and Planner, Rebel never quietly runs a different model instead; Behind-the-Scenes work may fall back to another model after a genuine failure, by design. -->
