@@ -45,6 +45,9 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+<!-- detail: When Rebel stops a turn that is stuck, quiet, unresponsive, or impossible to check, the banner now names the situation. When the work itself got stuck and Rebel can safely resend the whole request, a retry takes a different approach to the same message; otherwise the ordinary retry remains. Diagnose buttons now open Diagnostics → Recent activity. -->
+- **Stuck turns now come with a useful second attempt** — The banner now says whether a turn kept getting stuck, went quiet, stopped responding, or Rebel couldn't check its progress. When the work itself got stuck, **Try another way** resends the same message with instructions to take a genuinely different approach; if Rebel couldn't check progress or can't safely resend the whole request, it keeps the ordinary **Try again**. And **Open Diagnose** actually opens Diagnostics → Recent activity. Same message, different route.
+
 <!-- detail: Slow background research now ends as a recoverable helper outcome instead of stopping a healthy request. Rebel emits one quiet status, continues with the evidence it has, and its recovery guidance requires disclosing any sources that could not be checked. The fatal-watchdog banner redesign remains deferred and is not part of this change. -->
 - **Slow background research no longer stops the rest of your request** — If a background check takes too long, Rebel notes it quietly — “Background research took too long. Rebel is continuing with your request.” — and carries on. If something couldn't be checked, Rebel tells you rather than pretending it looked — the research may be late; the answer needn't be.
 
