@@ -1,6 +1,6 @@
 ---
 description: "User-facing guide to where memory belongs, how sensitivity markers work, and what approval buttons mean when Rebel wants to save something"
-last_updated: "2026-06-04"
+last_updated: "2026-07-26"
 ---
 
 # Memory Folders and Approvals
@@ -14,10 +14,10 @@ The short version:
 
 ## See also
 
-- [Spaces](spaces.md)
-- [Privacy Mode](privacy-mode.md)
-- [Where Rebel stores things](where-rebel-stores-things.md)
-- [Memory System Tutorial](tutorials/251216a_rebel-memory-system-tutorial.html)
+- [Spaces](rebel://library/rebel-system%2Fhelp-for-humans%2Fspaces.md)
+- [Privacy Mode](rebel://library/rebel-system%2Fhelp-for-humans%2Fprivacy-mode.md)
+- [Where Rebel stores things](rebel://library/rebel-system%2Fhelp-for-humans%2Fwhere-rebel-stores-things.md)
+- [Memory System Tutorial](rebel://library/rebel-system%2Fhelp-for-humans%2Ftutorials%2F251216a_rebel-memory-system-tutorial.html)
 
 ## First-time setup: what goes where?
 
@@ -69,10 +69,24 @@ If you are unsure, treat it as private first and share later on purpose.
 
 Rebel can update memory after a conversation when it spots something genuinely worth keeping. You do not have to save every note by hand.
 
-Depending on the space and your safety settings, Rebel may:
-- save it automatically
-- ask only when it looks sensitive
-- ask every time
+Rebel's per-space memory safety ladder has four settings. Shared spaces use one of the three asking options; **Save without asking** is for your own private spaces.
+
+| Setting | What it means |
+|---|---|
+| **Save without asking** | Rebel saves to this space automatically. |
+| **Ask only for specific concerns** | Rebel saves routine updates on its own and asks when it can name a concern, such as a password or personal details. |
+| **Ask when Rebel isn't sure** | Rebel checks with you whenever it is not fully confident, even if it cannot point to a specific concern. This is the default for shared spaces. |
+| **Always ask before saving** | Every save to this space needs your OK. |
+
+A safety check that cannot complete can still ask rather than guess. [Privacy Mode](rebel://library/rebel-system%2Fhelp-for-humans%2Fprivacy-mode.md) also overrides these settings and asks before every memory save.
+
+### What a specific concern looks like
+
+When Rebel spots a specific concern, the approval card says **what** it is worried about — for example, something that looks like a password or key, personal details, or account and security information. You get a reason to review, not a vague raised eyebrow.
+
+In shared spaces, built-in checks for passwords and keys run whatever setting you choose. That means a document containing an obviously fake example key can still trigger a review card. The check is being cautious about the shape of the text; approve that save and move on. Your own private space is exempt from this built-in credential check, though its chosen setting or Privacy Mode may still ask.
+
+If a destination already has a save waiting for review, later saves to the same place keep asking until you clear the pending card. This prevents a newer save from quietly stepping around an earlier decision.
 
 ## Where approvals appear now
 
@@ -108,6 +122,13 @@ Buttons you may see:
 - **Discard** — do not save it anywhere
 - **Preview** — inspect the content first
 
+## Getting too many approval cards?
+
+- **Choose fewer routine check-ins for a busy shared space.** Open [Settings → Safety](rebel://settings/safety), find the space under **Memory Spaces**, and choose **Ask only for specific concerns**. Rebel will still ask when it can say what it is worried about.
+- **Ask less about a space from the card.** A card for a space set to **Ask when Rebel isn't sure** can offer **Only ask when there's a specific concern?** Choose it to update that space without leaving the card. The save in front of you still needs its own decision.
+- **Remember recurring saves.** When a card offers **Allow and remember…**, use it to teach Rebel the rule instead of approving the same kind of save repeatedly.
+- **Check what happened without a card.** The Activity log in [Settings → Safety](rebel://settings/safety) shows what Rebel saved without asking and why. You can switch any space back to more check-ins at any time.
+
 ## Where staged files live before you decide
 
 When Rebel stages a memory write for review, it puts the draft in:
@@ -123,7 +144,7 @@ If a save would overwrite something that changed in the meantime, Rebel shows yo
 
 ## Privacy Mode changes the rules
 
-When [Privacy Mode](privacy-mode.md) is on, Rebel asks before **every** memory save — even in spaces that would normally save automatically.
+When [Privacy Mode](rebel://library/rebel-system%2Fhelp-for-humans%2Fprivacy-mode.md) is on, Rebel asks before **every** memory save — even in spaces that would normally save automatically.
 
 Use it when you want maximum control for sensitive work. You can toggle it from [Settings → Privacy & Safety](rebel://settings/safety).
 

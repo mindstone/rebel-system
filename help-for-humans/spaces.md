@@ -1,6 +1,6 @@
 ---
 description: "Plain-English guide to Spaces — separate areas in your Rebel workspace with their own memory, skills, and sharing rules"
-last_updated: "2026-06-26"
+last_updated: "2026-07-26"
 ---
 
 # Spaces (for sharing with different groups)
@@ -15,10 +15,10 @@ Use spaces when you want Rebel to keep things separate — for example:
 
 ## See also
 
-- [Memory folders and approvals](memory-folders-and-approvals.md)
-- [Spaces: shared folders](space-shared-folders.md)
-- [Where Rebel stores things](where-rebel-stores-things.md)
-- [Cloud Continuity and Mobile](cloud-continuity-and-mobile.md)
+- [Memory folders and approvals](rebel://library/rebel-system%2Fhelp-for-humans%2Fmemory-folders-and-approvals.md)
+- [Spaces: shared folders](rebel://library/rebel-system%2Fhelp-for-humans%2Fspace-shared-folders.md)
+- [Where Rebel stores things](rebel://library/rebel-system%2Fhelp-for-humans%2Fwhere-rebel-stores-things.md)
+- [Cloud Continuity and Mobile](rebel://library/rebel-system%2Fhelp-for-humans%2Fcloud-continuity-and-mobile.md)
 
 ## What a Space does
 
@@ -120,15 +120,16 @@ Each space has its own memory setting:
 
 | Setting | What it means |
 |---|---|
-| **Save without asking** | Rebel saves memory automatically |
-| **Ask, if content is sensitive** | Rebel only stops when something looks risky |
-| **Always ask before saving** | Every memory write needs your OK |
+| **Save without asking** | Rebel saves memory automatically. This option is for your own private spaces. |
+| **Ask only for specific concerns** | Rebel saves routine updates and asks when it can name a concern, such as a password or personal details. |
+| **Ask when Rebel isn't sure** | Rebel asks whenever it is not fully confident, even without a specific concern. This is the default for shared spaces. |
+| **Always ask before saving** | Every memory write needs your OK. |
 
-Shared spaces keep a stricter floor for sensitive content, even if you prefer fewer interruptions — you can't dial a shared space all the way down to "save without asking," because that's where private details are most likely to leak into a group folder by accident.
+Shared spaces can use any of the three asking options, including **Ask only for specific concerns** when routine cards become noise. You cannot dial a shared space all the way down to **Save without asking**, and Rebel's built-in checks for passwords and keys keep running whatever shared-space option you choose.
 
 ### Privacy Mode overrides space settings
 
-If [Privacy Mode](privacy-mode.md) is on, Rebel asks before memory saves **even if that space would normally save automatically**.
+If [Privacy Mode](rebel://library/rebel-system%2Fhelp-for-humans%2Fprivacy-mode.md) is on, Rebel asks before memory saves **even if that space would normally save automatically**.
 
 Think of Privacy Mode as the master switch: per-space settings are your defaults, Privacy Mode is the temporary override. You can turn it on from [Settings → Privacy & Safety](rebel://settings/safety).
 
