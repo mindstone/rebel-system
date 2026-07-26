@@ -131,8 +131,9 @@ Example: December 25, 2024 → `memory/sources/2024/12-Dec/25/`
 
 **Filename format:** `yyMMdd_HHmm_source-type_description.md`
 - `yyMMdd_HHmm` — Date and time the source occurred (e.g., `251215_1000` for 15 Dec 2025 at 10:00 AM). Use `0000` for time if unknown.
-- `source-type` — Lowercase descriptor: `meeting`, `doc`, `pdf`, `thread`, `email`, `ticket`, `web`, `data`, `image`, etc.
-- `description` — Brief hyphenated description (e.g., `quarterly-review`, `budget-discussion`)
+- `source-type` — Lowercase `a-z` only: `meeting`, `doc`, `pdf`, `thread`, `email`, `ticket`, `web`, `data`, `image`, etc.
+- `description` — Lowercase `a-z0-9-` only, with hyphens between words (e.g., `quarterly-review`, `budget-discussion`)
+- The `DD` directory must equal the day in the filename's `yyMMdd` prefix.
 
 **Examples:**
 - `memory/sources/2025/12-Dec/15/251215_1000_meeting_q3-review.md`
@@ -168,6 +169,8 @@ Collect required frontmatter fields:
 | `stored_at` | Date file was created (YYYY-MM-DD) | `2025-12-15` |
 | `occurred_at` | Date source was created/published (YYYY-MM-DD) | `2025-12-15` |
 
+`source_url` is never blank. Use the source-type reference templates below when the connector does not provide a URL (for example, derive the Gmail permalink from the thread ID, or use a `workspace://` reference for a workspace file). When no canonical web URL exists, use `internal://<source_system>/<source_uid>`.
+
 **Optional fields** (include when applicable):
 - `participants` — List of people involved (for meetings/threads)
 - `duration_minutes` — Meeting length
@@ -201,7 +204,7 @@ Use this template:
 ```markdown
 ---
 description: [Brief description]
-source_type: [meeting|notion|slack|email|linear]
+source_type: [meeting|doc|pdf|thread|email|ticket|web|data|image]
 source_system: [system name]
 source_account: [account identifier]
 source_uid: [unique id]
