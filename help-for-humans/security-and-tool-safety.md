@@ -1,6 +1,6 @@
 ---
 description: "How Rebel protects you from risky actions and what requires your explicit permission"
-last_updated: "2026-06-26"
+last_updated: "2026-07-26"
 ---
 
 # Security and Tool Safety
@@ -75,6 +75,21 @@ When Rebel asks about a direct memory write:
 | **Always allow this file** | Remember to always allow this specific file in future. |
 
 After you approve or decline, a compact receipt confirms your decision — so you always have a record without the prompt staying on screen.
+
+### How often each space asks about memory saves
+
+Choose the setting that matches how you use each space:
+
+| Setting | What Rebel does |
+|---|---|
+| **Save without asking** | Saves automatically. This option is for your own private spaces. |
+| **Ask only for specific concerns** | Saves routine updates on its own and asks when it can name a concern, such as a password or personal details. |
+| **Ask when Rebel isn't sure** | Asks whenever it is not fully confident, even without a specific concern. This is the default for shared spaces. |
+| **Always ask before saving** | Asks before every save. |
+
+For **shared spaces**, Rebel's built-in checks for passwords and keys run whatever setting you choose. If one spots something credential-shaped, the approval card says what it noticed.
+
+When text looks credential-shaped, these checks prefer a review to quietly sharing a real credential. A document containing an obviously fake example key can therefore trigger a review card — that is the built-in credential check doing its job. Approve that save once and move on. Rebel may also ask if a safety check could not complete, rather than guessing.
 
 ### Live rule updates
 
