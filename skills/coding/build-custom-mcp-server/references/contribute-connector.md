@@ -365,7 +365,7 @@ Adds the `<connector_name>` connector for **<service>**.
 ## Build Context
 
 - **Workflow:** Software Engineer → <N> stage(s)
-- **Model:** <e.g., claude-opus-4-7>
+- **Model:** <e.g., claude-opus-4-8>
 - **Code review:** <N> review(s) by <model(s)> — <key outcome, e.g., "2 findings addressed">
 
 Submitted via Rebel's in-app contribution flow.
