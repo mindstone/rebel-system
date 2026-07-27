@@ -1,6 +1,6 @@
 ---
 description: "How to schedule recurring or event-triggered work in Rebel, including built-in automations, transcript triggers, Focus automations, and run status meanings"
-last_updated: "2026-06-26"
+last_updated: "2026-07-27"
 ---
 
 # Automations
@@ -136,6 +136,8 @@ Automations are more independent than normal conversations, but they do **not** 
 Your safety rules still apply. If an automation tries to do something outside its rules, Rebel stages it for review instead of pretending everything is fine.
 
 That includes memory writes as well as tool actions.
+
+Automations also respect the price of the model you chose for them: if one outgrows that model, Rebel switches only to an available model that can handle the longer task and costs no more; otherwise it stops with a clear reason instead of quietly upgrading to a pricier model. And because automations run without you, Rebel skips the post-run “was anything worth remembering?” check it uses after your own conversations — it almost never was.
 
 ## Troubleshooting
 

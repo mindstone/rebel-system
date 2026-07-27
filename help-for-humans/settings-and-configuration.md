@@ -1,6 +1,6 @@
 ---
 description: "Guide to Rebel's Settings destinations: Agent & Voice, Connectors, Meetings, Workspace, Privacy & Safety (Safety Rules and Privacy Mode), Account & Preferences, Usage, and Advanced"
-last_updated: "2026-06-14"
+last_updated: "2026-07-27"
 ---
 
 # Settings and Configuration
@@ -49,6 +49,7 @@ Use **Settings → Agent & Voice → Intelligence** for:
 
 - **Authentication** — Anthropic, OpenAI, Gemini, and other provider keys are managed through a card-based grid. Each provider shows its connection status at a glance — connected providers stay connected between sessions, so you only need to set up your keys once. Connecting a provider automatically selects it as your active provider; disconnecting your active provider falls back to another connected one. Cards also include shortcuts to the provider's billing page so you can check your usage or upgrade your plan without hunting for the link. You can also connect a ChatGPT Pro or Claude Max subscription instead of using an API key. OpenRouter users can enter any model ID directly — not just those in Rebel's curated list. If you'd rather not manage any of this, the **"Let Mindstone handle it"** option here puts you on a flat-fee [Mindstone plan](rebel://library/rebel-system%2Fhelp-for-humans%2Fmindstone-plans-and-billing.md) where Mindstone covers the AI bill and shows your monthly allowance
 - **Thinking / Working / Background models** — which model plans, works, and handles behind-the-scenes tasks
+- **Company-managed models** — if your company sets your team's models, you'll see a "Set by {your company}" note where a choice was made for you; see [AI models](library://rebel-system/help-for-humans/AI-models.md#if-your-company-manages-your-models)
 - **Fallbacks** — backup models if your primary choice is unavailable
 - **Permission mode** — whether Rebel runs actions freely or stays in plan-only mode
 - **Auto memory updates** — whether Rebel should save useful facts automatically
