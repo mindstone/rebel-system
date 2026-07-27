@@ -13,6 +13,9 @@ Capture citable sources from recent activity into memory, surface actionable ite
    - Search Slack for substantive threads
    - Search Microsoft Teams for substantive chats and mentions (use `list_chats` + `list_chat_messages` when Teams is connected)
    - **Mandatory meeting-transcript lane:** when a meeting-transcript connector (for example Fireflies) is connected, query that connector directly for transcripts whose activity falls between [LAST_EXECUTED_SUCCESS] and now. Use its exact tool schema. Do not infer that no transcript exists, or treat the meeting as searched, from Calendar results alone.
+   - **Authoritative provenance and verbatim retrieval:** when a tool result carries `source_*` provenance fields, copy them verbatim; they override inferences from the user's own account or Calendar.
+     For meeting transcripts, fetch the full transcript body with `get_transcript` or `search_transcripts` before writing; summaries and metadata-only tools cannot support the verbatim appendix.
+     Perform verbatim retrieval in the parent turn—never delegate verbatim-capture lanes to subagents. Here, “Parallelise” means parent-level tool batches only.
    - Parallelise these searches when possible
 3. For each piece of content worth citing (meetings, substantive threads, important documents):
    a. **Destination is always Chief-of-Staff.** Write every captured source into `Chief-of-Staff/memory/sources/`. Do not route any source to a shared space — source capture always writes to Chief-of-Staff, regardless of source type, participants, sensitivity, or content. Distribution to shared spaces is handled separately by the distribution automation.
