@@ -80,9 +80,9 @@ Rebel's per-space memory safety ladder has four settings. Shared spaces use one 
 
 A safety check that cannot complete can still ask rather than guess. [Privacy Mode](rebel://library/rebel-system%2Fhelp-for-humans%2Fprivacy-mode.md) also overrides these settings and asks before every memory save.
 
-### What a specific concern looks like
+### What something specific looks like
 
-When Rebel spots a specific concern, the approval card says **what** it is worried about — for example, something that looks like a password or key, personal details, or account and security information. You get a reason to review, not a vague raised eyebrow.
+When Rebel spots something specific, the approval card says **what** it is worried about — for example, something that looks like a password or key, personal details, or account and security information. You get a reason to review, not a vague raised eyebrow.
 
 In shared spaces, built-in checks for passwords and keys run whatever setting you choose. That means a document containing an obviously fake example key can still trigger a review card. The check is being cautious about the shape of the text; approve that save and move on. Your own private space is exempt from this built-in credential check, though its chosen setting or Privacy Mode may still ask.
 
