@@ -4,7 +4,7 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ---
 
-## v0.4.57 — Jul 22–26, 2026
+## v0.4.57 — Jul 22–27, 2026
 
 ### Highlights
 
@@ -29,6 +29,9 @@ What's new in Rebel. We ship fast, so there's always something.
 - **Automations stop writing memories that mostly said nothing** — After every automation run, Rebel used to pause and ask itself whether anything was worth remembering — and almost always decided "no." It now skips that step for automations, which was a lot of asking for very little remembering. Your own conversations still teach Rebel as they always did; this is only about the things Rebel runs on its own.
 
 ### Fixes
+
+<!-- detail: 260727_stream-reset-retry-fidelity (plan docs/plans/260727_stream-reset-retry-fidelity/PLAN.md; CE2 bug_mode). When an AI reply got cut off mid-stream, the local OpenRouter proxy collapsed every stream-read failure into a fixed "stream timed out" SSE error message — whether the watchdog had stalled, the upstream connection had actually reset, or the user's own client had closed the stream. Now emits a typed cause (watchdog_stall / upstream_connection_reset / client_closed-suppressed) with truthful per-cause copy. The recovery banner distinguishes safety-blocked (Rebel didn't retry — it had already started replying) from actual-retry-count paths, so the message stops claiming retries that never happened. Model clients log a "Mid-stream retry blocked" warn when the idempotency guard refuses a retry that would corrupt partial output. Classification, banner, Sentry bucket, and retry-decision logic unchanged. Keep public copy non-technical — no SSE/proxy/idempotency-guard internals. -->
+- **When the AI service drops out mid-answer, Rebel says what actually happened** — When an AI reply got cut off, Rebel used to call it a "timeout" no matter what had really gone wrong — a stall, a dropped connection, or your own client closing the stream all read the same. Now Rebel names the real cause, and when it didn't retry (because it had already started replying and a retry would corrupt the answer), it says so plainly instead of claiming it tried several times. The error message, finally telling the truth.
 
 <!-- detail: When Rebel stops a turn that is stuck, quiet, unresponsive, or impossible to check, the banner now names the situation. When the work itself got stuck and Rebel can safely resend the whole request, a retry takes a different approach to the same message; otherwise the ordinary retry remains. Diagnose buttons now open Diagnostics → Recent activity. -->
 - **Stuck turns now come with a useful second attempt** — The banner now says whether a turn kept getting stuck, went quiet, stopped responding, or Rebel couldn't check its progress. When the work itself got stuck, **Try another way** resends the same message with instructions to take a genuinely different approach; if Rebel couldn't check progress or can't safely resend the whole request, it keeps the ordinary **Try again**. And **Open Diagnose** actually opens Diagnostics → Recent activity. Same message, different route.

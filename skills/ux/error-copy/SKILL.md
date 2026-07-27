@@ -140,6 +140,7 @@ Anchor phrases currently in use (do not silently drop):
 | `momentarily busy` | provider routing 503/529 test | Provider routing transient |
 | `mid-conversation` | tool_use_id test + api_error classifier | Mid-turn interruption |
 | `rough patch` | api_error classifier | Repeated server-error retries |
+| `dropped out mid-answer` + `didn't retry` | caught by the pre-existing `ai service` anchor (no new classifier substring) | Safety-blocked mid-stream retry — `turnErrorRecovery` blocked-variant copy |
 | `hit a snag` | api_error classifier | Generic retry path |
 | `having a moment` | api_error classifier | Provider status issue |
 | `temporary hiccup` | api_error classifier | Transient stall |
