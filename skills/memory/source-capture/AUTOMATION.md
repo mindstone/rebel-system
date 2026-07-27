@@ -7,7 +7,7 @@ Capture citable sources from recent activity into memory, surface actionable ite
 
 [PROCESS]
 1. Read `Chief-of-Staff/README.md` to learn the user's name, email, and connected tools
-2. Search connected tools (Gmail, Calendar, meeting-transcript connectors such as Fireflies, Slack, Microsoft Teams) for activity since [LAST_EXECUTED_SUCCESS]:
+2. Search connected tools (Gmail, Calendar, Slack, Microsoft Teams) for activity since [LAST_EXECUTED_SUCCESS]:
    - List recent emails (sent and received)
    - List recent calendar events and meetings
    - Search Slack for substantive threads
