@@ -12,6 +12,7 @@ Capture citable sources from recent activity into memory, surface actionable ite
    - List recent calendar events and meetings
    - Search Slack for substantive threads
    - Search Microsoft Teams for substantive chats and mentions (use `list_chats` + `list_chat_messages` when Teams is connected)
+   - **Mandatory meeting-transcript lane:** when a meeting-transcript connector (for example Fireflies) is connected, query that connector directly for transcripts whose activity falls between [LAST_EXECUTED_SUCCESS] and now. Use its exact tool schema. Do not infer that no transcript exists, or treat the meeting as searched, from Calendar results alone.
    - Parallelise these searches when possible
 3. For each piece of content worth citing (meetings, substantive threads, important documents):
    a. **Destination is always Chief-of-Staff.** Write every captured source into `Chief-of-Staff/memory/sources/`. Do not route any source to a shared space — source capture always writes to Chief-of-Staff, regardless of source type, participants, sensitivity, or content. Distribution to shared spaces is handled separately by the distribution automation.
@@ -20,6 +21,7 @@ Capture citable sources from recent activity into memory, surface actionable ite
    d. Include all eight mandatory, non-empty frontmatter fields: `description`, `source_type`, `source_system`, `source_account`, `source_uid`, `source_url`, `stored_at`, `occurred_at`. `source_url` is never blank: use the per-source-type reference templates in `rebel-system/skills/memory/source-capture/SKILL.md` (for example, derive a Gmail permalink from its thread ID; use the documented `internal://` or `workspace://` forms when no canonical web URL exists).
    - See `rebel-system/skills/memory/source-capture/SKILL.md` for the full file format and metadata reference. A non-conforming note is rejected once; immediately rewrite that same note with the corrected path and complete frontmatter.
    - Meetings always get full capture; documents default to summary with URL
+   - For every returned transcript in the activity window, apply the meeting full-capture rule; Calendar metadata is not a substitute for the transcript-lane query.
 4. Update related topic files **within Chief-of-Staff only** to cite the new sources. Do not update topic files in shared spaces — citing a Chief-of-Staff source from a shared-space topic would leak information about private content. Shared-space topic updates are handled by the distribution automation after a source has been approved for distribution.
 5. **(Mandatory) Surface actionable items to Actions** — for sources that need user action, create action items:
    - Call `rebel_inbox_list` first to check for existing items (avoid duplicates)
