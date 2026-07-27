@@ -1,6 +1,6 @@
 ---
 description: "How to power Rebel's AI — a flat-fee Mindstone plan or bring your own (ChatGPT Pro, OpenRouter, Anthropic) — then choose Planner, Main work, and Behind the Scenes models, including what happens when you pick a model outside your plan tier"
-last_updated: "2026-07-25"
+last_updated: "2026-07-27"
 ---
 
 # AI models
@@ -220,6 +220,12 @@ For most people:
 - Leave **Behind the Scenes** on the default unless you have a reason to change it
 
 That keeps Rebel fast without turning settings into a hobby.
+
+## If your company manages your models
+
+If your team brings its own AI accounts, a company admin can choose which models everyone uses for each kind of work — either as a **default** you're free to change, or as a **set choice** that stays put. Wherever a choice has been made for you, Rebel shows a small **“Set by {your company}”** note, so a picker that won't budge is never a mystery. Change a default and your pick sticks — Rebel only switches you back if your admin actually changes the company default.
+
+And if a company-set Main work or Planner choice that stays put can't run — say it needs an AI account you haven't connected — Rebel tells you whose move it is: a **Connect** button when the fix is yours, or “ask your admin” when it isn't. It won't quietly run a different model for Main work or Planner. Behind-the-Scenes work may still switch to another model after a genuine failure. On Mindstone plans, nothing changes.
 
 ## Available models
 

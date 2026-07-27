@@ -1,6 +1,6 @@
 ---
 description: "How Rebel captures meeting transcripts, recognises more meeting links, tracks missed vs scheduled meetings, and helps you prepare for upcoming calls"
-last_updated: "2026-07-02"
+last_updated: "2026-07-27"
 ---
 
 # Meetings and Notetaker
@@ -317,6 +317,8 @@ Already using Fireflies or Fathom? Rebel can import transcripts from these servi
 4. Click **Sync now** to import recent transcripts
 
 Imported transcripts get the same AI analysis as native recordings.
+
+When the **Source Capture** automation later files information from a meeting into memory, Rebel checks the note's source details and folder location. If something is wrong, it requests one corrected version; if that still fails, it keeps a note rather than quietly throwing the capture away. This check is separate from transcript syncing itself.
 
 ### How Sync Works
 

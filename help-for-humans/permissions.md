@@ -1,6 +1,6 @@
 ---
 description: "What Rebel can and can't do without asking you first"
-last_updated: "2026-06-04"
+last_updated: "2026-07-27"
 ---
 
 # Permissions — What Rebel Can Do
@@ -15,7 +15,7 @@ For the full version, see [Security and Tool Safety](library://rebel-system/help
 
 - **Safety Rules** decide which actions Rebel can take automatically and which ones need your approval
 - **Trusted tools** skip routine approval prompts unless [Privacy Mode](library://rebel-system/help-for-humans/privacy-mode.md) is on
-- **Each Space has its own memory permission level** — save without asking, ask if content is sensitive, or always ask
+- **Each Space has its own memory permission level** — save without asking, ask only when Rebel spots something specific, ask whenever Rebel is unsure, or always ask
 - **System permissions** like microphone or screen recording are separate from tool approvals
 
 ## How Tool Safety Works
@@ -32,7 +32,7 @@ Go to **Settings → Privacy & Safety** to manage all three:
 
 - **Your Safety Rules** — the rules that decide when Rebel should ask
 - **Trusted tools** — tools you've marked as always allowed
-- **Memory Spaces** — where you choose whether Rebel can save without asking, should ask if content looks sensitive, or should always ask
+- **Memory Spaces** — where you choose whether Rebel can save without asking, should ask only when it spots something specific, should ask whenever it's unsure, or should always ask
 
 If you want the deeper explanation of how approvals, trusted tools, and memory staging work together, read [Security and Tool Safety](library://rebel-system/help-for-humans/security-and-tool-safety.md).
 
