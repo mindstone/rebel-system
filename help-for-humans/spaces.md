@@ -121,11 +121,11 @@ Each space has its own memory setting:
 | Setting | What it means |
 |---|---|
 | **Save without asking** | Rebel saves memory automatically. This option is for your own private spaces. |
-| **Ask only for specific concerns** | Rebel saves routine updates and asks when it can name a concern, such as a password or personal details. |
-| **Ask when Rebel isn't sure** | Rebel asks whenever it is not fully confident, even without a specific concern. This is the default for shared spaces. |
+| **Ask only when Rebel spots something specific** | Rebel saves routine updates and asks only when it spots something specific, such as a password or personal details. |
+| **Ask whenever Rebel is unsure** | Rebel asks whenever it is not fully confident, even without anything specific to flag. This is the default for shared spaces. |
 | **Always ask before saving** | Every memory write needs your OK. |
 
-Shared spaces can use any of the three asking options, including **Ask only for specific concerns** when routine cards become noise. You cannot dial a shared space all the way down to **Save without asking**, and Rebel's built-in checks for passwords and keys keep running whatever shared-space option you choose.
+Shared spaces can use any of the three asking options, including **Ask only when Rebel spots something specific** when routine cards become noise. You cannot dial a shared space all the way down to **Save without asking**, and Rebel's built-in checks for passwords and keys keep running whatever shared-space option you choose.
 
 ### Privacy Mode overrides space settings
 

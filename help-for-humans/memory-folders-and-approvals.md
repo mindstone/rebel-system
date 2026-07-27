@@ -74,8 +74,8 @@ Rebel's per-space memory safety ladder has four settings. Shared spaces use one 
 | Setting | What it means |
 |---|---|
 | **Save without asking** | Rebel saves to this space automatically. |
-| **Ask only for specific concerns** | Rebel saves routine updates on its own and asks when it can name a concern, such as a password or personal details. |
-| **Ask when Rebel isn't sure** | Rebel checks with you whenever it is not fully confident, even if it cannot point to a specific concern. This is the default for shared spaces. |
+| **Ask only when Rebel spots something specific** | Rebel saves routine updates on its own and asks only when it spots something specific, such as a password or personal details. |
+| **Ask whenever Rebel is unsure** | Rebel checks with you whenever it is not fully confident, even when it cannot point to anything specific. This is the default for shared spaces. |
 | **Always ask before saving** | Every save to this space needs your OK. |
 
 A safety check that cannot complete can still ask rather than guess. [Privacy Mode](rebel://library/rebel-system%2Fhelp-for-humans%2Fprivacy-mode.md) also overrides these settings and asks before every memory save.
@@ -124,8 +124,8 @@ Buttons you may see:
 
 ## Getting too many approval cards?
 
-- **Choose fewer routine check-ins for a busy shared space.** Open [Settings → Safety](rebel://settings/safety), find the space under **Memory Spaces**, and choose **Ask only for specific concerns**. Rebel will still ask when it can say what it is worried about.
-- **Ask less about a space from the card.** A card for a space set to **Ask when Rebel isn't sure** can offer **Only ask when there's a specific concern?** Choose it to update that space without leaving the card. The save in front of you still needs its own decision.
+- **Choose fewer routine check-ins for a busy shared space.** Open [Settings → Safety](rebel://settings/safety), find the space under **Memory Spaces**, and choose **Ask only when Rebel spots something specific**. Rebel will still ask when it spots something specific. You can also open **Settings → Spaces** and use **Open Privacy & Safety → Memory Spaces** at the bottom of the Spaces section.
+- **Ask less about a space from the card.** A card for a space set to **Ask whenever Rebel is unsure** can offer **Only ask when Rebel spots something specific?** Choose it to update that space without leaving the card. The save in front of you still needs its own decision.
 - **Remember recurring saves.** When a card offers **Allow and remember…**, use it to teach Rebel the rule instead of approving the same kind of save repeatedly.
 - **Check what happened without a card.** The Activity log in [Settings → Safety](rebel://settings/safety) shows what Rebel saved without asking and why. You can switch any space back to more check-ins at any time.
 
