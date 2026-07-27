@@ -39,13 +39,13 @@ When Rebel detects a meeting, a banner appears in the title bar. You have option
 
 | Join Mode | Behavior |
 |-----------|----------|
-| **Ask me first** (default) | Rebel prompts you before joining — you can configure how many minutes before the meeting to show the prompt |
-| **Auto-join** | Rebel automatically sends a notetaker to meetings with recognised video links. Meetings starting within 15 minutes use instant join so the bot arrives on time. |
-| **Auto-schedule** | Rebel schedules the notetaker in advance for your upcoming meetings |
+| **Ask me first** | Rebel prompts you before joining — you can configure how many minutes before the meeting to show the prompt |
+| **Auto-join** | Rebel automatically sends a notetaker to meetings with recognised video links. Upcoming meetings are scheduled in advance so the bot is ready, and meetings starting within 15 minutes use instant join so it arrives on time. |
+| **Don't join** | Rebel won't surface meetings or send a notetaker automatically. Use **Paste a meeting link** when you want one. |
 
 Click **Join with Rebel** to send the notetaker immediately.
 
-**Paste a meeting link:** You can also paste a meeting URL directly into the composer to schedule a notetaker instantly — no calendar sync required. Rebel accepts a wider range of Zoom, Google Meet, and Teams link formats than before. Handy for ad-hoc meetings or links someone sends you in Slack.
+**Paste a meeting link:** You can also use **Paste a meeting link** to schedule a notetaker instantly — no calendar sync required. Rebel accepts a wider range of Zoom, Google Meet, and Teams link formats than before. Handy for ad-hoc meetings or links someone sends you in Slack.
 
 **Pre-scheduled meetings:** If a notetaker is already scheduled for an upcoming meeting, you'll see a "pre-scheduled" indicator in the meeting preview. Rebel prevents duplicate bots from being scheduled for the same meeting.
 
@@ -385,7 +385,7 @@ Select your avatar in **Settings → Meetings**.
 | Calendar not connected | Go to **Settings → Connectors** and connect Google Workspace or Microsoft 365 |
 | Meeting has no video link | Only meetings with Zoom, Meet, or Teams links are detected |
 | Meeting URL not recognised | Rebel recognises more link formats now, but the invite still needs a valid join URL — try pasting the link directly into the composer |
-| Join mode set to "Ask" | Check title bar — you may need to click "Join with Rebel" |
+| Join mode set to "Ask me first" | Check title bar — you may need to click "Join with Rebel" |
 | Auto-join on but no notetaker sent | Check the notetaker is on with Auto-join behaviour, your calendar is connected, and the invite has a recognised video link. If it keeps happening, send a bug report with diagnostics |
 | Corporate security | Some enterprise Zoom/Teams accounts block external bots |
 
