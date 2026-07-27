@@ -342,7 +342,7 @@ When the same meeting is captured by multiple notetakers (e.g., Rebel + Fireflie
 
 **Example frontmatter:**
 ```yaml
-source_type: notion
+source_type: doc
 source_system: notion
 source_account: company-workspace
 source_uid: 12345-abcde-67890
@@ -360,7 +360,7 @@ source_url: https://notion.so/page/12345-abcde-67890
 
 **Example frontmatter:**
 ```yaml
-source_type: slack
+source_type: thread
 source_system: slack
 source_account: company-workspace
 source_uid: C01234567:1234567890.123456
