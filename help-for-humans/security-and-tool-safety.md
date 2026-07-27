@@ -83,8 +83,8 @@ Choose the setting that matches how you use each space:
 | Setting | What Rebel does |
 |---|---|
 | **Save without asking** | Saves automatically. This option is for your own private spaces. |
-| **Ask only for specific concerns** | Saves routine updates on its own and asks when it can name a concern, such as a password or personal details. |
-| **Ask when Rebel isn't sure** | Asks whenever it is not fully confident, even without a specific concern. This is the default for shared spaces. |
+| **Ask only when Rebel spots something specific** | Saves routine updates on its own and asks only when it spots something specific, such as a password or personal details. |
+| **Ask whenever Rebel is unsure** | Asks whenever it is not fully confident, even without anything specific to flag. This is the default for shared spaces. |
 | **Always ask before saving** | Asks before every save. |
 
 For **shared spaces**, Rebel's built-in checks for passwords and keys run whatever setting you choose. If one spots something credential-shaped, the approval card says what it noticed.
