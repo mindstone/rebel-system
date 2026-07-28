@@ -4,6 +4,16 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ---
 
+## v0.4.58 — Jul 28, 2026
+
+### Fixes
+
+<!-- detail: Custom connectors can be configured as "sse" or "http" (Streamable HTTP). A server that only supports the newer transport would reject the older SSE handshake with a 405 before OAuth could run, so authentication never started. Rebel now falls back to the newer transport on that specific rejection and retries once. Existing connectors that never connected will work on the next Authenticate. -->
+- **Connectors set to the older SSE style now work with servers that only speak the newer MCP transport** — A connector configured the older way to a server that only supports the newer transport could never sign in — it was refused before the sign-in step even ran. Rebel now retries the newer way when the older way is refused, so these connectors just work. No settings to change. The handshake, accepted.
+
+<!-- detail: 260728_fix-settings-blank (plan docs/plans/260728_fix-settings-blank/PLAN.md; CE2 bug_mode). When the initial settings read failed or hung, the Settings panel stayed on a perpetual "Loading settings…" shell with no error message and no way to retry — the failure was silently swallowed (catch called only onError, which rendered on the Session surface, invisible to a user sitting on Settings) and the await on settings:get was unbounded, so a throw or a main-process stall left the user staring at the loading panel indefinitely while the app emitted nothing. The settings load is now bounded (15s non-aborting deadline), observable (telemetry lifecycle: failed / timeout / recovered-after-timeout / failed-after-timeout / superseded-after-timeout, each carrying attemptId/durationMs/hadExistingDraft), and recoverable (a Notice with "Try again" for a confirmed failure; a timed-out load keeps waiting since its request may still arrive). Full attempt ownership prevents a stale late load from clobbering a newer draft or user edits; a populated draft always wins over the error state so a background-refresh failure never blanks a working surface. Bootstrap migration guard hardening deferred (D9) with a named wake signal (any failed settings-load capture in production). Commits e4d0782bba + 1c09101fd6. Keep public copy non-technical — no IPC/telemetry/migration internals. -->
+- **Settings no longer gets stuck on an endless "Loading settings…" screen** — If Rebel couldn't read your settings — something went wrong, or the read was taking too long — the Settings panel used to sit on a perpetual "Loading settings…" message with no sign anything was amiss and no way to try again. Now, when the read fails, Rebel says so plainly and offers a **Try again** button; when it's merely slow, Rebel tells you it's still working and lets you keep waiting. Your settings aren't gone — Rebel just hit a snag reading them, and one click tries again.
+
 ## v0.4.57 — Jul 22–27, 2026
 
 ### Highlights
