@@ -4,6 +4,13 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ---
 
+## v0.4.58 — Jul 28, 2026
+
+### Fixes
+
+<!-- detail: 260728_rebel-729-server-tool-use Stage 1 (plan docs/plans/260728_rebel-729-server-tool-use/PLAN.md; CE2 bug_mode). For models routed via OpenRouter (e.g. GLM) using Rebel's built-in web search, the assistant's "searched for X" reference text and replay/summary text silently lost the search query — the search still ran and results came back, but what Rebel had looked for was blank. Root cause: the match that captures a web-search tool call only recognised the Anthropic-dialect tool name, while OpenRouter echoes the tool back under the name Rebel sends it, so the match never fired and the translated result lost its query. Fix widens the match to accept both names. Keep public copy non-technical. -->
+- **Web search shows what it searched for again** — If your model runs through OpenRouter (GLM, for example) and you used Rebel's built-in web search, the "searched for…" text quietly went missing — the search still ran and the results came back, but what Rebel had looked for was blank. Now the query shows up again. What Rebel searched for, back on the page.
+
 ## v0.4.57 — Jul 22–27, 2026
 
 ### Highlights
@@ -96,6 +103,13 @@ What's new in Rebel. We ship fast, so there's always something.
 
 <!-- detail: 260713_fix-mindstone-needs-setup-badge (plan docs/plans/260713_fix-mindstone-needs-setup-badge/; CE2 bug_mode light). The Agent & Voice settings "Needs setup" badge derived from a provider-blind credential check (local API key / OAuth / OpenRouter token / working profile only), so a managed Mindstone subscription — which deliberately stores no local credential — was wrongly flagged. Fix: provider-aware pure helper computeNeedsAgentSetup treats an active mindstone provider as valid setup, agreeing with validateProviderCredentials. Pure-helper tests (4 provider cases) + real SettingsSurface render test. Keep public copy non-technical — no helper/accessor internals. -->
 - **No more false "Needs setup" on a healthy Mindstone plan** — If you ran Rebel on a Mindstone subscription, Settings could claim your AI setup needed attention when everything was in fact working. The badge now understands that a Mindstone plan is a complete setup — no local key required. Healthy means healthy.
+
+## v0.4.55 — Jul 13, 2026
+
+### Fixes
+
+<!-- detail: 260712_fix-glm-openrouter-server-tool-use (plan docs/plans/260712_fix-glm-openrouter-server-tool-use/PLAN.md; CE2 bug_mode). Turns crashed with the generic "Something went sideways" banner when a model routed via OpenRouter (e.g. GLM-5.2) triggered OpenRouter's server-side web search — a raw provider-dialect block leaked into Rebel's neutral content and hit an exhaustive downstream switch. Fixed at the mint site with a positive allowlist. Keep public copy non-technical. -->
+- **Turns stopped crashing when an OpenRouter model triggered a web search** — If your model ran through OpenRouter (GLM, for example) and it reached for a web search, the whole turn could die with a generic "Something went sideways" and nothing you tried would help; those turns now carry on. The crash that wasn't your fault, gone.
 
 ## v0.4.54 — Jul 11, 2026
 
