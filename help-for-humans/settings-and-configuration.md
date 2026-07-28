@@ -104,7 +104,7 @@ Configure the Rebel Notetaker for automatic meeting transcription.
 Use **Settings → Meetings** for:
 
 - **Choosing a notetaker avatar**
-- **Join behaviour** — ask first or auto-join
+- **Join behaviour** — ask first, auto-join, or don't join
 - **Transcript storage** — where 1:1 and group meeting notes are saved
 - **Trigger phrase and spoken replies**
 - **Paste a meeting link** workflows
