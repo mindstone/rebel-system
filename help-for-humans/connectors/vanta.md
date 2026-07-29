@@ -25,7 +25,7 @@ Rebel talks to Vanta via their **REST API** using OAuth (client credentials). Re
 2. Go to your Vanta dashboard → **Settings** → **Developer Console** → click **+ Create** → select **Manage Vanta**
 3. Copy the **Client ID** and **Client Secret** and paste them into Rebel
 
-Rebel automatically exchanges these credentials for a short-lived access token behind the scenes. Use a **Manage Vanta** app with read and write permissions (`vanta-api.all:read vanta-api.all:write`).
+Rebel automatically exchanges these credentials for a short-lived access token behind the scenes. Use a **Manage Vanta** app that can request all three permissions: `vanta-api.all:read vanta-api.all:write vanta-api.documents:upload`. The upload permission is separate because Vanta treats document uploads as their own thing. Naturally.
 
 Vanta's dashboard may show regional URLs like `app.eu.vanta.com`, but the API connection uses Vanta's global API host. No regional hostname wrangling required, which is a mercy.
 
@@ -38,15 +38,18 @@ Vanta's dashboard may show regional URLs like `app.eu.vanta.com`, but the API co
 - "List all high-severity vulnerabilities"
 - "Which vendors need review?"
 - "Who are the active people in Vanta?"
-- "Show me vendor documents"
+- "Attach this SOC 2 report to a vendor"
+- "Upload this evidence file to an existing Vanta document"
 
 
 ## Troubleshooting
 
 - **"OAuth credentials are not configured"** — paste your Client ID and Client Secret in Settings → Connectors → Vanta
 - **"Unauthorized" or "invalid credentials"** — regenerate the OAuth app at your Vanta dashboard → Settings → Developer Console
+- **"Invalid scope"** — make sure the Vanta app is a **Manage Vanta** app that can request `vanta-api.all:read vanta-api.all:write vanta-api.documents:upload`
 - **"Rate limited"** — Vanta allows 50 requests per minute. Rebel retries automatically. If it persists, wait a moment and try again
 - **"Not found"** — double-check that the ID came from a Vanta list tool. Vanta IDs are opaque strings
+- **Uploaded documents still need review** — Vanta saves API uploads as drafts. Submit the document in Vanta before auditors can see it
 
 
 ## See Also
