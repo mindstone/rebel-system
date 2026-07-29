@@ -4,6 +4,16 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ---
 
+## v0.4.58 — Jul 28–29, 2026
+
+### Fixes
+
+<!-- detail: 260728_onboarding-revert-trap (plan docs/plans/260728_onboarding-revert-trap/PLAN.md). onboardingCompleted could revert true→false after onboarding completed when a stale settings write raced past the completion signal, trapping re-onboarders on a force-quit-only blank screen. Shipped a renderer floor + autosave cancel, and a monotonic lifecycle guard at the settings-store document-write boundary: no document write can regress onboardingCompleted or onboardingFirstCompletedAt except via the explicit relaunch-onboarding intent, which is stripped before persistence and before the cloud dual-write forward. Guard-fire telemetry names the writer. Keep public copy non-technical — no IPC/proxy/guard internals. -->
+- **Onboarding stays done** — Once you'd finished setting up Rebel, a stale write could quietly flip "setup complete" back to "not yet" and leave you staring at a blank screen that only a force-quit could escape. Setup completion is now monotonic — once it's done, it stays done, and the only thing that reopens the wizard is you choosing to. Done means done.
+
+<!-- detail: Same plan. A render-gate watchdog upgrades the delayed escape hatch to an immediate recovery splash after ~8s: "Rebel got stuck loading. Your work is still here." with a Try again button, announced via role="status" for screen readers. Keep public copy non-technical. -->
+- **A way out when Rebel gets stuck loading** — If Rebel ever lands on a blank loading screen, it now says so plainly — "Rebel got stuck loading. Your work is still here." — and offers a Try again button instead of making you force-quit. Your work is still there; the blank screen is no longer a dead end.
+
 ## v0.4.57 — Jul 22–27, 2026
 
 ### Highlights
