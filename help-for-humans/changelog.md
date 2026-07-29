@@ -4,6 +4,15 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ---
 
+## v0.4.58 — Jul 28–29, 2026
+
+### Fixes
+
+<!-- detail: When a Rebel turn hit a tool failure and carried on (up to four attempts per turn), every attempt's candidate answer used to be concatenated into one visible chat message — so you'd see several stacked, mutually-contradictory "final answers" with the real one buried at the bottom. Rebel now keeps only the accepted attempt's answer in the message and tucks the earlier drafts into the collapsed work trace under an "Earlier" label with a short preview. The continuation machinery is also more honest: Rebel stops re-prompting itself once attempts stop making progress, so it no longer manufactures pointless retries that burn tokens. Single-attempt turns (the vast majority) are unchanged. The glitchy Unicode characters some answers showed are a separate issue, addressed later. Planning: docs/plans/260728_attempt-supersession/PLAN.md. -->
+- **One answer per turn, even after a few tries** — When a tool stumbled mid-turn and Rebel carried on, the chat used to stack every attempt's "final answer" into one message — contradictory drafts piled on top of each other, with the real answer buried at the bottom. Now you see exactly one answer (the one Rebel settled on); the earlier drafts tuck into the collapsed work trace under an "Earlier" label with a short preview, and Rebel stops re-prompting itself once attempts stop making progress. The glitchy Unicode some answers showed is a separate issue, for another day. One answer, honestly arrived at.
+
+---
+
 ## v0.4.57 — Jul 22–27, 2026
 
 ### Highlights
