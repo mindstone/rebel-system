@@ -4,6 +4,17 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ---
 
+## v0.4.58 — Jul 28–29, 2026
+
+### Highlights
+
+### Improvements
+
+### Fixes
+
+<!-- detail: Rebel now distinguishes a genuinely empty conversation list from one it could not read. In the latter case, the sidebar keeps any conversations it already knows about and offers Try again; mobile retains its cached list when the cloud returns an error; bug reports include counts only, never conversation content, to help diagnose whether the list was incomplete or unavailable. -->
+- **An empty conversation list now has to prove it** — If Rebel can't read your conversation list, it now says **“Couldn't load your conversations”** and offers **Try again**, instead of presenting a worrying empty list as fact. Mobile also keeps its cached conversations through a brief cloud hiccup, while bug reports carry better counts to help work out what happened — because empty should be a conclusion, not a guess.
+
 ## v0.4.57 — Jul 22–27, 2026
 
 ### Highlights
