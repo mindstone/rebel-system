@@ -4,6 +4,19 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ---
 
+## v0.4.58 — Unreleased
+
+### Fixes
+
+<!-- detail: 260728_mcp-connector-setup-failures (plan docs/plans/260728_mcp-connector-setup-failures/PLAN.md; CE2 bug_mode). The persisted MCP config pointer (settings.mcpConfigFile) could be left null or pointing at a stale profile directory after a machine/profile move, so first-time connector setup for Google Workspace, Outlook, Microsoft Office, and Salesforce threw "Configure an MCP config file first" instead of starting the sign-in. The handler now self-heals: a missing or provably-stale pointer is repointed to the current profile's router file before setup proceeds, with a heal event recorded for observability. A deliberate external config (e.g. ~/.cursor/mcp.json) is never touched. Keep public copy non-technical — no pointer/router/profile internals. -->
+- **First-time connector setup repairs itself instead of failing** — Connecting Google Workspace, Outlook Calendar, or Microsoft Office for the first time could fail with a confusing "Configure an MCP config file first" message and no way forward. Rebel now quietly fixes the underlying setting and gets on with the sign-in, so the message is gone. The connection that fixed itself.
+
+<!-- detail: The outer authenticate timeout (370s → 420s) now exceeds the fully-bounded inner worst case (pre-check + setup + 300s callback + 30s token exchange + 30s reconnect + 20s health check = 412s), so slow-but-succeeding sign-ins near the window's end are no longer reported as failures. super-mcp's finishAuth gained a 30s race timeout so the inner leg is bounded for the first time; a cross-package invariant test pins the budget arithmetic on both sides. Honest copy replaces the "credentials may have been saved" hedge. Keep public copy non-technical. -->
+- **Slow sign-ins stop looking like failures** — A sign-in that took a while but actually succeeded could be reported as "timed out" and abandoned. Rebel now waits long enough to cover real-world sign-in times, so a deliberate sign-in is no longer mistaken for a stuck one. Patience, calibrated.
+
+<!-- detail: The Salesforce bridge endpoint returned a dev-facing env-var string ("Set SALESFORCE_CLIENT_ID in your environment") to production users missing OAuth client credentials. It now returns the shared describeMissingOAuthCredentials('salesforce') guidance shape (mirrors HubSpot), and the agent-path SETUP_TOOL_MISSING_CREDS regex gained an alternation so relayed guidance still maps to structured setupGuidance. The 9 historical cred events were already fixed by 6d2f253f97 (Jun 12); this is polish for the genuinely-no-creds branch. Keep public copy non-technical. -->
+- **Salesforce setup guidance now tells you what to actually do** — When Salesforce needed credentials you hadn't supplied, Rebel used to show a message meant for developers, naming environment variables no user has. It now explains in plain language how to get connected. Instructions, finally instructing.
+
 ## v0.4.57 — Jul 22–27, 2026
 
 ### Highlights
