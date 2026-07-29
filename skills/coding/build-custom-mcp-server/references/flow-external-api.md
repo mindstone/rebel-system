@@ -56,14 +56,15 @@ is the single most common cause of broken contributed connectors.
 
 **Required steps:**
 
-1. **Ask the user for a test API key** (sandbox/free tier preferred).
-   Use the **same `AskUserQuestion` card pattern documented in
-   [SKILL.md § 6.2 "Set Up Credentials"](../SKILL.md#62-set-up-credentials)**
-   — one card with a "Have it" option that takes the key as input and a
-   "Need to get it" option that pairs `url` (the provider's API-keys
-   page) with `requiresInput: true` and a clear `inputPlaceholder`. Just
-   earlier in the flow. Don't ask in free-text chat; the card-based flow
-   is what the in-app UX expects.
+1. **Set up a test API key securely** (sandbox/free tier preferred).
+   Follow the credential-store recipe in
+   [SKILL.md § 6.2 "Set Up Credentials"](../SKILL.md#62-set-up-credentials):
+   call `list_credentials`; if the key is absent, send the user to
+   Settings → Privacy & Safety → "Keys Rebel can use", share the
+   provider's key page as a plain Markdown link, and pause until they
+   confirm it has been added. Call `list_credentials` again, then use
+   the returned id through Bash's `credentials` injection. Never ask
+   the user to paste the key into chat or a question card.
    If the user has not yet obtained one, pause research and help them
    through the auth section below. Do not proceed with "I'll implement
    it and they can test later" — that's the pattern that produces
@@ -74,14 +75,15 @@ is the single most common cause of broken contributed connectors.
    - Auth header name and value format (redacted)
    - Observed HTTP status code
    - First ~200 chars of the response body
-3. **If you cannot obtain a key**, do not silently stop. Report
+3. **If the key is not available in the credential store**, do not silently stop. Report
    `testing` status via `rebel_mcp_report_contribution_state` (the
    valid transitions are `draft` / `testing` / `ready_to_submit` —
    there is no `blocked` status, and the tool does not accept an
    arbitrary `notes` field), then send a visible chat message to the
    user that names the blocker — e.g. *"I need a test access key before
-   I can safely try this with [provider]. Could you create one here and
-   paste it back?"*. Stay in
+   I can safely try this with [provider]. Please add one in Settings →
+   Privacy & Safety → Keys Rebel can use, then tell me when it's there."*
+   Stay in
    `testing` until the probe can run; do not skip implementation on
    unverified endpoints and do not invent a new status. The user's
    MCPBuildCard will show the `testing` state, and the chat message
