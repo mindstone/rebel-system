@@ -44,7 +44,7 @@ Add one in **[Settings → Privacy & Safety](rebel://settings/safety)**, in the 
 
 - **You paste the key in once, into Settings.** It's encrypted using this computer's secure storage — the same protection your operating system uses for saved passwords.
 - **The AI only sees the *name* you gave it** (e.g. "Payments API key"), never the value. There's deliberately **no** "show me the key" command it can run — so a sneaky instruction hidden in an email or web page has nothing to read.
-- **The real value is unlocked only at the moment a command runs**, and slipped into *that one command's* environment — never into the conversation, your notes, or the logs. When the command finishes, it's gone again.
+- **The real value is unlocked only at the moment a command runs**, and slipped into *that one command's* environment — never into the conversation, your notes, or the logs. It normally disappears from the command's environment when the command finishes; when Rebel configures a local custom tool, that command may intentionally write the key to the tool's plaintext `.env` file so the tool can read it later, but the key still never enters the conversation or the AI's view.
 
 **An example.** Say a payment service needs an API key to list your transactions. You add it in Settings as "Payments API key". Then you can just ask Rebel, *"grab my last 10 charges."* Rebel runs the request with your key injected for that single call, gets the data, and shows you the result — and the key never appears anywhere you (or the AI) could read it back.
 
