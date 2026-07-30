@@ -61,10 +61,10 @@ For services found in the catalog, use `rebel_mcp_add_server` with `catalogId`:
 1. **Search**: `rebel_mcp_search_connectors(query: "fathom")` -- get `id`, `setupFields`, `accountIdentity`
 2. **Get details** (if needed): `rebel_mcp_get_connector(connectorId: "bundled-fathom")` -- full setup info
 3. **Check accountIdentity**: If `"email"` or `"workspace"`, ask the user for it before adding
-4. **Add**: `rebel_mcp_add_server({ catalogId: "bundled-fathom", setupFields: { apiKey: "sk-..." }, email: "user@work.com" })`
+4. **Add only when no secret setup field is required**: For OAuth or no-setup connectors, call `rebel_mcp_add_server` with the `catalogId` and any non-secret identity field. For API-key connectors, send the user to Settings → Connectors instead.
 5. **Handle response**: The tool message will say whether the connector was added or already exists, and include explicit `authenticate(package_id: "...")` instructions if OAuth is needed
 
-- **API key connectors** (Fathom, Gamma, etc.): Pass keys via `setupFields` in the add call
+- **API key connectors** (Fathom, Gamma, etc.): The user adds the key in Settings → Connectors. Never collect it in chat or pass it through `setupFields`.
 - **OAuth connectors** (Notion, Linear, Slack, etc.): The add response returns `requiresAuth: true` with `serverName` -- use `authenticate(package_id: "<serverName>")` with the **server name from the response** (NOT the catalog ID)
 - **Connectors without setup** (Gmail, Google Calendar, etc.): Can also be added via this flow; `setupFields` may be empty
 
@@ -110,9 +110,9 @@ After `rebel_mcp_add_server` succeeds, the response returns `requiresAuth: true`
 ✓ Call rebel_mcp_search_connectors(query: "fathom")
 ✓ Find "bundled-fathom" in results with setupFields: [{id: "apiKey", ...}]
 ✓ Call rebel_mcp_get_connector(connectorId: "bundled-fathom") for full instructions
-✓ Tell user: "Fathom is a built-in connector! Do you have your API key?"
-✓ If they have the key: rebel_mcp_add_server({ catalogId: "bundled-fathom", setupFields: { apiKey: "sk-..." } })
-✓ If they need the key, share the setupUrl from catalog: https://fathom.video/customize#api-access-header
+✓ Tell user: "Fathom is a built-in connector. Add its API key in Settings → Connectors."
+✓ Share the setupUrl from the catalog so they know where to get the key: https://fathom.video/customize#api-access-header
+✓ Pause until they confirm setup is complete; do not collect or pass the key in chat
 ```
 
 ### Service not in catalog — off-ramp into the OSS/open-source setup flow
@@ -222,7 +222,7 @@ When adding a connector that supports multiple accounts, **ask for the account i
 - Manual server names with email slugs (these are auto-generated from email)
 - Technical configuration details they shouldn't need to know (transport type, env vars, etc.)
 
-**API keys are OK to ask for** when a catalog connector has `setupFields` that require them (e.g., Fathom, Gamma). Pass them via `setupFields` in the `rebel_mcp_add_server` call. If the user doesn't have their key handy, share the `setupUrl` from the catalog or suggest **Settings → Connectors** as an alternative.
+**Catalog connectors that need an API key use the host setup form in Settings → Connectors.** Send the user there and share the catalog's `setupUrl` so they know where to get the key. Never collect the key in chat and never pass it in `setupFields`: tool arguments are model-generated and stored in the conversation record.
 
 **For OAuth connectors** (Notion, Linear, Slack, Fireflies, etc.), initiate authentication directly in chat using `authenticate(package_id: "server-name")`. This returns an OAuth URL for the user to click - no need to visit Settings.
 
