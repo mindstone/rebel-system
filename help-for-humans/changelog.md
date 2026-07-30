@@ -4,6 +4,13 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ---
 
+## v0.4.59 — Jul 30, 2026
+
+### Fixes
+
+<!-- detail: Rebel runs a safety check on edits before applying them. Edits that replace a whole section of a large file could exceed the check's size limit, which made Rebel stop and ask for your approval even for routine changes. The limit is now doubled, covering realistic large edits while keeping the check fast. Genuinely huge edits may still ask — that's the safety system working as intended. -->
+- **Fewer approval prompts on very large edits** — When Rebel rewrote a big section of a file in one go, its safety check sometimes couldn't fit the whole edit and stopped to ask you anyway. The check now handles much larger edits, so it only asks when it genuinely needs to. Big edit, small interruption.
+
 ## v0.4.58 — Jul 28–29, 2026
 
 ### Fixes
