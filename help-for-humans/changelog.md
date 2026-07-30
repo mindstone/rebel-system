@@ -8,6 +8,9 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+<!-- detail: An issue observed in a beta report showed internal prompt-scaffolding labels such as [PERSONA] in a file-access card's "While working on" context. Rebel now withholds contaminated context before it reaches the card, filters older saved requests when displayed, and skips the same machine-facing text when choosing fallback or generated conversation titles. It deliberately omits the whole candidate rather than stripping labels into misleading fragments. -->
+- **Internal prompt labels stay internal** — Rebel could occasionally use its own behind-the-scenes instructions as the "While working on" line or a conversation title. It now skips those candidates instead of trying to tidy machine notes into something presentable. Some notes are best left backstage.
+
 <!-- detail: Rebel runs a safety check on edits before applying them. Edits that replace a whole section of a large file could exceed the check's size limit, which made Rebel stop and ask for your approval even for routine changes. The limit is now doubled, covering realistic large edits while keeping the check fast. Genuinely huge edits may still ask — that's the safety system working as intended. -->
 - **Fewer approval prompts on very large edits** — When Rebel rewrote a big section of a file in one go, its safety check sometimes couldn't fit the whole edit and stopped to ask you anyway. The check now handles much larger edits, so it only asks when it genuinely needs to. Big edit, small interruption.
 
