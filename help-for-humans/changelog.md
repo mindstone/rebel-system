@@ -4,12 +4,14 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ---
 
-## v0.4.59 — Jul 30, 2026
+## v0.4.59 — Jul 30–31, 2026
 
 ### Fixes
 
 <!-- detail: If one action in a long ordered run needed approval, Rebel could treat that pause as a reason to stop checking everything after it. It now keeps moving through independent later actions in order, suppresses only exact repeats, runs an approved action at most once, and preserves the eventual approved, declined, expired, or failed result so it can still be reported after an interruption or restart. -->
 - **One queued approval no longer holds up everything behind it** — If one email or other action needs your approval, Rebel keeps working through the independent actions that follow instead of stopping the whole run. Declined actions are reported, and queued work no longer quietly disappears. One pause, not a pile-up.
+<!-- detail: 260730_meeting-prep-early-expiry (plan docs/plans/260730_meeting-prep-early-expiry/PLAN.md; CE2 bug_mode). Meeting-prep Actions ("Prep for…") were being auto-set-aside on the morning of the meeting — hours before the meeting actually happened — because the freshness rule measured its 4h grace from a day-precision reference time (midnight at the start of the meeting day) instead of the actual meeting start. The rule now fires only from the exact calendar-event start time when one is available, a future deadline vetoes any archival, and items without a trustworthy meeting time fall back to the slower generic staleness rules. A one-shot restoration revives any wrongly-set-aside items still inside their meeting window on first boot of the fixed build. Rebel also no longer runs the inbox janitor on cloud or mobile — only desktop (and CLI) own your inbox state. Keep public copy non-technical — no relevantDate/precision/janitor internals. -->
+- **Prep Actions stop vanishing on the morning of the meeting** — A "Prep for…" Action used to quietly move itself to the Auto-archived lane hours before the meeting happened — exactly when you'd want it most — because the freshness rule measured from the start of the day rather than the start of the meeting. It now measures from the actual meeting time when Rebel knows it, never archives before your own deadline, and any still-upcoming items that were wrongly set aside get quietly restored. The prep that was there, still there.
 
 <!-- detail: An issue observed in a beta report showed internal prompt-scaffolding labels such as [PERSONA] in a file-access card's "While working on" context. Rebel now withholds contaminated context before it reaches the card, filters older saved requests when displayed, and skips the same machine-facing text when choosing fallback or generated conversation titles. It deliberately omits the whole candidate rather than stripping labels into misleading fragments. -->
 - **Internal prompt labels stay internal** — Rebel could occasionally use its own behind-the-scenes instructions as the "While working on" line or a conversation title. It now skips those candidates instead of trying to tidy machine notes into something presentable. Some notes are best left backstage.
@@ -165,6 +167,9 @@ What's new in Rebel. We ship fast, so there's always something.
 ## v0.4.56 — Jul 21, 2026
 
 ### Highlights
+
+<!-- detail: Real-time voice companion plan docs/plans/260723_voice-companion/. Long-running turns now have one busy-state grammar: Queue (after), Nudge (into), Stop & send (instead). Directive Inbox injects nudges only at safe model-request boundaries, with visible On its way/Picked up/missed states and no-loss fallback. Journal-grounded check-ins answer progress questions without interrupting the worker. Desktop voice uses the same routing and can speak gated proactive updates; mobile v1 can send/track text nudges but does not add voice companion controls. Keep public copy non-technical. -->
+- **Talk to Rebel while it works** — Long task underway? You can now ask how it's going, slip in a **Nudge** without restarting the job, or keep talking and let Rebel route the thought to the right place. Check-ins answer from what the task has actually done so far; nudges show whether they're on the way or picked up; and voice mode can speak useful updates without narrating every paperclip. Your phone can send and track text nudges too. Rebel remains busy, but no longer in the “please leave a message after the beep” sense.
 
 ### Improvements
 
