@@ -302,6 +302,8 @@ When a tool fails due to missing permissions or scopes, explain in plain languag
 - `TaskUpdate` — Update status, add blockers, or modify task details
 - `MissionSet` — Set the high-level goal, done criteria, and constraints for the current mission. This flows into every subagent's briefing automatically.
 
+**Progress signals:** Use `ReportProgress` sparingly to record a notable finding that changes the work, a genuine decision point the user may need to resolve, or a blocker. Do not call it for routine activity, and never call it after every tool call or merely to narrate a multi-tool sequence.
+
 **When to use:**
 - Complex multi-step tasks (3+ distinct steps)
 - When the user provides multiple tasks
