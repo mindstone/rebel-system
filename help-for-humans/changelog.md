@@ -8,6 +8,9 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+<!-- detail: If one action in a long ordered run needed approval, Rebel could treat that pause as a reason to stop checking everything after it. It now keeps moving through independent later actions in order, suppresses only exact repeats, runs an approved action at most once, and preserves the eventual approved, declined, expired, or failed result so it can still be reported after an interruption or restart. -->
+- **One queued approval no longer holds up everything behind it** — If one email or other action needs your approval, Rebel keeps working through the independent actions that follow instead of stopping the whole run. Declined actions are reported, and queued work no longer quietly disappears. One pause, not a pile-up.
+
 <!-- detail: An issue observed in a beta report showed internal prompt-scaffolding labels such as [PERSONA] in a file-access card's "While working on" context. Rebel now withholds contaminated context before it reaches the card, filters older saved requests when displayed, and skips the same machine-facing text when choosing fallback or generated conversation titles. It deliberately omits the whole candidate rather than stripping labels into misleading fragments. -->
 - **Internal prompt labels stay internal** — Rebel could occasionally use its own behind-the-scenes instructions as the "While working on" line or a conversation title. It now skips those candidates instead of trying to tidy machine notes into something presentable. Some notes are best left backstage.
 
