@@ -40,7 +40,6 @@ The user is non-technical. They are creating a tool with Rebel, not coding, ship
 **Allowed exceptions:**
 
 - `GitHub` is OK only when the user has explicitly chosen the GitHub-attributed path, such as the attribution sub-card.
-- `API key` and `access key` are OK on credential collection cards because the user is being asked to fetch one.
 
 **Pronouns:**
 
@@ -650,43 +649,45 @@ npm run build
 
 ### 6.2 Set Up Credentials
 
-Ask the user for their API credentials in chat using `AskUserQuestion`. **The "go fetch the key" option MUST pair `url` (the provider's API keys page) with `requiresInput: true` and a clear `inputPlaceholder`.** Without `requiresInput: true`, the user has nowhere to paste the key after fetching it from the URL — the card will auto-submit and the conversation hits a dead end.
+Never ask the user to paste an API key, token, or password into chat or a question card.
 
-Worked example for a connector that needs a single API key:
+On desktop:
+
+1. Call `list_credentials`. Use only the returned credential id; the secret value is never shown.
+2. If the needed key is absent, direct the user to **Settings → Privacy & Safety → "Keys Rebel can use"**. Share the provider's key page as a plain Markdown link, for example [Create a <Provider> API key](https://<provider>.example.com/account/api-keys), then **PAUSE** until the user confirms they added it. Call `list_credentials` again to get its id.
+3. Before writing any credential, verify that `.gitignore` contains an exact `.env` entry:
 
 ```json
 {
-  "questions": [
+  "command": "node -e \"const fs=require('fs'); const lines=fs.readFileSync('.gitignore','utf8').split(/\\r?\\n/); if(!lines.some(line=>line.trim()==='.env')) throw new Error('.gitignore must contain an exact .env entry before credentials are written')\""
+}
+```
+
+4. Create `.env` from `.env.example` without overwriting an existing file. This is the cross-platform equivalent of `cp -n .env.example .env`:
+
+```json
+{
+  "command": "node -e \"const fs=require('fs'); if(!fs.existsSync('.env')) fs.copyFileSync('.env.example','.env')\""
+}
+```
+
+5. Append the credential through Bash's `credentials` injection. The command refers only to `process.env.PROVIDER_API_KEY`; Rebel resolves the stored id directly into the child process environment, so the model never sees the value:
+
+```json
+{
+  "command": "node -e \"const fs=require('fs'); fs.appendFileSync('.env', 'PROVIDER_API_KEY=' + process.env.PROVIDER_API_KEY + '\\n', {mode: 0o600}); if(process.platform!=='win32') fs.chmodSync('.env',0o600)\"",
+  "credentials": [
     {
-      "question": "Do you have your <Provider> API key?",
-      "header": "API key",
-      "options": [
-        {
-          "label": "Have it",
-          "description": "Paste it now",
-          "requiresInput": true,
-          "inputPlaceholder": "Paste your <Provider> API key here"
-        },
-        {
-          "label": "Need to get it",
-          "description": "Open the API keys page and paste it back",
-          "url": "https://<provider>.example.com/account/api-keys",
-          "requiresInput": true,
-          "inputPlaceholder": "Paste your <Provider> API key here"
-        }
-      ]
+      "id": "<id from list_credentials>",
+      "envVar": "PROVIDER_API_KEY"
     }
   ]
 }
 ```
 
-Once the user provides the value, create the `.env` file and fill in the credentials they gave you:
+The `.env` intentionally stores the key as local plaintext so the sidecar can read it. The security improvement is that the model never sees the value and it never enters the conversation; `.gitignore` keeps the file out of version control.
 
-```bash
-cp .env.example .env
-```
-
-Fill in the credential values from the user's response. Do not ask the user to edit files manually.
+On cloud or mobile, stored keys and Bash credential injection are desktop-only. Say so plainly and offer to continue this setup on desktop; do not fall back to collecting the key in chat.
 
 ### 6.3 Test Locally
 
