@@ -4,9 +4,11 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ---
 
-## v0.4.59 — Jul 30 – Aug 1, 2026
+## v0.4.59 — Jul 30 – Aug 4, 2026
 
 ### Fixes
+
+- **Connectors work properly on cloud and mobile again** — Google Workspace, Slack, HubSpot and Microsoft 365 could quietly fail on your phone or cloud instance, then suggest reconnecting even though reconnecting could not fix the problem. Rebel now keeps their sign-in working there and, if the cloud setup is not ready yet, says so plainly instead of sending you through sign-in again.
 
 <!-- detail: 260801_dialog-invoke-hygiene (plan docs/plans/260801_dialog-invoke-hygiene/PLAN.md; CE2, residue R6 of the 260729 bug-report send-hang run — the dialog-level companion to the invoke-layer entry below). All 15 grandfathered bare-await dialog invokes are resolved: 10 wrapped in withRendererTimeout with honest timeout branches (What's New changelog load, conversation-diagnosis summary + optional skill read under one deadline, all four cloud workspace-conflict invokes, add-more-like-this rule save, workspace rename, improvement-idea submit), 5 exempted in place with written justifications (two restart-class handlers that relaunch+quit before settling, three detached non-idempotent inbox writes). The renderer-invoke-liveness ESLint rule is promoted warn→error with the baseline zeroed. The load-bearing UX rule: a timeout on a durable write must never render as a definite failure or offer a bare retry — "still saving, it may already be saved" not "unable to save, try again". Keep public copy non-technical — no invoke/deadline/lint internals; the user-visible surface is timeout-branch copy only. -->
 - **A slow dialog no longer gets reported as a broken one** — When a dialog was waiting on something — What's New loading, a file conflict being resolved, a folder being renamed, a rule being saved — a slow answer used to leave it spinning, or worse, announce that it had failed and invite you to do it all over again when it may quietly have worked. Each of those now waits a sensible amount of time and then says something true: *"Still saving that rule. It may already be saved. No need to try again."* Nothing that might have succeeded is reported as a failure. The honest maybe, rather than the confident no.
