@@ -4,7 +4,7 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ---
 
-## v0.4.59 — Jul 30 – Aug 4, 2026
+## v0.4.59 — Jul 30 – Aug 6, 2026
 
 ### Fixes
 
@@ -45,6 +45,9 @@ What's new in Rebel. We ship fast, so there's always something.
 
 <!-- detail: Rebel runs a safety check on edits before applying them. Edits that replace a whole section of a large file could exceed the check's size limit, which made Rebel stop and ask for your approval even for routine changes. The limit is now doubled, covering realistic large edits while keeping the check fast. Genuinely huge edits may still ask — that's the safety system working as intended. -->
 - **Fewer approval prompts on very large edits** — When Rebel rewrote a big section of a file in one go, its safety check sometimes couldn't fit the whole edit and stopped to ask you anyway. The check now handles much larger edits, so it only asks when it genuinely needs to. Big edit, small interruption.
+
+<!-- detail: 260804_rebel7g9-invisible-email-compose (plan docs/plans/260804_rebel7g9-invisible-email-compose/PLAN.md; CE2 bug_mode; internal Sentry + Linear tickets). When a tool that delivers an interactive view (presentation: 'primary' — e.g. the email compose form) was safety-staged and then approved, the staged-execution boundary discarded the MCP App presentation contract and forwarded only a plaintext summary to the continuation — so the agent reasonably claimed the card was visible while no renderable tool event ever reached the conversation. Deterministic, not intermittent: every primary-view tool lost its UI on approval-execution. The fix preserves a bounded, validated, ephemeral presentation packet across the staged-execution boundary (never persisted, never logged) and delivers it on every completion path (invoke response + terminal broadcast, desktop hooks + auto re-eval + cloud-client), with exact-once dedup keyed on packet identity; a missing origin session fails observably rather than fallback-to-current. Web-companion now renders a calm PrimaryMcpAppPlaceholder (viewSummary + structuredFallback) for these results instead of a generic tool row; interactive iframe hosting on mobile/web stays a tracked defer. Keep public copy non-technical — no staged/presentation/packet/structuredContent internals; say "staged for approval", "editable card", "calm placeholder". -->
+- **An approved compose form now actually appears** — When Rebel staged something for your approval (an email draft, say) and you approved it, the editable card it promised could quietly never show up — while Rebel insisted it was right there in the conversation. Approving now actually delivers the card, and the web app shows a calm placeholder for these results instead of a generic row. The card that was always "right there," now actually there.
 
 ## v0.4.58 — Jul 28–29, 2026
 
