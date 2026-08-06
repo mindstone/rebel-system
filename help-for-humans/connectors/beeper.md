@@ -28,15 +28,15 @@ iMessage, WhatsApp, Telegram, Signal, Instagram DMs, Facebook Messenger, Google 
 
 ## Setup
 
-Beeper's MCP server runs inside the Beeper Desktop app on your computer. You need to install it, enable the API, then connect it to Rebel.
+Beeper's MCP server runs inside the Beeper Desktop app on your computer — it starts automatically whenever Beeper is running. You just need to install Beeper, create an auth token, then connect it to Rebel.
 
 1. **Install Beeper Desktop** — download from [beeper.com/download](https://www.beeper.com/download) if you haven't already
 2. **Sign in** to Beeper and connect your messaging networks (iMessage, WhatsApp, Telegram, etc.)
-3. **Enable the Desktop API** — in Beeper, go to **Settings → Developers** and toggle **Beeper Desktop API** on
-4. **Create an auth token** — in the same Developers page, go to **Approved Connections**, create a new token with **sensitive permissions** enabled, then copy it
+3. **Create an auth token** — in Beeper, go to **Settings → Integrations** and click the **+** button next to **Approved connections**
+4. In the token dialog, give it a name if you like (e.g. "Rebel"), turn on **Allow sensitive actions** (required for sending messages), then click **Create Access Token** and copy it
 5. In Rebel, go to **Settings → Connectors**, find **Beeper**, paste the auth token, and click **Set up with Rebel**
 
-The auth token lets Rebel authenticate with Beeper's local MCP server. If you regenerate the token in Beeper, you'll need to reconnect in Rebel with the new one.
+The auth token lets Rebel authenticate with Beeper's local MCP server. Tokens expire after the period you choose when creating them (30 days by default) — when yours expires, create a fresh token in Beeper and reconnect in Rebel with the new one.
 
 > **Beeper Desktop must be running** whenever you want Rebel to access your messages. If you quit Beeper, the connection will be unavailable until you reopen it.
 
@@ -54,10 +54,11 @@ The auth token lets Rebel authenticate with Beeper's local MCP server. If you re
 
 | Problem | Solution |
 |---------|----------|
-| Connection fails | Check Beeper Desktop is running and the Desktop API is enabled (Settings → Developers) |
-| Can't enable the API | Try opening `beeper://connect` in your browser, which should open Beeper and enable it |
+| Connection fails | Check Beeper Desktop is running — its local MCP server starts automatically with the app |
+| Can't find the Integrations settings | Update Beeper Desktop to the latest version, then look under **Settings → Integrations** |
 | iMessage not available | iMessage bridging requires a Mac with iMessage signed in using your Apple ID |
-| 401 Unauthorized | Your auth token may be expired or incorrect. In Beeper, go to **Settings → Developers**, copy a fresh token, then reconnect in Rebel |
+| 401 Unauthorized | Your auth token may be expired or incorrect. In Beeper, go to **Settings → Integrations**, click **+** next to **Approved connections** to create a fresh token (with **Allow sensitive actions** on), then reconnect in Rebel |
+| Worked before, stopped after ~30 days | Your token probably expired — tokens last 30 days by default. Create a fresh one in Beeper and reconnect in Rebel |
 | Connection drops | Reopen Beeper Desktop and reconnect in Rebel's Settings → Connectors |
 
 
