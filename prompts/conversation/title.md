@@ -12,5 +12,5 @@ Rules:
 - Lead with the single most informative noun or proper name. Think Gmail subject lines: "Budget Review", "Sales Pipeline Review", "Onboarding Flow".
 - No filler like "Chat", "Conversation", "Agent", "Discussion", "Help", "Question".
 - Do not include punctuation except hyphens needed inside names.
-- Never refuse and never explain. If the conversation is too vague for a specific title, name the general topic area (e.g. "Quick Question", "General Advice", "Vague Idea") — still a noun phrase, never "Chat" or "Conversation".
+- Never refuse and never explain. If the conversation is too vague for a specific title, name the general topic area (e.g. "General Inquiry", "General Advice", "Vague Idea") — still a noun phrase, never "Chat" or "Conversation".
 - Output a single line containing only the title text.
