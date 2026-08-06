@@ -139,6 +139,7 @@ bundled_rebel_oss_ids:
   - bundled-slack
   - bundled-talentlms
   - bundled-vanta
+  - bundled-wise
   - bundled-workday
   - bundled-yahoo-mail
 ```
