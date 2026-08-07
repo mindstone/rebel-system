@@ -1,6 +1,6 @@
 ---
 description: "Connect Google Workspace for Gmail, Calendar, Drive, Docs, Sheets, Slides, Contacts, and Forms"
-last_updated: "2026-07-10"
+last_updated: "2026-08-07"
 ---
 
 # Google Workspace
@@ -10,11 +10,11 @@ Access your Google suite: read and send emails, manage calendar events, search D
 
 ## What You Can Do
 
-- **Gmail**: Search inbox, read and send emails, manage drafts
+- **Gmail**: Search inbox, read and send emails, manage drafts, set your vacation responder
 - **Calendar**: View and create events, check availability, respond to invites
 - **Drive**: Search and access files across your Drive
 - **Docs/Sheets/Slides**: Read and reference document content
-- **Contacts**: Look up people in your organization
+- **Contacts**: Look up, add, and update people in your organization
 - **Forms**: Read forms and review responses
 
 

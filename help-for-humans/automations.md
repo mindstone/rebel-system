@@ -158,6 +158,10 @@ Automations also respect the price of the model you chose for them: if one outgr
 
 ## Troubleshooting
 
+### It shows under “Couldn't load”
+
+An automation whose saved schedule is broken — for example a weekly one with no days picked, which a few older versions could create — is paused and listed under **Couldn't load** in the Automations panel instead of firing at the wrong time (an empty weekly schedule used to fire every day). The fix: delete it there and recreate it with the days you want — it goes straight back to its proper cadence.
+
 ### It never ran
 
 - Check that it is **enabled**
