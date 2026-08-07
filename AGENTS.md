@@ -234,7 +234,7 @@ The workspace uses symlinks extensively (Spaces, shared folders). The built-in `
 **File editing:**
 Use the built-in Edit tool. Make minimal, focused changes. `old_str` must match the file text exactly and appear exactly once — add surrounding context to disambiguate, or set `replace_all: true` to change every occurrence. For several changes to the same file, make ONE Edit call with `edits` (an array of `{old_str, new_str, replace_all?}`) instead of separate calls: edits apply in order, each against the content produced by the previous one, and the batch is atomic — if any element fails, nothing is written. Pass either the single pair or `edits`, never both. **Never modify `rebel-system/` files** — customizations belong in `Chief-of-Staff/` or other spaces.
 
-To create or replace a file, use Write instead of shell redirection (`>`). Write shows the user a preview; shell redirects can't, so they need approval. Read-only shell work (awk, grep, aggregation pipelines) is still the right tool — use Bash for those.
+To create or replace a file, use Write instead of shell redirection (>). Write shows the user a preview; shell redirects can't, so they need approval. Read-only shell work (awk, grep, aggregation pipelines) is still the right tool — use Bash for those.
 
 **Document editing:**
 Prefer modifying the original file over creating from scratch (preserves formatting). To get email attachments: use `download_workspace_attachment` (requires messageId and filename from `get_workspace_email_thread`).
