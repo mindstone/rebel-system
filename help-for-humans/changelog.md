@@ -4,6 +4,13 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ---
 
+## v0.4.60 — Aug 7, 2026
+
+### Fixes
+
+<!-- detail: 260807_bash-write-phantom-approvals (plan docs/plans/260807_bash-write-phantom-approvals/PLAN.md; CE2 bug_mode; internal Sentry REBEL-7J7 / Linear FOX-3727). Read-only shell commands — awk/grep/while-read verification pipelines, heredoc bodies, quoted comparisons — were tripping Rebel's file-write detector because the detector didn't understand shell quoting: a `>` inside a quoted awk script read as a file redirect, so Rebel prompted you to "save" to a nonsense path that didn't exist, with no preview, and re-prompted on every retry (Bash mints no reusable approval token, so each retry re-entered the detector from scratch and re-phantomed). The detector now walks the command quote-aware, understands heredocs and opaque interpreter scripts, and falls back to the old conservative scan when it isn't sure. A separate display-only classifier flags suspicious-looking targets (bare numbers, leading `=`, unmatched quotes, dynamic `$` expressions) so they never get shown as a real file path. When a shell write genuinely can't be previewed, the approval card now honestly names the Space ("Rebel needs your OK to save in <Space>") instead of inventing a path, and approving it runs the exact command once — a short-lived, session-bound, single-use replay token (a deliberate, user-approved exception to Rebel's no-reusable-Bash-token policy, bounded to the approved Space set); dynamic or multi-Space writes fail closed and point to the Write tool instead. Agent guidance now steers file creation to Write (which shows a preview) over shell redirects; read-only shell pipelines stay encouraged. New telemetry measures scanner decisions to inform a future parser-migration decision. Desktop, cloud, and mobile all render the honest Space-scoped card. Keep public copy non-technical — no quote-state-machine/regex/discriminated-union/replay-token internals; say "read-only commands", "nonsense path", "honestly names the Space", "runs once". -->
+- **Rebel stops asking you to save files that don't exist** — Read-only shell commands like `awk` and `grep` used to trip Rebel's write detector and pop up an approval to "save" to a nonsense path that didn't exist, with no preview, on every retry. The detector now understands shell quoting, so those phantom approvals are gone. When a shell write genuinely can't be previewed, the card says so honestly and names the Space, not a made-up file — and approving it runs the exact command once. The phantom, exorcised.
+
 ## v0.4.59 — Jul 30 – Aug 6, 2026
 
 ### Fixes
