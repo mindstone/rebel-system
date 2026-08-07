@@ -5,7 +5,6 @@ variables: []
 model_hint: haiku
 critical: true
 ---
-
 You are drafting a policy principle to add to a Safety Prompt document.
 
 A user action was blocked by the current Safety Prompt. The user reviewed the action and DENIED it — they want future similar actions to be blocked automatically. The user selected a scope option describing the type of restriction they want. Generate a principle that matches the selected scope.
@@ -15,23 +14,20 @@ The user denied this action. Your principle MUST cause a separate evaluator to r
 
 SCOPE TIER GUIDANCE:
 The user message includes the scope tier the user selected. Use these definitions to calibrate your principle:
-
 - "trusted_tool": The user chose the broadest tier. Generate a very broad restriction blocking all uses of this tool or space. The principle should be a blanket block — no exceptions.
 - "broad": The user chose a moderate tier. Generate a principle blocking the general category of targets and content type, not pinned to a specific target. Use class-level nouns (e.g., "external recipients", "public channels", "company-wide spaces") rather than exact names.
 - "specific": The user chose the narrowest tier. Generate a principle blocking only the exact target and content type from the denied action. It should end with "only" or use narrow qualifiers to signal tight scope.
 
 BANNED PATTERNS — never use these in your principle:
-
 - "when explicitly denied" / "unless otherwise approved" / "if not confirmed" — the evaluator cannot verify subjective states
 - "provided that X is present" / "after X is detected" — the evaluator sees the action AS-IS, not a modified version
 - "with appropriate review" / "after internal review" — unverifiable process conditions
 - Any condition the evaluator cannot confirm from the tool name and tool input alone
-  If you are tempted to add a caveat, ask yourself: "Can the evaluator verify this from the JSON input?" If not, leave it out.
+If you are tempted to add a caveat, ask yourself: "Can the evaluator verify this from the JSON input?" If not, leave it out.
 
 // SYNC: The rubric below mirrors buildEvalSystemPrompt — update both if eval logic changes.
 IMPORTANT — How the evaluator works:
 A separate LLM evaluator will read the Safety Prompt (including your new principle) alongside the action's details and decide "allow" or "block". Here is its rubric:
-
 - It sees: the full Safety Prompt text, the tool name, the tool input (JSON), and optionally a space description and session metadata.
 - It returns "allow" if the action falls within a domain covered by the Safety Prompt AND clearly aligns with those principles. If the rules don't address the action's domain at all, it returns "block".
 - It returns "block" if the action clearly violates principles, OR if it is uncertain, OR if the action's domain is not covered by any principle.
@@ -41,7 +37,6 @@ A separate LLM evaluator will read the Safety Prompt (including your new princip
 Because the evaluator defaults to "block" when uncertain, your restriction principle strengthens the block signal. But you must still write it clearly so the evaluator can confidently match it to the action and return "block".
 
 Writing effective deny principles:
-
 - Describe the CLASS of action implied by the selected label, not just the single denied instance.
 - Name the action type (e.g., sending emails, posting messages, writing files, storing memory), the content type (e.g., customer data, financial reports, personal information), and the target or audience (e.g., external recipients, public channels, company-wide spaces).
 - Use vocabulary that matches what appears in the action context: tool names, channel names, recipient patterns, and content descriptions.
@@ -78,14 +73,13 @@ Good replacement clause: also add "Storing customer data in team-restricted shar
 
 Return strict JSON with this shape:
 {
-"summary": string,
-"clauses": string[],
-"insertAfterSection": string (optional),
-"supersedes": string[] (optional)
+  "summary": string,
+  "clauses": string[],
+  "insertAfterSection": string (optional),
+  "supersedes": string[] (optional)
 }
 
 Field details:
-
 - "summary": a short human-readable summary of the proposed restriction.
 - "clauses": one or more canonical plain-language principle clauses. Each array item is one complete clause. Do NOT add "- ", any other Markdown/list marker, backticks, headings, or command dumps. Do not use evaluator or implementation jargon such as "Safety Prompt", "tool call", "tool input", "JSON input", "payload", or "parameters". Describe the human task or outcome, not the command names used to do it. The system adds document syntax deterministically after validation.
 - "insertAfterSection": the heading text of the section to insert after (e.g., "Messaging"). Omit if unsure.
@@ -93,15 +87,14 @@ Field details:
 
 DEDUPLICATION AND CONFLICT RESOLUTION (mandatory):
 Before returning your response, scan every principle in the existing Safety Prompt:
-(a) Principles that say the same thing in different words (semantic duplicates) — supersede.
-(b) Principles whose scope is entirely covered by the new, broader restriction (subsumed) — supersede.
-(c) CRITICAL — Allow-rules that CONFLICT with the user's denial: If an existing allow-rule would cause the evaluator to allow the action the user just denied, you MUST supersede that allow-rule. Include a narrowed replacement that carves out an exception for the denied category (see the conflict resolution examples above).
+  (a) Principles that say the same thing in different words (semantic duplicates) — supersede.
+  (b) Principles whose scope is entirely covered by the new, broader restriction (subsumed) — supersede.
+  (c) CRITICAL — Allow-rules that CONFLICT with the user's denial: If an existing allow-rule would cause the evaluator to allow the action the user just denied, you MUST supersede that allow-rule. Include a narrowed replacement that carves out an exception for the denied category (see the conflict resolution examples above).
 Add superseded principles to the "supersedes" array. If none, return an empty array.
 SAFETY CONSTRAINT: Never supersede a principle in a completely UNRELATED domain. Only modify principles that directly conflict with the denied action.
-Copy each superseded principle's text VERBATIM from the Safety Prompt — character-for-character — WITHOUT the leading "- " or "\* " bullet marker. The system removes superseded principles by exact text match, so even a single-character difference will cause the removal to fail silently.
+Copy each superseded principle's text VERBATIM from the Safety Prompt — character-for-character — WITHOUT the leading "- " or "* " bullet marker. The system removes superseded principles by exact text match, so even a single-character difference will cause the removal to fail silently.
 
 FINAL CHECKLIST — verify before returning:
-
 - The principle MUST cause the evaluator to block the exact action the user denied. No hedging, no exceptions.
 - If existing allow-rules would still allow the denied action, you MUST supersede them and include narrowed replacements.
 - The principle uses "is never allowed", "is not permitted", or "must always be blocked" — not "should not be" or "is discouraged".
