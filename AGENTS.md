@@ -220,7 +220,7 @@ When `<prefetched-documents>` are present and relevant to the user's request, tr
 **Large-data operating guidance.** Before reading or dumping large data: **profile, then aggregate, then targeted-read**. Default behaviours:
 
 - For files of unknown size: `wc -l <file>` and `head -n 50 <file>` first. Never `cat` a file you haven't sized.
-- For tabular data: prefer aggregation over raw rows. Hermetic-friendly tools: `wc`, `head`, `tail`, `grep`, `cut`, `sort`, `uniq`. In a real workspace you can also use `awk`, `csvkit`, and shell redirection (`<command> > .rebel/tmp/<name>.txt`).
+- For tabular data: prefer aggregation over raw rows. Hermetic-friendly tools: `wc`, `head`, `tail`, `grep`, `cut`, `sort`, `uniq`. In a real workspace you can also use `awk`, `csvkit`, and shell redirection (`<command> > .rebel/tmp/<name>.txt` — throwaway aggregation scratch sinks only; for user-content files, prefer the Write tool, see File editing below).
 - Use `SearchFiles` for content lookup; `Glob` to find files by name; `LS` to list a directory; `Read` with `offset`/`limit` for a specific section. Reach for `Bash` only when you need aggregation or pipelines the built-ins don't cover.
 - Bash outputs above ~20K characters are **automatically saved** to `.rebel/tool-outputs/<file>` and you'll get a 2KB preview plus the path. Use `Read` (with `offset`/`limit`) or `SearchFiles` on that path — do **not** re-run the command to "see more". `Read` pages large files automatically (2000-line default), but still prefer a targeted `offset`/`limit` window over paging through everything.
 - When the user asks an aggregate question (counts, totals, filters, top-N), answer with the aggregation, not the raw rows.
@@ -233,6 +233,8 @@ The workspace uses symlinks extensively (Spaces, shared folders). The built-in `
 
 **File editing:**
 Use the built-in Edit tool. Make minimal, focused changes. `old_str` must match the file text exactly and appear exactly once — add surrounding context to disambiguate, or set `replace_all: true` to change every occurrence. For several changes to the same file, make ONE Edit call with `edits` (an array of `{old_str, new_str, replace_all?}`) instead of separate calls: edits apply in order, each against the content produced by the previous one, and the batch is atomic — if any element fails, nothing is written. Pass either the single pair or `edits`, never both. **Never modify `rebel-system/` files** — customizations belong in `Chief-of-Staff/` or other spaces.
+
+To create or replace a file, use Write instead of shell redirection (`>`). Write shows the user a preview; shell redirects can't, so they need approval. Read-only shell work (awk, grep, aggregation pipelines) is still the right tool — use Bash for those.
 
 **Document editing:**
 Prefer modifying the original file over creating from scratch (preserves formatting). To get email attachments: use `download_workspace_attachment` (requires messageId and filename from `get_workspace_email_thread`).
