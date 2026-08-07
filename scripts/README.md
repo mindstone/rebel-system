@@ -8,7 +8,7 @@ For Python setup and virtual environments, see [`help-for-humans/coding-setup-wi
 
 ## Available Scripts
 
-- **`elevenlabs_speak.py`** - Text-to-speech using ElevenLabs (uses only built-in Python libraries)
+- **`elevenlabs_speak.py`** - Text-to-speech generator using ElevenLabs (writes an MP3 via `--out`; does not play audio — uses only built-in Python libraries)
 - **`scan-md-descriptions.ts`** - Scan markdown files for description frontmatter (useful for skills index, space discovery)
 - **`setup-python.sh`** - Automated Python virtual environment setup (Mac/Linux/Git Bash)
 - **`setup-python.bat`** - Automated Python virtual environment setup (Windows)
