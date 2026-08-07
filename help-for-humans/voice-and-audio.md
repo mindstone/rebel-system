@@ -1,6 +1,6 @@
 ---
 description: "Guide to Rebel's voice features: talking to Rebel, hearing spoken responses, choosing transcription providers (including OpenRouter and Mindstone), unified mic buttons, and custom vocabulary"
-last_updated: "2026-07-13"
+last_updated: "2026-08-07"
 ---
 
 # Voice and Audio
@@ -77,6 +77,20 @@ Choose a voice in **Settings → Agent & Voice → Voice**. Options depend on yo
 **Voice preview** — Click the play button next to any voice to hear a sample before selecting it. Try before you commit.
 
 Spoken responses stream in as they're generated, so you hear Rebel start talking before the full response is ready.
+
+
+## Reading Text Aloud
+
+Ask Rebel to read something aloud — a document, an email, a summary, anything on screen — and it plays through Rebel's own audio player. No external player, no shell command, nothing running in the background that Rebel can't reach.
+
+**How it works:**
+1. Ask in plain language: "Read this aloud", "Read me the summary", "Play the briefing"
+2. Rebel reads the text using your configured voice (the same one used for spoken replies)
+3. A **pause/stop bar** appears while audio is playing — tap pause to take a break, tap stop to end it early
+
+The audio stays inside Rebel the whole time. You can pause or stop it at any point, and it never spawns a background process you'd have to chase down from a terminal.
+
+**ElevenLabs note:** The ElevenLabs connector can generate speech audio files (for music, sound effects, or standalone narration), but those files don't play themselves. When you ask Rebel to read something aloud, it uses the built-in read-aloud player — not a raw audio file dump. See [ElevenLabs connector](library://rebel-system/help-for-humans/elevenlabs-text-to-speech.md) for what the connector is for.
 
 
 ## Choosing a Provider
