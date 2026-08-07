@@ -131,7 +131,7 @@ Example: December 25, 2024 → `memory/sources/2024/12-Dec/25/`
 
 **Filename format:** `yyMMdd_HHmm_source-type_description.md`
 - `yyMMdd_HHmm` — Date and time the source occurred (e.g., `251215_1000` for 15 Dec 2025 at 10:00 AM). Use `0000` for time if unknown.
-- `source-type` — Lowercase `a-z` only: `meeting`, `doc`, `pdf`, `thread`, `email`, `ticket`, `web`, `data`, `image`, etc.
+- `source-type` — Lowercase `a-z`, and exactly one of the closed `source_type` set (see step 6): `meeting`, `doc`, `pdf`, `thread`, `email`, `ticket`, `web`, `data`, `image`. Never invent a type, and never use the source *system* name here (`slack`, `gmail`, `notion`, …) — that belongs in the `source_system` field.
 - `description` — Lowercase `a-z0-9-` only, with hyphens between words (e.g., `quarterly-review`, `budget-discussion`)
 - The `DD` directory must equal the day in the filename's `yyMMdd` prefix.
 

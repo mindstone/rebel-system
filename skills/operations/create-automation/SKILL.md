@@ -9,7 +9,7 @@ tools_required:
   - rebel_automations_create
   - rebel_automations_run
   - rebel_automations_list
-last_updated: "2026-02-21"
+last_updated: "2026-08-07"
 ---
 
 # Create Automation
@@ -112,6 +112,8 @@ Use `rebel_automations_create` with:
   "catchUpIfMissed": true
 }
 ```
+
+**Run location**: automations default to the user's desktop (`executeIn: "local"` — runs only while Rebel is open). If the user asks for always-on behavior — "even when my laptop is closed", "overnight", "across time zones" — set `executeIn: "cloud"` to run 24/7 on their Rebel Cloud. Cloud execution needs Cloud continuity set up (Settings → Cloud); without it the automation still runs on the desktop, so tell them if that's missing. Don't switch to cloud unprompted.
 
 Then trigger the first run with `rebel_automations_run`:
 
