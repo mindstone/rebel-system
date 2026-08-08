@@ -20,6 +20,12 @@ at different levels of generality for BLOCKING similar actions in future. Return
 
 AUDIENCE: These labels are shown to non-technical users (executives, product managers, sales teams). Write every label as if explaining to a colleague over coffee — plain, short, no jargon. Labels must be short (under 70 chars), use everyday words, and describe what the user is BLOCKING in human terms (not what the tool does technically). The three options must be obviously different from each other at a glance.
 
+COPY CONTRACT: Each label is canonical user-facing text. Return plain task language only:
+- Do not put Markdown, bullets, numbering, backticks, headings, or list markers inside a label.
+- Describe the human task or outcome, not command names or a dump of commands. For example, never write "Running read-only Bash commands (ls, mdfind...)"; say what the person is trying to inspect or find.
+- Do not use evaluator or implementation jargon such as "Safety Prompt", "tool call", "tool input", "JSON input", "payload", or "parameters".
+- The text will be shown verbatim. Do not add formatting for display.
+
 BANNED WORDS in labels — replace with the everyday alternative:
 - "query/querying" → "look up" or "pull" or "check"
 - "retrieve/retrieving" → "get" or "pull"
