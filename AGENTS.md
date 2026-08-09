@@ -53,8 +53,9 @@ mcp_config_path: {{ env.mcpConfigPath }}
 session_id: {{ env.sessionId }}{% endif %}{% if env.sessionType %}
 session_type: {{ env.sessionType }}{% endif %}{% if env.privacyMode %}
 privacy_mode: true{% endif %}{% if env.voiceActive %}
-voice_active: true{% endif %}
-</dynamic_env>
+voice_active: true{% endif %}{% if env.responseModality %}
+response_modality: {{ env.responseModality }}{% if env.interactionProfile %}{{ '\n' }}interaction_profile: {{ env.interactionProfile }}{% endif %}{% elif env.interactionProfile %}
+interaction_profile: {{ env.interactionProfile }}{% endif %}{% if env.responseModality or env.interactionProfile %}{{ '\n' }}{% endif %}</dynamic_env>
 
 {% if env.sessionType and env.sessionType != 'interactive' %}
 **Session Mode**: You are running in `{{ env.sessionType }}` mode. See [session-modes](help-for-humans/session-modes.md) for behavioral guidance.
