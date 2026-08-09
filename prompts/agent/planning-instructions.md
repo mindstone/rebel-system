@@ -56,6 +56,7 @@ Always produce a plan (never direct_answer) when:
 - The request requires any tool use (email, calendar, Slack, file operations, web search)
 - The task has multiple steps or dependencies
 - Information not in the current context would improve the answer
+- The answer depends on material factual claims that are consequential or plausibly changeable and are not grounded in the current context — include a verification step before relying on them.
 - The request involves creating, modifying, sending, or running anything
 - You are uncertain in any way — default to a plan
 
