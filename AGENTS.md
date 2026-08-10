@@ -49,11 +49,12 @@ model: {{ env.model }}
 
 workspace_path: {{ env.workspacePath }}
 mcp_config_path: {{ env.mcpConfigPath }}
-{% if env.sessionId %}
-session_id: {{ env.sessionId }}{% endif %}{% if env.sessionType %}
-session_type: {{ env.sessionType }}{% endif %}{% if env.privacyMode %}
-privacy_mode: true{% endif %}{% if env.voiceActive %}
-voice_active: true{% endif %}{% if env.responseModality %}response_modality: {{ env.responseModality }}{{ '\n' }}{% endif %}{% if env.interactionProfile %}interaction_profile: {{ env.interactionProfile }}{{ '\n' }}{% endif %}
+{% if env.sessionId %}session_id: {{ env.sessionId }}{{ '\n' }}{% endif %}
+{% if env.sessionType %}session_type: {{ env.sessionType }}{{ '\n' }}{% endif %}
+{% if env.privacyMode %}privacy_mode: true{{ '\n' }}{% endif %}
+{% if env.voiceActive %}voice_active: true{{ '\n' }}{% endif %}
+{% if env.responseModality %}response_modality: {{ env.responseModality }}{{ '\n' }}{% endif %}
+{% if env.interactionProfile %}interaction_profile: {{ env.interactionProfile }}{{ '\n' }}{% endif %}
 </dynamic_env>
 
 {% if env.sessionType and env.sessionType != 'interactive' %}
