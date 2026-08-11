@@ -12,7 +12,7 @@ tools_required:
   - rebel_automations_run
   - rebel_automations_toggle
   - rebel_automations_delete
-last_updated: "2026-02-21"
+last_updated: "2026-08-07"
 ---
 
 # Edit Automation
@@ -81,6 +81,20 @@ Or convert to weekly if user wants different days:
   "filePath": "skills/weekly-summary-v2/SKILL.md"
 }
 ```
+
+### Change Run Location (Desktop ↔ Cloud)
+
+**User**: Run this in the cloud so it fires even when my laptop is closed
+
+Use `rebel_automations_update`:
+```json
+{
+  "id": "<automation-id>",
+  "executeIn": "cloud"
+}
+```
+
+Cloud runs 24/7 on the user's Rebel Cloud (timezone is captured automatically). It needs Cloud continuity set up (Settings → Cloud) — without it the automation still runs on the desktop, so mention that if they're not set up. Use `executeIn: "local"` to switch back. Event-triggered and built-in system automations always run locally.
 
 ### Enable/Disable
 

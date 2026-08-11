@@ -1,22 +1,21 @@
 #!/usr/bin/env python3
 """
-ElevenLabs Text-to-Speech Player for Mac
+ElevenLabs Text-to-Speech generator.
 
-Simple script to convert text to speech and play it using macOS's built-in afplay.
+Generates an MP3 from text using the ElevenLabs API and writes it to a file.
+This script does not play audio — it only produces a file. Play the result
+through a surface you control (Rebel's read-aloud, your media player, etc.).
 
 Usage:
-    python3 elevenlabs_speak.py "Text to speak"
-    python3 elevenlabs_speak.py "Text to speak" --api-key YOUR_KEY
-    python3 elevenlabs_speak.py "Text to speak" --env-file .secrets/.env
+    python3 elevenlabs_speak.py "Text to speak" --out brief.mp3
+    python3 elevenlabs_speak.py "Text to speak" --out brief.mp3 --api-key YOUR_KEY
+    python3 elevenlabs_speak.py "Text to speak" --out brief.mp3 --env-file .secrets/.env
 """
 
 import argparse
 import json
 import os
-import signal
-import subprocess
 import sys
-import tempfile
 from typing import Optional
 import urllib.request
 from pathlib import Path
@@ -61,8 +60,8 @@ def get_api_key(api_key_arg: Optional[str] = None) -> str:
     return api_key
 
 
-def text_to_speech(text: str, api_key: str) -> str:
-    """Convert text to speech and save to temp file."""
+def text_to_speech(text: str, api_key: str, out_path: str) -> None:
+    """Convert text to speech and write the MP3 to out_path."""
     url = f"https://api.elevenlabs.io/v1/text-to-speech/{DEFAULT_VOICE_ID}/stream"
 
     data = {
@@ -81,56 +80,24 @@ def text_to_speech(text: str, api_key: str) -> str:
         },
     )
 
-    # Create temp file
-    fd, audio_path = tempfile.mkstemp(suffix=".mp3", prefix="elevenlabs_")
-    os.close(fd)
-
-    # Download audio
     with urllib.request.urlopen(req) as response:
-        with open(audio_path, "wb") as f:
+        with open(out_path, "wb") as f:
             f.write(response.read())
-
-    return audio_path
-
-
-def play_audio(audio_path: str) -> None:
-    """
-    Play audio file using macOS's afplay.
-
-    This is more copmlicated than just subprocess.run, because we
-    wanted to be able to cancel the audio playback if someone hits
-    Cancel in the Cursor UI. But unfortunately this is still not cancelling...
-    """
-    # Start the audio player process
-    process = subprocess.Popen(["afplay", audio_path])
-
-    def signal_handler(sig, frame):
-        """Kill the audio process when interrupted."""
-        if process.poll() is None:  # If process is still running
-            process.terminate()
-            process.wait()
-        sys.exit(0)
-
-    # Register signal handlers for graceful shutdown
-    signal.signal(signal.SIGINT, signal_handler)
-    signal.signal(signal.SIGTERM, signal_handler)
-
-    # Wait for the process to complete
-    try:
-        process.wait()
-    except KeyboardInterrupt:
-        # Handle Ctrl+C gracefully
-        if process.poll() is None:
-            process.terminate()
-            process.wait()
-        sys.exit(0)
 
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Convert text to speech using ElevenLabs and play it"
+        description=(
+            "Generate speech audio from text using ElevenLabs. "
+            "Writes an MP3 file; does not play it."
+        )
     )
     parser.add_argument("text", help="Text to convert to speech")
+    parser.add_argument(
+        "--out",
+        required=True,
+        help="Path to write the generated MP3 (the script does not play audio)",
+    )
     parser.add_argument("--api-key", help="ElevenLabs API key")
     parser.add_argument(
         "--env-file", help="Path to .env file containing ELEVENLABS_API_KEY"
@@ -150,15 +117,11 @@ def main():
     # Get API key
     api_key = get_api_key(args.api_key)
 
-    # Generate and play speech
+    # Generate speech file
     print("Generating speech...", file=sys.stderr)
-    audio_path = text_to_speech(args.text, api_key)
+    text_to_speech(args.text, api_key, args.out)
 
-    print("Playing audio...", file=sys.stderr)
-    play_audio(audio_path)
-
-    # Clean up temp file
-    os.unlink(audio_path)
+    print(f"Wrote {args.out}", file=sys.stderr)
 
     return 0
 

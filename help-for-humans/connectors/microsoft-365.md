@@ -1,6 +1,6 @@
 ---
 description: "Connect Microsoft 365 for Outlook Mail, Calendar, OneDrive, Word, Teams, and SharePoint — including what to do when your sign-in expires"
-last_updated: "2026-07-02"
+last_updated: "2026-08-07"
 ---
 
 # Microsoft 365
@@ -10,7 +10,7 @@ Access your Microsoft suite: email, calendar, files, Word documents, Teams messa
 
 ## What You Can Do
 
-- **Outlook Mail**: Search inbox, read and send emails, manage folders and drafts
+- **Outlook Mail**: Search inbox, read and send emails, manage folders and drafts, set out-of-office replies, BCC recipients
 - **Outlook Calendar**: View and create events, check availability, respond to invites
 - **OneDrive**: Search and access files, upload documents, manage sharing
 - **Word**: Read, reference, and work with Word documents

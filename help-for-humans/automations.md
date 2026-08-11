@@ -1,6 +1,6 @@
 ---
 description: "How to schedule recurring or event-triggered work in Rebel, including built-in automations, transcript triggers, Focus automations, and run status meanings"
-last_updated: "2026-07-27"
+last_updated: "2026-08-07"
 ---
 
 # Automations
@@ -14,6 +14,7 @@ The app's own summary for this feature is nicely blunt: **Rebel works while you 
 ## See also
 
 - [Using Skills](library://rebel-system/help-for-humans/using-skills.md) — many automations run a skill behind the scenes
+- [Cloud continuity](rebel://library/rebel-system%2Fhelp-for-humans%2Fcloud-continuity-and-mobile.md) — what lets an automation run 24/7, even with your laptop closed
 - [Actions](library://rebel-system/help-for-humans/actions.md) — for “save this for later” instead of “run this on a schedule”
 - [Meetings and notetaker](library://rebel-system/help-for-humans/meetings-and-notetaker.md) — where transcript-triggered automations fit in
 - [Security and tool safety](library://rebel-system/help-for-humans/security-and-tool-safety.md) — why approvals still apply
@@ -28,7 +29,7 @@ You tell Rebel:
 
 Rebel then runs it as a background conversation and saves the result for you to review later.
 
-For scheduled automations, keep Rebel open in your dock or menu bar so it can run on time.
+Each automation also has a **where**: it can run on your desktop or in your Rebel Cloud. See [Where automations run](#where-automations-run-desktop-or-cloud) below.
 
 ## Creating an automation
 
@@ -51,6 +52,22 @@ Rebel understands natural language well enough to spare you most of the tedious 
 | **Weekly** | Runs on selected days of the week |
 | **Monthly** | Runs on selected days of the month |
 | **Event trigger** | Runs when something happens instead of at a fixed time |
+
+## Where automations run: Desktop or Cloud
+
+Every automation has a **Runs on** control in [Automations](rebel://automations) with two choices:
+
+- **Desktop** — the default. Runs while Rebel is open on your computer. If Rebel is closed when a run comes due, it catches up next time you open it (hourly automations excepted — they just wait for the next slot).
+- **Cloud** — runs on your Rebel Cloud around the clock, even when your laptop is closed. Handy for anything that should fire at 3am your time, or while you're on a beach pretending not to check.
+
+Cloud runs need [Cloud continuity](rebel://library/rebel-system%2Fhelp-for-humans%2Fcloud-continuity-and-mobile.md) set up first (Settings → Cloud). If it isn't, the **Cloud** option shows greyed out — hover over it and Rebel tells you what's missing. No phone or mobile app is required: your Rebel Cloud runs on its own, and the mobile app is just one way of looking in on it.
+
+A few things worth knowing:
+
+- Cloud automations fire at the wall-clock time in **your** timezone (captured when you switch to Cloud), wherever in the world the cloud happens to be.
+- If the cloud connection has a rough patch when a run is due, Rebel catches the run up once it's back — see [A scheduled run was delayed by a connection hiccup](#a-scheduled-run-was-delayed-by-a-connection-hiccup).
+- **Event-triggered** automations and Rebel's **built-in** automations always run on the desktop, so they don't offer the choice.
+- You can also just ask Rebel in a desktop conversation — "run this one in the cloud" — and it will move the automation for you.
 
 ## Transcript event triggers
 
@@ -141,11 +158,15 @@ Automations also respect the price of the model you chose for them: if one outgr
 
 ## Troubleshooting
 
+### It shows under “Couldn't load”
+
+An automation whose saved schedule is broken — for example a weekly one with no days picked, which a few older versions could create — is paused and listed under **Couldn't load** in the Automations panel instead of firing at the wrong time (an empty weekly schedule used to fire every day). The fix: delete it there and recreate it with the days you want — it goes straight back to its proper cadence.
+
 ### It never ran
 
 - Check that it is **enabled**
 - Check the schedule
-- Keep Rebel open for scheduled runs
+- Check **Runs on**: a **Desktop** automation only fires while Rebel is open; if you need it to run with the laptop closed, switch it to **Cloud** (needs Cloud continuity)
 
 ### It says “Blocked by security”
 

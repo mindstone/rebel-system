@@ -1,6 +1,6 @@
 ---
 description: "Guide to the ElevenLabs connector: music generation, text-to-speech, sound effects, voice browsing, and speech-to-text — all built into Rebel"
-last_updated: "2026-04-16"
+last_updated: "2026-08-07"
 ---
 
 # ElevenLabs Connector
@@ -54,13 +54,15 @@ For more control, ask Rebel to **create a composition plan** first — this is f
 
 ### Text-to-Speech
 
-Generate natural-sounding spoken audio from text, with over 1,000 voices to choose from. Useful for narration, presentations, or hearing a draft read aloud.
+Generate natural-sounding spoken audio files from text, with over 1,000 voices to choose from. Useful for narration, presentations, or producing an audio file you'll use somewhere else.
 
 **Examples:**
-- "Read this summary aloud in a warm, professional voice"
 - "Generate speech for this paragraph using the Josh voice"
+- "Create an audio narration of this blog post in Bella's voice"
 
 Ask Rebel to **list available voices** or search for voices by style ("find British professional voices").
+
+**Reading text aloud vs. generating audio files.** The connector produces audio files — it doesn't play them. When you ask Rebel to "read this aloud," Rebel uses its built-in read-aloud player (see [Voice and Audio — Reading Text Aloud](library://rebel-system/help-for-humans/voice-and-audio.md#reading-text-aloud)): the audio plays through Rebel with a visible pause/stop bar, using your configured voice. Use the connector's text-to-speech when you want an audio file you can save, share, or use elsewhere — not when you just want Rebel to read something to you.
 
 ### Sound Effects
 
