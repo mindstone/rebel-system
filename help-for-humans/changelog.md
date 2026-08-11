@@ -4,6 +4,16 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ---
 
+## v0.4.61 — Aug 11, 2026 (unreleased)
+
+### Fixes
+
+<!-- detail: 260809_conversation-cross-contamination (plan docs/plans/260809_conversation-cross-contamination/PLAN.md; CE2 bug_mode). The Bash write-target analyzer (analyzeBashWriteTargets, src/core/services/safety/bashTargetSpace.ts) is now a whitelist bounded recognizer returning {complete, targets} | {incomplete, targets, reasons}; the memory-write hook DENIES an incomplete command with non-coercive remedy copy (no approval minted), and the automation gate never auto-skips the LLM safety eval on incomplete. Keep public copy non-technical — no analyzer/whitelist/telemetry internals. -->
+- **Rebel now says no to commands it can't check, instead of guessing** — When Rebel wants to run a command that writes files, it first works out exactly which files would be touched. If it can't be sure, it now stops and tells you — with a nudge to simplify the command — rather than shrugging and running it anyway. Fewer guesses, more honesty.
+
+<!-- detail: same run (Stage 4 guard). A Bash-shaped approval record missing provenance (malformed/legacy) resolves the approval without emitting a coercive retry continuation: nothing re-runs, no history entry, a brief toast explains why; renderer continuation sites and the cloud client gate on server-provided content only. Keep public copy non-technical. -->
+- **Approving a save no longer risks a "run it again" loop** — If you approved Rebel saving something and the details of that approval couldn't be verified afterwards, Rebel used to tell itself to redo the whole thing — a confusing loop that could keep asking. Now nothing re-runs; you get a brief note explaining what happened, and the approval you gave stands. The encore is cancelled.
+
 ## v0.4.60 — Aug 7-8, 2026
 
 ### Improvements
