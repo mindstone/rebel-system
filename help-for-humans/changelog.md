@@ -4,6 +4,16 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ---
 
+## v0.4.61 — Aug 11, 2026 (unreleased)
+
+### Fixes
+
+<!-- detail: Rebel used to guess which files a shell command would write to, and guessed wrong whenever the command was too involved to read with confidence. It now works out the exact set of files a command would touch, and when it cannot be sure it stops and asks you to simplify the command rather than running it — and it never quietly skips its own safety check in that case. -->
+- **Rebel now says no to commands it can't check, instead of guessing** — When Rebel wants to run a command that writes files, it first works out exactly which files would be touched. If it can't be sure, it now stops and tells you — with a nudge to simplify the command — rather than shrugging and running it anyway. Fewer guesses, more honesty.
+
+<!-- detail: When the record of an approval you had given could not be verified afterwards, Rebel told itself to redo the whole request, which could turn into a repeated loop of asking. Nothing re-runs now: the approval you gave stands, nothing is added to your history, and a brief note explains what happened. -->
+- **Approving a save no longer risks a "run it again" loop** — If you approved Rebel saving something and the details of that approval couldn't be verified afterwards, Rebel used to tell itself to redo the whole thing — a confusing loop that could keep asking. Now nothing re-runs; you get a brief note explaining what happened, and the approval you gave stands. The encore is cancelled.
+
 ## v0.4.60 — Aug 7-10, 2026
 
 ### Highlights
@@ -15,6 +25,9 @@ What's new in Rebel. We ship fast, so there's always something.
 - **Rebel works out how much thinking a question deserves** — Rebel used to draw up a plan before nearly anything, which is sensible for "reorganise my research" and faintly absurd for "what time is that call?". It now sizes up the question first: small ones get answered straight away, big ones still get the full treatment, and some get an answer now with the checking shown afterwards. This previously required setting up a second model in Settings, which almost nobody had done — it now works for everyone, out of the box. In a spoken conversation it leans harder towards just answering, because nobody wants a project plan read aloud at them. Less ceremony, same rigour.
 
 ### Improvements
+
+<!-- detail: The phone widget gains a third button for adding an action, alongside talking and recording. A captured action is saved on the phone first and synced when a connection comes back, so it survives being offline, backgrounded or closed; one that genuinely cannot sync stays put with a tap to retry instead of disappearing, and an interrupted sync can no longer duplicate an action or undo edits you had already made to it. -->
+- **Capture an action straight from the widget — even with no signal** — Add actions from the widget, even offline. Rebel saves them locally, retries when it can, and tells you if one needs attention. The widget gets a third button: **Add**. Tap it, type the thing, done. Rebel saves it on your phone first and syncs when it can, so a lift, a tunnel, or a dead spot doesn't cost you the thought — and if something genuinely can't sync, the action stays put with a tap to retry instead of quietly vanishing. ("Conversation" is now **Talk**, to make room.) Captured first, synced later.
 
 <!-- detail: The Desktop and Cloud choice on automation cards was hidden entirely unless Cloud continuity was already set up, so most people never learned the option existed. It now always shows, with the Cloud option explained rather than missing, and Rebel can move an automation between the two when you ask. -->
 - **The Desktop | Cloud choice no longer plays hide-and-seek** — Every automation now shows where it runs. Haven't set up Cloud continuity? The **Cloud** option stays visible but greyed out, and hovering explains what it needs — instead of the whole thing vanishing without a word. You can also just ask Rebel to move an automation to the cloud (or back) in conversation, and the help docs now explain what the choice actually means. There all along; now admitting it.
