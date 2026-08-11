@@ -4,6 +4,15 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ---
 
+## v0.4.61 — Aug 11, 2026
+
+### Fixes
+
+<!-- detail: 260810_automations-save-format-bug (plan docs/plans/260810_automations-save-format-bug/PLAN.md; CE2 bug_mode; internal Sentry + Linear tickets, urgency critical). A user reported that allowing a note captured by an automation failed every time: "Rebel couldn't fit this note's details into the required format, so it can't be saved to your notes as-is. You can keep it private or discard it." The refusal was correct — Rebel will not file a note whose details fail the required format, and that guard is unchanged — but everything around it was wrong. The card still led with Allow, which for that note could never succeed; the failure message said the file was still waiting "so you can try again", when trying again could only fail again; and the two actions that did work were either named something else ("Deny", "Cancel this") or hidden inside Preview, so a user following the error message's own instruction could find neither. Rebel now works out at list time whether a captured note will pass the format check and shows only the actions that can succeed: Save privately (stated plainly as private memory, not the space the note was captured for, on the card, on the success toast, and on the bulk equivalent) and a visible Discard behind a confirmation that says it removes the only copy. Notes that can be saved keep their one-tap save. Separately, asking Rebel in conversation to re-file the note used to send the instruction and then discard the copy immediately — before any replacement existed; the copy now stays until the user resolves it. Keep public copy non-technical — no publishability/projection/format-gate/staging internals; say "file it", "save privately", "your copy is still here". -->
+- **When Rebel can't file a note, it stops offering a button that can't work** — If an automation captured a note Rebel couldn't file, the card still led with **Allow** — which failed every time, told you to try again, and pointed you at options it didn't actually offer. Rebel now checks first whether the note can be filed. If it can't, you get the two things that do work: **Save privately**, which says plainly that the note goes to your private memory rather than the space it was captured for, and a **Discard** you can actually see, behind a confirmation. Notes that can be filed keep their one-tap save, and asking Rebel to re-file a note in conversation no longer bins your only copy while it tries. A button that can't work is worse than no button.
+
+---
+
 ## v0.4.60 — Aug 7-8, 2026
 
 ### Improvements
