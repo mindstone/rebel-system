@@ -1,6 +1,6 @@
 ---
 description: "Guide to Rebel's voice features: talking to Rebel, hearing spoken responses, choosing transcription providers (including OpenRouter and Mindstone), unified mic buttons, and custom vocabulary"
-last_updated: "2026-08-07"
+last_updated: "2026-08-10"
 ---
 
 # Voice and Audio
@@ -37,6 +37,26 @@ If you pick a voice provider yourself in **Settings → Agent & Voice → Voice*
 ### Microphone Button
 
 The microphone button appears in the composer area (bottom of the conversation). Tap it to start recording, speak your message, then tap again to stop. Rebel transcribes your speech and treats it like any typed message. This works on desktop, web companion, and mobile.
+
+### Live mode — an actual conversation
+
+**Hold** the microphone button for a moment (instead of tapping) and Rebel enters **Live mode**: a proper back-and-forth conversation out loud. Rebel speaks its replies, listens while it talks, and stops when you start — you can interrupt mid-sentence the way you would with a person. To leave, close the Live view; you're back to normal.
+
+The difference from tapping is worth knowing:
+
+| | **Tap** the mic | **Hold** the mic |
+|---|---|---|
+| What it does | Dictates a message | Starts a spoken conversation |
+| Rebel replies | In writing | Out loud |
+| Interrupting | n/a | Just start talking |
+
+It's the same Rebel behind the voice, with everything it normally has — your connected apps, your files, your Spaces — so you can ask it to actually go and do things, not just chat. "Look at my calendar and tell me what I'm walking into" works out loud.
+
+**When Rebel isn't sure yet.** Talking is faster than working, so Rebel will sometimes answer while it's still checking. It'll say so, and if what it finds changes the answer, it comes back and corrects itself rather than letting the earlier version stand.
+
+**One voice at a time.** If a meeting coach is already speaking, Live waits its turn — they won't talk over each other.
+
+Live mode needs an **OpenAI API key** (Settings → Voice). Without one, Rebel tells you so and points you at the right place.
 
 ### Microphones around Rebel
 
