@@ -18,7 +18,11 @@ Capture citable sources from recent activity into memory, surface actionable ite
      In that same Write, the note MUST end with `## Appendix` containing the verbatim transcript text copied from that output—or, for a very long transcript, its verbatim most-relevant contiguous excerpt—never a summary, paraphrase, or action items.
      Never write-then-edit or delegate verbatim-capture lanes to subagents; “Parallelise” means parent-level tool batches only.
    - Parallelise these searches when possible
-3. For each piece of content worth citing (meetings, substantive threads, important documents):
+3. Decide whether step 2 found any citable source material:
+   - If it found zero citable sources, write **zero files** under `memory/sources/`. Report "No new sources to capture" in the automation response only.
+   - Never write a capture-run receipt, scan summary, "no new sources" note, activity rollup, or meeting-history rollup as a source. The automation run is not citable source material.
+   - Whether source-file count is zero or non-zero, continue to mandatory steps 5 and 6. The Actions sweep never depends on a source file being written.
+   - For each piece of content worth citing (meetings, substantive threads, important documents):
    a. **Destination is always Chief-of-Staff.** Write every captured source into `Chief-of-Staff/memory/sources/`. Do not route any source to a shared space — source capture always writes to Chief-of-Staff, regardless of source type, participants, sensitivity, or content. Distribution to shared spaces is handled separately by the distribution automation.
    b. **Deduplicate**: search `Chief-of-Staff/memory/sources/` for existing files with the same `source_system`, `source_account`, `source_uid` in frontmatter. If found, update or skip.
    c. Create the source file at `memory/sources/YYYY/MM-MMM/DD/yyMMdd_HHmm_source-type_description.md`. Use lowercase `a-z` for `source-type`, lowercase `a-z0-9-` for `description`, and make the `DD` directory equal the day in `yyMMdd`.
@@ -106,6 +110,6 @@ Capture citable sources from recent activity into memory, surface actionable ite
    - When in doubt, leave the item — false positives are worse than stale items
 
 [IMPORTANT]
-- If no new sources are found since [LAST_EXECUTED_SUCCESS], report "No new sources to capture" — this is a valid outcome. Still run steps 5 and 6.
+- If no new sources are found since [LAST_EXECUTED_SUCCESS], write zero source files and report "No new sources to capture" in the automation response only — this is a valid outcome. Still run steps 5 and 6.
 - Steps 5 and 6 are mandatory even when no sources were captured — always surface actionable items and check Actions. In particular, step 5's upcoming-meeting prep queries the calendar directly and MUST run every time, regardless of whether any sources were captured this run.
 - When creating action items (step 5), always set `dueBy` or `relevantDate` so items appear in the right temporal bucket (Today / This Week / Later)
