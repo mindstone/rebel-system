@@ -6,6 +6,11 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ## v0.4.61 — Aug 11, 2026 (unreleased)
 
+### Improvements
+
+<!-- detail: The old Voice replies preference is removed everywhere Rebel runs. If it was enabled, ordinary conversations become quiet immediately after updating; returning to an older version does not restore that former choice. Live conversations, requested read-aloud, meeting coaches, and written progress updates remain. -->
+- **Ordinary replies have stopped volunteering as a podcast** — Rebel no longer reads every normal response aloud or speaks background progress updates. Ordinary conversations stay written; hold the mic for a Live conversation, or ask Rebel to read something aloud when you actually want audio. Meeting coaches still speak when invited. The **Voice replies** toggle is gone. Quiet, now an intentional feature.
+
 ### Fixes
 
 <!-- detail: 260809_conversation-cross-contamination (plan docs/plans/260809_conversation-cross-contamination/PLAN.md; CE2 bug_mode). The Bash write-target analyzer (analyzeBashWriteTargets, src/core/services/safety/bashTargetSpace.ts) is now a whitelist bounded recognizer returning {complete, targets} | {incomplete, targets, reasons}; the memory-write hook DENIES an incomplete command with non-coercive remedy copy (no approval minted), and the automation gate never auto-skips the LLM safety eval on incomplete. Keep public copy non-technical — no analyzer/whitelist/telemetry internals. -->
