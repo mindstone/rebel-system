@@ -82,6 +82,8 @@ Sources (`memory/sources/`) capture citable content that topics can reference:
 
 If the content doesn't warrant a source file, extract relevant facts directly to topic files using the memory-update skill instead.
 
+If a scan or capture run finds **zero citable sources**, write **zero files** under `memory/sources/`. Report the outcome in the automation response only. Never turn the run itself into source material: do not write a capture-run receipt, scan summary, "no new sources" note, activity rollup, or meeting-history rollup as a source. Any mandatory downstream Actions sweep still runs even though no source file was created.
+
 ### 2. Choose capture depth
 
 Once you've decided to create a source file, determine whether to capture **full content** or **summary-only**.
