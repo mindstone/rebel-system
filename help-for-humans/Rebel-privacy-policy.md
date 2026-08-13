@@ -348,7 +348,7 @@ ElevenLabs Scribe - Audio is sent to ElevenLabs for transcription.
 
 ElevenLabs Privacy Policy: https://elevenlabs.io/privacy
 
-Local transcription provides transcription only. Text-to-speech is not available from the local transcription models themselves — if you want spoken replies, use a supported cloud voice provider for TTS.
+Local transcription provides transcription only. Text-to-speech is not available from the local transcription models themselves — read-aloud and other supported speech use a supported cloud voice provider.
 
 Additional considerations
 
@@ -777,6 +777,5 @@ Cursor Privacy Policy - Comprehensive details on Cursor's privacy modes, data co
 Cursor Setup Guide - Configuration and usage
 
 Note: External IDE support is considered legacy functionality. The Rebel desktop app is the recommended interface for most users.
-
 
 
