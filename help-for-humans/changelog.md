@@ -4,9 +4,12 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ---
 
-## v0.4.61 — Aug 11, 2026 (unreleased)
+## v0.4.61 — Aug 11-13, 2026 (unreleased)
 
 ### Fixes
+
+<!-- detail: 260811_cos-cloud-fs-resilience (plan docs/plans/260811_cos-cloud-fs-resilience/PLAN.md; CE2 bug_mode). A transient Chief-of-Staff live-read failure can now serve a trusted last-known-good copy after identity and eligibility checks. Copies under 24 hours old add no conversation notice; older copies disclose their last successful refresh once per conversation, and every cached serve remains visible in Recent activity. The dismissible block notice distinguishes Rebel's file access restarting from an unreachable drive. Cloud access checks now preserve write intent, so read-only folders are reported as read-only. A cache-served turn deliberately omits Chief-of-Staff operator metadata because those files could not be checked without re-entering the unavailable drive path. Keep public copy non-technical — no cache-generation, executor-lane, capability-client, tombstone, or attempt-disposition internals. -->
+- **A temporary drive problem no longer has to stop a Chief-of-Staff turn** — If Rebel has successfully read your instructions before, it can use that saved copy and — once it is more than a day old — tell you once per conversation when it was last refreshed, without pretending it is current. The notices now distinguish Rebel's file access restarting from a folder it cannot reach, can be dismissed, and label read-only cloud folders honestly; Chief-of-Staff operators stay unavailable on a saved-copy turn because their own files could not be checked. A saved copy, honestly labelled.
 
 <!-- detail: 260809_conversation-cross-contamination (plan docs/plans/260809_conversation-cross-contamination/PLAN.md; CE2 bug_mode). The Bash write-target analyzer (analyzeBashWriteTargets, src/core/services/safety/bashTargetSpace.ts) is now a whitelist bounded recognizer returning {complete, targets} | {incomplete, targets, reasons}; the memory-write hook DENIES an incomplete command with non-coercive remedy copy (no approval minted), and the automation gate never auto-skips the LLM safety eval on incomplete. Keep public copy non-technical — no analyzer/whitelist/telemetry internals. -->
 - **Rebel now says no to commands it can't check, instead of guessing** — When Rebel wants to run a command that writes files, it first works out exactly which files would be touched. If it can't be sure, it now stops and tells you — with a nudge to simplify the command — rather than shrugging and running it anyway. Fewer guesses, more honesty.
