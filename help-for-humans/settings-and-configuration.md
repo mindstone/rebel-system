@@ -66,11 +66,10 @@ See [AI models](library://rebel-system/help-for-humans/AI-models.md) for the ful
 Use **Settings → Agent & Voice → Voice** for:
 
 - **Voice provider** — Local (Moonshine), OpenAI Whisper, ElevenLabs Scribe, or a custom OpenAI-compatible provider
-- **Text-to-speech voice** — choose the voice Rebel uses for spoken replies
+- **Text-to-speech voice** — choose the voice Rebel uses for read-aloud and supported speaking features
 - **Voice input language** — Auto or a specific spoken language
 - **Custom vocabulary** — names, acronyms, and domain terms that speech recognition often gets wrong
 - **Global voice activation hotkey** — launch voice input from anywhere
-- **After the hotkey sends** — decide whether Rebel stays in voice mode or switches back to text
 
 See [voice-and-audio](library://rebel-system/help-for-humans/voice-and-audio.md) for the full voice guide.
 
@@ -106,7 +105,7 @@ Use **Settings → Meetings** for:
 - **Choosing a notetaker avatar**
 - **Join behaviour** — ask first, auto-join, or don't join
 - **Transcript storage** — where 1:1 and group meeting notes are saved
-- **Trigger phrase and spoken replies**
+- **Trigger phrase and meeting-coach speech**
 - **Paste a meeting link** workflows
 - **External meeting providers** like Fireflies and Fathom
 - **Meeting unlock / experimental notetaker controls** when available

@@ -1,22 +1,23 @@
 ---
-description: "Guide to Rebel's voice features: talking to Rebel, hearing spoken responses, choosing transcription providers (including OpenRouter and Mindstone), unified mic buttons, and custom vocabulary"
-last_updated: "2026-08-10"
+description: "Guide to Rebel's voice features: dictation, Live conversations, read-aloud, transcription providers, unified mic buttons, and custom vocabulary"
+last_updated: "2026-08-12"
 ---
 
 # Voice and Audio
 
-Rebel is designed as a voice-first assistant. The most natural way to use it: press to speak, let Rebel think, hear it respond. Text works just as well if you prefer typing or need to work quietly.
+Rebel gives you two pleasantly literal ways to use your voice: tap the microphone to dictate a message, or hold it to start a Live conversation where Rebel talks back. Ordinary conversations reply in writing, which is useful when your office has ears.
 
 Voice input works on **desktop, web companion, and mobile** — speak to Rebel from whichever device you're on.
 
 
 ## Quick Start
 
-1. **Tap the microphone button** in the composer to start talking
+1. **Tap the microphone button** to dictate a message
+2. **Hold the microphone button** to start a spoken Live conversation
 
 That's it. On supported desktop platforms, Rebel uses built-in on-device transcription by default — no API key needed. Speak naturally, and Rebel will transcribe what you said and respond.
 
-**Already on OpenRouter or a Mindstone plan?** Rebel can transcribe using that connection you already have — no separate voice API key. On a Mindstone subscription, transcription is included. It works on your computer and your phone. Spoken replies (text-to-speech) still need a separate cloud voice provider — OpenRouter isn't wired for speaking back.
+**Already on OpenRouter or a Mindstone plan?** Rebel can transcribe using that connection you already have — no separate voice API key. On a Mindstone subscription, transcription is included. It works on your computer and your phone.
 
 For other cloud providers with higher accuracy, go to **Settings → Agent & Voice → Voice**, choose a provider, and enter your API key.
 
@@ -68,15 +69,9 @@ On the **Home page**, you can **double-tap the mic while recording** to stop and
 
 See [Rebel Interface — Voice Interaction](library://rebel-system/help-for-humans/Rebel-interface.md#voice-interaction) for where these surfaces live in the app.
 
-### Voice Mode (Global Hotkey — Desktop)
+### Global voice hotkey (desktop)
 
-For hands-free use on desktop, press the global voice activation hotkey (default: **Ctrl+Alt+Space**, or customize in Settings). This works even when Rebel isn't in focus—great for quick questions while working in other apps.
-
-After speaking with the hotkey:
-- **Stay in Voice Mode** — Rebel speaks its reply, then waits for your next voice input
-- **Return to Text Mode** — Rebel speaks its reply, then switches back to text-only
-
-Configure this behavior in Settings under "After the hotkey sends."
+Press the global voice activation hotkey (default: **Ctrl+Alt+Space**, or customize it in Settings) to dictate without first bringing Rebel into focus. Rebel sends the transcript and replies in writing. For a continuing conversation out loud, use Live mode by holding the microphone button.
 
 
 ### Quick Capture (Voice Notes)
@@ -88,15 +83,17 @@ Useful for capturing ideas while walking, jotting down a meeting takeaway, or no
 
 ## Hearing Rebel Speak
 
-When enabled, Rebel speaks responses aloud using text-to-speech. Toggle **Voice replies** in the session settings menu (bottom-right of the composer).
+Ordinary conversations stay quiet and reply in writing. When you want Rebel to speak, you have three intentional routes:
 
-Choose a voice in **Settings → Agent & Voice → Voice**. Options depend on your provider:
+- **Live mode** for a continuing spoken conversation
+- **Read aloud** when you ask Rebel to read particular text
+- **Meeting coach** speech during a meeting, when you have enabled a speaking coach
+
+For read-aloud and other configured speech, choose a voice in **Settings → Agent & Voice → Voice**. Options depend on your provider:
 - **OpenAI** — Alloy, Echo, Fable, Onyx, Nova, Shimmer
 - **ElevenLabs** — Rachel, Bella, Elli, Josh, Arnold, Adam, Sam (plus custom voices)
 
 **Voice preview** — Click the play button next to any voice to hear a sample before selecting it. Try before you commit.
-
-Spoken responses stream in as they're generated, so you hear Rebel start talking before the full response is ready.
 
 
 ## Reading Text Aloud
@@ -105,7 +102,7 @@ Ask Rebel to read something aloud — a document, an email, a summary, anything 
 
 **How it works:**
 1. Ask in plain language: "Read this aloud", "Read me the summary", "Play the briefing"
-2. Rebel reads the text using your configured voice (the same one used for spoken replies)
+2. Rebel reads the text using your configured voice
 3. A **pause/stop bar** appears while audio is playing — tap pause to take a break, tap stop to end it early
 
 The audio stays inside Rebel the whole time. You can pause or stop it at any point, and it never spawns a background process you'd have to chase down from a terminal.
@@ -124,11 +121,11 @@ The audio stays inside Rebel the whole time. You can pause or stop it at any poi
 
 **Built-in** is Rebel's on-device option on desktop (macOS and Windows). Your audio stays on your computer — no API key and no cloud upload for transcription. Rebel picks it automatically when no cloud connection fits your setup, unless you chose something else yourself.
 
-**OpenRouter / Mindstone** is the simplest path if you already power Rebel through OpenRouter or a Mindstone plan — transcription rides on the same connection, including on mobile. It covers turning speech into text only; for Rebel to speak back, pick OpenAI or ElevenLabs (or another voice provider) separately.
+**OpenRouter / Mindstone** is the simplest path if you already power Rebel through OpenRouter or a Mindstone plan — transcription rides on the same connection, including on mobile. It covers turning speech into text only; Live and read-aloud use their own supported speech connections.
 
 **OpenAI Whisper** is recommended if you need the highest accuracy. It handles accents, technical terms, and background noise better than alternatives.
 
-**ElevenLabs Scribe** is faster and offers more voice options for spoken responses.
+**ElevenLabs Scribe** is faster and offers more voice options for read-aloud and other configured speech.
 
 ### Plaud Voice Recorder
 
@@ -163,7 +160,7 @@ Voice notes auto-retry in the background with increasing delays, so most failure
 
 ## Custom Voice Providers (Bring Your Own)
 
-Beyond the built-in options, you can connect your own speech-to-text or text-to-speech service—anything compatible with the OpenAI audio API format. Go to **Settings → Agent & Voice → Voice**, select "Custom" as a provider, and enter your service URL and API key. Rebel will use your custom endpoint for transcription, voice synthesis, or both, depending on what you configure.
+Beyond the built-in options, you can connect your own speech-to-text or text-to-speech service—anything compatible with the OpenAI audio API format. Go to **Settings → Agent & Voice → Voice**, select "Custom" as a provider, and enter your service URL and API key. Rebel will use your custom endpoint for transcription, read-aloud, or both, depending on what you configure.
 
 
 ## Custom Vocabulary
@@ -217,8 +214,8 @@ If you see a disabled mic button with a tooltip about API keys:
 - Check that your API key is entered correctly
 - For Built-in: ensure the model is downloaded
 
-**No spoken response**
-- Check that Voice replies is enabled in the session settings menu
+**Live or read-aloud is silent**
+- Ordinary conversation replies are written by design; hold the mic for Live or ask Rebel to read something aloud
 - Verify your system volume and output device
 - If using a Bluetooth device, ensure it's connected
 
@@ -242,7 +239,7 @@ On desktop, **Built-in** runs transcription on your computer instead of sending 
 **Current limitations:**
 - Custom vocabulary not supported for Built-in transcription
 - Quality can drop with heavy accents or noisy rooms
-- Built-in gives you transcription only — spoken replies still use a cloud voice provider
+- Built-in gives you transcription only — Live and read-aloud use their supported speech connections
 - Windows users may notice brief pauses during transcription
 
 If privacy or offline use matters most, Built-in is the obvious choice on desktop. If you want the highest accuracy, OpenAI Whisper is still the safer bet.
