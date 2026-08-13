@@ -4,7 +4,7 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ---
 
-## v0.4.61 — Aug 11, 2026 (unreleased)
+## v0.4.61 — Aug 11-13, 2026 (unreleased)
 
 ### Improvements
 
@@ -15,6 +15,9 @@ What's new in Rebel. We ship fast, so there's always something.
 - **Rebel's command checker learned to actually read shell syntax** — Before Rebel runs a command that writes files, it checks which files would change. It used to pattern-match the command text, which meant a cleverly disguised command could fool it — a redirected file hidden behind an escaped dash, a path that looked absolute but wasn't. The checker now parses the command the way a real shell would, so those disguises don't work. If it ever can't be sure, it still asks you first — same honest reflex, sharper eye.
 
 ### Fixes
+
+<!-- detail: 260811_cos-cloud-fs-resilience (internal planning doc; CE2 bug_mode). A transient Chief-of-Staff live-read failure can now serve a trusted last-known-good copy after identity and eligibility checks. Copies older than 24 hours disclose their last successful refresh once per conversation. A saved-copy turn also discloses whenever existing Chief-of-Staff operators could not be loaded, using one combined notice when both apply; users with no such operators get no extra notice. Every cached serve remains visible in Recent activity. The dismissible block notice distinguishes Rebel's file access restarting from an unreachable drive. Cloud access checks now preserve write intent, so read-only folders are reported as read-only. A cache-served turn deliberately omits Chief-of-Staff operator metadata because those files could not be checked without re-entering the unavailable drive path. Keep public copy non-technical — no cache-generation, executor-lane, capability-client, tombstone, or attempt-disposition internals. -->
+- **A temporary drive problem no longer has to stop a Chief-of-Staff turn** — If Rebel has successfully read your instructions before, it can use that saved copy and tell you once per conversation when it was last refreshed if it is more than a day old, without pretending it is current. It also says when Chief-of-Staff operators had to sit that turn out because their folder was unavailable, folds both facts into one note when needed, and says nothing extra if you have none; they return automatically with the folder. A saved copy, honestly labelled.
 
 <!-- detail: When Rebel set a note aside for review and the user declined it, only the decision was recorded — the set-aside copy stayed behind, where it could resurface later and ask again about the thing already turned down. Declining now discards that copy in the same motion, and the buttons say what they do: Discard is the only action that ever deletes a copy, while Deny, Skip and Don't save only record an answer, and Keep private still saves the draft to private memory instead of publishing it. One honest caveat: Rebel may still suggest the same note again on a fresh attempt — declining removes this copy rather than banning the idea. -->
 - **Saying no to a set-aside note now actually gets rid of it** — When Rebel set something aside for your review and you declined, the copy it had set aside quietly stuck around — and could resurface later, asking again about the thing you'd already turned down. Declining now discards that copy on the spot. The buttons also say what they mean: **Discard** is the only one that ever deletes anything; **Deny**, **Skip**, and **Don't save** just record your answer; and **Keep private** still keeps the draft in your private memory without publishing it. Fair warning: Rebel may still suggest the same note afresh — declining bins this copy, it doesn't ban the idea. No, and gone.
