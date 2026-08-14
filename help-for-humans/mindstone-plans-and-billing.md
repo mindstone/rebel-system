@@ -68,7 +68,7 @@ Once you're on a plan, [Settings → Agent & Voice → Intelligence](rebel://set
 
 ## Managing your plan
 
-In the same **"Let Mindstone handle it"** section you'll find:
+In the same **"Let Mindstone handle it"** section you'll find (if your plan comes from a company arrangement, your company's admins handle changes instead — there's no personal billing to manage):
 
 - **Manage subscription** — opens the billing portal in your browser, where you can update your payment method, view invoices, or cancel.
 - **Upgrade to Rogue** — moves a Dash plan up to Rogue.
