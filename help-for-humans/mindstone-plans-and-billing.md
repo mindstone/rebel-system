@@ -16,7 +16,7 @@ These plans can power **one person or a whole company**: individuals subscribe f
 - **We cover the AI bill.** Your plan fee is all you pay for Rebel's AI — there's no separate token bill arriving from another provider.
 - **No setup.** No API keys to paste, no third-party account to create. Subscribe and Rebel sorts out the rest.
 - **Sensible models, chosen for you.** Each plan comes with a curated set of models, and Rebel picks good defaults for planning, main work, and behind-the-scenes tasks so you don't have to. (You can still adjust them in Settings if you like to tinker.)
-- **Your main connection, not a silent backup.** A Mindstone plan is never used as an automatic fallback if another provider hits a limit — see [Backup connections](library://rebel-system/help-for-humans/AI-models.md#backup-connections) in AI models.
+- **Your main connection, not a silent backup.** A Mindstone plan is never used as an automatic fallback if another provider hits a limit — see [Backup connections](rebel://library/rebel-system%2Fhelp-for-humans%2FAI-models.md#backup-connections) in AI models.
 
 ## The two plans
 
@@ -24,8 +24,8 @@ Both plans share the **same monthly usage allowance**. The difference is the *ca
 
 | Plan | Price | Best for |
 |---|---|---|
-| **Dash** | $200/mo | Capable models that handle your daily workload |
-| **Rogue** | $500/mo | Frontier-class models for work that demands the best |
+| **Dash** | $199/mo | Capable models that handle your daily workload |
+| **Rogue** | $499/mo | Frontier-class models for work that demands the best |
 
 So "Rogue" doesn't mean "more turns" — it means stronger models. If your work is mostly everyday drafting, triage, and research, Dash is plenty. Step up to Rogue when you want the sharpest models on harder problems.
 
