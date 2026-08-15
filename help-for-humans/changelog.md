@@ -4,9 +4,12 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ---
 
-## v0.4.61 — Aug 11-13, 2026 (unreleased)
+## v0.4.61 — Aug 11-15, 2026 (unreleased)
 
 ### Improvements
+
+<!-- detail: Completed Live work now uses a short validated spoken lead while the complete result stays in the conversation. During longer work, grounded progress shares one listening-friendly cadence; transcript entries are ordered by when they happened and related replies retain their earlier history. -->
+- **Live gives you the short version aloud and the full answer on screen** — When Live finishes a substantial job, it now says the concise version and leaves the complete work — tables, files, detail and all — in the conversation. For longer jobs it can also tell you what it is actually doing instead of going quiet, without guessing how long it will take; spoken events appear in the order they happened, with earlier replies still available when an answer develops. Concise out loud, complete where it counts.
 
 <!-- detail: The old Voice replies preference is removed everywhere Rebel runs. If it was enabled, ordinary conversations become quiet immediately after updating; returning to an older version does not restore that former choice. Live conversations, requested read-aloud, meeting coaches, and written progress updates remain. -->
 - **Ordinary replies have stopped volunteering as a podcast** — Rebel no longer reads every normal response aloud or speaks background progress updates. Ordinary conversations stay written; hold the mic for a Live conversation, or ask Rebel to read something aloud when you actually want audio. Meeting coaches still speak when invited. The **Voice replies** toggle is gone. Quiet, now an intentional feature.
@@ -15,6 +18,9 @@ What's new in Rebel. We ship fast, so there's always something.
 - **Rebel's command checker learned to actually read shell syntax** — Before Rebel runs a command that writes files, it checks which files would change. It used to pattern-match the command text, which meant a cleverly disguised command could fool it — a redirected file hidden behind an escaped dash, a path that looked absolute but wasn't. The checker now parses the command the way a real shell would, so those disguises don't work. If it ever can't be sure, it still asks you first — same honest reflex, sharper eye.
 
 ### Fixes
+
+<!-- detail: Opening Live now has a dedicated connecting state. Recovery appears only after a first connection fails or an established connection drops, so initial entry no longer looks like a reconnection problem. -->
+- **Opening Live no longer starts with a reconnect card** — The first connection now simply says **Connecting**. **Reconnecting** is saved for a Live conversation that really was connected and then dropped; if the first attempt fails, **Try again** appears then. One less recovery from a problem that hadn't happened.
 
 <!-- detail: 260811_cos-cloud-fs-resilience (internal planning doc; CE2 bug_mode). A transient Chief-of-Staff live-read failure can now serve a trusted last-known-good copy after identity and eligibility checks. Copies older than 24 hours disclose their last successful refresh once per conversation. A saved-copy turn also discloses whenever existing Chief-of-Staff operators could not be loaded, using one combined notice when both apply; users with no such operators get no extra notice. Every cached serve remains visible in Recent activity. The dismissible block notice distinguishes Rebel's file access restarting from an unreachable drive. Cloud access checks now preserve write intent, so read-only folders are reported as read-only. A cache-served turn deliberately omits Chief-of-Staff operator metadata because those files could not be checked without re-entering the unavailable drive path. Keep public copy non-technical — no cache-generation, executor-lane, capability-client, tombstone, or attempt-disposition internals. -->
 - **A temporary drive problem no longer has to stop a Chief-of-Staff turn** — If Rebel has successfully read your instructions before, it can use that saved copy and tell you once per conversation when it was last refreshed if it is more than a day old, without pretending it is current. It also says when Chief-of-Staff operators had to sit that turn out because their folder was unavailable, folds both facts into one note when needed, and says nothing extra if you have none; they return automatically with the folder. A saved copy, honestly labelled.
