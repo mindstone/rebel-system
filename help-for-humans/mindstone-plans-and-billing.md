@@ -1,6 +1,6 @@
 ---
-description: "Mindstone plans — the flat-fee subscription (Dash and Rogue tiers) where Mindstone covers your AI bill, which models each tier includes, monthly allowance, billing, upgrades, and cancellation"
-last_updated: "2026-07-02"
+description: "Mindstone plans — the flat-fee subscription (Dash and Rogue tiers) where Mindstone covers your AI bill, which models each tier includes, monthly allowance, billing, upgrades, cancellation, and company-wide plans for whole teams"
+last_updated: "2026-08-14"
 ---
 
 # Mindstone plans
@@ -9,14 +9,14 @@ A **Mindstone plan** is the no-fuss way to power Rebel: you pay one flat monthly
 
 If you'd rather use your own AI account instead, that's the [bring-your-own route](rebel://library/rebel-system%2Fhelp-for-humans%2FAI-models.md) (ChatGPT Pro, OpenRouter, or an Anthropic key) — both work, and you can switch between them.
 
-These plans are about **how you power the AI** for one person. Rolling Rebel out across a *team* — central admin controls, recommended connectors, standardised models — is arranged separately with Mindstone; see [Teams and admin controls](rebel://library/rebel-system%2Fhelp-for-humans%2Fteams-and-admin-controls.md) and [Licensing, explained](rebel://library/rebel-system%2Fhelp-for-humans%2Flicensing-and-fair-source.md).
+These plans can power **one person or a whole company**: individuals subscribe for themselves (below), or a company can arrange plans for its people centrally — one bill to the company, no per-person checkout (see [Plans for a whole company](#plans-for-a-whole-company)). For the other parts of a team rollout — central admin controls, recommended connectors, standardised models — see [Teams and admin controls](rebel://library/rebel-system%2Fhelp-for-humans%2Fteams-and-admin-controls.md) and [Licensing, explained](rebel://library/rebel-system%2Fhelp-for-humans%2Flicensing-and-fair-source.md).
 
 ## What you get
 
 - **We cover the AI bill.** Your plan fee is all you pay for Rebel's AI — there's no separate token bill arriving from another provider.
 - **No setup.** No API keys to paste, no third-party account to create. Subscribe and Rebel sorts out the rest.
 - **Sensible models, chosen for you.** Each plan comes with a curated set of models, and Rebel picks good defaults for planning, main work, and behind-the-scenes tasks so you don't have to. (You can still adjust them in Settings if you like to tinker.)
-- **Your main connection, not a silent backup.** A Mindstone plan is never used as an automatic fallback if another provider hits a limit — see [Backup connections](library://rebel-system/help-for-humans/AI-models.md#backup-connections) in AI models.
+- **Your main connection, not a silent backup.** A Mindstone plan is never used as an automatic fallback if another provider hits a limit — see [Backup connections](rebel://library/rebel-system%2Fhelp-for-humans%2FAI-models.md#backup-connections) in AI models.
 
 ## The two plans
 
@@ -24,8 +24,8 @@ Both plans share the **same monthly usage allowance**. The difference is the *ca
 
 | Plan | Price | Best for |
 |---|---|---|
-| **Dash** | $200/mo | Capable models that handle your daily workload |
-| **Rogue** | $500/mo | Frontier-class models for work that demands the best |
+| **Dash** | $199/mo | Capable models that handle your daily workload |
+| **Rogue** | $499/mo | Frontier-class models for work that demands the best |
 
 So "Rogue" doesn't mean "more turns" — it means stronger models. If your work is mostly everyday drafting, triage, and research, Dash is plenty. Step up to Rogue when you want the sharpest models on harder problems.
 
@@ -34,6 +34,18 @@ So "Rogue" doesn't mean "more turns" — it means stronger models. If your work 
 Each tier includes a curated set of models. You can see exactly which ones in **Settings → Agent & Voice → Intelligence** — the "Add a model" picker groups them under **Included with your plan**.
 
 If you pick a model outside your tier mid-conversation, Rebel switches to an included one and says so ("Your plan runs on … Using it for this one.") rather than stopping with an error. Need frontier-class models? **Upgrade to Rogue** from the same settings section. Full behaviour is in [AI models](rebel://library/rebel-system%2Fhelp-for-humans%2FAI-models.md#picking-a-model-outside-your-plan).
+
+## Plans for a whole company
+
+A company doesn't have to send every employee through checkout one at a time. With a **company arrangement**, Mindstone sets the company up once, and from then on the company's own admins hand out the plans:
+
+- **Admins assign plans; employees just sign in.** A company admin assigns **Dash** or **Rogue** to each person from the company's page on Mindstone's web platform — one person at a time, or the whole team in one go. There's no per-person checkout and nothing for employees to set up; the plan is simply there next time they open Rebel.
+- **One bill, to the company.** Mindstone invoices the company centrally rather than charging each employee's card.
+- **Same plans, same allowance.** A company-assigned Dash or Rogue works exactly like a personal one — same included models, same monthly allowance — except there's no personal subscription (or personal bill) to manage.
+- **Already paying personally?** That's sorted out deliberately, person by person — a company plan won't silently replace someone's personal subscription, and nobody ends up paying twice by accident.
+- **Offboarding is tidy.** Plans stay active until an admin removes them; when someone leaves the company, their plan ends with their membership.
+
+Company arrangements aren't self-serve — email **hello@mindstone.com** and we'll set the company up. For the rest of the team picture (central admin controls, shared skills and spaces), see [Teams and admin controls](rebel://library/rebel-system%2Fhelp-for-humans%2Fteams-and-admin-controls.md).
 
 ## Subscribing
 
@@ -56,7 +68,7 @@ Once you're on a plan, [Settings → Agent & Voice → Intelligence](rebel://set
 
 ## Managing your plan
 
-In the same **"Let Mindstone handle it"** section you'll find:
+In the same **"Let Mindstone handle it"** section you'll find (if your plan comes from a company arrangement, your company's admins handle changes instead — there's no personal billing to manage):
 
 - **Manage subscription** — opens the billing portal in your browser, where you can update your payment method, view invoices, or cancel.
 - **Upgrade to Rogue** — moves a Dash plan up to Rogue.

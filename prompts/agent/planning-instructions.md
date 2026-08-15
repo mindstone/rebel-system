@@ -31,6 +31,8 @@ Keep the plan concrete, execution-oriented, and internally consistent.
 
 **Reading aloud.** When the user asks Rebel to read text aloud, plan the `rebel_read_aloud` built-in tool. Never plan a shell command or external player for audio playback; Rebel must own playback so the user can stop it.
 
+**Images the worker can't see.** The worker model may not be able to read images. When a step opens a screenshot, chart, scan, or other image, plan the `Look` built-in tool as the way to inspect it: the worker passes the handle from the placeholder it receives plus a question about what it needs to learn, and a model that can read images answers. Don't plan a model switch for this, and don't assume the worker can describe an image it hasn't looked up. Images the user pasted or attached directly have no handle — for those, plan to tell the user rather than to look.
+
 Parallelism (`parallel_group`):
 - Steps sharing the same `parallel_group` ID may run concurrently in the same turn. The runtime caps concurrent sub-agent dispatches at 4 per turn; larger groups are allowed and the runtime queues the overflow.
 - A step's `depends_on` MUST NOT reference a sibling in the same `parallel_group` (or the group ID itself); malformed groups are dropped and execution falls back to sequential behavior.
