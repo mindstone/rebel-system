@@ -1,5 +1,5 @@
 ---
-description: "Using Rebel across a team: what an organisation can manage centrally (disabled tools, recommended connectors, company model profiles, pre-set keys), how shared skills and spaces keep people aligned, and what stays personal to each person (like Safety Rules)."
+description: "Using Rebel across a team: what an organisation can manage centrally (company-wide Dash/Rogue AI plans, disabled tools, recommended connectors, company model profiles, pre-set keys), how shared skills and spaces keep people aligned, and what stays personal to each person (like Safety Rules)."
 ---
 
 # Teams and Admin Controls
@@ -12,6 +12,7 @@ The short version: a few things can be managed centrally for the whole organisat
 
 | Thing | Who controls it | How it's shared |
 |---|---|---|
+| **AI plans for everyone** (Dash or Rogue, billed to the company) | Your organisation (via Mindstone) | Assigned per person by your company's admins — nothing for employees to buy or set up |
 | **Disabled tools** (block a tool for everyone) | Your organisation (via Mindstone) | Applied to every person automatically at sign-in — can't be overridden |
 | **Recommended connectors** | Your organisation (via Mindstone) | Shown as "recommended for your company" — a suggestion, not forced |
 | **Company model profiles** | Your organisation (via Mindstone) | Pushed to everyone, optionally as the default model for certain work |
@@ -21,8 +22,9 @@ The short version: a few things can be managed centrally for the whole organisat
 
 ## What an organisation can manage centrally
 
-If your organisation has a team arrangement with Mindstone, it can set a handful of things centrally. (This is an organisation-level arrangement, separate from the individual [Dash and Rogue AI plans](rebel://library/rebel-system%2Fhelp-for-humans%2Fmindstone-plans-and-billing.md) that power one person's models — a personal Dash plan doesn't by itself unlock these controls.) These aren't configured inside the Rebel app — they're arranged with Mindstone (talk to us at **hello@mindstone.com**), and they apply to each person automatically the next time they sign in. No one has to do anything on their own machine.
+If your organisation has a team arrangement with Mindstone, it can set a handful of things centrally. (This is an organisation-level arrangement, separate from the individual [Dash and Rogue AI plans](rebel://library/rebel-system%2Fhelp-for-humans%2Fmindstone-plans-and-billing.md) that power one person's models — a personal Dash plan doesn't by itself unlock these controls. The arrangement *can* include centrally-provided plans for everyone — the first item below.) These aren't configured inside the Rebel app — they're arranged with Mindstone (talk to us at **hello@mindstone.com**), and they apply to each person automatically the next time they sign in. No one has to do anything on their own machine.
 
+- **Provide the AI plans themselves, company-wide.** Instead of each employee subscribing individually, the company can cover everyone's **Dash** or **Rogue** plan: Mindstone sets the company up once, the company's admins then assign (or change, or remove) a plan per person from the company's page on Mindstone's web platform, and Mindstone invoices the company — not each employee. Someone who's already paying personally can't be assigned a company plan until their personal one is sorted out — deliberately, person by person — so nobody ends up double-billed by accident, and leavers' plans end with their membership. Details: [Mindstone plans → Plans for a whole company](rebel://library/rebel-system%2Fhelp-for-humans%2Fmindstone-plans-and-billing.md#plans-for-a-whole-company).
 - **Switch specific tools off for everyone.** An administrator can hard-disable particular connector tools across the whole organisation — say, "no one's Rebel may delete files in Google Drive," or "turn off outbound posting in Slack." These are a genuine block: the tool simply isn't available, there's no approval prompt to click through, and an individual can't switch it back on. People see a shield icon and a "Disabled" badge against those tools in **[Settings → Connectors](rebel://settings/tools)**. This is the one safety control that applies to the whole team at once.
 - **Recommend the right connectors.** Your organisation can surface a curated "recommended for your company" list at the top of the connectors screen, so everyone connects the same tools. It's a nudge, not a mandate — people can still ignore it or connect others.
 - **Standardise which AI models people use.** Your organisation can push named **company model profiles** — and optionally set one as the default for everyday work. People can see these profiles but can't delete them; they can still choose a different model for themselves unless your organisation has set a default they haven't overridden.
@@ -63,7 +65,7 @@ Above that shared floor, each person tunes their own rules to their own comfort.
 
 ## Getting team and admin features
 
-The central controls above come with a Mindstone team plan, and they're arranged directly with us rather than self-served in the app — partly because they're worth a short conversation about how your organisation wants to work. If you're rolling Rebel out to a group, or you want tools centrally locked down, recommended connectors, or standardised models, email **hello@mindstone.com** and we'll set it up.
+The central controls above come with a Mindstone team plan, and they're arranged directly with us rather than self-served in the app — partly because they're worth a short conversation about how your organisation wants to work. If you're rolling Rebel out to a group, or you want company-wide AI plans, tools centrally locked down, recommended connectors, or standardised models, email **hello@mindstone.com** and we'll set it up.
 
 For how team size relates to licensing (Rebel is free for internal use up to 100 people), see [Licensing, explained](rebel://library/rebel-system%2Fhelp-for-humans%2Flicensing-and-fair-source.md).
 
