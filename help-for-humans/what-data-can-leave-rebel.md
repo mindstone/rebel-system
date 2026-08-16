@@ -20,7 +20,7 @@ Two of these you can switch off right now, in **[Settings → Privacy & Safety](
 | **Anything a connector reaches for** | The service you connected | Yes — disconnect it |
 | **Meeting audio and transcripts** | Your meeting/transcription provider | Yes — don't use the notetaker |
 | **Voice — dictation** (speaking instead of typing) | Your speech provider, or nowhere | **Yes** — choose an on-device model |
-| **Voice — read-aloud** (Rebel speaking a passage) | A cloud voice provider | Only by not using read-aloud |
+| **Voice — read-aloud** (Rebel speaking a passage) | A cloud voice provider, or nowhere | Yes — an on-device model leaves it unavailable, or just don't use it |
 | **Voice — Live mode** (a spoken back-and-forth) | A cloud realtime voice provider | Yes — don't use Live mode |
 | **Web searches and pages Rebel fetches** | The search provider, and the site itself | Yes — by not asking for it |
 | **Your workspace, conversations and settings** | Your own cloud instance | Yes — Cloud Continuity is opt-in |
@@ -99,7 +99,7 @@ Three different things happen under the word "voice", and they don't have the sa
 
 **Dictation** — speaking instead of typing — can stay entirely on your machine: pick one of the built-in on-device models in Settings and your audio never leaves. Pick a cloud provider instead and your audio goes to them.
 
-**Read-aloud** — Rebel speaking a passage back to you — always uses a cloud voice provider. The on-device models transcribe; they don't speak. There is no local option to choose, so the only way to send nothing is not to use read-aloud.
+**Read-aloud** — Rebel speaking a passage back to you — never runs on your machine. The on-device models transcribe; they don't speak, so there is no local voice to pick. One setting covers both directions, which means your dictation choice decides this one too: with an on-device model chosen, read-aloud isn't available at all — Rebel asks you to choose a voice instead, and nothing is sent. With a cloud provider chosen, the passage you asked for goes to them.
 
 **Live mode** — the spoken back-and-forth you enter from the composer — streams audio continuously in both directions to a cloud realtime voice provider for as long as you're in it. It is the largest amount of audio Rebel ever sends anywhere, and it starts and stops with you entering and leaving the mode.
 
