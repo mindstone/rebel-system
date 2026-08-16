@@ -144,7 +144,7 @@ Use **Settings → Privacy & Safety** for:
 - **Privacy Mode** — a temporary master switch for extra caution on sensitive work
 - **Activity log** — a record of what Rebel has done
 - **Privacy and data cards** — how your data is stored and used
-- **Share usage analytics / Share crash & error reports** — two switches for what Rebel sends back to us. Both on by default; both take effect straight away, and follow to your other devices when those next connect
+- **Share usage analytics / Share crash & error reports** — two switches for what Rebel sends back to us. Both on by default; both take effect straight away, and follow to your other devices when those next connect — but only if you use Cloud Continuity, which is what carries the choice between them
 
 If you want the full safety breakdown, see [security-and-tool-safety](library://rebel-system/help-for-humans/security-and-tool-safety.md). For the complete list of where data can go — including everything those two switches don't cover — see [what data can leave Rebel](rebel://library/rebel-system%2Fhelp-for-humans%2Fwhat-data-can-leave-rebel.md).
 
