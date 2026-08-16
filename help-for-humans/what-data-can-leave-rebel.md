@@ -53,7 +53,7 @@ Rebel filters these reports before they leave: only technical detail is meant to
 
 **What happens when you turn it off.** Rebel asks you to confirm, then stops. It shuts the reporting client down without letting it deliver whatever was queued, throws away crash files already sitting on disk waiting to be sent, and clears your identity from it. Nothing further is captured automatically.
 
-**One thing it doesn't stop, on purpose:** you can still report a bug yourself, from **Settings → Support** or the Help menu. That's a deliberate action each time — you type what happened and press send — so it isn't covered by an automatic-sharing switch. If you'd rather send nothing at all, simply don't file one.
+**One thing it doesn't stop, on purpose:** you can still report a bug yourself — the **Feedback** button at the top of the window, or **Feedback & bugs** in the Help menu. That's a deliberate action each time — you type what happened and press send — so it isn't covered by an automatic-sharing switch. If you'd rather send nothing at all, simply don't file one.
 
 **One thing it changes quietly:** rating a conversation with thumbs-up/thumbs-down uses the same delivery channel. With crash sharing off, your rating is stored with the conversation but doesn't reach us, and Rebel says so plainly — the confirmation reads *"Rating saved, not sent"* rather than pretending it arrived.
 
