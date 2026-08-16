@@ -19,7 +19,9 @@ Two of these you can switch off right now, in **[Settings → Privacy & Safety](
 | **Your messages, and the files you ask about** | The AI provider you chose | Only by not using the AI |
 | **Anything a connector reaches for** | The service you connected | Yes — disconnect it |
 | **Meeting audio and transcripts** | Your meeting/transcription provider | Yes — don't use the notetaker |
-| **Voice — dictation and read-aloud** | Your speech provider, or nowhere | Yes — choose an on-device model |
+| **Voice — dictation** (speaking instead of typing) | Your speech provider, or nowhere | **Yes** — choose an on-device model |
+| **Voice — read-aloud** (Rebel speaking a passage) | A cloud voice provider | Only by not using read-aloud |
+| **Voice — Live mode** (a spoken back-and-forth) | A cloud realtime voice provider | Yes — don't use Live mode |
 | **Web searches and pages Rebel fetches** | The search provider, and the site itself | Yes — by not asking for it |
 | **Your workspace, conversations and settings** | Your own cloud instance | Yes — Cloud Continuity is opt-in |
 | **Update checks** | Mindstone's update service | No — always on |
@@ -29,7 +31,7 @@ The rest of this page explains each one.
 
 ## What you can turn off
 
-Both toggles live in **[Settings → Privacy & Safety](rebel://settings/safety)** → Privacy & Data. Both are on by default, including for people who have been using Rebel for a while — nothing changed under you when these controls arrived. Turning either off takes effect on this device immediately; your other devices pick it up the next time they connect.
+Both toggles live in **[Settings → Privacy & Safety](rebel://settings/safety)** → Privacy & Data. Both are on by default, including for people who have been using Rebel for a while — nothing changed under you when these controls arrived. Turning either off takes effect on this device immediately. Your other devices pick it up too — but only if you use Cloud Continuity, which is what carries the choice between them. Without it, each device keeps whatever you set on it. The fine print at the end spells this out.
 
 ### Share usage analytics
 
@@ -73,7 +75,7 @@ Rebel checks for new versions and installs them. This can't be turned off, and t
 
 ### Signing in and account checks — always on
 
-Rebel signs you in to verify your account, work out whether you belong to an organisation, and apply any settings your organisation administers. This is also how your opt-out choices reach your other devices. Turning it off isn't offered, because it's the mechanism the rest of your account depends on.
+Rebel signs you in to verify your account, work out whether you belong to an organisation, and apply any settings your organisation administers. Turning it off isn't offered, because it's the mechanism the rest of your account depends on. It carries who you are, not what you chose here — the toggles travel by a different road, described below.
 
 ### The AI itself
 
@@ -91,6 +93,18 @@ Review or disconnect anything in **Settings → Connectors**. See [connectors an
 
 When you ask Rebel to look something up, your search query goes to a search provider, and any page it opens gets a request from your machine. Ordinary web browsing, but worth naming: if you ask about something sensitive by name, that name is in the search query.
 
+### Voice — dictation, read-aloud and Live mode
+
+Three different things happen under the word "voice", and they don't have the same answer.
+
+**Dictation** — speaking instead of typing — can stay entirely on your machine: pick one of the built-in on-device models in Settings and your audio never leaves. Pick a cloud provider instead and your audio goes to them.
+
+**Read-aloud** — Rebel speaking a passage back to you — always uses a cloud voice provider. The on-device models transcribe; they don't speak. There is no local option to choose, so the only way to send nothing is not to use read-aloud.
+
+**Live mode** — the spoken back-and-forth you enter from the composer — streams audio continuously in both directions to a cloud realtime voice provider for as long as you're in it. It is the largest amount of audio Rebel ever sends anywhere, and it starts and stops with you entering and leaving the mode.
+
+See [voice and audio](rebel://library/rebel-system%2Fhelp-for-humans%2Fvoice-and-audio.md).
+
 ### Meetings and transcription
 
 If you use the meeting notetaker, meeting audio goes to a transcription service, and the transcript comes back into your workspace. In the Mindstone-managed app that path runs through Mindstone's meeting backend and Recall.ai. If you've connected a different meeting tool — Fireflies, Fathom, or a hardware recorder — your meetings go to that provider, on your account, under their terms.
@@ -102,6 +116,8 @@ None of this happens unless you set the notetaker up. See [meetings and notetake
 If you switch on Cloud Continuity, your conversations, Actions, settings, memory and workspace files are mirrored to your own cloud instance so your phone and browser can reach them — and your connector logins are relayed there too, so the cloud instance can use them on your behalf. Mobile push notifications go via Expo's push service and can include short preview text such as a title or status.
 
 That is a much bigger change to where your data lives than any telemetry toggle, and it's entirely opt-in. See [cloud continuity and mobile](rebel://library/rebel-system%2Fhelp-for-humans%2Fcloud-continuity-and-mobile.md).
+
+Cloud Continuity is also the road the two toggles above travel: your choice is stored on your own cloud instance alongside the rest of your settings, and each of your devices reads it from there. That's why devices not connected to Cloud Continuity keep their own answer — there's nothing carrying the choice between them.
 
 ### Mindstone's monitoring of its own cloud service
 
@@ -115,12 +131,19 @@ A few things worth saying precisely, because "we stopped everything instantly" i
 
 - **Requests already in flight can't be recalled.** When you switch either toggle off, Rebel stops immediately: it refuses new events, discards what it was holding, and doesn't flush anything on the way out. But a request already handed to the network has left, and nothing on your machine can call it back.
 - **Usage analytics has one loose end we won't pretend is tidy.** The analytics library keeps its own delivery queue that Rebel can't inspect or empty. If you switch analytics off mid-session, events already handed to that queue may still be delivered — possibly even after a restart. We don't know how many or for how long, so we're not going to give you a number. The clean state is a session that *starts* with analytics off: as described above, the machinery is never loaded, so nothing is sent at all. If you want certainty, turn it off and restart Rebel.
-- **Your other devices follow, they don't jump.** Your choice syncs through your account, and each device applies it when it next checks in — when it reconnects, or when you next bring it to the front. A phone in your pocket, or a laptop that's asleep or offline, is still on its old answer until then. It is not instant, and we'd rather say so than imply otherwise.
+- **Your other devices follow, they don't jump — and only if they're connected.** The choice travels through Cloud Continuity: it's stored on your own cloud instance, and each device applies it when it next checks in — when it reconnects, or when you next bring it to the front. A phone in your pocket, or a laptop that's asleep or offline, is still on its old answer until then. It is not instant, and we'd rather say so than imply otherwise. If you don't use Cloud Continuity, nothing carries the choice at all: two desktops with it switched off will never agree, and each simply keeps what you set on it.
+- **If two devices decide different things while both are offline, the last one back wins.** Not the one you changed most recently — the last one to reconnect. Nothing in the sync records *when* you made each choice, so Rebel genuinely can't tell which was later. It's a corner you'd have to work at to reach, but "your other devices follow" isn't the same as "the newest decision wins", and you should know which one we can promise.
 - **Going back to an older version undoes it.** These controls are new. If you install a version of Rebel from before they existed, it has no idea your choice was ever made, and it resumes sending. Turning the toggles off again on a current version restores your choice.
 
 ## If you're running the open build
 
-Rebel's open-source build doesn't carry Mindstone's analytics or error-monitoring credentials at all, so it sends Mindstone no usage analytics and no crash reports by default — with nothing to send to, there's nothing for these toggles to switch, and the app doesn't show them. It shows a single anonymous-usage switch instead. Everything else on this page — AI providers, connectors, meetings, web fetches — applies just the same, using the accounts you configured. See [the open-source build](rebel://library/rebel-system%2Fhelp-for-humans%2Ffair-source-and-open-source-build.md).
+Rebel's open-source build doesn't carry Mindstone's analytics or error-monitoring credentials at all. That settles the crash half outright: **it sends Mindstone no crash or error reports**, so there's no crash toggle to show.
+
+Usage data is the part worth reading twice. The open build **does** send Mindstone anonymous usage data, and it is **on by default**. It doesn't need bundled credentials to do that, because the data goes to a Mindstone endpoint that holds them at its end — so "no keys in the code" is true and "nothing is sent" is not. What travels is a fixed list of event names and non-identifying details, tagged with a random per-install ID: not your email, not an account, not your content. The two toggles above are replaced by a single **Share anonymous usage data** switch, and turning it off stops it.
+
+Prefer to keep that data yourself? Add your own analytics credentials in Settings and Rebel sends to your account instead — the Mindstone channel switches off for that install. It's one or the other, never both.
+
+Everything else on this page — AI providers, connectors, meetings, web fetches — applies just the same, using the accounts you configured. See [the open-source build](rebel://library/rebel-system%2Fhelp-for-humans%2Ffair-source-and-open-source-build.md) for the full detail.
 
 ## See also
 
