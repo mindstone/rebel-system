@@ -4,12 +4,12 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ---
 
-## v0.4.61 — Aug 11-15, 2026 (unreleased)
+## v0.4.61 — Aug 11-16, 2026 (unreleased)
 
 ### Improvements
 
-<!-- detail: Completed Live work now uses a short validated spoken lead while the complete result stays in the conversation. During longer work, grounded progress shares one listening-friendly cadence; transcript entries are ordered by when they happened and related replies retain their earlier history. -->
-- **Live gives you the short version aloud and the full answer on screen** — When Live finishes a substantial job, it now says the concise version and leaves the complete work — tables, files, detail and all — in the conversation. For longer jobs it can also tell you what it is actually doing instead of going quiet, without guessing how long it will take; spoken events appear in the order they happened, with earlier replies still available when an answer develops. Concise out loud, complete where it counts.
+<!-- detail: During longer work, Live now speaks short updates grounded in the work Rebel has actually recorded. You can keep talking about one useful related point while the job runs, or add new context to the running job; the conversation shows whether that context is waiting, passed along, picked up, missed, or not confirmed, and lets you cancel while it is still pending. The complete result remains in the conversation. -->
+- **Live keeps you in the conversation while it works** — On a longer job, Rebel now talks through the real work instead of disappearing into a thoughtful silence, while keeping the complete result — tables, files, detail and all — on screen. You can follow one useful related aside or say something new that belongs in the job already running; Rebel shows whether it is still waiting or actually passed in, lets you cancel while it waits, and tells you plainly if it missed the answer or could not confirm it was used. Less dead air. No creative accounting.
 
 <!-- detail: The old Voice replies preference is removed everywhere Rebel runs. If it was enabled, ordinary conversations become quiet immediately after updating; returning to an older version does not restore that former choice. Live conversations, requested read-aloud, meeting coaches, and written progress updates remain. -->
 - **Ordinary replies have stopped volunteering as a podcast** — Rebel no longer reads every normal response aloud or speaks background progress updates. Ordinary conversations stay written; hold the mic for a Live conversation, or ask Rebel to read something aloud when you actually want audio. Meeting coaches still speak when invited. The **Voice replies** toggle is gone. Quiet, now an intentional feature.
