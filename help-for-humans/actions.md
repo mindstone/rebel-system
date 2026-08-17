@@ -149,7 +149,7 @@ That's it — no queueing to think about, and no separate "send now".
 
 ### What if Rebel finishes before my message lands?
 
-Then it becomes your next message and runs on its own, files and all. Rebel tells you what happened rather than guessing: **"Missed this run — sends as your next message."** If Rebel picked it up but couldn't confirm it in time, you'll see **"Couldn't confirm Rebel picked this up"** with a **Try again** that puts your text and files back in the composer — deliberately honest, because "couldn't confirm" is not the same as "didn't see it".
+Then it becomes your next message and runs on its own, files and all. Rebel tells you what happened rather than guessing: **"Missed it — sends as your next message."** If Rebel picked it up but couldn't confirm it in time, you'll see **"Couldn't confirm Rebel picked this up"** with a **Try again** that puts your text and files back in the composer — deliberately honest, because "couldn't confirm" is not the same as "didn't see it".
 
 One caveat worth knowing: attached files are held only while the app is running. If you quit and reopen before a message goes out, Rebel restores your text and asks you to reattach the files rather than pretending it still has them.
 
