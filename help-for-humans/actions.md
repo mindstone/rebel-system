@@ -141,7 +141,7 @@ To restore: Open the Archived section and click restore to move an item back to 
 
 When Rebel is mid-task and you want to say something, there are two options and no third.
 
-**Send.** Press **Enter** or click **Send**, exactly as you would when Rebel is idle. Your message — files included — reaches the task Rebel is already running, usually within a few seconds. It does not stop the work, and it does not wait until the end. You'll see it appear beside the run as a short note, with Rebel's reply to it.
+**Send.** Press **Enter** or click **Send**, exactly as you would when Rebel is idle. Your message — files included — reaches the task Rebel is already running, as soon as that task comes to a natural break. It does not stop the work, and it does not wait until the end. You'll see it appear beside the run as a short note, with Rebel's reply to it.
 
 **Stop.** Click **Stop** to end the current task. Your draft and any attached files stay in the composer, so you can send them the moment Rebel is free. Use this when you want a genuinely different direction rather than a course correction.
 
