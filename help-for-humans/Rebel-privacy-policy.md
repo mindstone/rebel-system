@@ -1,13 +1,14 @@
 ---
 description: "Privacy policy for the Rebel app (managed app and open-source build)"
-last_updated: "2026-06-19"
-version: "3.2"
+last_updated: "2026-08-16"
+version: "3.3"
 ---
 
 
 
 ## See Also
 
+- **[`what-data-can-leave-rebel.md`](what-data-can-leave-rebel.md)** - Plain-language inventory of every point where data can leave Rebel, and which of them you can switch off
 - **[`google-drive-desktop-local-sync.md`](google-drive-desktop-local-sync.md)** - Google Drive setup and file sharing
 - **[`GDPR-PII-tag-files.md`](../skills/system/gdpr-pii-tag-files/SKILL.md)** - GDPR compliance tagging for candidate/personal data
 - **[`permissions.md`](permissions.md)** - AI agent command execution permissions
@@ -19,10 +20,10 @@ This Privacy Policy explains how Mindstone Learning Limited ("Mindstone", "we", 
 
 Rebel is distributed in two builds — the **managed app** that Mindstone operates, and an **open-source build** that you install and run yourself. A few parts of this policy apply differently to each. Unless a section says otherwise, it describes the managed app; see "Open-Source / Self-Hosted Build" below for what differs.
 
-Last updated: 19 Jun 2026 | Version: 3.2 | Owners: CTO & COO
+Last updated: 16 Aug 2026 | Version: 3.3 | Owners: CTO & COO
 
 How Rebel Works
-Rebel is a desktop application that works with data on your local machine and connects to external services you authorise (for example, cloud storage, email, or collaboration tools). It uses AI to help you complete tasks against that data. Rebel itself does not store your content or conversations; it routes your instructions to the configured services and AI providers and, in the managed app, collects only limited telemetry to ensure reliability. (The open-source build collects no telemetry by default — see "Open-Source / Self-Hosted Build".)
+Rebel is a desktop application that works with data on your local machine and connects to external services you authorise (for example, cloud storage, email, or collaboration tools). It uses AI to help you complete tasks against that data. Rebel itself does not store your content or conversations; it routes your instructions to the configured services and AI providers and, in the managed app, collects only limited telemetry to ensure reliability. (The open-source build sends Mindstone anonymous usage data by default, which you can switch off, and no error reports at all — see "Open-Source / Self-Hosted Build".)
 
 Rebel operates on a local-first architecture: in desktop-only mode, your files, memory, and workspace remain under your control on your local device and chosen cloud storage (e.g. Google Drive, OneDrive). Mindstone does not host your content on its own servers in desktop-only mode.
 
@@ -45,11 +46,13 @@ Personal memory system - Your system prompt (AGENTS.md) and Space README.md file
 
 MCP access scope - When you authorise MCP tools, you grant access to entire services (all Gmail, all Slack messages, etc.) MCP connectors are integrations that allow Rebel to interact with external services on your behalf — for example, reading emails or creating calendar events. You choose which MCPs to connect in Settings → Connectors, and you can configure each connector to allow only specific actions — for example, permitting Rebel to draft emails but not send them. You can disconnect any connector at any time.
 
-Open-source build - If you run Rebel's open-source build, you bring your own AI and connector credentials, may use Rebel with no Mindstone account at all, and telemetry is off by default. Some data flows differ from the managed app. See "Open-Source / Self-Hosted Build".
+Open-source build - If you run Rebel's open-source build, you bring your own AI and connector credentials and may use Rebel with no Mindstone account at all. Telemetry differs rather than disappearing: the open build sends Mindstone anonymous usage data by default (a random per-install identifier, never your account — switchable off in one click) and sends no error reports. Some other data flows differ too. See "Open-Source / Self-Hosted Build".
+
+Telemetry is now yours to switch off - In the managed app, Settings → Privacy & Safety → Privacy & Data has two switches: Share usage analytics and Share crash & error reports. Both are on by default (including for existing users), both take effect immediately on that device, and — if you use Cloud Continuity, which is what carries the choice between your devices — your other devices follow when each next connects. They do not cover app updates, signing in, the AI providers you use, connectors you enable, or Mindstone's monitoring of its own cloud service. See "Your Telemetry Choices (Managed App)" below and what-data-can-leave-rebel.md for the full picture.
 
 Good news:
 
-In the managed app, Rebel's usage analytics and error monitoring include PII (email, IP address) but not your proprietary data (conversations, files, memories). In the open-source build, telemetry is off by default — see "Open-Source / Self-Hosted Build".
+In the managed app, Rebel's usage analytics and error monitoring include PII (email, IP address) but not your proprietary data (conversations, files, memories), and both can be switched off — see "Your Telemetry Choices (Managed App)". In the open-source build, what reaches Mindstone is anonymous usage data only (no error reports, no account identity), and that too can be switched off — see "Open-Source / Self-Hosted Build".
 
 Several common Rebel AI providers — including Anthropic and OpenAI — state that API data sent through their APIs is not used for model training. Always check the providers you actually enable.
 
@@ -68,11 +71,13 @@ Payment information: Mindstone invoices customers directly. We do not collect or
 Communications: emails or messages you send to Mindstone (e.g. support requests, feedback)
 
 2. Information Collected Automatically
-Usage telemetry: feature usage counts, session duration, performance metrics, and error reports, collected via RudderStack/PostHog (behavioural analytics) and Sentry (error monitoring). This may include your email address and IP address but is not intended to include your conversational content, files, or memories. This automatic collection applies to the managed app. The open-source build bundles no Mindstone analytics or error-monitoring credentials, and the behavioural-analytics client is not included in it, so it sends Mindstone no telemetry by default — see "Open-Source / Self-Hosted Build".
+Usage telemetry: feature usage counts, session duration, performance metrics, and error reports, collected via RudderStack/PostHog (behavioural analytics) and Sentry (error monitoring). This may include your email address and IP address but is not intended to include your conversational content, files, or memories. This automatic collection applies to the managed app, and you can switch both categories off in Settings — see "Your Telemetry Choices (Managed App)" below. The open-source build bundles no Mindstone analytics or error-monitoring credentials and does not include the behavioural-analytics client, so it sends Mindstone no error reports. It does send anonymous usage data by default, through a Mindstone-operated endpoint that holds the analytics credentials at its end; that data carries a random per-install identifier rather than your account, and you can switch it off — see "Open-Source / Self-Hosted Build".
+
+In-app surveys: the occasional in-product survey (for example the "how likely are you to recommend Rebel" question and its free-text comment) is delivered through the same behavioural-analytics channel, and is therefore covered by the Share usage analytics switch.
 
 Technical data: device type, operating system, app version
 
-Log data: error logs and crash reports. These are filtered by a strict allow-list before they leave your device — only safe operational detail (error type, technical metadata) is sent, never your conversational content, calendar entries, message text, or files. This technical and log data is collected as part of the managed app's analytics and error monitoring. In the open-source build, error monitoring is off by default (no Mindstone error-monitoring credentials are bundled), so this data is not sent to Mindstone — at launch, any error monitoring you enable with your own credentials goes to your own account, not Mindstone — see "Open-Source / Self-Hosted Build".
+Log data: error logs and crash reports. These are filtered by a strict allow-list before they leave your device — only safe operational detail (error type, technical metadata) is sent, never your conversational content, calendar entries, message text, or files. This technical and log data is collected as part of the managed app's analytics and error monitoring, and the automatic reporting of it is covered by the Share crash & error reports switch — see "Your Telemetry Choices (Managed App)". In the open-source build, error monitoring is off (no Mindstone error-monitoring credentials are bundled), so this data is not sent to Mindstone; any error monitoring you enable with your own credentials goes to your own account, not Mindstone — see "Open-Source / Self-Hosted Build".
 
 3. Information in Your Workspace (Not Collected by Mindstone)
 Your prompts, AI outputs, files, and memory stored in your Rebel workspace remain on your local device and chosen cloud storage. Mindstone does not access, store, or process this content on its own servers. However, this content may be transmitted to third-party AI providers and services you authorise — see sections below.
@@ -127,7 +132,7 @@ Legal obligation
 
 We do not use your data to train AI models. See "AI Training and Your Data" below.
 
-The telemetry-based purposes above (platform reliability, feature improvement) apply to the managed app. In the open-source build, telemetry is off by default; at launch any telemetry you enable goes to your own account rather than Mindstone, so Mindstone does not process it for these purposes — see "Open-Source / Self-Hosted Build".
+The telemetry-based purposes above (platform reliability, feature improvement) apply in full to the managed app. In the open-source build, the only telemetry Mindstone processes for these purposes is the anonymous usage data described under "Open-Source / Self-Hosted Build" — it carries no account identity and can be switched off. Error reports are not sent to Mindstone at all, and any analytics or error monitoring you wire up with your own credentials goes to your own account rather than Mindstone.
 
 AI Training and Your Data
 Mindstone and Rebel do not train AI models on your data.
@@ -144,6 +149,25 @@ If Mindstone ever introduces opt-in model improvement programmes in the future, 
 
 Enterprise customers: see "Enterprise Customers" section below for additional protections.
 
+Your Telemetry Choices (Managed App)
+The managed app gives you two switches, in Settings → Privacy & Safety → Privacy & Data:
+
+Share usage analytics — behavioural analytics via RudderStack/PostHog: which features you use and when, plus in-app surveys. In the managed app these events are linked to your Rebel account (including email and IP address); they are not anonymous. They do not include your conversations, files, or memories.
+
+Share crash & error reports — automatic crash and error reports via Sentry: the technical trace of what failed, application file paths, on some crashes a memory snapshot, plus app state and your account identity. Your conversational content, files, calendar entries and message text are filtered out before the report leaves your device; that filtering is applied carefully but no redaction system is perfect, which is part of why the switch exists.
+
+Defaults and grandfathering: both are on by default, including for people who were already using Rebel before these controls existed. Nothing was silently enabled or disabled for existing users.
+
+Effect and timing: turning either off takes effect on that device immediately — Rebel stops accepting new events, discards what it was holding, does not flush anything on shutdown or re-enable, and clears the identity attached to that channel. Turning crash reports off also deletes crash files already waiting on disk to be sent. Your choice then travels to your other devices through Cloud Continuity — it is stored with your settings on your own cloud instance, and each device applies it the next time it connects or is brought to the front, on connection rather than pushed instantly. If you do not use Cloud Continuity, nothing carries the choice between devices and each keeps the setting you made on it.
+
+Honest limits: a request already handed to the network cannot be recalled. For usage analytics specifically, the third-party analytics library holds undelivered events in a queue stored on the device; switching usage analytics off empties that queue and prevents it being written to again, so those events are discarded rather than delivered later or after an application restart. A session that starts with analytics already off loads no analytics client at all and sends nothing. Where two of your devices each change the setting while offline, the choice that survives is the one from whichever device reconnects last, not the one you made most recently — nothing in the synchronisation records when each choice was made. Reverting to a version of Rebel released before these controls existed will resume collection, because that version has no knowledge of your choice.
+
+What these switches do not cover: application update checks (always on, so security fixes reach everyone), signing in and organisation-membership checks (always on; they carry your identity, not your telemetry choices), data you send to the AI providers you have chosen, data exchanged with connectors you have enabled, meeting capture and transcription providers you have configured, Cloud Continuity synchronisation to your own cloud instance, and Mindstone's monitoring of its own cloud service (which is operator observability of the service, not automatic reporting from your device). Bug reports you choose to submit yourself continue to work while automatic crash reporting is off, because each one is a deliberate act; where a rating or feedback item cannot be delivered under your choice, Rebel tells you so rather than reporting success.
+
+Relationship to your rights: usage telemetry is processed on the basis of legitimate interests (see "Legal Bases for Processing"). These switches are the in-product way to exercise your right to object to that processing. You can also contact hello@mindstone.com; see "Your Rights".
+
+The full plain-language inventory of every point where data can leave Rebel — including everything the switches do not cover — is in what-data-can-leave-rebel.md, which is bundled with the app.
+
 Open-Source / Self-Hosted Build
 Rebel ships in two builds, and a few parts of this policy apply differently depending on which you run:
 
@@ -157,7 +181,7 @@ No Mindstone account required. The open build can run as a guest on your machine
 
 Bring your own credentials. Your AI provider keys, connector sign-ins, and any cloud or meeting-recording credentials are yours and are configured by you. Data you send to those services travels to the providers you choose, under their terms — Mindstone is not in that path.
 
-Telemetry is off by default (see "Telemetry in the open build" below).
+Telemetry differs from the managed app: anonymous usage data is on by default and can be switched off, and no error reports go to Mindstone (see "Telemetry in the open build" below).
 
 Meeting recording is bring-your-own. The open build does not use Mindstone's hosted meeting notetaker bot. Instead it records through your own Recall account, which you sign up for directly — you become Recall's customer, and Mindstone is not in that data path. See Section 8.
 
@@ -169,15 +193,21 @@ Telemetry in the open build:
 
 "Telemetry" here means usage analytics and error reports sent back to Mindstone — not the data that naturally flows to the AI providers, connectors, or cloud you choose to use.
 
-At launch, the open build sends Mindstone no telemetry. It ships with no Mindstone analytics or error-monitoring credentials built in, and the behavioural-analytics client is not included in the open build at all. With nothing to report to, the open build sends Mindstone no usage analytics or error reports by default. If you want usage and error data for your own deployment, you can wire up your own analytics and/or error-monitoring credentials, in which case the data goes to your own account(s) and this usage and error data is never routed to Mindstone.
+The open build sends Mindstone anonymous usage data by default, and no error reports.
+
+Error reports: none. The open build ships with no Mindstone error-monitoring credentials built in, and no crash or error reports are sent to Mindstone. If you want error monitoring for your own deployment, you can wire up your own credentials, in which case that data goes to your own account and is never routed to Mindstone.
+
+Anonymous usage data: on by default, and you can switch it off. The open build carries no analytics credentials of its own either; instead it posts to a Mindstone-operated endpoint that holds those credentials at its end and forwards the data to Mindstone's analytics provider. What is collected is a fixed allow-list of event names and non-identifying properties — categories, counts, durations, app version, operating system. What is not collected: your email address, a Mindstone account (the open build may not have one), your conversations, files, or memories. Each installation is identified only by a random identifier generated on that device, so the data is pseudonymous by design and is not linked to you.
+
+Lawful basis for this usage data is legitimate interests, with an in-product opt-out: Settings → Privacy & Safety → Privacy & Data has a single Share anonymous usage data switch, and turning it off stops collection on that installation immediately. If you configure your own analytics credentials, Rebel sends to your account instead and the Mindstone channel switches off for that installation — it is one or the other, never both.
 
 This telemetry statement is about usage analytics and error reports. It does not cover the optional contact details you may volunteer during setup — if you fill in the optional email in the "About you" step, that contact is sent to Mindstone on purpose, as a separate, consented channel (not analytics). See "Optional contact details in the open build" below.
 
-Planned (after launch): pseudonymous-by-default, opt-out telemetry via Mindstone. Mindstone intends to offer the open build a telemetry channel routed through a Mindstone backend service (rather than a built-in third-party analytics key). The current design is for this to be pseudonymous by default and opt-out — collecting limited product-usage signals to improve reliability and the product, with a setting to turn it off. This is not active at launch. Before it is enabled, this policy will be updated to describe exactly what is collected, the lawful basis, and how to opt out, and the relevant in-app controls and notices will be provided.
+A note on earlier versions of this policy: version 3.2 described this Mindstone-routed channel as planned and not yet active. It has since shipped, and the description above replaces that statement.
 
 Optional contact details in the open build:
 
-The open build's setup includes an optional "About you" step that can ask for your first name and email. This is the one thing the open build can send to Mindstone, and only if you choose it — it is separate from telemetry, which stays off.
+The open build's setup includes an optional "About you" step that can ask for your first name and email. Alongside the anonymous usage data described above, this is one of two other things the open build sends to Mindstone — the other is a bug report you submit yourself, described next — and it is sent only if you choose it: a separate channel from telemetry, and unlike the anonymous usage data it identifies you.
 
 What is sent, and when: if (and only if) you fill in the optional email, that email — plus your first name, if you gave one, and minimal source metadata (that it came from open-build onboarding, plus app version and platform) — is sent to Mindstone. Leave the email blank and nothing is sent.
 
@@ -186,6 +216,16 @@ What it is used for: keeping in touch with you about the open build. It does not
 Lawful basis: consent. Submitting the optional details, with this disclosure shown at the point of entry, is how you give that consent. Providing them is entirely voluntary, and the open build works exactly the same if you skip the step.
 
 Retention and deletion: Mindstone keeps a contact you volunteer this way until you ask for it to be deleted. You can request deletion at any time using the contact route in "Your Rights" below (hello@mindstone.com); Mindstone will delete the contact on request.
+
+Bug reports you submit in the open build:
+
+This is the second channel, alongside the optional contact details above, through which the open build sends something to Mindstone beyond the anonymous usage data. If you use Feedback & Bugs to report a bug, that report is sent to Mindstone so the team can look into it.
+
+What is sent: what you wrote (your description, plus any steps to reproduce and expected behaviour you added), the first name and email you gave Rebel during setup if you provided them, and your app version and platform. Extra diagnostics — a screenshot, a redacted diagnostics summary, and filtered application logs — are included only if you opt in in the report dialog, which says so at the point of submission. A report scoped to a conversation includes that conversation's transcript only if you separately opt in to attaching it; that transcript can contain your own messages, Rebel's replies, and text from files you attached, which is what opting in consents to.
+
+When it is sent: only when you submit a report. Nothing here is sent automatically, and reports submitted before this channel was switched on stayed on your device and are not sent retroactively. This channel is unrelated to automatic error reporting, which the open build does not send to Mindstone at all.
+
+Lawful basis: responding to support requests (see "Legal Bases for Processing"). The optional diagnostics, screenshot, and conversation transcript are included on the basis of your consent, given by opting in at the point of submission.
 
 Privacy Layers
 Rebel involves multiple privacy boundaries. Your data flows through several systems:
@@ -237,7 +277,7 @@ Risk level: Low in desktop-only mode - Limited telemetry only, no content storag
 
 Mode caveat: If you enable Cloud Continuity, this data handling changes and selected Rebel data is stored on your cloud instance. See Section 7.
 
-Build caveat: In the open-source build, the telemetry described below is off by default and no Mindstone analytics keys are bundled. See "Open-Source / Self-Hosted Build".
+Build caveat: In the open-source build, no Mindstone analytics or error-monitoring keys are bundled. The error monitoring described below does not reach Mindstone at all; usage data reaches it only through the anonymous, opt-out channel described in "Open-Source / Self-Hosted Build", which carries no account identity.
 
 What Rebel does:
 
@@ -245,7 +285,7 @@ Pass data to the 3rd-party AI providers you choose (for example Anthropic, OpenA
 
 Connect to external services (Google Workspace, Slack, Notion, etc.) via built-in connectors that keep OAuth tokens local on your device in desktop-only mode (in Cloud Continuity mode, tokens are relayed to your cloud instance — see Section 7)
 
-Tracks usage telemetry (e.g., feature usage counts, performance/error metrics) via RudderStack/PostHog (behavioural analytics) and Sentry (error monitoring) to keep the platform reliable. This telemetry includes PII such as email address and IP address. Mindstone makes a best effort to exclude and redact proprietary user data (conversational content, memories, files, API keys, etc.) from monitoring, analytics, and logs, though no redaction system is perfect. This describes the managed app; in the open-source build this telemetry is off by default and no Mindstone analytics keys are bundled (see "Open-Source / Self-Hosted Build").
+Tracks usage telemetry (e.g., feature usage counts, performance/error metrics) via RudderStack/PostHog (behavioural analytics) and Sentry (error monitoring) to keep the platform reliable. This telemetry includes PII such as email address and IP address. Mindstone makes a best effort to exclude and redact proprietary user data (conversational content, memories, files, API keys, etc.) from monitoring, analytics, and logs, though no redaction system is perfect. In the managed app both categories can be switched off in Settings → Privacy & Safety → Privacy & Data (see "Your Telemetry Choices (Managed App)"); in the open-source build no Mindstone analytics or error-monitoring keys are bundled, so error monitoring does not reach Mindstone and the usage data that does is the anonymous, opt-out channel — a random per-install identifier, no email address and no account (see "Open-Source / Self-Hosted Build").
 
 Produces aggregated usage statistics for reporting (no content, no user‑identifiable transcripts)
 
@@ -348,7 +388,7 @@ ElevenLabs Scribe - Audio is sent to ElevenLabs for transcription.
 
 ElevenLabs Privacy Policy: https://elevenlabs.io/privacy
 
-Local transcription provides transcription only. Text-to-speech is not available from the local transcription models themselves — read-aloud and other supported speech use a supported cloud voice provider.
+Local transcription provides transcription only — the on-device models transcribe, they do not speak, so read-aloud never runs on your device. One voice-provider setting covers both directions, so your transcription choice decides this one too: with a local transcription model selected, read-aloud is unavailable and nothing is sent; with a speech-capable cloud voice provider selected, the passage you asked Rebel to read is sent to that provider.
 
 Additional considerations
 
@@ -442,7 +482,7 @@ Automatic updates: The cloud service periodically checks for software updates an
 
 Important note on in-app Privacy & Data statements:
 
-Privacy & Data statements in the Safety tab (for example, "No conversation storage" and "Secrets stay local") apply to desktop-only mode. When Cloud Continuity is enabled, data is stored on your cloud instance. In the open-source build, the same Safety-tab statements additionally reflect that telemetry is off — nothing is sent to Mindstone unless you add your own credentials, with one consented exception: if you fill in the optional email during the "About you" setup step, that contact is sent to Mindstone on purpose (see "Optional contact details in the open build").
+Privacy & Data statements in the Safety tab (for example, "No conversation storage" and "Secrets stay local") apply to desktop-only mode. When Cloud Continuity is enabled, data is stored on your cloud instance. The Share crash & error reports switch in that same section covers the automatic reports the Rebel app sends from your device; it does not cover Mindstone's monitoring of the cloud service itself, which continues under Mindstone's operation of that service. In the open-source build, that same Safety-tab section shows a single Share anonymous usage data switch, on by default: anonymous usage data goes to Mindstone until you switch it off, no error reports are sent to Mindstone at all, and the one other thing that can reach Mindstone is consented — if you fill in the optional email during the "About you" setup step, that contact is sent on purpose (see "Optional contact details in the open build").
 
 8. Meeting Notetaker (Optional)
 Risk level: Medium - Meeting transcription uses dedicated cloud services
@@ -530,7 +570,7 @@ If you enable Cloud Continuity, your data is stored on your dedicated cloud inst
 
 Usage telemetry used to ensure reliability and generate aggregated usage reports is retained for the periods above.
 
-These retention periods apply to data Mindstone actually collects (the managed app). In the open-source build, Mindstone collects no telemetry by default, so there is nothing of that kind for Mindstone to retain at launch. The one exception is a contact you choose to volunteer: if you fill in the optional email during the "About you" setup step, Mindstone keeps that contact until you ask for it to be deleted (see "Optional contact details in the open build"). The planned post-launch Mindstone telemetry channel (pseudonymous, opt-out, not active at launch) would have its retention described when it is introduced — see "Open-Source / Self-Hosted Build".
+These retention periods apply to data Mindstone actually collects. In the open-source build, Mindstone collects no error reports, so there is nothing of that kind to retain; the anonymous usage data the open build sends by default is retained under the usage-telemetry periods above, and because it carries only a random per-install identifier and no account, it cannot be tied back to an individual. A contact you choose to volunteer is separate: if you fill in the optional email during the "About you" setup step, Mindstone keeps that contact until you ask for it to be deleted (see "Optional contact details in the open build").
 
 Retention periods for third‑party providers (cloud storage, MCP connectors, AI APIs) are governed by their policies.
 
@@ -543,7 +583,7 @@ Data Processing Agreement (DPA): A DPA is available upon request for enterprise 
 
 No training on enterprise data: Mindstone and Rebel do not use enterprise customer data to train AI models. Your organisation's data is never used for model improvement.
 
-Subprocessors: Our key subprocessors include Anthropic (AI processing), OpenAI (AI processing and voice), RudderStack (analytics), PostHog (analytics), Sentry (error monitoring), Cloudflare (meeting bot backend and OAuth callback handling), and Recall.ai (meeting capture and transcription). A full subprocessor list is available upon request. This list reflects the managed app. The open-source build bundles no Mindstone analytics or error monitoring (RudderStack, PostHog, and Sentry are not used by default), connects only to the providers you configure, and uses your own Recall account for meeting recording rather than Mindstone's hosted bot — so for a self-hosted open build these are your subprocessors, chosen and contracted by you, not Mindstone's. A planned post-launch Mindstone telemetry backend for the open build (pseudonymous, opt-out, not active at launch) would add Mindstone as a recipient for that telemetry.
+Subprocessors: Our key subprocessors include Anthropic (AI processing), OpenAI (AI processing and voice), RudderStack (analytics), PostHog (analytics), Sentry (error monitoring), Cloudflare (meeting bot backend and OAuth callback handling), and Recall.ai (meeting capture and transcription). A full subprocessor list is available upon request. This list reflects the managed app. The open-source build bundles no Mindstone analytics or error-monitoring credentials (Sentry is not used for Mindstone-bound reporting), connects only to the providers you configure, and uses your own Recall account for meeting recording rather than Mindstone's hosted bot — so for a self-hosted open build those are your subprocessors, chosen and contracted by you, not Mindstone's. The exception is the anonymous usage data channel, which is on by default: it routes through a Mindstone-operated endpoint to Mindstone's analytics providers, making them recipients of that anonymous, per-install-identified data unless you switch the channel off.
 
 Workspace admin access: Rebel workspace administrators within your organisation may have access to shared Spaces in accordance with your organisation's access controls. The Chief-of-Staff Space is private to individual users and not accessible to administrators via Rebel.
 
@@ -562,13 +602,17 @@ Q: Is client data safe if I use it in AI prompts? A: Many providers people use w
 
 Q: What's the biggest privacy risk? A: The main risk is shared cloud storage — colleagues can read files you create in shared locations. Always be mindful of what you store in shared Spaces.
 
-Q: Does Rebel sell my data? A: No. Mindstone does not sell your personal data. In the managed app, usage telemetry is collected for reliability and aggregated reporting only; in the open-source build, Mindstone receives no telemetry by default.
+Q: Does Rebel sell my data? A: No. Mindstone does not sell your personal data. In the managed app, usage telemetry is collected for reliability and aggregated reporting only; in the open-source build, Mindstone receives anonymous usage data by default — used for the same purposes, tied to no account, and switchable off.
 
 Q: What happens to my voice recordings? A: Audio sent to cloud transcription providers such as OpenAI Whisper or ElevenLabs Scribe is processed for transcription. Text sent to a cloud TTS provider is processed for speech generation. Rebel doesn't store the audio or generated speech. For maximum privacy, use local transcription such as Moonshine (the desktop default) or Parakeet so audio stays on your device. Review your chosen providers' retention policies for the exact details.
 
-Q: What telemetry does Rebel collect? A: In the managed app, Rebel collects usage telemetry (feature usage counts, performance metrics, error reports) via RudderStack/PostHog and Sentry, which may include PII such as email address and IP address. It is not intended to include your conversational content, memories, or files. Mindstone applies automated redaction of sensitive information in monitoring and logs, though no redaction system is perfect. In the open-source build, telemetry is off by default — no Mindstone analytics keys are bundled and the analytics client isn't included — so nothing is sent to Mindstone by default; if you wire up your own credentials, that data goes to your own account, not Mindstone. A pseudonymous, opt-out telemetry channel routed through Mindstone is planned for the open build after launch; it is not active now, and this policy will be updated before it is. See "Open-Source / Self-Hosted Build".
+Q: Can I turn telemetry off? A: Yes. In the managed app, Settings → Privacy & Safety → Privacy & Data has two switches — Share usage analytics and Share crash & error reports. Both are on by default, both take effect on that device immediately, and if you use Cloud Continuity your choice reaches your other devices when each next connects (without it, each device keeps its own setting). The open build has a single Share anonymous usage data switch in the same place, also on by default. They do not cover app update checks, signing in, the AI providers you use, connectors you enable, meeting transcription providers you configure, Cloud Continuity sync, or Mindstone's monitoring of its own cloud service. See "Your Telemetry Choices (Managed App)" and what-data-can-leave-rebel.md.
 
-Q: I'm running the open-source build — what's different? A: You bring your own AI and connector credentials, you can use Rebel with no Mindstone account, telemetry is off by default, and meeting recording uses your own Recall account rather than Mindstone's hosted bot. If you self-host, Mindstone's position is that you (or your organisation) act as the data controller and Mindstone is the software provider. See "Open-Source / Self-Hosted Build".
+Q: If I turn off crash reports, can I still report a bug? A: Yes. Reporting a bug yourself is a deliberate act each time, so it keeps working — use the Feedback button at the top of the window, or Feedback & bugs in the Help menu. What stops is the automatic reporting that happens without you asking. If you would rather send nothing at all, simply don't file one.
+
+Q: What telemetry does Rebel collect? A: In the managed app, Rebel collects usage telemetry (feature usage counts, performance metrics, error reports) via RudderStack/PostHog and Sentry, which may include PII such as email address and IP address. It is not intended to include your conversational content, memories, or files. Mindstone applies automated redaction of sensitive information in monitoring and logs, though no redaction system is perfect. You can switch both categories off — see "Your Telemetry Choices (Managed App)". In the open-source build, no Mindstone analytics or error-monitoring keys are bundled and the analytics client isn't included, so no error reports reach Mindstone; anonymous usage data does, by default, through a Mindstone-operated endpoint — a fixed allow-list of event names and non-identifying properties under a random per-install identifier, with a single switch to turn it off. If you wire up your own credentials, that data goes to your own account instead. See "Open-Source / Self-Hosted Build".
+
+Q: I'm running the open-source build — what's different? A: You bring your own AI and connector credentials, you can use Rebel with no Mindstone account, no error reports go to Mindstone while anonymous usage data does by default (one switch turns it off), and meeting recording uses your own Recall account rather than Mindstone's hosted bot. If you self-host, Mindstone's position is that you (or your organisation) act as the data controller and Mindstone is the software provider. See "Open-Source / Self-Hosted Build".
 
 Q: Does Mindstone and Rebel use my data to train AI models? A: No. Mindstone and Rebel do not train AI models on your data. See "AI Training and Your Data" above.
 
@@ -635,7 +679,7 @@ Mindstone is ISO 27001 compliant.
 In the event of a personal data breach, we will notify affected users and, where required, the relevant supervisory authority within 72 hours of becoming aware of the breach.
 
 International Transfers
-Your personal data may be transferred to and processed in countries outside your own, including the United States, where our AI providers and analytics services operate. Where such transfers involve data from the European Economic Area (EEA) or the United Kingdom, we rely on appropriate transfer mechanisms, including Standard Contractual Clauses (SCCs) approved by the European Commission and the UK International Data Transfer Addendum. Our key third-party providers maintain their own transfer safeguards — see their respective privacy policies. In the managed app, this includes Mindstone's analytics and error-monitoring providers. In the open-source build, the AI providers and connectors are the ones you choose (your transfers, under their terms), and Mindstone's analytics are off by default — so Mindstone does not receive or transfer open-build telemetry at launch.
+Your personal data may be transferred to and processed in countries outside your own, including the United States, where our AI providers and analytics services operate. Where such transfers involve data from the European Economic Area (EEA) or the United Kingdom, we rely on appropriate transfer mechanisms, including Standard Contractual Clauses (SCCs) approved by the European Commission and the UK International Data Transfer Addendum. Our key third-party providers maintain their own transfer safeguards — see their respective privacy policies. In the managed app, this includes Mindstone's analytics and error-monitoring providers. In the open-source build, the AI providers and connectors are the ones you choose (your transfers, under their terms); the anonymous usage data the open build sends by default is transferred to Mindstone and its analytics providers under the same safeguards described above, until you switch that channel off.
 
 Your Rights
 Depending on your location, you may have the following rights regarding your personal data:
@@ -701,9 +745,11 @@ Compliance with legal obligations
 
 Legal obligation (Article 6(1)(c))
 
+Where we rely on legitimate interests for usage telemetry, the managed app provides an in-product way to exercise your right to object: the Share usage analytics and Share crash & error reports switches in Settings → Privacy & Safety → Privacy & Data. See "Your Telemetry Choices (Managed App)" for what they cover, what they do not, and their honest limits.
+
 The data controller for users in the EEA and UK is: Mindstone Learning Limited, 85 Great Portland Street, First Floor, London, W1W 7LT. Contact: hello@mindstone.com.
 
-For the open-source build, the telemetry basis differs from the managed app: at launch the open build collects no telemetry by default. The planned post-launch pseudonymous, opt-out telemetry channel routed through Mindstone (not active at launch) will have its lawful basis stated in this policy before that channel is enabled — see "Open-Source / Self-Hosted Build".
+For the open-source build, the telemetry basis differs from the managed app: no error reports reach Mindstone at all, and the anonymous usage data the open build sends by default is processed on the basis of legitimate interests. The in-product way to exercise your right to object is the single Share anonymous usage data switch in Settings → Privacy & Safety → Privacy & Data. Because that data carries only a random per-install identifier and no account, Mindstone cannot connect it to you — see "Open-Source / Self-Hosted Build".
 
 No Data Protection Officer (DPO) is required.
 
@@ -718,7 +764,7 @@ Internet or other electronic network activity (usage telemetry, feature interact
 
 Commercial information (payment and subscription records)
 
-These categories reflect the managed app. In the open-source build, Mindstone does not necessarily collect any of them — for example, if you use Rebel with no Mindstone account and the planned post-launch Mindstone telemetry channel is not in effect (it is not active at launch), Mindstone collects no identifiers, network-activity, or commercial information from you. The one exception is the optional contact details (first name and email) you may volunteer during open-build setup, which are identifiers collected on the basis of your consent — see "Optional contact details in the open build" under "Open-Source / Self-Hosted Build".
+These categories reflect the managed app. In the open-source build, Mindstone does not necessarily collect any of them — for example, if you use Rebel with no Mindstone account and switch off the anonymous usage data channel, Mindstone collects no identifiers, network-activity, or commercial information from you. Left on (its default), that channel gives Mindstone network-activity information carrying a random per-install identifier and no account. The one exception is the optional contact details (first name and email) you may volunteer during open-build setup, which are identifiers collected on the basis of your consent — see "Optional contact details in the open build" under "Open-Source / Self-Hosted Build".
 
 We do not sell your personal information. We do not share your personal information for cross-context behavioural advertising.
 
@@ -741,6 +787,10 @@ We do not knowingly sell or share personal information of residents under 16 yea
 Changes to This Policy
 We may update this policy to reflect operational, legal, or regulatory changes. We will indicate the date of the latest update at the top of this page. For material changes, we will make reasonable efforts to notify you (for example, by email or by displaying a prominent notice in the Rebel app).
 
+Material change — Version 3.3 (16 Aug 2026): Adds a "Your Telemetry Choices (Managed App)" section describing the two new in-product switches — Share usage analytics and Share crash & error reports — including their default-on/grandfathered behaviour, their immediate effect on the device and connection-driven propagation to your other devices, the honest limits (requests already dispatched, and reverting to a pre-control version), what they deliberately do not cover (app updates, sign-in, AI providers, connectors, meeting transcription, Cloud Continuity sync, and Mindstone's monitoring of its own cloud service), and their relationship to the right to object where processing rests on legitimate interests. Clarifies that in-app surveys travel on the behavioural-analytics channel and are covered by the usage switch, that user-submitted bug reports continue to work while automatic crash reporting is off, and that undeliverable feedback is reported honestly rather than as success. Adds a cross-reference to what-data-can-leave-rebel.md, the bundled plain-language inventory of every egress point.
+
+Also corrects four statements that had become inaccurate. First, the open-build telemetry section: version 3.2 described a Mindstone-routed telemetry channel as planned and not active, and stated that the open build sends Mindstone no telemetry. That channel has since shipped, so this version states what actually happens — anonymous usage data on by default through a Mindstone-operated endpoint, carrying a random per-install identifier and no account, processed on the basis of legitimate interests with a single in-product switch to turn it off; error reports still do not reach Mindstone at all. Second, the mechanism by which a telemetry choice reaches a user's other devices: it travels with settings through Cloud Continuity to the user's own cloud instance, not through sign-in, so devices not using Cloud Continuity each keep their own setting. Third, the open-build section described the optional contact details as the only thing besides anonymous usage data that the open build sends to Mindstone; a bug report the user submits is a second such channel, so this version adds "Bug reports you submit in the open build", setting out what a report contains, that extra diagnostics and any conversation transcript are opt-in, and that nothing is sent unless the user submits a report. Fourth, the voice section said that read-aloud and other supported speech use a cloud voice provider; because a single setting chooses the provider for both transcription and speech, and the on-device transcription models do not speak, selecting one of them leaves read-aloud unavailable rather than routing it to a cloud provider, and this version says so. All four corrections describe existing behaviour; none changes what Rebel does.
+
 Material change — Version 3.2 (19 Jun 2026): Adds an "Open-Source / Self-Hosted Build" section and clarifies that, in the open-source build, telemetry is off by default, users bring their own credentials, a Mindstone account may not be required, and meeting recording uses the user's own Recall account; and sets out Mindstone's position that for a self-hosted open build the user or their organisation acts as the data controller and Mindstone is the software provider. It also describes the open build's optional "About you" setup step: if a user chooses to provide their email, that email (and first name, if given) is sent to Mindstone as a consented contact to keep in touch about the open build — separate from telemetry, on the lawful basis of consent, retained until the user requests deletion. This part of the policy is a draft pending broader legal sign-off for the open-build launch.
 
 Contact Us
@@ -750,6 +800,8 @@ Data controller: Mindstone Learning Limited 85 Great Portland Street, First Floo
 
 Further Reading
 Platform-specific details:
+
+what-data-can-leave-rebel.md - Every point where data can leave Rebel, in plain language, and which ones you can switch off
 
 permissions.md - What the AI can/cannot do automatically
 
