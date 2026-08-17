@@ -1,6 +1,6 @@
 ---
 description: "How to use Rebel Actions to save tasks for later and have Rebel execute them on demand."
-last_updated: "2026-07-06"
+last_updated: "2026-08-17"
 ---
 
 # Rebel Actions
@@ -12,7 +12,7 @@ Rebel Actions is your "later list" — a place to save actionable items and have
 ## See Also
 
 - [Scratchpad](library://rebel-system/help-for-humans/scratchpad.md) — Quick-capture notes (lives in the Actions tab)
-- [Keyboard shortcuts](library://rebel-system/help-for-humans/keyboard-shortcuts-and-hotkeys.md) — Quick access with ⌘/Ctrl+I, queue messages with Alt/Option+Enter
+- [Keyboard shortcuts](library://rebel-system/help-for-humans/keyboard-shortcuts-and-hotkeys.md) — Quick access with ⌘/Ctrl+I; Enter sends even while Rebel is working
 
 ## How It Works
 
@@ -137,27 +137,35 @@ To archive: Click the archive button on any pending item.
 To restore: Open the Archived section and click restore to move an item back to Pending.
 
 
-## Message Queue
+## Sending While Rebel Is Working
 
-When Rebel is busy working on something and you want to send another message, you have options:
+When Rebel is mid-task and you want to say something, there are two options and no third.
 
-**Queue it:** Press **Enter** or click **Queue** to line up your message. It'll be sent automatically when Rebel finishes. (Alt/Option+Enter also works.)
+**Send.** Press **Enter** or click **Send**, exactly as you would when Rebel is idle. Your message — files included — reaches the task Rebel is already running, usually within a few seconds. It does not stop the work, and it does not wait until the end. You'll see it appear beside the run as a short note, with Rebel's reply to it.
 
-**Send now:** Click **Send Now** to interrupt Rebel and send immediately. The current task stops, and your new message becomes the next thing Rebel works on.
+**Stop.** Click **Stop** to end the current task. Your draft and any attached files stay in the composer, so you can send them the moment Rebel is free. Use this when you want a genuinely different direction rather than a course correction.
 
-**Clear the queue:** If you change your mind, remove individual messages or clear all queued messages from the tray above the composer.
+That's it — no queueing to think about, and no separate "send now".
 
-This is handy when you're on a roll and want to chain multiple requests without waiting.
+### What if Rebel finishes before my message lands?
 
-### What happens to the work in progress when you Send Now?
+Then it becomes your next message and runs on its own, files and all. Rebel tells you what happened rather than guessing: **"Missed this run — sends as your next message."** If Rebel picked it up but couldn't confirm it in time, you'll see **"Couldn't confirm Rebel picked this up"** with a **Try again** that puts your text and files back in the composer — deliberately honest, because "couldn't confirm" is not the same as "didn't see it".
 
-Short version: it isn't thrown away, and Rebel doesn't literally rewind — it stops, keeps what it had so far, and carries on from there with your new instruction.
+One caveat worth knowing: attached files are held only while the app is running. If you quit and reopen before a message goes out, Rebel restores your text and asks you to reattach the files rather than pretending it still has them.
 
-- **Nothing already done is lost.** Whatever Rebel had written or worked out up to the moment you interrupted stays in the conversation. You don't start from a blank slate.
-- **It's steering, not a fresh start.** Your new message isn't a brand-new, amnesiac request. Rebel can see everything it was doing and picks up with your new instruction in mind — so Send Now is the right tool for "actually, do it this way instead" or "also keep in mind X".
-- **One thing to watch: interrupting mid-action.** If Rebel was part-way through an *action* with real-world effects — sending an email, editing a file, posting a message — interrupting can stop it partway. That step might not finish, or it might have already gone through. If Rebel is mid-action on something you care about, prefer **Queue** so it finishes cleanly first, or interrupt and then ask Rebel to double-check what actually happened before moving on.
+### What happens to the work in progress when you Stop?
 
-**Rule of thumb:** Use **Send Now** to redirect or add information; use **Queue** when Rebel is mid-task on something you'd rather not leave half-done.
+Short version: it isn't thrown away, and Rebel doesn't rewind — it stops, keeps what it had so far, and carries on from there with your next instruction.
+
+- **Nothing already done is lost.** Whatever Rebel had written or worked out up to the moment you stopped stays in the conversation. You don't start from a blank slate.
+- **It's steering, not a fresh start.** Your next message isn't a brand-new, amnesiac request. Rebel can see everything it was doing and picks up with your new instruction in mind.
+- **One thing to watch: stopping mid-action.** If Rebel was part-way through an *action* with real-world effects — sending an email, editing a file, posting a message — stopping can leave it partway. That step might not finish, or it might have already gone through. If Rebel is mid-action on something you care about, prefer **Send** so it finishes cleanly, or stop and then ask Rebel to double-check what actually happened.
+
+**Rule of thumb:** **Send** to redirect or add information; **Stop** only when you want the current work to end.
+
+### Messages waiting on another conversation
+
+If you send to a conversation Rebel is busy with while you're looking at a different one, the message waits and goes out when that task finishes. You'll see a line above the composer there — *"1 message waiting. Sends when this task finishes."* — and a small clock on that conversation in the sidebar, so nothing is quietly parked out of sight. Waiting messages can't be taken back; if one can't be delivered at all, Rebel says so and offers to put it back in your composer.
 
 
 ## Example Workflow

@@ -15,7 +15,7 @@ Rebel runs as a native desktop application on macOS, Windows, and Linux. Under t
 | Process | Role | What it owns |
 |---------|------|-------------|
 | **Main process** | The engine room | Agent orchestration, tool execution, file operations, voice API calls, MCP server management, settings persistence |
-| **Renderer** | The interface | React UI, conversation state, message queue, voice recording, keyboard shortcuts |
+| **Renderer** | The interface | React UI, conversation state, deferred-message delivery, voice recording, keyboard shortcuts |
 | **Preload bridge** | The translator | A typed API surface that connects the renderer to the main process securely |
 
 This separation is by design. The renderer never touches the filesystem or network directly — everything goes through the preload bridge, which enforces a strict contract between what you see and what happens behind the scenes.
@@ -48,14 +48,14 @@ When you send a message, here's the sequence:
 4. **Tools execute.** If the model wants to use a tool (read a file, search your email, check your calendar), the request goes through Rebel's safety layer before execution. More on that below.
 5. **The renderer updates.** Your conversation view updates in real time as events arrive.
 
-### Message Queue
+### Sending While a Turn Is Running
 
-You don't have to wait for Rebel to finish before sending another message. The renderer maintains a message queue:
+You don't have to wait for Rebel to finish before sending another message. There are two paths, and they work differently under the hood:
 
-- **Queue mode** (default while Rebel is working): your message waits in line and gets processed when the current turn finishes.
-- **Interrupt mode**: stops the current turn and processes your message immediately.
+- **Send** (the default while Rebel is working): your message and its files are admitted to the running turn and handed to the model at its next request boundary — the same turn, steered, rather than a new one. If the turn ends before that happens, the message is delivered as your next message with its files intact.
+- **Stop**: ends the current turn. Your draft stays in the composer; sending again starts a fresh turn with the full conversation as context.
 
-This is purely a frontend concern — the main process sees each queued message as a normal turn, and the AI model maintains context continuity.
+Messages aimed at a conversation that's busy while you're looking at another one are held by the renderer and delivered when that conversation is free. Held messages live in memory for the app's session, so files attached to one don't survive a restart — Rebel tells you when that happens rather than sending the text alone.
 
 ### Session Continuity
 
