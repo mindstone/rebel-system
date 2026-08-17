@@ -4,7 +4,7 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ---
 
-## v0.4.61 — Aug 11-16, 2026 (unreleased)
+## v0.4.61 — Aug 11-17, 2026 (unreleased)
 
 ### Improvements
 
@@ -29,6 +29,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+<!-- detail: Live now keeps behind-the-scenes instructions out of the spoken conversation, answers facts already present in your profile without pretending it checked again, and repeats its earlier answers without dropping names, dates or figures. If you interrupt, the transcript marks the fragment as cut off; if work needs an answer from you, Live asks aloud; and if finished work arrives after you leave Live, it stays in the conversation and Rebel sends a notification. -->
+- **Live has stopped reading its own stage directions out loud** — It now talks about the work like a person, answers what your profile already says without a ceremonial re-check, and repeats the whole answer instead of quietly losing the date. Interrupt it and the transcript says so; if the work needs you, Rebel asks aloud; if an answer arrives after you leave Live, it waits in the conversation and lets you know — the backstage notes stay backstage.
 <!-- detail: Opening Live now has a dedicated connecting state. Recovery appears only after a first connection fails or an established connection drops, so initial entry no longer looks like a reconnection problem. -->
 - **Opening Live no longer starts with a reconnect card** — The first connection now simply says **Connecting**. **Reconnecting** is saved for a Live conversation that really was connected and then dropped; if the first attempt fails, **Try again** appears then. One less recovery from a problem that hadn't happened.
 <!-- detail: The Shared memory suggestions switch, announced in an earlier release, is hidden for now. It only ever governed a feature that has not shipped, so having it there promised something Rebel could not yet do. Nothing about your settings or Rebel's behaviour changes, and everything the switch protected is still enforced. If you had already turned it on, the switch stays visible to you so you can turn it back off. It returns for everyone when there is a feature behind it. -->
