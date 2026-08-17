@@ -8,6 +8,9 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Improvements
 
+<!-- detail: When automatic meeting joining fails for every joinable meeting in a cycle, the meeting strip now says so beside the meeting it concerns and offers settings as the way out. Previously that failure existed only in logs and error monitoring, so the strip showed an ordinary upcoming meeting while no bot was ever sent and the user found out when the notes never arrived. The warning reappears on each failing cycle and clears itself as soon as a meeting is joined successfully. It is deliberately more prominent than the recording-service warning, which stays a small dot because notes may still arrive in that case. Cycles where nothing was joinable, or where auto-join is switched off, stay silent. Keep public copy non-technical — no broadcast/ledger/cycle/health-warning internals, and do not promise that opening settings always fixes it. -->
+- **Rebel now admits it when it couldn't get into your meeting** — When automatic joining failed, Rebel used to fail quietly: the meeting sat in the corner looking perfectly composed, and you found out only when the notes never turned up. It now says so on the meeting itself and points you at [Settings → Meetings](rebel://settings/meetings) to check your setup. It stops saying so the moment joining works again. Bad news, at least delivered on time.
+
 <!-- detail: Dense account rows in Settings used to ellipsize labels to identical stubs when accounts shared an email prefix. The label now trims the part before the @ first so the domain stays visible, and hovering shows the full address. -->
 - **Connector accounts you can tell apart at a glance** — If you connected two accounts that share an email prefix, Settings used to trim both labels down to the same few letters, leaving you to guess which was which. Labels now keep the part after the @ visible, and hovering shows the whole address. The guessing game, retired.
 
