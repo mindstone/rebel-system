@@ -8,6 +8,9 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Improvements
 
+<!-- detail: Cloud-backed Spaces that are temporarily unavailable no longer cover the top actions. The notice now sits below navigation and can be dismissed to a small reminder that keeps the degraded state visible until recovery. -->
+- **Cloud-space warnings now know their place** — If a cloud-backed Space temporarily stops cooperating, its warning now sits below the navigation instead of covering the actions you came to use. Dismiss it to a small reminder while Rebel waits for the drive to recover. The warning has learned both manners and restraint.
+
 <!-- detail: The Workshop is an experimental, opt-in live-turn view. It presents the same canonical conversation events as a small animated scene with Rebel, helpers, and connected-tool stations; it does not change agent operation or the saved transcript. The switch is off by default at Settings → System → The Workshop → Show the workshop while Rebel works. It takes effect from the next turn boundary, then returns to the canonical transcript and final answer when the scene finishes or the user closes it. -->
 - **Rebel has acquired a very small workshop** — Turn on **Settings → System → The Workshop → Show the workshop while Rebel works** to watch a new turn unfold as an animated room: Rebel hands pieces of the work to helpers, they fan out to stations for your connected tools, and the finished answer still lands in the conversation. It is experimental and off by default; the work and saved conversation stay exactly the same. Same colleagues, smaller furniture.
 
