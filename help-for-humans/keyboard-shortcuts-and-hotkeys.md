@@ -19,13 +19,12 @@ Use keyboard shortcuts to work more efficiently with Mindstone Rebel.
 | ⌘/Ctrl+I | Open Actions |
 | ⌘/Ctrl+Shift+N | Open Scratchpad (quick capture) |
 | ⌘/Ctrl+Enter | Archive conversation (when input empty and idle) |
-| Enter | Send message (queues automatically when agent is busy) |
+| Enter | Send message — while Rebel is working, this reaches the task it's already running |
 | Enter | Stop recording (when mic is active) |
-| Alt/Option+Enter | Queues your message while the agent is busy (same as Enter). To send immediately and interrupt, use the **Send now** button. |
 | Ctrl+Alt+Space | Voice activation with screenshot (customizable) |
 | Press voice hotkey again | Send voice memo with screenshot |
 | Escape | Exit voice mode |
-| Escape Escape | Stop running turn (double-tap quickly) |
+| Escape Escape | Stop the running task (double-tap quickly), then send again when you're ready |
 | ⌘/Ctrl+F | Find in page (search within conversations) |
 | ⌘/Ctrl+G | Find next match |
 | ⌘/Ctrl+Shift+G | Find previous match |
@@ -40,7 +39,7 @@ Use keyboard shortcuts to work more efficiently with Mindstone Rebel.
 
 ## See Also
 
-- [actions.md](library://rebel-system/help-for-humans/actions.md) — Message queue behavior and the Send Now feature
+- [actions.md](library://rebel-system/help-for-humans/actions.md) — What happens when you send while Rebel is working
 - [permissions.md](library://rebel-system/help-for-humans/permissions.md) — System permissions including Screen Recording
 
 ## Global Voice Hotkey

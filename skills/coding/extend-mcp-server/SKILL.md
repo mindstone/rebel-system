@@ -107,6 +107,7 @@ The following `bundled-*` IDs are `provider: "rebel-oss"` → **Path A (extendab
 bundled_rebel_oss_ids:
   - bundled-apple-shortcuts
   - bundled-browser-automation
+  - bundled-browserbase
   - bundled-custom-email
   - bundled-elevenlabs
   - bundled-elevenlabs-agents
