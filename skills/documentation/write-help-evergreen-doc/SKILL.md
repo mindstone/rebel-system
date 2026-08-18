@@ -126,4 +126,5 @@ Before committing documentation:
 - [ ] Examples match current code patterns
 - [ ] Transitional states are clearly marked
 - [ ] "See also" sections are comprehensive
+- [ ] When a table enumerates settings options, each row is verified against the UI-rendered options (the consuming component's options/titles), not the raw type enum — and any "(default)" annotation is verified against the `DEFAULT_*` settings constants
 
