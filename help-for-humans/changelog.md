@@ -2186,7 +2186,7 @@ What's new in Rebel. We ship fast, so there's always something.
 - Platform framework updated to latest version.
 - 35 behind-the-scenes prompts externalized to editable markdown files for faster iteration.
 - Focus strategic planning surface foundations added behind experimental flags.
-- CI pipeline hardened after prompt externalization postmortem: global test bootstrap, orphan cleanup, submodule checkout.
+- CI pipeline hardened after a prompt-externalization incident: global test bootstrap, orphan cleanup, submodule checkout.
 - Agent routing contracts made explicit — implicit regex parsing replaced with typed fields.
 - Plugin security validator expanded to block additional DOM manipulation methods.
 - Watchdog diagnostics improved for debugging silent model stalls.
@@ -2336,7 +2336,7 @@ What's new in Rebel. We ship fast, so there's always something.
 - Local STT download: 11 unit tests covering IPC throttle, friendly errors, and progress behavior.
 - Safety: BareToolId branded type, canonical tool identity contracts, cross-boundary contract principles.
 - Sessions: narration leak filter, question/approval cleanup on reset, conversation index search_text column.
-- Compaction: 14 regression tests; 3 postmortems (ghost message, OpenAI cache tokens, compaction contamination).
+- Compaction: 14 regression tests; 3 deep-dive fixes (ghost message, OpenAI cache tokens, compaction contamination).
 - Headless turn runner extracted from main index.ts.
 - Evals: shared fixture corpus, cross-channel fixtures, Opus SDK rerun.
 - Memory visibility: 8 regression tests; visibility field removed from LLM JSON schema (token savings).
