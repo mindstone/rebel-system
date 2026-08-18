@@ -24,7 +24,7 @@ At the top of Quick Open, you'll see **Recent Files** — the files you've acces
 Quick Open shows tabs to narrow your search:
 
 - **Everything** — Everything in your Library
-- **Spaces** — Just items grouped into spaces — everything except skills and memory
+- **Spaces** — Everything except skills and memory
 - **Skills** — Just workflow instructions
 - **Memory** — Just your memory files
 
