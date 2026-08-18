@@ -1,6 +1,6 @@
 ---
 description: "How Rebel protects you from risky actions and what requires your explicit permission"
-last_updated: "2026-07-26"
+last_updated: "2026-08-18"
 ---
 
 # Security and Tool Safety
@@ -11,6 +11,8 @@ Rebel has access to powerful tools — your files, connectors, and system settin
 ## The Approval System
 
 At the centre of Rebel's safety system are your **Safety Rules** — natural language rules you write yourself. Every time Rebel is about to use a tool or write to memory, it evaluates the action against your rules. If the rules say it's OK, Rebel proceeds. If not, you get an approval prompt.
+
+For the short promise behind every approval, see [The Approval Contract](rebel://library/rebel-system%2Fhelp-for-humans%2Fapproval-contract.md).
 
 Think of Safety Rules as a personalised safety policy. You write things like "always ask before emailing external contacts" or "never modify files in the Finance folder without asking," and Rebel follows them. You can view and edit your rules in **[Settings → Privacy & Safety](rebel://settings/safety)** — they're at the top of the Privacy & Safety section.
 
