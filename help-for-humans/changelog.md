@@ -34,6 +34,10 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **The right billing message when you hit a limit** — If you're on a Mindstone plan and hit a spending or usage limit, the error could wrongly tell you to "add your own API key" or "top up" — advice meant for people who bring their own key. Rebel now shows the message that actually fits how you're set up. Right problem, right fix.
+
+- **A blocked folder can't hide behind a reconnect** — When Rebel reconnected to a workspace, a genuine "can't reach this folder" problem could occasionally slip by unnoticed, or stay dismissed after coming back. Rebel now keeps proper track of what it can and can't reach, and speaks up when access is actually blocked — including right after you switch between spaces. No silent denials.
+
 <!-- detail: 260818 Tabs/Tooltip handler-composition fix. The conversations sidebar filter bar's Active tab was wrapped in a Tooltip (count summary) whose injected onClick overrode TabsTrigger's own, making the tab a dead button for mouse and keyboard. The chosen filter persists in localStorage and no other path sets 'active', so anyone who had switched to Done/All/Starred was stuck there across restarts. Fixed in the shared Tabs primitive (props spread before onClick; consumer/wrapper handler runs first, preventDefault opts out) rather than by removing the tooltip. Keep public copy non-technical — no props/handler/localStorage internals. -->
 - **The sidebar's Active tab does something again** — If you'd switched your conversation list to **Done**, **All** or **starred**, the **Active** tab stopped responding — no highlight, no change, nothing — and it stayed that way after a restart, because Rebel dutifully remembered the tab you were stuck on. Clicking Active now shows your active conversations, as it always meant to. A tab that tabs.
 
