@@ -45,6 +45,7 @@ The catalog includes 90+ integrations across several categories. To see the full
 - [Email (iCloud, Yahoo & Custom IMAP)](library://rebel-system/help-for-humans/connectors/email.md) – Search, read, send, and manage iCloud, Yahoo, or any IMAP/SMTP email
 - [HubSpot](library://rebel-system/help-for-humans/connectors/hubspot.md) – CRM, contacts, deals, tickets (free accounts: read-only)
 - [Salesforce](library://rebel-system/help-for-humans/connectors/salesforce.md) – CRM queries and record management
+- [Zendesk](library://rebel-system/help-for-humans/connectors/zendesk.md) – Support tickets, views, macros, and Help Center (Beta; needs a Zendesk admin to set up)
 - [Figma](library://rebel-system/help-for-humans/connectors/figma.md) – Design files, components, variables, and screenshots via official Desktop MCP
 - [Gong](library://rebel-system/help-for-humans/connectors/gong.md) – Sales call recordings, transcripts, and analytics
 - [Humaans](library://rebel-system/help-for-humans/connectors/humaans.md) – HR platform: employees, org chart, roles, time off
