@@ -171,6 +171,8 @@ Collect required frontmatter fields:
 | `stored_at` | Date file was created (YYYY-MM-DD) | `2025-12-15` |
 | `occurred_at` | Date source was created/published (YYYY-MM-DD) | `2025-12-15` |
 
+`source_system` is always lowercase (`gmail`, never `Gmail`).
+
 `source_url` is never blank. Use the source-type reference templates below when the connector does not provide a URL (for example, derive the Gmail permalink from the thread ID, or use a `workspace://` reference for a workspace file). When no canonical web URL exists, use `internal://<source_system>/<source_uid>`.
 
 **Optional fields** (include when applicable):
@@ -235,7 +237,7 @@ truncated: false
 
 ### 9. Update related topics to cite the source
 
-After creating the source file, automatically update topic files **within Chief-of-Staff only** to reference it:
+After creating the source file under `memory/sources/`, automatically update topic files under `memory/topics/` **within Chief-of-Staff only** to reference it; never write the captured source body to `memory/topics/`.
 
 1. **Search for related topics in Chief-of-Staff** using `@files` semantic search on the source's key subjects (people, projects, concepts from Key Takeaways). Restrict the search to Chief-of-Staff topic files.
 2. **Update each relevant Chief-of-Staff topic** per [memory-update](../memory-update/SKILL.md): add source citation to "Sources" section, add new facts with timestamps
