@@ -1,42 +1,18 @@
 ---
-description: "Connect Outreach to search prospects, manage sequences, track emails and tasks"
-last_updated: "2026-05-11"
+description: "Outreach connector — not currently available in Rebel"
 ---
 
 # Outreach
 
-Access your Outreach sales engagement platform: search prospects, manage sequences, track emails and tasks. Enroll prospects in sequences directly from Rebel.
+**Not available right now.** Rebel doesn't currently offer an Outreach connector — you
+won't find it in **Settings → Connectors**. The integration is parked while we finish
+wiring up setup, and we'd rather leave it out than give you a "Set up" button that goes
+nowhere.
 
+When it lands, Outreach will let you search prospects, manage sequences, track emails
+and tasks, and enroll prospects in sequences — all from Rebel.
 
-## What You Can Do
-
-- **Search prospects** by name, company, email, or custom fields
-- **Manage sequences** — view active sequences, enrollments, and steps
-- **Track emails and tasks** — see outbound activity and engagement
-- **Enroll prospects** in sequences for automated follow-up
-- **View accounts** — browse companies and their associated prospects
-
-
-## Setup
-
-Requires Outreach admin access to create an OAuth app.
-
-1. Go to Outreach Settings > Developer > Your Apps > Create New App
-2. Enable **API access** and configure OAuth scopes: `prospects.all`, `sequences.all`, `sequenceStates.all`, `accounts.all`, `mailings.read`, `tasks.all`, `users.read`
-3. Set the **Redirect URI** to the callback URL shown in Rebel's setup screen
-4. Copy the **Client ID** and **Client Secret** (shown only once)
-5. Open **Settings → Connectors** in Rebel
-6. Find **Outreach** and click **Set up**
-7. Enter the Client ID and Client Secret, then click **Connect**
-
-> **Don't see the Developer section?** Ask your Outreach admin for API access.
-
-
-## Tips
-
-- **Find prospects**: "Show me prospects at Acme Corp" or "Find all prospects added this week"
-- **Sequence management**: "Which sequences are active?" or "Enroll Sarah in the onboarding sequence"
-- **Activity tracking**: "What emails went out yesterday?" or "Show my pending tasks"
+Want it sooner? Let us know via **Help → Feedback & bugs**; demand moves the roadmap.
 
 
 ## See Also
