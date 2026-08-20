@@ -143,6 +143,7 @@ bundled_rebel_oss_ids:
   - bundled-wise
   - bundled-workday
   - bundled-yahoo-mail
+  - bundled-zendesk
 ```
 <!-- BUNDLED_REBEL_OSS_ALLOWLIST_END -->
 
