@@ -45,7 +45,7 @@ The catalog includes 90+ integrations across several categories. To see the full
 - [Email (iCloud, Yahoo & Custom IMAP)](library://rebel-system/help-for-humans/connectors/email.md) – Search, read, send, and manage iCloud, Yahoo, or any IMAP/SMTP email
 - [HubSpot](library://rebel-system/help-for-humans/connectors/hubspot.md) – CRM, contacts, deals, tickets (free accounts: read-only)
 - [Salesforce](library://rebel-system/help-for-humans/connectors/salesforce.md) – CRM queries and record management
-- [Zendesk](library://rebel-system/help-for-humans/connectors/zendesk.md) – Support tickets, views, and comments
+- [Zendesk](library://rebel-system/help-for-humans/connectors/zendesk.md) – Support tickets, views, macros, and Help Center (Beta; needs a Zendesk admin to set up)
 - [Figma](library://rebel-system/help-for-humans/connectors/figma.md) – Design files, components, variables, and screenshots via official Desktop MCP
 - [Gong](library://rebel-system/help-for-humans/connectors/gong.md) – Sales call recordings, transcripts, and analytics
 - [Humaans](library://rebel-system/help-for-humans/connectors/humaans.md) – HR platform: employees, org chart, roles, time off
@@ -57,7 +57,6 @@ The catalog includes 90+ integrations across several categories. To see the full
 - [Braze](library://rebel-system/help-for-humans/connectors/braze.md) – Marketing automation: campaigns, segments, messaging
 - [Shopify](library://rebel-system/help-for-humans/connectors/shopify.md) – E-commerce: products, orders, customers
 - [MoEngage](library://rebel-system/help-for-humans/connectors/moengage.md) – Customer engagement and analytics
-- [Outreach](library://rebel-system/help-for-humans/connectors/outreach.md) – Sales engagement: prospects, sequences, emails and tasks
 - [Datadog](library://rebel-system/help-for-humans/connectors/datadog.md) – Monitoring: metrics, logs, dashboards, incidents and APM traces
 - [AppSignal](library://rebel-system/help-for-humans/connectors/appsignal.md) – Application monitoring: performance, errors, and incidents
 - [Workday](library://rebel-system/help-for-humans/connectors/workday.md) – HR: workers, employee profiles, and org structure (read-only)
