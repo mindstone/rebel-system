@@ -1,6 +1,6 @@
 ---
 description: "What Rebel can and can't do without asking you first"
-last_updated: "2026-07-27"
+last_updated: "2026-08-18"
 ---
 
 # Permissions — What Rebel Can Do
@@ -8,6 +8,8 @@ last_updated: "2026-07-27"
 Rebel is designed to be helpful without freelancing as your chaos intern. Permissions come from three places: your **Safety Rules**, any **trusted tools** you've approved for routine use, and the **memory permission level** on each Space.
 
 For the full version, see [Security and Tool Safety](library://rebel-system/help-for-humans/security-and-tool-safety.md).
+
+For the five-paragraph version of what saying yes or no actually does, see [The Approval Contract](rebel://library/rebel-system%2Fhelp-for-humans%2Fapproval-contract.md).
 
 **Also in Security and Tool Safety:** permanent blocks (**What Rebel will never do** in Settings) and rule suggestions from chat — both go through the same notification drawer as ordinary approvals.
 
