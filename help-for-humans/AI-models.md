@@ -1,6 +1,6 @@
 ---
-description: "How to power Rebel's AI — a flat-fee Mindstone plan or bring your own (ChatGPT Pro, OpenRouter, Anthropic) — then choose Planner, Main work, and Behind the Scenes models, including what happens when you pick a model outside your plan tier"
-last_updated: "2026-07-27"
+description: "How to power Rebel's AI — a flat-fee Mindstone plan or bring your own (ChatGPT Pro, OpenRouter, Anthropic) — then choose Planner, Main work, and Behind the Scenes models, why one task can use several models, and what happens when you pick a model outside your plan tier"
+last_updated: "2026-08-18"
 ---
 
 # AI models
@@ -174,6 +174,26 @@ Each role shows its **real status** at a glance. If a model is genuinely ready t
 
 You manage all of this in **Settings → Agent & Voice → Intelligence** under the Model team section. Each model row has a chip-toggle to mark it as part of Council or not — no checkbox, no wizard.
 
+### Why one task can use several models
+
+Because Rebel works as a team, a single task — even something as ordinary as searching your email — can touch **several models**, each doing its bit:
+
+- the **Planner** maps out the approach (only if you've turned it on)
+- **Main work** does the actual searching and writes the answer you see
+- **Behind the Scenes** quietly runs safety checks, updates memory, indexes what it finds, and names the conversation
+
+So if you notice a task used four or five models, nothing's gone wrong and there's nothing to tidy up — that's Rebel matching each step to the right model on its own.
+
+**You don't have to choose models step by step, and by default you don't. Rebel routes each job to the model set for that role — using sensible defaults where you haven't chosen — so the optimising is already done for you.** That's the whole point of the team: you set (or accept) a few roles once, and Rebel handles which model runs which part.
+
+If you'd rather keep things to fewer moving parts, you can:
+
+- turn the **Planner** off, so Main work handles everything end-to-end
+- set the **same model** for Main work and Behind the Scenes
+- or ignore the individual roles entirely and just use the **Quality Tier** slider inside a conversation
+
+Note that the feature which adds *more* model variety — **Smart model picking**, described next — is **off by default**. If you haven't switched it on, the models you see come purely from the roles above, not from Rebel picking a different model for each step.
+
 ### Smart model picking
 
 **Smart model picking** lets Rebel choose which of your models runs each step of a job, rather than using one model for everything — a fast, cheap model for routine steps, a stronger one for the hard thinking, without you having to decide.
@@ -211,7 +231,7 @@ If you prefer the old way, power users can still open the advanced panel inside 
 
 ## A simple starting point
 
-For most people:
+For most people, the honest answer is: **you don't need to manage models at all.** Rebel optimises which model runs which part of a task for you, out of the box. If you want to steer it anyway:
 
 - Use your preferred provider card
 - Pick a strong **Main work** model
