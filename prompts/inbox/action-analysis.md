@@ -1,5 +1,5 @@
 ---
-description: Assesses an Action's clarity, finish line, useful steps, goal relevance, and private coordination notes
+description: Assesses an Action's clarity, finish line, goal relevance, and private coordination notes
 service: src/core/services/inbox/inboxActionAnalyzer.ts
 variables: []
 model_hint: haiku
@@ -19,11 +19,6 @@ Completion:
 - Use `not_reasonable` when a truthful criterion cannot be grounded in the Action.
 - Do not claim Rebel can verify anything and do not invent evidence, system identifiers, files, messages, tickets, or dates.
 
-Subtasks:
-- Propose 2-6 concrete ordered steps only when decomposition materially helps.
-- Return none for atomic work, simple reminders, or unclear Actions.
-- Do not invent people, facts, deliverables, systems, or deadlines.
-
 Alignment:
 - Match only a goal supplied in `userContext.goals` and return its exact fingerprint.
 - Use `no_match` for merely topical similarity. Use `context_unavailable` when no goals were supplied.
@@ -39,7 +34,6 @@ Output exactly one JSON object and no other text:
 {
   "clarity": {"result":"clear|needs_input","missing":[],"question":"optional"},
   "completion": {"result":"criterion|not_reasonable","criterion":"optional"},
-  "subtasks": {"result":"none|proposed","items":[]},
   "alignment": {"result":"matched|no_match|context_unavailable","goalFingerprint":"optional","rationale":"optional"},
   "coordination": {
     "ownership":{"kind":"me|named|unclear","displayName":"optional"},
