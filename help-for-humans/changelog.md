@@ -4,7 +4,7 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ---
 
-## v0.4.63 — Aug 19-20, 2026
+## v0.4.63 — Aug 19-24, 2026
 
 ### Improvements
 
@@ -18,6 +18,14 @@ What's new in Rebel. We ship fast, so there's always something.
 - **Error messages that tell you what happened, whether your work's safe, and what to do** — When something goes wrong mid-task — a rate limit, a billing snag, a dropped connection — Rebel's messages used to be charming but cryptic ("the provider asked for a breather"). They now lead with the plain facts: what happened, that your message is still here, and the next step — naming the provider where we can, and telling you *when* a rate limit resets ("try again after 8:20pm") when the service says so. The wit still shows up, just after the useful part. A breather you can actually time.
 
 ### Fixes
+
+- **A missing turn no longer holds your conversation hostage** — If a turn disappeared before it finished, Rebel could keep the conversation looking busy until you restarted the app. It now lets go cleanly and leaves your message ready to go. The restart ritual is retired.
+
+- **Messages sent during a shutdown or cloud deployment wait safely** — If Rebel was quitting or being updated in the cloud, messages sent at exactly the wrong moment could be marked failed even though nothing was wrong with them. They now wait and send when Rebel is ready. Bad timing, no longer a lost message.
+
+- **Approving several actions no longer blocks your typing** — Background follow-up work now groups itself and waits for a quiet moment, giving your messages priority. Approve a run of actions and Rebel handles the receipts together instead of locking the conversation for minutes. Housekeeping, with manners.
+
+- **Companion narration stops looping on old turns** — The phrase companion could repeatedly complain in the background about a turn that was already gone, filling the console with the same error. It now lets stale requests pass quietly. Less ghost story, more useful narration.
 
 <!-- detail: 260820_citation-filepath-refs (internal planning doc; CE2 bug_mode; conversation 3585fbd2). Follow-up to the 260729 citation-sanitizer run's deferred residue R2 ("wider citation grammar families if observed"), signal now fired. The sanitizer recognised only the web-search grounding reference grammar (turn<N>search<M>); a memory/document citation references its source by file PATH, so the whole PUA marker (U+E200 cite U+E202 <file-path> U+E201) matched neither the complete-event regex nor the streaming-delta parser and leaked into visible answers as glitchy fallback glyphs. Fix generalises the reference body in BOTH grammar sites in lockstep to any non-empty run of non-delimiter, non-line-terminator chars, keeping the exact delimiter triple + 'cite' anchor as the over-strip protection and excluding \n/\r so a malformed opener + distant stray close can't eat across paragraphs. Keep public copy non-technical — no PUA/grammar/parser internals. -->
 - **No more glitchy characters trailing your answers** — Sometimes an answer that quoted one of your own files (a meeting note, a memory) ended with a little burst of nonsense symbols — the invisible tag Rebel uses to mark where a fact came from, showing through where it shouldn't. Rebel already cleaned these up when they pointed at web sources; now it does the same when they point at your files. Answers end where they should.
