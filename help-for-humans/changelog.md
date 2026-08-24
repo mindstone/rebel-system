@@ -4,7 +4,7 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ---
 
-## v0.4.63 — Aug 19-20, 2026
+## v0.4.63 — Aug 19-24, 2026
 
 ### Improvements
 
@@ -18,6 +18,10 @@ What's new in Rebel. We ship fast, so there's always something.
 - **Error messages that tell you what happened, whether your work's safe, and what to do** — When something goes wrong mid-task — a rate limit, a billing snag, a dropped connection — Rebel's messages used to be charming but cryptic ("the provider asked for a breather"). They now lead with the plain facts: what happened, that your message is still here, and the next step — naming the provider where we can, and telling you *when* a rate limit resets ("try again after 8:20pm") when the service says so. The wit still shows up, just after the useful part. A breather you can actually time.
 
 ### Fixes
+
+- **Quick follow-ups keep the conversation intact** — Sending another message right after Rebel finishes no longer risks losing the turn you just had. Rebel keeps up while it catches up. A small race, shown the door.
+
+- **Long tasks leave a useful handoff** — When a long piece of work needs to make room, Rebel now carries forward a concise summary of what it set out to do, decided, worked on, and got done. The next turn can pick up the thread instead of conducting an archaeological dig.
 
 <!-- detail: 260820_citation-filepath-refs (internal planning doc; CE2 bug_mode; conversation 3585fbd2). Follow-up to the 260729 citation-sanitizer run's deferred residue R2 ("wider citation grammar families if observed"), signal now fired. The sanitizer recognised only the web-search grounding reference grammar (turn<N>search<M>); a memory/document citation references its source by file PATH, so the whole PUA marker (U+E200 cite U+E202 <file-path> U+E201) matched neither the complete-event regex nor the streaming-delta parser and leaked into visible answers as glitchy fallback glyphs. Fix generalises the reference body in BOTH grammar sites in lockstep to any non-empty run of non-delimiter, non-line-terminator chars, keeping the exact delimiter triple + 'cite' anchor as the over-strip protection and excluding \n/\r so a malformed opener + distant stray close can't eat across paragraphs. Keep public copy non-technical — no PUA/grammar/parser internals. -->
 - **No more glitchy characters trailing your answers** — Sometimes an answer that quoted one of your own files (a meeting note, a memory) ended with a little burst of nonsense symbols — the invisible tag Rebel uses to mark where a fact came from, showing through where it shouldn't. Rebel already cleaned these up when they pointed at web sources; now it does the same when they point at your files. Answers end where they should.
