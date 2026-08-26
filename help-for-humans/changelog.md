@@ -4,7 +4,7 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ---
 
-## v0.4.63 — Aug 19-24, 2026
+## v0.4.63 — Aug 19-26, 2026
 
 ### Improvements
 
@@ -18,6 +18,8 @@ What's new in Rebel. We ship fast, so there's always something.
 - **Error messages that tell you what happened, whether your work's safe, and what to do** — When something goes wrong mid-task — a rate limit, a billing snag, a dropped connection — Rebel's messages used to be charming but cryptic ("the provider asked for a breather"). They now lead with the plain facts: what happened, that your message is still here, and the next step — naming the provider where we can, and telling you *when* a rate limit resets ("try again after 8:20pm") when the service says so. The wit still shows up, just after the useful part. A breather you can actually time.
 
 ### Fixes
+- **Done now means done on your phone, too** — Conversations you mark **Done** on desktop now disappear from your phone's **Active** list, as they were supposed to all along. The phone's **Done** tab tells the truth: finished conversations stay on your desktop, and the tab only lists ones still available on your phone. Refreshing actually refreshes — if it can't, Rebel says so calmly instead of pretending. Housekeeping, finally housekept.
+
 
 - **A missing turn no longer holds your conversation hostage** — If a turn disappeared before it finished, Rebel could keep the conversation looking busy until you restarted the app. It now lets go cleanly and leaves your message ready to go. The restart ritual is retired.
 
