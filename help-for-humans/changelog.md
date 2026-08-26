@@ -21,6 +21,8 @@ What's new in Rebel. We ship fast, so there's always something.
 - **Done now means done on your phone, too** — Conversations you mark **Done** on desktop now disappear from your phone's **Active** list, as they were supposed to all along. The phone's **Done** tab tells the truth: finished conversations stay on your desktop, and the tab only lists ones still available on your phone. Refreshing actually refreshes — if it can't, Rebel says so calmly instead of pretending. Housekeeping, finally housekept.
 
 
+- **A connection that needs signing in again now says so — and gives you the button** — When a connector's sign-in expired, Rebel would tell you to go and reconnect it, then show you a Settings page with nothing to click. Now the connector's own card says its sign-in expired and offers **Reconnect**, right there. Rebel also stops cheerfully reporting "all connections signed in" on the occasions it couldn't actually check.
+
 - **A missing turn no longer holds your conversation hostage** — If a turn disappeared before it finished, Rebel could keep the conversation looking busy until you restarted the app. It now lets go cleanly and leaves your message ready to go. The restart ritual is retired.
 
 - **Messages sent during a shutdown or cloud deployment wait safely** — If Rebel was quitting or being updated in the cloud, messages sent at exactly the wrong moment could be marked failed even though nothing was wrong with them. They now wait and send when Rebel is ready. Bad timing, no longer a lost message.
