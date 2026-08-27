@@ -4,7 +4,12 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ---
 
-## v0.4.63 — Aug 19-26, 2026
+## v0.4.63 — Aug 19-27, 2026
+
+### Highlights
+
+<!-- detail: Actions set to finish on their own now move out of Active and into In progress as soon as you send them, so the list in front of you only holds work that still needs you. On desktop and phone they come back to Active with a plain-language reason if Rebel needs an approval or an answer, or if the work was cut short. The instruction now survives approvals and mid-task questions, which is where it used to get lost. -->
+- **Your Actions list clears as you work** — Send an Action with **Mark done when finished** on and it moves straight to **In progress**, then to **Done** when it genuinely completes — or back to **Active** with the reason on the card when it needs you. The instruction now sticks through approvals and questions instead of quietly getting lost, and your phone follows the same flow. One list, working its way down.
 
 ### Improvements
 
@@ -18,6 +23,8 @@ What's new in Rebel. We ship fast, so there's always something.
 - **Error messages that tell you what happened, whether your work's safe, and what to do** — When something goes wrong mid-task — a rate limit, a billing snag, a dropped connection — Rebel's messages used to be charming but cryptic ("the provider asked for a breather"). They now lead with the plain facts: what happened, that your message is still here, and the next step — naming the provider where we can, and telling you *when* a rate limit resets ("try again after 8:20pm") when the service says so. The wit still shows up, just after the useful part. A breather you can actually time.
 
 ### Fixes
+- **A paused conversation can now be unstuck by you** — When two versions of an answer genuinely disagree, Rebel stops saving rather than guess which one to keep — but it used to leave you with no way out. Now the conversation shows a calm notice and lets you compare the two answers side by side and pick the one to keep. Everything else in the conversation stays exactly as it was. Your history, your call.
+- **Rebel stops switching to a model it can't reach** — Mid-task, Rebel could hand your work to a model setup whose key wasn't usable, and you'd get an alarming "missing a working API key" banner out of nowhere. It now checks before it switches. Fewer dead ends, more finishing.
 - **Done now means done on your phone, too** — Conversations you mark **Done** on desktop now disappear from your phone's **Active** list, as they were supposed to all along. The phone's **Done** tab tells the truth: finished conversations stay on your desktop, and the tab only lists ones still available on your phone. Refreshing actually refreshes — if it can't, Rebel says so calmly instead of pretending. Housekeeping, finally housekept.
 
 
