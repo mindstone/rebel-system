@@ -19,6 +19,9 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+<!-- detail: After an update, some installations could enter Safe Mode because Rebel could not start its bundled tools. The next release keeps those tools usable after a normal install; updating or reinstalling repairs installations already affected. -->
+- **Safe Mode after an update is no longer on the itinerary** — An update could leave Rebel unable to start its bundled tools, sending the app into Safe Mode. The next update ships them with permissions a normal installation can use; if you're already stuck, updating or reinstalling Rebel is the fix. A small permissions dispute, settled.
+
 - **A missing turn no longer holds your conversation hostage** — If a turn disappeared before it finished, Rebel could keep the conversation looking busy until you restarted the app. It now lets go cleanly and leaves your message ready to go. The restart ritual is retired.
 
 - **Messages sent during a shutdown or cloud deployment wait safely** — If Rebel was quitting or being updated in the cloud, messages sent at exactly the wrong moment could be marked failed even though nothing was wrong with them. They now wait and send when Rebel is ready. Bad timing, no longer a lost message.
