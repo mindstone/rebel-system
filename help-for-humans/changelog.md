@@ -19,6 +19,9 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+<!-- detail: 260822_mark-done-when-finished (internal planning doc; CE2 bug_mode). Mark-done intent is now persisted per Action execution rather than bound to one turn, with explicit causal authority across approval, structured-question, compaction, stop/continue, retry, desktop/cloud/mobile, and recovery paths. Actions leave Active for In progress only after accepted custody, return visibly to Needs you on pauses/failures, and reach Done only after an owned terminal passes deterministic blockers plus the action-aware done-safety judge. Keep public copy non-technical; do not imply lifecycle telemetry detects semantic judge false positives. -->
+- **“Mark done when finished” now waits for finished** — Actions keep the instruction through approvals, questions, retries, and the occasional necessary pause. They move into **In progress** while Rebel works, return with a reason when they need you, and reach **Done** only when the job is actually done. The label has stopped freelancing.
+
 - **A missing turn no longer holds your conversation hostage** — If a turn disappeared before it finished, Rebel could keep the conversation looking busy until you restarted the app. It now lets go cleanly and leaves your message ready to go. The restart ritual is retired.
 
 - **Messages sent during a shutdown or cloud deployment wait safely** — If Rebel was quitting or being updated in the cloud, messages sent at exactly the wrong moment could be marked failed even though nothing was wrong with them. They now wait and send when Rebel is ready. Bad timing, no longer a lost message.
