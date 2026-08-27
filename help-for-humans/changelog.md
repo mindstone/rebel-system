@@ -4,7 +4,7 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ---
 
-## v0.4.63 — Aug 19-24, 2026
+## v0.4.63 — Aug 19-26, 2026
 
 ### Improvements
 
@@ -18,6 +18,13 @@ What's new in Rebel. We ship fast, so there's always something.
 - **Error messages that tell you what happened, whether your work's safe, and what to do** — When something goes wrong mid-task — a rate limit, a billing snag, a dropped connection — Rebel's messages used to be charming but cryptic ("the provider asked for a breather"). They now lead with the plain facts: what happened, that your message is still here, and the next step — naming the provider where we can, and telling you *when* a rate limit resets ("try again after 8:20pm") when the service says so. The wit still shows up, just after the useful part. A breather you can actually time.
 
 ### Fixes
+- **Done now means done on your phone, too** — Conversations you mark **Done** on desktop now disappear from your phone's **Active** list, as they were supposed to all along. The phone's **Done** tab tells the truth: finished conversations stay on your desktop, and the tab only lists ones still available on your phone. Refreshing actually refreshes — if it can't, Rebel says so calmly instead of pretending. Housekeeping, finally housekept.
+
+
+- **A connection that needs signing in again now says so — and gives you the button** — When a connector's sign-in expired, Rebel would tell you to go and reconnect it, then show you a Settings page with nothing to click. Now the connector's own card says its sign-in expired and offers **Reconnect**, right there. Rebel also stops cheerfully reporting "all connections signed in" on the occasions it couldn't actually check.
+
+<!-- detail: 260822_mark-done-when-finished (internal planning doc; CE2 bug_mode). Mark-done intent is now persisted per Action execution rather than bound to one turn, with explicit causal authority across approval, structured-question, compaction, stop/continue, retry, desktop/cloud/mobile, and recovery paths. Actions leave Active for In progress only after accepted custody, return visibly to Needs you on pauses/failures, and reach Done only after an owned terminal passes deterministic blockers plus the action-aware done-safety judge. Keep public copy non-technical; do not imply lifecycle telemetry detects semantic judge false positives. -->
+- **“Mark done when finished” now waits for finished** — Actions keep the instruction through approvals, questions, retries, and the occasional necessary pause. They move into **In progress** while Rebel works, return with a reason when they need you, and reach **Done** only when the job is actually done. The label has stopped freelancing.
 
 <!-- detail: After an update, some installations could enter Safe Mode because Rebel could not start its bundled tools. The next release keeps those tools usable after a normal install; updating or reinstalling repairs installations already affected. -->
 - **Safe Mode after an update is no longer on the itinerary** — An update could leave Rebel unable to start its bundled tools, sending the app into Safe Mode. The next update ships them with permissions a normal installation can use; if you're already stuck, updating or reinstalling Rebel is the fix. A small permissions dispute, settled.
