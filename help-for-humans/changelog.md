@@ -19,6 +19,7 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **Conversations keep their full history — and save failures stop going quiet** — Continuing a conversation no longer risks losing parts of its saved history. If a conversation genuinely stops saving, Rebel now says so plainly and keeps the warning visible until the conversation itself saves again. Silence is not a recovery plan.
 - **A missing turn no longer holds your conversation hostage** — If a turn disappeared before it finished, Rebel could keep the conversation looking busy until you restarted the app. It now lets go cleanly and leaves your message ready to go. The restart ritual is retired.
 
 - **Messages sent during a shutdown or cloud deployment wait safely** — If Rebel was quitting or being updated in the cloud, messages sent at exactly the wrong moment could be marked failed even though nothing was wrong with them. They now wait and send when Rebel is ready. Bad timing, no longer a lost message.
