@@ -4,7 +4,7 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ---
 
-## v0.4.63 — Aug 19-27, 2026
+## v0.4.63 — Aug 19-28, 2026
 
 ### Highlights
 
@@ -28,7 +28,7 @@ What's new in Rebel. We ship fast, so there's always something.
 ### Fixes
 - **When your internet drops, Rebel says so** — Instead of blaming the AI provider and sending you to a status page you can't reach, Rebel now says **“It looks like you're offline.”** and offers one useful next step: **Try again**. A smaller mystery, and a much better next move.
 - **Approving a connector action no longer blames you for a change that never happened** — When Rebel couldn't verify a connector was ready, approving could fail with wording that implied the action had changed — and that approving again would never help. It now says plainly that Rebel couldn't confirm the connector and that asking again will make Rebel re-check. The old message still appears when the action genuinely did change. Honest failure beats theatrical mystery.
-
+- **Meeting prep has stopped missing its cue** — The companion's first prep note now starts reliably, questions asked during the meeting no longer quietly disappear, and a meeting recorded offline can still get its notes once it reconnects. No scary error in the wrong conversation, either. Awkward silence, reassigned.
 - **A paused conversation can now be unstuck by you** — When two versions of an answer genuinely disagree, Rebel stops saving rather than guess which one to keep — but it used to leave you with no way out. Now the conversation shows a calm notice and lets you compare the two answers side by side and pick the one to keep. Everything else in the conversation stays exactly as it was. Your history, your call.
 - **Rebel stops switching to a model it can't reach** — Mid-task, Rebel could hand your work to a model setup whose key wasn't usable, and you'd get an alarming "missing a working API key" banner out of nowhere. It now checks before it switches. Fewer dead ends, more finishing.
 - **Done now means done on your phone, too** — Conversations you mark **Done** on desktop now disappear from your phone's **Active** list, as they were supposed to all along. The phone's **Done** tab tells the truth: finished conversations stay on your desktop, and the tab only lists ones still available on your phone. Refreshing actually refreshes — if it can't, Rebel says so calmly instead of pretending. Housekeeping, finally housekept.
