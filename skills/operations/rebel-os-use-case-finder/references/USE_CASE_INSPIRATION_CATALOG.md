@@ -282,7 +282,6 @@ Summary of skills already available in the Rebel system, grouped by category. Th
 - **meeting-performance-review** — Prep for performance review meetings
 - **meeting-follow-up-drafting** — Drafts follow-up communications after meetings
 - **transcript-analysis** — Processes transcripts from any source (Notetaker, Plaud, external), extracts action items and summaries
-- **process-plaud-recording** — Handles Plaud voice recorder transcription
 - **calendar-check-availability** — Checks calendar availability
 
 ### Communication

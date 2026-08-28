@@ -1,6 +1,6 @@
 ---
 description: "How to use physical voice recorders like Limitless Pendant and Plaud to capture in-person meetings and conversations."
-last_updated: "2026-04-16"
+last_updated: "2026-08-28"
 ---
 
 # Voice Recorders
@@ -70,14 +70,14 @@ Change the destination in **Settings → Meetings → Transcript Storage**.
 | Device not found | Ensure Bluetooth is enabled in System Settings |
 | Won't connect | Try factory resetting the Pendant, then re-pair |
 | Disconnects frequently | Move closer to your computer; check Pendant battery |
-| No transcript after recording | Check that transcription is configured. Plaud follows your active voice provider; the live Limitless path still needs OpenAI set up today |
+| No transcript after recording | Check that transcription is configured. The live Limitless path still needs OpenAI set up today |
 
 
 ## Plaud Devices
 
-Plaud devices (NotePin, Note, NotePro) sync via the cloud. Record on your device, sync through the Plaud mobile app, and Rebel pulls the recording automatically.
+Plaud devices (NotePin, Note, NotePro) sync via the cloud. Record on your device, sync through the Plaud mobile app, and Rebel pulls the finished transcript automatically.
 
-Plaud transcription follows the voice provider you have selected in **Settings → Agent & Voice → Voice**. That can be OpenAI Whisper, ElevenLabs Scribe, or a local model such as Moonshine (and Parakeet on desktop).
+Plaud transcribes these recordings in its app. Your voice provider in Rebel does not affect Plaud sync.
 
 ### Setup
 
@@ -89,8 +89,8 @@ Plaud transcription follows the voice provider you have selected in **Settings �
 ### Recording Workflow
 
 1. **Record** on your Plaud device as usual
-2. **Sync** via the Plaud mobile app (recordings upload to Plaud's cloud)
-3. **Wait** — Rebel checks for new recordings every 15 minutes
+2. **Sync** via the Plaud mobile app and let Plaud finish the transcript
+3. **Wait** — Rebel checks for finished transcripts every 15 minutes
 4. **Done** — Transcript appears in your workspace with an AI-generated title
 
 Click **Sync Now** in Settings to import immediately instead of waiting.
@@ -103,25 +103,17 @@ Same location as Limitless recordings:
 
 ### Large Recordings
 
-Plaud recordings can be long — hour-long meetings, full-day conferences, the lot. Rebel handles this automatically:
-
-- **Size-based chunking**: When a recording exceeds the active provider's file limit, Rebel splits it into optimally-sized pieces when needed
-- **Per-chunk retries**: If any piece fails (timeout, network blip), just that piece is retried — not the entire recording
-- **Parallel processing**: Chunks are transcribed concurrently for faster results on long recordings
-- **Provider-aware behaviour**: ElevenLabs Scribe can usually handle very large files directly, while local providers such as Moonshine still work fine — they just follow their own processing path
-
-You don't need to do anything special. Record as long as you like; Rebel figures out the rest.
+Plaud handles transcription before Rebel imports anything, including long recordings. If Plaud has not finished yet, Rebel waits and checks again. After a day, Rebel adds an Action explaining how to finish the transcript in Plaud; the next sync will pick it up.
 
 ### Troubleshooting
 
 | Problem | Solution |
 |---------|----------|
-| Recordings not syncing | Open Plaud mobile app and ensure recordings uploaded to cloud |
+| Recordings not syncing | Open the Plaud mobile app and ensure recordings uploaded and finished transcribing |
 | "Not connected" error | Re-authenticate in Settings → Meetings |
 | Missing old recordings | Rebel imports new recordings; very old ones may not appear |
 | Sync stuck | Click **Sync Now** to force a fresh sync |
-| Transcription fails after sync | Check the voice provider selected in **Settings → Agent & Voice → Voice**. Cloud providers need the right API key; local Moonshine also works if its model is installed |
-| "Install ffmpeg for chunking" error | Very large recordings may need ffmpeg installed on your system for splitting. Most people won't hit this |
+| Recording is waiting for a transcript | Open the Plaud app and let Plaud finish transcribing it, then click **Sync Now** or wait for the next check |
 
 
 ## Transcript Format
@@ -137,7 +129,7 @@ Both devices produce identical transcripts with:
 
 ## Tips
 
-- **Long recordings:** Rebel automatically handles recordings of any length by splitting them into pieces and retrying any that fail. No manual intervention needed.
+- **Long recordings:** Plaud handles its own transcription before Rebel imports the finished transcript.
 - **Background noise:** Find a quieter spot when possible — transcription quality depends on audio clarity
 - **Battery life:** The Limitless indicator shows battery level; charge before important meetings
 - **Multiple devices:** You can have both Limitless and Plaud connected simultaneously
