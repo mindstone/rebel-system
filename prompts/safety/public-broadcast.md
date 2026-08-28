@@ -1,6 +1,6 @@
 ---
 description: Privacy safety evaluator for messages being posted to a public broadcast surface (Slack channel, Discord channel, GitHub issue, mailing list, etc.). Per-connector surface descriptors come from src/core/services/safety/outboundBroadcastGates/.
-service: src/main/services/inboundTriggers/publicBroadcastSafetyHook.ts
+service: src/core/services/safety/publicBroadcastSafetyHook.ts
 variables:
   - REPLY_CONTENT
   - SURFACE_KIND
