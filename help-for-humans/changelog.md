@@ -16,6 +16,9 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Improvements
 
+<!-- Keep this entry about the user-visible improvement. The implementation details belong in the internal changelog; public copy should not turn a quieter safety experience into a technical advisory. -->
+- **Rebel now understands commands instead of treating them all the same** — A routine command used to look like one mysterious lump, which meant ordinary work could prompt you while unusual work did not get enough attention. Rebel now looks at what each part actually does, so everyday reading and setup work gets out of the way more often while unclear work still gets a proper pause. Fewer interruptions, better judgment. The machinery remains sensibly suspicious of mystery, as any capable colleague should be.
+
 <!-- detail: 260825_fireworks-admin-provider Stage 6. Fireworks is organization-assigned, not user-connectable: assignment delivery creates a reserved synthetic company-managed profile, settings sync carries only the redacted profile, and cloud/mobile route through a separately relayed audience-bound credential. The visible Settings row is locked and named from the organization. Keep deployment ordering and contract internals out of public copy. -->
 - **Company-set Fireworks models now show up in Settings** — If your organization configures Fireworks for Rebel, you'll see `Fireworks (set by {Company})`, or `Fireworks (set by your organization)` when the company name isn't available. The row is locked because your organization manages it, and it works from desktop, cloud, and mobile. No key-wrangling required.
 
