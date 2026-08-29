@@ -1,6 +1,6 @@
 ---
 description: "Every point where data can leave Rebel — usage analytics, crash reports, AI providers, connectors, meetings, updates, sign-in and cloud sync — which of them you can switch off, and exactly what the two Privacy & Data toggles do and don't cover"
-last_updated: "2026-08-16"
+last_updated: "2026-08-27"
 ---
 
 # What Data Can Leave Rebel
@@ -23,7 +23,7 @@ Two of these you can switch off right now, in **[Settings → Privacy & Safety](
 | **Voice — read-aloud** (Rebel speaking a passage) | A cloud voice provider, or nowhere | Yes — an on-device model leaves it unavailable, or just don't use it |
 | **Voice — Live mode** (a spoken back-and-forth) | A cloud realtime voice provider | Yes — don't use Live mode |
 | **Web searches and pages Rebel fetches** | The search provider, and the site itself | Yes — by not asking for it |
-| **Your workspace, conversations and settings** | Your own cloud instance | Yes — Cloud Continuity is opt-in |
+| **Your complete workspace, conversations, settings and saved service keys** | Your own cloud instance | Yes — Cloud Continuity is opt-in |
 | **Update checks** | Mindstone's update service | No — always on |
 | **Signing in and account checks** | Mindstone | No — required to sign in |
 
@@ -113,7 +113,9 @@ None of this happens unless you set the notetaker up. See [meetings and notetake
 
 ### Cloud Continuity, mobile and browser access
 
-If you switch on Cloud Continuity, your conversations, Actions, settings, memory and workspace files are mirrored to your own cloud instance so your phone and browser can reach them — and your connector logins are relayed there too, so the cloud instance can use them on your behalf. Mobile push notifications go via Expo's push service and can include short preview text such as a title or status.
+If you switch on Cloud Continuity, your conversations, Actions, settings, memory, in-progress turn state and **everything inside your Rebel workspace** are mirrored to your own cloud instance so your phone and browser can continue the work. “Everything” includes files that `.gitignore` hides from Git, such as a workspace `.env` file; `.gitignore` is not a privacy boundary. Files you let Rebel read from somewhere outside the workspace are not copied by workspace sync.
+
+Rebel also relays the saved service keys in **Keys Rebel can use**, plus supported connector logins, so the cloud instance can use them on your behalf. Those credentials use a separate encrypted relay rather than ordinary workspace or settings sync. Pairing a self-hosted instance establishes the receiver it may relay to. Mobile push notifications go via Expo's push service and can include short preview text such as a title or status.
 
 That is a much bigger change to where your data lives than any telemetry toggle, and it's entirely opt-in. See [cloud continuity and mobile](rebel://library/rebel-system%2Fhelp-for-humans%2Fcloud-continuity-and-mobile.md).
 
