@@ -359,9 +359,6 @@ Summary of skills already available in the Rebel system, grouped by category. Th
 - **generate-slidev-html-presentation-slides** — HTML presentation generation
 - **keynote-parser** — Parse Keynote files
 
-### Integrations
-- **limitless-transcripts** — Import Limitless Pendant recordings
-
 ### Anthropic Official Skills
 - **artifacts-builder** — Interactive artifact creation
 - **canvas-design** — Visual design in canvas

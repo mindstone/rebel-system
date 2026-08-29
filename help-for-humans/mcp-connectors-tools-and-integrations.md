@@ -1,6 +1,6 @@
 ---
 description: "Overview of Model Context Protocol (MCP) tools and external knowledge sources, including built-in connectors, community connectors, smart tool management, and manual configuration"
-last_updated: "2026-07-02"
+last_updated: "2026-08-29"
 ---
 
 # MCPs, Tools & External Knowledge Sources
@@ -98,7 +98,7 @@ For manual MCP configuration (e.g., in Cursor or other editors), use [MCP-update
 
 ## References
 - [README.md](../README.md) - Rebel overview
-- [meetings-and-notetaker.md](library://rebel-system/help-for-humans/meetings-and-notetaker.md) - physical recording devices (Plaud, Limitless) and meeting transcription
+- [Meetings and Notetaker](rebel://library/rebel-system%2Fhelp-for-humans%2Fmeetings-and-notetaker.md) - Plaud transcript import, Quick Capture, and meeting transcription
 - [space-shared-folders.md](library://rebel-system/help-for-humans/space-shared-folders.md) - connect shared folders as Spaces; links to provider-specific guides
 - [MCP-update](../skills/system/mcp-add-update-remove-connector/SKILL.md) - instructions for AI to add/update MCP configurations
 - [klavis-migration.md](library://rebel-system/help-for-humans/klavis-migration.md) - migration guide (Klavis has been removed, use built-in connectors)
@@ -326,4 +326,3 @@ In Rebel, MCPs are configured via Settings → Connectors. For Cursor/Claude Cod
   }
 }
 ```
-
