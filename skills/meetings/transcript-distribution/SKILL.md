@@ -28,7 +28,7 @@ Evaluate a meeting transcript that has already been saved to Chief-of-Staff and 
 This skill is triggered by the `transcript-distribution-ready` event:
 
 - **Recall (cloud bot)** — fires after the async transcript upgrade reaches `recallai_async` quality, OR after the upgrade times out (whichever happens first). Distribution always runs against the best transcript available, never against initial captions.
-- **Desktop SDK, Plaud, Fireflies, Fathom, Limitless, Quick Capture, Physical Recording** — fires immediately after save, since these sources have no async upgrade.
+- **Desktop SDK, Plaud, Fireflies, Fathom, Quick Capture** — fires immediately after save, since these sources have no async upgrade. Existing transcripts with retired source values remain admissible so delayed work can finish, but there is no active producer for them.
 
 The transcript is already in `Chief-of-Staff/memory/sources/YYYY/MM-MMM/DD/`. This skill never moves it; it only writes copies elsewhere.
 
@@ -55,7 +55,7 @@ Then write the chosen artefact into each target space, record the decision on th
 The event context is appended as `## Event Context` at the end of this prompt. Available fields:
 
 - `filePath` — absolute path to the transcript in `Chief-of-Staff/memory/sources/...`
-- `sourceSystem` — `recall` | `desktop_sdk` | `plaud` | `fireflies` | `fathom` | `limitless`
+- `sourceSystem` — `recall` | `desktop_sdk` | `plaud` | `fireflies` | `fathom` | `quick_capture`; the retired `limitless` value may still appear on an existing saved transcript and remains readable for compatibility
 - `sourceUid` — stable ID of this transcript (also present in the file's `source_uid` frontmatter field)
 
 All other metadata (title, participants, duration, transcript quality, etc.) lives in the file's YAML frontmatter. Read the file rather than assuming the event context contains it.
@@ -67,7 +67,7 @@ All other metadata (title, participants, duration, transcript quality, etc.) liv
 Use the `text_editor` tool (or `bash cat`) to read the full file at `filePath`. Parse the YAML frontmatter and capture:
 
 - `description` (meeting title)
-- `participants` (array — may be empty for Plaud/Limitless)
+- `participants` (array — may be empty for Plaud, Quick Capture, or a legacy in-person transcript)
 - `occurred_at`, `started_at`, `duration_minutes`
 - `source_system`, `source_uid`, `source_url`
 - `transcript_quality` (e.g. `recallai_async`, `captions`, `desktop_sdk`, `whisper`)

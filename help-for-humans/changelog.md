@@ -6,6 +6,17 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ## v0.4.63 — Aug 19-29, 2026
 
+### Important recorder changes
+
+<!-- detail: Plaud is now transcript-import only. Rebel no longer downloads Plaud audio or offers a second transcription pass; an untranscribed Plaud recording stays visibly waiting, creates a reminder after a day, and is picked up after the user finishes it in Plaud. This is a known regression for people whose own OpenAI key previously powered the fallback. -->
+- **Important Plaud change — and a known regression** — Rebel now uses the transcript Plaud has made, rather than downloading the recording and making a second one. If Plaud has not transcribed a recording yet, Rebel shows it as **waiting**. After a day, it adds an Action explaining what is missing and keeps checking. **If you supplied your own OpenAI key, this is a regression:** Rebel used to try a local Whisper transcription when Plaud had none; it no longer does. Open the Plaud app, let Plaud transcribe the recording, then choose **Sync Now** in Rebel. **Retranscribe** has also been removed. One recording, one transcript — but Plaud needs to make it first.
+
+<!-- detail: Limitless device support is removed because the service no longer works in Europe. The manual export-import helper itself still worked but was deliberately removed with the integration; existing saved transcripts remain readable. -->
+- **Limitless support has been removed** — The device no longer works in Europe, so its connection, recording controls, and settings have been removed from Rebel. The manual export-import helper still worked, but has been removed with the rest of the integration. Transcripts you already saved still open normally; Rebel is not rewriting history, merely declining to keep a dead switch on the wall.
+
+<!-- detail: Quick Capture now streams a recoverable WAV through the configured shared Voice provider route. Long recordings use bounded parallel transcription with visible progress; failure retains the WAV and offers Show file, and an on-device failure never silently switches to a managed cloud key. -->
+- **Quick Capture now works with your Rebel plan — and keeps the recording when transcription fails** — Open the Notetaker menu and choose **Record from mic**. Quick Capture now uses whichever Voice provider you configured, including a Rebel plan, OpenRouter, your own key, or on-device transcription. Long recordings are handled several pieces at a time with visible progress. If transcription fails, Rebel keeps the WAV and offers **Show file** instead of disposing of the evidence; if you chose on-device transcription, it reports that failure rather than quietly sending the audio through a managed cloud key.
+
 ### Highlights
 
 <!-- detail: Operators you can see in a shared Space now start as Available. Add one to use it in conversations; changes made to the shared version through Rebel are included automatically. Choose Customise when you want your own editable version, which stops following later shared changes. Changes made directly to the file outside Rebel may not appear yet. -->

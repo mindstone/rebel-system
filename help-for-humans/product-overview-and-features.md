@@ -1,6 +1,6 @@
 ---
 description: "Complete overview of what Rebel does: product vision, all features, and how Rebel compares to ChatGPT, Claude Cowork, and OpenClaw"
-last_updated: "2026-04-16"
+last_updated: "2026-08-29"
 ---
 
 # Product Overview and Features
@@ -204,10 +204,10 @@ AI-powered meeting intelligence:
 - **Interactive Q&A** — Ask questions during meetings with optional knowledge search
 - **Real-time coaching** — Contextual suggestions during meetings, triggered at conversationally relevant moments. Saved transcripts include extracted decisions and open questions
 - **Meeting prep** — Full workflow for researching attendees and preparing briefings
-- **Device support** — Works with recording devices like Plaud and Limitless Pendant
+- **In-person capture** — Imports Plaud's finished transcript or records a voice note directly with Quick Capture
 - **Import** — Bring transcripts from Fireflies, Fathom, or Granola
 
-**See also:** [Meetings and Notetaker](library://rebel-system/help-for-humans/meetings-and-notetaker.md)
+**See also:** [Meetings and Notetaker](rebel://library/rebel-system%2Fhelp-for-humans%2Fmeetings-and-notetaker.md)
 
 ### Session Modes
 
