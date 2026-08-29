@@ -4,9 +4,12 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ---
 
-## v0.4.63 — Aug 19-27, 2026
+## v0.4.63 — Aug 19-29, 2026
 
 ### Highlights
+
+<!-- detail: Operators you can see in a shared Space now start as Available. Add one to use it in conversations; changes made to the shared version through Rebel are included automatically. Choose Customise when you want your own editable version, which stops following later shared changes. Changes made directly to the file outside Rebel may not appear yet. -->
+- **Add operators from shared Spaces to use them in your conversations** — Shared operators now start as **Available** until you add them. Edits made to the shared version through Rebel are included automatically; choose **Customise** when you want an independent version instead. Shared expertise, on your terms.
 
 <!-- detail: Actions set to finish on their own now move out of Active and into In progress as soon as you send them, so the list in front of you only holds work that still needs you. On desktop and phone they come back to Active with a plain-language reason if Rebel needs an approval or an answer, or if the work was cut short. The instruction now survives approvals and mid-task questions, which is where it used to get lost. -->
 - **Your Actions list clears as you work** — Send an Action with **Mark done when finished** on and it moves straight to **In progress**, then to **Done** when it genuinely completes — or back to **Active** with the reason on the card when it needs you. The instruction now sticks through approvals and questions instead of quietly getting lost, and your phone follows the same flow. One list, working its way down.
