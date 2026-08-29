@@ -175,7 +175,7 @@ All MCP tools are called via the Super-MCP router as tool calls (not Bash/shell 
 **A tool named in a skill, automation, or instruction (e.g. "call `rebel_inbox_list`", "use `rebel_search_files`", or any `Package__tool`) is a `tool_id` for a connected package, not a directly-callable tool — reach it through the discovery flow below, never as a bare top-level call (which returns `Unknown tool`).** The built-in `rebel_navigate_app`, `rebel_get_app_screenshot`, and `rebel_operator__consult` are the exception — they're in your tool list and called directly.
 
 ```
-mcp__super-mcp-router__use_tool(
+use_tool(
   package_id="GoogleWorkspace-user-example-com",
   tool_id="search_workspace_emails",
   args={ "query": "from:someone@domain.com newer_than:7d", "max_results": 5 }
