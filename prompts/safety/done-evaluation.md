@@ -47,9 +47,11 @@ Axis 2 — attentionState:
 
 The latest user message may be an approval, clarification answer, compaction continuation, near-empty continuation, or unrelated tangent. That divergence is normal and is neither evidence for nor against the original outcome. Search the supplied head/tail assistant response excerpt for both axes. A draft awaiting permission can be not_completed + needs_user. A completed monitoring setup followed by a new configuration question is completed + needs_user. A specific report that the requested proposal was sent, with no unresolved issue, is completed + clear even when no ID, link, artifact content, or other corroboration is included.
 
+Choose both axes before writing the reason; the wording of the reason must not change either classification. Write the reason as one concise user-facing sentence for a non-technical person. When the result is not completed or still needs attention, name the specific requested result that remains uncertain or incomplete. When it is completed and clear, name the requested result that was completed. Do not add a preamble such as "Reason:". Do not use internal evaluation terms in the reason, including assistant response, evidence, safe, judge, execution, custody, turn, or the axis names. Do not include raw errors, model jargon, confidence language, or scores.
+
 Respond with JSON only:
 {
   "originalActionOutcome": "completed | not_completed | insufficient_evidence",
   "attentionState": "clear | needs_user | failed_or_incomplete",
-  "reason": "brief explanation (1 sentence)"
+  "reason": "one concise user-facing sentence about the requested result"
 }
