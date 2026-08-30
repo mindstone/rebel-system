@@ -133,7 +133,7 @@ Rebel integrates with Plaud voice recorders (NotePin, Note, NotePro) for meeting
 
 - **Plaud owns transcription**: Rebel imports the transcript Plaud has already produced; your Rebel Voice provider is not involved
 - **Visible waiting**: If Plaud has not transcribed a recording yet, Rebel keeps checking and shows that it is waiting
-- **Clear remedy**: Finish the transcript in the Plaud app, then choose **Sync Now** in Rebel
+- **Clear remedy**: Finish the transcript in the Plaud app, then choose **Sync** in Rebel
 - **One transcript**: Rebel no longer offers Retranscribe or runs a second Whisper pass over Plaud audio
 
 See [Voice Recorders](rebel://library/rebel-system%2Fhelp-for-humans%2Fvoice-recorders.md) for full setup and troubleshooting.

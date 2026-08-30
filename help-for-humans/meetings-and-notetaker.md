@@ -281,7 +281,7 @@ For a conversation in the room, you can import a Plaud transcript or record dire
 
 Connect Plaud under **Settings → Meetings → Voice Recorders**, record as usual, then sync through the Plaud app. Plaud transcribes the recording; Rebel imports that finished transcript and files it with your other meetings. Your Voice provider in Rebel is not used for Plaud.
 
-If Plaud has not made a transcript yet, Rebel shows the recording as **waiting** and checks again. After a day, an Action tells you what is missing. Open the Plaud app, let it finish transcribing, then choose **Sync Now** in Rebel. There is no Retranscribe action in Rebel, because it no longer runs a competing transcription pass over Plaud recordings.
+If Plaud has not made a transcript yet, Rebel shows the recording as **waiting** and checks again. After a day, an Action tells you what is missing. Open the Plaud app, let it finish transcribing, then choose **Sync** in Rebel. There is no Retranscribe action in Rebel, because it no longer runs a competing transcription pass over Plaud recordings.
 
 ### Quick Capture
 

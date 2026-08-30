@@ -30,14 +30,14 @@ Your Voice provider in Rebel therefore does not affect Plaud imports.
 
 1. Sync the recording in the Plaud app.
 2. Let Plaud finish its transcript.
-3. Rebel checks for finished transcripts every 15 minutes by default. Choose **Sync Now** in Settings if you would rather not wait for the next check.
+3. Rebel checks for finished transcripts every 15 minutes by default. Choose **Sync** in Settings if you would rather not wait for the next check.
 4. The imported transcript is filed in your meeting transcript destination with a useful title.
 
 ### If Plaud has not transcribed it yet
 
 Rebel shows the recording as waiting. Waiting is not failure, and Rebel does not invent a transcript or quietly send the audio somewhere else.
 
-If it is still waiting after a day, Rebel adds an Action explaining what is missing and checks again daily. Open the Plaud app, finish the transcription there, then choose **Sync Now** or wait for the next check.
+If it is still waiting after a day, Rebel adds an Action explaining what is missing and checks again daily. Open the Plaud app, finish the transcription there, then choose **Sync** or wait for the next check.
 
 There is no **Retranscribe** action in Rebel. Plaud owns the Plaud transcript, which keeps one recording from acquiring two competing versions of what was said.
 
@@ -45,10 +45,10 @@ There is no **Retranscribe** action in Rebel. Plaud owns the Plaud transcript, w
 
 | Problem | What to do |
 |---------|------------|
-| Recording is waiting for a transcript | Open the Plaud app and let Plaud finish transcribing it, then choose **Sync Now** |
+| Recording is waiting for a transcript | Open the Plaud app and let Plaud finish transcribing it, then choose **Sync** |
 | Recordings are not appearing | Check that they uploaded in the Plaud app and that Plaud shows a finished transcript |
 | Plaud says it is not connected | Reconnect it in **Settings → Meetings → Voice Recorders** |
-| Sync looks stuck | Choose **Sync Now** for a fresh check |
+| Sync looks stuck | Choose **Sync** for a fresh check |
 
 ## Quick Capture
 
