@@ -1,6 +1,6 @@
 ---
 description: "What Rebel can and can't do without asking you first"
-last_updated: "2026-08-18"
+last_updated: "2026-08-31"
 ---
 
 # Permissions — What Rebel Can Do
@@ -53,9 +53,9 @@ Your Safety Rules add another layer — custom natural language rules that tell 
 
 Point Rebel at a file or folder outside your spaces — say, a Downloads folder or a project on your Desktop — and it'll ask first, in plain language, before reading it. You choose how long that permission lasts: just this once, for the rest of this conversation, or always.
 
-- **Manage what you've allowed** — Go to **Settings → Safety → "Folders Rebel can read"** to see every folder you've granted, and revoke any of them at any time
+- **Manage what you've allowed** — Go to **Settings → Safety → Locations** to see every folder you've granted, and revoke any of them at any time
 - **Attach a file, skip the extra ask** — If you attach or drop a file into a conversation, Rebel can just read it — no separate approval needed for that file
-- **Some places stay off-limits** — Credentials, keychains, and other sensitive app data are never covered by a folder grant, even a broad one
+- **Folders with keys and passwords say so** — When you allow a folder, Rebel checks it once for the places that usually hold keys and passwords — your `.ssh` folder, keychains, browser profiles. If any are in there, Rebel names them and asks you to confirm before the folder is allowed. Decline, and nothing is granted; confirm, and the folder works like any other you've allowed. The same check runs when you point a Space at a folder.
 - **Reading only, for now** — This permission covers reading files outside your workspace; saving or editing outside your spaces isn't available yet
 
 If you ever see an approval request targeting a folder or file you were not expecting, hit **Deny** and treat it as suspicious until you've checked it properly.

@@ -4,7 +4,7 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ---
 
-## v0.4.63 — Aug 19-29, 2026
+## v0.4.63 — Aug 19-31, 2026
 
 ### Highlights
 
@@ -25,6 +25,9 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Improvements
 
+<!-- detail: 260830_live-tool-lane-parity (internal planning doc; CE2 bug_mode). Rebel used to refuse certain paths inside a folder you had granted — places that usually hold keys and passwords — every single time, forever, with no way to say yes. Access is now checked once, at the moment you grant it: if the folder contains credential locations, the card names them and Allow means allow from then on. The same one-time check runs when a Space is created or pointed at a new folder. Folders granted before this change keep working unchanged. Keep public copy non-technical — no carve-out/grant internals. -->
+- **Folder permissions ask once, not forever** — When you give Rebel access to a folder, Rebel now checks it up front for the kind of places that usually hold keys and passwords. If it finds any, it says so at the moment you're deciding, and allowing the folder means allowing it — Rebel stops refusing those paths on every later visit. The same applies when you link a new Space. Folders you've already set up keep working exactly as they were. Consent, asked once, remembered.
+
 <!-- Keep this entry about the user-visible improvement. The implementation details belong in the internal changelog; public copy should not turn a quieter safety experience into a technical advisory. -->
 - **Rebel now understands commands instead of treating them all the same** — A routine command used to look like one mysterious lump, which meant ordinary work could prompt you while unusual work did not get enough attention. Rebel now looks at what each part actually does, so everyday reading and setup work gets out of the way more often while unclear work still gets a proper pause. Fewer interruptions, better judgment. The machinery remains sensibly suspicious of mystery, as any capable colleague should be.
 
@@ -41,6 +44,9 @@ What's new in Rebel. We ship fast, so there's always something.
 - **Error messages that tell you what happened, whether your work's safe, and what to do** — When something goes wrong mid-task — a rate limit, a billing snag, a dropped connection — Rebel's messages used to be charming but cryptic ("the provider asked for a breather"). They now lead with the plain facts: what happened, that your message is still here, and the next step — naming the provider where we can, and telling you *when* a rate limit resets ("try again after 8:20pm") when the service says so. The wit still shows up, just after the useful part. A breather you can actually time.
 
 ### Fixes
+
+<!-- detail: 260830_live-tool-lane-parity (internal planning doc; CE2 bug_mode). The Live voice lane had duplicated the ordinary turn's tool-execution wiring and the copy had lost symlink trust and the write-approval hook, so voice file tools could not reach linked Spaces or shared folders at all and an approved save failed immediately. Both lanes now share one derivation, so spoken and typed requests get identical file access and review; a save that needs you is staged with a Save card and Rebel says so out loud (spoken "yes" never approves; "skip the save" cancels). Execution is tied to the conversation, not the voice connection. Keep public copy non-technical — no lane/hook/factory internals. -->
+- **Live conversations can finally reach your files** — Ask Rebel something out loud about a document in one of your Spaces, or to save a note there, and — nothing. Voice conversations couldn't open files in linked Spaces or shared folders at all, and a save it had already been given the go-ahead for would stop and claim it needed permission nobody had asked for. Now a voice conversation reads and saves in your Spaces and shared folders exactly like a typed one: the same review before anything is written, the same respect for a folder you've marked read-only, and when a save needs your OK, Rebel says out loud that it's waiting on the Save card — and keeps talking while you decide. Your voice, finally holding a pen.
 - **Actions no longer call time on work that is still running:** A long-running Action could be marked **Not finished** while Rebel was still working, then stay open after the work completed. Rebel now checks the work itself first; when an Action really is waiting on you, the notice names it, explains why, and lets you continue, mark it done, or dismiss the notice.
 - **Rebel no longer runs out of breath starting up when you have thousands of conversations** — With a very full history, Rebel could run out of memory while launching and never finish loading. Startup now reads only what it needs, and the one-time tidy-up of older conversations now actually sticks instead of starting over every launch. The first launch after this update may spend a few minutes quietly tidying in the background; after that, startup is back to quick.
 - **When your internet drops, Rebel says so** — Instead of blaming the AI provider and sending you to a status page you can't reach, Rebel now says **“It looks like you're offline.”** and offers one useful next step: **Try again**. A smaller mystery, and a much better next move.
