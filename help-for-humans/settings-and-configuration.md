@@ -139,8 +139,9 @@ Use **Settings → Privacy & Safety** for:
 - **Safety Rules** — natural-language rules that tell Rebel what's OK and what needs your approval
 - **What Rebel can do → Never allowed** — your permanent blocks from **Always block** approvals; enforced quietly across all conversations
 - **Rule suggestions from chat** — turn off the consent cards Rebel shows when you state a durable approval in conversation
-- **Trusted tools** — tools you've allowed to run without asking
-- **File approvals and memory-space save permissions** — control over changes to your files and memory
+- **What Rebel can do → Allowed without asking** — saved permissions, including tools you've allowed to run without asking
+- **Memory Spaces** — control over when Rebel asks before saving to each space
+- **Locations** — folders outside your spaces that you've allowed Rebel to read
 - **Privacy Mode** — a temporary master switch for extra caution on sensitive work
 - **Activity log** — a record of what Rebel has done
 - **Privacy and data cards** — how your data is stored and used
