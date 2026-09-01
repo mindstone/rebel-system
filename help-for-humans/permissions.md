@@ -11,7 +11,7 @@ For the full version, see [Security and Tool Safety](library://rebel-system/help
 
 For the five-paragraph version of what saying yes or no actually does, see [The Approval Contract](rebel://library/rebel-system%2Fhelp-for-humans%2Fapproval-contract.md).
 
-**Also in Security and Tool Safety:** permanent blocks (**What Rebel will never do** in Settings) and rule suggestions from chat — both go through the same notification drawer as ordinary approvals.
+**Also in Security and Tool Safety:** permanent blocks (**What Rebel can do → Never allowed** in Settings) and rule suggestions from chat — both go through the same notification drawer as ordinary approvals.
 
 ## The Short Version
 
