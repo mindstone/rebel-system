@@ -1,6 +1,6 @@
 ---
 description: "How Rebel protects you from risky actions and what requires your explicit permission"
-last_updated: "2026-08-18"
+last_updated: "2026-09-01"
 ---
 
 # Security and Tool Safety
@@ -21,9 +21,11 @@ See [Your Safety Rules](#your-own-rules-custom-safety-instructions) below for de
 
 ## When Rebel Asks for Approval
 
-When Rebel pauses for your approval, a bar appears at the bottom of the conversation: **"Rebel paused. X action(s) need your OK"** — click **View** to open the notification drawer.
+When Rebel needs your approval to continue an action, a bar appears at the bottom of the conversation: **"Rebel paused. X action(s) need your OK"** — click **View** to open the notification drawer. Rebel can still finish independent work while that action waits.
 
 The notification drawer (the panel on the right) groups pending approvals by conversation. You can review them one at a time or use **Allow all** / **Deny all** to handle a batch. It also surfaces **rule suggestion** cards when Rebel thinks something you said in chat is worth saving as a safety rule — confirm before anything is added (same flow as [Saving rules from chat](#rule-learning) below). When the drawer is closed, a subtle notification pill appears to let you know approvals are waiting — it's unobtrusive but hard to miss, so nothing slips through the cracks.
+
+After Rebel finishes its answer, it checks whether each saved tool action is genuinely still needed. If it is, the card stays put and waits for you. If Rebel found it no longer needs the action, the card goes away and Rebel says: **“Rebel decided not to use this. It was never run.”** You get one receipt in the conversation, even when several requests were cleared together. Prepared connector actions and files stay for your review; Rebel does not quietly bin work it already staged.
 
 ### Tool approvals
 
