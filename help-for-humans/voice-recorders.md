@@ -1,144 +1,78 @@
 ---
-description: "How to use physical voice recorders like Limitless Pendant and Plaud to capture in-person meetings and conversations."
-last_updated: "2026-04-16"
+description: "How Plaud transcript sync and Rebel's Quick Capture recorder handle in-person meetings, waiting transcripts, and recoverable audio"
+last_updated: "2026-08-29"
 ---
 
 # Voice Recorders
 
-Rebel integrates with physical voice recorders to capture in-person meetings, conversations, and ideas when you're away from your computer. Your recordings get the same AI analysis as video meetings.
-
+For a conversation happening in the room, Rebel offers two routes: connect Plaud and import the transcript Plaud has already made, or use **Quick Capture** to record from your computer's microphone.
 
 ## See Also
 
-- [Voice and Audio](library://rebel-system/help-for-humans/voice-and-audio.md) — Voice input, transcription providers, and audio settings
-- [Meetings and Notetaker](library://rebel-system/help-for-humans/meetings-and-notetaker.md) — Video meeting capture and notetaker
-- [Spaces](library://rebel-system/help-for-humans/spaces.md) — Where transcripts are stored
-- [Actions](library://rebel-system/help-for-humans/actions.md) — Meeting analysis results appear in your Actions
-
-
-## Supported Devices
-
-| Device | Connection | Best For |
-|--------|------------|----------|
-| **Limitless Pendant** | Bluetooth (real-time) | Always-on capture, instant access |
-| **Plaud NotePin/Note** | Cloud sync | Portable recording, longer battery |
-
-
-## Limitless Pendant
-
-The Limitless Pendant connects via Bluetooth for real-time audio streaming. Press the button to start recording, and your transcript appears moments after you stop.
-
-### Setup
-
-1. Go to **Settings → Meetings → Voice Recorders**
-2. Ensure Bluetooth is enabled on your computer
-3. Click **Scan for devices**
-4. Select your Limitless Pendant from the list
-5. Wait for pairing to complete
-
-Once paired, Rebel auto-connects to your Pendant on startup.
-
-### Recording
-
-- **Start:** Press the button on your Pendant (Rebel detects it automatically)
-- **During:** You'll see a recording indicator with elapsed time
-- **Stop:** Press the button again
-- **After:** Transcript appears in your workspace within a minute or two
-
-### What You'll See
-
-When connected, a status indicator shows:
-- Device name
-- Battery level
-- "Record" button (for manual start)
-
-During recording, the meeting status indicator shows the active recording state.
-
-### Where Transcripts Go
-
-Transcripts are saved to your configured space:
-- **Default:** Chief of Staff space
-- **Path:** `memory/sources/YYYY/MM-MMM/DD/`
-- **Filename:** `yyMMdd_HHmm_meeting_limitless_smart-title.md`
-
-Change the destination in **Settings → Meetings → Transcript Storage**.
-
-### Troubleshooting
-
-| Problem | Solution |
-|---------|----------|
-| Device not found | Ensure Bluetooth is enabled in System Settings |
-| Won't connect | Try factory resetting the Pendant, then re-pair |
-| Disconnects frequently | Move closer to your computer; check Pendant battery |
-| No transcript after recording | Check that transcription is configured. Plaud follows your active voice provider; the live Limitless path still needs OpenAI set up today |
-
+- [Voice and Audio](rebel://library/rebel-system%2Fhelp-for-humans%2Fvoice-and-audio.md) — Voice providers, dictation, and audio settings
+- [Meetings and Notetaker](rebel://library/rebel-system%2Fhelp-for-humans%2Fmeetings-and-notetaker.md) — Video meetings, imports, and meeting transcripts
+- [Spaces](rebel://library/rebel-system%2Fhelp-for-humans%2Fspaces.md) — Where transcripts and successful recording audio are stored
+- [Actions](rebel://library/rebel-system%2Fhelp-for-humans%2Factions.md) — Where Plaud waiting reminders and meeting follow-ups appear
 
 ## Plaud Devices
 
-Plaud devices (NotePin, Note, NotePro) sync via the cloud. Record on your device, sync through the Plaud mobile app, and Rebel pulls the recording automatically.
+Plaud devices such as NotePin, Note, and NotePro sync through Plaud's cloud. Record on the device, open the Plaud app, and let Plaud upload and transcribe the recording. Rebel imports Plaud's finished transcript; it does not download the recording and transcribe it again.
 
-Plaud transcription follows the voice provider you have selected in **Settings → Agent & Voice → Voice**. That can be OpenAI Whisper, ElevenLabs Scribe, or a local model such as Moonshine (and Parakeet on desktop).
+Your Voice provider in Rebel therefore does not affect Plaud imports.
 
 ### Setup
 
-1. Go to **Settings → Meetings → Voice Recorders**
-2. Click **Connect Plaud**
-3. Sign in to your Plaud account
-4. Grant Rebel permission to access your recordings
+1. Go to **Settings → Meetings → Voice Recorders**.
+2. Choose **Connect Plaud** and sign in.
+3. Allow Rebel to access your Plaud recordings.
 
-### Recording Workflow
+### What happens after you record
 
-1. **Record** on your Plaud device as usual
-2. **Sync** via the Plaud mobile app (recordings upload to Plaud's cloud)
-3. **Wait** — Rebel checks for new recordings every 15 minutes
-4. **Done** — Transcript appears in your workspace with an AI-generated title
+1. Sync the recording in the Plaud app.
+2. Let Plaud finish its transcript.
+3. Rebel checks for finished transcripts every 15 minutes by default. Choose **Sync** in Settings if you would rather not wait for the next check.
+4. The imported transcript is filed in your meeting transcript destination with a useful title.
 
-Click **Sync Now** in Settings to import immediately instead of waiting.
+### If Plaud has not transcribed it yet
 
-### Where Transcripts Go
+Rebel shows the recording as waiting. Waiting is not failure, and Rebel does not invent a transcript or quietly send the audio somewhere else.
 
-Same location as Limitless recordings:
-- **Path:** `memory/sources/YYYY/MM-MMM/DD/`
-- **Filename:** `yyMMdd_HHmm_meeting_plaud_smart-title.md`
+If it is still waiting after a day, Rebel adds an Action explaining what is missing and checks again daily. Open the Plaud app, finish the transcription there, then choose **Sync** or wait for the next check.
 
-### Large Recordings
+There is no **Retranscribe** action in Rebel. Plaud owns the Plaud transcript, which keeps one recording from acquiring two competing versions of what was said.
 
-Plaud recordings can be long — hour-long meetings, full-day conferences, the lot. Rebel handles this automatically:
+### Plaud troubleshooting
 
-- **Size-based chunking**: When a recording exceeds the active provider's file limit, Rebel splits it into optimally-sized pieces when needed
-- **Per-chunk retries**: If any piece fails (timeout, network blip), just that piece is retried — not the entire recording
-- **Parallel processing**: Chunks are transcribed concurrently for faster results on long recordings
-- **Provider-aware behaviour**: ElevenLabs Scribe can usually handle very large files directly, while local providers such as Moonshine still work fine — they just follow their own processing path
+| Problem | What to do |
+|---------|------------|
+| Recording is waiting for a transcript | Open the Plaud app and let Plaud finish transcribing it, then choose **Sync** |
+| Recordings are not appearing | Check that they uploaded in the Plaud app and that Plaud shows a finished transcript |
+| Plaud says it is not connected | Reconnect it in **Settings → Meetings → Voice Recorders** |
+| Sync looks stuck | Choose **Sync** for a fresh check |
 
-You don't need to do anything special. Record as long as you like; Rebel figures out the rest.
+## Quick Capture
 
-### Troubleshooting
+Quick Capture is Rebel's built-in voice-note recorder. Open the Notetaker menu at the top of Rebel and choose **Record from mic**. Speak for as long as you need, then stop the recording.
 
-| Problem | Solution |
-|---------|----------|
-| Recordings not syncing | Open Plaud mobile app and ensure recordings uploaded to cloud |
-| "Not connected" error | Re-authenticate in Settings → Meetings |
-| Missing old recordings | Rebel imports new recordings; very old ones may not appear |
-| Sync stuck | Click **Sync Now** to force a fresh sync |
-| Transcription fails after sync | Check the voice provider selected in **Settings → Agent & Voice → Voice**. Cloud providers need the right API key; local Moonshine also works if its model is installed |
-| "Install ffmpeg for chunking" error | Very large recordings may need ffmpeg installed on your system for splitting. Most people won't hit this |
+Quick Capture uses whichever Voice provider you configured in Rebel. That includes your Rebel plan, OpenRouter, your own provider key, and supported on-device transcription. Long recordings are handled in several pieces at once, with visible **Transcribing n of total…** progress.
 
+### Where the recording goes
 
-## Transcript Format
+On success, Rebel saves the transcript in your configured meeting transcript destination and keeps the audio beside it.
 
-Both devices produce identical transcripts with:
-- AI-generated title based on content
-- Date, time, and duration
-- Device type and account info
-- Full transcript text
+If transcription fails, Rebel keeps the original WAV instead of throwing away the only copy. The error includes **Show file**; choose it to reveal the recording on your computer. You can preserve or transcribe it elsewhere while you sort out the Voice setting or provider error.
 
-**Note:** Physical recordings produce single-speaker transcripts (no speaker labels) because they capture one mixed audio stream, unlike video meetings where each participant has separate audio.
+If you selected an on-device provider and it fails, Rebel tells you. It does not silently send that recording through a managed cloud key. You can choose a different provider in **Settings → Voice** and make a new recording when you are ready.
 
+### Quick Capture troubleshooting
 
-## Tips
+| Problem | What to do |
+|---------|------------|
+| **Record from mic** cannot start | Check microphone permission, then try again |
+| Transcription failed | Choose **Show file** first so you know where the kept WAV is, then check **Settings → Voice** |
+| On-device model is not ready | Download or repair it in **Settings → Voice**, or explicitly choose another provider |
+| A long recording seems busy | Leave Rebel open; the progress count shows completed pieces |
 
-- **Long recordings:** Rebel automatically handles recordings of any length by splitting them into pieces and retrying any that fail. No manual intervention needed.
-- **Background noise:** Find a quieter spot when possible — transcription quality depends on audio clarity
-- **Battery life:** The Limitless indicator shows battery level; charge before important meetings
-- **Multiple devices:** You can have both Limitless and Plaud connected simultaneously
-- **Pending recordings:** If transcription fails, a counter appears near the microphone button. Tap it to see what's waiting, retry, or dismiss. See [Voice and Audio](library://rebel-system/help-for-humans/voice-and-audio.md) for details.
+## Transcript notes
+
+In-room recordings usually contain one mixed audio stream, so they may not have reliable speaker labels. The resulting transcript still follows the same storage and meeting-analysis workflow as other meeting sources.

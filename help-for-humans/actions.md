@@ -1,6 +1,6 @@
 ---
 description: "How to use Rebel Actions to save tasks for later and have Rebel execute them on demand."
-last_updated: "2026-08-17"
+last_updated: "2026-08-27"
 ---
 
 # Rebel Actions
@@ -60,15 +60,19 @@ This filtering works both for new items and retroactively: when Rebel's filterin
 
 ## Viewing and Executing
 
-A sidebar down the left lets you switch between four views:
+A sidebar down the left lets you switch between six views:
 
 **Active** — Everything still waiting for you. Items are grouped by when they're due — **Today**, **This Week**, **Future date**, and **Someday** — so the list reads like a plan, not a pile. Each item shows its title and description, when it was added, any referenced files, links, or emails (Linear issues, GitHub PRs, Asana tasks included), and draft content if Rebel prepared something ahead of time.
 
-**Done** — Tasks you've completed, including ones Rebel finished for you.
+**Up Next** — A short focus list: just the items you've flagged as next up, in the order you queued them, capped so the list stays a shortlist rather than a second pile.
+
+**In progress** — Items Rebel is working on right now. When you send an item with **Mark done when finished** turned on, it leaves **Active** straight away and waits here, so the list in front of you only holds work that still needs a decision from you. If an item needs you again — an approval, a question, or work that stopped short — it returns to **Active** with the reason written on the card.
+
+**Done** — Tasks you've completed, including ones Rebel finished for you. An item that finished because *you* asked it to finish on its own is credited to you, not to Rebel.
 
 **Dismissed** — Things you've cleared out. A short trail stays here in case you want them back.
 
-**Auto-archived** — Stale items Rebel tidied away on your behalf, each with the reason and a one-click **Restore** (see **Auto-archived** below).
+**Handled by Rebel** — Things Rebel closed out on its own judgement: stale items it tidied away on your behalf, each with the reason and a one-click **Restore**, alongside items it decided were already done. (See **Auto-archived** below.)
 
 Above the list, **Search**, **From** (filter by source), and **Priority** narrow things down. When a filter is on, a **Clear filters** button appears so you're never stuck staring at an empty list wondering where everything went.
 
@@ -88,7 +92,7 @@ Got the title slightly wrong, or want to tweak a draft before sending? Click int
 2. Prefer to talk? Use the **mic button** for voice input.
 3. While executing, the task shows a progress indicator.
 
-**Mark done when finished:** Open an item's detail view to toggle **Mark done when finished** — when on, the conversation is marked done automatically once the task completes; leave it off to keep it active. There's a global default in Settings, and each item can override it.
+**Mark done when finished:** Open an item's detail view to toggle **Mark done when finished** — when on, the item leaves your **Active** list the moment you send it, waits in **In progress** while Rebel works, and lands in **Done** once the task genuinely completes. The instruction sticks for the whole job: it survives approvals, questions Rebel asks you along the way, retries, and long tasks that need to pause and pick back up. If the item genuinely needs you again, it comes back to **Active** with the reason on the card — and an item cut short by a crash or a restart returns the same way, with a reason, instead of sitting there looking busy. Leave the toggle off to keep the item in **Active** as it works, exactly as before. There's a global default in Settings, and each item can override it. Your phone follows the same **Active** / **In progress** / needs-you flow. Actions you start on the web keep the instruction and reach **Done** correctly too, though the web Actions screen doesn't yet have a separate **In progress** view of its own.
 
 **Voice input:** Click the mic button to dictate your context instead of typing it.
 
@@ -122,7 +126,7 @@ Items that surface on the **Today** section of your homepage have inline actions
 - **Archive** — Put it away for later
 - **Dismiss** — Clear it from your list (it keeps a short trail in the Dismissed view, and Undo brings it straight back)
 
-**Auto-done:** Toggle this on for items where Rebel has already handled the task (e.g., after executing an action item). When auto-done is enabled, completed items are automatically marked as done so you don't have to.
+**Mark done when finished:** Toggle this on for items you want Rebel to close out itself. The item leaves **Active** when you send it, waits in **In progress**, and is marked done for you once the task actually completes — or comes back with a reason if it needs you. (This was previously called *Auto-done*.)
 
 
 ## Archiving

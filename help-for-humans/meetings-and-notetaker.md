@@ -1,6 +1,6 @@
 ---
-description: "How Rebel captures meeting transcripts, recognises more meeting links, tracks missed vs scheduled meetings, and helps you prepare for upcoming calls"
-last_updated: "2026-07-27"
+description: "How Rebel captures online and in-person meetings, including Plaud waiting transcripts, Quick Capture recovery, meeting prep, and follow-up"
+last_updated: "2026-08-29"
 ---
 
 # Meetings and Notetaker
@@ -10,11 +10,11 @@ Rebel can join your video meetings as a notetaker, capturing transcripts and gen
 
 ## See Also
 
-- [actions.md](library://rebel-system/help-for-humans/actions.md) — Meeting analysis results appear in your Actions
-- [spaces.md](library://rebel-system/help-for-humans/spaces.md) — Where transcripts are stored
-- [settings-and-configuration.md](library://rebel-system/help-for-humans/settings-and-configuration.md) — Customize meeting behavior in Settings
-- [automations.md](library://rebel-system/help-for-humans/automations.md) — Trigger workflows automatically when transcripts arrive
-- [voice-and-audio.md](library://rebel-system/help-for-humans/voice-and-audio.md) — Voice recording providers and Plaud transcription options
+- [Actions](rebel://library/rebel-system%2Fhelp-for-humans%2Factions.md) — Meeting analysis results and Plaud waiting reminders appear in your Actions
+- [Spaces](rebel://library/rebel-system%2Fhelp-for-humans%2Fspaces.md) — Where transcripts are stored
+- [Settings and Configuration](rebel://library/rebel-system%2Fhelp-for-humans%2Fsettings-and-configuration.md) — Customize meeting behaviour in Settings
+- [Automations](rebel://library/rebel-system%2Fhelp-for-humans%2Fautomations.md) — Trigger workflows automatically when transcripts arrive
+- [Voice Recorders](rebel://library/rebel-system%2Fhelp-for-humans%2Fvoice-recorders.md) — Plaud and Quick Capture setup, waiting states, and kept audio
 - [The Open Build](rebel://library/rebel-system%2Fhelp-for-humans%2Ffair-source-and-open-source-build.md) — In the open build the recorder is a one-time add-on you install yourself, using your own recording account
 
 
@@ -273,38 +273,23 @@ Transcripts are routed to your spaces based on meeting type:
 Configure routing in **Settings → Meetings → Transcript Storage**.
 
 
-## Physical Recording Devices
+## Recording In-Person Meetings
 
-Rebel supports physical voice recorders for capturing in-person meetings, conversations, and ideas when you're away from your computer.
+For a conversation in the room, you can import a Plaud transcript or record directly with Quick Capture.
 
-### Plaud Voice Recorder
+### Plaud
 
-Rebel integrates with Plaud devices (NotePin, Note, NotePro) for portable voice recording:
+Connect Plaud under **Settings → Meetings → Voice Recorders**, record as usual, then sync through the Plaud app. Plaud transcribes the recording; Rebel imports that finished transcript and files it with your other meetings. Your Voice provider in Rebel is not used for Plaud.
 
-1. **Connect your Plaud** — Sync your device via USB or enable cloud sync in your Plaud account
-2. **Record anywhere** — Use your Plaud during meetings, interviews, or while brainstorming
-3. **Auto-process** — Recordings sync automatically and Rebel transcribes them
-4. **Smart filing** — Transcripts are saved with AI-generated titles and summaries
+If Plaud has not made a transcript yet, Rebel shows the recording as **waiting** and checks again. After a day, an Action tells you what is missing. Open the Plaud app, let it finish transcribing, then choose **Sync** in Rebel. There is no Retranscribe action in Rebel, because it no longer runs a competing transcription pass over Plaud recordings.
 
-**Features:**
-- **Large file support** — Long recordings are automatically chunked for reliable transcription
-- **Local transcription** — Option to transcribe locally for privacy (no audio leaves your device)
-- **Cloud sync** — Full cloud sync integration for seamless transfer
-- **Actions notification** — Get a summary in your Actions when processing completes
+### Quick Capture
 
-To process a Plaud recording manually, ask Rebel: *"Process my Plaud recording"*
+Open the Notetaker menu at the top of Rebel and choose **Record from mic**. Quick Capture records a voice note with the current Voice provider—including your Rebel plan or OpenRouter—and shows progress while long recordings are transcribed in several pieces.
 
+On success, the transcript and audio are filed in your meeting destination. If transcription fails, Rebel keeps the WAV and offers **Show file** in the error. The provider may have had a bad day; your only copy of the recording needn't join it.
 
-### Limitless Pendant
-
-Rebel integrates with the Limitless Pendant for in-person meeting capture:
-
-1. **Connect your Pendant** — Go to **Settings → Meetings** and connect your Limitless account
-2. **Record in person** — Use your Pendant during meetings, workshops, or conversations
-3. **Physical button** — Press the button on your pendant to start/stop recording
-4. **Auto-import** — Transcripts sync automatically to your workspace
-
-Pendant recordings follow the same transcript storage and AI analysis workflow as video meetings. Your in-person conversations get the same treatment as your video calls.
+For setup and troubleshooting, see [Voice Recorders](rebel://library/rebel-system%2Fhelp-for-humans%2Fvoice-recorders.md).
 
 
 ## External Providers

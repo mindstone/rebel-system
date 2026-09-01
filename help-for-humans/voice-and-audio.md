@@ -1,6 +1,6 @@
 ---
 description: "Guide to Rebel's voice features: dictation, Live conversations, read-aloud, transcription providers, unified mic buttons, and custom vocabulary"
-last_updated: "2026-08-12"
+last_updated: "2026-08-29"
 ---
 
 # Voice and Audio
@@ -76,9 +76,9 @@ Press the global voice activation hotkey (default: **Ctrl+Alt+Space**, or custom
 
 ### Quick Capture (Voice Notes)
 
-Sometimes you want to capture a thought without starting a full conversation. Quick Capture lets you record a voice note on the spot — tap the microphone, speak, and done. Rebel transcribes it and feeds the transcript into your context, so it's available the next time you need it.
+Sometimes you want to capture a thought without starting a full conversation. Open the Notetaker menu and choose **Record from mic**. Quick Capture uses your configured Voice provider—including a Rebel plan or OpenRouter—and files the transcript for later use. Long recordings show piece-by-piece transcription progress.
 
-Useful for capturing ideas while walking, jotting down a meeting takeaway, or noting something you want Rebel to remember. No conversation needed — just record and move on.
+If transcription fails, Rebel keeps the WAV and the error offers **Show file**. No conversation needed, and no recording quietly thrown overboard.
 
 
 ## Hearing Rebel Speak
@@ -129,14 +129,14 @@ The audio stays inside Rebel the whole time. You can pause or stop it at any poi
 
 ### Plaud Voice Recorder
 
-Rebel integrates with Plaud voice recorders (NotePin, Note, NotePro) for high-quality meeting and conversation recordings:
+Rebel integrates with Plaud voice recorders (NotePin, Note, NotePro) for meeting and conversation transcripts:
 
-- **Cloud sync**: Recordings sync from Plaud's mobile app automatically
-- **Smart chunking**: Large recordings are split into manageable pieces for reliable transcription — even hour-long meetings
-- **Per-chunk retries**: If a piece fails, Rebel retries just that piece instead of starting over
-- **ElevenLabs option**: Can use ElevenLabs Scribe for faster transcription of large files (no chunking needed)
+- **Plaud owns transcription**: Rebel imports the transcript Plaud has already produced; your Rebel Voice provider is not involved
+- **Visible waiting**: If Plaud has not transcribed a recording yet, Rebel keeps checking and shows that it is waiting
+- **Clear remedy**: Finish the transcript in the Plaud app, then choose **Sync** in Rebel
+- **One transcript**: Rebel no longer offers Retranscribe or runs a second Whisper pass over Plaud audio
 
-See [Voice Recorders](library://rebel-system/help-for-humans/voice-recorders.md) for full setup and troubleshooting.
+See [Voice Recorders](rebel://library/rebel-system%2Fhelp-for-humans%2Fvoice-recorders.md) for full setup and troubleshooting.
 
 
 ## When Transcription Doesn't Stick
@@ -247,8 +247,8 @@ If privacy or offline use matters most, Built-in is the obvious choice on deskto
 
 ## See Also
 
-- [voice-dictation-apps](library://rebel-system/help-for-humans/voice-dictation-apps.md) — External dictation apps and tips for voice input
-- [meetings-and-notetaker](library://rebel-system/help-for-humans/meetings-and-notetaker.md) — Physical recording devices (Plaud, Limitless) and meeting transcription
-- [settings-and-configuration](library://rebel-system/help-for-humans/settings-and-configuration.md) — Full settings reference including voice options
-- [ElevenLabs connector](library://rebel-system/help-for-humans/elevenlabs-text-to-speech.md) — Music generation, text-to-speech, sound effects, and more via the bundled ElevenLabs connector
-- [keyboard-shortcuts-and-hotkeys](library://rebel-system/help-for-humans/keyboard-shortcuts-and-hotkeys.md) — All keyboard shortcuts including voice hotkey
+- [Voice Dictation Apps](rebel://library/rebel-system%2Fhelp-for-humans%2Fvoice-dictation-apps.md) — External dictation apps and tips for voice input
+- [Meetings and Notetaker](rebel://library/rebel-system%2Fhelp-for-humans%2Fmeetings-and-notetaker.md) — Plaud, Quick Capture, and meeting transcription
+- [Settings and Configuration](rebel://library/rebel-system%2Fhelp-for-humans%2Fsettings-and-configuration.md) — Full settings reference including voice options
+- [ElevenLabs connector](rebel://library/rebel-system%2Fhelp-for-humans%2Felevenlabs-text-to-speech.md) — Music generation, text-to-speech, sound effects, and more via the bundled ElevenLabs connector
+- [Keyboard Shortcuts and Hotkeys](rebel://library/rebel-system%2Fhelp-for-humans%2Fkeyboard-shortcuts-and-hotkeys.md) — All keyboard shortcuts including the voice hotkey

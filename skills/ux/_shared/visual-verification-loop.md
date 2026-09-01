@@ -52,7 +52,8 @@ DSR Reviewer consumes AFTER alone. It is acceptable to critique AFTER without BE
 - Do not use `spawn_dev_server` or `electron_start_app` for live-change reviews; they start an isolated app, not the user's real dev app. Do not use OS window, region, or desktop screenshots as substitute evidence; they can capture wallpaper or another surface while looking successful.
 - Only disclose "visual capture is blocked" after **both** the MCP path and the script fall through. The script's error message will indicate whether the dev app is missing the debug flag (ask the user to relaunch with `REMOTE_DEBUGGING_PORT=9222 npm run dev`) or is older than the in-app navigation bridge (ask the user to relaunch the latest dev with the same flag, or to navigate manually and re-run the script without `--destination`).
 - **Do not reuse a screenshot found on disk as evidence for a different surface.** Filenames are not authoritative; a file from one Settings tab does not stand in for another. Re-capture for the surface you are reviewing, even if a similar screenshot exists.
-- If neither tool is available (cloud, mobile, restricted surfaces), the first line of your response must read verbatim: `Visual verification not available here. Judging from text only.`
+- If neither tool is available (cloud or restricted surfaces), the first line of your response must read verbatim: `Visual verification not available here. Judging from text only.`
+- **Mobile is no longer a text-only surface (2026-08-31).** For mobile visual evidence, run the deterministic Maestro lane (`mobile/scripts/e2e-mobile.sh --screenshots` locally — it prints a gallery path) or, without a device, dispatch the CI lane (`gh workflow run mobile-e2e.yml --ref dev`) and read the `maestro-gallery/gallery.html` artifact. Use the verbatim text-only disclosure for mobile only when both of those are genuinely unavailable in your context.
 - When a workflow is orchestrating you in coding context, do not call screenshot tools. Read paths from your Review Packet or `imageContent` blocks already in your context.
 
 ## Branch Matrix
@@ -63,7 +64,7 @@ DSR Reviewer consumes AFTER alone. It is acceptable to critique AFTER without BE
 | Critique-only (Chief Designer ran, no implementation followed) | 2 captures: BEFORE in both themes. Custom-accent users may have 1 capture. |
 | Pure judgment (Chief Designer ran in-app, no implementation expected) | 2 captures: BEFORE in both themes (Chief Designer self-captured at chain entry). Custom-accent users may have 1 capture. |
 | DSR standalone (post-hoc review, no Chief Designer upstream) | 2 captures: AFTER in both themes (Phase 8 gate captured at chain exit). Custom-accent users may have 1 capture. |
-| Tool returned typed error, cloud, mobile, or non-visual | 0 captures plus verbatim disclosure from the typed-error mapping below. |
+| Tool returned typed error, cloud, or non-visual | 0 captures plus verbatim disclosure from the typed-error mapping below. (Mobile: capture via the Maestro lane/gallery instead — see the rule above; text-only only as last resort.) |
 
 ## Response Contract
 

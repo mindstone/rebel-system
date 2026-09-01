@@ -15,13 +15,13 @@ An app cannot read this label or change it. The label is a Rebel guarantee, not 
 
 ## Connected app permissions
 
-Permissions for connected apps are visible and manageable from **Settings → Safety → Connected app permissions**.
+Permissions for connected apps are visible and manageable from **[Settings → Safety → Connected app permissions](rebel://settings/safety#connectedAppPermissions)**.
 
 This panel shows every connected app that has access to your conversation context, what kind of access it has (which methods and tools it can call), and when you granted that access. From here you can review and revoke permissions whenever you want.
 
 ### How to revoke a connected app's permissions
 
-1. Open **Settings → Safety → Connected app permissions**
+1. Open **[Settings → Safety → Connected app permissions](rebel://settings/safety#connectedAppPermissions)**
 2. Find the app you want to remove
 3. Click **Remove access** next to that app
 
