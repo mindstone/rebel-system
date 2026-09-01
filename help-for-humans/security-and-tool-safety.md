@@ -1,6 +1,6 @@
 ---
 description: "How Rebel protects you from risky actions and what requires your explicit permission"
-last_updated: "2026-08-18"
+last_updated: "2026-09-01"
 ---
 
 # Security and Tool Safety
@@ -105,7 +105,7 @@ Some actions are considered inherently safe and run without prompting:
 - **Read-only operations** — Searching, listing, and retrieving data from connectors
 - **Web search** — Looking things up online
 - **Writing to temporary files** — Scratch work that doesn't touch your important data
-- **Trusted tools** — Tools you've marked as always allowed in [Settings → Privacy & Safety](rebel://settings/safety) skip routine checks (with two exceptions: a few especially consequential actions like calendar changes still ask every time, and [Privacy Mode](library://rebel-system/help-for-humans/privacy-mode.md) suspends trusted-tool auto-allow)
+- **Tools with standing permission** — These can skip the approval card only while their current safety rating and other protections allow it. Checked levels still inspect every request, the highest level never offers standing permission, and [Privacy Mode](library://rebel-system/help-for-humans/privacy-mode.md) suspends automatic use.
 - **Built-in safe tools** — Operations that are safe by design
 
 These skip the approval flow so you're not interrupted by routine lookups.
@@ -135,18 +135,15 @@ When Rebel is about to use a tool, a fast AI model checks the action against you
 
 **It reads the context, not just the action.** The check sees what you actually asked for — your request, and the recent back-and-forth in the conversation — not just the bare tool name. So if you say "reply to Dana and let her know I'll be late," Rebel understands that sending *that* reply is the thing you asked for. In a normal interactive conversation, clearly asking for something is itself permission for that specific action (unless one of your rules says otherwise). This is why Rebel doesn't pester you to approve the very thing you just requested.
 
-**Automations are held to a stricter standard.** When Rebel is working unattended (an automation, or acting in a background role), your earlier messages are treated as helpful context but *not* as standing permission. Anything with real-world effects that your rules don't clearly cover gets staged for your review rather than done on a hunch. (See [Automations](library://rebel-system/help-for-humans/automations.md).)
+**Automations cannot borrow permission from an earlier chat.** When Rebel is working unattended, your messages are useful context but not standing permission. The tool's safety rating, any permission you saved, and your Safety Rules decide what happens instead. Tools at the first two levels can run without separate review; higher levels keep the checks described below. (See [Automations](library://rebel-system/help-for-humans/automations.md).)
 
-**Actions with real-world effects clear a higher bar.** For anything that sends, posts, deletes, pays, or otherwise changes something out in the world, Rebel only proceeds if it's *confident* your rules cover the case — not merely that nothing forbids it. If it's only somewhat sure, it asks. For routine, reversible, read-only work the bar is lower, so you're not interrupted for lookups. In short: **silence is not permission for actions that have consequences** — when in doubt, Rebel asks.
-
-**Some actions always ask, even for trusted tools.** A small set of especially consequential actions — creating or changing calendar events is the classic example — pause for your explicit OK every time, regardless of your rules or trusted tools.
-
+**Consequences raise the safety level.** Routine, reversible, read-only work stays at the low end so lookups do not interrupt you. Sending, posting, deleting, paying, or changing something out in the world pushes a tool higher. At **Rebel can act for you**, Rebel asks the first time and checks every later request; at **Rebel always asks about this one**, it asks every time.
 
 ## Calendar Safety
 
-Rebel reads your calendar freely to help with meeting prep and scheduling — but **creating or modifying calendar events** always requires your explicit consent. Before Rebel adds, edits, or deletes a calendar event, it will pause and explain what it wants to do, then wait for your go-ahead.
+**A calendar tool's safety rating decides when Rebel asks.** Calendar and scheduling tools follow the same four levels as other tools. At either of the first two levels, Rebel can be allowed to change an event without a separate approval; that includes when an automation uses the tool on your behalf.
 
-This applies whether you're asking Rebel directly ("schedule a meeting with Alex on Thursday") or Rebel is acting on your behalf during an automation. Your calendar is read-only by default; you stay in control of what goes on it.
+At **Rebel can act for you**, Rebel asks the first time. If you choose **Any time**, it still checks every request for obvious mistakes. At **Rebel always asks about this one**, Rebel does not offer standing permission. You can review or change a tool's rating in [Settings → Safety](rebel://settings/safety), and your Safety Rules can add narrower limits — for example, requiring approval for invitations with external attendees.
 
 
 ## App Settings and Configuration
@@ -267,7 +264,7 @@ You don't have to write rules from scratch. The most natural way to build up you
 |--------|-------------|
 | **This only** | "Allow posting messages to #general in Slack" — adds a specific rule |
 | **Similar** | "Allow posting messages to any Slack channel" — adds a broader rule |
-| **Always** | Trusts the Slack tool entirely — no more approval prompts for any Slack action |
+| **Always** | Offers standing permission for the Slack tool where its current safety level allows it; higher-risk actions can still ask or run an extra check |
 | **Other…** | You type a custom rule in your own words |
 
 Pick the one that matches your comfort level. Narrower rules mean Rebel will still ask about related-but-different actions. Broader rules mean fewer interruptions but less oversight. (Declining works the same way: **Don't allow…** offers the matching **This only / Similar / Always block** scopes so you can teach Rebel what to *stop* doing. **Always block** adds a permanent entry to **[Settings → Privacy & Safety](rebel://settings/safety) → What Rebel will never do** — Rebel won't do it again, anywhere, without re-asking. Remove it there if you change your mind; the Activity log records each quiet block.)
@@ -275,7 +272,7 @@ Pick the one that matches your comfort level. Narrower rules mean Rebel will sti
 **Where does the rule go?**
 
 - **This only**, **Similar**, and **Other…** add a written rule to your Safety Rules (visible in **[Settings → Privacy & Safety](rebel://settings/safety)** → **Your own rules**). You can edit or remove these at any time.
-- **Always** works differently — it adds the tool to your trusted tools list (or, for memory writes, sets the space to save without asking). This is a separate setting, not a written rule.
+- **Always** works differently — it adds standing permission for the tool where its current safety level allows it (or, for memory writes, sets the space to save without asking). This is a separate setting, not a written rule.
 
 **What happens after you update a rule:**
 

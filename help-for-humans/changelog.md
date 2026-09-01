@@ -4,7 +4,7 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ---
 
-## v0.4.63 — Aug 19-29, 2026
+## v0.4.63 — Aug 19-Sep 1, 2026
 
 ### Highlights
 
@@ -27,6 +27,15 @@ What's new in Rebel. We ship fast, so there's always something.
 
 <!-- Keep this entry about the user-visible improvement. The implementation details belong in the internal changelog; public copy should not turn a quieter safety experience into a technical advisory. -->
 - **Rebel now understands commands instead of treating them all the same** — A routine command used to look like one mysterious lump, which meant ordinary work could prompt you while unusual work did not get enough attention. Rebel now looks at what each part actually does, so everyday reading and setup work gets out of the way more often while unclear work still gets a proper pause. Fewer interruptions, better judgment. The machinery remains sensibly suspicious of mystery, as any capable colleague should be.
+
+<!-- detail: Tool sensitivity now comes from signed capability tags on the rated connector revision. The hidden tag-derived cost-escalation veto is gone; the user's explicit argument-level cost setting remains. Spend-tagged A/B choices resolve to C, D remains D, and the checked path runs on every request under standing permission. -->
+- **“Any time” now follows the safety level you can see** — Tools that spend money can now be given standing permission after Rebel shows the cost the first time; every later request still gets checked for obvious mistakes. Tools that move money directly still ask each time. One visible system deciding, at last.
+
+<!-- detail: Five schedule-tag overrides were removed. Calendar and scheduling tools now follow their revision-bound band: A/B can admit without a card, C asks once and offers checked standing authority, D asks on every encounter. -->
+- **Calendar and scheduling tools now use the same four safety levels as everything else** — At either of the first two levels, a change can run without a separate approval. **Rebel can act for you** asks once and keeps checking every request; **Rebel always asks about this one** asks every time. Review or change a tool's level in **Settings → Safety**.
+
+<!-- detail: Stage 5 deleted package-blind authority. Derivable legacy rows rebind to current evidence; unrepairable rows are revoked and re-offered on next use without waking dormant tools. -->
+- **Some older tool permissions will ask once more** — Rebel retired saved approvals it could not safely tie to the current connector and rating. The next use asks again and shows the choices that tool's current safety level allows; tools you do not use stay quiet.
 
 <!-- detail: 260825_fireworks-admin-provider Stage 6. Fireworks is organization-assigned, not user-connectable: assignment delivery creates a reserved synthetic company-managed profile, settings sync carries only the redacted profile, and cloud/mobile route through a separately relayed audience-bound credential. The visible Settings row is locked and named from the organization. Keep deployment ordering and contract internals out of public copy. -->
 - **Company-set Fireworks models now show up in Settings** — If your organization configures Fireworks for Rebel, you'll see `Fireworks (set by {Company})`, or `Fireworks (set by your organization)` when the company name isn't available. The row is locked because your organization manages it, and it works from desktop, cloud, and mobile. No key-wrangling required.
@@ -2409,7 +2418,7 @@ What's new in Rebel. We ship fast, so there's always something.
 - **Multi-Provider Pricing** — Cost tracking now covers OpenAI, Gemini, Cerebras, DeepSeek, and xAI alongside Anthropic. Spending, visible.
 - **Model Tiers** — Consolidated tier configuration with per-tier fallback models. Resilience, configured.
 - **Multiline Context** — Today and Inbox card context fields now auto-expand for longer notes. Space, adaptive.
-- **Calendar Safety** — Rebel asks for explicit consent before creating or modifying calendar events. Calendars, protected.
+- **Calendar Safety (superseded)** — This release made every calendar change ask first. Current versions use the tool's safety rating instead; see the latest safety changes above.
 - **Inbox Deduplication** — Smarter duplicate detection catches near-identical items using keyword matching. Clutter, reduced.
 - **Diagnostics Tabs** — New Composition and Narrative tabs with AI-powered analysis for conversation diagnostics. Insight, layered.
 - **Provider API Keys** — Opt-in to expose your API keys as environment variables in agent shell sessions. Power users, enabled.
