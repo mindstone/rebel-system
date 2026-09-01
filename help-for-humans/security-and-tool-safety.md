@@ -222,7 +222,7 @@ Rules work best when they're specific and actionable. Think about the situations
 - **Version history** — Every edit is saved. You can revert to any previous version if a change doesn't work out.
 - **Reset to defaults** — Start fresh with Rebel's default safety rules if you've strayed too far.
 - **Chat with Rebel about your rules** — Not sure what to write? Click the chat button to discuss your safety needs with Rebel and refine your rules together.
-- **Permanent blocks** — When you choose **Always block** from an approval prompt, the block lands in **[Settings → Privacy & Safety](rebel://settings/safety#approvalAuthorityLedger) → What Rebel can do → Never allowed**. Rebel enforces it quietly across all conversations — it simply won't do that thing, without asking again. You can remove a block there any time. Each quiet block is noted in your Safety Activity log.
+- **Permanent blocks** — When you choose **Always block** from an approval prompt, the block lands in **[Settings → Privacy & Safety](rebel://settings/safety#approvalAuthorityLedger) → What Rebel can do → Never allowed**. Rebel enforces it quietly across all conversations — it simply won't do that thing, without asking again. You can remove a block there any time. Each quiet block is noted under **Recent activity** in the same section.
 
 ### Tips
 
@@ -272,7 +272,7 @@ You don't have to write rules from scratch. The most natural way to build up you
 | **Always** | Trusts the Slack tool entirely — no more approval prompts for any Slack action |
 | **Other…** | You type a custom rule in your own words |
 
-Pick the one that matches your comfort level. Narrower rules mean Rebel will still ask about related-but-different actions. Broader rules mean fewer interruptions but less oversight. (Declining works the same way: **Don't allow…** offers the matching **This only / Similar / Always block** scopes so you can teach Rebel what to *stop* doing. **Always block** adds a permanent entry to **[Settings → Privacy & Safety](rebel://settings/safety#approvalAuthorityLedger) → What Rebel can do → Never allowed** — Rebel won't do it again, anywhere, without re-asking. Remove it there if you change your mind; the Activity log records each quiet block.)
+Pick the one that matches your comfort level. Narrower rules mean Rebel will still ask about related-but-different actions. Broader rules mean fewer interruptions but less oversight. (Declining works the same way: **Don't allow…** offers the matching **This only / Similar / Always block** scopes so you can teach Rebel what to *stop* doing. **Always block** adds a permanent entry to **[Settings → Privacy & Safety](rebel://settings/safety#approvalAuthorityLedger) → What Rebel can do → Never allowed** — Rebel won't do it again, anywhere, without re-asking. Remove it there if you change your mind; **Recent activity** records each quiet block.)
 
 **Where does the rule go?**
 
@@ -300,8 +300,8 @@ If a conversation seems compromised or Rebel is behaving strangely, close it and
 **Update your Safety Rules:**
 Fine-tune what Rebel can do without asking in [Settings → Privacy & Safety](rebel://settings/safety). Your rules are the primary control.
 
-**Review the Activity log:**
-Check the Activity section in [Settings → Privacy & Safety](rebel://settings/safety) to see what Rebel evaluated and why. Safety decisions Rebel makes while running in the cloud now appear here too, tagged **Cloud** so you can tell where each check happened. If something shouldn't have been allowed, flag it with "This wasn't OK."
+**Review Recent activity:**
+Open **[Settings → Privacy & Safety → What Rebel can do](rebel://settings/safety#approvalAuthorityLedger)** and expand **Recent activity** to see what Rebel evaluated and why. Safety decisions Rebel makes while running in the cloud now appear here too, tagged **Cloud** so you can tell where each check happened. If something shouldn't have been allowed, flag it with "This wasn't OK."
 
 **Write your own rules:**
 Add custom safety rules to shape when Rebel asks for permission. See [Your Safety Rules](#your-own-rules-custom-safety-instructions) above.

@@ -28,13 +28,13 @@ If you see an approval bar at the bottom of a conversation, Rebel has an action 
 
 For file-related actions, approval cards show the **full file path**. That is intentional: the fastest safety check is usually “Is that the file I think it is?”
 
-## Managing Safety Rules, Trusted Tools, and Memory Permissions
+## Managing Safety Rules, Saved Permissions, and Memory Permissions
 
 Go to **Settings → Privacy & Safety** to manage all three:
 
 - **Your Safety Rules** — the rules that decide when Rebel should ask
-- **Trusted tools** — tools you've marked as always allowed
-- **Memory Spaces** — where you choose whether Rebel can save without asking, should ask only when it spots something specific, should ask whenever it's unsure, or should always ask
+- **[What Rebel can do](rebel://settings/safety#approvalAuthorityLedger)** — saved permissions, including tools you've allowed to run without asking
+- **[Memory Spaces](rebel://settings/safety#memorySpaces)** — where you choose whether Rebel can save without asking, should ask only when it spots something specific, should ask whenever it's unsure, or should always ask
 
 If you want the deeper explanation of how approvals, trusted tools, and memory staging work together, read [Security and Tool Safety](library://rebel-system/help-for-humans/security-and-tool-safety.md).
 
