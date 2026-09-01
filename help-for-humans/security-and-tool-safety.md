@@ -137,7 +137,7 @@ When Rebel is about to use a tool, a fast AI model checks the action against you
 
 **Automations cannot borrow permission from an earlier chat.** When Rebel is working unattended, your messages are useful context but not standing permission. The tool's safety rating, any permission you saved, and your Safety Rules decide what happens instead. Tools at the first two levels can run without separate review; higher levels keep the checks described below. (See [Automations](library://rebel-system/help-for-humans/automations.md).)
 
-**Consequences raise the safety level.** Routine, reversible, read-only work stays at the low end so lookups do not interrupt you. Sending, posting, deleting, paying, or changing something out in the world pushes a tool higher. At **Rebel can act for you**, Rebel asks the first time and checks every later request; at **Rebel always asks about this one**, it asks every time.
+**Consequences raise the safety level.** Routine, reversible, read-only work stays at the low end so lookups do not interrupt you. Sending, posting, deleting, paying, or changing something out in the world pushes a tool higher. At **Rebel can act for you**, Rebel asks the first time and checks every later request; at **Rebel always asks about this one**, it asks every time — unless you allow it for the current conversation, which lasts only until that conversation ends.
 
 ## Calendar Safety
 
