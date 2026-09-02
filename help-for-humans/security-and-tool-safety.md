@@ -21,9 +21,11 @@ See [Your Safety Rules](#your-own-rules-custom-safety-instructions) below for de
 
 ## When Rebel Asks for Approval
 
-When Rebel pauses for your approval, a bar appears at the bottom of the conversation: **"Rebel paused. X action(s) need your OK"** — click **View** to open the notification drawer.
+When Rebel needs your approval to continue an action, a bar appears at the bottom of the conversation: **"Rebel paused. X action(s) need your OK"** — click **View** to open the notification drawer. Rebel can still finish independent work while that action waits.
 
 The notification drawer (the panel on the right) groups pending approvals by conversation. You can review them one at a time or use **Allow all** / **Deny all** to handle a batch. It also surfaces **rule suggestion** cards when Rebel thinks something you said in chat is worth saving as a safety rule — confirm before anything is added (same flow as [Saving rules from chat](#rule-learning) below). When the drawer is closed, a subtle notification pill appears to let you know approvals are waiting — it's unobtrusive but hard to miss, so nothing slips through the cracks.
+
+After most answers, Rebel checks whether each saved tool action is genuinely still needed. If an answer came from delegated deep work, Rebel cannot yet ask the exact worker that produced it, so the saved action stays for you instead of letting a different worker guess. Otherwise, if the action is still needed, the card stays put and waits for you. If Rebel found it no longer needs the action, the card goes away and Rebel says: **“Rebel decided not to use this. It was never run.”** You get one receipt in the conversation, even when several requests were cleared together. Prepared connector actions and files stay for your review; Rebel does not quietly bin work it already staged.
 
 ### Tool approvals
 
@@ -217,7 +219,7 @@ Rules work best when they're specific and actionable. Think about the situations
 - **Version history** — Every edit is saved. You can revert to any previous version if a change doesn't work out.
 - **Reset to defaults** — Start fresh with Rebel's default safety rules if you've strayed too far.
 - **Chat with Rebel about your rules** — Not sure what to write? Click the chat button to discuss your safety needs with Rebel and refine your rules together.
-- **Permanent blocks** — When you choose **Always block** from an approval prompt, the block lands in **[Settings → Privacy & Safety](rebel://settings/safety) → What Rebel will never do**. Rebel enforces it quietly across all conversations — it simply won't do that thing, without asking again. You can remove a block there any time. Each quiet block is noted in your Safety Activity log.
+- **Permanent blocks** — When you choose **Always block** from an approval prompt, the block lands in **[Settings → Privacy & Safety](rebel://settings/safety#approvalAuthorityLedger) → What Rebel can do → Never allowed**. Rebel enforces it quietly across all conversations — it simply won't do that thing, without asking again. You can remove a block there any time. Each quiet block is noted under **Recent activity** in the same section.
 
 ### Tips
 
@@ -267,7 +269,7 @@ You don't have to write rules from scratch. The most natural way to build up you
 | **Always** | Offers standing permission for the Slack tool where its current safety level allows it; higher-risk actions can still ask or run an extra check |
 | **Other…** | You type a custom rule in your own words |
 
-Pick the one that matches your comfort level. Narrower rules mean Rebel will still ask about related-but-different actions. Broader rules mean fewer interruptions but less oversight. (Declining works the same way: **Don't allow…** offers the matching **This only / Similar / Always block** scopes so you can teach Rebel what to *stop* doing. **Always block** adds a permanent entry to **[Settings → Privacy & Safety](rebel://settings/safety) → What Rebel will never do** — Rebel won't do it again, anywhere, without re-asking. Remove it there if you change your mind; the Activity log records each quiet block.)
+Pick the one that matches your comfort level. Narrower rules mean Rebel will still ask about related-but-different actions. Broader rules mean fewer interruptions but less oversight. (Declining works the same way: **Don't allow…** offers the matching **This only / Similar / Always block** scopes so you can teach Rebel what to *stop* doing. **Always block** adds a permanent entry to **[Settings → Privacy & Safety](rebel://settings/safety#approvalAuthorityLedger) → What Rebel can do → Never allowed** — Rebel won't do it again, anywhere, without re-asking. Remove it there if you change your mind; **Recent activity** records each quiet block.)
 
 **Where does the rule go?**
 
@@ -295,8 +297,8 @@ If a conversation seems compromised or Rebel is behaving strangely, close it and
 **Update your Safety Rules:**
 Fine-tune what Rebel can do without asking in [Settings → Privacy & Safety](rebel://settings/safety). Your rules are the primary control.
 
-**Review the Activity log:**
-Check the Activity section in [Settings → Privacy & Safety](rebel://settings/safety) to see what Rebel evaluated and why. Safety decisions Rebel makes while running in the cloud now appear here too, tagged **Cloud** so you can tell where each check happened. If something shouldn't have been allowed, flag it with "This wasn't OK."
+**Review Recent activity:**
+Open **[Settings → Privacy & Safety → What Rebel can do](rebel://settings/safety#approvalAuthorityLedger)** and expand **Recent activity** to see what Rebel evaluated and why. Safety decisions Rebel makes while running in the cloud now appear here too, tagged **Cloud** so you can tell where each check happened. If something shouldn't have been allowed, flag it with "This wasn't OK."
 
 **Write your own rules:**
 Add custom safety rules to shape when Rebel asks for permission. See [Your Safety Rules](#your-own-rules-custom-safety-instructions) above.
