@@ -4,7 +4,7 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ---
 
-## v0.4.63 — Aug 19-Sep 1, 2026
+## v0.4.63 — Aug 19-Sep 2, 2026
 
 ### Highlights
 
@@ -59,6 +59,8 @@ What's new in Rebel. We ship fast, so there's always something.
 - **Error messages that tell you what happened, whether your work's safe, and what to do** — When something goes wrong mid-task — a rate limit, a billing snag, a dropped connection — Rebel's messages used to be charming but cryptic ("the provider asked for a breather"). They now lead with the plain facts: what happened, that your message is still here, and the next step — naming the provider where we can, and telling you *when* a rate limit resets ("try again after 8:20pm") when the service says so. The wit still shows up, just after the useful part. A breather you can actually time.
 
 ### Fixes
+
+- **Finished automations stay finished** — An automation could complete, then set off **“This conversation isn't saving”** and make a conversation you had marked **Done** reappear. Rebel now keeps the finished result intact instead of disputing its own paperwork. Done means done; the paperwork agrees.
 
 <!-- detail: Voice conversations could not open files in your linked Spaces or shared folders at all, and a save Rebel had already been cleared to make would stop and ask for permission again. Speaking and typing now go through exactly the same file access and the same review. When a save needs your go-ahead, Rebel says so out loud and waits on the Save card — saying yes out loud never approves it for you, and asking to skip the save cancels it. -->
 - **Live conversations can finally reach your files** — Ask Rebel something out loud about a document in one of your Spaces, or to save a note there, and — nothing. Voice conversations couldn't open files in linked Spaces or shared folders at all, and a save it had already been given the go-ahead for would stop and claim it needed permission nobody had asked for. Now a voice conversation reads and saves in your Spaces and shared folders exactly like a typed one: the same review before anything is written, and when a save needs your OK, Rebel says out loud that it's waiting on the Save card — and keeps talking while you decide. Your voice, finally holding a pen.
