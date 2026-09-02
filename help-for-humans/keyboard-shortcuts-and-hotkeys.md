@@ -23,7 +23,6 @@ Use keyboard shortcuts to work more efficiently with Mindstone Rebel.
 | Enter | Stop recording (when mic is active) |
 | Ctrl+Alt+Space | Voice activation with screenshot (customizable) |
 | Press voice hotkey again | Send voice memo with screenshot |
-| Escape | Exit voice mode |
 | Escape Escape | Stop the running task (double-tap quickly), then send again when you're ready |
 | ⌘/Ctrl+F | Find in page (search within conversations) |
 | ⌘/Ctrl+G | Find next match |
