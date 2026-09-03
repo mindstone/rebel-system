@@ -16,6 +16,14 @@ What's new in Rebel. We ship fast, so there's always something.
 - **Automations keep running in the cloud** — When your laptop is closed, scheduled automations carry on in the cloud and pick up where the desktop left off.
 - **Fewer "Impossible state" dead ends** — A pay-as-you-go setup with no usable model route now shows a calm, specific recovery message instead of failing every turn.
 
+### Fixes
+
+<!-- detail: Approval choices now follow what Rebel can actually save. The one-time option stays available, while remembered choices appear only when the action and current surface support them. The same rule is used across desktop and phone. -->
+- **Permission choices now have a reliable escape hatch** — When Rebel asks before an action, a **one-time approval** is always available. **Allow and remember** appears only when Rebel can actually keep it, so unsupported actions no longer lead into the same dead end. A door, not a maze.
+
+<!-- detail: Permission failures now distinguish between an action that must be approved every time, a saved choice that cannot be tied to a specific action, a broader choice that is unavailable, and a save that could not be confirmed. Recovery is offered only when trying again can help, and the wording follows whether you allowed or declined. -->
+- **Permission messages now say what happened** — If Rebel needs to ask every time, cannot tell what a remembered choice would cover, cannot offer a broader choice, or cannot confirm a save, it now says which. Recovery buttons appear only when they can help, and a failed decline no longer suggests allowing. Less mystery, better manners.
+
 ## v0.4.63 — Aug 19-Sep 2, 2026
 
 ### Highlights
@@ -71,12 +79,6 @@ What's new in Rebel. We ship fast, so there's always something.
 - **Error messages that tell you what happened, whether your work's safe, and what to do** — When something goes wrong mid-task — a rate limit, a billing snag, a dropped connection — Rebel's messages used to be charming but cryptic ("the provider asked for a breather"). They now lead with the plain facts: what happened, that your message is still here, and the next step — naming the provider where we can, and telling you *when* a rate limit resets ("try again after 8:20pm") when the service says so. The wit still shows up, just after the useful part. A breather you can actually time.
 
 ### Fixes
-
-<!-- detail: Approval choices now follow what Rebel can actually save. The one-time option stays available, while remembered choices appear only when the action and current surface support them. The same rule is used across desktop and phone. -->
-- **Permission choices now have a reliable escape hatch** — When Rebel asks before an action, a **one-time approval** is always available. **Allow and remember** appears only when Rebel can actually keep it, so unsupported actions no longer lead into the same dead end. A door, not a maze.
-
-<!-- detail: Permission failures now distinguish between an action that must be approved every time, a saved choice that cannot be tied to a specific action, a broader choice that is unavailable, and a save that could not be confirmed. Recovery is offered only when trying again can help, and the wording follows whether you allowed or declined. -->
-- **Permission messages now say what happened** — If Rebel needs to ask every time, cannot tell what a remembered choice would cover, cannot offer a broader choice, or cannot confirm a save, it now says which. Recovery buttons appear only when they can help, and a failed decline no longer suggests allowing. Less mystery, better manners.
 
 - **Questions wait for answers now** — When Rebel can't put a question to you, it now waits for your answer instead of guessing and carrying on. A missing question is a pause, not an invitation to improvise.
 
