@@ -1682,7 +1682,7 @@ What's new in Rebel. We ship fast, so there's always something.
 
 - Slack threads now actually work end-to-end. Connect Slack from settings, mention Rebel in a thread, get a real reply. Revolutionary, we know.
 - Connectors now have an "Update key" button. Rotate API keys without disconnecting and starting over.
-- Rebel now says when a model teaches it a better output or context limit in Settings → Models. Related fixtime brain, less mystery.
+- Rebel now says when a model teaches it a better output or context limit in Settings → Models. Same runtime brain, less mystery.
 
 ### Fixes
 
