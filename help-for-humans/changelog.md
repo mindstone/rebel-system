@@ -60,8 +60,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
-<!-- detail: Approval choices now follow what Rebel can actually save. The one-time option stays available, while remembered choices appear only when the action and current surface support them; if something goes wrong, the preview explains it, settles visibly, and keeps the decision recoverable. The same rule is used across desktop and phone. -->
-- **Permission choices now have a reliable escape hatch** — When Rebel asks before an action, a **one-time approval** is always available. **Allow and remember** appears only when Rebel can actually keep it, and if the choice or action hits trouble, the preview stays open with a useful next step instead of sending you back into the same dead end. Failed saves no longer leave the flow hanging. A door, not a maze.
+<!-- detail: Approval choices now follow what Rebel can actually save. The one-time option stays available, while remembered choices appear only when the action and current surface support them. The same rule is used across desktop and phone. -->
+- **Permission choices now have a reliable escape hatch** — When Rebel asks before an action, a **one-time approval** is always available. **Allow and remember** appears only when Rebel can actually keep it, so unsupported actions no longer lead into the same dead end. A door, not a maze.
 
 <!-- detail: Permission failures now distinguish between an action that must be approved every time, a saved choice that cannot be tied to a specific action, a broader choice that is unavailable, and a save that could not be confirmed. Recovery is offered only when trying again can help, and the wording follows whether you allowed or declined. -->
 - **Permission messages now say what happened** — If Rebel needs to ask every time, cannot tell what a remembered choice would cover, cannot offer a broader choice, or cannot confirm a save, it now says which. Recovery buttons appear only when they can help, and a failed decline no longer suggests allowing. Less mystery, better manners.
