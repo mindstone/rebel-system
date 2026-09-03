@@ -4,6 +4,18 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ---
 
+## v0.4.64 — Sep 2-3, 2026
+
+### Highlights
+
+- **"This conversation isn't saving" stops crying wolf** — A scheduled automation could stamp its own result on a conversation and make Rebel think the save had failed. It no longer does, so the warning only shows when something is actually wrong.
+- **Stuck on an old version? Rebel now gets you off it** — On Windows, updates install when you quit (with your say-so), the "update available" nudge comes back every 12 hours instead of vanishing, and a read-only install folder or a failed update now shows what happened instead of pretending.
+- **A calmer "Waiting" instead of a scary "Blocked"** — Rebel's activity card now shows its own working notes while it thinks, keeps them after the task, and tells you plainly what it is waiting on.
+- **Pictures and files you give Rebel stay attached** — Three ways an attachment could quietly lose its type on save are closed, on desktop and in the cloud, and an unsupported image format is refused with a clear message instead of being mislabelled.
+- **No more busy-loop when you send while Rebel is working** — Sending a message during a turn queues it once instead of retrying in a loop.
+- **Automations keep running in the cloud** — When your laptop is closed, scheduled automations carry on in the cloud and pick up where the desktop left off.
+- **Fewer "Impossible state" dead ends** — A pay-as-you-go setup with no usable model route now shows a calm, specific recovery message instead of failing every turn.
+
 ## v0.4.63 — Aug 19-Sep 2, 2026
 
 ### Highlights
