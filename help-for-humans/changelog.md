@@ -60,6 +60,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **Questions wait for answers now** — When Rebel can't put a question to you, it now waits for your answer instead of guessing and carrying on. A missing question is a pause, not an invitation to improvise.
+
 <!-- detail: If a saved permission changed while Settings was open, trying to remove the out-of-date row kept reusing the same obsolete request. Rebel now refreshes the row first; the next explicit Remove is a new attempt, while uncertain network outcomes still replay safely. -->
 - **“Try again” now actually tries again on an out-of-date approval** — If a saved permission changed while Settings was open, Rebel could refresh the row and then keep sending the same outdated removal request. When Rebel says **Try again**, the next **Remove** now uses the refreshed permission and makes a new attempt. The button has reviewed its job description.
 
