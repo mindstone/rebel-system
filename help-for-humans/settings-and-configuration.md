@@ -143,7 +143,7 @@ Use **Settings → Privacy & Safety** for:
 - **Memory Spaces** — control over when Rebel asks before saving to each space
 - **Locations** — folders outside your spaces that you've allowed Rebel to read
 - **Privacy Mode** — a temporary master switch for extra caution on sensitive work
-- **Activity log** — a record of what Rebel has done
+- **What Rebel can do → Recent activity** — a record of what Rebel has done
 - **Privacy and data cards** — how your data is stored and used
 - **Share usage analytics / Share crash & error reports** — two switches for what Rebel sends back to us. Both on by default; both take effect straight away, and follow to your other devices when those next connect — but only if you use Cloud Continuity, which is what carries the choice between them
 

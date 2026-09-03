@@ -127,7 +127,7 @@ Buttons you may see:
 - **Choose fewer routine check-ins for a busy shared space.** Open [Settings → Safety → Memory Spaces](rebel://settings/safety#memorySpaces), find the space, and choose **Ask only when Rebel spots something specific**. Rebel will still ask when it spots something specific. You can also open **Settings → Spaces** and use **Open Privacy & Safety → Memory Spaces** at the bottom of the Spaces section.
 - **Ask less about a space from the card.** A card for a space set to **Ask whenever Rebel is unsure** can offer **Only ask when Rebel spots something specific?** Choose it to update that space without leaving the card. The save in front of you still needs its own decision.
 - **Remember recurring saves.** When a card offers **Allow and remember…**, use it to teach Rebel the rule instead of approving the same kind of save repeatedly.
-- **Check what happened without a card.** The Activity log in [Settings → Safety](rebel://settings/safety) shows what Rebel saved without asking and why. You can switch any space back to more check-ins at any time.
+- **Check what happened without a card.** **Recent activity** under **[Settings → Privacy & Safety → What Rebel can do](rebel://settings/safety#approvalAuthorityLedger)** shows what Rebel saved without asking and why. You can switch any space back to more check-ins at any time.
 
 ## Where staged files live before you decide
 
