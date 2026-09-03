@@ -18,6 +18,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **Windows commands can get on with the safe stuff** — Rebel now checks familiar Windows commands before running them, so routine work it can prove safe no longer stops for approval. Anything unusual, unclear, or higher-impact still goes through the usual safety check or asks first. Suspicion, now more selective.
+
 - **Save failures no longer go quiet** — If a conversation can no longer save safely, Rebel keeps a warning visible on desktop, phone, and web, blocks new messages, and offers **Copy conversation** before you leave; silence has been reassigned.
 
 <!-- detail: Approval choices now follow what Rebel can actually save. The one-time option stays available, while remembered choices appear only when the action and current surface support them. The same rule is used across desktop and phone. -->
