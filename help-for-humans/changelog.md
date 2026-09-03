@@ -518,7 +518,7 @@ What's new in Rebel. We ship fast, so there's always something.
 - **Rebel now owns up when a messaging-access change hasn't synced** — Changing who can message Rebel saved instantly on your computer, but reaching the service that actually enforces it could take a while — or quietly fail — and you'd never know. Rebel now keeps an eye on it, retries on its own, and if the change still hasn't landed, says so right where you made it, with a Try again button. The confident silence, discontinued.
 
 <!-- detail: Rebuilt the macOS app icon from a layered source so macOS 26 derives its light, dark, tinted and clear treatments from one file with the Liquid Glass look. macOS 25 and earlier keep the existing icon, and Windows, Linux and the installer icon are untouched. Suggested by a Rebel user on the community forum. -->
-- **Rebel's Dock icon now dresses for the occasion on macOS 26** — If you're on macOS Tahoe, Rebel's icon now picks up the Liquid Glass look and adapts to Light, Dark, Tinted, and Clear modes all on its own — same purple gradient, same `//m`, just better-mannered across the system's icon styles. Older macOS keeps the icon you already know. Suggested by a Rebel user.
+- **Rebel's Dock icon now dresses for the occasion** — On compatible computers, Rebel's icon now picks up the latest translucent look and adapts to Light, Dark, Tinted, and Clear modes all on its own — same purple gradient, same `//m`, just better-mannered across the system's icon styles. Other systems keep the icon you already know. Suggested by a Rebel user.
 
 <!-- detail: When Rebel asked to look through a folder it could never be granted in one click — a top-level location or a drive root — the approval card showed a greyed-out "Allow just this once" with no explanation, leaving "Don't allow" as the only working button. Two paired fixes: asks of that kind no longer become cards at all, and Rebel is told to pick a more specific folder instead of waiting for an approval that could never come; and older saved requests of that kind now show as an honestly blocked card with a plain explanation, a Dismiss action, and a way to tell Rebel what to do instead. -->
 - **Approval cards that can only be declined now explain themselves instead** — When Rebel asked to look through a folder it could never be given one-click access to (a top-level location like `/workspace` or `/Users`), the approval card used to show a greyed-out "Allow just this once" with no explanation — the only working button was "Don't allow," which read as a dead end. Now those requests don't become cards in the first place: Rebel is told to use a more specific folder instead of waiting for an approval that could never come. Older saved requests of that kind still show up, but as an honest explanation with **Dismiss** and "Tell Rebel what to do instead" — never a dead button. The dead end, removed.
@@ -1256,7 +1256,7 @@ What's new in Rebel. We ship fast, so there's always something.
 - **No surprise "install developer tools" pop-up (Mac)** — On Macs without Apple's command line tools installed, Rebel could trigger the system "install developer tools" dialog out of nowhere. It now detects what it needs safely and won't summon that pop-up. Uninvited guest, shown the door.
 
 <!-- detail: Quitting Rebel on macOS (including during an update's "Install & Relaunch") could intermittently end with the system "Mindstone Rebel quit unexpectedly" dialog — even though Rebel had already finished saving everything safely. The culprit was a file-watching component deep in the runtime that could be torn down in the wrong order at the very last moment of exit. Rebel now tracks every one of those native watchers and shuts down any stragglers itself right before the process exits, so the teardown race can't happen. Nothing was ever lost to this crash; it just looked alarming. -->
-- **Fixed a crash that could appear when quitting the app on macOS** — Quitting Rebel could occasionally trigger a "quit unexpectedly" dialog after everything had already been saved safely. Rebel now shuts down its file watchers in exactly the right order at the final moment of exit, so quitting stays quiet. Exit stage left, no drama.
+- **Quitting Rebel no longer ends with a surprise crash dialog** — On some computers, quitting could occasionally trigger a "quit unexpectedly" message after everything had already been saved safely. Rebel now closes its file watchers in the right order, so quitting stays quiet. Exit stage left, no drama.
 - **Lighter on the battery** — Rebel uses noticeably less processor and graphics power when it's idle or sitting in the background. Quieter when you're not looking.
 - **A batch of reported fixes** — Picking GPT-5.5 (or another non-Anthropic model) for deep thinking no longer reverts; the compose form no longer opens blank; document search jumps to your first match; email review cards show formatting correctly; "approve always" sticks for Microsoft 365 drafts; search tells you when it's unavailable versus simply empty; and you get a clear toast if opening a file fails. A pile of small sharp edges, filed down.
 - **Memory updates work on every provider** — Codex/ChatGPT and other non-Anthropic users no longer hit a spurious "Anthropic API key" error when Rebel updates its memory.
@@ -1593,7 +1593,7 @@ What's new in Rebel. We ship fast, so there's always something.
 ### Highlights
 
 <!-- detail: Removed the preview/edit toggle shortcut so Ctrl+E is free for the macOS move-to-end-of-line binding — the old handler matched it early and caught Ctrl+E too. The preview/edit toggle moved to a header button on the document editor. -->
-- **Ctrl+E Works in the Markdown Editor Again (macOS)** — The old preview/edit shortcut was quietly catching Ctrl+E in the markdown editor, which collided with macOS's built-in "jump to end of line" shortcut that Emacs muscle memory relies on. The toggle now lives as a button in the document header where it belongs. Ctrl+E is yours again.
+- **Ctrl+E works in the Markdown editor again** — The old preview/edit shortcut was quietly catching Ctrl+E in the Markdown editor, colliding with the system's built-in "jump to end of line" shortcut. The toggle now lives as a button in the document header where it belongs. Ctrl+E is yours again.
 
 ### Fixes
 
@@ -1757,7 +1757,7 @@ What's new in Rebel. We ship fast, so there's always something.
 - **Safety Approvals During Rate Limits** — When safety checks are rate-limited, you now get a single approval prompt instead of nothing at all. Safety, present.
 
 <!-- detail: Pre-migration Salesforce users were stranded with stale config after the OSS migration removed backfill maps. Backfill mappings restored. Also: Haiku 4.5 max-output entry added so delegating to Haiku sub-agents doesn't 400. Also: cloud turn-events no longer vanish mid-turn after recovery retry. -->
-- **Connector Migration + Cloud Reliability** — Pre-OSS Salesforce users can migrate properly now, Haiku 4.5 sub-agent delegation works, and cloud turns survive recovery retries without losing events. Small fixes, broad impact.
+- **Older Salesforce connections keep working** — Existing Salesforce setups now move cleanly to the open-source connector, delegated work starts reliably, and cloud conversations keep their progress through a recovery. Three quiet fixes, one steadier day.
 
 <!-- detail: The meeting-transcript prompt now includes a privacy guard that stops the model summarising sensitive topics, such as medical or financial matters, where it should redirect instead. Log-file discovery now matches the rotation naming exactly, and the OpenAI image connector was registered in the bundled catalogue. -->
 - **Meeting Privacy + Log Discovery + Image Gen** — Meeting transcripts no longer leak sensitive topics in summaries, log file discovery handles rotated files correctly, and the image generation connector registers properly. Polish, applied.
@@ -1947,8 +1947,8 @@ What's new in Rebel. We ship fast, so there's always something.
 <!-- detail: The "View connector" button on the homepage banner used to open Settings, Tools but land on the generic list. It now follows the same pattern as the build card's "View in Settings" and opens that connector's section directly. -->
 - **View Connector Jumps to the Right Place** — The View connector button on the PR-approved banner now lands on the actual connector section in Settings, not the top of the tools list. One fewer click.
 
-<!-- detail: Connector prompts referred to a skill file in a way some models read as "look at this file" rather than "follow this procedure", which made Rebel skip the build-versus-buy step when adding an open connector. The wording now carries an explicit instruction to follow the skill. -->
-- **MCP Build Flow, Properly Followed** — When you ask Rebel to add a community MCP connector, it now reliably walks through the full build-vs-buy flow instead of skipping Phase 0. Process, respected.
+<!-- detail: Connector prompts referred to a skill file in a way some models read as "look at this file" rather than "follow this procedure", which made Rebel skip the build-versus-buy step when adding an open connector. The wording now carries an explicit instruction to follow the skill. Internal pointer: Phase 0. -->
+- **Community connector builds start with the sensible question** — When you ask Rebel to add a community connector, it now checks whether a suitable one already exists before building a new one. Less reinvention, more useful connecting.
 
 <!-- detail: Two compounding sidebar bugs. Selecting a conversation no longer reorders the list — writing back a snapshot was downgrading the conversation's last-updated time every time you clicked it. And two conversations streaming at once no longer swap positions several times a second when one is focused, which came from a cloud-sync round trip combined with a missing guard against that time going backwards. -->
 - **Sidebar Calm** — The conversation list no longer reorders every time you click a conversation, and two concurrent streaming conversations no longer swap positions on you mid-stream. The list stays where you left it.
@@ -2172,7 +2172,8 @@ What's new in Rebel. We ship fast, so there's always something.
 ### Under the Hood
 
 - Testing: 15 + 71 automated test failures fixed across desktop and mobile; bug reports correctly surface errors during development
-- Evals: Safety evaluation suite at 100% (155/155); memory-update A/B prompt experiments (stages 1-3)
+<!-- detail: Internal pointer: memory-update prompt experiment stages 1-3. -->
+- Rebel's safety checks now cover more situations, while memory updates are being compared against several carefully measured approaches.
 - MCP: Tool catalog lookups now use live data instead of potentially stale cached copies
 - Mobile: Background recording sessions survive 1-2 hours with AirPods via centralized audio session management
 - Safety: Approval re-evaluation handles more tool name formats
@@ -2223,7 +2224,8 @@ What's new in Rebel. We ship fast, so there's always something.
 - Mobile: Two infinite re-render crashes fixed in meeting recording; recording lifecycle lifted to root layout
 - Evals: Memory update A/B test framework with 18 fixtures; next-gen scoring with constraints and efficiency tracking
 - Profiling: 6 new dev-mode capabilities — bundle analyzer, IPC latency, startup waterfall, renderer CPU profiling, content tracing, perf summary
-- MCP: Replit SSH connector (Stage 1) with connection verification and hardened error handling
+<!-- detail: Internal pointer: Replit SSH connector Stage 1. -->
+- **Replit SSH setup is sturdier** — Rebel now checks the connection during setup and gives clearer failures when something is wrong. Fewer mysteries at the door.
 - Cloud: Silence-boundary STT eliminates mid-sentence cuts; timezone-aware date boundaries via luxon
 - Build: Turndown browser build fixes packaged app crash; clean:out step prevents stale output errors
 
@@ -2369,7 +2371,8 @@ What's new in Rebel. We ship fast, so there's always something.
 - **Session Cleanup** — Temporary data no longer persists to saved conversation files. Storage, tidier.
 - **Conversation Stability** — Improvements to how background conversations handle memory management, preventing rare edge cases where context could get mixed up. Reliability, fortified.
 - Auto-materialization: large tool outputs (>100K chars) saved to workspace files with preview, reducing context window pressure.
-- Sub-agent cost tracking with per-subagent timeout and model override.
+<!-- detail: Internal pointer: sub-agent cost tracking. -->
+- **Delegated work stays within clearer limits** — Behind-the-scenes tasks now keep better track of time and cost, with more deliberate model choices. The meter and the clock agree.
 - Server-side compaction infrastructure (off by default) preserving artifacts, constraints, and decisions.
 - Inbox cache simplification: 4 stages of dead code removal.
 - Execa dependency removed; replaced with built-in child_process.
@@ -2520,7 +2523,7 @@ What's new in Rebel. We ship fast, so there's always something.
 - Super-MCP: API redesign with tool detail levels, get_tool_details meta-tool, BM25 multi-field weighting (+5.4% search relevance).
 - Reproducible eval infrastructure with email twin dataset for hermetic testing.
 - Performance regression test infrastructure with Playwright integration.
-- CI: dev-push checks workflow, E2E and perf tests re-enabled on macOS.
+- Release checks once again cover interface behaviour and performance on every supported platform.
 - framer-motion upgraded to motion 12.38.0; lucide-react pinned at 0.563.0 (v1.x removed brand icons).
 - ~2,100 lines of duplicated business logic centralized across desktop, cloud, and mobile.
 - Agent turn: unified SDK query replaces 8 copy-pasted iteration loops; error recovery catch block 1,600→38 lines.
@@ -2531,7 +2534,8 @@ What's new in Rebel. We ship fast, so there's always something.
 - Session log retention bounded by age, count, and size (was 6,150 files / 1.6 GB growing unbounded).
 - electron-log consolidated to Pino-only logging for auto-updater.
 - Super-MCP: TS 5.x compatibility fix for Docker builds.
-- Source Capture moved to Sonnet for cost optimization.
+<!-- detail: Internal pointer: Source Capture moved to Sonnet. -->
+- **Source Capture costs less behind the scenes** — Rebel now uses a more economical model for capturing sources without changing the workflow you see.
 - Default max output increased to 100k chars; effort level now configurable per session.
 - Plugin runtime hardened with compile-time key warnings, crash store, and sourceURL diagnostics.
 - Prompt cache breakpoints added for sub-agent invocations.
@@ -2540,7 +2544,8 @@ What's new in Rebel. We ship fast, so there's always something.
 - Sessions: narration leak filter, question/approval cleanup on reset, conversation index search_text column.
 - Compaction: 14 regression tests; 3 deep-dive fixes (ghost message, OpenAI cache tokens, compaction contamination).
 - Headless turn runner extracted from main index.ts.
-- Evals: shared fixture corpus, cross-channel fixtures, Opus SDK rerun.
+<!-- detail: Internal pointer: Opus SDK rerun. -->
+- **Quality checks cover more of Rebel** — Shared test cases now exercise more ways work can move through the app, making regressions easier to catch before they reach you.
 - Memory visibility: 8 regression tests; visibility field removed from LLM JSON schema (token savings).
 - Meeting analysis prompt extracted to core (160-line dedup across desktop and cloud).
 - super-mcp: input normalization for upstream Claude model string serialization bug.
@@ -2920,7 +2925,8 @@ What's new in Rebel. We ship fast, so there's always something.
 - super-mcp: additionalProperties enforcement, schema default flip, repair tickets, dead code removal.
 - rebel-system: quality-score-aware doctor skills, build-workflow skill, entity frontmatter conventions.
 - CI/CD: auto-deploy cloud on push, mobile CI/CD workflows with TestFlight auto-deploy.
-- Skill quality scoring Phases 1-4: scoring engine, UI indicators, doctor upgrades, proactive nudges.
+<!-- detail: Internal pointer: skill quality scoring Phases 1-4. -->
+- **Skill quality is easier to see and improve** — Clearer indicators, better repair guidance, and timely prompts help keep your skills in good working order.
 - Inbox: canonical cross-session messaging, search+tag filter unification.
 - Performance: measurement cache sync moved to onChange, cleared on session switch.
 
@@ -3070,7 +3076,8 @@ What's new in Rebel. We ship fast, so there's always something.
 - Inbox infrastructure: category field, source kinds, cost tracking, quality patterns, and analytics events.
 - Automation scheduler: token usage tracking, cost analytics, store migrations v16-v18.
 - Cloud (alpha): gate continuity toggle on isPinned, Fly provisioning tests, auto-provisioning UX polish.
-- Sentry: renderer error sub-fingerprinting for REBEL-NF bucket.
+<!-- detail: Internal pointer: REBEL-NF. -->
+- **Similar app errors are grouped more clearly** — Rebel can distinguish related failures more accurately, making the useful signal easier to find.
 - CI: Content-Type and Cache-Control headers on GCS DMG uploads.
 
 ---
@@ -3173,7 +3180,7 @@ What's new in Rebel. We ship fast, so there's always something.
 - **Connector subdomains** — Input normalization prevents common URL formatting mistakes during setup. Setup, forgiving.
 - **Scheduler timezone** — Anchor dates now parse in local timezone correctly. Schedules, accurate.
 - **Sub-agent timeline** — Truncated task JSON no longer drops sub-agent pills. Timeline, complete.
-- **Auto-update watchdog** — macOS update installs now have a relaunch watchdog for ShipIt failures. Updates, resilient.
+- **Updates recover when relaunching goes wrong** — Rebel now notices when an update fails to reopen the app and helps the process recover. Updates, resilient.
 - **Stale drafts** — Deleted drafts now clear from cache properly. Cleanup, thorough.
 - **Salesforce setup** — Updated for External Client App with fix for disabled setup button. Configuration, current.
 - **Feedback renamed** — "Send feedback" is now "Feedback & bugs" in the help menu. Intent, clearer.
@@ -3229,7 +3236,7 @@ What's new in Rebel. We ship fast, so there's always something.
 - **Asana connections** — Fixed 45% OAuth failure rate by adding static client credentials. Connections, reliable.
 - **MS365 token refresh** — Microsoft connectors no longer fail silently when tokens expire. Sessions, persistent.
 - **Salesforce setup** — No longer fails silently; now shows clear error messages and supports sandbox instances. Setup, transparent.
-- **Auto-update install** — Fixed macOS update install failing due to a conflicting quit handler. Updates, smooth.
+- **Updates install cleanly when Rebel quits** — A conflicting shutdown step no longer prevents an update from installing. Updates, smooth.
 - **Chat layout jump** — New messages no longer cause the conversation to jump unexpectedly. Scrolling, stable.
 - **Search recency** — Recency filter now applies correctly to active search results. Filters, faithful.
 - **Error messages** — API errors now show human-readable messages instead of raw codes. Errors, explained.
@@ -3506,7 +3513,8 @@ What's new in Rebel. We ship fast, so there's always something.
 ### Under the Hood
 
 - Auto-update observability improved with pino adapter, persistent state, and Sentry instrumentation
-- REBEL-NA/NF error captures deduplicated with errorSource tagging
+<!-- detail: Internal pointers: REBEL-NA and REBEL-NF. -->
+- **Repeated error reports are grouped together** — Duplicate reports no longer crowd out the useful clues. Less noise, better diagnosis.
 - rebel-system docs updated: file attachments guide, Opus 4.6 model docs, Microsoft 365 corrections, Granola connector page
 
 ---
@@ -3586,7 +3594,7 @@ What's new in Rebel. We ship fast, so there's always something.
 - **Auto-archive per-session** — Toggle now persists correctly per conversation. Preferences, remembered.
 - **Watchdog SDK stalls** — Better status messages when Claude is thinking hard. Waiting, informed.
 - **Edit while busy** — Shows 'Save & re-run' instead of confusing 'Queue'. Actions, clear.
-- **macOS ShipIt fix** — Auto-update race condition resolved. Updates, reliable.
+- **Update handoff fixed** — Rebel no longer trips over the timing between closing the app and installing an update. Updates, reliable.
 - **Auto-scroll stability** — No more jumping during agent thinking. Reading, uninterrupted.
 - **Streaming duplicates** — Fixed duplicate text appearing during responses. Output, clean.
 - **SDK race condition** — Spawn delay prevents concurrent turn conflicts. Reliability, improved.
@@ -3651,7 +3659,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Under the Hood
 
-- MCP Apps Phase 1-3 infrastructure complete
+<!-- detail: Internal pointer: MCP Apps Phases 1-3. -->
+- **Interactive connector views are taking shape** — The foundations for richer connector experiences are now in place behind the scenes.
 - Embedding cooldown optimization for faster crash recovery
 - Voice hotkey stability improvements for Windows
 - React 19 compatibility via .npmrc legacy-peer-deps
@@ -3707,7 +3716,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Highlights
 
-- **Gamification Complete** — Phase 4 lands with fluency tiers, evidence-based progression, and 27 new badges across expanded progression categories. Your growth, quantified.
+<!-- detail: Internal pointer: gamification Phase 4. -->
+- **More ways to see your progress** — New fluency tiers and 27 badges recognise a wider range of useful habits. Your growth, made visible.
 - **Lazy Session Loading** — Sessions now load on-demand instead of all at once on startup. Memory usage down, startup speed up. Performance, optimized.
 - **Deep Search Mode** — Expanded semantic indexing budget for more comprehensive search results. Find what you're looking for, even if it's buried deep. Discovery, enhanced.
 - **Smarter Meeting Mentions** — @-mentioning meetings now injects AI-generated summaries instead of raw transcripts. Cleaner context, better answers.
@@ -3726,7 +3736,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
-- **Onboarding restart** — All Phase 0 state resets properly when restarting onboarding. Fresh starts, truly fresh.
+<!-- detail: Internal pointer: onboarding Phase 0. -->
+- **Onboarding restarts cleanly** — Starting the welcome flow again now clears the previous attempt properly. Fresh starts, genuinely fresh.
 - **Goal format detection** — Array-format personal goals now correctly detected for auto-healing. Edge cases, caught.
 - **Archive tooltip** — Clarified shortcut behavior description. Accuracy, improved.
 - **Session summaries** — Sidebar now syncs properly on metadata mutations. State, consistent.
@@ -3763,8 +3774,8 @@ What's new in Rebel. We ship fast, so there's always something.
 - **SDK Task Tools** — Rebel now uses SDK Task tools for persistent task management across conversations. Memory, persistent.
 <!-- detail: A new Achievement Hub in The Spark shows all your earned badges, your progress through the 14-day onboarding journey, and a summary of time saved through Rebel usage. Badges are earned through consistent usage patterns, trying new features, and building productive habits. -->
 - **Achievement Hub** — Unified view of your badges, 14-day journey progress, and time saved. Progress, celebrated.
-<!-- detail: New users now go through a voice-guided onboarding experience. Rebel introduces itself, explains key features, and walks you through setup with personality and encouragement. Along the way, you earn badges and see your progress on a 14-day journey. After setup completes, a brief tour highlights the main UI elements. -->
-- **Onboarding Coach** — New Phase 0 guided setup with Rebel voice, gamification, and a reveal tour of key features. The welcome wagon, upgraded.
+<!-- detail: New users now go through a voice-guided onboarding experience. Rebel introduces itself, explains key features, and walks you through setup with personality and encouragement. Along the way, you earn badges and see your progress on a 14-day journey. After setup completes, a brief tour highlights the main UI elements. Internal pointer: Phase 0. -->
+- **A guided welcome from Rebel** — New users can follow a voice-led setup, earn badges along a 14-day journey, and finish with a brief tour of the essentials. The welcome wagon, upgraded.
 <!-- detail: Demo Mode now starts with a proper setup dialog where you can choose to use your own API key or a demo key. It creates a realistic ACME Corp workspace with sample files and conversations, and completely isolates demo data from your real data. When you exit Demo Mode, everything resets cleanly. -->
 - **Demo Mode Overhaul** — Start Demo Mode dialog with API key option, auto-created ACME Corp workspace, and proper data isolation. Demos, polished.
 
@@ -4183,7 +4194,7 @@ What's new in Rebel. We ship fast, so there's always something.
 - Atlas WebGL context cleanup prevents GPU memory exhaustion
 - Pre-computed symlink maps for O(1) path conversion
 - Auto-continue evaluation prompts refined
-- CI improvements: macOS codesign retry, E2E progressive waits
+- Release signing now retries transient failures, and interface checks wait more patiently for the app to respond.
 - Centralized model constants and pricing
 - Source capture skill auto-updates related topics
 - MCP cache refresh centralized after reconfigure
