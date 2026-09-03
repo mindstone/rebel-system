@@ -80,6 +80,7 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **Windows commands ask instead of giving up** — When Rebel cannot check a command automatically on Windows yet, it now asks you before running that exact command instead of refusing it outright. Commands it can clearly identify as destructive are still refused. The safety check has learned the useful difference between “I can't verify this” and “absolutely not.”
 - **Questions wait for answers now** — When Rebel can't put a question to you, it now waits for your answer instead of guessing and carrying on. A missing question is a pause, not an invitation to improvise.
 
 <!-- detail: If a saved permission changed while Settings was open, trying to remove the out-of-date row kept reusing the same obsolete request. Rebel now refreshes the row first; the next explicit Remove is a new attempt, while uncertain network outcomes still replay safely. -->
