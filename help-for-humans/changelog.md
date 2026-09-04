@@ -18,6 +18,9 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+<!-- detail: Receipts whose every entry is a fail-open mistake-check skip are no longer transcript messages. They stay persisted and broadcast, and surface as a muted marker on the action row with the explanation in its tooltip. A mixed receipt still renders as a message. -->
+- **A skipped safety check stops interrupting** — When Rebel's quick second look can't answer in time, the action still runs, and Rebel still tells you. It used to say so as its own message, once per action, so ten of them could bury the answer you were waiting for. The note now sits quietly on the action it's about, and says what happened in plain words instead of naming machinery. Seen, not heard.
+
 - **Windows commands can get on with the safe stuff** — Rebel now checks familiar Windows commands before running them, so routine work it can prove safe no longer stops for approval. Anything unusual, unclear, or higher-impact still goes through the usual safety check or asks first. Suspicion, now more selective.
 
 - **Save failures no longer go quiet** — If a conversation can no longer save safely, Rebel keeps a warning visible on desktop, phone, and web, blocks new messages, and offers **Copy conversation** before you leave; silence has been reassigned.
