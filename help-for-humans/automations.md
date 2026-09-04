@@ -29,7 +29,7 @@ You tell Rebel:
 
 Rebel then runs it as a background conversation and saves the result for you to review later.
 
-Each automation also has a **where**: it can run on your desktop or in your Rebel Cloud. See [Where automations run](#where-automations-run-desktop-or-cloud) below.
+Each automation also has a **where**: it can run on your desktop or on your cloud instance. See [Where automations run](#where-automations-run-desktop-or-cloud) below.
 
 ## Creating an automation
 
@@ -58,15 +58,15 @@ Rebel understands natural language well enough to spare you most of the tedious 
 Every automation has a **Runs on** control in [Automations](rebel://automations) with two choices:
 
 - **Desktop** — the default. Runs while Rebel is open on your computer. If Rebel is closed when a run comes due, it catches up next time you open it (hourly automations excepted — they just wait for the next slot).
-- **Cloud** — runs on your Rebel Cloud around the clock, even when your laptop is closed. Handy for anything that should fire at 3am your time, or while you're on a beach pretending not to check.
+- **Cloud** — runs on your cloud instance around the clock, even when your laptop is closed. Handy for anything that should fire at 3am your time, or while you're on a beach pretending not to check. "Your cloud instance" means exactly that: if you brought your own cloud provider, it is your machine on your account, and Mindstone never runs it. Mindstone only hosts the instance if you chose Mindstone Cloud. Either way the automation runs there, not on someone else's desktop.
 
 **Once Cloud continuity takes over scheduled automations, this control goes away.** Your scheduled
-automations then run on your Rebel Cloud by default — which is the point: they keep their schedule
+automations then run on your cloud instance by default — which is the point: they keep their schedule
 whether or not your laptop is open, instead of quietly waiting for you. The Automations page tells you
 when this has happened. Automations triggered by something on your computer still run there, because
 that is where the thing that triggered them happened.
 
-Cloud runs need [Cloud continuity](rebel://library/rebel-system%2Fhelp-for-humans%2Fcloud-continuity-and-mobile.md) set up first (Settings → Cloud). If it isn't, the **Cloud** option shows greyed out — hover over it and Rebel tells you what's missing. No phone or mobile app is required: your Rebel Cloud runs on its own, and the mobile app is just one way of looking in on it.
+Cloud runs need [Cloud continuity](rebel://library/rebel-system%2Fhelp-for-humans%2Fcloud-continuity-and-mobile.md) set up first (Settings → Cloud). If it isn't, the **Cloud** option shows greyed out — hover over it and Rebel tells you what's missing. No phone or mobile app is required: your cloud instance runs on its own, and the mobile app is just one way of looking in on it.
 
 A few things worth knowing:
 
