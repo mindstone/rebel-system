@@ -60,6 +60,12 @@ Every automation has a **Runs on** control in [Automations](rebel://automations)
 - **Desktop** — the default. Runs while Rebel is open on your computer. If Rebel is closed when a run comes due, it catches up next time you open it (hourly automations excepted — they just wait for the next slot).
 - **Cloud** — runs on your Rebel Cloud around the clock, even when your laptop is closed. Handy for anything that should fire at 3am your time, or while you're on a beach pretending not to check.
 
+**Once Cloud continuity takes over scheduled automations, this control goes away.** Your scheduled
+automations then run on your Rebel Cloud by default — which is the point: they keep their schedule
+whether or not your laptop is open, instead of quietly waiting for you. The Automations page tells you
+when this has happened. Automations triggered by something on your computer still run there, because
+that is where the thing that triggered them happened.
+
 Cloud runs need [Cloud continuity](rebel://library/rebel-system%2Fhelp-for-humans%2Fcloud-continuity-and-mobile.md) set up first (Settings → Cloud). If it isn't, the **Cloud** option shows greyed out — hover over it and Rebel tells you what's missing. No phone or mobile app is required: your Rebel Cloud runs on its own, and the mobile app is just one way of looking in on it.
 
 A few things worth knowing:
@@ -166,7 +172,7 @@ An automation whose saved schedule is broken — for example a weekly one with n
 
 - Check that it is **enabled**
 - Check the schedule
-- Check **Runs on**: a **Desktop** automation only fires while Rebel is open; if you need it to run with the laptop closed, switch it to **Cloud** (needs Cloud continuity)
+- Check **Runs on**: a **Desktop** automation only fires while Rebel is open; if you need it to run with the laptop closed, switch it to **Cloud** (needs Cloud continuity). If you don't see the control, Cloud continuity has already taken over your scheduled automations and they run in the cloud anyway
 
 ### It says “Blocked by security”
 
