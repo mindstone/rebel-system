@@ -4,6 +4,11 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ---
 
+## Next
+
+- **Claude Fable 5.1 is here for the hard jobs** — Anthropic's most capable model is now available with an Anthropic key and through OpenRouter, and Maximum on the quality slider now uses it for new selections — conversations you already set to Maximum stay on Fable 5 (they'll show as Custom) until you pick Maximum again. Fable 5 stays available and your other choices stay put. Like Fable 5, it can decline a request its safety training flags; and in long conversations it may quietly re-read earlier context before answering rather than fail. Bring a proper problem.
+- **GPT-6 Astra joins the model team** — OpenAI's most capable model is now available through ChatGPT for Planner and Main work; with ChatGPT it uses more of your allowance. It's also selectable with an OpenAI key (premium-priced), though we haven't yet exercised that route end to end — tell us if it sulks. Your defaults stay put.
+
 ## v0.4.64 — Sep 2-3, 2026
 
 ### Highlights
