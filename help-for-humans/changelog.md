@@ -4,6 +4,12 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ---
 
+## v0.4.64 — Sep 3-4, 2026
+
+### Fixes
+
+- **Rebel stops asking you to approve actions that were never going to work** — If a connector action names something that does not exist, Rebel now catches it before handing you an approval card. The impossible paperwork has been declined on your behalf.
+
 ## v0.4.63 — Aug 19-Sep 2, 2026
 
 ### Highlights
