@@ -4,6 +4,12 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ---
 
+## v0.4.64 — Sep 3-4, 2026
+
+### Improvements
+
+- **Cloud Continuity now says where your copy lives** — Rebel now names the configured cloud host that holds its copy, including the working credentials cloud tasks need. Older wording saying keys stay on your device predates Cloud Continuity and no longer describes it; the paperwork has caught up.
+
 ## v0.4.63 — Aug 19-Sep 2, 2026
 
 ### Highlights
