@@ -90,9 +90,9 @@ On a Mindstone plan, messages and recordings from the Rebel mobile app run throu
 
 ## Privacy
 
-Being on a Mindstone plan doesn't change what Rebel does with your data — it only changes who pays the AI bill.
+Being on a Mindstone plan doesn't decide where Rebel stores your data — it only changes who pays the AI bill. Cloud Continuity is a separate choice: off means the data stays on your device; your own provider means a copy goes to a machine 100% under your control and Mindstone does not get it; Mindstone Cloud means Mindstone holds a copy and never looks at it.
 
-Your conversations don't pass through Mindstone's servers. They travel from Rebel straight to OpenRouter — a broker that routes to the underlying model providers — tagged so those providers won't retain your data for training. Mindstone's own servers only get sent metadata (e.g. re your subscription and which models your plan includes); they never see what you ask or discuss.
+For AI inference, your conversations travel from the Rebel runtime straight to OpenRouter — a broker that routes to the underlying model providers — tagged so those providers won't retain your data for training. Separately, if you choose Mindstone Cloud, Mindstone holds the Cloud Continuity copy and never looks at it.
 
 See the [Privacy Policy](rebel://library/rebel-system%2Fhelp-for-humans%2FRebel-privacy-policy.md) for the full picture.
 

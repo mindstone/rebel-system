@@ -4,7 +4,7 @@ description: "How Rebel is built under the hood: Electron architecture, privacy-
 
 # Technical Architecture
 
-A look under the hood for the technically curious. Rebel is a desktop application built on Electron with a React frontend, designed around a privacy-first architecture where your workspace files stay on your device and — when you bring your own AI account — your conversations go directly to the AI model you choose, with Mindstone's servers out of the path. (On the flat-fee Mindstone plan, prompts route through Mindstone's managed AI pool to reach the model; your files and memory still stay local either way.)
+A look under the hood for the technically curious. Rebel is a desktop application built on Electron with a React frontend. With Cloud Continuity off, your workspace, conversations, and credentials stay on your device. With Cloud Continuity on, Rebel copies the data and credentials cloud work needs to the configured cloud machine. Your AI provider choice is separate from that hosting choice.
 
 ---
 
@@ -24,17 +24,20 @@ This separation is by design. The renderer never touches the filesystem or netwo
 
 ## Privacy-First Architecture
 
-This is the most important architectural decision in Rebel: **your conversations, files, and sensitive data stay on your device — and when you use your own AI account, nothing about them flows through Mindstone.**
+This is the most important privacy distinction in Rebel: **custody depends on the Cloud Continuity host you choose.**
 
 Here's how it works:
 
-- **Direct model connection.** When you bring your own AI account or key, your messages go straight from your machine to the AI provider (Anthropic, OpenAI, OpenRouter, or a local model) — Mindstone's servers are not in that path. The one exception is the flat-fee Mindstone plan: there, your messages route through Mindstone's managed AI pool to reach the model. (See the [privacy policy](rebel://library/rebel-system%2Fhelp-for-humans%2FRebel-privacy-policy.md) for how that's handled; either way, your files and memory stay local.)
-- **Local storage.** Conversations, memory, files, and settings are stored on your device. Rebel uses a local database (SQLite) for search indexes and `electron-store` for settings and session history.
+- **AI and hosting are separate choices.** Requests go from the Rebel runtime doing the work to the AI provider you chose (Anthropic, OpenAI, OpenRouter, or a local model). Choosing a Mindstone AI plan does not by itself turn on Cloud Continuity or decide who hosts it.
+- **Cloud Continuity off.** Conversations, memory, files, settings, search data, and credentials stay on your device.
+- **Your own provider.** Rebel copies the data and credentials cloud work needs to a machine 100% under your control. Mindstone does not get them.
+- **Mindstone Cloud.** Rebel copies that data and those credentials to a Mindstone-run cloud. Mindstone holds a copy and never looks at it.
+- **Manual connection.** Rebel copies data and credentials to the configured machine, but cannot verify who operates it. Only connect one you trust.
 - **Local embeddings.** When Rebel indexes your files for semantic search, it uses a local embedding model (BGE) running on your machine — no cloud calls needed. GPU acceleration is used when available.
-- **Connector tokens stay local.** When you connect services like Gmail or Slack, the OAuth tokens live on your device. Rebel connects directly to those services from your machine.
-- **Optional backend.** A lightweight backend (Rebel Platform) handles authentication, licence management, and optional admin configuration for teams. It does not process or store your conversations.
+- **Connector tokens follow the same custody choice.** They originate in the device credential store and are copied to the configured cloud machine when Cloud Continuity is on, so cloud tasks can use the same connectors.
+- **Optional platform services.** Rebel Platform handles authentication, licence management, optional admin configuration, and Mindstone Cloud provisioning. The single-user Mindstone Cloud instance is where Mindstone holds a copy; it is not a shared conversation database.
 
-The only data that leaves your machine during a conversation is what gets sent to the AI model you've chosen — and you pick the model.
+Cloud Continuity, connectors, voice, meetings, telemetry, and support reports are additional data routes. The [privacy policy](rebel://library/rebel-system%2Fhelp-for-humans%2FRebel-privacy-policy.md) describes each one.
 
 ---
 
@@ -146,7 +149,7 @@ Rebel ships with 75+ connectors across categories:
 | **Design** | Canva, Miro, Figma, Framer |
 | **Payments** | Stripe, PayPal, Xero |
 
-Authentication uses industry-standard OAuth — you sign in through your browser, and Rebel stores the token locally.
+Authentication uses industry-standard OAuth — you sign in through your browser, and Rebel stores the token on your device first. If Cloud Continuity is on, Rebel relays it to the configured cloud machine under the custody rules above.
 
 ---
 
@@ -190,12 +193,14 @@ A per-conversation toggle that tightens all safety checks. In Privacy Mode, Rebe
 
 | What | Where | Format |
 |------|-------|--------|
-| **Settings** | `electron-store` (app data directory) | JSON |
-| **Conversations** | `electron-store` (separate store, versioned) | JSON |
-| **Workspace files** | Your chosen workspace folder | Markdown, text, etc. |
-| **Search index** | Local database | SQLite with vector embeddings |
-| **Connector tokens** | Local keychain / credential store | Encrypted |
-| **Action items** | `electron-store` (separate store) | JSON |
+| **Settings** | Device app data; configured cloud machine when Cloud Continuity is on | JSON |
+| **Conversations** | Device app data; configured cloud machine when Cloud Continuity is on | JSON |
+| **Workspace files** | Your chosen workspace folder; configured cloud machine when Cloud Continuity is on | Markdown, text, etc. |
+| **Search index** | Device database; configured cloud machine when Cloud Continuity is on | SQLite with vector embeddings |
+| **Connector tokens** | Device keychain / credential store; encrypted cloud relay when Cloud Continuity is on | Encrypted |
+| **Action items** | Device app data; configured cloud machine when Cloud Continuity is on | JSON |
+
+For every cloud row: your own provider means a machine 100% under your control and Mindstone does not get the copy; Mindstone Cloud means Mindstone holds the copy and never looks at it; for a manual connection, Rebel cannot verify who operates the machine.
 
 The app data directory location varies by platform — see [Where Rebel Stores Things](library://rebel-system/help-for-humans/where-rebel-stores-things.md) for specifics.
 

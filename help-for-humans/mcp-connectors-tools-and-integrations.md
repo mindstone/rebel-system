@@ -1,6 +1,6 @@
 ---
 description: "Overview of Model Context Protocol (MCP) tools and external knowledge sources, including built-in connectors, community connectors, smart tool management, and manual configuration"
-last_updated: "2026-08-29"
+last_updated: "2026-09-04"
 ---
 
 # MCPs, Tools & External Knowledge Sources
@@ -38,7 +38,7 @@ The catalog includes 90+ integrations across several categories. To see the full
 - **In Rebel**: Open **Settings → Connectors** — all available connectors are shown with search and filtering
 - **Ask Rebel**: Say "list all available connectors" or "what tools can you connect to?"
 
-**Built-in connectors (Local)** – Run on your device, with tokens stored locally:
+**Built-in connectors** – Run on your device, and can also run on your cloud machine when Cloud Continuity is on:
 - [Slack](library://rebel-system/help-for-humans/connectors/slack.md) – Messages, channels, search, reactions, file downloads
 - [Google Workspace](library://rebel-system/help-for-humans/connectors/google-workspace.md) – Gmail, Calendar, Drive, Docs, Sheets, Slides, Contacts
 - [Microsoft 365](library://rebel-system/help-for-humans/connectors/microsoft-365.md) – Outlook, Calendar, OneDrive, Teams
@@ -64,7 +64,11 @@ The catalog includes 90+ integrations across several categories. To see the full
 - [Smartsheet](library://rebel-system/help-for-humans/connectors/smartsheet.md) – Spreadsheet-based work management: sheets, rows, and search
 - **Fathom, Gamma, Kling, Napkin AI** – Meeting transcripts, presentations, video and visual generation
 
-When you click "Set up with Rebel", your browser opens to authenticate with the service. Tokens are stored locally on your device — Mindstone never sees your credentials.
+When you click "Set up with Rebel", your browser opens to authenticate with the service. Rebel stores the token on your device. If Cloud Continuity is on, Rebel also copies the token to the configured cloud machine so cloud tasks can use the connector:
+
+- **Your own provider:** the token goes to a machine 100% under your control. Mindstone does not get it.
+- **Mindstone Cloud:** Mindstone holds a copy of the token and never looks at it.
+- **Manual connection:** Rebel cannot verify who operates the configured machine. Only connect one you trust.
 
 **Direct connectors** – Connect to vendor-hosted or local MCP endpoints:
 - [Figma](library://rebel-system/help-for-humans/connectors/figma.md) (Desktop MCP), [Notion](library://rebel-system/help-for-humans/connectors/notion.md), [Linear](library://rebel-system/help-for-humans/connectors/linear.md), Asana, Sentry
@@ -89,7 +93,7 @@ You can also ask Rebel to create a new MCP server for you using the `build-custo
 
 ### Requirements
 
-- **Built-in local connectors** require signing in via OAuth when first connecting (tokens stored on your device)
+- **Built-in connectors** require signing in via OAuth when first connecting (tokens are stored on your device and follow the Cloud Continuity custody rules above)
 - **Direct connectors** require signing in via OAuth with the service provider
 - **Community connectors** may need additional runtimes (Python, Docker) installed on your machine
 

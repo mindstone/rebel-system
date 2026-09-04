@@ -150,7 +150,7 @@ At **Rebel can act for you**, Rebel asks the first time. If you choose **Any tim
 
 ## App Settings and Configuration
 
-Rebel can technically modify its own settings (stored locally on your device). However:
+Rebel can technically modify its own settings (stored on your device and copied to the configured cloud machine when Cloud Continuity is on). However:
 
 **CRITICAL: Rebel will only modify app settings with your explicit request and permission.**
 

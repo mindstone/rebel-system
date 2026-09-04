@@ -1,6 +1,6 @@
 ---
 description: "How to use file search in Rebel to find files by meaning, not just keywords"
-last_updated: "2026-06-26"
+last_updated: "2026-09-04"
 ---
 
 # File Search
@@ -115,7 +115,10 @@ When paused, Rebel stops all background indexing work. Your existing index remai
 
 - Indexing happens locally and through your configured API
 - No file contents are shared with third parties beyond your AI provider
-- The index is stored locally on your machine
+- With Cloud Continuity off, the index stays on this device
+- With your own provider, the index is copied to a machine 100% under your control; Mindstone does not get it
+- With Mindstone Cloud, Mindstone holds a copy of the index and never looks at it
+- With a manual connection, Rebel cannot verify who operates the configured machine
 
 
 ## Tips
@@ -157,4 +160,3 @@ If Rebel feels slow:
 - Try pausing indexing temporarily (Library panel > info icon > pause)
 - Check if indexing is actively processing a large number of files
 - Enable GPU acceleration in **Settings → Agent & Voice → Intelligence → File Indexing** for faster processing
-
