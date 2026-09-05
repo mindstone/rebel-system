@@ -1,6 +1,6 @@
 ---
 description: "Complete overview of what Rebel does: product vision, all features, and how Rebel compares to ChatGPT, Claude Cowork, and OpenClaw"
-last_updated: "2026-08-29"
+last_updated: "2026-09-04"
 ---
 
 # Product Overview and Features
@@ -23,7 +23,7 @@ Most AI tools start from scratch every conversation. Rebel maintains persistent 
 
 ### Privacy First
 
-Rebel connects directly to the AI setup you choose — whether that's Anthropic, ChatGPT Pro, OpenRouter, or another provider — so your conversations go straight there, never through Mindstone's servers. Your workspace files stay on your machine. Mindstone never sees your conversations, files, or sensitive data. Connector tokens are stored locally. Search indexes run on local embeddings.
+Rebel connects directly to the AI setup you choose — whether that's Anthropic, ChatGPT Pro, OpenRouter, or another provider. Where Rebel stores your work is a separate choice. With Cloud Continuity off, conversations, workspace files, search data, and credentials stay on your device. With your own provider, Rebel copies them to a machine 100% under your control and Mindstone does not get them. With Mindstone Cloud, Mindstone holds a copy and never looks at it. For a manual connection, Rebel cannot verify who operates the configured machine. Search embeddings are created locally.
 
 ### Voice First
 
@@ -107,7 +107,7 @@ Integrations with external services, available in Settings → Connectors:
 | **Payments** | Stripe, PayPal, Xero, Ramp |
 | **Media** | ElevenLabs, Kling AI, OpenAI Image Generation |
 
-Authentication uses standard OAuth — sign in through your browser, and tokens stay on your device.
+Authentication uses standard OAuth. Rebel stores tokens on your device and, when Cloud Continuity is on, copies the tokens cloud tasks need to the configured cloud machine under the custody rules above.
 
 **See also:** [Connectors and Tools](library://rebel-system/help-for-humans/mcp-connectors-tools-and-integrations.md)
 
@@ -306,7 +306,7 @@ Bring multiple AI models into one conversation for second opinions, diverse pers
 
 ### Mindstone Cloud
 
-Optional managed cloud infrastructure that keeps your desktop, mobile, and browser in sync. One-click provisioning with seamless switching between your own API keys and managed service. Cloud Continuity is opt-in — Rebel works fully offline in desktop-only mode.
+Optional managed cloud infrastructure that keeps your desktop, mobile, and browser in sync. Mindstone holds the cloud copy — including the credentials cloud tasks need — and never looks at it. Hosting and AI billing are separate choices: you can use your own AI credentials or a managed AI plan. Cloud Continuity is opt-in; with it off, your Rebel data and credentials stay on your device.
 
 **See also:** [Cloud Continuity and Mobile](library://rebel-system/help-for-humans/cloud-continuity-and-mobile.md)
 
@@ -363,7 +363,7 @@ The same workspace, files, and skills are accessible from Rebel and compatible I
 
 ## Core Principles
 
-- **Privacy first** — Mindstone never sees your data. Your workspace files stay local; conversations go directly to your chosen AI provider
+- **Privacy first** — With Cloud Continuity off, your data stays on your device. With your own provider, the copy is on a machine 100% under your control and Mindstone does not get it. With Mindstone Cloud, Mindstone holds a copy and never looks at it.
 - **Respect your attention** — Minimise friction. Focus on what you're trying to achieve
 - **Do no harm** — No destructive operations without explicit approval
 - **Ask, don't guess** — When intent or risk is unclear, Rebel asks rather than assuming

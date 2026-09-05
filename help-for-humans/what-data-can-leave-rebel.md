@@ -23,7 +23,7 @@ Two of these you can switch off right now, in **[Settings → Privacy & Safety](
 | **Voice — read-aloud** (Rebel speaking a passage) | A cloud voice provider, or nowhere | Yes — an on-device model leaves it unavailable, or just don't use it |
 | **Voice — Live mode** (a spoken back-and-forth) | A cloud realtime voice provider | Yes — don't use Live mode |
 | **Web searches and pages Rebel fetches** | The search provider, and the site itself | Yes — by not asking for it |
-| **Your complete workspace, conversations, settings and saved service keys** | Your own cloud instance | Yes — Cloud Continuity is opt-in |
+| **Your complete workspace, conversations, settings and saved service keys** | The cloud machine you choose: your own, Mindstone-run, or a manually configured host | Yes — Cloud Continuity is opt-in |
 | **Update checks** | Mindstone's update service | No — always on |
 | **Signing in and account checks** | Mindstone | No — required to sign in |
 
@@ -113,13 +113,17 @@ None of this happens unless you set the notetaker up. See [meetings and notetake
 
 ### Cloud Continuity, mobile and browser access
 
-If you switch on Cloud Continuity, your conversations, Actions, settings, memory, in-progress turn state and **everything inside your Rebel workspace** are mirrored to your own cloud instance so your phone and browser can continue the work. “Everything” includes files that `.gitignore` hides from Git, such as a workspace `.env` file; `.gitignore` is not a privacy boundary. Files you let Rebel read from somewhere outside the workspace are not copied by workspace sync.
+If you switch on Cloud Continuity, your conversations, Actions, settings, memory, in-progress turn state and **everything inside your Rebel workspace** are mirrored to the configured cloud machine so your phone and browser can continue the work. “Everything” includes files that `.gitignore` hides from Git, such as a workspace `.env` file; `.gitignore` is not a privacy boundary. Files you let Rebel read from somewhere outside the workspace are not copied by workspace sync.
 
 Rebel also relays the saved service keys in **Keys Rebel can use**, plus supported connector logins, so the cloud instance can use them on your behalf. Those credentials use a separate encrypted relay rather than ordinary workspace or settings sync. Pairing a self-hosted instance establishes the receiver it may relay to. Mobile push notifications go via Expo's push service and can include short preview text such as a title or status.
 
+- **Your own provider:** the workspace and credential copies go to a machine 100% under your control. Mindstone does not get them.
+- **Mindstone Cloud:** Mindstone holds the workspace and credential copies and never looks at them.
+- **Manual connection:** Rebel cannot verify who operates the configured machine. Only connect one you trust.
+
 That is a much bigger change to where your data lives than any telemetry toggle, and it's entirely opt-in. See [cloud continuity and mobile](rebel://library/rebel-system%2Fhelp-for-humans%2Fcloud-continuity-and-mobile.md).
 
-Cloud Continuity is also the road the two toggles above travel: your choice is stored on your own cloud instance alongside the rest of your settings, and each of your devices reads it from there. That's why devices not connected to Cloud Continuity keep their own answer — there's nothing carrying the choice between them.
+Cloud Continuity is also the road the two toggles above travel: your choice is stored on the configured cloud machine alongside the rest of your settings, and each of your devices reads it from there. That's why devices not connected to Cloud Continuity keep their own answer — there's nothing carrying the choice between them.
 
 ### Mindstone's monitoring of its own cloud service
 
@@ -133,7 +137,7 @@ A few things worth saying precisely, because "we stopped everything instantly" i
 
 - **Requests already in flight can't be recalled.** When you switch either toggle off, Rebel stops immediately: it refuses new events, discards what it was holding, and doesn't flush anything on the way out. But a request already handed to the network has left, and nothing on your machine can call it back.
 - **Usage analytics used to have a loose end. It doesn't any more.** The analytics library keeps its own delivery queue on disk, for events it hasn't managed to send yet — a flaky connection can leave a few sitting there. Switching analytics off now empties that queue and stops it being refilled, so those events are discarded rather than delivered later. We tested it rather than assuming: with events deliberately stuck in the queue, switching off sent nothing at all afterwards, nothing survived quitting and reopening Rebel, and switching analytics back on later sent none of them. A session that *starts* with analytics off remains the cleanest state of all — the machinery is never loaded, so there is nothing to empty.
-- **Your other devices follow, they don't jump — and only if they're connected.** The choice travels through Cloud Continuity: it's stored on your own cloud instance, and each device applies it when it next checks in — when it reconnects, or when you next bring it to the front. A phone in your pocket, or a laptop that's asleep or offline, is still on its old answer until then. It is not instant, and we'd rather say so than imply otherwise. If you don't use Cloud Continuity, nothing carries the choice at all: two desktops with it switched off will never agree, and each simply keeps what you set on it.
+- **Your other devices follow, they don't jump — and only if they're connected.** The choice travels through Cloud Continuity: it's stored on the configured cloud machine, and each device applies it when it next checks in — when it reconnects, or when you next bring it to the front. A phone in your pocket, or a laptop that's asleep or offline, is still on its old answer until then. It is not instant, and we'd rather say so than imply otherwise. If you don't use Cloud Continuity, nothing carries the choice at all: two desktops with it switched off will never agree, and each simply keeps what you set on it.
 - **If two devices decide different things while both are offline, the last one back wins.** Not the one you changed most recently — the last one to reconnect. Nothing in the sync records *when* you made each choice, so Rebel genuinely can't tell which was later. It's a corner you'd have to work at to reach, but "your other devices follow" isn't the same as "the newest decision wins", and you should know which one we can promise.
 - **Going back to an older version undoes it.** These controls are new. If you install a version of Rebel from before they existed, it has no idea your choice was ever made, and it resumes sending. Turning the toggles off again on a current version restores your choice.
 

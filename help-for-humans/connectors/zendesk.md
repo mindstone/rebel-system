@@ -41,7 +41,7 @@ This is a Zendesk requirement, not a Rebel one — it's the same for any tool th
    the **API token**, then connect
 
 Rebel checks the credentials with Zendesk before saving, so you'll know right away if something's off.
-Your token is stored locally on your device.
+Rebel stores your token on this device. With Cloud Continuity off, it stays here. With your own provider, it is copied to a machine 100% under your control and Mindstone does not get it. With Mindstone Cloud, Mindstone holds a copy and never looks at it. For a manual connection, Rebel cannot verify who operates the configured machine.
 
 > **Desktop only for now.** During Beta, Zendesk is set up and runs on the desktop app. Cloud and mobile
 > can't use it yet.
