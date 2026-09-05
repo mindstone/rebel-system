@@ -20,6 +20,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **Rebel stops asking you to approve actions that were never going to work** — If a connector action names something that does not exist, Rebel now catches it before handing you an approval card. The impossible paperwork has been declined on your behalf.
+
 - **Windows commands can get on with the safe stuff** — Rebel now checks familiar Windows commands before running them, so routine work it can prove safe no longer stops for approval. Anything unusual, unclear, or higher-impact still goes through the usual safety check or asks first. Suspicion, now more selective.
 
 - **Save failures no longer go quiet** — If a conversation can no longer save safely, Rebel keeps a warning visible on desktop, phone, and web, blocks new messages, and offers **Copy conversation** before you leave; silence has been reassigned.
