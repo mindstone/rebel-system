@@ -19,6 +19,9 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **Plaud recordings produce transcripts again** — Since 4 September Plaud had been sending transcript pieces in a shape Rebel could not read, so Rebel waited for a transcript that was already there. It now reads the new shape, and when a transcript still cannot be read it tells you in Actions instead of waiting quietly.
+- **A permission card shows what the action really does** — The card used to pick its icon and label from the connector's name, so searching your email wore the same badge as sending one. It now goes by what the action does, read, write or send, so a read-only search never looks like a message going out.
+- **Daily automations stop re-running on every launch** — An automation that had already run could run again each time Rebel started or woke, so the same briefing arrived three or four times a day and the failures piled up with it. Rebel now records when each scheduled run actually happened and only catches up on runs that were genuinely missed, within that automation's own cadence rather than a flat week.
 - **Cloud Continuity now says where your copy lives** — Rebel now names the configured cloud host that holds its copy, including the working credentials cloud tasks need. Older wording saying keys stay on your device predates Cloud Continuity and no longer describes it; the paperwork has caught up.
 
 - **Rebel stops asking you to approve actions that were never going to work** — If a connector action names something that does not exist, Rebel now catches it before handing you an approval card. The impossible paperwork has been declined on your behalf.
