@@ -61,7 +61,7 @@ What's new in Rebel. We ship fast, so there's always something.
 
 - **"Allow" now actually saves the file** — Some approval cards refused their own Save button, blamed an out-of-date approval and told you to refresh something that has no refresh. The files behind them (notes from automations, meeting transcripts, older saved items) could only be thrown away, never kept. They save on the first click now, on desktop and on your phone.
 
-- **Keeping a file private now leaves a trace** — Choosing to keep a staged file private used to move it somewhere else without a word, including after a bulk **Deny all**. Rebel now says where it went and offers to open it.
+- **Keeping a file private now leaves a trace** — Choosing to keep a staged file private used to move it somewhere else without a word. For a single file, Rebel now says where it went and offers to open it. After a bulk **Deny all**, Rebel says it happened and how many files it covered; it does not list where each one went.
 
 - **A file at the top of your workspace is no longer called "outside" it** — It was labelled *Outside workspace*, which was never true. Geography corrected.
 
