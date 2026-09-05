@@ -4,7 +4,7 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ---
 
-## v0.4.64 — Sep 2-3, 2026
+## v0.4.64 — Sep 2-5, 2026
 
 ### Highlights
 
@@ -17,6 +17,11 @@ What's new in Rebel. We ship fast, so there's always something.
 - **Fewer "Impossible state" dead ends** — A pay-as-you-go setup with no usable model route now shows a calm, specific recovery message instead of failing every turn.
 
 ### Fixes
+
+- **Automations stop redoing work they've already done** — A scheduled automation that missed its time could run that same missed slot again on every launch and every time your computer woke up — real spend, and the same message posted more than once. Rebel now keeps a record of which scheduled run it attempted, instead of working it out from when a run last finished. Once is once.
+
+<!-- detail: Catch-up grace is now half the real gap to the next scheduled occurrence, capped at seven days; 'once' schedules keep the flat seven days. Nothing became more permissive. -->
+- **Catching up on a missed run now knows when to let go** — If Rebel was closed when an automation was due, it still runs it late — but only while that missed run is still the more relevant one. An hourly automation gets about half an hour, a daily one about half a day, a weekly one a few days. Before, everything got a full week, which is how a Thursday morning briefing could turn up on the following Tuesday. If your laptop stays shut over a long weekend, expect a missed daily automation to be skipped rather than back-filled — that part is deliberate.
 
 - **Windows commands can get on with the safe stuff** — Rebel now checks familiar Windows commands before running them, so routine work it can prove safe no longer stops for approval. Anything unusual, unclear, or higher-impact still goes through the usual safety check or asks first. Suspicion, now more selective.
 
