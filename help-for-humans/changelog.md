@@ -49,6 +49,12 @@ What's new in Rebel. We ship fast, so there's always something.
 
 - **One failure, one message** — A task that failed before it started could still fire a second, unrelated warning ninety seconds later. It cannot any more: a failure produces one message, once.
 
+- **"Allow" now actually saves the file** — Some approval cards refused their own Save button, blamed an out-of-date approval and told you to refresh something that has no refresh. The files behind them (notes from automations, meeting transcripts, older saved items) could only be thrown away, never kept. They save on the first click now, on desktop and on your phone.
+
+- **Keeping a file private now leaves a trace** — Choosing to keep a staged file private used to move it somewhere else without a word, including after a bulk **Deny all**. Rebel now says where it went and offers to open it.
+
+- **A file at the top of your workspace is no longer called "outside" it** — It was labelled *Outside workspace*, which was never true. Geography corrected.
+
 ## v0.4.63 — Aug 19-Sep 2, 2026
 
 ### Highlights
