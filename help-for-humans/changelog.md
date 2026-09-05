@@ -39,6 +39,16 @@ What's new in Rebel. We ship fast, so there's always something.
 
 - **"Try again" after removing an out-of-date permission now really tries again** — It used to replay the same rejection. It now starts a fresh attempt.
 
+- **Forgetting a cloud now says why when it cannot finish, and lets you forget anyway when it is safe** — Turning cloud continuity off used to fail without a word if the cloud could not be reached, leaving the button looking as if nothing had happened. It now shows the reason next to the button: an unreachable cloud offers **Forget anyway**, a signed-out session asks you to sign in first so keys are removed properly, and a failure on your own computer is named as such.
+
+- **Your Actions list says when it could not load** — A failed load used to look like an empty list. It now says **Actions couldn't load** with **Try again**, and a failed refresh keeps your current list on screen with the same offer, so an empty list means empty.
+
+- **A Todoist change Rebel could not make no longer pretends it did** — Completing or deleting a task while Todoist refused (an expired sign-in, no connection) used to remove it from your list anyway. The task now stays put and Rebel tells you why.
+
+- **Approving a card that was already handled now says so** — If a permission request was settled somewhere else, on your phone or by Rebel filing the note itself, clicking Approve used to do nothing visibly. Both Approve and Deny now say the card was already handled, and by whom when Rebel knows.
+
+- **One failure, one message** — A task that failed before it started could still fire a second, unrelated warning ninety seconds later. It cannot any more: a failure produces one message, once.
+
 ## v0.4.63 — Aug 19-Sep 2, 2026
 
 ### Highlights
