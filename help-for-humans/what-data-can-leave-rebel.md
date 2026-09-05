@@ -1,5 +1,5 @@
 ---
-description: "Every point where data can leave Rebel — usage analytics, crash reports, AI providers, connectors, meetings, updates, sign-in and cloud sync — which of them you can switch off, and exactly what the two Privacy & Data toggles do and don't cover"
+description: "Every point where data can leave Rebel — usage analytics, crash reports, AI providers, connectors, meetings, updates, sign-in, cloud sync and learning-programme exercises — which of them you can switch off, and exactly what the two Privacy & Data toggles do and don't cover"
 last_updated: "2026-08-27"
 ---
 
@@ -26,6 +26,7 @@ Two of these you can switch off right now, in **[Settings → Privacy & Safety](
 | **Your complete workspace, conversations, settings and saved service keys** | Your own cloud instance | Yes — Cloud Continuity is opt-in |
 | **Update checks** | Mindstone's update service | No — always on |
 | **Signing in and account checks** | Mindstone | No — required to sign in |
+| **One-time links for Mindstone programme exercises** | Mindstone's learning platform | Yes — don't open an exercise in Rebel |
 
 The rest of this page explains each one.
 
@@ -76,6 +77,10 @@ Rebel checks for new versions and installs them. This can't be turned off, and t
 ### Signing in and account checks — always on
 
 Rebel signs you in to verify your account, work out whether you belong to an organisation, and apply any settings your organisation administers. Turning it off isn't offered, because it's the mechanism the rest of your account depends on. It carries who you are, not what you chose here — the toggles travel by a different road, described below.
+
+### Mindstone programme exercises
+
+When you open an exercise from your Mindstone programme, Rebel asks the Mindstone learning platform for that one exercise using a one-time link that expires in 15 minutes. Nothing else is sent.
 
 ### The AI itself
 

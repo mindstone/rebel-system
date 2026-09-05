@@ -14,6 +14,7 @@ What's new in Rebel. We ship fast, so there's always something.
 - **Pictures and files you give Rebel stay attached** — Three ways an attachment could quietly lose its type on save are closed, on desktop and in the cloud, and an unsupported image format is refused with a clear message instead of being mislabelled.
 - **No more busy-loop when you send while Rebel is working** — Sending a message during a turn queues it once instead of retrying in a loop.
 - **Automations keep running in the cloud** — When your laptop is closed, scheduled automations carry on in the cloud and pick up where the desktop left off.
+- **Try a programme exercise in Rebel** — Learners with Rebel can open a Mindstone programme's practical exercise straight into a new chat. Rebel coaches you through attempting it first and only hands over a full solution if you ask.
 - **Fewer "Impossible state" dead ends** — A pay-as-you-go setup with no usable model route now shows a calm, specific recovery message instead of failing every turn.
 
 ### Fixes
