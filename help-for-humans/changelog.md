@@ -55,6 +55,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 - **A file at the top of your workspace is no longer called "outside" it** — It was labelled *Outside workspace*, which was never true. Geography corrected.
 
+- **Every ChatGPT Pro picker now shows the same model list** — The Planner, Main work and Behind the scenes pickers used to keep three slightly different lists of your ChatGPT models, and a model that does two jobs could appear twice on the connection card. There is one list now, each model on it once, wherever you choose.
+
 ## v0.4.63 — Aug 19-Sep 2, 2026
 
 ### Highlights
