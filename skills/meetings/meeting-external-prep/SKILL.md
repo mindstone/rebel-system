@@ -44,7 +44,7 @@ Your parent agent will display your response verbatim to the user. If you return
    - meetingTitle: Meeting title
    - prepContent: The full briefing markdown (without frontmatter)
    - participants: List of attendee emails
-   - meetingId: Calendar ID if known (e.g., "google:abc123") for auto-linking
+   - meetingId (**required**): Exact `id` returned by the calendar tool (e.g., "google:abc123"). Do not call the save tool without it.
    
    **File location:** The tool saves to `memory/sources/` following the conventions in [source-capture](../../memory/source-capture/SKILL.md).
 
