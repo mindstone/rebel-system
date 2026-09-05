@@ -154,6 +154,10 @@ This model handles quieter jobs in the background, such as:
 
 In the app this is labeled **Behind the Scenes**.
 
+There is one exception. Before Rebel runs an action you've already approved, it takes a quick second look to catch anything that seems off. On OpenRouter, that one check runs on a model tested for the job, whichever Behind the Scenes model you pick. Everything else in the list above still follows your choice.
+
+You can take that check over yourself in [Settings → Agent & Voice → Intelligence](rebel://settings/agents), under **Behind the Scenes details → Safety & Security**. Rebel will then ask you about more actions, because it has no measurement for the model you chose.
+
 ### Model team
 
 A **Model team** is Rebel bringing together a set of models that each do a different job. Instead of one model doing everything, Rebel picks the right tool for each step of a task.
@@ -192,7 +196,7 @@ If you'd rather keep things to fewer moving parts, you can:
 - set the **same model** for Main work and Behind the Scenes
 - or ignore the individual roles entirely and just use the **Quality Tier** slider inside a conversation
 
-Note that the feature which adds *more* model variety — **Smart model picking**, described next — is **off by default**. If you haven't switched it on, the models you see come purely from the roles above, not from Rebel picking a different model for each step.
+Note that the feature which adds *more* model variety — **Smart model picking**, described next — is **off by default**. If you haven't switched it on, the models you see come purely from the roles above, not from Rebel picking a different model for each step. The one exception is the quick second look described under **Behind the Scenes** above.
 
 ### Smart model picking
 

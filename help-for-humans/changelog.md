@@ -18,6 +18,9 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+<!-- detail: On OpenRouter, the pre-execution anomaly check now runs on a model measured for that job rather than the user's general Behind the Scenes model. Setting an explicit Safety & Security model still wins, and the row now says what that costs. The Behind the Scenes help doc carries the exception. -->
+- **The quick second look got sharper on OpenRouter** — Before running an action you've already approved, Rebel takes a quick second look for anything that seems off. On OpenRouter it was doing that on whichever background model you'd picked, and missing about half the cases where an action was heading somewhere nobody asked for. It now uses a model measured for that one job. You can still take it over in **Settings → Agent & Voice → Intelligence**, and Rebel will tell you what that means: it goes back to asking more often, because it has no measurement for your choice. Paranoia, professionally trained.
+
 - **Windows commands can get on with the safe stuff** — Rebel now checks familiar Windows commands before running them, so routine work it can prove safe no longer stops for approval. Anything unusual, unclear, or higher-impact still goes through the usual safety check or asks first. Suspicion, now more selective.
 
 - **Save failures no longer go quiet** — If a conversation can no longer save safely, Rebel keeps a warning visible on desktop, phone, and web, blocks new messages, and offers **Copy conversation** before you leave; silence has been reassigned.
