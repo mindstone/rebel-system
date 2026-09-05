@@ -8,15 +8,18 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Highlights
 
-- **"This conversation isn't saving" stops crying wolf** — A scheduled automation could stamp its own result on a conversation and make Rebel think the save had failed. It no longer does, so the warning only shows when something is actually wrong.
-- **Stuck on an old version? Rebel now gets you off it** — On Windows, updates install when you quit (with your say-so), the "update available" nudge comes back every 12 hours instead of vanishing, and a read-only install folder or a failed update now shows what happened instead of pretending.
-- **A calmer "Waiting" instead of a scary "Blocked"** — Rebel's activity card now shows its own working notes while it thinks, keeps them after the task, and tells you plainly what it is waiting on.
-- **Pictures and files you give Rebel stay attached** — Three ways an attachment could quietly lose its type on save are closed, on desktop and in the cloud, and an unsupported image format is refused with a clear message instead of being mislabelled.
-- **No more busy-loop when you send while Rebel is working** — Sending a message during a turn queues it once instead of retrying in a loop.
-- **Automations keep running in the cloud** — When your laptop is closed, scheduled automations carry on in the cloud and pick up where the desktop left off.
-- **Fewer "Impossible state" dead ends** — A pay-as-you-go setup with no usable model route now shows a calm, specific recovery message instead of failing every turn.
+- **Claude Fable 5.1 is here for the hard jobs** — Anthropic's most capable model is now available with an Anthropic key and through OpenRouter, and Maximum on the quality slider now uses it for new selections — conversations you already set to Maximum stay on Fable 5 (they'll show as Custom) until you pick Maximum again. Fable 5 stays available and your other choices stay put. Like Fable 5, it can decline a request its safety training flags; and in long conversations it may quietly re-read earlier context before answering rather than fail. Bring a proper problem.
+- **GPT-6 Astra joins the model team** — OpenAI's most capable model is now available through ChatGPT in every role — Planner, Main work and Behind the scenes; with ChatGPT it uses more of your allowance. It's also selectable with an OpenAI key (premium-priced), though we haven't yet exercised that route end to end — tell us if it sulks. Your defaults stay put.
+- **"This conversation isn't saving" stops crying wolf** — Three things could make Rebel warn that a conversation had failed to save when it had not: a scheduled automation finishing, a slow start while your computer was asleep or under pressure, and a start-up timeout. All three are fixed, so the warning now appears only when something is actually wrong.
+- **Stuck on an old version? Rebel now gets you off it** — On Windows, updates install when you quit (with your say-so), the "update available" nudge comes back every 12 hours instead of vanishing, and if the install folder cannot be written to or an update fails, Rebel says so instead of pretending.
+- **Rebel shows its working, and says "waiting" instead of "blocked"** — While Rebel works on something long, its card now shows the notes it keeps for itself, keeps them when the task is done, and says plainly what it is waiting on. "Blocked" has retired. It always sounded worse than it was.
+- **Pictures and files you give Rebel stay what they are** — An attachment could occasionally lose its identity when a conversation was saved, on desktop or in the cloud, and turn up as an unrecognised file. That no longer happens, and an image format Rebel cannot use is refused with a clear message rather than quietly mislabelled.
+- **Sending while Rebel is working no longer makes it spin** — A message sent mid-task could make Rebel retry it over and over. It now takes the message once and picks it up as soon as it can.
+- **Fewer "Impossible state" dead ends** — If you pay as you go and none of your chosen models can be reached, Rebel now tells you that plainly and points you to the setting to fix, instead of failing every message.
 
 ### Fixes
+
+- **Rebel stops asking you to approve actions that were never going to work** — If a connector action names something that does not exist, Rebel now catches it before handing you an approval card. The impossible paperwork has been declined on your behalf.
 
 - **Automations stop redoing work they've already done** — A scheduled automation that missed its time could run that same missed slot again on every launch and every time your computer woke up — real spend, and the same message posted more than once. Rebel now keeps a record of which scheduled run it attempted, instead of working it out from when a run last finished. Once is once.
 
@@ -25,13 +28,39 @@ What's new in Rebel. We ship fast, so there's always something.
 
 - **Windows commands can get on with the safe stuff** — Rebel now checks familiar Windows commands before running them, so routine work it can prove safe no longer stops for approval. Anything unusual, unclear, or higher-impact still goes through the usual safety check or asks first. Suspicion, now more selective.
 
-- **Save failures no longer go quiet** — If a conversation can no longer save safely, Rebel keeps a warning visible on desktop, phone, and web, blocks new messages, and offers **Copy conversation** before you leave; silence has been reassigned.
+- **Save failures no longer go quiet** — If a conversation can no longer save safely, Rebel keeps a warning visible on desktop, phone and web, stops new messages going into it, and offers **Copy conversation** so nothing is lost. Silence has been reassigned.
 
 <!-- detail: Approval choices now follow what Rebel can actually save. The one-time option stays available, while remembered choices appear only when the action and current surface support them. The same rule is used across desktop and phone. -->
 - **Permission choices now have a reliable escape hatch** — When Rebel asks before an action, a **one-time approval** is always available. **Allow and remember** appears only when Rebel can actually keep it, so unsupported actions no longer lead into the same dead end. A door, not a maze.
 
 <!-- detail: Permission failures now distinguish between an action that must be approved every time, a saved choice that cannot be tied to a specific action, a broader choice that is unavailable, and a save that could not be confirmed. Recovery is offered only when trying again can help, and the wording follows whether you allowed or declined. -->
 - **Permission messages now say what happened** — If Rebel needs to ask every time, cannot tell what a remembered choice would cover, cannot offer a broader choice, or cannot confirm a save, it now says which. Recovery buttons appear only when they can help, and a failed decline no longer suggests allowing. Less mystery, better manners.
+
+- **Managed cloud plans can now connect Google Workspace, Slack, HubSpot and Microsoft 365** — People on a Mindstone-managed cloud used to hit "this instance cannot be repaired automatically" and could not connect these apps at all. The cloud can now receive the sign-in details it needs, so the connectors work the same as for everyone else.
+
+- **When Rebel cannot ask you a question, it waits instead of guessing** — A badly formed question could quietly tell Rebel to carry on with its best guess. It now either asks you properly or stops until you answer.
+
+- **Removing a model no longer breaks the conversations that used it** — A conversation tied to a model you have since removed now moves to your current default and carries on; a choice that still works is left alone.
+
+- **"Try again" after removing an out-of-date permission now really tries again** — It used to replay the same rejection. It now starts a fresh attempt.
+
+- **Forgetting a cloud now says why when it cannot finish, and lets you forget anyway when it is safe** — Turning cloud continuity off used to fail without a word if the cloud could not be reached, leaving the button looking as if nothing had happened. It now shows the reason next to the button: an unreachable cloud offers **Forget anyway**, a signed-out session asks you to sign in first so keys are removed properly, and a failure on your own computer is named as such.
+
+- **Your Actions list says when it could not load** — A failed load used to look like an empty list. It now says **Actions couldn't load** with **Try again**, and a failed refresh keeps your current list on screen with the same offer, so an empty list means empty.
+
+- **A Todoist change Rebel could not make no longer pretends it did** — Completing or deleting a task while Todoist refused (an expired sign-in, no connection) used to remove it from your list anyway. The task now stays put and Rebel tells you why.
+
+- **Approving a card that was already handled now says so** — If a permission request was settled somewhere else, on your phone or by Rebel filing the note itself, clicking Approve used to do nothing visibly. Both Approve and Deny now say the card was already handled, and by whom when Rebel knows.
+
+- **One failure, one message** — A task that failed before it started could still fire a second, unrelated warning ninety seconds later. It cannot any more: a failure produces one message, once.
+
+- **"Allow" now actually saves the file** — Some approval cards refused their own Save button, blamed an out-of-date approval and told you to refresh something that has no refresh. The files behind them (notes from automations, meeting transcripts, older saved items) could only be thrown away, never kept. They save on the first click now, on desktop and on your phone.
+
+- **Keeping a file private now leaves a trace** — Choosing to keep a staged file private used to move it somewhere else without a word, including after a bulk **Deny all**. Rebel now says where it went and offers to open it.
+
+- **A file at the top of your workspace is no longer called "outside" it** — It was labelled *Outside workspace*, which was never true. Geography corrected.
+
+- **Every ChatGPT Pro picker now shows the same model list** — The Planner, Main work and Behind the scenes pickers used to keep three slightly different lists of your ChatGPT models, and a model that does two jobs could appear twice on the connection card. There is one list now, each model on it once, wherever you choose.
 
 ## v0.4.63 — Aug 19-Sep 2, 2026
 
