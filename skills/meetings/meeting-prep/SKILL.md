@@ -9,7 +9,7 @@ agent_type: main_agent
 Prepare meeting briefing notes by automatically detecting the meeting type and using the right preparation approach.
 
 [PROCESS]
-1. Find the meeting on the calendar (by name, time, or next upcoming). Retain the exact calendar tool `id`: it is the required `meetingId` argument for `rebel_meetings_save_prep`, and must be passed to the routed prep skill. Do not save without it.
+1. Find the meeting on the calendar (by name, time, or next upcoming). Retain the exact calendar tool `id`: it is the required `meetingId` argument for `rebel_meetings_save_prep`, and must be passed to the routed prep skill. If the calendar entry has no `id`, the routed skill must not save at all (it gives the briefing in the conversation and says why it was not filed); never guess an id. Do not save without it.
 2. Check the attendee list:
    - If ALL attendees are from {COMPANY_DOMAIN} → Internal meeting
    - If ANY attendees are from outside {COMPANY_DOMAIN} → External meeting

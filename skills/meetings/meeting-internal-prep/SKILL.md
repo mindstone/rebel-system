@@ -51,6 +51,8 @@ Your parent agent will display your response verbatim to the user. If you return
    - prepContent: The full briefing markdown (without frontmatter)
    - participants: List of attendee emails
    - meetingId (**required**): Exact `id` returned by the calendar tool (e.g., "google:abc123"). Do not call the save tool without it.
+
+   **Gate before saving (do this check every time):** look at the calendar entry you found for this meeting. If it has no `id` field, **stop — do not call `rebel_meetings_save_prep`**, not even with the title or a guessed id. Instead, give the briefing in the conversation and say the prep could not be filed against the meeting because the calendar entry carries no id; suggest a calendar re-sync or ask which meeting to file it under. An unsaved briefing is fine; a briefing filed against the wrong meeting or a made-up id is not.
    
    **File location:** The tool saves to `memory/sources/` following the conventions in [source-capture](../../memory/source-capture/SKILL.md).
 
