@@ -38,6 +38,7 @@ amplification is what turned a handful of copies into thousands.
 - **It no longer multiplies them.** As before, Rebel also recognises any conflict copies that do
   exist and refuses to pass them around between your machines, so an old stray copy can't breed
   more. This covers whole **folders** too (like `Project (1)/`), not just individual files.
+- **It shows two disagreeing copies where they live, and lets you settle them.** When a file and its copy genuinely differ, the pair now appears next to the file itself rather than in Settings. Open it and Rebel shows the two versions side by side; keep either one, keep both, or ask Rebel to propose a merge. Every place that lists files needing review agrees, so clearing one clears the others.
 - **It offers to tidy up.** If Rebel notices conflict copies in your folders, it shows a
   one-time note — *"Tidy up duplicate files? Rebel found N duplicate files from a cloud-sync
   issue."* — with a **Move … to cleanup folder** button. If you have none, you'll see
