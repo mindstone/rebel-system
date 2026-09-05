@@ -8,13 +8,12 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Highlights
 
-- **"This conversation isn't saving" stops crying wolf** — A scheduled automation could stamp its own result on a conversation and make Rebel think the save had failed. It no longer does, so the warning only shows when something is actually wrong.
-- **Stuck on an old version? Rebel now gets you off it** — On Windows, updates install when you quit (with your say-so), the "update available" nudge comes back every 12 hours instead of vanishing, and a read-only install folder or a failed update now shows what happened instead of pretending.
-- **A calmer "Waiting" instead of a scary "Blocked"** — Rebel's activity card now shows its own working notes while it thinks, keeps them after the task, and tells you plainly what it is waiting on.
-- **Pictures and files you give Rebel stay attached** — Three ways an attachment could quietly lose its type on save are closed, on desktop and in the cloud, and an unsupported image format is refused with a clear message instead of being mislabelled.
-- **No more busy-loop when you send while Rebel is working** — Sending a message during a turn queues it once instead of retrying in a loop.
-- **Automations keep running in the cloud** — When your laptop is closed, scheduled automations carry on in the cloud and pick up where the desktop left off.
-- **Fewer "Impossible state" dead ends** — A pay-as-you-go setup with no usable model route now shows a calm, specific recovery message instead of failing every turn.
+- **"This conversation isn't saving" stops crying wolf** — Three things could make Rebel warn that a conversation had failed to save when it had not: a scheduled automation finishing, a slow start while your computer was asleep or under pressure, and a start-up timeout. All three are fixed, so the warning now appears only when something is actually wrong.
+- **Stuck on an old version? Rebel now gets you off it** — On Windows, updates install when you quit (with your say-so), the "update available" nudge comes back every 12 hours instead of vanishing, and if the install folder cannot be written to or an update fails, Rebel says so instead of pretending.
+- **Rebel shows its working, and says "waiting" instead of "blocked"** — While Rebel works on something long, its card now shows the notes it keeps for itself, keeps them when the task is done, and says plainly what it is waiting on. "Blocked" has retired. It always sounded worse than it was.
+- **Pictures and files you give Rebel stay what they are** — An attachment could occasionally lose its identity when a conversation was saved, on desktop or in the cloud, and turn up as an unrecognised file. That no longer happens, and an image format Rebel cannot use is refused with a clear message rather than quietly mislabelled.
+- **Sending while Rebel is working no longer makes it spin** — A message sent mid-task could make Rebel retry it over and over. It now takes the message once and picks it up as soon as it can.
+- **Fewer "Impossible state" dead ends** — If you pay as you go and none of your chosen models can be reached, Rebel now tells you that plainly and points you to the setting to fix, instead of failing every message.
 
 ### Fixes
 
@@ -22,13 +21,21 @@ What's new in Rebel. We ship fast, so there's always something.
 
 - **Windows commands can get on with the safe stuff** — Rebel now checks familiar Windows commands before running them, so routine work it can prove safe no longer stops for approval. Anything unusual, unclear, or higher-impact still goes through the usual safety check or asks first. Suspicion, now more selective.
 
-- **Save failures no longer go quiet** — If a conversation can no longer save safely, Rebel keeps a warning visible on desktop, phone, and web, blocks new messages, and offers **Copy conversation** before you leave; silence has been reassigned.
+- **Save failures no longer go quiet** — If a conversation can no longer save safely, Rebel keeps a warning visible on desktop, phone and web, stops new messages going into it, and offers **Copy conversation** so nothing is lost. Silence has been reassigned.
 
 <!-- detail: Approval choices now follow what Rebel can actually save. The one-time option stays available, while remembered choices appear only when the action and current surface support them. The same rule is used across desktop and phone. -->
 - **Permission choices now have a reliable escape hatch** — When Rebel asks before an action, a **one-time approval** is always available. **Allow and remember** appears only when Rebel can actually keep it, so unsupported actions no longer lead into the same dead end. A door, not a maze.
 
 <!-- detail: Permission failures now distinguish between an action that must be approved every time, a saved choice that cannot be tied to a specific action, a broader choice that is unavailable, and a save that could not be confirmed. Recovery is offered only when trying again can help, and the wording follows whether you allowed or declined. -->
 - **Permission messages now say what happened** — If Rebel needs to ask every time, cannot tell what a remembered choice would cover, cannot offer a broader choice, or cannot confirm a save, it now says which. Recovery buttons appear only when they can help, and a failed decline no longer suggests allowing. Less mystery, better manners.
+
+- **Managed cloud plans can now connect Google Workspace, Slack, HubSpot and Microsoft 365** — People on a Mindstone-managed cloud used to hit "this instance cannot be repaired automatically" and could not connect these apps at all. The cloud can now receive the sign-in details it needs, so the connectors work the same as for everyone else.
+
+- **When Rebel cannot ask you a question, it waits instead of guessing** — A badly formed question could quietly tell Rebel to carry on with its best guess. It now either asks you properly or stops until you answer.
+
+- **Removing a model no longer breaks the conversations that used it** — A conversation tied to a model you have since removed now moves to your current default and carries on; a choice that still works is left alone.
+
+- **"Try again" after removing an out-of-date permission now really tries again** — It used to replay the same rejection. It now starts a fresh attempt.
 
 ## v0.4.63 — Aug 19-Sep 2, 2026
 
