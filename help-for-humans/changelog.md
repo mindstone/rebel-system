@@ -39,6 +39,22 @@ What's new in Rebel. We ship fast, so there's always something.
 
 - **"Try again" after removing an out-of-date permission now really tries again** — It used to replay the same rejection. It now starts a fresh attempt.
 
+- **Forgetting a cloud now says why when it cannot finish, and lets you forget anyway when it is safe** — Turning cloud continuity off used to fail without a word if the cloud could not be reached, leaving the button looking as if nothing had happened. It now shows the reason next to the button: an unreachable cloud offers **Forget anyway**, a signed-out session asks you to sign in first so keys are removed properly, and a failure on your own computer is named as such.
+
+- **Your Actions list says when it could not load** — A failed load used to look like an empty list. It now says **Actions couldn't load** with **Try again**, and a failed refresh keeps your current list on screen with the same offer, so an empty list means empty.
+
+- **A Todoist change Rebel could not make no longer pretends it did** — Completing or deleting a task while Todoist refused (an expired sign-in, no connection) used to remove it from your list anyway. The task now stays put and Rebel tells you why.
+
+- **Approving a card that was already handled now says so** — If a permission request was settled somewhere else, on your phone or by Rebel filing the note itself, clicking Approve used to do nothing visibly. Both Approve and Deny now say the card was already handled, and by whom when Rebel knows.
+
+- **One failure, one message** — A task that failed before it started could still fire a second, unrelated warning ninety seconds later. It cannot any more: a failure produces one message, once.
+
+- **"Allow" now actually saves the file** — Some approval cards refused their own Save button, blamed an out-of-date approval and told you to refresh something that has no refresh. The files behind them (notes from automations, meeting transcripts, older saved items) could only be thrown away, never kept. They save on the first click now, on desktop and on your phone.
+
+- **Keeping a file private now leaves a trace** — Choosing to keep a staged file private used to move it somewhere else without a word, including after a bulk **Deny all**. Rebel now says where it went and offers to open it.
+
+- **A file at the top of your workspace is no longer called "outside" it** — It was labelled *Outside workspace*, which was never true. Geography corrected.
+
 ## v0.4.63 — Aug 19-Sep 2, 2026
 
 ### Highlights
