@@ -1,6 +1,6 @@
 ---
 description: "How to power Rebel's AI — a flat-fee Mindstone plan or bring your own (ChatGPT Pro, OpenRouter, Anthropic) — then choose Planner, Main work, and Behind the Scenes models, why one task can use several models, and what happens when you pick a model outside your plan tier"
-last_updated: "2026-08-18"
+last_updated: "2026-09-05"
 ---
 
 # AI models
@@ -156,6 +156,8 @@ In the app this is labeled **Behind the Scenes**.
 
 There is one exception. Before Rebel runs an action you've already approved, it takes a quick second look to catch anything that seems off. On OpenRouter, that one check runs on a model tested for the job, whichever Behind the Scenes model you pick. Everything else in the list above still follows your choice.
 
+If the route handling that quick check doesn't yet have a committed measurement for the job, Rebel asks before more actions. Some default provider routes are in that position too. It doesn't mean you changed anything or set it up incorrectly; Rebel is simply cautious about evidence it doesn't have.
+
 You can take that check over yourself in [Settings → Agent & Voice → Intelligence](rebel://settings/agents), under **Behind the Scenes details → Safety & Security**. Rebel will then ask you about more actions, because it has no measurement for the model you chose.
 
 ### Model team
@@ -285,6 +287,5 @@ That is especially handy if you use one model for **Planner** and another for **
 If a provider turns down your credentials, Rebel names the **specific provider** and says the **saved** key was rejected — not that you mistyped it this turn. That matters: re-entering the same key won't help if it's been revoked or expired. The error points you to **Update key** and the right field in [Settings → Agent & Voice → Intelligence](rebel://settings/agents).
 
 If the bad key belongs to an automation's provider, scheduled runs may pause until you fix it — see [Automations](rebel://library/rebel-system%2Fhelp-for-humans%2Fautomations.md).
-
 
 
