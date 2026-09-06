@@ -19,6 +19,7 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **One broken conversation no longer hides the rest** — If a single conversation's record could not be read, the whole list failed to load. The list now loads, sets that record aside, and tells you how many it could not read.
 - **Keeping a file private now leaves a trace** — Choosing to keep a staged file private used to move it somewhere else without a word. For a single file, Rebel now says where it went and offers to open it. After a bulk **Deny all**, Rebel says it happened and how many files it covered; it does not list where each one went.
 - **Plaud recordings produce transcripts again** — Since 4 September Plaud had been sending transcript pieces in a shape Rebel could not read, so Rebel waited for a transcript that was already there. It now reads the new shape, and when a transcript still cannot be read it tells you in Actions instead of waiting quietly.
 - **A permission card shows what the action really does** — The card used to pick its icon and label from the connector's name, so searching your email wore the same badge as sending one. It now goes by what the action does, read, write or send, so a read-only search never looks like a message going out.
