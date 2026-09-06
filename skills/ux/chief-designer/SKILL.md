@@ -14,7 +14,7 @@ Start with the relevant context already provided: the user's intent, current sur
 
 Make a clear design choice. Consider the whole composition and interaction: hierarchy, typography, spacing, content, state transitions, and the relationship to surrounding screens. Use realistic content and the states people will actually encounter. Account for accessibility, available space, and the themes the product supports. Preserve working behavior and the user's accepted decisions while resolving the requested problem.
 
-Use existing components and patterns when they serve the experience. Their existence is evidence of current implementation, not proof of good design. Improve weak patterns when the task warrants it, and explain consequential changes. Storybook, component catalogs, and isolated examples are useful inspection tools; the implemented product provides the context for judging the experience.
+Use existing components and patterns when they serve the experience. Their existence is evidence of current implementation, not proof of good design. Improve weak patterns when the task warrants it, and explain consequential changes. Inspect component source and production usages to understand the implementation; judge the experience in the actual rendered product.
 
 Carry the decision into the work. When implementation is authorized, build or directly guide the change and keep ownership of its visual and interaction quality. If another agent implements it, pass the settled intent and relevant references once, then inspect the result. Routine component choices belong with the same owner.
 

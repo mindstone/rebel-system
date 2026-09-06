@@ -8,6 +8,7 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Highlights
 
+- **Design review follows the actual app** — Chief Designer now uses implementation source and the running product for UI review. The separate Storybook preview tooling has been retired.
 - **Claude Fable 5.1 is here for the hard jobs** — Anthropic's most capable model is now available with an Anthropic key and through OpenRouter, and Maximum on the quality slider now uses it for new selections — conversations you already set to Maximum stay on Fable 5 (they'll show as Custom) until you pick Maximum again. Fable 5 stays available and your other choices stay put. Like Fable 5, it can decline a request its safety training flags; and in long conversations it may quietly re-read earlier context before answering rather than fail. Bring a proper problem.
 - **GPT-6 Astra joins the model team** — OpenAI's most capable model is now available through ChatGPT in every role — Planner, Main work and Behind the scenes; with ChatGPT it uses more of your allowance. It's also selectable with an OpenAI key (premium-priced), though we haven't yet exercised that route end to end — tell us if it sulks. Your defaults stay put.
 - **"This conversation isn't saving" stops crying wolf** — Three things could make Rebel warn that a conversation had failed to save when it had not: a scheduled automation finishing, a slow start while your computer was asleep or under pressure, and a start-up timeout. All three are fixed, so the warning now appears only when something is actually wrong.

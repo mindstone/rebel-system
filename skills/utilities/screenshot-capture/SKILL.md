@@ -11,6 +11,6 @@ Choose a capture route that shows the requested surface, and inspect the returne
 - For an Electron dev app, connect available Electron tools to the appropriate CDP target and use their screenshot tool. In the Rebel development repository, `scripts/capture-rebel-dev-screenshot.ts --help` documents the command-based route.
 - For a generic desktop capture, use the available operating-system capture tool. Check that the captured window or region is the one requested.
 
-A screenshot proves only what its actual surface, version, and state show. An isolated test app or Storybook story can verify that instance; it cannot establish what the user's currently running app displays. Preserve navigation/theme state changed for capture where practical.
+A screenshot proves only what its actual surface, version, and state show. An isolated test app can verify that instance; it cannot establish what the user's currently running app displays. Preserve navigation/theme state changed for capture where practical.
 
 Keep returned image content available to the model: Rebel's text-only Read tool cannot inspect a PNG by reading its path. Use unique output names and report saved paths and material limitations. If capture is unavailable, report the tool error without pretending that visual inspection occurred.
