@@ -4,7 +4,7 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ---
 
-## v0.4.64 — Sep 2-5, 2026
+## v0.4.64 — Sep 2-6, 2026
 
 ### Highlights
 
@@ -18,6 +18,8 @@ What's new in Rebel. We ship fast, so there's always something.
 - **Fewer "Impossible state" dead ends** — If you pay as you go and none of your chosen models can be reached, Rebel now tells you that plainly and points you to the setting to fix, instead of failing every message.
 
 ### Fixes
+
+- **Chief Designer has less paperwork** — Design requests now use one concise set of instructions. The command works without a component catalog in your workspace, and unavailable screenshots no longer trap it in a completion loop.
 
 - **One broken conversation no longer hides the rest** — If a single conversation's record could not be read, the whole list failed to load. The list now loads, sets that record aside, and tells you how many it could not read.
 - **Keeping a file private now leaves a trace** — Choosing to keep a staged file private used to move it somewhere else without a word. On your computer, for a single file, Rebel now says where it went and offers to open it. After a bulk **Deny all**, Rebel says it happened and how many files it covered; it does not list where each one went. The phone and web copies do not show the trace yet; that follows.
