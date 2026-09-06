@@ -19,6 +19,7 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **Conversations from a newer version show up, with a note** — If an older Rebel opens conversations last used by a newer one, it now shows them instead of an empty list and says plainly why changes are paused: "These conversations were last used by a newer version of Rebel. You can read them here; changes are paused until you update." The Try again that could never work is gone. On your computer you see the conversations and that note; on the phone or the web view you see the conversations.
 - **One broken conversation no longer hides the rest** — If a single conversation's record could not be read, the whole list failed to load. The list now loads, sets that record aside, and tells you how many it could not read.
 - **Keeping a file private now leaves a trace** — Choosing to keep a staged file private used to move it somewhere else without a word. On your computer, for a single file, Rebel now says where it went and offers to open it. After a bulk **Deny all**, Rebel says it happened and how many files it covered; it does not list where each one went. The phone and web copies do not show the trace yet; that follows.
 - **Plaud recordings produce transcripts again** — Since 4 September Plaud had been sending transcript pieces in a shape Rebel could not read, so Rebel waited for a transcript that was already there. It now reads the new shape, and when a transcript still cannot be read it tells you in Actions instead of waiting quietly.
