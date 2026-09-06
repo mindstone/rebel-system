@@ -19,6 +19,7 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **Keeping a file private now leaves a trace** — Choosing to keep a staged file private used to move it somewhere else without a word. For a single file, Rebel now says where it went and offers to open it. After a bulk **Deny all**, Rebel says it happened and how many files it covered; it does not list where each one went.
 - **Plaud recordings produce transcripts again** — Since 4 September Plaud had been sending transcript pieces in a shape Rebel could not read, so Rebel waited for a transcript that was already there. It now reads the new shape, and when a transcript still cannot be read it tells you in Actions instead of waiting quietly.
 - **A permission card shows what the action really does** — The card used to pick its icon and label from the connector's name, so searching your email wore the same badge as sending one. It now goes by what the action does, read, write or send, so a read-only search never looks like a message going out.
 - **Daily automations stop re-running on every launch** — An automation that had already run could run again each time Rebel started or woke, so the same briefing arrived three or four times a day and the failures piled up with it. Rebel now records when each scheduled run actually happened and only catches up on runs that were genuinely missed, within that automation's own cadence rather than a flat week.
@@ -64,7 +65,6 @@ What's new in Rebel. We ship fast, so there's always something.
 
 - **"Allow" now actually saves the file** — Some approval cards refused their own Save button, blamed an out-of-date approval and told you to refresh something that has no refresh. The files behind them (notes from automations, meeting transcripts, older saved items) could only be thrown away, never kept. They save on the first click now, on desktop and on your phone.
 
-- **Keeping a file private now leaves a trace** — Choosing to keep a staged file private used to move it somewhere else without a word. For a single file, Rebel now says where it went and offers to open it. After a bulk **Deny all**, Rebel says it happened and how many files it covered; it does not list where each one went.
 
 - **A file at the top of your workspace is no longer called "outside" it** — It was labelled *Outside workspace*, which was never true. Geography corrected.
 
