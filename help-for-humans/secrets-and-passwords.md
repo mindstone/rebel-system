@@ -1,6 +1,6 @@
 ---
 description: "How Rebel handles passwords, API keys, and connector sign-ins in desktop-only and cloud continuity mode — including stored keys Rebel can use without seeing them"
-last_updated: "2026-07-09"
+last_updated: "2026-09-04"
 ---
 
 # Secrets and Passwords
@@ -50,7 +50,7 @@ Add one in **[Settings → Privacy & Safety](rebel://settings/safety)**, in the 
 
 The honest framing: **Rebel gives a tool access to the key while it runs** — not "the key can never be exposed." The key does get used; what's guaranteed is that the AI reading your conversation never gets to look at it, and it doesn't leak into your chat history. For the tightest safety, use a **restricted key** (read-only, minimal scope) where the service offers one — that limits what any single command could ever do.
 
-> **This works on this computer only.** Because it relies on your computer's secure storage, stored keys aren't available when Rebel is running in the cloud or on mobile yet. If you ask for something there that needs one, Rebel will tell you it's desktop-only rather than half-doing it.
+> **Cloud tasks can use these keys.** Rebel stores each key in this computer's secure storage first. If Cloud Continuity is on, it relays the key separately to the configured cloud machine so work there has the same capability.
 
 ## With cloud continuity enabled
 
@@ -62,13 +62,19 @@ If you switch from **Desktop only** to **Add cloud continuity**, your cloud inst
 - Operating-system permissions on this computer
 - Small device-only preferences that are only about this machine
 
-### These can sync to your cloud instance
+### These are copied to the configured cloud machine
 
 - AI provider credentials Rebel needs to run cloud conversations
 - Voice-provider credentials used for cloud-side voice work
 - Connector access tokens for services like Google, Slack, and similar tools
 
-In other words: **desktop-only keeps working credentials on this computer; cloud continuity copies the working credentials the cloud side needs to your own cloud instance.**
+Who holds that copy depends on the setup:
+
+- **Your own provider:** the credentials go to a machine 100% under your control. Mindstone does not get them.
+- **Mindstone Cloud:** Mindstone holds a copy of the credentials and never looks at them.
+- **Manual connection:** Rebel cannot verify who operates the configured machine. Only connect one you trust.
+
+In other words: **desktop-only keeps working credentials on this computer; Cloud Continuity copies the working credentials the cloud side needs to the machine you configured.**
 
 ## A quick note about “local storage”
 

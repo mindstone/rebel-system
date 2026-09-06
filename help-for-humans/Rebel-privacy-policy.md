@@ -1,7 +1,7 @@
 ---
 description: "Privacy policy for the Rebel app (managed app and open-source build)"
-last_updated: "2026-08-16"
-version: "3.3"
+last_updated: "2026-09-04"
+version: "3.4"
 ---
 
 
@@ -20,14 +20,14 @@ This Privacy Policy explains how Mindstone Learning Limited ("Mindstone", "we", 
 
 Rebel is distributed in two builds — the **managed app** that Mindstone operates, and an **open-source build** that you install and run yourself. A few parts of this policy apply differently to each. Unless a section says otherwise, it describes the managed app; see "Open-Source / Self-Hosted Build" below for what differs.
 
-Last updated: 16 Aug 2026 | Version: 3.3 | Owners: CTO & COO
+Last updated: 4 Sep 2026 | Version: 3.4 | Owners: CTO & COO
 
 How Rebel Works
-Rebel is a desktop application that works with data on your local machine and connects to external services you authorise (for example, cloud storage, email, or collaboration tools). It uses AI to help you complete tasks against that data. Rebel itself does not store your content or conversations; it routes your instructions to the configured services and AI providers and, in the managed app, collects only limited telemetry to ensure reliability. (The open-source build sends Mindstone anonymous usage data by default, which you can switch off, and no error reports at all — see "Open-Source / Self-Hosted Build".)
+Rebel is a desktop application that works with data on your local machine and connects to external services you authorise (for example, cloud storage, email, or collaboration tools). It uses AI to help you complete tasks against that data. Rebel stores content and conversations on your device and, if you enable Cloud Continuity, on the configured cloud machine. It also routes your instructions to the configured services and AI providers and, in the managed app, collects limited telemetry to ensure reliability. (The open-source build sends Mindstone anonymous usage data by default, which you can switch off, and no error reports at all — see "Open-Source / Self-Hosted Build".)
 
 Rebel operates on a local-first architecture: in desktop-only mode, your files, memory, and workspace remain under your control on your local device and chosen cloud storage (e.g. Google Drive, OneDrive). Mindstone does not host your content on its own servers in desktop-only mode.
 
-Rebel also offers optional cloud features with different data flows. Cloud Continuity can mirror your conversations, Actions, and workspace to your own cloud instance so you can continue in mobile/browser clients. Meeting Notetaker can join meetings and return transcripts to your workspace. See Section 7 and Section 8 for how these optional modes handle data.
+Rebel also offers optional cloud features with different data flows. Cloud Continuity mirrors your conversations, Actions, workspace, and the credentials cloud work needs to the configured cloud machine so you can continue in mobile/browser clients. On your own provider, the machine is 100% under your control and Mindstone does not get the copy. On Mindstone Cloud, Mindstone holds a copy and never looks at it. For a manual connection, Rebel cannot verify who operates the machine. Meeting Notetaker can join meetings and return transcripts to your workspace. See Section 7 and Section 8 for how these optional modes handle data.
 
 Executive Summary: Key Privacy Risks
 Critical awareness points for Rebel users:
@@ -38,7 +38,7 @@ Shared storage visibility - Files in shared cloud locations are visible to colle
 
 Multiple third-party services - Your data flows through Rebel, AI providers, and individual service APIs
 
-Cloud continuity (optional) - Moves selected Rebel data to a cloud server you control (single-user instance) to keep desktop, mobile, and browser in sync. See Section 7.
+Cloud continuity (optional) - Moves Rebel data and credentials to a single-user cloud instance. Your own provider is 100% under your control and Mindstone does not get the copy. On Mindstone Cloud, Mindstone holds a copy and never looks at it. See Section 7.
 
 Meeting Notetaker (optional) - Uses cloud services to join and transcribe meetings before returning transcripts to your workspace. See Section 8.
 
@@ -79,13 +79,13 @@ Technical data: device type, operating system, app version
 
 Log data: error logs and crash reports. These are filtered by a strict allow-list before they leave your device — only safe operational detail (error type, technical metadata) is sent, never your conversational content, calendar entries, message text, or files. This technical and log data is collected as part of the managed app's analytics and error monitoring, and the automatic reporting of it is covered by the Share crash & error reports switch — see "Your Telemetry Choices (Managed App)". In the open-source build, error monitoring is off (no Mindstone error-monitoring credentials are bundled), so this data is not sent to Mindstone; any error monitoring you enable with your own credentials goes to your own account, not Mindstone — see "Open-Source / Self-Hosted Build".
 
-3. Information in Your Workspace (Not Collected by Mindstone)
-Your prompts, AI outputs, files, and memory stored in your Rebel workspace remain on your local device and chosen cloud storage. Mindstone does not access, store, or process this content on its own servers. However, this content may be transmitted to third-party AI providers and services you authorise — see sections below.
+3. Information in Your Workspace and Cloud Custody
+With Cloud Continuity off, your prompts, AI outputs, files, and memory remain on your local device and chosen file-storage services. With your own cloud provider, Rebel copies them to a machine 100% under your control and Mindstone does not get them. With Mindstone Cloud, Mindstone holds a copy and never looks at it. With a manual cloud connection, Rebel cannot verify who operates the configured machine. This content may also be transmitted to third-party AI providers and services you authorise — see sections below.
 
 4. Information from Third Parties
 Single sign-on (SSO): if you sign in via Google or another identity provider, we receive basic profile information (name, email) from that provider
 
-Integrated services: when you connect external services (Gmail, Slack, Notion, etc.) via MCP connectors, data from those services is processed locally by Rebel or passed to your chosen AI provider — it is not stored by Mindstone
+Integrated services: when you connect external services (Gmail, Slack, Notion, etc.) via MCP connectors, data from those services is processed by Rebel or passed to your chosen AI provider. Anything saved into Rebel follows the Cloud Continuity custody cases above.
 
 How We Use Your Information
 We use the personal data we collect for the following purposes:
@@ -158,11 +158,11 @@ Share crash & error reports — automatic crash and error reports via Sentry: th
 
 Defaults and grandfathering: both are on by default, including for people who were already using Rebel before these controls existed. Nothing was silently enabled or disabled for existing users.
 
-Effect and timing: turning either off takes effect on that device immediately — Rebel stops accepting new events, discards what it was holding, does not flush anything on shutdown or re-enable, and clears the identity attached to that channel. Turning crash reports off also deletes crash files already waiting on disk to be sent. Your choice then travels to your other devices through Cloud Continuity — it is stored with your settings on your own cloud instance, and each device applies it the next time it connects or is brought to the front, on connection rather than pushed instantly. If you do not use Cloud Continuity, nothing carries the choice between devices and each keeps the setting you made on it.
+Effect and timing: turning either off takes effect on that device immediately — Rebel stops accepting new events, discards what it was holding, does not flush anything on shutdown or re-enable, and clears the identity attached to that channel. Turning crash reports off also deletes crash files already waiting on disk to be sent. Your choice then travels to your other devices through Cloud Continuity — it is stored with your settings on the configured cloud machine, and each device applies it the next time it connects or is brought to the front, on connection rather than pushed instantly. If you do not use Cloud Continuity, nothing carries the choice between devices and each keeps the setting you made on it.
 
 Honest limits: a request already handed to the network cannot be recalled. For usage analytics specifically, the third-party analytics library holds undelivered events in a queue stored on the device; switching usage analytics off empties that queue and prevents it being written to again, so those events are discarded rather than delivered later or after an application restart. A session that starts with analytics already off loads no analytics client at all and sends nothing. Where two of your devices each change the setting while offline, the choice that survives is the one from whichever device reconnects last, not the one you made most recently — nothing in the synchronisation records when each choice was made. Reverting to a version of Rebel released before these controls existed will resume collection, because that version has no knowledge of your choice.
 
-What these switches do not cover: application update checks (always on, so security fixes reach everyone), signing in and organisation-membership checks (always on; they carry your identity, not your telemetry choices), data you send to the AI providers you have chosen, data exchanged with connectors you have enabled, meeting capture and transcription providers you have configured, Cloud Continuity synchronisation to your own cloud instance, and Mindstone's monitoring of its own cloud service (which is operator observability of the service, not automatic reporting from your device). Bug reports you choose to submit yourself continue to work while automatic crash reporting is off, because each one is a deliberate act; where a rating or feedback item cannot be delivered under your choice, Rebel tells you so rather than reporting success.
+What these switches do not cover: application update checks (always on, so security fixes reach everyone), signing in and organisation-membership checks (always on; they carry your identity, not your telemetry choices), data you send to the AI providers you have chosen, data exchanged with connectors you have enabled, meeting capture and transcription providers you have configured, Cloud Continuity synchronisation to the configured cloud machine, and Mindstone's monitoring of its own cloud service (which is operator observability of the service, not automatic reporting from your device). Bug reports you choose to submit yourself continue to work while automatic crash reporting is off, because each one is a deliberate act; where a rating or feedback item cannot be delivered under your choice, Rebel tells you so rather than reporting success.
 
 Relationship to your rights: usage telemetry is processed on the basis of legitimate interests (see "Legal Bases for Processing"). These switches are the in-product way to exercise your right to object to that processing. You can also contact hello@mindstone.com; see "Your Rights".
 
@@ -275,7 +275,7 @@ Box: https://www.box.com/legal/privacypolicy
 2. Rebel App
 Risk level: Low in desktop-only mode - Limited telemetry only, no content storage
 
-Mode caveat: If you enable Cloud Continuity, this data handling changes and selected Rebel data is stored on your cloud instance. See Section 7.
+Mode caveat: If you enable Cloud Continuity, this data handling changes and Rebel data is stored on the configured cloud machine under the custody cases in Section 7.
 
 Build caveat: In the open-source build, no Mindstone analytics or error-monitoring keys are bundled. The error monitoring described below does not reach Mindstone at all; usage data reaches it only through the anonymous, opt-out channel described in "Open-Source / Self-Hosted Build", which carries no account identity.
 
@@ -283,7 +283,7 @@ What Rebel does:
 
 Pass data to the 3rd-party AI providers you choose (for example Anthropic, OpenAI, Google, OpenRouter-routed models, or ElevenLabs for voice), using the credentials or provider connections you configure
 
-Connect to external services (Google Workspace, Slack, Notion, etc.) via built-in connectors that keep OAuth tokens local on your device in desktop-only mode (in Cloud Continuity mode, tokens are relayed to your cloud instance — see Section 7)
+Connect to external services (Google Workspace, Slack, Notion, etc.) via built-in connectors that keep OAuth tokens on your device in desktop-only mode (in Cloud Continuity mode, tokens are relayed to the configured cloud machine — see Section 7)
 
 Tracks usage telemetry (e.g., feature usage counts, performance/error metrics) via RudderStack/PostHog (behavioural analytics) and Sentry (error monitoring) to keep the platform reliable. This telemetry includes PII such as email address and IP address. Mindstone makes a best effort to exclude and redact proprietary user data (conversational content, memories, files, API keys, etc.) from monitoring, analytics, and logs, though no redaction system is perfect. In the managed app both categories can be switched off in Settings → Privacy & Safety → Privacy & Data (see "Your Telemetry Choices (Managed App)"); in the open-source build no Mindstone analytics or error-monitoring keys are bundled, so error monitoring does not reach Mindstone and the usage data that does is the anonymous, opt-out channel — a random per-install identifier, no email address and no account (see "Open-Source / Self-Hosted Build").
 
@@ -306,13 +306,13 @@ When you connect external services via MCP, your data flows through those servic
 
 Each service has its own data handling policies
 
-Rebel's built-in connectors keep OAuth tokens local to your device
+Rebel's built-in connectors store OAuth tokens on your device and relay them to the configured cloud machine when Cloud Continuity is on
 
 MCP (Model Context Protocol) connectors are integrations that allow Rebel to interact with external services on your behalf — for example, reading your emails, accessing your calendar, or creating documents. You choose which connectors to enable in Settings → Connectors.
 
 Each connector can be configured to allow specific actions only — for example, you can permit Rebel to draft emails but disable the ability to send them, or allow read access to a service without write access.
 
-When you authorise an MCP connector, you grant Rebel access to that service on your behalf. Rebel does not store the retrieved data; it is processed locally or passed to your chosen AI provider.
+When you authorise an MCP connector, you grant Rebel access to that service on your behalf. Retrieved data is processed by Rebel or passed to your chosen AI provider. Anything saved into Rebel follows the Cloud Continuity custody cases in Section 7.
 
 Mitigation:
 
@@ -413,7 +413,7 @@ May contain: project details, meeting notes, client information, work patterns
 
 Rebel has two types of memory storage with different privacy implications:
 
-Personal memory (Chief-of-Staff Space): stored only on your local device and private cloud storage. Visible only to you.
+Personal memory (Chief-of-Staff Space): stored on your local device and, if Cloud Continuity is on, the configured cloud machine. With your own provider, that machine is 100% under your control and Mindstone does not get the copy. With Mindstone Cloud, Mindstone holds a copy and never looks at it. For a manual connection, Rebel cannot verify who operates the machine. Within Rebel, this Space is visible only to you.
 
 Shared memory (company Spaces): stored in your organisation's shared cloud storage. Visible to colleagues who have access to those Spaces.
 
@@ -448,13 +448,23 @@ Default hosting is on Fly.io (region iad in US East by default, with user-select
 
 Cloud Continuity uses a single-user model: one cloud instance per user.
 
+Who holds the copy:
+
+Desktop only — Cloud Continuity is off, so content and credentials stay on your device.
+
+Your own provider — content and credentials are copied to a machine 100% under your control. Mindstone does not get them.
+
+Mindstone Cloud — content and credentials are copied to a Mindstone-run cloud. Mindstone holds a copy and never looks at it.
+
+Manual connection — content and credentials are copied to the configured machine, but Rebel cannot verify who operates it. Only connect one you trust.
+
 What data moves to cloud:
 
-When Cloud Continuity is enabled, your cloud instance becomes authoritative for sessions, settings, workspace files, memory, MCP tool execution, search index, Actions, and automations.
+When Cloud Continuity is enabled, the configured cloud machine becomes authoritative for sessions, settings, workspace files, memory, MCP tool execution, search index, Actions, and automations.
 
 OAuth tokens and connected services:
 
-In desktop-only mode, OAuth tokens stay local. In Cloud Continuity mode, connector OAuth tokens are relayed to your cloud volume so your cloud instance can access connected services (for example Slack, Google, and Microsoft).
+In desktop-only mode, OAuth tokens stay on your device. In Cloud Continuity mode, connector OAuth tokens, AI credentials, Codex OAuth material, and saved service keys are relayed to the configured cloud volume so cloud work can access connected services and AI providers. Their custody follows the four cases above.
 
 Additional cloud behaviors:
 
@@ -476,13 +486,13 @@ Cloud Continuity is opt-in.
 
 Each deployment is a single-user instance with encrypted cloud volumes.
 
-If you disconnect Cloud Continuity, Rebel returns to desktop-only local processing.
+If you disconnect Cloud Continuity, Rebel returns to desktop-only local processing and stops updating the cloud copy. The last copy remains on the cloud machine until that instance is deleted.
 
 Automatic updates: The cloud service periodically checks for software updates and may restart to apply them. Updates are deferred while work is in progress.
 
 Important note on in-app Privacy & Data statements:
 
-Privacy & Data statements in the Safety tab (for example, "No conversation storage" and "Secrets stay local") apply to desktop-only mode. When Cloud Continuity is enabled, data is stored on your cloud instance. The Share crash & error reports switch in that same section covers the automatic reports the Rebel app sends from your device; it does not cover Mindstone's monitoring of the cloud service itself, which continues under Mindstone's operation of that service. In the open-source build, that same Safety-tab section shows a single Share anonymous usage data switch, on by default: anonymous usage data goes to Mindstone until you switch it off, no error reports are sent to Mindstone at all, and the one other thing that can reach Mindstone is consented — if you fill in the optional email during the "About you" setup step, that contact is sent on purpose (see "Optional contact details in the open build").
+The Privacy & Data cards in the Safety tab state the active custody case: device only, your own provider, Mindstone Cloud, or a manually configured host whose operator Rebel cannot verify. The Share crash & error reports switch in that same section covers the automatic reports the Rebel app sends from your device; it does not cover Mindstone's monitoring of the cloud service itself, which continues under Mindstone's operation of that service. In the open-source build, that same Safety-tab section shows a single Share anonymous usage data switch, on by default: anonymous usage data goes to Mindstone until you switch it off, no error reports are sent to Mindstone at all, and the one other thing that can reach Mindstone is consented — if you fill in the optional email during the "About you" setup step, that contact is sent on purpose (see "Optional contact details in the open build").
 
 8. Meeting Notetaker (Optional)
 Risk level: Medium - Meeting transcription uses dedicated cloud services
@@ -566,7 +576,7 @@ Support communications
 
 In desktop-only mode, your conversational content, files, and workspace data are not stored by Mindstone and therefore have no Mindstone retention period.
 
-If you enable Cloud Continuity, your data is stored on your dedicated cloud instance for as long as you remain connected. When you disable Cloud Continuity, the last-synced data remains on your cloud instance until the instance is deleted. For Mindstone-managed instances, contact hello@mindstone.com for retention details. For self-managed instances, consult your cloud provider's policies.
+If you enable Cloud Continuity, your data and relayed credentials are stored on your dedicated cloud instance for as long as you remain connected. With your own provider, that machine is 100% under your control and Mindstone does not get the copy. With Mindstone Cloud, Mindstone holds a copy and never looks at it. For a manual connection, Rebel cannot verify who operates the machine. When you disable Cloud Continuity, the last-synced data remains on the cloud instance until it is deleted. For Mindstone-managed instances, contact hello@mindstone.com for retention details. For self-managed or manually connected instances, consult the operator's policies.
 
 Usage telemetry used to ensure reliability and generate aggregated usage reports is retained for the periods above.
 
@@ -590,13 +600,13 @@ Workspace admin access: Rebel workspace administrators within your organisation 
 Custom retention: Enterprise customers requiring specific data retention configurations should contact hello@mindstone.com.
 
 Frequently Asked Questions
-Q: Can my colleagues see my prompts to the AI? A: No. Your Rebel conversations are local to your machine/account. But colleagues can see any files you create/edit in shared cloud storage.
+Q: Can my colleagues see my prompts to the AI? A: Rebel conversations are single-user: colleagues do not see them through Rebel unless you deliberately share them. With Cloud Continuity off they stay on your device. With your own provider, the copy goes to a machine 100% under your control and Mindstone does not get it. With Mindstone Cloud, Mindstone holds a copy and never looks at it. Colleagues can see files you create or edit in shared storage when they have access there.
 
-Q: What happens to my data when I enable cloud continuity? A: Cloud Continuity stores selected Rebel data (including sessions, settings, workspace files, memory, MCP execution data, search index, Actions, and automations) on your single-user cloud instance so desktop/mobile/browser clients stay in sync. If you disable Cloud Continuity, Rebel returns to desktop-only local processing.
+Q: What happens to my data when I enable cloud continuity? A: Cloud Continuity stores Rebel data (including every conversation record, settings, workspace files, memory, MCP execution data, search index, Actions, automations, and the credentials cloud work needs) on a single-user cloud instance so desktop/mobile/browser clients stay in sync. With your own provider, the machine is 100% under your control and Mindstone does not get the copy. With Mindstone Cloud, Mindstone holds a copy and never looks at it. For a manual connection, Rebel cannot verify who operates the machine. Disabling Cloud Continuity stops future sync; the last copy remains until the instance is deleted.
 
 Q: Where does the meeting notetaker run? A: In the managed app, Meeting Notetaker runs through Mindstone's Cloudflare Worker backend and Recall.ai infrastructure, then returns transcripts to your desktop app and saves them to your workspace. In the open-source build, recording uses your own Recall account instead, with no Mindstone backend in the data path — see "Open-Source / Self-Hosted Build".
 
-Q: Are my OAuth tokens safe in cloud mode? A: In desktop-only mode, connector OAuth tokens stay on your device. In cloud mode, tokens are relayed to your cloud volume so your cloud instance can access connected services. You can revoke this by disconnecting connectors or disabling Cloud Continuity.
+Q: Are my OAuth tokens safe in cloud mode? A: In desktop-only mode, connector OAuth tokens stay on your device. In cloud mode, tokens are relayed to the configured cloud volume so cloud work can access connected services. With your own provider, they go to a machine 100% under your control and Mindstone does not get them. With Mindstone Cloud, Mindstone holds a copy and never looks at it. For a manual connection, Rebel cannot verify who operates the machine. Disconnecting a connector removes its token; disabling Cloud Continuity stops future relay but does not itself delete the existing cloud instance.
 
 Q: Is client data safe if I use it in AI prompts? A: Many providers people use with Rebel state that API data is not used for training, but the exact protection depends on which providers you enable. Your data still flows through Rebel, MCP connectors, and those model providers. For highly sensitive client work, use anonymised examples instead of real data.
 
@@ -787,9 +797,11 @@ We do not knowingly sell or share personal information of residents under 16 yea
 Changes to This Policy
 We may update this policy to reflect operational, legal, or regulatory changes. We will indicate the date of the latest update at the top of this page. For material changes, we will make reasonable efforts to notify you (for example, by email or by displaying a prominent notice in the Rebel app).
 
+Material change — Version 3.4 (4 Sep 2026): Corrects how this policy describes Cloud Continuity custody and credential relay. With Cloud Continuity off, Rebel content and credentials stay on the device. With a user's own provider, copies go to a machine 100% under that user's control and Mindstone does not get them. With Mindstone Cloud, Mindstone holds copies and never looks at them. For a manual connection, Rebel cannot verify who operates the configured machine. The policy now also states plainly that AI keys, Codex OAuth material, connector OAuth tokens, and saved service keys are intentionally relayed to the configured cloud instance so cloud work has desktop-equivalent capability. These changes describe existing behaviour; they do not change what Rebel does.
+
 Material change — Version 3.3 (16 Aug 2026): Adds a "Your Telemetry Choices (Managed App)" section describing the two new in-product switches — Share usage analytics and Share crash & error reports — including their default-on/grandfathered behaviour, their immediate effect on the device and connection-driven propagation to your other devices, the honest limits (requests already dispatched, and reverting to a pre-control version), what they deliberately do not cover (app updates, sign-in, AI providers, connectors, meeting transcription, Cloud Continuity sync, and Mindstone's monitoring of its own cloud service), and their relationship to the right to object where processing rests on legitimate interests. Clarifies that in-app surveys travel on the behavioural-analytics channel and are covered by the usage switch, that user-submitted bug reports continue to work while automatic crash reporting is off, and that undeliverable feedback is reported honestly rather than as success. Adds a cross-reference to what-data-can-leave-rebel.md, the bundled plain-language inventory of every egress point.
 
-Also corrects four statements that had become inaccurate. First, the open-build telemetry section: version 3.2 described a Mindstone-routed telemetry channel as planned and not active, and stated that the open build sends Mindstone no telemetry. That channel has since shipped, so this version states what actually happens — anonymous usage data on by default through a Mindstone-operated endpoint, carrying a random per-install identifier and no account, processed on the basis of legitimate interests with a single in-product switch to turn it off; error reports still do not reach Mindstone at all. Second, the mechanism by which a telemetry choice reaches a user's other devices: it travels with settings through Cloud Continuity to the user's own cloud instance, not through sign-in, so devices not using Cloud Continuity each keep their own setting. Third, the open-build section described the optional contact details as the only thing besides anonymous usage data that the open build sends to Mindstone; a bug report the user submits is a second such channel, so this version adds "Bug reports you submit in the open build", setting out what a report contains, that extra diagnostics and any conversation transcript are opt-in, and that nothing is sent unless the user submits a report. Fourth, the voice section said that read-aloud and other supported speech use a cloud voice provider; because a single setting chooses the provider for both transcription and speech, and the on-device transcription models do not speak, selecting one of them leaves read-aloud unavailable rather than routing it to a cloud provider, and this version says so. All four corrections describe existing behaviour; none changes what Rebel does.
+Also corrects four statements that had become inaccurate. First, the open-build telemetry section: version 3.2 described a Mindstone-routed telemetry channel as planned and not active, and stated that the open build sends Mindstone no telemetry. That channel has since shipped, so this version states what actually happens — anonymous usage data on by default through a Mindstone-operated endpoint, carrying a random per-install identifier and no account, processed on the basis of legitimate interests with a single in-product switch to turn it off; error reports still do not reach Mindstone at all. Second, the mechanism by which a telemetry choice reaches a user's other devices: it travels with settings through Cloud Continuity to the configured cloud instance, not through sign-in, so devices not using Cloud Continuity each keep their own setting. Third, the open-build section described the optional contact details as the only thing besides anonymous usage data that the open build sends to Mindstone; a bug report the user submits is a second such channel, so this version adds "Bug reports you submit in the open build", setting out what a report contains, that extra diagnostics and any conversation transcript are opt-in, and that nothing is sent unless the user submits a report. Fourth, the voice section said that read-aloud and other supported speech use a cloud voice provider; because a single setting chooses the provider for both transcription and speech, and the on-device transcription models do not speak, selecting one of them leaves read-aloud unavailable rather than routing it to a cloud provider, and this version says so. All four corrections describe existing behaviour; none changes what Rebel does.
 
 Material change — Version 3.2 (19 Jun 2026): Adds an "Open-Source / Self-Hosted Build" section and clarifies that, in the open-source build, telemetry is off by default, users bring their own credentials, a Mindstone account may not be required, and meeting recording uses the user's own Recall account; and sets out Mindstone's position that for a self-hosted open build the user or their organisation acts as the data controller and Mindstone is the software provider. It also describes the open build's optional "About you" setup step: if a user chooses to provide their email, that email (and first name, if given) is sent to Mindstone as a consented contact to keep in touch about the open build — separate from telemetry, on the lawful basis of consent, retained until the user requests deletion. This part of the policy is a draft pending broader legal sign-off for the open-build launch.
 
@@ -829,5 +841,4 @@ Cursor Privacy Policy - Comprehensive details on Cursor's privacy modes, data co
 Cursor Setup Guide - Configuration and usage
 
 Note: External IDE support is considered legacy functionality. The Rebel desktop app is the recommended interface for most users.
-
 

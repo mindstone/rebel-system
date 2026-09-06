@@ -1,11 +1,11 @@
 ---
 description: "Guide for users migrating from Klavis to Rebel's direct connectors for Gmail, Slack, Calendar, and other services"
-last_updated: "2026-04-16"
+last_updated: "2026-09-04"
 ---
 
 # Rebel's Connectors Are Now Faster and More Private
 
-**Quick summary:** We've replaced Klavis with direct connections. Your tools will be faster, your data stays on your device, and you have more control. You'll need to reconnect your services — it takes about 5 minutes.
+**Quick summary:** We've replaced Klavis with direct connections. Your tools will be faster, there is no third-party connector gateway holding your token, and you have more control. You'll need to reconnect your services — it takes about 5 minutes.
 
 
 ## How to Reconnect Your Tools
@@ -45,7 +45,7 @@ If you have automations or custom skills using old Klavis tool names, update the
 We removed Klavis (a third-party connector gateway) and built direct connections ourselves:
 
 - **Faster** — No more routing through an intermediary. Your requests go straight to the service.
-- **More private** — Your authentication tokens stay on your device, not on third-party servers.
+- **More private** — There is no third-party connector gateway holding your authentication token. With Cloud Continuity off, the token stays on your device. With your own provider, it is copied to a machine 100% under your control and Mindstone does not get it. With Mindstone Cloud, Mindstone holds a copy and never looks at it. For a manual connection, Rebel cannot verify who operates the configured machine.
 - **More reliable** — We control the full stack, so fewer unexpected outages.
 - **Better support** — When something breaks, we can fix it immediately.
 - **Broader ecosystem** — Rebel now supports the full MCP connector ecosystem.

@@ -48,7 +48,7 @@ Try these, in order:
 
 - **No reply yet:** wait a minute, especially if your desktop app is handling Slack.
 - **Still nothing:** make sure Slack is connected in [Settings → Connectors](rebel://settings/tools).
-- **Wrong workspace:** disconnect Slack, then connect the workspace you actually meant. Happens to the best of us. Slack workspaces multiply quietly.
+- **Wrong workspace:** the Slack card in Settings now shows which workspace you actually signed into, so check there first. If it is the wrong one, disconnect Slack, then connect the workspace you meant. Happens to the best of us. Slack workspaces multiply quietly.
 - **Channel reply failed:** make sure Rebel is allowed in the channel and has permission to post there.
 - **It says Slack needs reconnecting:** reconnect Slack from Settings. This usually means Slack permissions changed or the connection expired.
 

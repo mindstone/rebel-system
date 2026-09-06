@@ -30,14 +30,14 @@ Fetch Mixpanel events (read-only) reliably, including per-user lookups and last-
    - Region (EU or US)
 
 2) Secrets setup (follow secrets-and-passwords)
-   - Recommended: local environment variables or `.secrets/.env` (excluded from Drive sync) for low-risk keys
+   - Recommended: environment variables or `.secrets/.env` (excluded from Drive sync, but included in Cloud Continuity workspace sync) for low-risk keys
    - Define:
      - `MIXPANEL_USER` → service account username
      - `MIXPANEL_SECRET` → service account secret
      - `MIXPANEL_PROJECT_ID` → project id (string)
      - `MIXPANEL_REGION` → `EU` or `US`
 
-   Example `.secrets/.env` (local only):
+   Example `.secrets/.env` (workspace credential file):
    ```bash
    MIXPANEL_USER="your_service_account_username"
    MIXPANEL_SECRET="your_service_account_secret"
@@ -139,7 +139,7 @@ PY
 
 6) Safety and privacy
    - Never echo secrets into logs; reference via environment variables
-   - Keep `.secrets/.env` local-only and excluded from Drive sync per Secrets policy
+   - Keep `.secrets/.env` excluded from Drive sync per Secrets policy. Cloud Continuity still copies workspace-hidden files: with your own provider, the copy goes to a machine 100% under your control and Mindstone does not get it; with Mindstone Cloud, Mindstone holds a copy and never looks at it; for a manual connection, Rebel cannot verify who operates the machine.
    - Do not commit secrets to any repo; avoid pasting in shared docs
 
 7) Troubleshooting
@@ -156,4 +156,3 @@ PY
 [SEE ALSO]
 - [secrets-and-passwords.md](secrets-and-passwords.md) for secret handling
 - Mixpanel Export API docs
-

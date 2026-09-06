@@ -72,7 +72,9 @@ This requires Granola to be installed locally with at least one recorded meeting
 | **Authentication** | Sign in via browser | None |
 | **Granola plan** | Free plan limited to last 30 days | Any (including free) |
 | **Transcript access** | Paid Granola tiers only | Always available |
-| **Privacy** | Data goes through Granola's servers | All data stays local |
+| **Privacy** | Data goes through Granola's servers | Granola is read locally; any results Rebel saves follow your Cloud Continuity setting |
+
+With Cloud Continuity off, saved results stay on this device. With your own provider, they are copied to a machine 100% under your control and Mindstone does not get them. With Mindstone Cloud, Mindstone holds a copy and never looks at it. For a manual connection, Rebel cannot verify who operates the configured machine.
 
 Both approaches give you access to meeting summaries, transcripts, and search. The official MCP stays in sync with Granola's latest features; the local connector is simpler and works offline.
 

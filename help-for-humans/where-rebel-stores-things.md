@@ -1,6 +1,6 @@
 ---
 description: "Where Rebel keeps your workspace files, app data, the automatic safety-net backup, and — when enabled — the cloud copy used for mobile, browser access, and sharing"
-last_updated: "2026-06-07"
+last_updated: "2026-09-04"
 ---
 
 # Where Rebel Stores Things
@@ -74,7 +74,11 @@ This is a safety net for the unexpected, not a replacement for your own backups.
 
 ## 3) Cloud copy (when Cloud Continuity is on)
 
-When you enable [Cloud Continuity](cloud-continuity-and-mobile.md), Rebel keeps a cloud copy on your cloud server.
+When you enable [Cloud Continuity](cloud-continuity-and-mobile.md), Rebel keeps a cloud copy on the configured cloud machine:
+
+- **Your own provider:** the copy is on a machine 100% under your control. Mindstone does not get it.
+- **Mindstone Cloud:** Mindstone holds the copy and never looks at it.
+- **Manual connection:** Rebel cannot verify who operates the machine. Only connect one you trust.
 
 That cloud copy is what makes these features work:
 - mobile access
@@ -91,6 +95,7 @@ When Cloud Continuity is enabled, Rebel can sync a cloud copy of:
 - Actions
 - cloud-synced workspace files and memory
 - the settings, search data, and supporting state needed for the cloud experience
+- the credentials and tokens cloud tasks need
 
 For the full picture, read [Cloud Continuity and Mobile](cloud-continuity-and-mobile.md).
 

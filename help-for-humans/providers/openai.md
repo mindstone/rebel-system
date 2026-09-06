@@ -5,7 +5,7 @@ last_updated: "2026-07-05"
 
 # OpenAI
 
-**What it is:** Connect your OpenAI API key to use GPT models (GPT-5.x, GPT-4.1, o-series) on pay-as-you-go API billing. This is the developer API key — if you'd rather use your existing ChatGPT subscription, see [ChatGPT Pro](rebel://library/rebel-system%2Fhelp-for-humans%2Fproviders%2Fchatgpt-pro.md) instead.
+**What it is:** Connect your OpenAI API key to use GPT models (GPT-6 Astra, GPT-5.x, GPT-4.1, o-series) on pay-as-you-go API billing. This is the developer API key — if you'd rather use your existing ChatGPT subscription, see [ChatGPT Pro](rebel://library/rebel-system%2Fhelp-for-humans%2Fproviders%2Fchatgpt-pro.md) instead.
 
 **How to connect:** In [Settings → Agent & Voice → Intelligence](rebel://settings/agents), add a model, choose **OpenAI**, and paste your API key.
 

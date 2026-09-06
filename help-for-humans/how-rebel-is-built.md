@@ -31,8 +31,8 @@ Rebel can connect to services like Gmail, Slack, your calendar, and dozens more.
 
 When you connect a service:
 - You sign in through your browser (Rebel never sees your password)
-- Rebel stores the connection locally on your device
-- Your workspace files stay on your machine. When you have a conversation, your prompts go directly to your chosen AI provider (not through Mindstone)
+- Rebel stores the connection on your device and, if Cloud Continuity is on, relays it to the configured cloud machine
+- With Cloud Continuity off, your workspace stays on this device. With your own provider, Rebel copies it to a machine 100% under your control and Mindstone does not get it. With Mindstone Cloud, Mindstone holds a copy and never looks at it. For a manual connection, Rebel cannot verify who operates the machine.
 
 ## Skills and Workflows
 
@@ -48,8 +48,9 @@ Rebel is model-agnostic — it works with multiple AI providers, not just one. M
 
 ## Privacy by Design
 
-- Your workspace files (memory, skills, documents) stay on your device
-- Rebel only sends data to your chosen AI providers when you're having a conversation
+- With Cloud Continuity off, your workspace files and credentials stay on your device
+- With your own provider, copies go to a machine 100% under your control and Mindstone does not get them; with Mindstone Cloud, Mindstone holds copies and never looks at them; for a manual connection, Rebel cannot verify the operator
+- Rebel sends conversation data to your chosen AI providers, and enabled connectors, voice, meeting, telemetry, support, and Cloud Continuity features have their own stated data routes
 - Connections to external services use industry-standard OAuth — Rebel doesn't store your passwords
 - You control what's shared and what stays private through your space settings
 

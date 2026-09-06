@@ -64,7 +64,7 @@ The auth token lets Rebel authenticate with Beeper's local MCP server. Tokens ex
 
 ## Good to Know
 
-- **Local only**: All message data stays on your computer. Rebel connects to Beeper's local server — nothing is sent to external services.
+- **Local source**: Rebel connects to Beeper's local server rather than a remote connector gateway. With Cloud Continuity off, results saved into Rebel stay on this device. With your own provider, they are copied to a machine 100% under your control and Mindstone does not get them. With Mindstone Cloud, Mindstone holds a copy and never looks at it. For a manual connection, Rebel cannot verify who operates the machine.
 - **Backed by Automattic**: Beeper is developed by Automattic (the company behind WordPress.com), a well-established company with a strong privacy track record.
 - **Multiple networks, one connector**: Unlike single-network connectors, Beeper gives you access to all your connected messaging networks through a single connection.
 - **Always running**: Beeper Desktop needs to stay open for Rebel to access your messages. If you see connection errors, check that Beeper is running.

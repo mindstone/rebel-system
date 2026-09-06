@@ -74,6 +74,8 @@ Todoist is now connected directly from inside the Scratchpad:
 
 Once connected, the panel refreshes and starts showing your Todoist tasks there.
 
+If Todoist refuses a change (a sign-in that has expired, or no connection), the task stays where it was and Rebel says so. It no longer disappears from the list while still being open in Todoist.
+
 
 ## Settings
 

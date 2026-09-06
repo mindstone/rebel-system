@@ -4,7 +4,7 @@ description: "WhatsApp connector (retired) — replaced by Beeper Desktop for se
 
 # WhatsApp
 
-> **Retired** — The WhatsApp connector has been removed for security reasons. It relied on an unofficial WhatsApp Web API that couldn't guarantee message privacy. For WhatsApp messaging through Rebel, use [Beeper Desktop](library://rebel-system/help-for-humans/mcp-connectors-tools-and-integrations.md) instead — it bridges WhatsApp (along with iMessage, Telegram, Signal, and others) through the official Beeper client, with all data stored locally.
+> **Retired** — The WhatsApp connector has been removed for security reasons. It relied on an unofficial WhatsApp Web API that couldn't guarantee message privacy. For WhatsApp messaging through Rebel, use [Beeper Desktop](library://rebel-system/help-for-humans/mcp-connectors-tools-and-integrations.md) instead — it bridges WhatsApp (along with iMessage, Telegram, Signal, and others) through the official Beeper client. The connector reads locally; results saved into Rebel follow your Cloud Continuity custody choice.
 
 The information below is kept for reference only.
 
@@ -21,7 +21,7 @@ The information below is kept for reference only.
 
 ## How It Works
 
-WhatsApp connects through WhatsApp Web — the same technology you use when opening WhatsApp in a browser. Your messages stay on your device and are not stored or processed by any third-party server. Rebel simply acts as an interface to your existing WhatsApp session.
+WhatsApp connects through WhatsApp Web — the same technology you use when opening WhatsApp in a browser. The retired connector itself ran on your device rather than through a third-party gateway. Any results saved into Rebel follow your Cloud Continuity custody choice.
 
 
 ## Setup

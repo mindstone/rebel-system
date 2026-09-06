@@ -1,11 +1,11 @@
 ---
 description: "How to set up cloud continuity so Rebel works on your phone, tablet, or browser — step-by-step setup, pairing, privacy, limitations, and troubleshooting"
-last_updated: "2026-08-07"
+last_updated: "2026-09-04"
 ---
 
 # Cloud Continuity: Use Rebel on Your Phone, Tablet, or Browser
 
-Rebel is desktop-first — your conversations, files, and settings live on your computer. Cloud continuity adds a bridge so you can pick up where you left off on your phone, tablet, or any browser.
+Rebel is desktop-first. With Cloud Continuity off, your conversations, files, settings, and credentials stay on your device. Cloud Continuity copies the data and credentials Rebel needs to a cloud machine so you can pick up where you left off on your phone, tablet, or any browser.
 
 Your desktop Rebel still stays in charge. Cloud continuity simply gives you a reliable way to continue in the mobile app or a browser when you're not sitting at your computer.
 
@@ -49,8 +49,10 @@ If you choose **Add cloud continuity**, you can then use either:
 
 | Option shown in Settings | Choose this if... |
 |------|-------------------|
-| **Mindstone Cloud** | You want Rebel to handle the infrastructure — including keeping the cloud service updated — for you |
-| **Use your own cloud provider** | You want the cloud instance on your own provider/account |
+| **Mindstone Cloud** | You want Rebel to handle the infrastructure. Mindstone holds the cloud copy and never looks at it. |
+| **Use your own cloud provider** | You want the copy on a machine 100% under your control. Mindstone does not get it. |
+
+If you connect a server manually, Rebel can copy data and credentials to it but cannot verify who operates that machine. Check with whoever gave you its address before connecting.
 
 
 ---
@@ -197,21 +199,9 @@ Tablet setup is the same process. Just with a larger screen and, one hopes, bett
 
 ## Which Conversations Show Up On Mobile?
 
-Not every conversation on your desktop automatically appears on your phone — and this is intentional. Cloud continuity is a **bridge for the conversations you want on the go**, not a full mirror of every note you've ever typed.
+Every conversation record syncs to the configured Cloud Continuity host, including conversations you mark done. Mobile and browser may organise or filter that list differently from desktop, and older conversations can show trimmed tool output or images to keep those surfaces responsive.
 
-There are two states a conversation can be in:
-
-- **Local only** — lives on your desktop. Doesn't appear on mobile or in the browser.
-- **Cloud-active** — synced to your cloud instance. Visible on mobile, tablet, and browser.
-
-A desktop conversation becomes cloud-active when you:
-
-- **Pin it** in the conversations list (click the pin icon), or
-- **Continue it from mobile or browser** (the moment you send a message from another device, Rebel promotes the conversation so it stays available)
-
-Cloud-active conversations that go untouched for about two weeks are automatically demoted back to local-only to keep things tidy. Pinned conversations are exempt — they stay cloud-active until you unpin them.
-
-> **Why this matters:** If a conversation seems missing on your phone, it's almost always because it's still local-only. Open it on desktop and pin it, then pull to refresh on mobile a moment later.
+If a conversation seems missing, check the current filter, pull to refresh, and make sure the desktop that last changed it has connected long enough to finish syncing. Pinning keeps a conversation easy to find; it no longer decides whether that conversation belongs in the cloud copy.
 
 ### Recording Meetings From Your Phone
 
@@ -249,7 +239,7 @@ The cloud copy is always preserved locally before any resolution, so nothing is 
 
 ### Do I need to keep my desktop open for mobile and browser to work?
 
-No. Once cloud continuity is set up, the cloud server runs independently. Your phone and browser connect to that server, not directly to your desktop. However, new pins and Actions changes only sync when your desktop is running and connected.
+No. Once cloud continuity is set up, the cloud server runs independently. Your phone and browser connect to that server, not directly to your desktop. Changes made on desktop sync when that desktop is running and connected.
 
 ### Can I use the same setup on both my phone and tablet?
 
@@ -281,9 +271,9 @@ In practice: if you have your laptop open with Rebel running, or a browser tab w
 
 Push notifications today cover approvals, "Ask Rebel a question" moments, and turn completion/errors — not every workspace event.
 
-### I pinned a conversation on desktop but it's still not on my phone
+### A desktop conversation still isn't on my phone
 
-Pinning triggers a sync cycle, but it can take up to a minute for the change to propagate. Pull to refresh on mobile, or give it 60 seconds and try again.
+All conversation records sync automatically, but propagation can take up to a minute. Check the current filter, pull to refresh on mobile, or give it 60 seconds and try again.
 
 ### Does the mobile app store my conversations on the phone itself?
 
@@ -368,7 +358,7 @@ A rare re-sync freeze that left the window blank has been fixed — Rebel now re
 
 A few honest caveats while cloud continuity and mobile are still in beta:
 
-- **Not a full desktop mirror.** Only the conversations you pin (or continue from another device) show up on mobile and browser. Everything else stays local. This is deliberate — see [Which Conversations Show Up On Mobile?](#which-conversations-show-up-on-mobile) above.
+- **Not the full desktop interface.** Cloud Continuity copies every conversation record to the configured host, but mobile and browser deliberately expose a smaller set of desktop features. See [Which Conversations Show Up On Mobile?](#which-conversations-show-up-on-mobile) above.
 - **Not live sharing.** If you're typing on desktop right now, your phone won't see the reply stream in real time. Desktop turns sync when they finish. Mobile-initiated turns run on the cloud and stream live to your phone. One device at a time is the relaxed norm.
 - **Your cloud instance is a single machine.** It's not replicated across a fleet. If the underlying cloud instance is lost, the cloud copy of your synced data goes with it — but your desktop still has everything. For retention and backup specifics, contact Mindstone (`hello@mindstone.com`) for Mindstone Cloud instances, or your cloud provider for self-managed ones.
 - **Sync isn't instantaneous.** Changes typically propagate in under a minute, but there's a short delay. Pull to refresh on mobile if something seems missing.
@@ -402,11 +392,14 @@ For a deeper explainer with diagrams, ask Rebel for the "Cloud Continuity and Mo
 
 When cloud continuity is active, Rebel keeps cloud copies so mobile and browser access can work reliably.
 
-- **What moves to the cloud** — Selected Rebel data: conversations you've pinned or continued elsewhere, settings, workspace files (including memory notes), search index, Actions, automations, and the tokens your connected tools need.
-- **What stays only on your desktop** — Conversations you haven't pinned or continued elsewhere, your local voice models, system-level permissions, the app's own UI.
-- **Your cloud instance is single-user.** It's your own instance, not a shared pool. One tenant per cloud machine.
+- **What moves to the cloud** — Every conversation record, settings, workspace files (including memory notes), search index, Actions, automations, and the tokens your connected tools need.
+- **What stays only on your desktop** — Local voice models, system-level permissions, and the app's device-specific UI state.
+- **Each cloud instance is single-user.** It is a dedicated instance, not a shared pool. One tenant per cloud machine.
 - **Credentials in desktop-only mode** — Connector tokens and provider keys stay on your computer.
 - **Credentials in cloud mode** — The credentials your cloud instance needs are relayed to it so it can run conversations, voice, and connected tools on your behalf. They're sent over an encrypted channel and stored on the cloud instance's encrypted volume.
+- **Your own provider** — The content and credential copy is on a machine 100% under your control. Mindstone does not get it.
+- **Mindstone Cloud** — Mindstone holds the content and credential copy and never looks at it.
+- **Manual connection** — Rebel cannot verify who operates a manually configured machine, so only connect one you trust.
 - **Training** — Mindstone does not use your data to train models, and Rebel's default AI providers say API data is not used for model training.
 - **Push notifications** — Mobile notifications can include limited preview text such as titles or status labels, but not full conversation content. If another device is actively connected (e.g. your laptop is open), mobile notifications are suppressed to avoid duplicate pings.
 - **Device permissions on mobile** — The app asks for microphone (voice), camera (for QR scanning and optional photo attachments), and photos/files (for attachments). You can revoke any of these at any time in your phone's settings.
@@ -444,3 +437,13 @@ If you want to turn off cloud continuity:
 3. Confirm the change
 
 Your desktop data is unaffected. The cloud instance keeps the last synced copy until that instance is deleted, but it will stop receiving new updates.
+
+### If disconnecting does not go through
+
+Turning cloud continuity off also asks the cloud to remove the keys it holds for this device. If that cannot be confirmed, Rebel now tells you why, next to the button, rather than quietly leaving things as they were:
+
+- **The cloud cannot be reached** — Rebel offers **Forget anyway**. Your desktop forgets the cloud immediately; the keys on that instance are removed the next time it is reachable, or disappear when the instance is deleted.
+- **You are signed out** — sign in first, so Rebel can remove the relayed keys properly. There is no Forget anyway in this case, because it would leave a key behind that only your sign-in can clear.
+- **Something failed on this computer** — the cloud side is already done; try again once, and if it repeats, use **Report a problem** in Settings.
+
+Whatever happened, the message says which case you are in. Rebel does not guess.
