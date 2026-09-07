@@ -4,6 +4,12 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ---
 
+## Unreleased
+
+### Fixes
+
+- **"Install & Relaunch" no longer hangs around after the update has moved on** — If a downloaded update was superseded before you clicked, the toast now quietly steps aside instead of offering a button that goes nowhere.
+
 ## v0.4.64 — Sep 2-5, 2026
 
 ### Highlights
