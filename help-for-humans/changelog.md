@@ -4,6 +4,16 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ---
 
+## Unreleased
+
+### Highlights
+
+- **Design review follows the actual app** — Chief Designer now uses implementation source and the running product for UI review. The separate Storybook preview tooling has been retired.
+
+### Fixes
+
+- **"Install & Relaunch" no longer hangs around after the update has moved on** — If a downloaded update was superseded before you clicked, the toast now quietly steps aside instead of offering a button that goes nowhere.
+
 ## v0.4.64 — Sep 2-7, 2026
 
 ### Highlights
@@ -20,6 +30,8 @@ What's new in Rebel. We ship fast, so there's always something.
 - **Fewer "Impossible state" dead ends** — If you pay as you go and none of your chosen models can be reached, Rebel now tells you that plainly and points you to the setting to fix, instead of failing every message.
 
 ### Fixes
+
+- **Chief Designer has less paperwork** — Design requests now use one concise set of instructions. The command works without a component catalog in your workspace, and unavailable screenshots no longer trap it in a completion loop.
 
 - **One background-sync saving snag is fixed** — When a cloud update had activity to record but no messages to add or remove, Rebel could rename an existing message and get stuck trying to save the update. It now leaves the message alone and gets on with the update.
 
