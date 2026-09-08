@@ -29,6 +29,9 @@ What's new in Rebel. We ship fast, so there's always something.
 - **Sending while Rebel is working no longer makes it spin** — A message sent mid-task could make Rebel retry it over and over. It now takes the message once and picks it up as soon as it can.
 - **Fewer "Impossible state" dead ends** — If you pay as you go and none of your chosen models can be reached, Rebel now tells you that plainly and points you to the setting to fix, instead of failing every message.
 
+<!-- feature: whats-new-on-update | detail: What you have seen is now tracked per entry rather than per version, so the many betas inside one version number no longer share a single dismissal, and entries tagged as the same feature collapse into the newest telling. Kept on the device you read it on. -->
+- **What's New now opens itself, once** — After an update Rebel shows What's New a single time, with only the entries you haven't already read — and a feature improved across several versions arrives as one card saying so, not three near-identical ones. At most once a day however many updates land, and the version number in the header still opens the whole changelog whenever you want it. News, delivered once.
+
 ### Fixes
 
 - **Chief Designer has less paperwork** — Design requests now use one concise set of instructions. The command works without a component catalog in your workspace, and unavailable screenshots no longer trap it in a completion loop.
