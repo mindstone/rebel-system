@@ -4,14 +4,20 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ---
 
-## Unreleased
+## v0.4.65 — Sep 8, 2026
 
 ### Highlights
 
+<!-- detail: When the model you selected is not available on your ChatGPT plan, Rebel answers that turn with the closest one that is, and a note in the conversation names the model that answered and offers to switch to it for good or keep your choice. You only see a refusal when that fallback is refused too. -->
+- **If your ChatGPT plan cannot run the model you picked, Rebel now runs the closest one it can** — For two days some ChatGPT subscribers got a bare "model not found" for a model their plan does not serve, and picking GPT-5.6 Sol quietly ran GPT-5.5 instead. Rebel now answers with the nearest model your plan does run and tells you in the conversation which model answered, with a one-click choice to switch to it for good or keep your own. Nothing to reconnect, no setting to change; your choice stays as you set it unless you say otherwise.
+<!-- feature: whats-new-on-update | detail: What's New remembers each entry it has shown you on this device, rather than treating a whole version as seen in one go. Entries tagged as the same feature collapse into the most recent one, with a note saying how many times it changed. -->
+- **What's New now opens itself, once** — When there's something you haven't been shown, Rebel opens What's New after an update, and closing it marks those entries seen on this device. Entries we've tagged as the same feature collapse into a single card telling you how many times it changed. No more than daily, whatever lands — and the version number in the header still opens the whole changelog. News, delivered once.
 - **Design review follows the actual app** — Chief Designer now uses implementation source and the running product for UI review. The separate Storybook preview tooling has been retired.
 
 ### Fixes
 
+- **A blocked save now says what is true** — When Rebel blocked an update to protect the conversation, the note said it was still trying and that reopening usually helped. Neither was true: nothing was retrying, and reopening changed nothing. The note now says plainly that earlier messages are safe, the latest update was not saved, Rebel cannot retry it on its own, and anything added after it may not be saved either — and the app no longer reports a save as done when it only set it aside.
+- **The cloud permissions notice stops making promises** — It used to say connector permissions "stay on this computer", which read as a statement about where your data lives. It now says what is true: permissions are not syncing to your cloud copy yet, and Rebel repairs that itself the next time it reconnects. The repair is real in this version, not just the sentence.
 - **"Install & Relaunch" no longer hangs around after the update has moved on** — If a downloaded update was superseded before you clicked, the toast now quietly steps aside instead of offering a button that goes nowhere.
 
 ## v0.4.64 — Sep 2-7, 2026
@@ -28,9 +34,6 @@ What's new in Rebel. We ship fast, so there's always something.
 - **Pictures and files you give Rebel stay what they are** — An attachment could occasionally lose its identity when a conversation was saved, on desktop or in the cloud, and turn up as an unrecognised file. That no longer happens, and an image format Rebel cannot use is refused with a clear message rather than quietly mislabelled.
 - **Sending while Rebel is working no longer makes it spin** — A message sent mid-task could make Rebel retry it over and over. It now takes the message once and picks it up as soon as it can.
 - **Fewer "Impossible state" dead ends** — If you pay as you go and none of your chosen models can be reached, Rebel now tells you that plainly and points you to the setting to fix, instead of failing every message.
-
-<!-- feature: whats-new-on-update | detail: What's New remembers each entry it has shown you on this device, rather than treating a whole version as seen in one go. Entries tagged as the same feature collapse into the most recent one, with a note saying how many times it changed. -->
-- **What's New now opens itself, once** — When there's something you haven't been shown, Rebel opens What's New after an update, and closing it marks those entries seen on this device. Entries we've tagged as the same feature collapse into a single card telling you how many times it changed. No more than daily, whatever lands — and the version number in the header still opens the whole changelog. News, delivered once.
 
 ### Fixes
 
