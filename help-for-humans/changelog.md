@@ -4,6 +4,25 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ---
 
+## v0.4.66 — Sep 9-10, 2026
+
+### Fixes
+
+- **OpenRouter stays connected when it's connected** — A properly connected OpenRouter account could still be told "OpenRouter is not connected," and reconnecting never helped — because the connection was never the problem. A background helper inside Rebel was setting up its request without the credentials attached, so the request was turned down before it ever reached OpenRouter. Rebel now keeps the connection details together, so a connected account is treated as one. The phantom disconnection has been disconnected.
+
+<!-- feature: connector-fetch-reconnect | detail: A bare loopback fetch failure on a connector call is named (transport_fetch_failed with a cause code) and the client reconnects for the next call instead of failing the same way again. -->
+- **A dropped connector connection reconnects on the next call** - When a connector stopped answering mid-conversation, the next call used to fail the same way with an unnamed error. Rebel now names the dropped connection and reconnects before the next call.
+<!-- feature: codex-bts-model-truth | detail: On a ChatGPT-subscription profile, a stored behind-the-scenes model the plan does not serve is remapped within its own class (a mini stays a mini) and the saved choice is canonicalised to the served model (so Settings then shows it; no new Settings message, and the canonicalisation is skipped when user data is read-only), instead of a silent promotion to gpt-5.5 on every background call. -->
+- **Background work on ChatGPT plans stays on the cheap model you chose** - If your plan does not serve the exact background model you picked, Rebel now uses the closest one of the same size and updates your saved choice to match, instead of quietly running every background task on the most expensive model and charging your plan for it.
+<!-- feature: watchdog-liveness | detail: The turn watchdog now counts declared liveness between model rounds and accounts for starved ticks under load, so a turn that is still working is not killed as stalled; the 67Q/67R/603 family of "Rebel stopped it" endings falls only where the turn was truly dead. -->
+- **Working turns are no longer stopped as stalled** - Under load, a turn that was still doing its work between steps could be judged stuck and stopped, with "Rebel stopped it" at the end. Rebel now tells a busy turn from a dead one, so a run is stopped only when it really has stopped.
+<!-- feature: automation-approval-identity | detail: An approval raised by an automation is attributed to that automation (its name, or "Automation" for a person's own automation with no display name) and answering the card settles it, instead of the card sitting under a generated id and staying open. -->
+- **An automation's approvals belong to the automation again** - When an automation asks you to approve something, the card now names the automation (an automation you built yourself is called "Automation", not a generated code), and answering it settles it. Before, the card could show a code in place of a name and your answer could fail to land.
+
+### Under the Hood
+
+- **Better breadcrumbs for the puzzling cases** — Rebel now records why a permission card did or didn't offer an "always allow" option. Nothing you'll see day to day; just enough for future-us to fix the odd case from the logs instead of guesswork.
+
 ## v0.4.65 — Sep 8, 2026
 
 ### Highlights
@@ -17,7 +36,8 @@ What's new in Rebel. We ship fast, so there's always something.
 ### Fixes
 
 - **A blocked save now says what is true** — When Rebel blocked an update to protect the conversation, the note said it was still trying and that reopening usually helped. Neither was true: nothing was retrying, and reopening changed nothing. The note now says plainly that earlier messages are safe, the latest update was not saved, Rebel cannot retry it on its own, and anything added after it may not be saved either — and the app no longer reports a save as done when it only set it aside.
-- **The cloud permissions notice stops making promises** — It used to say connector permissions "stay on this computer", which read as a statement about where your data lives. It now says what is true: permissions are not syncing to your cloud copy yet, and Rebel repairs that itself the next time it reconnects. The repair is real in this version, not just the sentence.
+- **The cloud permissions notice says what is true for your cloud** — It used to read "Permissions stay on this computer", which sounded like a statement about where your data lives. It now says that secure permission syncing is not active on your cloud yet (limits you set still reach it, permissions you grant do not) and then only what applies to you: on a cloud that runs on your own Fly account, Rebel tries to fix this during cloud maintenance and tells you what to do if the notice is still there tomorrow; on a cloud Mindstone or you run, it says who needs to update it, with nothing to do from here. A repair is only promised where one is actually attempted.
+- **“Some connectors aren’t working in your cloud” now says what it is about** — People who use Rebel only on this computer read that card as their own connectors being broken. It now says first that the warning is about the connector copies your cloud uses, the ones Rebel works with away from this computer, for example on your phone, on the web, in Slack, or in an automation, and that it does not mean the connectors in this app have stopped working. Then it gives the step for your case, says Rebel will try again automatically, and tells you where to report it if the warning stays.
 - **"Install & Relaunch" no longer hangs around after the update has moved on** — If a downloaded update was superseded before you clicked, the toast now quietly steps aside instead of offering a button that goes nowhere.
 
 ## v0.4.64 — Sep 2-7, 2026
