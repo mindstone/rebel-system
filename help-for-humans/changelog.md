@@ -4,6 +4,16 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ---
 
+## v0.4.66 — Sep 9-10, 2026
+
+### Fixes
+
+- **OpenRouter stays connected when it's connected** — A properly connected OpenRouter account could still be told "OpenRouter is not connected," and reconnecting never helped — because the connection was never the problem. A background helper inside Rebel was setting up its request without the credentials attached, so the request was turned down before it ever reached OpenRouter. Rebel now keeps the connection details together, so a connected account is treated as one. The phantom disconnection has been disconnected.
+
+### Under the Hood
+
+- **Better breadcrumbs for the puzzling cases** — Rebel now records why a permission card did or didn't offer an "always allow" option. Nothing you'll see day to day; just enough for future-us to fix the odd case from the logs instead of guesswork.
+
 ## v0.4.65 — Sep 8, 2026
 
 ### Highlights
