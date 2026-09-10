@@ -4,6 +4,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ---
 
+## v0.4.66 — Sep 10, 2026
+
 ## v0.4.65 — Sep 8, 2026
 
 ### Highlights
