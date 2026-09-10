@@ -5,7 +5,7 @@ last_updated: "2026-08-29"
 
 # Voice and Audio
 
-Rebel gives you two pleasantly literal ways to use your voice: tap the microphone to dictate a message, or hold it to start a Live conversation where Rebel talks back. Ordinary conversations reply in writing, which is useful when your office has ears.
+Rebel gives you two pleasantly literal ways to use your voice: tap the microphone in the message box to dictate, or press the Live button beside it to start a conversation where Rebel talks back. Ordinary conversations reply in writing, which is useful when your office has ears.
 
 Voice input works on **desktop, web companion, and mobile** — speak to Rebel from whichever device you're on.
 
@@ -13,7 +13,7 @@ Voice input works on **desktop, web companion, and mobile** — speak to Rebel f
 ## Quick Start
 
 1. **Tap the microphone button** to dictate a message
-2. **Hold the microphone button** to start a spoken Live conversation
+2. **Press the Live button** (beside the message box) to start a spoken Live conversation
 
 That's it. On supported desktop platforms, Rebel uses built-in on-device transcription by default — no API key needed. Speak naturally, and Rebel will transcribe what you said and respond.
 
@@ -41,11 +41,11 @@ The microphone button appears in the composer area (bottom of the conversation).
 
 ### Live mode — an actual conversation
 
-**Hold** the microphone button for a moment (instead of tapping) and Rebel enters **Live mode**: a proper back-and-forth conversation out loud. Rebel speaks its replies, listens while it talks, and stops when you start — you can interrupt mid-sentence the way you would with a person. To leave, close the Live view; you're back to normal.
+Press the **Live** button beside the message box and Rebel enters **Live mode**: a proper back-and-forth conversation out loud. Rebel speaks its replies, listens while it talks, and stops when you start — you can interrupt mid-sentence the way you would with a person. To leave, close the Live view; you're back to normal.
 
 The difference from tapping is worth knowing:
 
-| | **Tap** the mic | **Hold** the mic |
+| | **Tap** the mic | The **Live** button |
 |---|---|---|
 | What it does | Dictates a message | Starts a spoken conversation |
 | Rebel replies | In writing | Out loud |
@@ -71,7 +71,7 @@ See [Rebel Interface — Voice Interaction](library://rebel-system/help-for-huma
 
 ### Global voice hotkey (desktop)
 
-Press the global voice activation hotkey (default: **Ctrl+Alt+Space**, or customize it in Settings) to dictate without first bringing Rebel into focus. Rebel sends the transcript and replies in writing. For a continuing conversation out loud, use Live mode by holding the microphone button.
+Press the global voice activation hotkey (default: **Ctrl+Alt+Space**, or customize it in Settings) to dictate without first bringing Rebel into focus. Rebel sends the transcript and replies in writing. For a continuing conversation out loud, use the Live button beside the message box.
 
 
 ### Quick Capture (Voice Notes)
@@ -215,7 +215,7 @@ If you see a disabled mic button with a tooltip about API keys:
 - For Built-in: ensure the model is downloaded
 
 **Live or read-aloud is silent**
-- Ordinary conversation replies are written by design; hold the mic for Live or ask Rebel to read something aloud
+- Ordinary conversation replies are written by design; use the Live button or ask Rebel to read something aloud
 - Verify your system volume and output device
 - If using a Bluetooth device, ensure it's connected
 
