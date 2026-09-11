@@ -4,7 +4,7 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ---
 
-## v0.4.66 — Sep 9-10, 2026
+## v0.4.67 — Sep 11, 2026
 
 <!-- feature: just-once-honoured | detail: the settlement floor that refused a just-once grant is bypassed for credential-bearing and ordinary commands alike; a card raised while the safety check was out can be answered once the check returns; the born-dead detector now runs at the moment the card is written. Shipped sites: settlementFloorPolicy.ts, toolSafetyService.ts, pendingApprovalsStore.ts. -->
 - **"Just this once" now means just this once** - Choosing it used to be refused the moment you clicked, on the commands where it mattered most, so the thing you had just approved did not run. It runs now, whether or not the command carries a credential, and a card that appeared while the safety check was unavailable can still be answered once the check comes back instead of dying on screen.
@@ -14,6 +14,8 @@ What's new in Rebel. We ship fast, so there's always something.
 - **Long answers stop being cancelled for the wrong reason** - Rebel gives up on a turn that has gone quiet for too long, but it was counting its own preparation time as silence, so a turn that was working could be cancelled at five minutes for no fault of its own. It now measures from when your request actually leaves for the model, and it can still see the plan being written.
 <!-- feature: readable-error-titles | detail: eleven error-title occurrences across cloud-update status, external delivery and connector settings migrated to toast templates with explicit cause codes; private validator-bearing descriptions keep their existing grouping. -->
 - **Error notices say what went wrong** - Several notices across cloud updates, sending to outside apps and connector settings used to show a raw internal title. They now say the cause in plain words, without exposing anything private from the failure.
+
+## v0.4.66 — Sep 9-11, 2026
 
 ### Fixes
 
