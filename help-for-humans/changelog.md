@@ -4,10 +4,11 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ---
 
-## v0.4.66 — Sep 9-10, 2026
+## v0.4.66 — Sep 9-11, 2026
 
 ### Fixes
 
+- **A slow connection no longer gets mistaken for being offline** — Rebel waits a little longer for distant servers and tries once more before giving up, so a slow-but-working network gets another chance to finish. Patience, with boundaries.
 - **OpenRouter stays connected when it's connected** — A properly connected OpenRouter account could still be told "OpenRouter is not connected," and reconnecting never helped — because the connection was never the problem. A background helper inside Rebel was setting up its request without the credentials attached, so the request was turned down before it ever reached OpenRouter. Rebel now keeps the connection details together, so a connected account is treated as one. The phantom disconnection has been disconnected.
 
 <!-- feature: connector-fetch-reconnect | detail: A bare loopback fetch failure on a connector call is named (transport_fetch_failed with a cause code) and the client reconnects for the next call instead of failing the same way again. -->
