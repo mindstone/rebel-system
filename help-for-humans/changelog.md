@@ -15,6 +15,15 @@ What's new in Rebel. We ship fast, so there's always something.
 <!-- feature: readable-error-titles | detail: eleven error-title occurrences across cloud-update status, external delivery and connector settings migrated to toast templates with explicit cause codes; private validator-bearing descriptions keep their existing grouping. -->
 - **Error notices say what went wrong** - Several notices across cloud updates, sending to outside apps and connector settings used to show a raw internal title. They now say the cause in plain words, without exposing anything private from the failure.
 
+<!-- feature: mic-in-the-message-field | detail: dictation moved from a control beside the composer into the message field itself, with a live input-level meter while capture is running; hold-to-enter-Live is retained on the same control. Shipped sites: the composer voice control and its Live entry path. -->
+- **The mic is now in the message box** - Dictation starts from the same mic as everywhere else in Rebel, inside the message field instead of beside it, and while you talk a level meter shows that Rebel is hearing you. Holding the mic still takes you into Live.
+<!-- feature: one-press-one-mode | detail: a single press could initiate dictation and Live capture concurrently; the press now resolves to exactly one mode. -->
+- **One press does one thing** - Pressing the mic could start dictation and Live at the same time. It now starts the one you asked for.
+<!-- feature: live-withheld-while-unsaveable | detail: Live is withheld while the session cannot be persisted, and the persistence warning is retained on screen rather than being replaced by the listening prompt. -->
+- **Voice stays out of the way when a conversation cannot be saved** - If Rebel cannot save the conversation, Live stays unavailable rather than recording something that would not be kept, and the warning explaining it stays on screen instead of being replaced by the usual listening prompt.
+<!-- feature: transcription-in-progress-state | detail: the composer and the actions dialog both render an explicit transcribing state between capture ending and text arriving, replacing an immediate return to the empty placeholder. -->
+- **The message box tells you it is still working** - After you stop talking, the field shows that it is turning your words into text, instead of snapping back to the empty prompt as though nothing had happened. The same is true in the actions dialog.
+
 ## v0.4.66 — Sep 9-11, 2026
 
 ### Fixes
