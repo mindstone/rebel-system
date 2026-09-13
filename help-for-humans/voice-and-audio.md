@@ -1,11 +1,11 @@
 ---
 description: "Guide to Rebel's voice features: dictation, Live conversations, read-aloud, transcription providers, unified mic buttons, and custom vocabulary"
-last_updated: "2026-08-29"
+last_updated: "2026-09-11"
 ---
 
 # Voice and Audio
 
-Rebel gives you two pleasantly literal ways to use your voice: tap the microphone in the message box to dictate, or press the Live button beside it to start a conversation where Rebel talks back. Ordinary conversations reply in writing, which is useful when your office has ears.
+Rebel gives you two pleasantly literal ways to use your voice: tap the microphone in the message box to dictate, or press the Live button beside it — or just hold the microphone — to start a conversation where Rebel talks back. Ordinary conversations reply in writing, which is useful when your office has ears.
 
 Voice input works on **desktop, web companion, and mobile** — speak to Rebel from whichever device you're on.
 
@@ -13,7 +13,7 @@ Voice input works on **desktop, web companion, and mobile** — speak to Rebel f
 ## Quick Start
 
 1. **Tap the microphone button** to dictate a message
-2. **Press the Live button** (beside the message box) to start a spoken Live conversation
+2. **Press the Live button** (beside the message box), or **hold the microphone**, to start a spoken Live conversation
 
 That's it. On supported desktop platforms, Rebel uses built-in on-device transcription by default — no API key needed. Speak naturally, and Rebel will transcribe what you said and respond.
 
@@ -41,7 +41,7 @@ The microphone button appears in the composer area (bottom of the conversation).
 
 ### Live mode — an actual conversation
 
-Press the **Live** button beside the message box and Rebel enters **Live mode**: a proper back-and-forth conversation out loud. Rebel speaks its replies, listens while it talks, and stops when you start — you can interrupt mid-sentence the way you would with a person. To leave, close the Live view; you're back to normal.
+Press the **Live** button beside the message box — or hold the microphone for a moment — and Rebel enters **Live mode**: a proper back-and-forth conversation out loud. Rebel speaks its replies, listens while it talks, and stops when you start — you can interrupt mid-sentence the way you would with a person. To leave, close the Live view; you're back to normal.
 
 The difference from tapping is worth knowing:
 
