@@ -6,6 +6,9 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ## v0.4.68 — Sep 14, 2026
 
+<!-- feature: turn-start-says-why | detail: a message refused or failed before its turn started shows one of four approved messages instead of a raw error; a message already waiting in the queue offers no Retry; on mobile a Send & done that could not be saved puts the draft back and a queue drain error no longer undoes a save. Shipped strings: "This conversation may still be running elsewhere.", "Rebel couldn’t confirm that the earlier reply finished.", "Rebel couldn’t check whether another reply is still running.", "Rebel couldn’t start this task. Try again." -->
+- **When a message can't start, Rebel tells you why** - It used to show a raw technical error, which looked like your message had vanished. Now it says what actually happened, such as the conversation still running somewhere else, and whether your message is waiting its turn or back in the box for you to send. A message that is already waiting offers no Retry, so nothing gets sent twice.
+
 ## v0.4.67 — Sep 11, 2026
 
 <!-- feature: no-reconnect-for-a-permission-never-asked | detail: the legacy Slack search fallback appended a note instructing a reconnect with granular search scopes; whether those scopes are requested at all is fixed by the installing app's configuration, so the instruction could not succeed -->
