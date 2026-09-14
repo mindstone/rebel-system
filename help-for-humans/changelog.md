@@ -62,10 +62,6 @@ What's new in Rebel. We ship fast, so there's always something.
 <!-- feature: automation-approval-identity | detail: An approval raised by an automation is attributed to that automation (its name, or "Automation" for a person's own automation with no display name) and answering the card settles it, instead of the card sitting under a generated id and staying open. -->
 - **An automation's approvals belong to the automation again** - When an automation asks you to approve something, the card now names the automation (an automation you built yourself is called "Automation", not a generated code), and answering it settles it. Before, the card could show a code in place of a name and your answer could fail to land.
 
-### Under the Hood
-
-- **Better breadcrumbs for the puzzling cases** — Rebel now records why a permission card did or didn't offer an "always allow" option. Nothing you'll see day to day; just enough for future-us to fix the odd case from the logs instead of guesswork.
-
 ## v0.4.65 — Sep 8, 2026
 
 ### Highlights
@@ -74,8 +70,6 @@ What's new in Rebel. We ship fast, so there's always something.
 - **If your ChatGPT plan cannot run the model you picked, Rebel now runs the closest one it can** — For two days some ChatGPT subscribers got a bare "model not found" for a model their plan does not serve, and picking GPT-5.6 Sol quietly ran GPT-5.5 instead. Rebel now answers with the nearest model your plan does run and tells you in the conversation which model answered, with a one-click choice to switch to it for good or keep your own. Nothing to reconnect, no setting to change; your choice stays as you set it unless you say otherwise.
 <!-- feature: whats-new-on-update | detail: What's New remembers each entry it has shown you on this device, rather than treating a whole version as seen in one go. Entries tagged as the same feature collapse into the most recent one, with a note saying how many times it changed. -->
 - **What's New now opens itself, once** — When there's something you haven't been shown, Rebel opens What's New after an update, and closing it marks those entries seen on this device. Entries we've tagged as the same feature collapse into a single card telling you how many times it changed. No more than daily, whatever lands — and the version number in the header still opens the whole changelog. News, delivered once.
-- **Design review follows the actual app** — Chief Designer now uses implementation source and the running product for UI review. The separate Storybook preview tooling has been retired.
-
 ### Fixes
 
 - **A blocked save now says what is true** — When Rebel blocked an update to protect the conversation, the note said it was still trying and that reopening usually helped. Neither was true: nothing was retrying, and reopening changed nothing. The note now says plainly that earlier messages are safe, the latest update was not saved, Rebel cannot retry it on its own, and anything added after it may not be saved either — and the app no longer reports a save as done when it only set it aside.
@@ -99,8 +93,6 @@ What's new in Rebel. We ship fast, so there's always something.
 - **Fewer "Impossible state" dead ends** — If you pay as you go and none of your chosen models can be reached, Rebel now tells you that plainly and points you to the setting to fix, instead of failing every message.
 
 ### Fixes
-
-- **Chief Designer has less paperwork** — Design requests now use one concise set of instructions. The command works without a component catalog in your workspace, and unavailable screenshots no longer trap it in a completion loop.
 
 - **One background-sync saving snag is fixed** — When a cloud update had activity to record but no messages to add or remove, Rebel could rename an existing message and get stuck trying to save the update. It now leaves the message alone and gets on with the update.
 
