@@ -4,6 +4,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ---
 
+## v0.4.68 — Sep 14, 2026
+
 ## v0.4.67 — Sep 11, 2026
 
 <!-- feature: no-reconnect-for-a-permission-never-asked | detail: the legacy Slack search fallback appended a note instructing a reconnect with granular search scopes; whether those scopes are requested at all is fixed by the installing app's configuration, so the instruction could not succeed -->
