@@ -4,7 +4,21 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ---
 
+## v0.4.68 — Sep 14, 2026
+
+<!-- feature: turn-start-says-why | detail: a message refused or failed before its turn started shows one of four approved messages instead of a raw error; a message already waiting in the queue offers no Retry; on mobile a Send & done that could not be saved puts the draft back and a queue drain error no longer undoes a save. Shipped strings: "This conversation may still be running elsewhere.", "Rebel couldn’t confirm that the earlier reply finished.", "Rebel couldn’t check whether another reply is still running.", "Rebel couldn’t start this task. Try again." -->
+- **When a message can't start, Rebel tells you why** - It used to show a raw technical error, which looked like your message had vanished. Now it says what actually happened, such as the conversation still running somewhere else, and whether your message is waiting its turn or back in the box for you to send. A message that is already waiting offers no Retry, so nothing gets sent twice.
+
 ## v0.4.67 — Sep 11, 2026
+
+<!-- feature: no-reconnect-for-a-permission-never-asked | detail: the legacy Slack search fallback appended a note instructing a reconnect with granular search scopes; whether those scopes are requested at all is fixed by the installing app's configuration, so the instruction could not succeed -->
+- **Rebel stops sending you to fix something you cannot fix** - When a search came up short it used to add a note telling you to reconnect with different permissions. Reconnecting could never have helped: whether those permissions are asked for at all is decided by how the app was set up, not by you. An instruction that cannot work is worse than none, so it is gone.
+
+<!-- feature: retries-counted-per-conversation | detail: the tool-argument validation attempt counter was keyed package::tool in a map shared by every session in the process, and it gates the terminal stop-retrying message a host surfaces as a demand that the user act -->
+- **Other conversations' failures stop counting against yours** - When a tool went wrong, Rebel was counting the tries across every conversation it had open, then showing you the stop-and-fix-this message on your very first one. It counts each conversation on its own now.
+
+<!-- feature: a-permission-you-gave-stays-given | detail: an undetermined risk band or unreadable attestation evidence was treated as a denial, and a re-rating could withdraw a pre-existing grant; the unreadable-history disposition is now three-valued so absence goes to the band rather than refusing -->
+- **A permission you gave stays given** - If Rebel could not read its own record of something you had allowed, it treated that as you saying no, and told you the action was no longer authorised. It now asks you again instead of refusing on its own read failure, and a permission you granted is not quietly withdrawn by a later second opinion.
 
 <!-- feature: saving-notices-name-their-cause | detail: the persistence toast composes from the reason's own recovery bucket instead of one sentence serving every decline; the scope clause varies by reason, the calm notice routes through the same buckets, and where a reload recovers it the copy names the gesture that actually reloads. Shipped strings: "Saving is taking longer than usual", "This conversation isn't saving", "Rebel can't reach its storage", "Rebel couldn't save your last change", "Rebel still can't save your recent changes", "Still saving this conversation". -->
 - **The saving notices now tell you which problem you have** - They used to share one sentence, so a slow save and a conversation that genuinely cannot save read the same. Now "Saving is taking longer than usual" says to wait and do nothing, while "This conversation isn't saving" and "Rebel can't reach its storage" name different causes; and where reloading is what fixes it, the notice names the gesture that reloads rather than describing it.
@@ -51,6 +65,7 @@ What's new in Rebel. We ship fast, so there's always something.
 <!-- feature: inbox-read-contract | detail: rebel_inbox_list and rebel_inbox_query share one read-filter contract over the /inbox/query backend, so an argument shape accepted by one is accepted by the other; super-mcp's argument-shape discriminator is promoted to a Sentry tag. -->
 - **Rebel's own Actions lookups stop tripping over their own arguments** - Rebel had two slightly different ways of asking your Actions the same question, and it picked the wrong shape often enough that the lookup was rejected. They now share one contract, so an Actions lookup works the same way every time.
 
+- **A slow connection no longer gets mistaken for being offline** — Rebel waits a little longer for distant servers and tries once more before giving up, so a slow-but-working network gets another chance to finish. Patience, with boundaries.
 - **OpenRouter stays connected when it's connected** — A properly connected OpenRouter account could still be told "OpenRouter is not connected," and reconnecting never helped — because the connection was never the problem. A background helper inside Rebel was setting up its request without the credentials attached, so the request was turned down before it ever reached OpenRouter. Rebel now keeps the connection details together, so a connected account is treated as one. The phantom disconnection has been disconnected.
 
 <!-- feature: connector-fetch-reconnect | detail: A bare loopback fetch failure on a connector call is named (transport_fetch_failed with a cause code) and the client reconnects for the next call instead of failing the same way again. -->
