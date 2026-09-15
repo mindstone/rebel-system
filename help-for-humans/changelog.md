@@ -4,6 +4,12 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ---
 
+## v0.4.69 — Sep 15, 2026
+
+### Under the Hood
+
+- **Steadier background bookkeeping** — Rebel quietly keeps track of how far each of your conversations has come. A snag in that background work could make it retry the same stuck sessions on every launch and give up early on the rest; those failures now clear themselves instead of piling up, so the tally stays accurate over time. Nothing for you to do — it just keeps better track.
+
 ## v0.4.68 — Sep 14, 2026
 
 <!-- feature: turn-start-says-why | detail: a message refused or failed before its turn started shows one of four approved messages instead of a raw error; a message already waiting in the queue offers no Retry; on mobile a Send & done that could not be saved puts the draft back and a queue drain error no longer undoes a save. Shipped strings: "This conversation may still be running elsewhere.", "Rebel couldn’t confirm that the earlier reply finished.", "Rebel couldn’t check whether another reply is still running.", "Rebel couldn’t start this task. Try again." -->
