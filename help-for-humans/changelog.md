@@ -6,6 +6,13 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ## v0.4.69 — Sep 15, 2026
 
+### Fixed
+
+- **"Always allow" now actually means always** — for some tools, choosing to remember your approval quietly saved nothing at all, so Rebel asked again next time as though you'd never said it. It saves properly now. If there's a tool you keep re-approving, this is probably why.
+- **Safety checks that finish on time** — before doing something consequential, Rebel runs a quick check. On some plans that check was being handed to a large, slow model and took over ten seconds when it should take under one; when it ran out of time, Rebel asked you to approve the action instead. It now uses a model suited to the job, so expect noticeably fewer of those interruptions.
+- **Straight answers on approval cards** — when the extra double-check is switched off, cards used to say it "could not complete", which made a deliberate choice sound like a fault. They now say what's actually going on. Anything genuinely risky still asks, exactly as before.
+- **Windows: "not this one again"** — on a Windows command card you couldn't tell Rebel to stop asking about that action for the rest of the conversation, though you could everywhere else. Now you can.
+
 ### Under the Hood
 
 - **Steadier background bookkeeping** — Rebel quietly keeps track of how far each of your conversations has come. A snag in that background work could make it retry the same stuck sessions on every launch and give up early on the rest; those failures now clear themselves instead of piling up, so the tally stays accurate over time. Nothing for you to do — it just keeps better track.
