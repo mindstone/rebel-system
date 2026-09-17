@@ -4,6 +4,13 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ---
 
+## v0.4.70 — Sep 17, 2026
+
+### Fixed
+
+- **Approving a command now actually runs it** — since mid-August, approving a command that uses one of your saved keys was quietly refused every time, and an approval card left over from an older version of Rebel could never be approved at all, while telling you to "try again in a moment". Saved-key commands now run when you approve them, and a card that can't be run says so plainly instead of promising a retry that could never work.
+- **Retired ChatGPT models now own up to it** — if the model saved in your settings is one your ChatGPT plan no longer offers, Rebel runs your own working model (or the nearest one your plan does offer) instead of quietly swapping in something else, says under that setting which model it's actually using, and only lists models your plan can run.
+
 ## v0.4.69 — Sep 15, 2026
 
 ### Fixed
