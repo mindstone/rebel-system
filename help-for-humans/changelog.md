@@ -4,6 +4,12 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ---
 
+## v0.4.71 — Sep 17, 2026
+
+### Fixed
+
+- **Straight talk when the second look is switched off** — when Rebel's extra safety check isn't running, approval cards used to be worded as though the check had happened. They now say plainly that the action was allowed without a check, so you can tell the difference at a glance.
+
 ## v0.4.70 — Sep 17, 2026
 
 ### Fixed
