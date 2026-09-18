@@ -10,6 +10,11 @@ What's new in Rebel. We ship fast, so there's always something.
 
 - **Approving a saved command now runs that command** — when you approved a command Rebel had saved for you, after Rebel restarted or in an automation, the follow-up had no copy of it, so nothing ran and Rebel reported itself "Blocked". It now runs the exact command you approved, once, through the usual safety checks, instead of asking itself to retype it.
 - **Windows: Rebel now judges ordinary command chains itself.** On Windows, a command like `echo Starting && node build.js > build.log` used to earn an approval card every time, because the strict check only understood one plain command at a time. Rebel now reads chains, pipes, redirects and quoted scripts, checks them with its safety evaluator as it does on other platforms, and runs them when the check comes back clear. Some things still ask, on purpose: PowerShell and other nested shells, cmd's own delete, copy and move commands, caret escapes, `%VARIABLE%` expansion, tricky quoting, well-known download tools, and anything the check isn't confident about.
+- **An Allow that quietly did nothing now runs** — when Rebel's cloud connection registered an approval that your computer had already saved, the copy could wipe the note of which conversation it belonged to, so your Allow was accepted and then nothing happened, with no message. Rebel now takes the conversation from the approval it saved, and the action runs. And if an approval really isn't tied to any conversation, Rebel now tells you it wasn't applied, instead of leaving you waiting.
+
+### Under the Hood
+
+- **Approvals refused behind the scenes now show up on our side** — a narrow case where Rebel held an action for approval on one copy of itself while a different copy was responsible for running it could end with the action refused and nothing reported. That refusal is now reported to us. Nothing about what Rebel allows or asks has changed.
 
 ## v0.4.73 — Sep 18, 2026
 
