@@ -4,6 +4,13 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ---
 
+## v0.4.74 — Sep 18, 2026
+
+### Fixed
+
+- **Approving a saved command now runs that command** — when you approved a command Rebel had saved for you, after Rebel restarted or in an automation, the follow-up had no copy of it, so nothing ran and Rebel reported itself "Blocked". It now runs the exact command you approved, once, through the usual safety checks, instead of asking itself to retype it.
+- **Windows: Rebel now judges ordinary command chains itself.** On Windows, a command like `echo Starting && node build.js > build.log` used to earn an approval card every time, because the strict check only understood one plain command at a time. Rebel now reads chains, pipes, redirects and quoted scripts, checks them with its safety evaluator as it does on other platforms, and runs them when the check comes back clear. Some things still ask, on purpose: PowerShell and other nested shells, cmd's own delete, copy and move commands, caret escapes, `%VARIABLE%` expansion, tricky quoting, well-known download tools, and anything the check isn't confident about.
+
 ## v0.4.73 — Sep 18, 2026
 
 ### Under the Hood
