@@ -9,6 +9,7 @@ What's new in Rebel. We ship fast, so there's always something.
 ### Fixed
 
 - **Rebel tells you where your approvals actually are** — When Rebel saved an action for you to approve, it didn't say where to find it. It sometimes sent people to Actions, which is the wrong place, and made up shortcuts that didn't exist. It now points to the right place: the Notifications panel behind the bell icon, or **View** on the "needs your OK" bar in the conversation. On Windows, when a command Rebel can't check keeps asking, it mentions that **Allow and remember this command** stops the asking for that exact command. Fewer approvals left waiting in a panel nobody opened.
+- **Replies that quietly never finish** — when a reply failed and Rebel couldn't tell you so, the conversation could sit waiting on it forever, with everything you typed afterwards waiting behind it. One cause of that is now fixed: the reply ends and the conversation moves on. Rebel still won't show you what went wrong in that case, and a conversation that is already stuck this way isn't rescued — you'll now see a line telling you the last reply went quiet and that your next message is waiting on it. The repair for those conversations is coming separately.
 
 ### Under the Hood
 
