@@ -10,7 +10,10 @@ What's new in Rebel. We ship fast, so there's always something.
 
 - **Straight talk when the second look is switched off** — when Rebel's extra safety check isn't running, approval cards used to be worded as though the check had happened. They now say plainly that the action was allowed without a check, so you can tell the difference at a glance.
 - **Windows: "Allow and remember" for the commands Rebel can't check** — on Windows, a command Rebel couldn't read for itself only ever offered "Allow this run only", so the same script asked you again every single run (and every scheduled run). The card now also offers **Allow and remember this command**. It remembers that exact command, character for character: change so much as an argument and Rebel asks again. Two things it deliberately doesn't do. A command carrying one of your saved keys still asks each time on Windows (that one needs the mistake check, which can't run for a command Rebel couldn't read). And anything with a well-known destructive or download-and-run command anywhere in it, `del`, `Remove-Item`, `Invoke-Expression`, `curl`, and friends, gets no remember option at all. Rebel can't check the rest, so the responsibility for a remembered command is yours; you can undo any of them in Settings > Safety.
-- **Windows: approving a held-back command now runs it** — on Windows, approving a command Rebel had held back for review could end with the same card coming back instead of the command running. Approving it now runs it, once.
+
+### Under the Hood
+
+- **Windows held-command cards: measurements to finish the fix** — on Windows, approving a command Rebel held back for review can still end with the same card coming back, as the 0.4.69 note says. This release adds the measurements that tell us which of the three suspected causes is doing it, so the fix itself can follow; nothing about what Rebel allows or asks has changed.
 
 ## v0.4.70 — Sep 17, 2026
 
