@@ -4,6 +4,12 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ---
 
+## v0.4.72 — Sep 18, 2026
+
+### Fixed
+
+- **Rebel tells you where your approvals actually are** — When Rebel saved an action for you to approve, it didn't say where to find it. It sometimes sent people to Actions, which is the wrong place, and made up shortcuts that didn't exist. It now points to the right place: the Notifications panel behind the bell icon, or **View** on the "needs your OK" bar in the conversation. On Windows, when a command Rebel can't check keeps asking, it mentions that **Allow and remember this command** stops the asking for that exact command. Fewer approvals left waiting in a panel nobody opened.
+
 ## v0.4.71 — Sep 17, 2026
 
 ### Fixed
