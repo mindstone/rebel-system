@@ -4,6 +4,14 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ---
 
+## v0.4.73 — Sep 18, 2026
+
+### Under the Hood
+
+- **Approvals now leave a trail** — when you allow an action, Rebel records each step between your Allow and the action actually starting, so an approval that quietly goes nowhere can be traced afterwards instead of guessed at. One specific dead end — an approval accepted when there is no session left to grant it — now raises an alert on our side. Other ways an approval can stall are recorded but not yet alerted on, and nothing about what Rebel allows or asks has changed.
+- When a safety check can't finish, Rebel now notes which model it actually asked and why that one, rather than guessing afterwards. Fewer mysteries, same verdicts.
+- When one of Rebel's own error reports doesn't fit its expected shape, it now files it under its proper name and leaves the contents out, instead of sending the lot unlabelled. Tidier for us, more private for you.
+
 ## v0.4.72 — Sep 18, 2026
 
 ### Fixed
@@ -14,7 +22,6 @@ What's new in Rebel. We ship fast, so there's always something.
 ### Under the Hood
 
 - Lint checks are back to minutes instead of most of an hour: the warning audit runs a handful of bounded lint processes and says which one it is on.
-- **Approvals now leave a trail** — when you allow an action, Rebel records each step between your Allow and the action actually starting, so an approval that quietly goes nowhere can be traced afterwards instead of guessed at. One specific dead end — an approval accepted when there is no session left to grant it — now raises an alert on our side. Other ways an approval can stall are recorded but not yet alerted on, and nothing about what Rebel allows or asks has changed.
 
 ## v0.4.71 — Sep 17, 2026
 
