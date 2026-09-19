@@ -4,6 +4,12 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ---
 
+## v0.4.77 — Sep 19, 2026
+
+### Fixed
+
+- Long conversations on a direct Anthropic or OpenAI connection no longer stop dead with "Prompt is too large" when the conversation itself still fits. Rebel now leaves itself a shorter answer budget and carries on. If even that runs out, you get the same recovery as before.
+
 ## v0.4.76 — Sep 19, 2026
 
 ### Under the Hood
