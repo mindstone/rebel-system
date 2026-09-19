@@ -8,7 +8,6 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixed
 
-- Rebel asks for permission far less often. Running a script, fetching a page or using a connector it has not rated yet no longer stops for a card just because the safety check was only fairly sure, and commands it cannot fully read go to the safety check instead of straight to you. Deleting, downloading, sending and anything touching keys still ask. Prefer the chattier version? Settings, Safety, Extra safety checks.
 - Long conversations on a direct Anthropic or OpenAI connection no longer stop dead with "Prompt is too large" when the conversation itself still fits. Rebel now leaves itself a shorter answer budget and carries on. If even that runs out, you get the same recovery as before.
 
 ## v0.4.76 — Sep 19, 2026
