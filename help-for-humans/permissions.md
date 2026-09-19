@@ -51,7 +51,7 @@ Your Safety Rules add another layer — custom natural language rules that tell 
 
 ## Reading Beyond Your Workspace
 
-Point Rebel at a file or folder outside your spaces — say, a Downloads folder or a project on your Desktop — and it'll ask first, in plain language, before reading it. You choose how long that permission lasts: just this once, for the rest of this conversation, or always.
+Point Rebel at a file or folder outside your spaces — say, a Downloads folder or a project on your Desktop — and it'll ask first, in plain language, before reading it. You choose how long that permission lasts: for the rest of this conversation (the default), just this once, or always.
 
 - **Manage what you've allowed** — Go to **Settings → Safety → Locations** to see every folder you've granted, and revoke any of them at any time
 - **Attach a file, skip the extra ask** — If you attach or drop a file into a conversation, Rebel can just read it — no separate approval needed for that file
