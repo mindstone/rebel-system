@@ -9,7 +9,6 @@ What's new in Rebel. We ship fast, so there's always something.
 ### Fixed
 
 - Rebel asks for permission far less often. Running a script, fetching a page or using a connector it has not rated yet no longer stops for a card just because the safety check was only fairly sure, and commands it cannot fully read go to the safety check instead of straight to you. Deleting, downloading, sending and anything touching keys still ask. Prefer the chattier version? Settings, Safety, Extra safety checks.
-- On Mindstone plans, safety checks now always use the fast model built for the job, even if you picked a big model for background work. One slow safety check could take over a minute and then ask you anyway. If you really want a different safety model, set it under Behind the Scenes details.
 - Approving a file outside your spaces now covers the rest of the conversation by default, so Rebel stops asking again for the very file you just approved. One-time approval is still there in the menu.
 - Long conversations on a direct Anthropic or OpenAI connection no longer stop dead with "Prompt is too large" when the conversation itself still fits. Rebel now leaves itself a shorter answer budget and carries on. If even that runs out, you get the same recovery as before.
 - Fixed two rare cloud-side timing cases where Rebel could lose track of which device was running a reply, which could let the same reply run twice. Nothing looks different.
