@@ -4,6 +4,12 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ---
 
+## v0.4.76 — Sep 19, 2026
+
+### Under the Hood
+
+- **Fewer false "sync is stuck" alarms** — when a conversation was waiting out a retry delay before going back up to the cloud, Rebel's own health check counted the wait as the sync being stuck and quietly filed a report about it every hour. It now counts only the time a conversation has actually been ready and waiting, so the alarm means what it says.
+
 ## v0.4.75 — Sep 18, 2026
 
 ### Fixed
