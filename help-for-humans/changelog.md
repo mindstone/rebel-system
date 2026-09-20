@@ -4,6 +4,14 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ---
 
+## Unreleased
+
+### Fixes
+
+- **A fresh notetaker for the next meeting** — you can invite Rebel to the same room again after it stops. If an invitation couldn't be confirmed, Stop stays available after restart. Try Again waits until stopping is confirmed.
+- **Meeting joins stay on your terms** — Rebel verifies your invitation before joining automatically, while the app is open and online, through two minutes after the meeting starts. After that, you can choose to invite it; if an earlier request is still uncertain, Rebel says so instead of sending another notetaker.
+- **Re-invite and Stop agree** — inviting the notetaker again no longer races an automatic removal. A later Stop still takes effect or tells you why it could not be confirmed.
+
 ## v0.4.74 — Sep 18, 2026
 
 ### Fixed
