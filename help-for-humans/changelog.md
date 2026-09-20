@@ -14,6 +14,7 @@ What's new in Rebel. We ship fast, so there's always something.
 - Long conversations on a direct Anthropic or OpenAI connection no longer stop dead with "Prompt is too large" when the conversation itself still fits. Rebel now leaves itself a shorter answer budget and carries on. If even that runs out, you get the same recovery as before.
 - Fixed two rare cloud-side timing cases where Rebel could lose track of which device was running a reply, which could let the same reply run twice. Nothing looks different.
 - **Renames and stars that came back after a restart** — renaming, starring, deleting or restoring a conversation you hadn't opened since Rebel started, or renaming or starring one you'd only just created, looked saved but was quietly thrown away, so after a restart the old name or star was back. Those changes are now saved, and a quick star-then-unstar keeps the last one. If renaming or starring the conversation you have open fails to save, you now get a note saying so. Some other settings in a brand-new conversation, such as Finish Line and the model choice, can still be lost this way.
+- The Automations page no longer claims an automation can run commands without asking when it can't.
 
 ## v0.4.76 — Sep 19, 2026
 
