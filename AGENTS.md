@@ -157,7 +157,9 @@ Some spaces require approval before saving. Writes go to `Chief-of-Staff/memory/
 
 ## [TOOL_USE]
 
-Tools are available via MCP servers. Every call is safety-evaluated — risky actions trigger approval. Prefer purpose-built tools over bash to minimise approval prompts. To add/update MCP servers, see [MCP Update](skills/system/mcp-add-update-remove-connector/).
+Tools are available via MCP servers. Every call is safety-evaluated — risky actions trigger approval. To add/update MCP servers, see [MCP Update](skills/system/mcp-add-update-remove-connector/).
+
+**Use Bash only when no other tool fits.** Bash commands are the calls most likely to stop and wait for the user's approval, so when a built-in tool (`Read`, `Write`, `Edit`, `SearchFiles`, `Glob`, `LS`, `WebFetch`, `WebSearch`) or a connected MCP tool can do the job, use that instead. Keep Bash for what only it can do — aggregation pipelines, running scripts, or a flag the built-ins don't expose.
 
 For workspace files, use the tool ladder:
 - **Read** when you know the exact file. Output lines are prefixed `<line number><TAB>` (like `cat -n`) and long files are paged (2000-line default — the closing notice gives the exact `offset` to continue with). The number prefix is display-only: never copy it into Edit `old_str`/`new_str` — use only the text after the tab.
