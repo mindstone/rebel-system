@@ -12,6 +12,34 @@ What's new in Rebel. We ship fast, so there's always something.
 - **Meeting joins stay on your terms** — Rebel verifies your invitation before joining automatically, while the app is open and online, through two minutes after the meeting starts. After that, you can choose to invite it; if an earlier request is still uncertain, Rebel says so instead of sending another notetaker.
 - **Re-invite and Stop agree** — inviting the notetaker again no longer races an automatic removal. A later Stop still takes effect or tells you why it could not be confirmed.
 
+## v0.4.77 — Sep 19, 2026
+
+### Fixed
+
+- Rebel asks for permission far less often. Running a script, fetching a page or using a connector it has not rated yet no longer stops for a card just because the safety check was only fairly sure, and commands it cannot fully read go to the safety check instead of straight to you. Deleting, downloading, sending and anything touching keys still ask. Prefer the chattier version? Settings, Safety, Extra safety checks.
+- Safety checks on a Mindstone plan now use the fast model picked for the job, where your plan includes it, even when your background model is a slower one. A slow background model could make one check take over a minute and end in an approval card. You can still choose your own safety model in Settings.
+- Approving a file outside your spaces now covers the rest of the conversation by default, so Rebel stops asking again for the very file you just approved. One-time approval is still there in the menu.
+- Long conversations on a direct Anthropic or OpenAI connection no longer stop dead with "Prompt is too large" when the conversation itself still fits. Rebel now leaves itself a shorter answer budget and carries on. If even that runs out, you get the same recovery as before.
+- Fixed two rare cloud-side timing cases where Rebel could lose track of which device was running a reply, which could let the same reply run twice. Nothing looks different.
+- **Renames and stars that came back after a restart** — renaming, starring, deleting or restoring a conversation you hadn't opened since Rebel started, or renaming or starring one you'd only just created, looked saved but was quietly thrown away, so after a restart the old name or star was back. Those changes are now saved, and a quick star-then-unstar keeps the last one. If renaming or starring the conversation you have open fails to save, you now get a note saying so. Some other settings in a brand-new conversation, such as Finish Line and the model choice, can still be lost this way.
+- The Automations page no longer claims an automation can run commands without asking when it can't.
+
+## v0.4.76 — Sep 19, 2026
+
+### Under the Hood
+
+- **Fewer false "sync is stuck" alarms** — when a conversation was waiting out a retry delay before going back up to the cloud, Rebel's own health check counted the wait as the sync being stuck and quietly filed a report about it every hour. It now counts only the time a conversation has actually been ready and waiting, so the alarm means what it says.
+
+## v0.4.75 — Sep 18, 2026
+
+### Fixed
+
+- **An Allow that quietly did nothing now runs** — when Rebel's cloud connection registered an approval that your computer had already saved, the copy could wipe the note of which conversation it belonged to, so your Allow was accepted and then nothing happened, with no message. Rebel now takes the conversation from the approval it saved, and the action runs. And if an approval really isn't tied to any conversation, Rebel now tells you it wasn't applied, instead of leaving you waiting.
+
+### Under the Hood
+
+- **Approvals refused behind the scenes now show up on our side** — a narrow case where Rebel held an action for approval on one copy of itself while a different copy was responsible for running it could end with the action refused and nothing reported. That refusal is now reported to us. Nothing about what Rebel allows or asks has changed.
+
 ## v0.4.74 — Sep 18, 2026
 
 ### Fixed
