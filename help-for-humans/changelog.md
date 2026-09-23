@@ -19,6 +19,7 @@ What's new in Rebel. We ship fast, so there's always something.
 - **A fresh notetaker for the next meeting** — you can invite Rebel to the same room again after it stops. If an invitation couldn't be confirmed, Stop stays available after restart. Try Again waits until stopping is confirmed.
 - **Meeting joins stay on your terms** — Rebel verifies your invitation before joining automatically, while the app is open and online, through two minutes after the meeting starts. After that, you can choose to invite it; if an earlier request is still uncertain, Rebel says so instead of sending another notetaker.
 - **Re-invite and Stop agree** — inviting the notetaker again no longer races an automatic removal. A later Stop still takes effect or tells you why it could not be confirmed.
+- **Cloud sync stops asking the same question all afternoon** — when this computer's copy of a finished conversation and the cloud's copy disagreed, Rebel rightly refused to let the cloud's version overwrite yours, then asked again every few minutes, for hours, for every conversation affected. It now asks once, keeps your copy as it is, and shows the conversation as paused in the sync indicator until you change it again or press Retry.
 
 ## v0.4.77 — Sep 19, 2026
 
