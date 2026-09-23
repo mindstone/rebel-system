@@ -8,7 +8,7 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### New
 
-- **Automations can remember a command.** When an automation's command needs your OK, you can now tell Rebel to always allow that exact command for that automation, and skip the morning ritual of approving yesterday's script. It applies whenever that automation runs on the computer you saved it on; runs anywhere else, including in the cloud, are checked as usual. Change the command by one character and the permission no longer covers it. Each remembered command is listed on its automation's page and in Settings > Safety, with a Remove button that does what it says.
+- **Automations can remember a command.** When an automation's command needs your OK, you can now tell Rebel to always allow that exact command for that automation, and skip the morning ritual of approving yesterday's script. It applies whenever that automation runs from the same workspace folder on the same kind of computer you saved it on; anywhere else, Rebel checks the command as usual. Change the command by one character and the permission no longer covers it. Each remembered command is listed on its automation's page and in Settings > Safety, with a Remove button that does what it says.
 
 ### Fixes
 
