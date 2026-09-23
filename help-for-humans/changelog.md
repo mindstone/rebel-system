@@ -12,6 +12,7 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **The "Rebel needs one detail" reminder now knows when to leave** — Once you answer, it disappears properly, including when you answer from your phone. Less haunting.
 - **Custom endpoints can read images now** — if you run a vision-capable model through your own key on a custom endpoint (Fireworks, Together, an internal gateway), Rebel used to treat it as text-only and shrug at every image you attached. The Test button in Settings → Models now also checks whether the model can see, and once it passes you get a "Vision" badge and images go through. Re-run Test on an existing profile to switch it on.
 - **A fresh notetaker for the next meeting** — you can invite Rebel to the same room again after it stops. If an invitation couldn't be confirmed, Stop stays available after restart. Try Again waits until stopping is confirmed.
 - **Meeting joins stay on your terms** — Rebel verifies your invitation before joining automatically, while the app is open and online, through two minutes after the meeting starts. After that, you can choose to invite it; if an earlier request is still uncertain, Rebel says so instead of sending another notetaker.
