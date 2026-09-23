@@ -13,6 +13,7 @@ What's new in Rebel. We ship fast, so there's always something.
 ### Fixes
 
 - **Custom endpoints can read images now** — if you run a vision-capable model through your own key on a custom endpoint (Fireworks, Together, an internal gateway), Rebel used to treat it as text-only and shrug at every image you attached. The Test button in Settings → Models now also checks whether the model can see, and once it passes you get a "Vision" badge and images go through. Re-run Test on an existing profile to switch it on.
+- **Test results stick on company models** — models your organisation set up for you used to forget their Test results every time Rebel restarted (or your admin changed anything), which quietly switched thinking back off and vision back to "can't see". They now keep them until the model or its endpoint actually changes.
 - **A fresh notetaker for the next meeting** — you can invite Rebel to the same room again after it stops. If an invitation couldn't be confirmed, Stop stays available after restart. Try Again waits until stopping is confirmed.
 - **Meeting joins stay on your terms** — Rebel verifies your invitation before joining automatically, while the app is open and online, through two minutes after the meeting starts. After that, you can choose to invite it; if an earlier request is still uncertain, Rebel says so instead of sending another notetaker.
 - **Re-invite and Stop agree** — inviting the notetaker again no longer races an automatic removal. A later Stop still takes effect or tells you why it could not be confirmed.
