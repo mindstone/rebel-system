@@ -12,6 +12,7 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **A steadier notetaker** — automatic meeting joins are more reliable, and Rebel no longer tells you it "couldn't join your meetings" when the real answer is that your plan doesn't include the notetaker or you're signed out. Those cases get their own, honest note instead.
 - **Custom endpoints can read images now** — if you run a vision-capable model through your own key on a custom endpoint (Fireworks, Together, an internal gateway), Rebel used to treat it as text-only and shrug at every image you attached. The Test button in Settings → Models now also checks whether the model can see, and once it passes you get a "Vision" badge and images go through. Re-run Test on an existing profile to switch it on.
 - **Fireworks models read images on their own** — a model your organisation set up on its Fireworks connection (Kimi K3, say) now reads the images you attach without anyone pressing Test. Rebel checks Fireworks' own model catalogue for which of its models can see, so a text-only one is still politely declined rather than crashing the conversation.
 - **Test results stick on company models** — models your organisation set up for you used to forget their Test results every time Rebel restarted (or your admin changed anything), which quietly switched thinking back off and vision back to "can't see". They now keep them until the model or its endpoint actually changes.
