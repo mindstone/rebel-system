@@ -4,7 +4,7 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ---
 
-## v0.4.78 — Sep 23, 2026
+## v0.4.78 — Sep 23-24, 2026
 
 ### New
 
@@ -13,6 +13,7 @@ What's new in Rebel. We ship fast, so there's always something.
 ### Fixes
 
 - **No more "Remember this for next time?" on repeat** — Rebel no longer suggests safety rules from chat, and the Settings switch has gone too; to remember a tool approval, choose **This tool** when offered on the approval card. Asked and answered.
+- **Slow is not offline** — on a slow connection (hotel wifi, a VPN to another continent), Rebel could decide you were offline, say so, and stop, while you were online the whole time. It now calls you offline only when it can prove it, waits a little longer for a slow server to answer, and tries once more before giving up on the AI service.
 - **A steadier notetaker** — automatic meeting joins are more reliable, and Rebel no longer tells you it "couldn't join your meetings" when the real answer is that your plan doesn't include the notetaker or you're signed out. Those cases get their own, honest note instead.
 - **The "Rebel needs one detail" reminder now knows when to leave** — Once you answer, it disappears properly, including when you answer from your phone. Less haunting.
 - **Custom endpoints can read images now** — if you run a vision-capable model through your own key on a custom endpoint (Fireworks, Together, an internal gateway), Rebel used to treat it as text-only and shrug at every image you attached. The Test button in Settings → Models now also checks whether the model can see, and once it passes you get a "Vision" badge and images go through. Re-run Test on an existing profile to switch it on.
