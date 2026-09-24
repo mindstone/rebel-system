@@ -12,6 +12,7 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **The rule you approve is the rule Rebel saves** — when you tell Rebel to always allow (or never allow) a kind of save, it now shows you the exact rule before you confirm, and saves that sentence, not a close cousin it wrote after you clicked. If the save would replace an existing rule, it shows that too.
 - **Slow is not offline** — on a slow connection (hotel wifi, a VPN to another continent), Rebel could decide you were offline, say so, and stop, while you were online the whole time. It now calls you offline only when it can prove it, waits a little longer for a slow server to answer, and tries once more before giving up on the AI service.
 - **A steadier notetaker** — automatic meeting joins are more reliable, and Rebel no longer tells you it "couldn't join your meetings" when the real answer is that your plan doesn't include the notetaker or you're signed out. Those cases get their own, honest note instead.
 - **The "Rebel needs one detail" reminder now knows when to leave** — Once you answer, it disappears properly, including when you answer from your phone. Less haunting.
