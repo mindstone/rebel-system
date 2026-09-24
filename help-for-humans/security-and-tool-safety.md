@@ -1,6 +1,6 @@
 ---
 description: "How Rebel protects you from risky actions and what requires your explicit permission"
-last_updated: "2026-09-01"
+last_updated: "2026-09-24"
 ---
 
 # Security and Tool Safety
@@ -23,7 +23,7 @@ See [Your Safety Rules](#your-own-rules-custom-safety-instructions) below for de
 
 When Rebel needs your approval to continue an action, a bar appears at the bottom of the conversation: **"Rebel paused. X action(s) need your OK"** — click **View** to open the notification drawer. Rebel can still finish independent work while that action waits.
 
-The notification drawer (the panel on the right) groups pending approvals by conversation. You can review them one at a time or use **Allow all** / **Deny all** to handle a batch. It also surfaces **rule suggestion** cards when Rebel thinks something you said in chat is worth saving as a safety rule — confirm before anything is added (same flow as [Saving rules from chat](#rule-learning) below). When the drawer is closed, a subtle notification pill appears to let you know approvals are waiting — it's unobtrusive but hard to miss, so nothing slips through the cracks.
+The notification drawer (the panel on the right) groups pending approvals by conversation. You can review them one at a time or use **Allow all** / **Deny all** to handle a batch. When the drawer is closed, a subtle notification pill appears to let you know approvals are waiting — it's unobtrusive but hard to miss, so nothing slips through the cracks.
 
 After most answers, Rebel checks whether each saved tool action is genuinely still needed. If an answer came from delegated deep work, Rebel cannot yet ask the exact worker that produced it, so the saved action stays for you instead of letting a different worker guess. Otherwise, if the action is still needed, the card stays put and waits for you. If Rebel found it no longer needs the action, the card goes away and Rebel says: **“Rebel decided not to use this. It was never run.”** You get one receipt in the conversation, even when several requests were cleared together. Prepared connector actions and files stay for your review; Rebel does not quietly bin work it already staged.
 
@@ -33,17 +33,18 @@ When a tool action needs your OK, the approval card shows what Rebel wants to do
 
 | Option | What it means |
 |--------|--------------|
-| **Allow once** | Approves just this one action. Rebel will ask again next time. (In an automation, this reads **Allow this run only**.) |
-| **Allow for conversation** | Approves this type of action for the rest of the current conversation. Useful when Rebel needs the same tool repeatedly — approve once and it won't interrupt you again until the conversation ends. |
-| **Allow and remember…** | Approves the action *and* opens a quick choice of how broadly to remember it (see [Learning rules from approvals](#rule-learning) below). This appears when Rebel paused because of your Safety Rules. |
-| **Deny once** | Declines this one action. Rebel skips it and moves on. |
-| **Don't allow…** | Declines *and* lets you add a rule so similar actions are declined automatically in future. |
+| **Just this once** | Approves just this one action. Rebel will ask again next time. (In an automation, this reads **Allow this run only**.) |
+| **This conversation** | Allows the tool for this conversation, within the limits shown on the card. |
+| **This tool** | Saves permission to use this tool on future tasks. Review the permission before confirming. |
+| **Everything from [app]** | When available, saves permission for actions from that app at the displayed level of impact or lower. Higher-impact actions still need approval. |
+| **Don't allow** | Declines this action. |
+| **Block this tool** | Saves a block for the tool. Review or remove it in **What Rebel can do → Never allowed** in Settings. |
 
 The reason and option descriptions use plain language — no technical jargon. You'll see clear explanations of what Rebel wants to do and why it's asking.
 
 For memory writes the wording differs slightly — you can allow the save, allow it for the rest of the conversation, keep it private instead, or discard it — but the idea is the same. Memory writes that were paused by your Safety Rules can also show **Allow and remember…**.
 
-The **Allow and remember…** / **Don't allow…** options appear when Rebel paused because of your Safety Rules. They won't appear for actions flagged by other checks (like automatic sensitivity detection). They're the fastest way to teach Rebel what you're comfortable with — no need to open Settings.
+The choices depend on the action and why Rebel paused. Some requests only offer a one-time decision. Saved tool permissions do not add written Safety Rules, and other safety checks can still stop an action.
 
 ### What the approval card tells you
 
@@ -246,44 +247,15 @@ Your Safety Rules are **yours** — they live on your device and aren't shared w
 
 ### Learning Rules from Approvals
 
-You don't have to write rules from scratch. The most natural way to build up your rules is from real approval prompts — when Rebel asks for permission and you want it to remember your preference.
+You can save a permission when Rebel asks about a tool action. Choose **This tool**, when offered, to allow that tool on future tasks, or **Everything from [app]** for the broader permission described on the card. Read the scope before confirming: allowing a tool is broader than allowing just one message, recipient, or channel.
 
-**How it works:**
+These choices save permissions under **[Settings → Privacy & Safety](rebel://settings/safety#approvalAuthorityLedger) → What Rebel can do → Allowed without asking**. They do not write sentences into your Safety Rules. You can remove a permission there if you change your mind. **Block this tool** saves a block under **Never allowed**.
 
-1. Rebel asks for approval on an action (e.g., "Post message to #general in Slack")
-2. You click **Allow and remember…**
-3. Rebel offers three ready-made options at different scopes, plus a free-text option:
-   - **This only** — a narrow rule for this specific action
-   - **Similar** — a broader rule covering related actions
-   - **Always** — trust this tool entirely (skips approval for all its actions)
-   - **Other…** — write your own custom rule
-4. You pick the one that feels right
-5. The rule is saved automatically
+Some file and memory approval screens still offer **Allow and remember…** to help you choose a written rule. You can also write or edit Safety Rules yourself in **[Settings → Privacy & Safety](rebel://settings/safety)**.
 
-**Example:** Rebel asks before posting to Slack. You click **Allow and remember…** and see something like:
+**Saying it in chat:**
 
-| Option | What it does |
-|--------|-------------|
-| **This only** | "Allow posting messages to #general in Slack" — adds a specific rule |
-| **Similar** | "Allow posting messages to any Slack channel" — adds a broader rule |
-| **Always** | Offers standing permission for the Slack tool where its current safety level allows it; higher-risk actions can still ask or run an extra check |
-| **Other…** | You type a custom rule in your own words |
-
-Pick the one that matches your comfort level. Narrower rules mean Rebel will still ask about related-but-different actions. Broader rules mean fewer interruptions but less oversight. (Declining works the same way: **Don't allow…** offers the matching **This only / Similar / Always block** scopes so you can teach Rebel what to *stop* doing. **Always block** adds a permanent entry to **[Settings → Privacy & Safety](rebel://settings/safety#approvalAuthorityLedger) → What Rebel can do → Never allowed** — Rebel won't do it again, anywhere, without re-asking. Remove it there if you change your mind; **Recent activity** records each quiet block.)
-
-**Where does the rule go?**
-
-- **This only**, **Similar**, and **Other…** add a written rule to your Safety Rules (visible in **[Settings → Privacy & Safety](rebel://settings/safety)** → **Your own rules**). You can edit or remove these at any time.
-- **Always** works differently — it adds standing permission for the tool where its current safety level allows it (or, for memory writes, sets the space to save without asking). This is a separate setting, not a written rule.
-
-**What happens after you update a rule:**
-
-- Any other pending approvals that the new rule covers are checked again automatically — if the rule allows them, they're resolved without you having to click through each one
-- If your rules become long or repetitive over time, Rebel can tidy them up — merging overlapping rules and removing duplicates while keeping your intent intact
-
-**Saving rules from chat:**
-
-You can also state a durable approval directly in the conversation — for example, "you can always read from my Notion personal-projects database without asking." If Rebel is confident the request is specific enough to act on as a rule, it proposes the rule as a card in the notification drawer — **Add rule** or **Skip**, plus a scope choice. Nothing is saved until you confirm. Broader or ambiguous statements still get treated as one-time permissions for the current turn, so accidental approvals don't leak into your global rules. Don't want these suggestions? Turn them off in **[Settings → Privacy & Safety](rebel://settings/safety)**.
+You can tell Rebel in the conversation that something is fine — for example, "you can always read from my Notion personal-projects database without asking." That can approve the action Rebel is about to take, subject to your safety rules and other checks. It doesn't save a rule, and Rebel doesn't suggest one from what you said. To save a tool permission, choose **This tool** when offered on an approval card, or write a Safety Rule yourself in **[Settings → Privacy & Safety](rebel://settings/safety)**.
 
 
 ## What You Can Do
