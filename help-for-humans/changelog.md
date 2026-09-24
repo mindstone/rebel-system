@@ -12,11 +12,20 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **A steadier notetaker** — automatic meeting joins are more reliable, and Rebel no longer tells you it "couldn't join your meetings" when the real answer is that your plan doesn't include the notetaker or you're signed out. Those cases get their own, honest note instead.
 - **The "Rebel needs one detail" reminder now knows when to leave** — Once you answer, it disappears properly, including when you answer from your phone. Less haunting.
 - **Custom endpoints can read images now** — if you run a vision-capable model through your own key on a custom endpoint (Fireworks, Together, an internal gateway), Rebel used to treat it as text-only and shrug at every image you attached. The Test button in Settings → Models now also checks whether the model can see, and once it passes you get a "Vision" badge and images go through. Re-run Test on an existing profile to switch it on.
+- **Fireworks models read images on their own** — a model your organisation set up on its Fireworks connection (Kimi K3, say) now reads the images you attach without anyone pressing Test. Rebel checks Fireworks' own model catalogue for which of its models can see, so a text-only one is still politely declined rather than crashing the conversation.
+- **Test results stick on company models** — models your organisation set up for you used to forget their Test results every time Rebel restarted (or your admin changed anything), which quietly switched thinking back off and vision back to "can't see". They now keep them until the model or its endpoint actually changes.
 - **A fresh notetaker for the next meeting** — you can invite Rebel to the same room again after it stops. If an invitation couldn't be confirmed, Stop stays available after restart. Try Again waits until stopping is confirmed.
 - **Meeting joins stay on your terms** — Rebel verifies your invitation before joining automatically, while the app is open and online, through two minutes after the meeting starts. After that, you can choose to invite it; if an earlier request is still uncertain, Rebel says so instead of sending another notetaker.
 - **Re-invite and Stop agree** — inviting the notetaker again no longer races an automatic removal. A later Stop still takes effect or tells you why it could not be confirmed.
+- **Cloud sync stops asking the same question all afternoon** — when this computer's copy of a finished conversation and the cloud's copy disagreed, Rebel rightly refused to let the cloud's version overwrite yours, then asked again every few minutes, for hours, for every conversation affected. It now asks once, keeps your copy as it is, and shows the conversation as paused in the sync indicator until you change it again or press Retry.
+- **"Check now" and "Find new actions" stop claiming things they don't know** — Check now used to announce you were all caught up the moment it started looking, and sometimes when it couldn't look at all; and with Source Capture switched off, both buttons said they were checking your sources while nothing ran. Now they say what's actually happening: still checking, still starting up, switched off (with a button to Automations to turn it back on), starting tomorrow on your first day, or — if Rebel's built-in source scanning has gone missing — that it can't be fixed from inside the app, with a button to report it. And if the tidy-up half fails, Check now says so instead of calling it "nothing to tidy".
+
+### Under the Hood
+
+- **Cloud sync recovery keeps every message and sends nothing twice** — when Rebel had to re-sync a conversation with the cloud after a hiccup, it could quietly leave out messages that only existed on this computer, or re-send history the cloud already had. Recovery now checks exactly which messages the cloud is missing before it decides what to send.
 
 ## v0.4.77 — Sep 19, 2026
 
