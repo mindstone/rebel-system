@@ -1,6 +1,6 @@
 ---
 description: "What Rebel can and can't do without asking you first"
-last_updated: "2026-08-31"
+last_updated: "2026-09-24"
 ---
 
 # Permissions — What Rebel Can Do
@@ -11,7 +11,7 @@ For the full version, see [Security and Tool Safety](library://rebel-system/help
 
 For the five-paragraph version of what saying yes or no actually does, see [The Approval Contract](rebel://library/rebel-system%2Fhelp-for-humans%2Fapproval-contract.md).
 
-**Also in Security and Tool Safety:** permanent blocks (**What Rebel can do → Never allowed** in Settings) and rule suggestions from chat — both go through the same notification drawer as ordinary approvals.
+**Also in Security and Tool Safety:** permanent blocks (**What Rebel can do → Never allowed** in Settings), and how to remember a tool approval with **This tool**, when offered on the approval card. Saying "always allow this" in chat can approve the current action, subject to your safety rules and other checks; it doesn't save a rule.
 
 ## The Short Version
 
