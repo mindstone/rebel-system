@@ -21,6 +21,10 @@ What's new in Rebel. We ship fast, so there's always something.
 - **Re-invite and Stop agree** — inviting the notetaker again no longer races an automatic removal. A later Stop still takes effect or tells you why it could not be confirmed.
 - **Cloud sync stops asking the same question all afternoon** — when this computer's copy of a finished conversation and the cloud's copy disagreed, Rebel rightly refused to let the cloud's version overwrite yours, then asked again every few minutes, for hours, for every conversation affected. It now asks once, keeps your copy as it is, and shows the conversation as paused in the sync indicator until you change it again or press Retry.
 
+### Under the Hood
+
+- **Cloud sync recovery keeps every message and sends nothing twice** — when Rebel had to re-sync a conversation with the cloud after a hiccup, it could quietly leave out messages that only existed on this computer, or re-send history the cloud already had. Recovery now checks exactly which messages the cloud is missing before it decides what to send.
+
 ## v0.4.77 — Sep 19, 2026
 
 ### Fixed
