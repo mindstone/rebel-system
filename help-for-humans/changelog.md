@@ -12,7 +12,7 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
-- **No more "Remember this for next time?" on repeat** — that card kept asking about the same tools, however many times you'd answered. Rebel no longer suggests safety rules from chat. To remember an approval, choose **Allow and remember** on the approval card. Saying "always allow this" in chat still allows what's in front of you, and the Settings switch for chat suggestions has left with them. Asked and answered.
+- **No more "Remember this for next time?" on repeat** — Rebel no longer suggests safety rules from chat, and the Settings switch has gone too; to remember a tool approval, choose **This tool** when offered on the approval card. Asked and answered.
 - **A steadier notetaker** — automatic meeting joins are more reliable, and Rebel no longer tells you it "couldn't join your meetings" when the real answer is that your plan doesn't include the notetaker or you're signed out. Those cases get their own, honest note instead.
 - **The "Rebel needs one detail" reminder now knows when to leave** — Once you answer, it disappears properly, including when you answer from your phone. Less haunting.
 - **Custom endpoints can read images now** — if you run a vision-capable model through your own key on a custom endpoint (Fireworks, Together, an internal gateway), Rebel used to treat it as text-only and shrug at every image you attached. The Test button in Settings → Models now also checks whether the model can see, and once it passes you get a "Vision" badge and images go through. Re-run Test on an existing profile to switch it on.
