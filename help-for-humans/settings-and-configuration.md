@@ -1,6 +1,6 @@
 ---
 description: "Guide to Rebel's Settings destinations: Agent & Voice, Connectors, Meetings, Workspace, Privacy & Safety (Safety Rules and Privacy Mode), Account & Preferences, Usage, and Advanced"
-last_updated: "2026-07-27"
+last_updated: "2026-09-24"
 ---
 
 # Settings and Configuration
@@ -138,7 +138,6 @@ Use **Settings → Privacy & Safety** for:
 
 - **Safety Rules** — natural-language rules that tell Rebel what's OK and what needs your approval
 - **What Rebel can do → Never allowed** — your permanent blocks from **Always block** approvals; enforced quietly across all conversations
-- **Rule suggestions from chat** — turn off the consent cards Rebel shows when you state a durable approval in conversation
 - **What Rebel can do → Allowed without asking** — saved permissions, including tools you've allowed to run without asking
 - **Memory Spaces** — control over when Rebel asks before saving to each space
 - **Locations** — folders outside your spaces that you've allowed Rebel to read

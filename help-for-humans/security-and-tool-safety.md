@@ -1,6 +1,6 @@
 ---
 description: "How Rebel protects you from risky actions and what requires your explicit permission"
-last_updated: "2026-09-01"
+last_updated: "2026-09-24"
 ---
 
 # Security and Tool Safety
@@ -23,7 +23,7 @@ See [Your Safety Rules](#your-own-rules-custom-safety-instructions) below for de
 
 When Rebel needs your approval to continue an action, a bar appears at the bottom of the conversation: **"Rebel paused. X action(s) need your OK"** — click **View** to open the notification drawer. Rebel can still finish independent work while that action waits.
 
-The notification drawer (the panel on the right) groups pending approvals by conversation. You can review them one at a time or use **Allow all** / **Deny all** to handle a batch. It also surfaces **rule suggestion** cards when Rebel thinks something you said in chat is worth saving as a safety rule — confirm before anything is added (same flow as [Saving rules from chat](#rule-learning) below). When the drawer is closed, a subtle notification pill appears to let you know approvals are waiting — it's unobtrusive but hard to miss, so nothing slips through the cracks.
+The notification drawer (the panel on the right) groups pending approvals by conversation. You can review them one at a time or use **Allow all** / **Deny all** to handle a batch. When the drawer is closed, a subtle notification pill appears to let you know approvals are waiting — it's unobtrusive but hard to miss, so nothing slips through the cracks.
 
 After most answers, Rebel checks whether each saved tool action is genuinely still needed. If an answer came from delegated deep work, Rebel cannot yet ask the exact worker that produced it, so the saved action stays for you instead of letting a different worker guess. Otherwise, if the action is still needed, the card stays put and waits for you. If Rebel found it no longer needs the action, the card goes away and Rebel says: **“Rebel decided not to use this. It was never run.”** You get one receipt in the conversation, even when several requests were cleared together. Prepared connector actions and files stay for your review; Rebel does not quietly bin work it already staged.
 
@@ -281,9 +281,9 @@ Pick the one that matches your comfort level. Narrower rules mean Rebel will sti
 - Any other pending approvals that the new rule covers are checked again automatically — if the rule allows them, they're resolved without you having to click through each one
 - If your rules become long or repetitive over time, Rebel can tidy them up — merging overlapping rules and removing duplicates while keeping your intent intact
 
-**Saving rules from chat:**
+**Saying it in chat:**
 
-You can also state a durable approval directly in the conversation — for example, "you can always read from my Notion personal-projects database without asking." If Rebel is confident the request is specific enough to act on as a rule, it proposes the rule as a card in the notification drawer — **Add rule** or **Skip**, plus a scope choice. Nothing is saved until you confirm. Broader or ambiguous statements still get treated as one-time permissions for the current turn, so accidental approvals don't leak into your global rules. Don't want these suggestions? Turn them off in **[Settings → Privacy & Safety](rebel://settings/safety)**.
+You can tell Rebel in the conversation that something is fine — for example, "you can always read from my Notion personal-projects database without asking." That allows the action Rebel is about to take, but it doesn't become a rule, and Rebel doesn't suggest one from what you said. To make a permission permanent, choose **Allow and remember…** the next time Rebel asks, or write the rule yourself in **[Settings → Privacy & Safety](rebel://settings/safety)**. That way every rule is one you read before it's saved.
 
 
 ## What You Can Do
