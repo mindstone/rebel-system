@@ -12,6 +12,7 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **Connectors keep the key you gave them** — Wise and several other connectors set up from chat could end up stuck on a placeholder instead of your key, and re-saving a connector with the key left blank quietly erased the saved one. Both now keep your key. Freshdesk can be set up again from Settings or chat in the desktop app, QuickBooks and Workday keep their refreshed sign-in instead of dropping back to an old one after a restart, and a connector that can't be set up from chat yet now tells you to use Settings → Connectors. The key stays where you put it.
 - **Slow is not offline** — on a slow connection (hotel wifi, a VPN to another continent), Rebel could decide you were offline, say so, and stop, while you were online the whole time. It now calls you offline only when it can prove it, waits a little longer for a slow server to answer, and tries once more before giving up on the AI service.
 - **A steadier notetaker** — automatic meeting joins are more reliable, and Rebel no longer tells you it "couldn't join your meetings" when the real answer is that your plan doesn't include the notetaker or you're signed out. Those cases get their own, honest note instead.
 - **The "Rebel needs one detail" reminder now knows when to leave** — Once you answer, it disappears properly, including when you answer from your phone. Less haunting.
