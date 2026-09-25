@@ -4,7 +4,20 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ---
 
-## v0.4.78 — Sep 23-24, 2026
+## v0.4.79 — Sep 23-24, 2026
+
+### Fixes
+
+- **Connectors keep the key you gave them** — Wise and several other connectors set up from chat could end up stuck on a placeholder instead of your key, and re-saving a connector with the key left blank quietly erased the saved one. Both now keep your key. Freshdesk can be set up again from Settings or chat in the desktop app, QuickBooks and Workday keep their refreshed sign-in instead of dropping back to an old one after a restart, and a connector that can't be set up from chat yet now tells you to use Settings → Connectors. The key stays where you put it.
+- **The rule you approve is the rule Rebel saves** — when you tell Rebel to always allow (or never allow) a kind of save, it now shows you the exact rule before you confirm, and saves that sentence, not a close cousin it wrote after you clicked. If the save would replace an existing rule, it shows that too.
+- **No more "Remember this for next time?" on repeat** — Rebel no longer suggests safety rules from chat, and the Settings switch has gone too; to remember a tool approval, choose **This tool** when offered on the approval card. Asked and answered.
+- **Instructions too long for the job? Rebel now says so** — when your Chief-of-Staff instructions grow bigger than the model running a task can read (automations on smaller models were the usual casualties), Rebel stops and tells you how far over they are, usually before it has done anything, instead of failing every run with a vague error or quietly handing the job to a pricier model. Nothing gets cut: **Tidy up with Rebel** (in the desktop app) starts a cleanup you approve change by change. And the backup model you can set for conversations that run long no longer trips over the main model's thinking settings when it takes over.
+- **Slow is not offline** — on a slow connection (hotel wifi, a VPN to another continent), Rebel could decide you were offline, say so, and stop, while you were online the whole time. It now calls you offline only when it can prove it, waits a little longer for a slow server to answer, and tries once more before giving up on the AI service.
+- **The "Rebel needs one detail" reminder now knows when to leave** — Once you answer, it disappears properly, including when you answer from your phone. Less haunting.
+- **"Check now" and "Find new actions" stop claiming things they don't know** — Check now used to announce you were all caught up the moment it started looking, and sometimes when it couldn't look at all; and with Source Capture switched off, both buttons said they were checking your sources while nothing ran. Now they say what's actually happening: still checking, still starting up, switched off (with a button to Automations to turn it back on), starting tomorrow on your first day, or — if Rebel's built-in source scanning has gone missing — that it can't be fixed from inside the app, with a button to report it. And if the tidy-up half fails, Check now says so instead of calling it "nothing to tidy".
+- **Connectors look in the right drawer on your phone** — in the web app and on your phone, connectors that keep your accounts in a file (Freshdesk, Salesforce, Zendesk and a couple of dozen others) were looking for them in a folder that only exists on your computer, and came up empty-handed. They now look where Rebel actually puts them, and Zendesk accounts make the trip at all.
+
+## v0.4.78 — Sep 23, 2026
 
 ### New
 
@@ -12,10 +25,7 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
-- **Connectors look in the right drawer on your phone** — in the web app and on your phone, connectors that keep your accounts in a file (Freshdesk, Salesforce, Zendesk and a couple of dozen others) were looking for them in a folder that only exists on your computer, and came up empty-handed. They now look where Rebel actually puts them, and Zendesk accounts make the trip at all.
-- **Slow is not offline** — on a slow connection (hotel wifi, a VPN to another continent), Rebel could decide you were offline, say so, and stop, while you were online the whole time. It now calls you offline only when it can prove it, waits a little longer for a slow server to answer, and tries once more before giving up on the AI service.
 - **A steadier notetaker** — automatic meeting joins are more reliable, and Rebel no longer tells you it "couldn't join your meetings" when the real answer is that your plan doesn't include the notetaker or you're signed out. Those cases get their own, honest note instead.
-- **The "Rebel needs one detail" reminder now knows when to leave** — Once you answer, it disappears properly, including when you answer from your phone. Less haunting.
 - **Custom endpoints can read images now** — if you run a vision-capable model through your own key on a custom endpoint (Fireworks, Together, an internal gateway), Rebel used to treat it as text-only and shrug at every image you attached. The Test button in Settings → Models now also checks whether the model can see, and once it passes you get a "Vision" badge and images go through. Re-run Test on an existing profile to switch it on.
 - **Fireworks models read images on their own** — a model your organisation set up on its Fireworks connection (Kimi K3, say) now reads the images you attach without anyone pressing Test. Rebel checks Fireworks' own model catalogue for which of its models can see, so a text-only one is still politely declined rather than crashing the conversation.
 - **Test results stick on company models** — models your organisation set up for you used to forget their Test results every time Rebel restarted (or your admin changed anything), which quietly switched thinking back off and vision back to "can't see". They now keep them until the model or its endpoint actually changes.
@@ -23,7 +33,6 @@ What's new in Rebel. We ship fast, so there's always something.
 - **Meeting joins stay on your terms** — Rebel verifies your invitation before joining automatically, while the app is open and online, through two minutes after the meeting starts. After that, you can choose to invite it; if an earlier request is still uncertain, Rebel says so instead of sending another notetaker.
 - **Re-invite and Stop agree** — inviting the notetaker again no longer races an automatic removal. A later Stop still takes effect or tells you why it could not be confirmed.
 - **Cloud sync stops asking the same question all afternoon** — when this computer's copy of a finished conversation and the cloud's copy disagreed, Rebel rightly refused to let the cloud's version overwrite yours, then asked again every few minutes, for hours, for every conversation affected. It now asks once, keeps your copy as it is, and shows the conversation as paused in the sync indicator until you change it again or press Retry.
-- **"Check now" and "Find new actions" stop claiming things they don't know** — Check now used to announce you were all caught up the moment it started looking, and sometimes when it couldn't look at all; and with Source Capture switched off, both buttons said they were checking your sources while nothing ran. Now they say what's actually happening: still checking, still starting up, switched off (with a button to Automations to turn it back on), starting tomorrow on your first day, or — if Rebel's built-in source scanning has gone missing — that it can't be fixed from inside the app, with a button to report it. And if the tidy-up half fails, Check now says so instead of calling it "nothing to tidy".
 
 ### Under the Hood
 
