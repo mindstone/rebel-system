@@ -4,10 +4,11 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ---
 
-## v0.4.79 — Sep 23-24, 2026
+## v0.4.79 — Sep 23-26, 2026
 
 ### Fixes
 
+- **Disconnect now reaches your cloud too** — disconnecting a connector on your computer used to leave it connected in your cloud, where the phone app and cloud conversations carried on using it. Now it's disconnected there as well. Disconnecting Freshdesk or Zendesk also removes the saved API key, so reconnecting asks for it again. Goodbye means goodbye.
 - **Connectors keep the key you gave them** — Wise and several other connectors set up from chat could end up stuck on a placeholder instead of your key, and re-saving a connector with the key left blank quietly erased the saved one. Both now keep your key. Freshdesk can be set up again from Settings or chat in the desktop app, QuickBooks and Workday keep their refreshed sign-in instead of dropping back to an old one after a restart, and a connector that can't be set up from chat yet now tells you to use Settings → Connectors. The key stays where you put it.
 - **Setting up from chat works again** — tell Rebel your key for Gamma, Napkin, Fathom, Humaans, PandaDoc, Mixmax, Kling, Runway, Nano Banana, TalentLMS, ServiceNow, QuickBooks, Workday or your iCloud, Yahoo or other email, and it now saves it properly instead of sending you off to Settings. For email it updates the account you named; a new account still gets added in Settings → Connectors, and so, for now, does any change when you have more than one custom email account. Fewer detours.
 - **The rule you approve is the rule Rebel saves** — when you tell Rebel to always allow (or never allow) a kind of save, it now shows you the exact rule before you confirm, and saves that sentence, not a close cousin it wrote after you clicked. If the save would replace an existing rule, it shows that too.
