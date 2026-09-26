@@ -8,7 +8,7 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
-- **Commands on your computer just run now** — asking Rebel to run something in your terminal used to mean an approval card, a safety check, or a flat refusal, often for a command you had just typed out yourself. On your computer it now runs, in chats, automations and Live alike. A few things are deliberately unchanged: in private mode, and if you've switched **Extra safety checks** on, Rebel still asks exactly as before; anything your administrator has blocked stays blocked, and so does anything you've told Rebel never to do. One honest catch: the command rules you wrote in your own words under Safety Rules are no longer applied to commands — they were only ever read by the safety check that no longer runs, so use a block if you want a command stopped. And if an approval card for a command was already waiting from before the update, it may still be sitting there; dismiss it.
+- **Commands on your computer just run now** — asking Rebel to run something in your terminal used to mean an approval card, a safety check, or a flat refusal, often for a command you had just typed out yourself. On your computer it now runs, in chats, automations and Live alike. A few things are deliberately unchanged: in private mode, and if you've switched **Extra safety checks** on, Rebel still asks exactly as before; anything your administrator has blocked stays blocked. Shell (Bash) commands currently run without safety checks, so rules written here don't apply to them. And if an approval card for a command was already waiting from before the update, it may still be sitting there; dismiss it.
 
 ## v0.4.79 — Sep 23-26, 2026
 
