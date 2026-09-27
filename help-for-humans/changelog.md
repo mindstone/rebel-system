@@ -4,6 +4,12 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ---
 
+## v0.4.80 — Sep 27, 2026
+
+### Fixes
+
+- **In Private mode, a one-time Allow runs** — Just this once or Allow on a command or file-save card now carries the action out instead of asking again.
+
 ## v0.4.79 — Sep 23-27, 2026
 
 ### Known issue
