@@ -4,7 +4,11 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ---
 
-## v0.4.79 — Sep 23-26, 2026
+## v0.4.79 — Sep 23-27, 2026
+
+### Known issue
+
+- **In Private mode, a one-time Allow doesn't run yet** — with Private mode on, choosing Just this once or Allow on a command or a file-save card doesn't carry the action out, and Rebel asks again. The next update fixes it.
 
 ### Fixes
 
