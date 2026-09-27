@@ -6,6 +6,10 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ## v0.4.80 — Sep 27, 2026
 
+### New
+
+- **Three more models to choose from** — GPT-6 Sol, GPT-6 Luna and Claude Opus 5.5 are now in the model picker. More choice, same Rebel.
+
 ### Fixes
 
 - **In Private mode, a one-time Allow runs** — Just this once or Allow on a command or file-save card now carries the action out instead of asking again.
