@@ -512,7 +512,7 @@
         <li><strong>Why it was flagged</strong> (e.g., "External communication")</li>
     </ul>
 
-    <p><strong>Your options</strong> (the choices depend on the action and why Rebel paused):</p>
+    <p><strong>Your options:</strong></p>
     <table>
         <tr>
             <th>Button</th>
@@ -520,27 +520,27 @@
             <th>When to use it</th>
         </tr>
         <tr>
-            <td><strong>Just this once</strong></td>
+            <td><strong>Allow</strong></td>
             <td>Approves this one action. Rebel will ask again next time.</td>
             <td>You reviewed it and it looks correct</td>
         </tr>
         <tr>
-            <td><strong>This conversation</strong></td>
-            <td>Lets you choose the offered tool or app permission for this conversation. Review its scope, then confirm with <strong>Allow for this conversation</strong>.</td>
+            <td><strong>Allow for this conversation</strong></td>
+            <td>Approves this type of action for the rest of the current conversation</td>
             <td>Rebel needs to use the same tool repeatedly in one session</td>
         </tr>
         <tr>
-            <td><strong>This tool</strong></td>
-            <td>Saves permission to use this tool on future tasks, after you review and confirm it. This does not add a written Safety Rule.</td>
-            <td>You want Rebel to use this tool without asking each time</td>
+            <td><strong>Allow &amp; choose rule update...</strong></td>
+            <td>Approves this action <em>and</em> lets you add a Safety Rule so similar actions are allowed automatically in the future</td>
+            <td>You want Rebel to stop asking about this kind of thing going forward</td>
         </tr>
         <tr>
-            <td><strong>Don't allow</strong></td>
+            <td><strong>Don't run</strong></td>
             <td>Declines the action. Rebel skips it and moves on.</td>
             <td>Something looks wrong or you changed your mind</td>
         </tr>
     </table>
-    <p>Some cards use <strong>Allow</strong> and <strong>Cancel this</strong> for a one-time decision. When <strong>Why is Rebel asking?</strong> appears, open it for more detail about why Rebel needs your permission. Saved permissions do not bypass other safety checks.</p>
+    <p>Each prompt also has a <strong>Why?</strong> toggle that explains in plain language why Rebel needs your permission for this particular action.</p>
 
     <h3>Memory Approval Cards</h3>
     <p>When Rebel wants to save something to memory, you'll see:</p>
@@ -550,14 +550,14 @@
         <li><strong>Preview</strong>: The actual content being written</li>
     </ul>
 
-    <p><strong>Your options</strong> (these differ a little between staged files and direct writes):</p>
+    <p><strong>Your options</strong> (wording varies slightly between staged and direct writes, but the idea is the same):</p>
     <ul>
-        <li><strong>Allow</strong> — save to the target space. When your Safety Rules paused the save, the drawer says <strong>Just this once</strong>; a staged file's preview says <strong>Allow once</strong>. If a safety check couldn't finish, the drawer says <strong>Do it once</strong> and the staged preview says <strong>Save it once</strong>.</li>
-        <li><strong>Cancel this</strong> or <strong>Deny</strong> (<strong>Don't allow</strong> when your Safety Rules paused the save) — decline. A staged file goes to your private memory instead, so nothing is lost. A direct write is discarded.</li>
-        <li><strong>Preview saved note</strong> (or the file name, for a staged file) — see the content or changes before deciding. A direct write's preview also has <strong>Discard</strong>, which declines it.</li>
-        <li><strong>Allow writes here</strong> — when offered, lets Rebel create and edit files in an eligible folder and its subfolders, for this conversation, until Rebel restarts. It does not allow deleting files. Other safety checks still apply. It isn't offered for shared spaces, or when the card flags something specific in the content.</li>
+        <li><strong>Allow once</strong> / <strong>Save</strong> — publish to the target space</li>
+        <li><strong>Deny</strong> / <strong>Keep private</strong> — redirect to your private memory (content isn't lost, just kept private)</li>
+        <li><strong>Discard</strong> — skip the write entirely</li>
+        <li><strong>Preview</strong> — view the content or diff before deciding</li>
+        <li><strong>Always allow this file</strong> — remember your decision for this specific file</li>
     </ul>
-    <p>If a note got stuck on its way to a space, a recovery card's choices can include saving it, keeping it (<strong>Keep private</strong> or <strong>Keep note</strong>), or <strong>Discard</strong>, depending on what can be recovered.</p>
 
     <!-- SETTINGS -->
     <h2 id="settings">Adjusting Your Safety Settings</h2>
