@@ -1,6 +1,6 @@
 ---
 description: "How Rebel protects you from risky actions and what requires your explicit permission"
-last_updated: "2026-09-24"
+last_updated: "2026-09-28"
 ---
 
 # Security and Tool Safety
@@ -29,7 +29,7 @@ After most answers, Rebel checks whether each saved tool action is genuinely sti
 
 ### Tool approvals
 
-When a tool action needs your OK, the approval card shows what Rebel wants to do, in plain language, with quick **Allow** and decline buttons right there. Each prompt also has a **Why?** toggle — tap it to see why Rebel is asking for this particular action. Open the request (or expand it) and you get the full set of choices:
+When a tool action needs your OK, the approval card shows what Rebel wants to do, in plain language, with quick **Allow** and decline buttons right there. Each prompt also has **Why is Rebel asking?** — tap it to see why Rebel needs your OK for this particular action. Open the request (or expand it) and you get the full set of choices:
 
 | Option | What it means |
 |--------|--------------|
@@ -42,7 +42,7 @@ When a tool action needs your OK, the approval card shows what Rebel wants to do
 
 The reason and option descriptions use plain language — no technical jargon. You'll see clear explanations of what Rebel wants to do and why it's asking.
 
-For memory writes the wording differs slightly — you can allow the save, allow it for the rest of the conversation, keep it private instead, or discard it — but the idea is the same. Memory writes that were paused by your Safety Rules can also show **Allow and remember…**.
+Memory saves have their own buttons, covered in the two memory tables below. In short: you allow the save or decline it, and some saves also offer **Allow writes here** for the rest of the conversation. A staged file that was paused by your Safety Rules can also show **Allow and remember…** in its preview.
 
 The choices depend on the action and why Rebel paused. Some requests only offer a one-time decision. Saved tool permissions do not add written Safety Rules, and other safety checks can still stop an action.
 
@@ -62,10 +62,10 @@ When Rebel stages a file for your review before saving to memory:
 
 | Option | What it means |
 |--------|--------------|
-| **Allow once** | Publish to the target space. |
-| **Deny** | Redirect to your private memory — the content isn't lost, just kept private. |
-| **Allow and remember…** | Same as above — adjust the rule that flagged it. |
-| **Preview** | View the content or diff before deciding. |
+| **Allow** | Publish to the target space. In the preview it reads **Allow once** when your Safety Rules paused the save. |
+| **Cancel this** or **Deny** | Redirect to your private memory — the content isn't lost, just kept private. When your Safety Rules paused the save, this can read **Don't allow**. |
+| **Allow and remember…** | In the preview, when your Safety Rules paused the save: publish, and adjust the rule that flagged it. |
+| The file name | Click it to preview the content or changes before deciding. |
 
 ### Memory write approvals (direct writes)
 
@@ -73,11 +73,14 @@ When Rebel asks about a direct memory write:
 
 | Option | What it means |
 |--------|--------------|
-| **Save** | Write to the target space. |
-| **Keep private** | Redirect to your private memory — nothing is lost. |
-| **Discard** | Skip the write entirely. |
-| **Preview** | View the content before deciding. |
-| **Always allow this file** | Remember to always allow this specific file in future. |
+| **Allow** | Save the note where the card says. If a safety check couldn't finish, this reads **Do it once**. |
+| **Cancel this** | Decline the save. The note is discarded, not kept privately. When your Safety Rules paused the save, this reads **Don't allow**. |
+| **Preview saved note** | See the content before deciding. The preview has its own **Allow** and **Discard** (the same as declining), plus **Cancel** to close it without deciding. |
+| **Allow writes here** | When offered, lets Rebel create and edit files in the folder shown, for this conversation, until Rebel restarts. Other safety checks still apply. |
+
+**Allow writes here** isn't offered for shared spaces, or when the card flags something specific in the content (a password, say). Those saves are still checked one at a time.
+
+If a note got stuck on its way to a space, you may see a recovery card instead. It offers to save the note (**Save**, or **Save to** the space), to keep it (**Keep private** or **Keep note**), or to **Discard** it.
 
 After you approve or decline, a compact receipt confirms your decision — so you always have a record without the prompt staying on screen.
 
@@ -220,7 +223,7 @@ Rules work best when they're specific and actionable. Think about the situations
 - **Version history** — Every edit is saved. You can revert to any previous version if a change doesn't work out.
 - **Reset to defaults** — Start fresh with Rebel's default safety rules if you've strayed too far.
 - **Chat with Rebel about your rules** — Not sure what to write? Click the chat button to discuss your safety needs with Rebel and refine your rules together.
-- **Permanent blocks** — When you choose **Always block** from an approval prompt, the block lands in **[Settings → Privacy & Safety](rebel://settings/safety#approvalAuthorityLedger) → What Rebel can do → Never allowed**. Rebel enforces it quietly across all conversations — it simply won't do that thing, without asking again. You can remove a block there any time. Each quiet block is noted under **Recent activity** in the same section.
+- **Permanent blocks** — When you choose **Block this tool** from an approval prompt, the block lands in **[Settings → Privacy & Safety](rebel://settings/safety#approvalAuthorityLedger) → What Rebel can do → Never allowed**. Rebel enforces it quietly across all conversations — it simply won't do that thing, without asking again. You can remove a block there any time. Each quiet block is noted under **Recent activity** in the same section.
 
 ### Tips
 

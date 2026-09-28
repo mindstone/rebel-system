@@ -9,6 +9,7 @@ What's new in Rebel. We ship fast, so there's always something.
 ### Fixes
 
 - **Switching cloud accounts is a clean break** — if Rebel was still syncing with your old cloud when you switched accounts, it could send items that had just arrived from your new account to the old one. Anything still on its way to the old cloud now stops the moment you switch, and nothing it sends back is kept.
+- **One fewer button that did nothing** — the memory-save preview offered "Allow for conversation", which behaved exactly like Allow, so it's gone. The help pages now describe the memory-save choices you actually see.
 
 ## v0.4.81 — Sep 28, 2026
 
