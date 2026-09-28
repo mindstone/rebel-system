@@ -12,6 +12,7 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **The update banner says what's actually happening** — it names the version you're on and the one that's available, shows the download as it goes, and offers Restart to update once it's ready. Pressing the button used to look like nothing happened; now it says it's checking, that you're up to date, or what went wrong and what to try. "See what's new" shows what an update brings before you install it. Less mystery, same restart.
 - **Rebel tidies up without announcing it** — the "Rebel tidied away N stale actions" pop-up is gone. The stale actions Rebel clears are still listed under **Handled by Rebel** in Actions, each with its reason and a **Restore** button. Housekeeping, now done quietly.
 
 ## v0.4.80 — Sep 27, 2026
