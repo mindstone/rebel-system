@@ -10,6 +10,9 @@ What's new in Rebel. We ship fast, so there's always something.
 
 - **Switching cloud accounts is a clean break** — if Rebel was still syncing with your old cloud when you switched accounts, it could send items that had just arrived from your new account to the old one. Anything still on its way to the old cloud now stops the moment you switch, and nothing it sends back is kept.
 - **One fewer button that did nothing** — the memory-save preview offered "Allow for conversation", which behaved exactly like Allow, so it's gone. The help pages now describe the memory-save choices you actually see.
+- **In Private mode, Allow on a file save now saves the file** — choosing Just this once or Allow on a file-save card saves it instead of asking again, and history records only saves that really happened.
+- **No false "couldn't save your last change" warning** — opening a private conversation after a restart, or switching to one, could flash a warning that your last change wasn't saved. Nothing was lost, and the warning is gone.
+- **Git works on Windows without installing Git for Windows** — Rebel's own git is now on its path.
 
 ## v0.4.81 — Sep 28, 2026
 
@@ -23,10 +26,6 @@ What's new in Rebel. We ship fast, so there's always something.
 - **Rebel tidies up without announcing it** — the "Rebel tidied away N stale actions" pop-up is gone. The stale actions Rebel clears are still listed under **Handled by Rebel** in Actions, each with its reason and a **Restore** button. Housekeeping, now done quietly.
 
 ## v0.4.80 — Sep 27, 2026
-
-### Known issue
-
-- **In Private mode, a one-time Allow on saving a file doesn't run yet** — Rebel asks again. The next update fixes it.
 
 ### Fixes
 
