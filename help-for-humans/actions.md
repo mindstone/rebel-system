@@ -47,7 +47,7 @@ Not everything deserves a spot in your Actions list. Rebel evaluates each item f
 
 - **Low-signal items** — Vague reminders, redundant follow-ups, or items with no clear next step
 - **Other people's tasks** — If a meeting generated an action item assigned to someone else, Rebel keeps it out of your list
-- **Stale items** — Items tied to events that have already passed are tidied away automatically (you're told each time, and they're easy to get back — see **Auto-archived** below)
+- **Stale items** — Items tied to events that have already passed are tidied away automatically (they're listed under **Handled by Rebel** and easy to get back — see **Auto-archived** below)
 
 **Duplicate detection:** Rebel catches near-identical items before they clutter your Actions list — using similarity checks to spot items that say the same thing in slightly different words. If a meeting generates two action items that are essentially the same, only one makes the cut.
 
@@ -115,7 +115,7 @@ Your Active list groups items by **Today**, **This Week**, **Future date**, and 
 
 **Changed your mind?** An **Undo** option appears briefly after scheduling, so you can reverse it before it sticks.
 
-**Auto-archived (what Rebel tidied away).** Rebel quietly clears out stale actions — meeting prep for meetings that already happened, "do this today" items from last week, and the like. So it never does this behind your back, two things are true: you get a small notice every time it happens ("Rebel tidied away 3 stale actions"), and everything it archived lives in its own **Auto-archived** view — separate from the things *you* dismissed — each with the reason it was cleared and a one-click **Restore**. Your own manually-added actions are never auto-archived. If Rebel tidied away something it shouldn't have, restore it — and stay tuned: teaching Rebel *why* is coming next.
+**Auto-archived (what Rebel tidied away).** Rebel quietly clears out stale actions — meeting prep for meetings that already happened, "do this today" items from last week, and the like. It doesn't interrupt you to say so, but nothing disappears without a trace: everything it archived lives in the **Handled by Rebel** view — separate from the things *you* dismissed — each with the reason it was cleared and a one-click **Restore**. Your own manually-added actions are never auto-archived. If Rebel tidied away something it shouldn't have, restore it — and stay tuned: teaching Rebel *why* is coming next.
 
 
 ## Today Card Actions

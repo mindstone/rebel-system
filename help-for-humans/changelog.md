@@ -10,6 +10,10 @@ What's new in Rebel. We ship fast, so there's always something.
 
 - **Three more models to choose from** — GPT-6 Sol, GPT-6 Luna and Claude Opus 5.5 are now in the model picker. More choice, same Rebel.
 
+### Fixes
+
+- **Rebel tidies up without announcing it** — the "Rebel tidied away N stale actions" pop-up is gone. The stale actions Rebel clears are still listed under **Handled by Rebel** in Actions, each with its reason and a **Restore** button. Housekeeping, now done quietly.
+
 ## v0.4.80 — Sep 27, 2026
 
 ### Known issue
