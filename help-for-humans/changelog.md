@@ -17,6 +17,7 @@ What's new in Rebel. We ship fast, so there's always something.
 - **Finding messages works more reliably** — Rebel's Inbox and Search tools accept the ways the AI naturally asks.
 - **Slack threads and date ranges work** — asking for replies in a thread, or messages since a date, now returns them.
 - **No more daily failed runs from the use-case finder** for accounts it can't help; it skips them quietly.
+- **Quieter in the background** — Rebel no longer re-checks every connector tool each time your connectors refresh.
 
 ## v0.4.82 — Sep 28, 2026
 
