@@ -18,6 +18,7 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **Rebel asks for permission far less often** — when you ask Rebel to do something, your request is the go-ahead, so it no longer stops to ask you to confirm it, except for actions with lasting consequences. A Safety Rule that forbids something still wins.
 - **Switching cloud accounts is a clean break** — if Rebel was still syncing with your old cloud when you switched accounts, it could send items that had just arrived from your new account to the old one. Anything still on its way to the old cloud now stops the moment you switch, and nothing it sends back is kept.
 - **One fewer button that did nothing** — the memory-save preview offered "Allow for conversation", which behaved exactly like Allow, so it's gone. The help pages now describe the memory-save choices you actually see.
 - **In Private mode, Allow on a file save now saves the file** — choosing Just this once or Allow on a file-save card saves it instead of asking again, and history records only saves that really happened.
