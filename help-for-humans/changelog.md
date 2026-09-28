@@ -8,7 +8,7 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Known issue
 
-- **A general “confirm before…” rule may not show a second approval card** — Rebel can treat your request itself as the confirmation and carry out the action. A rule that says to ask even when you ask still shows a card and does not run the action.
+- **A rule to check with you even when you've asked isn't honoured yet**: if a Safety Rule says to ask before something even when you've asked for it, Rebel currently takes your request as the go-ahead and does it. A coming update fixes this.
 
 ### Fixes
 
