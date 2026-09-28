@@ -29,7 +29,7 @@ After most answers, Rebel checks whether each saved tool action is genuinely sti
 
 ### Tool approvals
 
-When a tool action needs your OK, the approval card shows what Rebel wants to do, in plain language, with quick **Allow** and decline buttons right there. Each prompt also has **Why is Rebel asking?** — tap it to see why Rebel needs your OK for this particular action. Open the request (or expand it) and you get the full set of choices:
+When a tool action needs your OK, the approval card shows what Rebel wants to do, in plain language, with approval and decline buttons right there. When **Why is Rebel asking?** appears, tap it for more detail about why Rebel needs your OK. Open the request (or expand it) to see the available choices:
 
 | Option | What it means |
 |--------|--------------|
@@ -62,7 +62,7 @@ When Rebel stages a file for your review before saving to memory:
 
 | Option | What it means |
 |--------|--------------|
-| **Allow** | Publish to the target space. In the preview it reads **Allow once** when your Safety Rules paused the save. |
+| **Allow** | Publish to the target space. When your Safety Rules paused the save, the drawer says **Just this once** and the preview says **Allow once**. If a safety check couldn't finish, the drawer says **Do it once** and the preview says **Save it once**. |
 | **Cancel this** or **Deny** | Redirect to your private memory — the content isn't lost, just kept private. When your Safety Rules paused the save, this can read **Don't allow**. |
 | **Allow and remember…** | In the preview, when your Safety Rules paused the save: publish, and adjust the rule that flagged it. |
 | The file name | Click it to preview the content or changes before deciding. |
@@ -73,14 +73,14 @@ When Rebel asks about a direct memory write:
 
 | Option | What it means |
 |--------|--------------|
-| **Allow** | Save the note where the card says. If a safety check couldn't finish, this reads **Do it once**. |
+| **Allow** | Save the note where the card says. When your Safety Rules paused the save, this reads **Just this once**. If a safety check couldn't finish, it reads **Do it once**. |
 | **Cancel this** | Decline the save. The note is discarded, not kept privately. When your Safety Rules paused the save, this reads **Don't allow**. |
 | **Preview saved note** | See the content before deciding. The preview has its own **Allow** and **Discard** (the same as declining), plus **Cancel** to close it without deciding. |
-| **Allow writes here** | When offered, lets Rebel create and edit files in the folder shown, for this conversation, until Rebel restarts. Other safety checks still apply. |
+| **Allow writes here** | When offered, lets Rebel create and edit files in an eligible folder and its subfolders, for this conversation, until Rebel restarts. It does not allow deleting files. Other safety checks still apply. |
 
 **Allow writes here** isn't offered for shared spaces, or when the card flags something specific in the content (a password, say). Those saves are still checked one at a time.
 
-If a note got stuck on its way to a space, you may see a recovery card instead. It offers to save the note (**Save**, or **Save to** the space), to keep it (**Keep private** or **Keep note**), or to **Discard** it.
+If a note got stuck on its way to a space, you may see a recovery card instead. Depending on what can be recovered, its choices include saving the note (**Save**, or **Save to** the space), keeping it (**Keep private** or **Keep note**), or **Discard**.
 
 After you approve or decline, a compact receipt confirms your decision — so you always have a record without the prompt staying on screen.
 
