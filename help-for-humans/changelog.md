@@ -4,12 +4,22 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ---
 
+## v0.4.83 — Sep 28, 2026
+
+### Fixes
+
+- **The permission you gave now just works** — after you'd told Rebel to go ahead for the rest of a conversation, it could still stop and explain that "Rebel's usual second look is switched off", asking you to confirm the very thing you had just allowed. That card is gone: your permission covers the action, including the higher-risk things connectors do. The offer to allow something from now on — **This tool**, or **Everything from** a connector — also turns up on more connectors than before. Asked once, answered once.
+- **Fewer slow safety checks when the AI account behind them is unpaid or its key is rejected** — once Rebel hears the account has a billing problem or won't accept its credentials, it stops asking it again on every action while nothing has changed, so your approval cards arrive without the wait. Fix the key in Settings and Rebel tries again straight away; if your administrator sorts it out, Rebel notices on its own, and restarting Rebel gets there sooner.
+
 ## v0.4.82 — Sep 28, 2026
 
 ### Fixes
 
 - **Switching cloud accounts is a clean break** — if Rebel was still syncing with your old cloud when you switched accounts, it could send items that had just arrived from your new account to the old one. Anything still on its way to the old cloud now stops the moment you switch, and nothing it sends back is kept.
-- **Fewer slow safety checks when the AI account behind them is unpaid or its key is rejected** — once Rebel hears the account has a billing problem or won't accept its credentials, it stops asking it again on every action while nothing has changed, so your approval cards arrive without the wait. Fix the key in Settings and Rebel tries again straight away; if your administrator sorts it out, Rebel notices on its own, and restarting Rebel gets there sooner.
+- **One fewer button that did nothing** — the memory-save preview offered "Allow for conversation", which behaved exactly like Allow, so it's gone. The help pages now describe the memory-save choices you actually see.
+- **In Private mode, Allow on a file save now saves the file** — choosing Just this once or Allow on a file-save card saves it instead of asking again, and history records only saves that really happened.
+- **No false "couldn't save your last change" warning** — opening a private conversation after a restart, or switching to one, could flash a warning that your last change wasn't saved. Nothing was lost, and the warning is gone.
+- **Git works on Windows without installing Git for Windows** — Rebel's own git is now on its path.
 
 ## v0.4.81 — Sep 28, 2026
 
@@ -23,10 +33,6 @@ What's new in Rebel. We ship fast, so there's always something.
 - **Rebel tidies up without announcing it** — the "Rebel tidied away N stale actions" pop-up is gone. The stale actions Rebel clears are still listed under **Handled by Rebel** in Actions, each with its reason and a **Restore** button. Housekeeping, now done quietly.
 
 ## v0.4.80 — Sep 27, 2026
-
-### Known issue
-
-- **In Private mode, a one-time Allow on saving a file doesn't run yet** — Rebel asks again. The next update fixes it.
 
 ### Fixes
 
