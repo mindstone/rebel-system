@@ -10,6 +10,14 @@ What's new in Rebel. We ship fast, so there's always something.
 
 - **Rebel no longer quietly does things twice** — when the model came back with a blank answer partway through a task, Rebel used to start the whole request again by itself, which could send a message, save a file or update a record a second time. It now only retries on its own when nothing has been done yet; otherwise it stops, tells you some work may have happened, and leaves the retry to you.
 
+## v0.4.83 — Sep 28, 2026
+
+### Fixes
+
+- **Finding messages works more reliably** — Rebel's Inbox and Search tools accept the ways the AI naturally asks.
+- **Slack threads and date ranges work** — asking for replies in a thread, or messages since a date, now returns them.
+- **No more daily failed runs from the use-case finder** for accounts it can't help; it skips them quietly.
+
 ## v0.4.82 — Sep 28, 2026
 
 ### Known issue
