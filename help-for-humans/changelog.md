@@ -4,12 +4,6 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ---
 
-## v0.4.83 — Sep 28, 2026
-
-### Fixes
-
-- **Fewer slow safety checks when the AI account behind them is unpaid or its key is rejected** — once Rebel hears the account has a billing problem or won't accept its credentials, it stops asking it again on every action while nothing has changed, so your approval cards arrive without the wait. Fix the key in Settings and Rebel tries again straight away; if your administrator sorts it out, Rebel notices on its own, and restarting Rebel gets there sooner.
-
 ## v0.4.82 — Sep 28, 2026
 
 ### Known issue
