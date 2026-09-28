@@ -8,7 +8,7 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Known issue
 
-- **A rule to check with you even when you've asked isn't honoured yet**: if a Safety Rule says to ask before something even when you've asked for it, Rebel currently takes your request as the go-ahead and does it. A coming update fixes this.
+- **Two kinds of Safety Rule aren't honoured yet**: a rule telling Rebel to ask you before it reads or looks things up, and a rule telling it to ask even when you've asked for the action yourself. In both cases Rebel currently goes ahead. A coming update fixes this.
 
 ### Fixes
 
@@ -20,6 +20,7 @@ What's new in Rebel. We ship fast, so there's always something.
 - **The permission you gave now just works** — after you'd told Rebel to go ahead for the rest of a conversation, it could still stop and explain that "Rebel's usual second look is switched off", asking you to confirm the very thing you had just allowed. That card is gone: your permission covers the action, including the higher-risk things connectors do. The offer to allow something from now on — **This tool**, or **Everything from** a connector — also turns up on more connectors than before. Asked once, answered once.
 - **Tools from connectors you add yourself no longer ask every time.**
 - **Cancel on a file-save card no longer saves the file.**
+- **Fewer slow safety checks when the AI account behind them is unpaid or its key is rejected** — once Rebel hears the account has a billing problem or won't accept its credentials, it stops asking it again on every action while nothing has changed, so your approval cards arrive without the wait. Fix the key in Settings and Rebel tries again straight away; if your administrator sorts it out, Rebel notices on its own, and restarting Rebel gets there sooner.
 
 ## v0.4.81 — Sep 28, 2026
 
