@@ -10,6 +10,26 @@ What's new in Rebel. We ship fast, so there's always something.
 
 - **Rebel no longer quietly does things twice** — when the model came back with a blank answer partway through a task, Rebel used to start the whole request again by itself, which could send a message, save a file or update a record a second time. It now only retries on its own when nothing has been done yet; otherwise it stops, tells you some work may have happened, and leaves the retry to you.
 
+## v0.4.85 — Sep 29, 2026
+
+### Highlights
+
+- **Your Allow and Block choices stick for the whole conversation** — even after Rebel restarts, it won't ask you again about a tool you've already answered for this conversation. Once you allow a tool, Rebel doesn't re-check your Safety Rules for it in that conversation; a Safety Rule that forbids something still wins over a request.
+  <!-- detail: Decisions you make for a conversation are now saved, so a restart no longer brings back cards you already answered. If a connector is pointed at a different account or address, Rebel asks again. -->
+- **Fewer approval cards for low-risk tools** — tools Rebel rates as low risk, and tools it hasn't been able to rate, no longer stop to ask in chats or automations. Riskier tools still check your Safety Rules, and anything you've blocked stays blocked.
+
+### Improvements
+
+- **Automations tell you what ran without a full check** — if your Safety Rules couldn't be checked in time, the run shows those actions so you can allow them for that automation, always allow them, block them, or dismiss them.
+- **The same four answers on every approval card** — desktop, web and mobile now offer the same choices.
+- **Reading a file you asked for outside your Spaces just works** — Rebel reads a path you named without asking, and other location cards offer "Always for this folder" (never for folders holding passwords or keys, or ones a Safety Rule mentions).
+- **Scheduled automations don't stall on a step nobody can approve** — when a step needs a closer look, Rebel checks your Safety Rules instead of waiting for you.
+
+### Fixes
+
+- **Saving your Safety Rules no longer runs actions that were waiting for you** — they keep waiting until you approve them.
+- **Connectors work straight away on a new setup** — they no longer show "refreshing this connection" cards during your first session.
+
 ## v0.4.84 — Sep 29, 2026
 
 ### Fixes
