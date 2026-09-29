@@ -27,6 +27,12 @@ _Nothing yet._
 - **Private mode on Mac now asks before a command writes outside your Library** — a `mkdir`, `touch` or any other write-shaped command naming a path outside your Library shows a card before anything runs, as it already did on Windows. Normal mode is unchanged, and read-only commands stay card-free.
 - **Work Rebel does in the background follows your automation rules** — discovery, meeting notes and other work Rebel starts on its own now goes through the same permissions as your automations, instead of parking approval cards you never asked for.
 - **Rebel no longer quietly does things twice** — when the model came back with a blank answer partway through a task, Rebel used to start the whole request again by itself, which could send a message, save a file or update a record a second time. It now only retries on its own when nothing has been done yet; otherwise it stops, tells you some work may have happened, and leaves the retry to you.
+- **Automations get the full set of choices** — an automation's action list offers Just this once, Always allow for this automation, Always allow and Block, including for Rebel's built-in tools, on desktop and in the web companion. A file-access ask from background work now offers Just this once too.
+- **"Always allow" works for a Bash command on Mac and Linux** — a chat card for a terminal command now offers to remember that exact command, as it already did on Windows.
+- **The notetaker card offers "This conversation"** and its buttons work while Rebel is still starting up.
+- **Google Workspace finds an email thread from a search result** — asking for a thread by a message's id now returns the thread instead of "not found".
+- **Adding to your Rebel inbox is more forgiving** — items and completion details sent in a slightly different shape are accepted, and a rejected add explains what was wrong without echoing your content.
+- **A refused message no longer blocks the next one** — if Rebel turns a message away, the conversation is free for your next message straight away.
 
 ### If you roll back to 0.4.85
 
@@ -35,8 +41,9 @@ _Nothing yet._
 ### Known issues
 
 - The safety check's operational fallback can still answer on another model in one narrow path (the "behind the scenes" planner). Fix in progress.
-- On the phone, a card for a built-in tool doesn't offer Block yet; use the desktop card. In an automation's surfaced-action list, "Just this once" isn't offered and a remembered answer for a built-in row isn't saved yet.
-- File-access asks raised by background work (no open conversation) don't offer a per-conversation Allow.
+- If a safety check's reply can't be read, Rebel may re-ask it on a different model.
+- A few Always grants saved before 0.4.82 that couldn't be matched to a connector are still checked against your Safety Rules; re-grant with This tool.
+- File-access asks raised by background work (no open conversation) don't offer "This conversation"; use Just this once or Always.
 
 ## v0.4.85 — Sep 29, 2026
 
