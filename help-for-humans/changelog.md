@@ -43,7 +43,7 @@ _Nothing yet._
 - The safety check's operational fallback can still answer on another model in one narrow path (the "behind the scenes" planner). Fix in progress.
 - If a safety check's reply can't be read, Rebel may re-ask it on a different model.
 - A few Always grants saved before 0.4.82 that couldn't be matched to a connector are still checked against your Safety Rules; re-grant with This tool.
-- File-access asks raised by background work (no open conversation) don't offer "This conversation"; use Always for this folder.
+- File-access asks raised by automations: "Allow for this conversation" and "Just this once" don't carry over to the next run, so it asks again; use Always for this folder.
 
 ## v0.4.85 — Sep 29, 2026
 
