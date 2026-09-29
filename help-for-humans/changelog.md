@@ -13,6 +13,12 @@ _Nothing yet._
 ### Fixes
 
 - **Actions waiting for you no longer show as blocked** after you save your Safety Rules or Rebel reconnects.
+- **Every approval card now offers the same four choices** — Just this once, Allow for this conversation, Always allow, and Don't allow, with Block beside them wherever there's something to block. That includes Rebel's built-in tools (files, browsing, the terminal's exact command) and the meeting-scheduling card. The old "this card can't offer that" exceptions are gone; if a choice is on the card, Rebel can keep it.
+- **The preview dialog and the card agree** — the dialog that shows what an action will do now offers exactly the choices the card offers (including Block and the automation permission), and the one-time label reads "Just this once" everywhere.
+- **The same four choices on your phone, in the web companion, and in an automation's action list** — the mobile sheet, the cloud client, the web companion, the file-access card and the surfaced-action lists all render the shared set. Settings → Locations lists file-access Blocks under "Blocked locations" with an Unblock.
+- **The safety check never switches to another model** — when the model you chose is unavailable or rate-limited, the safety check waits or fails on that model instead of quietly answering on a different one.
+- **A connection you've just added no longer dead-ends on its first approval** — approve an action on a brand-new connection while Rebel is still finding out what it can do, and the action used to fail with nothing to do next. Rebel now asks once more, this time showing the connection's real details, and carries the action out when you approve. One extra click, instead of a dead end.
+- **If a connection changes what an action does, Rebel asks again instead of refusing** — when a connection updates and an action you'd approved now does something different, Rebel used to refuse it and leave you there. It now shows one fresh approval card for what the action does now. Nothing runs on a description you never read.
 - **Saving your Safety Rules now re-judges what's waiting** — an action parked on a card is looked at again when you save your rules, and again when Rebel's safety check comes back from an outage. If the new rules allow it, it runs once with no card; if they block it, it stays blocked; if they can't decide, the card stays. Same for actions Rebel had staged.
 - **The safety check no longer trips over some Codex replies** — a rare shape of reply from Codex made the check fail with an internal error instead of a verdict, and the action stalled. Rebel now reads the reply properly. Nothing switches to another model.
 - **An automation that resumes after a restart keeps its rules** — a run that Rebel was killed partway through resumes as the same automation on relaunch, runs only the steps it hadn't done, and keeps the permissions you gave it. An approval you granted while Rebel was still reconnecting isn't burnt: the card waits, then the action runs once.
@@ -21,6 +27,16 @@ _Nothing yet._
 - **Private mode on Mac now asks before a command writes outside your Library** — a `mkdir`, `touch` or any other write-shaped command naming a path outside your Library shows a card before anything runs, as it already did on Windows. Normal mode is unchanged, and read-only commands stay card-free.
 - **Work Rebel does in the background follows your automation rules** — discovery, meeting notes and other work Rebel starts on its own now goes through the same permissions as your automations, instead of parking approval cards you never asked for.
 - **Rebel no longer quietly does things twice** — when the model came back with a blank answer partway through a task, Rebel used to start the whole request again by itself, which could send a message, save a file or update a record a second time. It now only retries on its own when nothing has been done yet; otherwise it stops, tells you some work may have happened, and leaves the retry to you.
+
+### If you roll back to 0.4.85
+
+- An "Always allow" you saved for one of Rebel's built-in tools on 0.4.86 stops applying on 0.4.85 (Rebel asks again), and a Block you set on a built-in tool on 0.4.86 is not enforced there. Your connector permissions are unaffected.
+
+### Known issues
+
+- The safety check's operational fallback can still answer on another model in one narrow path (the "behind the scenes" planner). Fix in progress.
+- On the phone, a card for a built-in tool doesn't offer Block yet; use the desktop card. In an automation's surfaced-action list, "Just this once" isn't offered and a remembered answer for a built-in row isn't saved yet.
+- File-access asks raised by background work (no open conversation) don't offer a per-conversation Allow.
 
 ## v0.4.85 — Sep 29, 2026
 
