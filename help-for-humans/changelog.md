@@ -10,6 +10,12 @@ What's new in Rebel. We ship fast, so there's always something.
 
 - **Rebel no longer quietly does things twice** — when the model came back with a blank answer partway through a task, Rebel used to start the whole request again by itself, which could send a message, save a file or update a record a second time. It now only retries on its own when nothing has been done yet; otherwise it stops, tells you some work may have happened, and leaves the retry to you.
 
+## v0.4.86 — Sep 29, 2026
+
+### Fixes
+
+- **Actions waiting for you no longer show as blocked** after you save your Safety Rules or Rebel reconnects.
+
 ## v0.4.85 — Sep 29, 2026
 
 ### Highlights
