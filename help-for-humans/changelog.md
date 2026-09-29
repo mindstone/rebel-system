@@ -30,8 +30,6 @@ _Nothing yet._
 - **Automations get the full set of choices** — an automation's action list offers Just this once, Always allow for this automation, Always allow and Block, including for Rebel's built-in tools, on desktop and in the web companion. A file-access ask from background work now offers Just this once too.
 - **"Always allow" works for a Bash command on Mac and Linux** — a chat card for a terminal command now offers to remember that exact command, as it already did on Windows.
 - **The notetaker card offers "This conversation"** and its buttons work while Rebel is still starting up.
-- **Google Workspace finds an email thread from a search result** — asking for a thread by a message's id now returns the thread instead of "not found".
-- **Adding to your Rebel inbox is more forgiving** — items and completion details sent in a slightly different shape are accepted, and a rejected add explains what was wrong without echoing your content.
 - **A refused message no longer blocks the next one** — if Rebel turns a message away, the conversation is free for your next message straight away.
 
 ### If you roll back to 0.4.85
