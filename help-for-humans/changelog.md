@@ -10,14 +10,19 @@ What's new in Rebel. We ship fast, so there's always something.
 
 - **Rebel no longer quietly does things twice** — when the model came back with a blank answer partway through a task, Rebel used to start the whole request again by itself, which could send a message, save a file or update a record a second time. It now only retries on its own when nothing has been done yet; otherwise it stops, tells you some work may have happened, and leaves the retry to you.
 
-## v0.4.83 — Sep 28, 2026
+## v0.4.84 — Sep 29, 2026
 
 ### Fixes
 
+- **Automations check before the drastic bits** — if a scheduled run decides the way to its goal is deleting a whole folder, or running a script you never mentioned, it now waits for your go-ahead. Anything you asked for by name still just runs.
+- **Long requests keep their go-ahead** — when you wrote a lot and put the actual ask at the end, Rebel could miss it and ask you to confirm anyway. It now reads to the end.
+- **Private mode asks instead of guessing** — a command that changes your files always shows its card first, and one that only lists or counts files now runs instead of being quietly refused.
+- **Quieter in the background** — Rebel no longer re-checks every connector tool each time your connectors refresh.
+- **Rebel in the cloud follows the desktop's rules for commands** — it no longer asks you to approve commands the desktop app runs without a card.
+- **No more half-hour stalls** — after a brief connection hiccup, a conversation could sit frozen for up to 30 minutes. It now picks itself back up.
 - **Finding messages works more reliably** — Rebel's Inbox and Search tools accept the ways the AI naturally asks.
 - **Slack threads and date ranges work** — asking for replies in a thread, or messages since a date, now returns them.
 - **No more daily failed runs from the use-case finder** for accounts it can't help; it skips them quietly.
-- **Quieter in the background** — Rebel no longer re-checks every connector tool each time your connectors refresh.
 
 ## v0.4.82 — Sep 28, 2026
 
@@ -27,7 +32,7 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
-- **Rebel asks for permission far less often** — when you ask Rebel to do something, your request is the go-ahead, so it no longer stops to ask you to confirm it, except for actions with lasting consequences. A Safety Rule that forbids something still wins.
+- **Rebel asks for permission far less often** — when you ask Rebel to do something, your request is the go-ahead, so it no longer stops to ask you to confirm it, except for actions with lasting consequences. A Safety Rule that forbids something still wins over a request.
 - **Switching cloud accounts is a clean break** — if Rebel was still syncing with your old cloud when you switched accounts, it could send items that had just arrived from your new account to the old one. Anything still on its way to the old cloud now stops the moment you switch, and nothing it sends back is kept.
 - **One fewer button that did nothing** — the memory-save preview offered "Allow for conversation", which behaved exactly like Allow, so it's gone. The help pages now describe the memory-save choices you actually see.
 - **In Private mode, Allow on a file save now saves the file** — choosing Just this once or Allow on a file-save card saves it instead of asking again, and history records only saves that really happened.
