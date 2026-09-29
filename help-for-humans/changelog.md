@@ -6,15 +6,21 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ## Unreleased
 
-### Fixes
-
-- **Rebel no longer quietly does things twice** — when the model came back with a blank answer partway through a task, Rebel used to start the whole request again by itself, which could send a message, save a file or update a record a second time. It now only retries on its own when nothing has been done yet; otherwise it stops, tells you some work may have happened, and leaves the retry to you.
+_Nothing yet._
 
 ## v0.4.86 — Sep 29, 2026
 
 ### Fixes
 
 - **Actions waiting for you no longer show as blocked** after you save your Safety Rules or Rebel reconnects.
+- **Saving your Safety Rules now re-judges what's waiting** — an action parked on a card is looked at again when you save your rules, and again when Rebel's safety check comes back from an outage. If the new rules allow it, it runs once with no card; if they block it, it stays blocked; if they can't decide, the card stays. Same for actions Rebel had staged.
+- **The safety check no longer trips over some Codex replies** — a rare shape of reply from Codex made the check fail with an internal error instead of a verdict, and the action stalled. Rebel now reads the reply properly. Nothing switches to another model.
+- **An automation that resumes after a restart keeps its rules** — a run that Rebel was killed partway through resumes as the same automation on relaunch, runs only the steps it hadn't done, and keeps the permissions you gave it. An approval you granted while Rebel was still reconnecting isn't burnt: the card waits, then the action runs once.
+- **Approving a save outside your Spaces now actually saves the file** — a "Just this once" for a file save to a folder outside your Spaces used to be accepted and then quietly write nothing. Rebel now writes the file, once. If it retries with something different, you get a fresh card.
+- **Read-only `find -exec` inspection runs again on Mac** — commands like `find … -exec grep -l` that only look at files were being refused outright. They run now. `find -delete` and other forms that change files still ask you first.
+- **Private mode on Mac now asks before a command writes outside your Library** — a `mkdir`, `touch` or any other write-shaped command naming a path outside your Library shows a card before anything runs, as it already did on Windows. Normal mode is unchanged, and read-only commands stay card-free.
+- **Work Rebel does in the background follows your automation rules** — discovery, meeting notes and other work Rebel starts on its own now goes through the same permissions as your automations, instead of parking approval cards you never asked for.
+- **Rebel no longer quietly does things twice** — when the model came back with a blank answer partway through a task, Rebel used to start the whole request again by itself, which could send a message, save a file or update a record a second time. It now only retries on its own when nothing has been done yet; otherwise it stops, tells you some work may have happened, and leaves the retry to you.
 
 ## v0.4.85 — Sep 29, 2026
 
