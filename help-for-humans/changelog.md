@@ -20,7 +20,6 @@ _Nothing yet._
 
 ### Fixes
 
-- **Fresh automation file asks remember “Just this once” for the next run** — your approval covers one matching file action in the same automation, once. Older cards keep their existing behavior; use Always for this folder when you want lasting access. Background file cards no longer offer This conversation.
 - **The notetaker asks before it joins** — meeting requests sent through connector aliases now show the same approval card and run only with approval for that exact request.
 - **Safety checks stay on the chosen model** — an incomplete reply no longer sends the check to another model. Automations show middle-band actions that ran when the check could not answer; higher-risk actions keep waiting.
 
