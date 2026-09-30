@@ -8,6 +8,22 @@ What's new in Rebel. We ship fast, so there's always something.
 
 _Nothing yet._
 
+## v0.4.87 — Sep 30, 2026
+
+### Highlights
+
+- **A clearer safety check for each risk band** — low-risk actions run without extra approval cards. When a check cannot answer, middle-band automation actions can run and appear in the run's action list; highest-band actions wait. Tools you have blocked and tools disabled by your administrator stay blocked.
+
+### Improvements
+
+- **Salesforce understands more natural requests** — common argument names and a semicolon at the end of a query now work without having to rewrite the request.
+
+### Fixes
+
+- **Fresh automation file asks remember “Just this once” for the next run** — your approval covers one matching file action in the same automation, once. Older cards keep their existing behavior; use Always for this folder when you want lasting access. Background file cards no longer offer This conversation.
+- **The notetaker asks before it joins** — meeting requests sent through connector aliases now show the same approval card and run only with approval for that exact request.
+- **Safety checks stay on the chosen model** — an incomplete reply no longer sends the check to another model. Automations show middle-band actions that ran when the check could not answer; higher-risk actions keep waiting.
+
 ## v0.4.86 — Sep 29, 2026
 
 ### Fixes
@@ -30,6 +46,8 @@ _Nothing yet._
 - **Automations get the full set of choices** — an automation's action list offers Just this once, Always allow for this automation, Always allow and Block, including for Rebel's built-in tools, on desktop and in the web companion. A file-access ask from background work now offers Just this once too.
 - **"Always allow" works for a Bash command on Mac and Linux** — a chat card for a terminal command now offers to remember that exact command, as it already did on Windows.
 - **The notetaker card offers "This conversation"** and its buttons work while Rebel is still starting up.
+- **Google Workspace finds an email thread from a search result** — asking for a thread by a message's id now returns the thread instead of "not found".
+- **Adding to your Rebel inbox is more forgiving** — items and completion details sent in a slightly different shape are accepted, and a rejected add explains what was wrong without echoing your content.
 - **A refused message no longer blocks the next one** — if Rebel turns a message away, the conversation is free for your next message straight away.
 
 ### If you roll back to 0.4.85
