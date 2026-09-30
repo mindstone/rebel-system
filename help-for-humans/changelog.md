@@ -6,7 +6,20 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ## Unreleased
 
-_Nothing yet._
+### Highlights
+
+<!-- feature: sonnet-5-5 | detail: Sonnet 5.5's thinking can't be turned off, so its lowest setting still does some thinking and can take more time and tokens than Sonnet 5 with thinking off. Nothing moves you to it: your current model stays exactly as it is. -->
+- **Claude Sonnet 5.5 is in the model picker** — Anthropic's newest Sonnet, at the same price as Sonnet 5. It always does some thinking before it answers and can't be switched fully off, so even the lowest thinking setting spends a little; nothing changes unless you pick it, and if you're on Sonnet 5, you stay on it.
+
+### Improvements
+
+- **The newest models tell you what they're up to** — when Rebel connects to Anthropic directly, the desktop app's progress card now shows the model's own short notes on what it's doing, for Sonnet 5.5, Opus 5.5 and Fable 5 and 5.1. The notes clear when the answer starts. Through OpenRouter, you get Rebel's usual running commentary instead.
+
+### Fixes
+
+- **Sonnet 5 costs now use Anthropic's listed price** — Rebel was still using an older, higher price, so Sonnet 5 cost estimates, including the past Sonnet 5 costs Rebel shows you, now read a third lower. The numbers, corrected.
+- **No more false "premium model" card** — when Rebel switched you to Sonnet 5.5 or Opus 5.5, it asked for your approval and called them premium models that cost more. Neither costs more than the Balanced tier, so it no longer asks; it still asks before moving you to Fable 5 or 5.1, which do.
+- **Titles and memories work on the newest models** — with Fable 5 or 5.1, Opus 5.5 or Sonnet 5.5, Rebel sometimes missed the model's answer, leaving conversation titles blank and quietly skipping memory updates and summaries. It now finds the answer properly.
 
 ## v0.4.87 — Sep 30, 2026
 
