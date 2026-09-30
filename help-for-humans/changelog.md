@@ -6,15 +6,60 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ## Unreleased
 
+_Nothing yet._
+
+## v0.4.87 — Sep 30, 2026
+
+### Highlights
+
+- **A clearer safety check for each risk band** — low-risk actions run without extra approval cards. When a check cannot answer, middle-band automation actions can run and appear in the run's action list; highest-band actions wait. Tools you have blocked and tools disabled by your administrator stay blocked.
+
+### Improvements
+
+- **Salesforce understands more natural requests** — common argument names and a semicolon at the end of a query now work without having to rewrite the request.
+
 ### Fixes
 
-- **Rebel no longer quietly does things twice** — when the model came back with a blank answer partway through a task, Rebel used to start the whole request again by itself, which could send a message, save a file or update a record a second time. It now only retries on its own when nothing has been done yet; otherwise it stops, tells you some work may have happened, and leaves the retry to you.
+- **Fresh automation file asks remember “Just this once” for the next run** — your approval covers one matching file action in the same automation, once. Older cards keep their existing behavior; use Always for this folder when you want lasting access. Background file cards no longer offer This conversation.
+- **The notetaker asks before it joins** — meeting requests sent through connector aliases now show the same approval card and run only with approval for that exact request.
+- **Safety checks stay on the chosen model** — an incomplete reply no longer sends the check to another model. Automations show middle-band actions that ran when the check could not answer; higher-risk actions keep waiting.
 
 ## v0.4.86 — Sep 29, 2026
 
 ### Fixes
 
 - **Actions waiting for you no longer show as blocked** after you save your Safety Rules or Rebel reconnects.
+- **Every approval card now offers the same four choices** — Just this once, Allow for this conversation, Always allow, and Don't allow, with Block beside them wherever there's something to block. That includes Rebel's built-in tools (files, browsing, the terminal's exact command) and the meeting-scheduling card. The old "this card can't offer that" exceptions are gone; if a choice is on the card, Rebel can keep it.
+- **The preview dialog and the card agree** — the dialog that shows what an action will do now offers exactly the choices the card offers (including Block and the automation permission), and the one-time label reads "Just this once" everywhere.
+- **The same four choices on your phone, in the web companion, and in an automation's action list** — the mobile sheet, the cloud client, the web companion, the file-access card and the surfaced-action lists all render the shared set. Settings → Locations lists file-access Blocks under "Blocked locations" with an Unblock.
+- **The safety check never switches to another model** — when the model you chose is unavailable or rate-limited, the safety check waits or fails on that model instead of quietly answering on a different one.
+- **A connection you've just added no longer dead-ends on its first approval** — approve an action on a brand-new connection while Rebel is still finding out what it can do, and the action used to fail with nothing to do next. Rebel now asks once more, this time showing the connection's real details, and carries the action out when you approve. One extra click, instead of a dead end.
+- **If a connection changes what an action does, Rebel asks again instead of refusing** — when a connection updates and an action you'd approved now does something different, Rebel used to refuse it and leave you there. It now shows one fresh approval card for what the action does now. Nothing runs on a description you never read.
+- **Saving your Safety Rules now re-judges what's waiting** — an action parked on a card is looked at again when you save your rules, and again when Rebel's safety check comes back from an outage. If the new rules allow it, it runs once with no card; if they block it, it stays blocked; if they can't decide, the card stays. Same for actions Rebel had staged.
+- **The safety check no longer trips over some Codex replies** — a rare shape of reply from Codex made the check fail with an internal error instead of a verdict, and the action stalled. Rebel now reads the reply properly. Nothing switches to another model.
+- **An automation that resumes after a restart keeps its rules** — a run that Rebel was killed partway through resumes as the same automation on relaunch, runs only the steps it hadn't done, and keeps the permissions you gave it. An approval you granted while Rebel was still reconnecting isn't burnt: the card waits, then the action runs once.
+- **Approving a save outside your Spaces now actually saves the file** — a "Just this once" for a file save to a folder outside your Spaces used to be accepted and then quietly write nothing. Rebel now writes the file, once. If it retries with something different, you get a fresh card.
+- **Read-only `find -exec` inspection runs again on Mac** — commands like `find … -exec grep -l` that only look at files were being refused outright. They run now. `find -delete` and other forms that change files still ask you first.
+- **Private mode on Mac now asks before a command writes outside your Library** — a `mkdir`, `touch` or any other write-shaped command naming a path outside your Library shows a card before anything runs, as it already did on Windows. Normal mode is unchanged, and read-only commands stay card-free.
+- **Work Rebel does in the background follows your automation rules** — discovery, meeting notes and other work Rebel starts on its own now goes through the same permissions as your automations, instead of parking approval cards you never asked for.
+- **Rebel no longer quietly does things twice** — when the model came back with a blank answer partway through a task, Rebel used to start the whole request again by itself, which could send a message, save a file or update a record a second time. It now only retries on its own when nothing has been done yet; otherwise it stops, tells you some work may have happened, and leaves the retry to you.
+- **Automations get the full set of choices** — an automation's action list offers Just this once, Always allow for this automation, Always allow and Block, including for Rebel's built-in tools, on desktop and in the web companion. A file-access ask from background work now offers Just this once too.
+- **"Always allow" works for a Bash command on Mac and Linux** — a chat card for a terminal command now offers to remember that exact command, as it already did on Windows.
+- **The notetaker card offers "This conversation"** and its buttons work while Rebel is still starting up.
+- **Google Workspace finds an email thread from a search result** — asking for a thread by a message's id now returns the thread instead of "not found".
+- **Adding to your Rebel inbox is more forgiving** — items and completion details sent in a slightly different shape are accepted, and a rejected add explains what was wrong without echoing your content.
+- **A refused message no longer blocks the next one** — if Rebel turns a message away, the conversation is free for your next message straight away.
+
+### If you roll back to 0.4.85
+
+- An "Always allow" you saved for one of Rebel's built-in tools on 0.4.86 stops applying on 0.4.85 (Rebel asks again), and a Block you set on a built-in tool on 0.4.86 is not enforced there. Your connector permissions are unaffected.
+
+### Known issues
+
+- The safety check's operational fallback can still answer on another model in one narrow path (the "behind the scenes" planner). Fix in progress.
+- If a safety check's reply can't be read, Rebel may re-ask it on a different model.
+- A few Always grants saved before 0.4.82 that couldn't be matched to a connector are still checked against your Safety Rules; re-grant with This tool.
+- File-access asks raised by automations: "Allow for this conversation" and "Just this once" don't carry over to the next run, so it asks again; use Always for this folder.
 
 ## v0.4.85 — Sep 29, 2026
 
