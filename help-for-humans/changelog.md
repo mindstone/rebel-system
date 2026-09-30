@@ -8,6 +8,22 @@ What's new in Rebel. We ship fast, so there's always something.
 
 _Nothing yet._
 
+## v0.4.87 — Sep 30, 2026
+
+### Highlights
+
+- **A clearer safety check for each risk band** — low-risk actions run without extra approval cards. When a check cannot answer, middle-band automation actions can run and appear in the run's action list; highest-band actions wait. Tools you have blocked and tools disabled by your administrator stay blocked.
+
+### Improvements
+
+- **Salesforce understands more natural requests** — common argument names and a semicolon at the end of a query now work without having to rewrite the request.
+
+### Fixes
+
+- **Fresh automation file asks remember “Just this once” for the next run** — your approval covers one matching file action in the same automation, once. Older cards keep their existing behavior; use Always for this folder when you want lasting access. Background file cards no longer offer This conversation.
+- **The notetaker asks before it joins** — meeting requests sent through connector aliases now show the same approval card and run only with approval for that exact request.
+- **Safety checks stay on the chosen model** — an incomplete reply no longer sends the check to another model. Automations show middle-band actions that ran when the check could not answer; higher-risk actions keep waiting.
+
 ## v0.4.86 — Sep 29, 2026
 
 ### Fixes
