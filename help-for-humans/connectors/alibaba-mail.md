@@ -9,7 +9,7 @@ Read, search, send, and manage your Alibaba Mail from Rebel. The servers are alr
 
 ## What You Can Do
 
-- **Search** emails by sender, subject, or unread status across any mailbox
+- **Find** messages across any mailbox, including what's unread (searching by sender or subject isn't supported yet — see [Troubleshooting](#troubleshooting))
 - **Read** full email content including headers, body text, and attachment info
 - **Send** emails and replies as yourself, with CC and BCC support
 - **Draft** emails and save them to your Drafts folder for later
@@ -26,10 +26,10 @@ There are two Alibaba Mail tiles in [Settings → Connectors](rebel://settings/t
 
 | Tile | Use it for | Servers |
 |------|-----------|---------|
-| **Alibaba Mail (business)** | Alibaba Mail business accounts at qiye.aliyun.com, including accounts on your own company domain (e.g. name@yourcompany.com) | imap.qiye.aliyun.com, smtp.qiye.aliyun.com |
+| **Alibaba Mail (business)** | Alibaba Mail business accounts at qiye.aliyun.com, including accounts on your own company domain (e.g. name@yourcompany.com) | Filled in from the region you pick (imap.qiye.aliyun.com, smtp.qiye.aliyun.com for China mainland) |
 | **Alibaba Mail (personal)** | Free @aliyun.com accounts | imap.aliyun.com, smtp.aliyun.com |
 
-If your company uses Alibaba Mail on a site outside mainland China — Hong Kong, Singapore, Germany, or the US — see [Troubleshooting](#troubleshooting) below.
+Alibaba Mail for business runs in several parts of the world, so the business tile asks which region your account lives in — China mainland, Singapore, Hong Kong, Germany, or the US — and fills in that region's servers for you. China mainland if you're not sure.
 
 
 ## Setup
@@ -42,7 +42,7 @@ Your administrator has to allow IMAP before this will work. If you're not the ad
 2. Sign in to your Alibaba Mail webmail and go to **Settings → View More Settings → Account and Security → Account Security**
 3. Turn on **Third-Party Client Security Password** and generate one. Copy it. ([Alibaba's guide](https://www.alibabacloud.com/help/en/alibaba-mail/latest/the-third-party-client-password))
 4. In Rebel, open [Settings → Connectors](rebel://settings/tools), find **Alibaba Mail (business)**, and click **Set up with Rebel**
-5. Enter your email address and paste the security password
+5. Pick your region, enter your email address, and paste the security password
 
 > **Once the security password is on, it's the only password email apps can use.** Your webmail password will stop working in Rebel and in every other email app. You can still use your webmail password to sign in to webmail itself.
 
@@ -60,12 +60,13 @@ Your administrator has to allow IMAP before this will work. If you're not the ad
 |---------|----------|
 | Can't connect — business account | Your administrator probably hasn't allowed IMAP yet. Ask them to check **Organization and Users → Employee Accounts → Feature Permissions → IMAP Service**, then **Security Management → Account Security → Access Policies** |
 | Can't connect — "authentication failed" | If you've turned on the third-party client security password, your webmail password no longer works here. Use the generated security password instead |
-| Can't connect — regional site | Hong Kong, Singapore, Germany, and US Alibaba Mail sites use different server addresses (for example `imaphk.qiye.aliyun.com` or `imap.sg.aliyun.com`), and these tiles don't have them pre-filled. Use the **Custom Email (IMAP/SMTP)** tile with your site's addresses instead — Alibaba lists them [here](https://www.alibabacloud.com/help/en/alibaba-mail/latest/alibaba-mail-imap-pop-smtp-address-and-port-information) |
+| Can't connect — wrong region | Check that the region on the business tile matches where your account lives. Change it in [Settings → Connectors](rebel://settings/tools) |
+| Searching by sender or subject finds nothing | Alibaba's mail servers don't support that kind of search. Ask Rebel to list your recent emails instead — a fix is on its way |
 | Reading works but sending fails | Sending goes out over SMTP on port 465 with SSL, which is what these tiles use. Alibaba says ports 80 and 587 are not open on its SMTP servers, so if you're on the Custom Email tile, check you've set 465 and SSL |
 | Emails not appearing | Check you're looking in the right mailbox — ask Rebel about a specific folder rather than just the inbox |
 | Need to change the password | Set it in [Settings → Connectors](rebel://settings/tools). If you also have a Custom Email connection, Rebel won't change either password from a conversation, to avoid updating the wrong one |
 
-Server details come from Alibaba's own documentation: [business accounts](https://help.aliyun.com/en/document_detail/36576.html) and [free @aliyun.com accounts](https://help.aliyun.com/zh/document_detail/465307.html).
+Server details come from Alibaba's own documentation: [business accounts](https://help.aliyun.com/en/document_detail/36576.html), [free @aliyun.com accounts](https://help.aliyun.com/zh/document_detail/465307.html), and the [addresses and ports for every region](https://www.alibabacloud.com/help/en/alibaba-mail/latest/alibaba-mail-imap-pop-smtp-address-and-port-information).
 
 
 ## Calendar and Contacts
@@ -85,12 +86,16 @@ Email only, for now. Alibaba Mail business accounts do offer calendar syncing, b
 
 **One account per Alibaba tile.** Setting up the same tile again with a different address replaces the one already there — it doesn't add a second connection.
 
-To connect a second Alibaba Mail address, use the **Custom Email (IMAP/SMTP)** tile and type in the same servers by hand:
+To connect a second Alibaba Mail address, use the **Custom Email (IMAP/SMTP)** tile and type in the servers by hand. They have to match the region that address lives in — every pair below uses port 993 for IMAP and port 465 for SMTP, both with SSL.
 
 | | IMAP | SMTP |
 |---|------|------|
-| **Business** (qiye.aliyun.com) | imap.qiye.aliyun.com, port 993, SSL | smtp.qiye.aliyun.com, port 465, SSL |
-| **Personal** (@aliyun.com) | imap.aliyun.com, port 993, SSL | smtp.aliyun.com, port 465, SSL |
+| **Business** — China mainland | imap.qiye.aliyun.com | smtp.qiye.aliyun.com |
+| **Business** — Singapore | imap.sg.aliyun.com | smtp.sg.aliyun.com |
+| **Business** — Hong Kong | imap.hk.aliyun.com | smtp.hk.aliyun.com |
+| **Business** — Germany | imap.de.alibabacloud.com | smtp.de.alibabacloud.com |
+| **Business** — United States | imap.us.alibabacloud.com | smtp.us.alibabacloud.com |
+| **Personal** (@aliyun.com) | imap.aliyun.com | smtp.aliyun.com |
 
 You can mix tiles freely — an Alibaba business address on its tile, your personal @aliyun.com address on the other, and a third address on Custom Email. Once you have a Custom Email connection alongside an Alibaba tile, though, password changes have to happen in [Settings → Connectors](rebel://settings/tools) rather than from a conversation, because Rebel can't tell which of them you mean.
 

@@ -8,7 +8,7 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Improvements
 
-- **Alibaba Mail connects in a click or two** — new tiles for Alibaba Mail business and personal (@aliyun.com) accounts, with the servers already filled in. Bring an address and a client security password; Rebel brings the rest. Search, read, send, draft and file, same as your other email connections. [How to set it up](library://rebel-system/help-for-humans/connectors/alibaba-mail.md)
+- **Alibaba Mail connects in a click or two** — new tiles for Alibaba Mail business and personal (@aliyun.com) accounts, with the servers already filled in. Bring an address and a client security password; Rebel brings the rest. The business tile asks which region your account lives in, so Hong Kong, Singapore, Germany and US accounts work too. Search, read, send, draft and file, same as your other email connections. [How to set it up](library://rebel-system/help-for-humans/connectors/alibaba-mail.md)
 
 ## v0.4.88 — Oct 1, 2026
 
