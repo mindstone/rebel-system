@@ -1,5 +1,5 @@
 ---
-description: "Connect iCloud Mail, Yahoo Mail, or any IMAP/SMTP email account to search, read, send, and manage emails"
+description: "Connect iCloud Mail, Yahoo Mail, Alibaba Mail, or any IMAP/SMTP email account to search, read, send, and manage emails"
 ---
 
 # Email (iCloud, Yahoo & Custom IMAP)
@@ -32,7 +32,11 @@ Read, search, send, and manage emails from your iCloud, Yahoo, or any IMAP/SMTP 
 |----------|---------------|------------|
 | **iCloud Mail** | @icloud.com, @me.com, @mac.com | [Apple Account](https://account.apple.com/) |
 | **Yahoo Mail** | @yahoo.com, @ymail.com, @rocketmail.com | [Yahoo Security](https://login.yahoo.com/myaccount/security/app-password) |
+| **Alibaba Mail (business)** | qiye.aliyun.com and company domains on Alibaba Mail | [Alibaba Mail](https://qiye.aliyun.com/) |
+| **Alibaba Mail (personal)** | @aliyun.com | [Alibaba Mail](https://mail.aliyun.com/) |
 | **Custom Email (IMAP/SMTP)** | Any email provider with IMAP/SMTP access | Check your provider's settings |
+
+> **Using Alibaba Mail?** The two Alibaba tiles come with the servers filled in. Setup, the security password you'll need, and troubleshooting are all in [Alibaba Mail](library://rebel-system/help-for-humans/connectors/alibaba-mail.md).
 
 
 ## Setup

@@ -43,6 +43,7 @@ The catalog includes 90+ integrations across several categories. To see the full
 - [Google Workspace](library://rebel-system/help-for-humans/connectors/google-workspace.md) – Gmail, Calendar, Drive, Docs, Sheets, Slides, Contacts
 - [Microsoft 365](library://rebel-system/help-for-humans/connectors/microsoft-365.md) – Outlook, Calendar, OneDrive, Teams
 - [Email (iCloud, Yahoo & Custom IMAP)](library://rebel-system/help-for-humans/connectors/email.md) – Search, read, send, and manage iCloud, Yahoo, or any IMAP/SMTP email
+- [Alibaba Mail](library://rebel-system/help-for-humans/connectors/alibaba-mail.md) – Search, read, send, and manage Alibaba Mail business and @aliyun.com email
 - [HubSpot](library://rebel-system/help-for-humans/connectors/hubspot.md) – CRM, contacts, deals, tickets (free accounts: read-only)
 - [Salesforce](library://rebel-system/help-for-humans/connectors/salesforce.md) – CRM queries and record management
 - [Zendesk](library://rebel-system/help-for-humans/connectors/zendesk.md) – Support tickets, views, macros, and Help Center (Beta; needs a Zendesk admin to set up)
