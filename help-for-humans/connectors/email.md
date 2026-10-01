@@ -36,7 +36,7 @@ Read, search, send, and manage emails from your iCloud, Yahoo, or any IMAP/SMTP 
 | **Alibaba Mail (personal)** | @aliyun.com | [Alibaba Mail](https://mail.aliyun.com/) |
 | **Custom Email (IMAP/SMTP)** | Any email provider with IMAP/SMTP access | Check your provider's settings |
 
-> **Using Alibaba Mail?** The two Alibaba tiles come with the servers filled in. Setup, the security password you'll need, and troubleshooting are all in [Alibaba Mail](library://rebel-system/help-for-humans/connectors/alibaba-mail.md).
+> **Using Alibaba Mail?** The two Alibaba tiles come with the servers filled in, and each one holds a single account — for a second Alibaba address, use **Custom Email (IMAP/SMTP)**. Setup, the security password you'll need, and troubleshooting are all in [Alibaba Mail](library://rebel-system/help-for-humans/connectors/alibaba-mail.md).
 
 
 ## Setup

@@ -83,7 +83,16 @@ Email only, for now. Alibaba Mail business accounts do offer calendar syncing, b
 
 ## Multiple Accounts
 
-Click **Set up with Rebel** again for each account you want to add. Each one appears as its own connection, and you can mix tiles — an Alibaba business address for work and something else for personal.
+**One account per Alibaba tile.** Setting up the same tile again with a different address replaces the one already there — it doesn't add a second connection.
+
+To connect a second Alibaba Mail address, use the **Custom Email (IMAP/SMTP)** tile and type in the same servers by hand:
+
+| | IMAP | SMTP |
+|---|------|------|
+| **Business** (qiye.aliyun.com) | imap.qiye.aliyun.com, port 993, SSL | smtp.qiye.aliyun.com, port 465, SSL |
+| **Personal** (@aliyun.com) | imap.aliyun.com, port 993, SSL | smtp.aliyun.com, port 465, SSL |
+
+You can mix tiles freely — an Alibaba business address on its tile, your personal @aliyun.com address on the other, and a third address on Custom Email. Once you have a Custom Email connection alongside an Alibaba tile, though, password changes have to happen in [Settings → Connectors](rebel://settings/tools) rather than from a conversation, because Rebel can't tell which of them you mean.
 
 
 ## See Also
