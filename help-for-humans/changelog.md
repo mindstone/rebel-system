@@ -21,6 +21,16 @@ What's new in Rebel. We ship fast, so there's always something.
 - **No more false "premium model" card** — when Rebel switched you to Sonnet 5.5 or Opus 5.5, it asked for your approval and called them premium models that cost more. Neither costs more than the Balanced tier, so it no longer asks; it still asks before moving you to Fable 5 or 5.1, which do.
 - **Titles and memories work on the newest models** — with Fable 5 or 5.1, Opus 5.5 or Sonnet 5.5, Rebel sometimes missed the model's answer, leaving conversation titles blank and quietly skipping memory updates and summaries. It now finds the answer properly.
 
+## v0.4.88 — Oct 1, 2026
+
+### Fixes
+
+- **Replies and automations keep working when your company's managed model key is briefly unavailable** — Rebel now handles a refused company key with a clear reason instead of failing the reply or run.
+- **Block works on the web companion for built-in actions like Bash** — Blocking a built-in tool from the web now saves your refusal, as it already did on desktop and mobile.
+- **What's New shows each release's fixes** — Releases that contained only fixes no longer show an empty section.
+- **An automation waiting for your file approval says "Needs your approval"** — It no longer shows as "Failed".
+- **Fewer false "may not have saved" warnings** — A save that overlaps a reply now retries and clears the warning once it succeeds.
+
 ## v0.4.87 — Sep 30, 2026
 
 ### Highlights
