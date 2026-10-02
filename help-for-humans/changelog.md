@@ -4,7 +4,7 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ---
 
-## Unreleased
+## v0.4.90 — Oct 2, 2026
 
 _Nothing yet._
 
