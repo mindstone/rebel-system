@@ -8,6 +8,32 @@ What's new in Rebel. We ship fast, so there's always something.
 
 _Nothing yet._
 
+## v0.4.89 — Oct 2, 2026
+
+### Highlights
+
+<!-- feature: sonnet-5-5 | detail: Sonnet 5.5's thinking can't be turned off, so its lowest setting still does some thinking and can take more time and tokens than Sonnet 5 with thinking off. Nothing moves you to it: your current model stays exactly as it is. -->
+- **Claude Sonnet 5.5 is in the model picker** — Anthropic's newest Sonnet, at the same price as Sonnet 5. It always does some thinking before it answers and can't be switched fully off, so even the lowest thinking setting spends a little; nothing changes unless you pick it, and if you're on Sonnet 5, you stay on it.
+- **Connect Alibaba Mail.** Pick Alibaba Mail (business, with your region) or Alibaba Mail personal, then enter your address and app password. Search in Alibaba Mail arrives in the next update.
+
+### Improvements
+
+- **Fewer fixed asks** — editing Rebel's own files, sending the notetaker, model and quality-tier changes, spend-shaped actions and a few others now follow your usual approvals and Safety Rules instead of always stopping for a card. The first time Rebel edits its own files or sends the notetaker, you get a one-time note so nothing happens quietly. Tools your administrator has disabled still never run.
+- **Your own "ask me even when I asked" rules are honoured** — a Safety Rule like "always ask before deleting records in my CRM, even when I ask for it" now shows a card, while an ordinary "check with me first" rule is satisfied by your request. Rules that name a connector's tool apply to that connector only.
+- **The newest models tell you what they're up to** — when Rebel connects to Anthropic directly, the desktop app's progress card now shows the model's own short notes on what it's doing, for Sonnet 5.5, Opus 5.5 and Fable 5 and 5.1. The notes clear when the answer starts. Through OpenRouter, you get Rebel's usual running commentary instead.
+
+### Fixes
+
+- **When the safety check can't answer, Rebel goes by how risky the action is** — low-risk actions run; middle-risk actions run only for connections from Rebel's own catalogue and otherwise ask you; high-risk actions ask. Anything you've already allowed (Always, for this conversation, or for an automation) runs as before, check or no check.
+- **Sonnet 5 costs now use Anthropic's listed price** — Rebel was still using an older, higher price, so Sonnet 5 cost estimates, including the past Sonnet 5 costs Rebel shows you, now read a third lower. The numbers, corrected.
+- **No more false "premium model" card** — when Rebel switched you to Sonnet 5.5 or Opus 5.5, it asked for your approval and called them premium models that cost more. Neither costs more than the Balanced tier, so it no longer asks; it still asks before moving you to Fable 5 or 5.1, which do.
+- **Titles and memories work on the newest models** — with Fable 5 or 5.1, Opus 5.5 or Sonnet 5.5, Rebel sometimes missed the model's answer, leaving conversation titles blank and quietly skipping memory updates and summaries. It now finds the answer properly.
+- **Long conversations on OpenRouter keep going more often** — when a conversation nearly fills the model's window but there's still room for a shorter answer, Rebel now asks for one instead of refusing the turn.
+- **DeepSeek V4 and Kimi K3 use their full window** — Rebel treated them as much smaller than their roughly 1 million tokens and refused long conversations they could handle.
+- **You can quit Rebel during a meeting** — with the notetaker in a call, Quit used to do nothing. Rebel now closes, and the notetaker keeps recording and writes up your notes as usual.
+- **A connector works as soon as you connect it** — on Windows, a newly connected connector could fail to start until you restarted Rebel.
+- **Some older conversations save again** — a conversation holding a damaged memory entry from an older version was refused on every save. Rebel now leaves out the damaged entry and saves the rest.
+
 ## v0.4.88 — Oct 1, 2026
 
 ### Fixes
