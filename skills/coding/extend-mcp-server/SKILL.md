@@ -105,6 +105,8 @@ The following `bundled-*` IDs are `provider: "rebel-oss"` → **Path A (extendab
 ```yaml
 # provider: "rebel-oss" connectors with bundled-* IDs (Path A — extendable)
 bundled_rebel_oss_ids:
+  - bundled-alibaba-mail
+  - bundled-alibaba-mail-personal
   - bundled-apple-shortcuts
   - bundled-browser-automation
   - bundled-browserbase
