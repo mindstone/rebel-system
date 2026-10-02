@@ -6,11 +6,9 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ## v0.4.90 — Oct 2, 2026
 
-### Improvements
+### Fixes
 
 - **Connectors get the field names right sooner** — Rebel now knows the arguments each connector action expects before its first try, so fewer calls are rejected because it guessed a name.
-
-### Fixes
 
 - **Home cards can start a conversation again** — Send on an attention card and Prep on a meeting card now open your conversation without an error.
 - **A refused message can be dismissed** — the unsent-message notice now has a Dismiss button, including when there is no text to copy, so it no longer takes a restart to clear it.
@@ -18,7 +16,7 @@ What's new in Rebel. We ship fast, so there's always something.
 - **Skipped automation runs appear in run history** — when Rebel decides not to run a slot missed while it was closed or your computer was asleep, the automation now keeps a plain record instead of leaving the slot unexplained.
 - **“Always allow” clears the matching cards that are already waiting** — choosing it on one approval card now runs each matching pending action once, while unrelated or failed actions keep their own cards.
 - **Long conversations no longer jam safety checks** — if the safety model refuses an oversized check, Rebel retries once without the earlier conversation history; that oversized check no longer stalls your other chats for 30 seconds.
-- **Settings stays open when you follow a link while Rebel is starting or reloading** — background What's New bookkeeping no longer closes the panel a moment after the link opens it.
+- **Settings stays open when you follow a link while Rebel is starting or reloading** — the panel no longer closes a moment after the link opens it.
 
 ## v0.4.89 — Oct 2, 2026
 
