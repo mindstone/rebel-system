@@ -8,11 +8,11 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Improvements
 
-- **Alibaba Mail finds things and knows your schedule** — searching by sender or subject now works on Alibaba Mail, and business accounts bring their calendar along: ask what's on this week and recurring meetings turn up where they should. Read-only for now. Contacts stay in Alibaba's apps, since Alibaba doesn't offer a standard way to share them. [Details](library://rebel-system/help-for-humans/connectors/alibaba-mail.md)
+- **Alibaba Mail, email only for now** — Read and send Alibaba Mail from Rebel. Sender/subject search and calendars aren’t supported yet. [Details](library://rebel-system/help-for-humans/connectors/alibaba-mail.md)
 
 ### Fixes
 
-- **Alibaba Mail checks your sign-in before saving changes** — a failed setup or password change keeps your saved account intact and tells you what to check. Changing just the password keeps your chosen region.
+- **Alibaba Mail business accounts check your sign-in before saving changes** — a failed setup or password change keeps your saved account intact and tells you what to check. Changing just the password keeps your chosen region.
 
 ## v0.4.90 — Oct 2, 2026
 

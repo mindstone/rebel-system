@@ -1,16 +1,14 @@
 ---
-description: "Connect Alibaba Mail — business accounts and free @aliyun.com accounts — to search, read, send, and manage email, and see your business calendar"
+description: "Connect Alibaba Mail — business accounts and free @aliyun.com accounts — to read, send, and manage email"
 ---
 
 # Alibaba Mail
 
-Read, search, send, and manage your Alibaba Mail from Rebel — and on business accounts, see your calendar too. The servers are already filled in — you bring your email address and a password.
+Read, send, and manage your Alibaba Mail from Rebel. The servers are already filled in — you bring your email address and a password.
 
 
 ## What You Can Do
 
-- **Find** messages across any mailbox by sender, subject, date, or what's unread
-- **See your calendar** (business accounts): what's on today, this week, or any date range, recurring meetings included. Read-only for now — Rebel can't add or change events yet
 - **Read** full email content including headers, body text, and attachment info
 - **Send** emails and replies as yourself, with CC and BCC support
 - **Draft** emails and save them to your Drafts folder for later
@@ -18,7 +16,7 @@ Read, search, send, and manage your Alibaba Mail from Rebel — and on business 
 - **Track** unread counts and see what needs your attention
 - **Flag** or mark messages as read/unread
 
-This is the same set of tools as Rebel's other email connections, and sending asks for your approval the same way.
+Sending asks for your approval, just like Rebel's other email connections.
 
 
 ## Which Tile to Pick
@@ -62,8 +60,7 @@ Your administrator has to allow IMAP before this will work. If you're not the ad
 | Can't connect — business account | Your administrator probably hasn't allowed IMAP yet. Ask them to check **Organization and Users → Employee Accounts → Feature Permissions → IMAP Service**, then **Security Management → Account Security → Access Policies** |
 | Can't connect — "authentication failed" | If you've turned on the third-party client security password, your webmail password no longer works here. Use the generated security password instead |
 | Can't connect — wrong region | Check that the region on the business tile matches where your account lives. Change it in [Settings → Connectors](rebel://settings/tools) |
-| Searching by sender or subject misses older emails | Alibaba's servers can't search by sender or subject themselves, so Rebel looks through recent mail for you — the last 90 days unless you say otherwise. Ask for an earlier date ("since January") to look further back |
-| Calendar says the login failed | The calendar uses the same address and password as your email. If email works but the calendar doesn't, check the region on the business tile matches where your account lives |
+| Searching by sender or subject doesn't work | Alibaba's mail servers don't support that kind of search. Ask Rebel to list your recent emails instead |
 | Reading works but sending fails | Sending goes out over SMTP on port 465 with SSL, which is what these tiles use. Alibaba says ports 80 and 587 are not open on its SMTP servers, so if you're on the Custom Email tile, check you've set 465 and SSL |
 | Emails not appearing | Check you're looking in the right mailbox — ask Rebel about a specific folder rather than just the inbox |
 | Need to change the password | Set it in [Settings → Connectors](rebel://settings/tools). If you also have a Custom Email connection, Rebel won't change either password from a conversation, to avoid updating the wrong one |
@@ -73,11 +70,7 @@ Server details come from Alibaba's own documentation: [business accounts](https:
 
 ## Calendar and Contacts
 
-**Calendar — business accounts.** The business tile connects your Alibaba Mail calendar as well, using the same password and the region you picked. Ask things like "what's on my calendar this week?" — recurring meetings show up on every day they happen. It's read-only for now: Rebel can tell you what's on, but can't create, move, or accept events yet.
-
-**Calendar — personal accounts.** Not available. Alibaba doesn't document calendar access for free @aliyun.com accounts, so the personal tile is email only.
-
-**Contacts.** Not available. Alibaba Mail doesn't offer the standard way email apps read contacts (it uses its own Outlook plugin instead), so your contacts stay in Alibaba's own apps.
+Email only, for now. Rebel doesn't connect to Alibaba Mail calendars or contacts in this version. They stay in Alibaba's own apps.
 
 
 ## What Rebel Can Access
@@ -85,14 +78,14 @@ Server details come from Alibaba's own documentation: [business accounts](https:
 - **Your existing account**: nothing new to sign up for — this is your Alibaba Mail, reached the same way your phone's email app reaches it
 - **A separate password**: the third-party client security password is just for email apps, and you can regenerate or turn it off in Alibaba Mail whenever you like without touching your main password
 - **Act as yourself**: emails Rebel sends come from your own address, exactly as if you'd sent them from webmail
-- **Standard protocols**: IMAP for reading, SMTP for sending, and CalDAV for the calendar — the same technology your phone's email and calendar apps use
+- **Standard protocols**: IMAP for reading and SMTP for sending — the same technology your regular email app uses
 
 
 ## Multiple Accounts
 
 **One account per Alibaba tile.** Setting up the same tile again with a different address replaces the one already there — it doesn't add a second connection.
 
-To connect a second Alibaba Mail address, use the **Custom Email (IMAP/SMTP)** tile and type in the servers by hand. That connection is email only — the calendar comes with the business tile. They have to match the region that address lives in — every pair below uses port 993 for IMAP and port 465 for SMTP, both with SSL.
+To connect a second Alibaba Mail address, use the **Custom Email (IMAP/SMTP)** tile and type in the servers by hand. They have to match the region that address lives in — every pair below uses port 993 for IMAP and port 465 for SMTP, both with SSL.
 
 | | IMAP | SMTP |
 |---|------|------|
