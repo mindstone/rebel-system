@@ -8,11 +8,12 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Improvements
 
-- **Alibaba Mail, email only for now** — Read and send Alibaba Mail from Rebel. Sender/subject search and calendars aren’t supported yet. [Details](library://rebel-system/help-for-humans/connectors/alibaba-mail.md)
+- **Alibaba Mail search and calendars come later** — reading and sending work; sender/subject search and calendars aren't supported yet.
 
 ### Fixes
 
 - **Alibaba Mail business accounts check your sign-in before saving changes** — a failed setup or password change keeps your saved account intact and tells you what to check. Changing just the password keeps your chosen region.
+- **Opening a task right after sending it from Home keeps your message** — it no longer disappears from the conversation.
 
 ## v0.4.90 — Oct 2, 2026
 
