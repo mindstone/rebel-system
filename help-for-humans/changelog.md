@@ -14,6 +14,7 @@ What's new in Rebel. We ship fast, so there's always something.
 
 - **Alibaba Mail business accounts check your sign-in before saving changes** — a failed setup or password change keeps your saved account intact and tells you what to check. Changing just the password keeps your chosen region.
 - **Opening a task right after sending it from Home keeps your message** — it no longer disappears from the conversation.
+- **Saving a connector setting or provider key while a task runs no longer hangs.**
 
 ## v0.4.90 — Oct 2, 2026
 
