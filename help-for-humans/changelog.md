@@ -4,6 +4,12 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ---
 
+## v0.4.92 — Unreleased
+
+### Fixes
+
+- **Your existing conversations upload to a new cloud** — saved answers are preserved. Settings shows the result for each conversation, including anything that needs another try.
+
 ## v0.4.91 — Oct 3, 2026
 
 ### Improvements
