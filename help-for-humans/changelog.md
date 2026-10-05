@@ -4,6 +4,12 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ---
 
+## v0.4.92 — Oct 5, 2026
+
+### Fixes
+
+- **Moving to a new cloud now shows what happened to your connector sign-ins** — the migration result lists connector sign-ins as their own line, saying which parts were copied and what needs attention. Saved service keys explain what's holding them up and what to press, and Rebel tries again on its own once your account or cloud is ready.
+
 ## v0.4.91 — Oct 3, 2026
 
 ### Improvements
