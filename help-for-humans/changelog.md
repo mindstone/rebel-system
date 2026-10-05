@@ -4,6 +4,12 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ---
 
+## v0.4.92 — Oct 5, 2026
+
+### Fixes
+
+- **Updates work even when changes are paused** — On Windows, Install & Relaunch now works when an older Rebel opens data used by a newer version. Your saved data stays protected.
+
 ## v0.4.91 — Oct 3, 2026
 
 ### Improvements
