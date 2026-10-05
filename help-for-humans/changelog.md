@@ -4,6 +4,12 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ---
 
+## v0.4.92 — Oct 5, 2026
+
+### Fixes
+
+- **A briefly busy company AI provider no longer stops your reply** — Rebel waits and retries, with a message explaining the wait.
+
 ## v0.4.91 — Oct 3, 2026
 
 ### Improvements
