@@ -4,6 +4,12 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ---
 
+## v0.4.92 — Upcoming
+
+### Fixes
+
+- **Moving to a new cloud carries your settings and files across** — settings and provider keys now arrive, temporary files no longer stop the move, and an interrupted upload can retry while the cloud keeps its previous files. If part of the move fails, you can retry just that part.
+
 ## v0.4.91 — Oct 3, 2026
 
 ### Improvements
