@@ -9,6 +9,7 @@ What's new in Rebel. We ship fast, so there's always something.
 ### Fixes
 
 - **Your existing conversations upload to a new cloud** — saved answers are preserved. Settings shows the result for each conversation, including anything that needs another try.
+- **Models Rebel doesn't know yet get their real window.** On OpenRouter and Fireworks, Rebel now uses the window the provider publishes instead of guessing 200k.
 
 ## v0.4.91 — Oct 3, 2026
 
@@ -20,7 +21,6 @@ What's new in Rebel. We ship fast, so there's always something.
 
 - **Alibaba Mail business accounts check your sign-in before saving changes** — a failed setup or password change keeps your saved account intact and tells you what to check. Changing just the password keeps your chosen region.
 - **Opening a task right after sending it from Home keeps your message** — it no longer disappears from the conversation.
-- **Saving a connector setting or provider key while a task runs no longer hangs.**
 
 ## v0.4.90 — Oct 2, 2026
 
