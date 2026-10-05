@@ -10,6 +10,7 @@ What's new in Rebel. We ship fast, so there's always something.
 
 - **Your existing conversations upload to a new cloud** — saved answers are preserved. Settings shows the result for each conversation, including anything that needs another try.
 - **Models Rebel doesn't know yet get their real window.** On OpenRouter and Fireworks, Rebel now uses the window the provider publishes instead of guessing 200k.
+- **A briefly busy company AI provider no longer stops your reply** — Rebel waits and retries, with a message explaining the wait.
 
 ## v0.4.91 — Oct 3, 2026
 
