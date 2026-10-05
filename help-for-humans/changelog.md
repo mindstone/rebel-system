@@ -4,6 +4,12 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ---
 
+## v0.4.92 — Unreleased
+
+### Fixes
+
+- **Stalled replies retry when Rebel connects directly to Claude** — Rebel makes one more attempt with the same model when the connection stops responding.
+
 ## v0.4.91 — Oct 3, 2026
 
 ### Improvements
