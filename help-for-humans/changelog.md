@@ -4,6 +4,12 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ---
 
+## v0.4.92 — Unreleased
+
+### Fixes
+
+- **Models Rebel doesn't know yet get their real window.** On OpenRouter and Fireworks, Rebel now uses the window the provider publishes instead of guessing 200k.
+
 ## v0.4.91 — Oct 3, 2026
 
 ### Improvements
