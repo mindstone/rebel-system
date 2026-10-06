@@ -9,6 +9,16 @@ What's new in Rebel. We ship fast, so there's always something.
 ### Fixes
 
 - **Models Rebel doesn't know yet get their real window.** On OpenRouter and Fireworks, Rebel now uses the window the provider publishes instead of guessing 200k.
+- **Changing your Core Directory in Settings now saves the new folder without freezing the app.** Paste a folder path or use Choose… to pick one. Rebel stays responsive while the new location is saved.
+- Older approval cards close once Rebel has already run the same action in that conversation, so clicking an old card cannot repeat it.
+- **Updates work even when changes are paused** — On Windows, Install & Relaunch now works when an older Rebel opens data used by a newer version. Your saved data stays protected.
+- Disconnecting an email account or changing its password now clears old details from Rebel’s local backups. Accounts disconnected before this update are not cleaned automatically.
+- **Stalled replies retry when Rebel connects directly to Claude** — Rebel makes one more attempt with the same model when the connection stops responding.
+- **Repair a stopped cloud from Settings.** If your cloud stops answering, Repair cloud can bring it back while keeping your saved data and connection in place. No terminal required.
+- **Long chats prepare replies faster, and other chats stay responsive** — long messages no longer tie up preparation for minutes before a reply can start.
+- Memory now distinguishes an email awaiting approval or declined from one that was actually sent, and corrects the original note when you decide.
+- Opening a saved private conversation no longer saves it again just because you open it.
+- When the safety check cannot answer, Rebel goes by the action's risk. Low-risk actions run; middle-risk actions run only for catalogue connections and otherwise ask; high-risk actions ask. Existing Allow rules still apply.
 
 ## v0.4.91 — Oct 3, 2026
 
