@@ -14,6 +14,10 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ## v0.4.91 — Oct 3, 2026
 
+### Known issue
+
+- Correction: the 0.4.91 fix that gets clouds on Fly starting after an update isn't on cloud computers yet. It goes live when we publish the cloud update, which we're doing as soon as we can. Your desktop app already has its part.
+
 ### Improvements
 
 - **Alibaba Mail search and calendars come later** — reading and sending work; sender/subject search and calendars aren't supported yet.
