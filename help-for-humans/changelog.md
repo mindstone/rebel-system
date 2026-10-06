@@ -32,7 +32,7 @@ What's new in Rebel. We ship fast, so there's always something.
 - **Home cards can start a conversation again** — Send on an attention card and Prep on a meeting card now open your conversation without an error.
 - **A refused message can be dismissed** — the unsent-message notice now has a Dismiss button, including when there is no text to copy, so it no longer takes a restart to clear it.
 - **Missed automations catch up more reliably after sleep or a restart** — Rebel waits for its connections to be ready, gives queued runs enough time, and retries a rate-limited run instead of letting it block the queue behind it.
-- **Skipped automation runs appear in run history** — when Rebel decides not to run a slot missed while it was closed or your computer was asleep, the automation now keeps a plain record instead of leaving the slot unexplained.
+- **Skipped automation runs appear in run history** — when Rebel decides not to run the latest slot missed while it was closed or your computer was asleep, the automation keeps a plain record of it. On schedules that run more than once a day, earlier missed slots aren't recorded yet; that's coming in a later update.
 - **“Always allow” clears the matching cards that are already waiting** — choosing it on one approval card now runs each matching pending action once, while unrelated or failed actions keep their own cards.
 - **Long conversations no longer jam safety checks** — if the safety model refuses an oversized check, Rebel retries once without the earlier conversation history; that oversized check no longer stalls your other chats for 30 seconds.
 - **Settings stays open when you follow a link while Rebel is starting or reloading** — the panel no longer closes a moment after the link opens it.
