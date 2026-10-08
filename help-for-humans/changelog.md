@@ -4,6 +4,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ---
 
+## v0.4.93 — Unreleased
+
 ## v0.4.92 — Unreleased
 
 ### Fixes
