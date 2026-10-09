@@ -10,9 +10,11 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
-- **Your existing conversations upload to a new cloud** — saved answers are preserved. Settings shows the result for each conversation, including anything that needs another try.
-- **Models Rebel doesn't know yet get their real window.** On OpenRouter and Fireworks, Rebel now uses the window the provider publishes instead of guessing 200k.
-- **A briefly busy company AI provider no longer stops your reply** — Rebel waits and retries, with a message explaining the wait.
+- **Signing out pauses your cloud connection** — It stays paused until you sign back in.
+- **Rebel tidies up without a pop-up** — Stale actions are cleared quietly, with Handled by Rebel still keeping the record.
+- **Less repeated waiting when your company's AI account stops answering** — Rebel avoids the same long wait on every safety check. The message explains that the account isn't answering and names your administrator.
+- **Fewer safety-check timeouts after a restart** — The first safety check after you reopen Rebel is less likely to time out.
+- **Missed-run notes now state the limits** — The 0.4.90 notes explain that run history records only the latest missed slot when Rebel skips it. Earlier missed slots on schedules that run more than once a day aren't recorded yet.
 
 ## v0.4.91 — Oct 3, 2026
 
