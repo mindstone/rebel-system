@@ -6,6 +6,10 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ## v0.4.93 — Unreleased
 
+### Fixes
+
+- **Your saved ChatGPT model stays in its class** — if it retires, Rebel updates it to a current model of the same class and tells you once. ChatGPT Pro automations also honor an eligible saved model choice when it differs from your default.
+
 ## v0.4.92 — Unreleased
 
 ### Fixes
