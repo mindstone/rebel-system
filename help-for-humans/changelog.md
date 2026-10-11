@@ -6,6 +6,10 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ## v0.4.93 — Unreleased
 
+### Fixes
+
+- **Clearer guidance for task files** — Rebel instructs its agents to keep a task's drafts, batches and scratch notes in one task folder in your Chief of Staff space, and put only the finished piece in the space you named.
+
 ## v0.4.92 — Unreleased
 
 ### Fixes
