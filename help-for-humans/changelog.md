@@ -9,6 +9,7 @@ What's new in Rebel. We ship fast, so there's always something.
 ### Fixes
 
 - **Your saved ChatGPT model stays in its class** — if it retires, Rebel updates it to a current model of the same class and tells you once. ChatGPT Pro automations also honor an eligible saved model choice when it differs from your default.
+- **Clearer guidance for task files** — Rebel instructs its agents to keep a task's drafts, batches and scratch notes in one task folder in your Chief of Staff space, and put only the finished piece in the space you named.
 
 ## v0.4.92 — Unreleased
 
