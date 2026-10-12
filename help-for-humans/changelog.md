@@ -8,6 +8,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **Asking Rebel on the web to manage your automations works** — list, create, edit, pause, delete, and "run this now" from a conversation that runs on your cloud instance now reach your cloud's own schedule, and the next run shows your change. Until now these requests never went through: each failed before reaching your automations. Allowing a tool for an automation asks the way Rebel normally asks — your usual approval choices — and the next scheduled run then uses it.
+
 - **Your saved ChatGPT model stays in its class** — if it retires, Rebel updates it to a current model of the same class and tells you once. ChatGPT Pro automations also honor an eligible saved model choice when it differs from your default.
 - **Clearer guidance for task files** — Rebel instructs its agents to keep a task's drafts, batches and scratch notes in one task folder in your Chief of Staff space, and put only the finished piece in the space you named.
 
