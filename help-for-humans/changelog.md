@@ -4,9 +4,43 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ---
 
-## v0.4.93 — Unreleased
+## Unreleased
 
-## v0.4.92 — Unreleased
+## v0.4.93 — Oct 10-11, 2026
+
+### Highlights
+
+- **Quick answers on desktop** — Simple questions can get a direct answer, while harder requests still get a plan. Choose Go deeper to turn a quick answer into a planned one.
+
+### Improvements
+
+- **A shared approval card on the web and for desktop file requests** — The web companion and the desktop's request to open a file outside your Spaces now use the shared card and controls. On the web, you can also remove a saved permission from the card.
+- **A consistent approval card on your phone** — Tool and file requests use the shared card, including Always when it is available.
+- **See and remove what you've allowed or blocked** — Saved permissions are easier to review and remove in Settings.
+
+### Fixes
+
+- **Slow starts keep your chat in view** — While Rebel takes longer than usual to start replying, the waiting message stays inside the conversation and earlier messages remain available to scroll.
+- **Quitting mid-reply keeps what you've received** — After you reopen Rebel, an unfinished reply says Closed before finishing, with Continue to pick up where it stopped.
+- **Sharing to a Space follows your request** — An explicit request to share goes through the usual safety checks, which may still ask for your OK. Automatic meeting notes are judged by their topic rather than how many people attended.
+- **Memory requests on your phone offer Save and Skip** — The card shows the same details and optional preview as the web companion, including saved drafts waiting for review.
+- **Conflicting saved files show their choices on your phone again** — Keep mine and Keep theirs are back on the card, alongside Resolve with Rebel.
+- **Retired ChatGPT models no longer leave you stuck** — Saved choices move to a current model of the same class, with one short notice. Eligible ChatGPT Pro automations also keep their saved model choice.
+- **ChatGPT can reuse earlier work** — Rebel now lets ChatGPT recognise requests from the same conversation and keeps more of the history it has already read.
+- **Your ChatGPT limit tells you when it resets** — If the limit arrives before an answer starts, Rebel shows the reset time when ChatGPT supplies one.
+- **Changing your Library location saves once** — The field stays responsive while you type and saves when you press Enter, click elsewhere on the page, or choose a folder. Leaving the page or closing Settings first keeps your current location.
+- **Fewer replies that end with nothing to show** — When a model spends its whole reply thinking, Rebel can try once more for a shorter answer where the connection supports it. If that still fails, it suggests changing models.
+- **An automation with nothing but thinking pauses itself** — If that second chance cannot produce an answer, a scheduled automation pauses instead of spending another reply on the same problem next time. Change its model, then turn it back on in an updated Rebel app.
+- **Images and large results reach your cloud copy** — For conversations kept in your cloud copy, uploads now go through or wait safely while the cloud is unavailable. Settings → Diagnostics tells you when uploads are waiting.
+- **Images and results wrongly marked lost get another chance** — If they are still safe on this computer, Rebel puts them back in the upload queue when it starts.
+- **Cloud storage problems leave room for repair** — Your cloud stays available for repair instead of repeatedly restarting, and the desktop keeps the repair guidance visible.
+- **Private mode says what it does** — Its wording now describes Rebel's strictest safety checks, with nothing learned from the chat unless you approve it. Clearly safe steps can still run without a card.
+- **Older approval cards stop offering completed actions** — An action Rebel has already done in the same conversation no longer runs again when you click an older card.
+- **An older Rebel can update while changes are paused** — Install & Relaunch works even when your saved data was last used by a newer build, keeping that data untouched until you update.
+- **Closing Rebel after Save & re-run keeps your edit** — The chat no longer appears to keep thinking after you reopen it.
+- **What's New shows the current release's notes** — The current release now has its date and changes, including fixes.
+
+## v0.4.92 — Oct 8, 2026
 
 ### Fixes
 
