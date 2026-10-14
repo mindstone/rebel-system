@@ -8,7 +8,7 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
-- **Better memory corrections** — Improved checks on this device stop older notes and automations from reviving forgotten details in new saved memories. Library corrections apply across memory files.
+- **Better memory corrections** — Improved checks on this device stop older notes and automations from reviving forgotten details in new saved memories. Library corrections apply across memory files. Forgetting removes the saved memory; protection kept on this device remains until you ask Rebel to remember that fact again or reset memory.
 
 ## v0.4.93 — Oct 10-11, 2026
 
