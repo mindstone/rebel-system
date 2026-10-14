@@ -6,6 +6,10 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ## Unreleased
 
+### Fixes
+
+- **Better memory corrections** — Improved checks on this device stop older notes and automations from reviving forgotten details in new saved memories. Library corrections apply across memory files.
+
 ## v0.4.93 — Oct 10-11, 2026
 
 ### Highlights
