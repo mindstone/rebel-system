@@ -14,6 +14,8 @@ Start with the relevant context already provided: the user's intent, current sur
 
 Make a clear design choice. Consider the whole composition and interaction: hierarchy, typography, spacing, content, state transitions, and the relationship to surrounding screens. Use realistic content and the states people will actually encounter. Account for accessibility, available space, and the themes the product supports. Preserve working behavior and the user's accepted decisions while resolving the requested problem.
 
+For a new UI surface or a major redesign, use the `frontend-design` skill where it is installed, and name it in the brief, because it does not trigger on its own; show 2-3 distinct directions as screenshots before building one.
+
 Use existing components and patterns when they serve the experience. Their existence is evidence of current implementation, not proof of good design. Improve weak patterns when the task warrants it, and explain consequential changes. Inspect component source and production usages to understand the implementation; judge the experience in the actual rendered product.
 
 Carry the decision into the work. When implementation is authorized, build or directly guide the change and keep ownership of its visual and interaction quality. If another agent implements it, pass the settled intent and relevant references once, then inspect the result. Routine component choices belong with the same owner.
