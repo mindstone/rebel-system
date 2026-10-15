@@ -6,6 +6,37 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ## Unreleased
 
+## v0.4.94 — Oct 16, 2026
+
+### Improvements
+
+- **Replies appear as they're written** — On desktop, Rebel shows its reply as it goes instead of waiting to display it all at once.
+- **Settings → Cloud says when your cloud is behind** — It shows how far your cloud copy is behind the current release and which update applies, and only says "current" once it has confirmed a match.
+- **A tidier activity card** — While Rebel works, the latest actions sit at the bottom next to the message box, and earlier actions fold away behind a single "earlier actions" button.
+- **One less setting that did nothing** — The old streaming option is gone from Settings. It no longer changed anything.
+
+### Fixes
+
+- **Your memory edits stick** — Older conversations, automations and background updates no longer undo your Library edits or bring back memories you forgot. Rebel also won't replace a memory file it hasn't read in full, so adding a note can't wipe out the ones already there.
+- **Memory summaries report what actually saved** — Failed saves and notes that changed nothing no longer count as saved memories.
+- **Scrolling up during a reply stays put** — Scroll up and Rebel stops pulling you down; it follows again only once you're back at the bottom. Find, late-loading content and very long chats no longer move your place, and Jump to latest no longer hides behind the message box.
+- **Stop works before the reply starts** — Stop now appears as soon as Rebel accepts your message, and it frees any messages you've queued behind it.
+- **Don't allow means don't allow** — Rebel keeps a refused action refused through its automatic follow-ups and after a restart, even if saving the card fails. A new message from you starts a fresh request.
+- **Your Safety Rules cover file saves** — A file save your own Safety Rules forbid is now refused, including in your private and Chief of Staff spaces, where it could previously go through.
+- **Older answers no longer show as conflicted** — After updating, intact answers from before 0.4.93 stay marked as verified instead of turning into conflicts.
+- **File conflicts no longer leave an approval waiting** — On desktop, an approved save that runs into a conflict is marked done and left out of bulk actions. The draft stays available to review.
+- **Automation conversations say up front that they can't take replies** — Instead of failing when you send, Rebel offers Continue in a new conversation, with the run available as context.
+- **Rebel carries on with the next steps it announces** — When it says what it will do next and needs nothing from you, it does it. It still waits when the next step needs your OK.
+- **Progress catches up when you come back** — Switch back to Rebel during a task and the activity display refreshes to show the latest progress.
+- **Fewer repeated "still working" notices** — A long, healthy reply shows the normal progress indicator, with no extra notices on top. A reply that has really stalled still tells you.
+- **Live task updates make sense** — Spoken and on-screen progress updates no longer read out the model's reasoning or a reply cut off halfway, and the fallback check-in line no longer claims the task has just started.
+- **A slow restore no longer stops Rebel opening** — Rebel opens its window first and restores interrupted work afterwards. A slow restore can no longer cause a startup error.
+- **A stalled save now warns you** — If a conversation takes too long to save, Rebel tells you, so you can copy recent messages before closing it.
+- **Unsent messages lead back to the right conversation** — The notice for a message that wasn't sent now names its conversation and opens it.
+- **Collapsed tabs keep their order** — Pinned conversation tabs stay in a stable order when collapsed, and the keyboard moves through them in the order shown.
+- **Rebel saves your Actions on the first try more often** — Rebel's built-in Actions, use-case and search tools now accept the arguments models usually send. When something is missing, the error says what's needed.
+- **Fewer QuickBooks and Workday reconnections** — Rebel now keeps the renewed sign-in details these connectors return during setup, fixing an error that could make you connect again.
+
 ## v0.4.93 — Oct 10-11, 2026
 
 ### Highlights
