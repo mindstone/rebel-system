@@ -6,6 +6,33 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ## Unreleased
 
+## v0.4.95 — Oct 18, 2026
+
+### Fixes
+
+- **Your connectors stay put** — A hiccup reading your connector settings no longer deletes your connectors. If it already happened to you, Rebel restores them from its saved copy on your next start and tells you how many it brought back. Any that ask you to sign in can be reconnected in Settings.
+- **Google Workspace tells the truth about connecting** — On a new setup, connecting Google Workspace could fail before you signed in and still show Connected. It now finishes the sign-in, or says it didn't.
+- **Read-only checks on new connectors stop asking** — Connectors that don't have a risk rating yet no longer ask before simply looking things up.
+- **The chat permissions notice behaves** — You can dismiss it, Review has a clear way out, and it names the allowed action in plain words instead of an internal code.
+- **Questions reach you on the web** — When Rebel asks you something in a chat on the web, the question now shows up, so the chat no longer sits stuck.
+- **Messages queued at quit get sent** — A message still waiting to send when you quit Rebel is now sent when you reopen it.
+- **Safety Rules hold when the safety check stumbles** — If the safety check itself fails, a file your Safety Rules object to is no longer saved anyway.
+- **Turning down a memory means it's gone** — Refusing a memory save on its approval card now discards it cleanly.
+- **Cloud restores keep Drive and Dropbox linked** — Restoring from your cloud keeps Drive and Dropbox spaces linked instead of turning them into local copies, and re-adding one works without a restart.
+- **Connectors synced from your computer work on the cloud** — They can find their files there now.
+- **New computer, same Safety Rules** — A new computer keeps trying to connect your Safety Rules to your existing cloud instead of giving up after one try.
+- **Desktop chats start even when the cloud is having a moment** — If your cloud copy is refusing or unreachable, desktop chats still start, without raw error codes.
+- **Admin-locked models no longer block everything** — When an admin locks a model your own provider can't use, your messages go through again.
+- **Busy automations get to finish** — An automation that keeps making progress can now run for up to 24 hours instead of stopping at 90 minutes.
+- **The welcome card knows its place** — After Start here, the welcome card no longer shows in every chat, and your first answer isn't refused.
+- **Accented letters and emoji arrive intact** — Long messages with accented letters, emoji or other non-English characters are no longer occasionally refused or garbled on their way to the model.
+
+### Known issues
+
+- While a file waits for your approval, Rebel's reply may already describe it as created. The approval card itself is correct.
+- If you use a Rebel cloud, your computer's next settings sync can remove a connector the cloud has just restored. Add it again in Settings.
+- A message sent right after you press Stop can appear twice in the chat. It is answered only once.
+
 ## v0.4.94 — Oct 16, 2026
 
 ### Improvements
