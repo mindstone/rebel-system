@@ -6,6 +6,11 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ## Unreleased
 
+### Highlights
+
+<!-- feature: conversation-handover | detail: Keep going leaves your conversation as it is and remembers your choice. Your original messages, draft, attached files and any running work stay in the original conversation. -->
+- **Start fresh with a handover** — When a conversation gets long or gets stuck on repeated failed actions or a usage limit, Rebel can offer Start fresh: review and edit a short handover, then choose Start conversation to send that exact text as the first message in a new conversation. The Original conversation link takes you back.
+
 ### Fixes
 
 - **Clearer guidance for task files** — Rebel instructs its agents to keep a task's drafts, batches and scratch notes in one task folder in your Chief of Staff space, and put only the finished piece in the space you named.
