@@ -1,6 +1,6 @@
 ---
 description: "How to schedule recurring or event-triggered work in Rebel, including built-in automations, transcript triggers, Focus automations, and run status meanings"
-last_updated: "2026-08-07"
+last_updated: "2026-10-09"
 ---
 
 # Automations
@@ -73,7 +73,8 @@ A few things worth knowing:
 - Cloud automations fire at the wall-clock time in **your** timezone (captured when you switch to Cloud), wherever in the world the cloud happens to be.
 - If the cloud connection has a rough patch when a run is due, Rebel catches the run up once it's back — see [A scheduled run was delayed by a connection hiccup](#a-scheduled-run-was-delayed-by-a-connection-hiccup).
 - **Event-triggered** automations and Rebel's **built-in** automations always run on the desktop, so they don't offer the choice.
-- You can also just ask Rebel in a desktop conversation — "run this one in the cloud" — and it will move the automation for you.
+- You can also just ask Rebel in a conversation — "run this one in the cloud" — and it will move the automation for you. This works on the web too: in a conversation that runs on your cloud instance you can set up, list, change, pause, delete, or run automations just by asking, and your cloud's schedule picks up the change.
+- When you ask from the web, say your time zone as well ("weekdays at 9am, Europe/Berlin"). Rebel may not know your time zone in a cloud conversation — leave it out and the time zone your cloud machine sits in decides when the automation fires. And once Cloud continuity is actively running your automations, it keeps both the location and the time zone under its control; asking to change those from a conversation gets a polite no.
 
 ## Transcript event triggers
 

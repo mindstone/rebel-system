@@ -9,6 +9,12 @@ What's new in Rebel. We ship fast, so there's always something.
 ### Highlights
 
 - **New computer, existing conversations** — Use your usual Rebel sign-in to reconnect your existing Mindstone Cloud from the welcome screen and open Conversations with the conversations and folders loaded so far. Your old computer stays connected; check the [moving guide](rebel://library/rebel-system%2Fhelp-for-humans%2Fmoving-rebel-to-a-new-computer.md) before setup if you want a fuller move.
+<!-- feature: conversation-handover | detail: Keep going leaves your conversation as it is and remembers your choice. Your original messages, draft, attached files and any running work stay in the original conversation. -->
+- **Start fresh with a handover** — When a conversation gets long or gets stuck on repeated failed actions or a usage limit, Rebel can offer Start fresh: review and edit a short handover, then choose Start conversation to send that exact text as the first message in a new conversation. The Original conversation link takes you back.
+
+### Fixes
+
+- **Clearer guidance for task files** — Rebel instructs its agents to keep a task's drafts, batches and scratch notes in one task folder in your Chief of Staff space, and put only the finished piece in the space you named.
 
 ## v0.4.95 — Oct 18, 2026
 
@@ -81,6 +87,10 @@ What's new in Rebel. We ship fast, so there's always something.
 - **See and remove what you've allowed or blocked** — Saved permissions are easier to review and remove in Settings.
 
 ### Fixes
+
+- **Asking Rebel on the web to manage your automations works** — list, create, edit, pause, delete, and "run this now" from a conversation that runs on your cloud instance now reach your cloud's own schedule, and the next run shows your change. Until now these requests never went through: each failed before reaching your automations. Allowing a tool for an automation asks the way Rebel normally asks — your usual approval choices — and the next scheduled run then uses it.
+
+- **Your saved ChatGPT model stays in its class** — if it retires, Rebel updates it to a current model of the same class and tells you once. ChatGPT Pro automations also honor an eligible saved model choice when it differs from your default.
 
 - **Slow starts keep your chat in view** — While Rebel takes longer than usual to start replying, the waiting message stays inside the conversation and earlier messages remain available to scroll.
 - **Quitting mid-reply keeps what you've received** — After you reopen Rebel, an unfinished reply says Closed before finishing, with Continue to pick up where it stopped.
