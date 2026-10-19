@@ -1,13 +1,35 @@
 ---
-description: "How to move Rebel from one computer to another, keeping your conversations, settings, and memories"
-last_updated: "2026-07-10"
+description: "Reconnect cloud conversations on a new computer, or move your fuller Rebel setup with a transfer file"
+last_updated: "2026-10-19"
 ---
 
 # Moving Rebel to a New Computer
 
-Got a new machine? You can bring your entire Rebel setup with you -- conversations, Actions, memories, settings, the lot.
+Got a new machine? Reconnect your existing Mindstone Cloud to pick up your conversations, or use a transfer file to bring over your fuller Rebel setup.
 
-## The easy way: a Rebel transfer file (recommended)
+**Choose before setting up this computer:** for a fuller move, use a transfer file instead of reconnecting. Transfer files only work before Rebel has been set up on the new computer.
+
+## Reconnect your existing Mindstone Cloud
+
+If you already have a Mindstone-managed cloud, use your usual Rebel sign-in on the new computer:
+
+1. Install and open Rebel, then sign in with the same account you used before.
+2. On the welcome screen, review and accept the **End User License Agreement**, then choose **Reconnect my Mindstone Cloud**.
+3. Rebel checks and prepares your Library before connecting, then loads your cloud conversations and conversation folders.
+
+If Rebel cannot use your Library folder, choose **Choose a folder for your Library**, pick a location, and try reconnecting again.
+
+This brings back **conversations and conversation folders already on your cloud**. It does not transfer local files, Library contents, your profile or settings, connector sign-ins, saved keys, or control of the cloud from your old computer.
+
+Your old computer stays connected. The usual cloud management options remain available in **[Settings → Continuity & Messaging](rebel://settings/cloud)**. Which computer can change your Safety Rules and saved cloud keys stays the same.
+
+The reconnect itself does not send this computer's fresh default settings or saved keys to the cloud. Later saves and restarts on this computer use the usual cloud sync behaviour.
+
+When history is ready, Rebel opens **Conversations**. If your cloud is connected but the initial load takes too long, Rebel opens Conversations automatically and says that conversations and conversation folders are still loading. If some history could not load, choose **Try again**, or **Open Rebel anyway** to continue with what is available.
+
+If **Reconnect my Mindstone Cloud** is missing, check that you signed in with the same account. If Rebel cannot check for your cloud, choose **Check for my cloud again**. If you run your own cloud (for example on Fly.io), use **From your cloud** below.
+
+## For a full move: a Rebel transfer file (recommended)
 
 Rebel can package your setup into a single **transfer file** that you carry to the new computer.
 
@@ -172,7 +194,7 @@ After the router reset, your connected services (Google Workspace, Microsoft 365
 
 Go to **Settings → Connectors** and reconnect each service. You'll sign in to each one as you normally would.
 
-If you use Rebel's web or mobile companions, you'll also need to **pair cloud continuity again** on the new machine -- device pairings don't travel. Turn it back on in **[Settings → Workspace → Cloud Sync](rebel://settings/cloud)** and re-pair your phone, tablet, or browser. See [Cloud continuity and mobile](library://rebel-system/help-for-humans/cloud-continuity-and-mobile.md) for the full setup.
+If you use Rebel's web or mobile companions, you'll also need to **pair cloud continuity again** on the new machine -- device pairings don't travel. Turn it back on in **[Settings → Continuity & Messaging](rebel://settings/cloud)** and re-pair your phone, tablet, or browser. See [Cloud continuity and mobile](library://rebel-system/help-for-humans/cloud-continuity-and-mobile.md) for the full setup.
 
 
 ## Advanced: recovering your cloud by hand
