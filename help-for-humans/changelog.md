@@ -18,6 +18,7 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **Forget means forget** — "Forget cloud on this device" now always forgets, even when the cloud is offline. If the cloud can't confirm it removed your saved keys, Rebel tells you so afterwards instead of refusing and hiding a Forget anyway button.
 - **Clearer guidance for task files** — Rebel instructs its agents to keep a task's drafts, batches and scratch notes in one task folder in your Chief of Staff space, and put only the finished piece in the space you named.
 
 ## v0.4.95 — Oct 18, 2026
