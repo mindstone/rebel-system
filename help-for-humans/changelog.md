@@ -12,6 +12,10 @@ What's new in Rebel. We ship fast, so there's always something.
 <!-- feature: conversation-handover | detail: Keep going leaves your conversation as it is and remembers your choice. Your original messages, draft, attached files and any running work stay in the original conversation. -->
 - **Start fresh with a handover** — When a conversation gets long or gets stuck on repeated failed actions or a usage limit, Rebel can offer Start fresh: review and edit a short handover, then choose Start conversation to send that exact text as the first message in a new conversation. The Original conversation link takes you back.
 
+### Improvements
+
+- **Forgetting, simplified** — Ask Rebel to forget something and it takes it out of your memory, or deletes the memory, and it stops turning up in search. Tell Rebel the same thing again later and it can remember it again. Your own Library edits still win over older background updates. Memory that behaves like memory.
+
 ### Fixes
 
 - **Clearer guidance for task files** — Rebel instructs its agents to keep a task's drafts, batches and scratch notes in one task folder in your Chief of Staff space, and put only the finished piece in the space you named.
