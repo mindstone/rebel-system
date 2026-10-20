@@ -438,12 +438,13 @@ If you want to turn off cloud continuity:
 
 Your desktop data is unaffected. The cloud instance keeps the last synced copy until that instance is deleted, but it will stop receiving new updates.
 
-### If disconnecting does not go through
+### If the cloud can't confirm it removed your keys
 
-Turning cloud continuity off also asks the cloud to remove the keys it holds for this device. If that cannot be confirmed, Rebel now tells you why, next to the button, rather than quietly leaving things as they were:
+Turning cloud continuity off also asks the cloud to remove the saved keys this computer copied to it. Your desktop always forgets the cloud straight away, whether or not the cloud answers. If the cloud can't confirm the keys are gone (it's offline, or you're signed out), Rebel says so in a notice after forgetting:
 
-- **The cloud cannot be reached** — Rebel offers **Forget anyway**. Your desktop forgets the cloud immediately; the keys on that instance are removed the next time it is reachable, or disappear when the instance is deleted.
-- **You are signed out** — sign in first, so Rebel can remove the relayed keys properly. There is no Forget anyway in this case, because it would leave a key behind that only your sign-in can clear.
-- **Something failed on this computer** — the cloud side is already done; try again once, and if it repeats, use **Report a problem** in Settings.
+- **Rebel will try again** — for Mindstone Cloud, when the removal was recorded, Rebel retries the next time you reconnect this computer to that cloud.
+- **The keys may still be there** — otherwise (for example your own cloud, or you were signed out), the keys can stay on that instance until it is deleted. If you no longer use that cloud, delete it to remove them.
 
-Whatever happened, the message says which case you are in. Rebel does not guess.
+The notice says which of the two applies.
+
+If forgetting fails on this computer itself, the connection stays and Rebel tells you to reload and try again.
