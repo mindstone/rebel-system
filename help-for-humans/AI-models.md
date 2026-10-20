@@ -128,7 +128,7 @@ This is optional.
 
 It handles deeper planning before the Main work model gets on with it. For harder jobs, this can improve quality. For simple jobs, it can be overkill.
 
-You can leave it as **Off (no plan mode)** for the simplest setup — Rebel will just use your Main work model end-to-end and skip the separate planning phase.
+You can leave it on **Same as working model** for the simplest setup — your Main work model does the planning too, so there's one model to think about.
 
 ### Main work
 
@@ -161,7 +161,7 @@ A **Model team** is Rebel bringing together a set of models that each do a diffe
 The roles within a team are:
 
 - **Main work** — the model you talk to most, handling writing, editing, and tool use
-- **Deep thinking** — an optional planning model that thinks harder before Main work starts (leave it Off for simple tasks)
+- **Deep thinking** — an optional separate planning model that thinks harder before Main work starts (leave it on Same as working model and Main work plans too)
 - **Behind the Scenes** — background jobs like safety checks, memory updates, and file indexing
 - **Council** — multiple models consulted in parallel for important decisions (see [Council Mode](rebel://library/rebel-system%2Fhelp-for-humans%2Fmulti-model-council-mode.md))
 - **Recovery** — a fallback that steps in when something hiccups, so work keeps going rather than stopping cold
@@ -178,7 +178,7 @@ You manage all of this in **Settings → Agent & Voice → Intelligence** under 
 
 Because Rebel works as a team, a single task — even something as ordinary as searching your email — can touch **several models**, each doing its bit:
 
-- the **Planner** maps out the approach (only if you've turned it on)
+- the **Planner** maps out the approach on bigger jobs (your Main work model, unless you've picked a separate Planner)
 - **Main work** does the actual searching and writes the answer you see
 - **Behind the Scenes** quietly runs safety checks, updates memory, indexes what it finds, and names the conversation
 
@@ -188,7 +188,7 @@ So if you notice a task used four or five models, nothing's gone wrong and there
 
 If you'd rather keep things to fewer moving parts, you can:
 
-- turn the **Planner** off, so Main work handles everything end-to-end
+- leave the **Planner** on **Same as working model**, so Main work handles the planning too
 - set the **same model** for Main work and Behind the Scenes
 - or ignore the individual roles entirely and just use the **Quality Tier** slider inside a conversation
 
@@ -202,7 +202,7 @@ It's an **experimental feature and off by default.** Turn it on in **Settings �
 
 A few things worth knowing:
 
-- It only kicks in when Rebel is **planning** a job — i.e. you've set a separate Planner model so plan mode is active. For an ordinary one-shot reply, your Main work model handles it.
+- It only kicks in when Rebel **plans** a job first, as it does for bigger jobs. For an ordinary one-shot reply, your Main work model handles it.
 - If you've **explicitly picked a model** for the conversation, Rebel honours that and steps aside — Smart picking won't override your choice.
 - It only ever picks from the models *you* marked eligible; it won't reach for something you haven't enabled.
 
@@ -231,7 +231,7 @@ For most people, the honest answer is: **you don't need to manage models at all.
 - Use your preferred provider card
 - Pick a strong **Main work** model
 - Use the **Quality Tier** slider to set how much quality vs. speed you want per conversation — it's the simplest way to get good results without managing individual models (Smart model picking is a separate, experimental opt-in if you later want per-step routing)
-- Leave **Planner** on **Off (no plan mode)** unless you do lots of complex work — picking a separate model here turns on the planning phase
+- Leave **Planner** on **Same as working model** unless you do lots of complex work — picking a separate model here gives planning a model of its own
 - Leave **Behind the Scenes** on the default unless you have a reason to change it
 
 That keeps Rebel fast without turning settings into a hobby.
