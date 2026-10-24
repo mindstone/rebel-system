@@ -14,12 +14,15 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Improvements
 
+- **Haiku 5.5 takes over the background chores** — If you use your own Anthropic connection and your background model was Haiku 4.5 (or left on the default), Rebel now uses Haiku 5.5 for titles, summaries and other background work. You can switch back in Settings. The safety check stays on Haiku 4.5 for now, and OpenRouter, ChatGPT and Mindstone-plan setups, along with any per-task choices, stay as they are. A promotion nobody had to apply for.
+- **More models to choose from** — GPT-6.1 Sol (with an OpenAI key, ChatGPT or OpenRouter), Claude Haiku 5.5 (with an Anthropic key), Gemini 4 Argon and Gemini 3.8 Flash (with a Google key or OpenRouter), and GLM 5.3 Flash and DeepSeek V4.1 Flash (October update) on OpenRouter. Nothing switches on its own; pick them in Settings when you fancy a change.
 - **Your saved permissions now move with you to a new computer** — The things you've told Rebel it can do without asking are now kept in your Library. Open the same Library on a new computer and Rebel already knows them. Close Rebel on the old computer first.
 - **Forgetting, simplified** — Ask Rebel to forget something and it takes it out of your memory, or deletes the memory, and it stops turning up in search. Tell Rebel the same thing again later and it can remember it again. Your own Library edits still win over older background updates. Memory that behaves like memory.
 
 ### Fixes
 
 - **Helpers save where Rebel does** — When Rebel hands part of a job to a helper, the helper now keeps its working files in the same task folder Rebel would use. It no longer wanders off to start a folder of its own outside your Spaces and then ask your permission to save there.
+- **Cost estimates are fairer about very long requests** — Some models charge a higher rate once a single request gets very long, and Rebel's estimates used to miss it. They now include it, for retried and failed attempts too. Costs already recorded aren't recalculated. Long requests, honestly priced.
 - **Forget means forget** — "Forget cloud on this device" now always forgets, even when the cloud is offline. If the cloud can't confirm it removed your saved keys, Rebel tells you so afterwards instead of refusing and hiding a Forget anyway button.
 - **The Planner says what it does** — With no Planner chosen, the setting now reads **Same as working model**, because that's what happens: on bigger jobs your Main work model does the planning. It used to say "Off (no plan mode)", which it never quite was.
 - **Clearer guidance for task files** — Rebel instructs its agents to keep a task's drafts, batches and scratch notes in one task folder in your Chief of Staff space, and put only the finished piece in the space you named.
