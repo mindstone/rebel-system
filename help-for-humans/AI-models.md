@@ -154,7 +154,7 @@ This model handles quieter jobs in the background, such as:
 
 In the app this is labeled **Behind the Scenes**.
 
-If you use your own Anthropic connection and haven't picked something else, Behind the Scenes runs on **Claude Haiku 5.5**. On OpenRouter, ChatGPT or a Mindstone plan it stays on **Claude Haiku 4.5**. The safety check and the check on memory saves stay on Haiku 4.5 for now, whichever connection you use. You can change the Behind the Scenes model any time in [Settings → Agent & Voice → Intelligence](rebel://settings/agents).
+If you use your own Anthropic connection and haven't picked something else, Behind the Scenes runs on **Claude Haiku 5.5**. On OpenRouter, ChatGPT or a Mindstone plan, Behind the Scenes keeps the model it already had. When your Anthropic Behind the Scenes model is Haiku 5.5, the safety check and the check on memory saves stay on **Claude Haiku 4.5** for now; a model you've picked specifically for those, or one your organisation sets, still wins. You can change the Behind the Scenes model any time in [Settings → Agent & Voice → Intelligence](rebel://settings/agents).
 
 ### Model team
 
@@ -212,7 +212,7 @@ If you'd rather just dial overall quality up or down without thinking about indi
 
 ## Newer models you can pick
 
-These have joined the list. None of them is switched on for you: pick one in [Settings → Agent & Voice → Intelligence](rebel://settings/agents) when you fancy a change.
+These have joined the list. Apart from Haiku 5.5 taking over Behind the Scenes for eligible Anthropic users (above), none of them is switched on for you: pick one in [Settings → Agent & Voice → Intelligence](rebel://settings/agents) when you fancy a change.
 
 | Model | Where you can pick it |
 |---|---|
