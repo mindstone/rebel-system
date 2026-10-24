@@ -1,6 +1,6 @@
 ---
 description: "How to power Rebel's AI — a flat-fee Mindstone plan or bring your own (ChatGPT Pro, OpenRouter, Anthropic) — then choose Planner, Main work, and Behind the Scenes models, why one task can use several models, and what happens when you pick a model outside your plan tier"
-last_updated: "2026-09-04"
+last_updated: "2026-10-24"
 ---
 
 # AI models
@@ -154,6 +154,8 @@ This model handles quieter jobs in the background, such as:
 
 In the app this is labeled **Behind the Scenes**.
 
+If you use your own Anthropic connection and haven't picked something else, Behind the Scenes runs on **Claude Haiku 5.5**. On OpenRouter, ChatGPT or a Mindstone plan it stays on **Claude Haiku 4.5**. The safety check and the check on memory saves stay on Haiku 4.5 for now, whichever connection you use. You can change the Behind the Scenes model any time in [Settings → Agent & Voice → Intelligence](rebel://settings/agents).
+
 ### Model team
 
 A **Model team** is Rebel bringing together a set of models that each do a different job. Instead of one model doing everything, Rebel picks the right tool for each step of a task.
@@ -207,6 +209,18 @@ A few things worth knowing:
 - It only ever picks from the models *you* marked eligible; it won't reach for something you haven't enabled.
 
 If you'd rather just dial overall quality up or down without thinking about individual models, use the **Quality Tier** slider below — that's the simpler control for most people.
+
+## Newer models you can pick
+
+These have joined the list. None of them is switched on for you: pick one in [Settings → Agent & Voice → Intelligence](rebel://settings/agents) when you fancy a change.
+
+| Model | Where you can pick it |
+|---|---|
+| **GPT-6.1 Sol** | An OpenAI key, ChatGPT Pro, or OpenRouter |
+| **GPT-6 Astra** and **GPT-6 Sol** | OpenRouter (an OpenAI key and ChatGPT Pro already had them) |
+| **Claude Haiku 5.5** | An Anthropic key; on OpenRouter, as a Behind the Scenes model only |
+| **Gemini 4 Argon** and **Gemini 3.8 Flash** | A Google Gemini key, or OpenRouter |
+| **GLM 5.3 Flash** and **DeepSeek V4.1 Flash** (October update) | OpenRouter |
 
 ## Quality Tier selector (per-conversation)
 
