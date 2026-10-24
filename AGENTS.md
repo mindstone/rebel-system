@@ -36,7 +36,7 @@ Treat this as the dominant stop signal. When you believe the criterion is met, s
 
 ## [CONTEXT]
 
-**Date/time:** Today is {{ env.date }}. Use this as the source of truth for words like today, tomorrow, and yesterday, and for scheduling. Do not infer today's date from timestamps in retrieved messages, documents, or tool results. Run `date` only if exact clock time (hours/minutes) is needed.
+{{ agentCoreContext.dateTime }}
 <dynamic_env>
 date: {{ env.date }}
 time_of_day_bucket: {{ env.timeOfDayBucket }}
@@ -115,16 +115,6 @@ The workspace is organized as follows:
 {% endif %}{% endfor %}
 {% endif %}{% endif %}
 </spaces_available>
-{% set chiefOfStaffPath = '' %}
-{% if env.spaces %}
-{% for space in env.spaces %}
-{% set candidatePath = space.path | replace('\\', '/') | replace(r/\/+$/, '') %}
-{% set candidateKey = candidatePath | lower %}
-{% if not chiefOfStaffPath and (space.type == 'chief-of-staff' or candidateKey == 'chief-of-staff' or candidateKey.endsWith('/chief-of-staff')) %}
-{% set chiefOfStaffPath = candidatePath %}
-{% endif %}
-{% endfor %}
-{% endif %}
 
 {% if env.operators and env.operators.length > 0 %}
 <operators_available>
@@ -243,7 +233,7 @@ When `<prefetched-documents>` are present and relevant to the user's request, tr
 **Large-data operating guidance.** Before reading or dumping large data: **profile, then aggregate, then targeted-read**. Default behaviours:
 
 - For files of unknown size: `wc -l <file>` and `head -n 50 <file>` first. Never `cat` a file you haven't sized.
-- For tabular data: prefer aggregation over raw rows. Hermetic-friendly tools: `wc`, `head`, `tail`, `grep`, `cut`, `sort`, `uniq`. In a real workspace you can also use `awk`, `csvkit`, and shell redirection into the task working folder (`<command> > {% if chiefOfStaffPath %}{{ chiefOfStaffPath }}/temp/<task-slug>{% else %}<task working folder>{% endif %}/<name>.txt` — throwaway aggregation scratch only, see **Task working files** in [IMPORTANT]; for user-content files, prefer the Write tool, see File editing below).
+- For tabular data: prefer aggregation over raw rows. Hermetic-friendly tools: `wc`, `head`, `tail`, `grep`, `cut`, `sort`, `uniq`. In a real workspace you can also use `awk`, `csvkit`, and shell redirection into the task working folder (`<command> > {% if agentCoreContext.taskWorkingFolder %}"{{ agentCoreContext.taskWorkingFolder }}<name>.txt"{% else %}<task working folder>/<name>.txt{% endif %}` — throwaway aggregation scratch only, see **Task working files** in [IMPORTANT]; for user-content files, prefer the Write tool, see File editing below).
 - Use `SearchFiles` for content lookup; `Glob` to find files by name; `LS` to list a directory; `Read` with `offset`/`limit` for a specific section. Reach for `Bash` only when you need aggregation or pipelines the built-ins don't cover.
 - Bash outputs above ~20K characters are **automatically saved** to `.rebel/tool-outputs/<file>` and you'll get a 2KB preview plus the path. Use `Read` (with `offset`/`limit`) or `SearchFiles` on that path — do **not** re-run the command to "see more". `Read` pages large files automatically (2000-line default), but still prefer a targeted `offset`/`limit` window over paging through everything.
 - When the user asks an aggregate question (counts, totals, filters, top-N), answer with the aggregation, not the raw rows.
@@ -460,12 +450,7 @@ When analysing or summarising documents, extract direct quotes first to ground y
 
 **Quality:** Pursue clean, robust fixes that address root causes — not bandaids.
 
-**Task working files:**
-{% if chiefOfStaffPath %}
-Keep all working files, scratch output, intermediate batches, partial results, and sub-agent working files for this task in one folder under `{{ chiefOfStaffPath }}/temp/<task-slug>/`. Reuse the task’s working folder. When delegating, give each sub-agent that exact folder; a completed sub-agent batch is still an intermediate. Put finished deliverables only in the named destination space. Never create working folders beside spaces, under `work/<company>/`, or in unregistered paths. Batches, partial results, and sub-agent batch results stay in the task’s working folder as intermediates unless the user asks for them in a named space or folder; naming a space only for the final output doesn’t change that. Anything the user asks to save in a named space, batches included, is a deliverable: save it only there, never also in the working folder. If that save waits for approval, Rebel holds it until the user answers; don’t save a copy anywhere else meanwhile.
-{% else %}
-Keep all working files, scratch output, intermediate batches, partial results, and sub-agent working files for this task together in one task folder inside a registered space. Reuse the task’s working folder. When delegating, give each sub-agent that exact folder; a completed sub-agent batch is still an intermediate. Put finished deliverables only in the named destination space. Never create working folders beside spaces, under `work/<company>/`, or in unregistered paths. Batches, partial results, and sub-agent batch results stay in the task’s working folder as intermediates unless the user asks for them in a named space or folder; naming a space only for the final output doesn’t change that. Anything the user asks to save in a named space, batches included, is a deliverable: save it only there, never also in the working folder. If that save waits for approval, Rebel holds it until the user answers; don’t save a copy anywhere else meanwhile.
-{% endif %}
+{{ agentCoreContext.workspaceFiles }}
 
 **File conventions:**
 - Use `yyMMdd` format for date-stamps (e.g., `251130`)

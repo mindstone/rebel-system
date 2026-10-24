@@ -96,6 +96,26 @@ export async function renderTemplate(template: string, context: CompositePromptC
 }
 
 /**
+ * Renders a prompt fragment (body without frontmatter) with plain variables.
+ * Same Nunjucks configuration as the composite render, so a fragment renders
+ * here exactly as the app's prompt file service renders it.
+ *
+ * @param fragment - The fragment body (frontmatter already stripped)
+ * @param variables - The fragment's variables
+ * @returns The rendered fragment
+ * @throws Error if rendering fails or a variable is missing
+ */
+export async function renderFragment(fragment: string, variables: Record<string, unknown>): Promise<string> {
+  try {
+    const env = await getNunjucksEnv();
+    return env.renderString(fragment, variables);
+  } catch (error) {
+    const message = error instanceof Error ? error.message : String(error);
+    throw new Error(`Fragment rendering failed: ${message}`);
+  }
+}
+
+/**
  * Validates that a rendered template has no leftover Nunjucks artifacts.
  *
  * @param rendered - The rendered template string

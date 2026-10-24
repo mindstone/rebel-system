@@ -8,8 +8,11 @@
 
 import { readFile } from 'node:fs/promises';
 import { existsSync } from 'node:fs';
-import { resolve, join } from 'node:path';
+import { resolve, join, sep, isAbsolute } from 'node:path';
 import { DEFAULT_MODEL, type RunOptions } from './types.js';
+import { parseFrontmatter } from './frontmatter.js';
+import { getRebelSystemRoot } from './scanner.js';
+import { renderFragment } from './template.js';
 
 // ============================================================================
 // Type Definitions (matching Electron app's promptTemplateService.ts)
@@ -72,6 +75,19 @@ export interface EnvContext {
 }
 
 /**
+ * The shared core-context fragment's main-prompt parts (`prompts/agent/core-context.md`),
+ * which AGENTS.md places as `{{ agentCoreContext.* }}`.
+ */
+export interface MainPromptCoreContext {
+  /** The date rule ([CONTEXT]). */
+  dateTime: string;
+  /** The workspace-path and task-working-file rules ([IMPORTANT]). */
+  workspaceFiles: string;
+  /** Absolute `<root>/<Chief of Staff>/temp/<task-slug>/` folder, or null. */
+  taskWorkingFolder: string | null;
+}
+
+/**
  * Full composite prompt context.
  * All fields must be provided to prevent Nunjucks errors.
  */
@@ -82,6 +98,11 @@ export interface CompositePromptContext {
   env: EnvContext;
   frequentTools: FrequentTool[];
   connectedPackages: ConnectedPackage[];
+  /**
+   * Required by AGENTS.md. `buildContextFromOptions` supplies it (rendering the
+   * fragment needs Nunjucks, so the synchronous `createDefaultContext` can't).
+   */
+  agentCoreContext?: MainPromptCoreContext;
   /**
    * Optional user-set success criterion. When present, AGENTS.md renders a
    * `{% if finishLine %}` block instructing the agent to treat this as the
@@ -207,6 +228,79 @@ async function loadChiefOfStaffFromWorkspace(workspacePath: string): Promise<str
 }
 
 // ============================================================================
+// Shared core context (mirrors the app's src/core/services/agentCoreContext.ts)
+// ============================================================================
+
+const CORE_CONTEXT_FRAGMENT = join('prompts', 'agent', 'core-context.md');
+const TASK_SLUG_PLACEHOLDER = '<task-slug>';
+
+/**
+ * Picks the Chief of Staff path exactly as the app's `deriveAgentCoreContextFacts`
+ * does: the first space whose type is `chief-of-staff`, or whose lower-cased,
+ * `/`-separated path is `chief-of-staff` or ends with `/chief-of-staff`. Keep the
+ * two in step; rebel-system can't import app code.
+ */
+export function selectChiefOfStaffPath(spaces: readonly SpaceSummary[] | undefined): string | null {
+  for (const space of spaces ?? []) {
+    const candidatePath = space.path.replace(/\\/g, '/').replace(/\/+$/u, '');
+    const candidateKey = candidatePath.toLowerCase();
+    if (
+      (space.type === 'chief-of-staff' ||
+        candidateKey === 'chief-of-staff' ||
+        candidateKey.endsWith('/chief-of-staff')) &&
+      candidatePath
+    ) {
+      return candidatePath;
+    }
+  }
+  return null;
+}
+
+/** The absolute task working folder (`<root>/<cos>/temp/<task-slug>/`), as the app computes it. */
+export function resolveTaskWorkingFolder(workspaceRoot: string | null, chiefOfStaffPath: string | null): string | null {
+  if (!workspaceRoot || !chiefOfStaffPath) return null;
+  const base = isAbsolute(chiefOfStaffPath)
+    ? join(chiefOfStaffPath)
+    : join(workspaceRoot, ...chiefOfStaffPath.split('/').filter(Boolean));
+  return join(base, 'temp', TASK_SLUG_PLACEHOLDER) + sep;
+}
+
+/**
+ * Renders the core-context fragment's main-prompt parts for this env, as the app's
+ * `renderMainPromptCoreContext` does (file access `write`).
+ *
+ * @param rootPath - rebel-system root holding `prompts/agent/core-context.md`
+ * @param env - The env the composite prompt renders
+ */
+export async function renderMainPromptCoreContext(rootPath: string, env: EnvContext): Promise<MainPromptCoreContext> {
+  const fragmentPath = join(rootPath, CORE_CONTEXT_FRAGMENT);
+  const raw = await readFileOrEmpty(fragmentPath);
+  if (!raw) {
+    throw new Error(`Core-context fragment not found or empty: ${fragmentPath}`);
+  }
+  const fragment = parseFrontmatter(raw).content;
+  const workspaceRoot = env.workspacePath && env.workspacePath !== 'none' ? env.workspacePath : null;
+  const taskWorkingFolder = resolveTaskWorkingFolder(workspaceRoot, selectChiefOfStaffPath(env.spaces));
+  const render = async (part: 'dateTime' | 'workspaceFiles'): Promise<string> =>
+    (
+      await renderFragment(fragment, {
+        part,
+        date: env.date,
+        timezone: env.timezone,
+        platform: env.platform,
+        workspacePath: workspaceRoot ?? '',
+        taskWorkingFolder: taskWorkingFolder ?? '',
+        fileAccess: 'write',
+      })
+    ).trim();
+  return {
+    dateTime: await render('dateTime'),
+    workspaceFiles: await render('workspaceFiles'),
+    taskWorkingFolder,
+  };
+}
+
+// ============================================================================
 // Public API
 // ============================================================================
 
@@ -265,6 +359,8 @@ export interface BuildContextOptions {
   rebelSystemMd: string;
   /** CLI run options */
   options: RunOptions;
+  /** rebel-system root for the core-context fragment (defaults to this CLI's own root) */
+  rootPath?: string;
 }
 
 /**
@@ -281,7 +377,7 @@ export interface BuildContextOptions {
  * @returns Complete context ready for template rendering
  */
 export async function buildContextFromOptions(opts: BuildContextOptions): Promise<CompositePromptContext> {
-  const { rebelSystemMd, options } = opts;
+  const { rebelSystemMd, options, rootPath = getRebelSystemRoot() } = opts;
 
   // Start with default context
   const workspacePath = options.workspace ? resolve(options.workspace) : process.cwd();
@@ -318,6 +414,9 @@ export async function buildContextFromOptions(opts: BuildContextOptions): Promis
   if (normalizedFinishLine !== undefined) {
     context.finishLine = fenceFinishLine(normalizedFinishLine);
   }
+
+  // Last, so the spaces and workspace above are what it selects from.
+  context.agentCoreContext = await renderMainPromptCoreContext(rootPath, context.env);
 
   return context;
 }
@@ -369,6 +468,10 @@ export function validateContext(context: CompositePromptContext): string[] {
   // env.spaces must be an array
   if (!Array.isArray(env.spaces)) {
     issues.push('env.spaces must be an array');
+  }
+
+  if (!context.agentCoreContext) {
+    issues.push('agentCoreContext is required (buildContextFromOptions supplies it)');
   }
 
   // frequentTools must be an array

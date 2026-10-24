@@ -218,6 +218,7 @@ export async function runCommand(
     const context = await buildContextFromOptions({
       rebelSystemMd: agentsMd,
       options: runOptions,
+      rootPath,
     });
 
     // Render AGENTS.md with context
