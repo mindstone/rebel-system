@@ -19,6 +19,7 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **Helpers save where Rebel does** — When Rebel hands part of a job to a helper, the helper now keeps its working files in the same task folder Rebel would use. It no longer wanders off to start a folder of its own outside your Spaces and then ask your permission to save there.
 - **Forget means forget** — "Forget cloud on this device" now always forgets, even when the cloud is offline. If the cloud can't confirm it removed your saved keys, Rebel tells you so afterwards instead of refusing and hiding a Forget anyway button.
 - **The Planner says what it does** — With no Planner chosen, the setting now reads **Same as working model**, because that's what happens: on bigger jobs your Main work model does the planning. It used to say "Off (no plan mode)", which it never quite was.
 - **Clearer guidance for task files** — Rebel instructs its agents to keep a task's drafts, batches and scratch notes in one task folder in your Chief of Staff space, and put only the finished piece in the space you named.
