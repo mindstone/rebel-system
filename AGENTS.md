@@ -36,7 +36,7 @@ Treat this as the dominant stop signal. When you believe the criterion is met, s
 
 ## [CONTEXT]
 
-{{ agentCoreContext.dateTime }}
+{{ agentCoreContext.dateTime }}{# Text lives in prompts/agent/core-context.md, rendered by src/core/services/agentCoreContext.ts. Edit it there, not here. #}
 <dynamic_env>
 date: {{ env.date }}
 time_of_day_bucket: {{ env.timeOfDayBucket }}
@@ -450,7 +450,7 @@ When analysing or summarising documents, extract direct quotes first to ground y
 
 **Quality:** Pursue clean, robust fixes that address root causes — not bandaids.
 
-{{ agentCoreContext.workspaceFiles }}
+{{ agentCoreContext.workspaceFiles }}{# Text lives in prompts/agent/core-context.md, rendered by src/core/services/agentCoreContext.ts. Edit it there, not here. #}
 
 **File conventions:**
 - Use `yyMMdd` format for date-stamps (e.g., `251130`)
