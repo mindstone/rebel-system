@@ -14,6 +14,7 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Improvements
 
+- **Security fixes, still arriving** — Rebel now runs on a newer version of the browser engine inside it, which still gets security fixes; the old one stopped getting them on October 20. On a Mac, this version needs macOS 13 or later. Patched, quietly.
 - **Your saved permissions now move with you to a new computer** — The things you've told Rebel it can do without asking are now kept in your Library. Open the same Library on a new computer and Rebel already knows them. Close Rebel on the old computer first.
 - **Forgetting, simplified** — Ask Rebel to forget something and it takes it out of your memory, or deletes the memory, and it stops turning up in search. Tell Rebel the same thing again later and it can remember it again. Your own Library edits still win over older background updates. Memory that behaves like memory.
 
