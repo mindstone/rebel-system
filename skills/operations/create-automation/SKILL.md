@@ -9,7 +9,7 @@ tools_required:
   - rebel_automations_create
   - rebel_automations_run
   - rebel_automations_list
-last_updated: "2026-08-07"
+last_updated: "2026-10-25"
 ---
 
 # Create Automation
@@ -29,7 +29,7 @@ You're helping the user set up a scheduled automation. Your job is to understand
 
 For `once` automations, **do NOT do a supervised first run**. A successful first run marks the automation as completed, which permanently prevents the scheduled run from firing. Instead, just create it and let it run at the scheduled time. If the automation needs tool approvals, those will be staged for the user's approval when it runs.
 
-Also: when calculating the `dateTime` for a once-schedule, compute the ISO timestamp **immediately before** calling `rebel_automations_create` — not earlier in the conversation. Agent processing time can eat into tight windows.
+**Times:** for a relative time ("in 10 minutes", "in 2 hours"), use `{type:"once", inMinutes:N}`: the tool works out the clock time, so don't look the time up first. For a wall-clock time ("tomorrow at 3pm"), use `dateTime`. The tool's reply says how long until the run (e.g. "in 10 min"): check it matches what the person asked, and tell them that, not a time you worked out yourself.
 
 ## Supervised First Run (Important)
 
@@ -58,6 +58,7 @@ Convert natural language to schedule types:
 | "every 3 days" | every_n_days | intervalDays: 3, time (ask) |
 | "first of every month" | monthly | daysOfMonth: [1], time (ask) |
 | "when a transcript is ready" | event | trigger: "transcript-ready" |
+| "in 10 minutes", "in 2 hours" | once | {type:"once", inMinutes:10} / {type:"once", inMinutes:120} |
 | "do this tomorrow at 3pm" | once | {type:"once", dateTime:"<ISO datetime>"} |
 | "run this on Friday at 5pm, just this once" | once | {type:"once", dateTime:"<ISO datetime for next Friday 17:00>"} |
 

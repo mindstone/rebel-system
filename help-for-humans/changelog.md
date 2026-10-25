@@ -21,6 +21,7 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **"In 10 minutes" means in 10 minutes** — Ask for a one-off automation a few minutes or hours from now and it's set for exactly then, and Rebel tells you how long until it runs. Before, it could guess the time and land a couple of hours late while promising otherwise.
 - **You can reply in an automation's conversation** — Ask a follow-up right where the run happened; your reply gets the same safety checks as any chat, without reusing its "for this automation" permissions.
 - **Your phone keeps its screen** — Check-ins now show once, folded into the reply they belong to, and only things that need you sit above the message box. Rating is one small row of stars you can wave away with ×, and Set finish line and Review share a row.
 - **Saved files open when you tap them** — When Rebel says it saved a file to one of your Spaces, tap the file name to open it, on your phone, on the web and on desktop. Messages from before this change stay as they were.
