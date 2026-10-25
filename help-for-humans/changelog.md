@@ -29,6 +29,7 @@ What's new in Rebel. We ship fast, so there's always something.
 - **Forget means forget** — "Forget cloud on this device" now always forgets, even when the cloud is offline. If the cloud can't confirm it removed your saved keys, Rebel tells you so afterwards instead of refusing and hiding a Forget anyway button.
 - **The Planner says what it does** — With no Planner chosen, the setting now reads **Same as working model**, because that's what happens: on bigger jobs your Main work model does the planning. It used to say "Off (no plan mode)", which it never quite was.
 - **Clearer guidance for task files** — Rebel instructs its agents to keep a task's drafts, batches and scratch notes in one task folder in your Chief of Staff space, and put only the finished piece in the space you named.
+- **Held-back automations stop crying wolf** — An automation that only waited for your approval no longer says "Ran with issues". Its card now says some actions were held back, and an automation asks once for one change instead of twice.
 
 ## v0.4.95 — Oct 18, 2026
 

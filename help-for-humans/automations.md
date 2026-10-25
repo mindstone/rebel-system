@@ -133,7 +133,7 @@ These are the current status labels to know:
 | **Pending** | Waiting for its turn |
 | **Running** | Currently in progress |
 | **Completed** | Finished successfully |
-| **Completed with issues** | Finished, but some actions still needed review or were blocked |
+| **Some actions held back** | Finished, but some actions still needed review or were blocked |
 | **Failed** | Something went wrong |
 | **Blocked by security** | Stopped because approvals or safety rules blocked it |
 | **Cancelled** | Stopped before completion |
@@ -182,7 +182,7 @@ An automation whose saved schedule is broken — for example a weekly one with n
 - Review the staged approval
 - Update the automation's permissions if needed
 
-### It says “Completed with issues”
+### It says “Some actions held back”
 
 - The automation finished, but some steps still need your attention
 - Open the run details and check what was staged or skipped
