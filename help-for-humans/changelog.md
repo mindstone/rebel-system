@@ -8,7 +8,6 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Highlights
 
-- **Your reply can carry on in your cloud** — With cloud continuity and an updated cloud, close the laptop or lose the connection and a running reply can continue there. A model that runs only on your computer waits for it unless you choose a hosted fallback.
 - **New computer, existing conversations** — Use your usual Rebel sign-in to reconnect your existing Mindstone Cloud from the welcome screen and open Conversations with the conversations and folders loaded so far. Your old computer stays connected; check the [moving guide](rebel://library/rebel-system%2Fhelp-for-humans%2Fmoving-rebel-to-a-new-computer.md) before setup if you want a fuller move.
 <!-- feature: conversation-handover | detail: Keep going leaves your conversation as it is and remembers your choice. Your original messages, draft, attached files and any running work stay in the original conversation. -->
 - **Start fresh with a handover** — When a conversation gets long or gets stuck on repeated failed actions or a usage limit, Rebel can offer Start fresh: review and edit a short handover, then choose Start conversation to send that exact text as the first message in a new conversation. The Original conversation link takes you back.
