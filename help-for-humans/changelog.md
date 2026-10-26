@@ -22,6 +22,7 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **Phone menus that let you leave** — Every menu on your phone (a chat's ⋯, message options, a long-press in your conversations, Attach and the rest) is now one Rebel sheet with Cancel; a tap outside or Back closes it. On Android the conversation menu shows Delete again, and on iPhone opening a chat's ⋯ no longer whisks you back to its first message.
 - **Pasted images on more plans** — if your plan's main model can't read images, pasting or attaching one no longer stops you at Send, as long as your Thinking model can read images: Rebel asks it what's in the picture, then answers. Same way it already reads images in files it opens.
 - **"In 10 minutes" means in 10 minutes** — Ask for a one-off automation a few minutes or hours from now and it's set for exactly then, and Rebel tells you how long until it runs. Before, it could guess the time and land a couple of hours late while promising otherwise.
 - **You can reply in an automation's conversation** — Ask a follow-up right where the run happened; your reply gets the same safety checks as any chat, without reusing its "for this automation" permissions.
