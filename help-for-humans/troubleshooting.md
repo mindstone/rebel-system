@@ -1,6 +1,6 @@
 ---
 description: "Common problems and solutions for Rebel: startup issues, connector sign-in expiry, voice and transcription, conversation errors, and getting help"
-last_updated: "2026-07-02"
+last_updated: "2026-10-26"
 ---
 
 # Troubleshooting
@@ -369,7 +369,7 @@ When reporting an issue, include:
 
 ### Report a Bug
 
-If you encounter a bug during a conversation, use the **Feedback & bugs** option in the Help menu. The bug report dialog automatically pre-fills reproduction steps and expected behavior from your current conversation, so you don't have to describe everything from scratch.
+If you encounter a bug during a conversation, use the **Feedback & bugs** option in the Help menu. The bug report dialog automatically pre-fills reproduction steps and expected behavior from your current conversation, so you don't have to describe everything from scratch. After an error, Rebel may also offer **Send report** in the conversation — open its **i** panel to see what goes, review it first, or, if you share logs weekly, choose **Always send without asking**.
 
 ### Ask Rebel
 

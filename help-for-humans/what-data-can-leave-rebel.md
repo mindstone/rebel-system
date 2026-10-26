@@ -1,6 +1,6 @@
 ---
 description: "Every point where data can leave Rebel — usage analytics, crash reports, AI providers, connectors, meetings, updates, sign-in and cloud sync — which of them you can switch off, and exactly what the two Privacy & Data toggles do and don't cover"
-last_updated: "2026-08-27"
+last_updated: "2026-10-26"
 ---
 
 # What Data Can Leave Rebel
@@ -15,7 +15,7 @@ Two of these you can switch off right now, in **[Settings → Privacy & Safety](
 |---|---|---|
 | **Usage analytics** — which features you use, and when | Mindstone | **Yes** — the *Share usage analytics* toggle |
 | **Crash & error reports** — automatic reports when something breaks | Mindstone | **Yes** — the *Share crash & error reports* toggle |
-| **Bug reports you file yourself** | Mindstone | Yes — by not filing one |
+| **Bug reports you send** — ones you file, and ones Rebel offers after an error (one click, or automatically if you chose Always send) | Mindstone | Yes — decline the offer, or choose *Ask me first next time* on an automatic report |
 | **Your messages, and the files you ask about** | The AI provider you chose | Only by not using the AI |
 | **Anything a connector reaches for** | The service you connected | Yes — disconnect it |
 | **Meeting audio and transcripts** | Your meeting/transcription provider | Yes — don't use the notetaker |
@@ -53,7 +53,7 @@ Rebel filters these reports before they leave: only technical detail is meant to
 
 **What happens when you turn it off.** Rebel asks you to confirm, then stops. It shuts the reporting client down without letting it deliver whatever was queued, throws away crash files already sitting on disk waiting to be sent, and clears your identity from it. Nothing further is captured automatically.
 
-**One thing it doesn't stop, on purpose:** you can still report a bug yourself — the **Feedback** button at the top of the window, or **Feedback & bugs** in the Help menu. That's a deliberate action each time — you type what happened and press send — so it isn't covered by an automatic-sharing switch. If you'd rather send nothing at all, simply don't file one.
+**One thing it doesn't stop, on purpose:** bug reports you send, or chose to have sent automatically — through **Feedback & bugs** in the Help menu, or the **Send report** offer after an error. The offer sends this conversation, recent app logs and app checks privately to Mindstone, with no screenshots; its **i** panel lets you review first or choose **Don't ask again** to stop offers. If you share logs weekly, that panel also offers **Always send without asking**. Automatic reports have an **Ask me first next time** link in their **i** panel to turn that choice off; turning weekly log sharing off also stops automatic bug reports. Private conversations still ask first. These reports are separate from the crash-report toggle. When crash reporting is on, the report carries your account email so we can reply.
 
 **One thing it changes quietly:** rating a conversation with thumbs-up/thumbs-down uses the same delivery channel. With crash sharing off, your rating is stored with the conversation but doesn't reach us, and Rebel says so plainly — the confirmation reads *"Rating saved, not sent"* rather than pretending it arrived.
 
