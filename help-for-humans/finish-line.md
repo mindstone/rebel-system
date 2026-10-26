@@ -43,11 +43,11 @@ In the composer, click the **Flag** icon on the right side of the session contro
 
 ## Setting it on mobile
 
-In an open conversation, tap the **Flag** icon next to the attach button.
+In an open conversation, tap **Set finish line** in the row just above the message box (beside **Review**, when Review is available).
 
 - A sheet opens with a text field.
 - Enter your criterion and tap **Save**.
-- When a Finish line is set, a chip appears above the composer. Tap it to edit or clear.
+- The same chip then shows your Finish line. Tap it to edit or clear.
 
 ---
 

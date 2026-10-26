@@ -133,7 +133,7 @@ These are the current status labels to know:
 | **Pending** | Waiting for its turn |
 | **Running** | Currently in progress |
 | **Completed** | Finished successfully |
-| **Completed with issues** | Finished, but some actions still needed review or were blocked |
+| **Some actions held back** | Finished, but some actions still needed review or were blocked |
 | **Failed** | Something went wrong |
 | **Blocked by security** | Stopped because approvals or safety rules blocked it |
 | **Cancelled** | Stopped before completion |
@@ -150,6 +150,8 @@ From the Automations area, you can:
 - watch a currently running automation live
 - review recent run history
 - see rough usage and cost for each run
+
+You can also reply in a run's conversation to ask a follow-up. Your reply is treated like any other chat: approvals ask as usual, and it doesn't borrow the automation's "for this automation" permissions.
 
 Automation conversations stay out of your **Active** list on purpose. They won't show up there, in the pinned tabs, in unread counts, or in the "active" lists on Homepage and mobile — so they don't crowd your working conversations. Open them from each run's history in [Automations](rebel://automations) (they remain in the **All** tab if you want to see everything).
 
@@ -180,7 +182,7 @@ An automation whose saved schedule is broken — for example a weekly one with n
 - Review the staged approval
 - Update the automation's permissions if needed
 
-### It says “Completed with issues”
+### It says “Some actions held back”
 
 - The automation finished, but some steps still need your attention
 - Open the run details and check what was staged or skipped
