@@ -6,6 +6,10 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ## Unreleased
 
+### Fixes
+
+- **File names in replies open on your phone** — When Rebel names a file with its folder, or links a file it saved (even in a folder with spaces in its name), tap it and it opens; a folder opens in Files. Code that isn't a file no longer dresses up as a link.
+
 ## v0.4.96 — Oct 27, 2026
 
 ### Highlights
