@@ -1,7 +1,7 @@
 ---
 name: git-commit-changes
 description: "Guidelines for batching changes and writing safe, atomic git commits"
-last_updated: 2025-12-19
+last_updated: 2026-10-26
 agent_type: main_agent
 ---
 
@@ -50,11 +50,12 @@ Types: feat, fix, docs, style, refactor, test, chore
 
 ### Handling Concurrent Changes
 Others may be changing the code while you work, and they might have added other files already.
-- IMPORTANT: To minimise interference, ALWAYS chain the reset/add/commit operations (to make sure we unstage first, then stage, then commit, atomically):
+- IMPORTANT: Commit only your own files, by naming them, in one command. Never unstage first with `git reset`: what is staged may be someone else's work, and a bare `git reset` can also drop submodule pointers.
   ```bash
-  git reset && git add wanted-file && git commit -m "fix(auth): Fixed token refresh on expired sessions. Users were getting logged out unexpectedly."
+  git add -- new-file && git commit -F message.txt -- wanted-file new-file
   ```
-- This reduces the window where another contributor's changes could interfere.
+- `git commit -- <files>` commits exactly the files you name, whatever else is staged, so nobody else's changes come along. `git add` is needed only for files git does not track yet.
+- Write the message to a file and pass it with `-F`. In a double-quoted `-m "..."`, the shell runs anything inside backticks.
 
 
 ### Important Notes
