@@ -6,6 +6,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ## Unreleased
 
+## v0.4.96 — Oct 27, 2026
+
 ### Highlights
 
 - **New computer, existing conversations** — Use your usual Rebel sign-in to reconnect your existing Mindstone Cloud from the welcome screen and open Conversations with the conversations and folders loaded so far. Your old computer stays connected; check the [moving guide](rebel://library/rebel-system%2Fhelp-for-humans%2Fmoving-rebel-to-a-new-computer.md) before setup if you want a fuller move.
