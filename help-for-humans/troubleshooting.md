@@ -1,6 +1,6 @@
 ---
 description: "Common problems and solutions for Rebel: startup issues, connector sign-in expiry, voice and transcription, conversation errors, and getting help"
-last_updated: "2026-07-02"
+last_updated: "2026-10-26"
 ---
 
 # Troubleshooting

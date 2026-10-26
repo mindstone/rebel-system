@@ -1,6 +1,6 @@
 ---
 description: "Every point where data can leave Rebel — usage analytics, crash reports, AI providers, connectors, meetings, updates, sign-in and cloud sync — which of them you can switch off, and exactly what the two Privacy & Data toggles do and don't cover"
-last_updated: "2026-08-27"
+last_updated: "2026-10-26"
 ---
 
 # What Data Can Leave Rebel
@@ -53,7 +53,7 @@ Rebel filters these reports before they leave: only technical detail is meant to
 
 **What happens when you turn it off.** Rebel asks you to confirm, then stops. It shuts the reporting client down without letting it deliver whatever was queued, throws away crash files already sitting on disk waiting to be sent, and clears your identity from it. Nothing further is captured automatically.
 
-**One thing it doesn't stop, on purpose:** bug reports you choose to send — through **Feedback & bugs** in the Help menu, or the **Send report** offer after an error. The offer sends this conversation, recent app logs and app checks privately to Mindstone, with no screenshots; its **i** panel lets you review first or choose **Don't ask again** to stop offers. If you share logs weekly, that panel also offers **Always send without asking**. Automatic reports have an **Ask me first next time** link in their **i** panel to turn that choice off; turning weekly log sharing off also stops automatic bug reports. Private conversations still ask first. These reports are separate from the crash-report toggle.
+**One thing it doesn't stop, on purpose:** bug reports you send, or chose to have sent automatically — through **Feedback & bugs** in the Help menu, or the **Send report** offer after an error. The offer sends this conversation, recent app logs and app checks privately to Mindstone, with no screenshots; its **i** panel lets you review first or choose **Don't ask again** to stop offers. If you share logs weekly, that panel also offers **Always send without asking**. Automatic reports have an **Ask me first next time** link in their **i** panel to turn that choice off; turning weekly log sharing off also stops automatic bug reports. Private conversations still ask first. These reports are separate from the crash-report toggle. When crash reporting is on, the report carries your account email so we can reply.
 
 **One thing it changes quietly:** rating a conversation with thumbs-up/thumbs-down uses the same delivery channel. With crash sharing off, your rating is stored with the conversation but doesn't reach us, and Rebel says so plainly — the confirmation reads *"Rating saved, not sent"* rather than pretending it arrived.
 
