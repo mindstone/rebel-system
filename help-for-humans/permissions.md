@@ -55,12 +55,12 @@ Rebel can read, list and search files anywhere on your computer without asking e
 
 - **Blocked folders stay blocked.** Rebel won't read them, including through a shortcut. Searching or listing a larger folder leaves them out, as does Rebel's search of your Spaces. A Block inside a Space holds there too; blocking your whole home folder still lets Rebel read your Spaces.
 - **Your Safety Rules cover reads.** Name a file or folder in your Safety Rules to have Rebel check before reading there, for example "Check with me before reading anything in ~/Documents/Finance". If the check agrees, Rebel reads it. If it objects or can't answer, Rebel asks on a folder card; an automation waits. For searches of a larger folder, name the place by its full path or a path starting from your home folder. A place reached only through a shortcut is checked when read directly; Blocks still apply through shortcuts. Rebel's separate search of your Spaces follows Blocks, but doesn't check rules naming folders.
-- **The folder card is for those decisions.** It says “Rebel wants to read a file” and lets you allow once, allow for this conversation, always allow, or Block the file or folder you pick. Inside a Space, the choices stay within that Space. To block a new place, name it in your Safety Rules; if the check objects, choose Block on the card. Older requests still waiting for an answer still work.
+- **The folder card is for those decisions.** It says “Rebel wants to read a file” (or “Rebel wants to look through a folder” for a search or listing) and lets you allow once, allow for this conversation, always allow, or Block the file or folder you pick. Inside a Space, the choices stay within that Space. To block a new place, name it in your Safety Rules; if the check objects, choose Block on the card. Older requests still waiting for an answer still work.
 - **Allowed folders still mean go ahead.** They skip the Safety Rules check for reads there. You don't need to allow a folder for ordinary reading, and attaching a file still lets Rebel read it. When you save a folder permission, Rebel names any known places inside it that hold keys or passwords and asks you to confirm.
 - **Saved choices live with your other permissions in your Library.** Find and remove them in [Settings → Privacy & Safety → What Rebel can do](rebel://settings/safety#approvalAuthorityLedger). Folder choices belong to the computer you made them on; opening the Library on another computer doesn't apply them there. Existing choices are brought over once per computer when you upgrade. Switching Libraries uses that Library's choices, without bringing the old list over again.
 - **If Rebel can't read your saved folder choices, file reads wait — even inside your Spaces.** Reconnect an unavailable Library and try again. A damaged choice appears under blocked permissions as “Rebel can't read this saved choice”; Remove clears it. If the old folder list is already unreadable during the upgrade, Rebel records the problem and carries on without that list.
 
-On your cloud computer, folder Blocks apply, including those from your other computers when the paths match; allowed folders don't carry over. Restoring a computer from a backup keeps its folder choices. If you restore the same backup onto two computers, matching folder paths share those choices. For a cloud computer, this works if it was set up after this update.
+On your cloud computer, folder Blocks apply, including those from your other computers when the paths match; allowed folders don't carry over. Restoring a computer from a backup or a transfer file keeps its folder choices. If you restore the same backup onto two computers, matching folder paths share those choices. For a cloud computer, this works if it was set up after this update.
 
 If a folder card asks about a place you weren't expecting, don't allow it, and check what Rebel was asked to do before going further.
 
@@ -68,7 +68,7 @@ Reading doesn't give permission to save or edit outside Rebel's folders. Rebel a
 
 ## Privacy Mode
 
-For extra-sensitive conversations, enable **Privacy Mode** from the conversation header. File reads follow the rules above in Private chats too. Other tool actions and memory writes keep their additional approval checks.
+For extra-sensitive conversations, enable **Privacy Mode** from the conversation header. Reading files follows the rules above in Private chats too.
 
 See [privacy-mode.md](library://rebel-system/help-for-humans/privacy-mode.md) for details.
 
