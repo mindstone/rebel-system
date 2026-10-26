@@ -30,6 +30,7 @@ What's new in Rebel. We ship fast, so there's always something.
 - **The Planner says what it does** — With no Planner chosen, the setting now reads **Same as working model**, because that's what happens: on bigger jobs your Main work model does the planning. It used to say "Off (no plan mode)", which it never quite was.
 - **Clearer guidance for task files** — Rebel instructs its agents to keep a task's drafts, batches and scratch notes in one task folder in your Chief of Staff space, and put only the finished piece in the space you named.
 - **Held-back automations stop crying wolf** — An automation that only waited for your approval no longer says "Ran with issues". Its card now says some actions were held back, and an automation asks once for one change instead of twice.
+- **Media from outside your Library asks first** — Videos, audio and PDFs load from your Library, your Spaces, Rebel's own bundled folder and folders you've let Rebel read. For a file anywhere else, Rebel shows a quiet line with **Allow this folder…** instead of opening it unasked, and says plainly that allowing lets Rebel read that folder from now on. Outside those, a folder you've blocked stays blocked, and Rebel says so.
 
 ## v0.4.95 — Oct 18, 2026
 
