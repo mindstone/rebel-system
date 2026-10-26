@@ -22,7 +22,7 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
-- **Pasted images on more plans** — if your plan's main model can't read images, pasting or attaching one no longer stops you at Send, as long as your Thinking model can read images: Rebel asks it what's in the picture, then answers. Same way it already reads images in files it opens.
+- **Pasted pictures work with more models** — until now, if the model doing your Main work couldn't read images, Rebel wouldn't send a message with a pasted or attached picture. Now it does, as long as your Planner can read images (both are under Settings → AI & Models → Model jobs): the Planner looks at the picture and you get your answer as usual. If neither can read it, Rebel still tells you before you send.
 - **"In 10 minutes" means in 10 minutes** — Ask for a one-off automation a few minutes or hours from now and it's set for exactly then, and Rebel tells you how long until it runs. Before, it could guess the time and land a couple of hours late while promising otherwise.
 - **You can reply in an automation's conversation** — Ask a follow-up right where the run happened; your reply gets the same safety checks as any chat, without reusing its "for this automation" permissions.
 - **Your phone keeps its screen** — Check-ins now show once, folded into the reply they belong to, and only things that need you sit above the message box. Rating is one small row of stars you can wave away with ×, and Set finish line and Review share a row.
