@@ -14,18 +14,22 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Improvements
 
+- **Always means Always** — An Always you set on your phone or the web now works on your computer too, for the same connected service. It also stays put when Rebel re-rates a tool's risk. Apparently "always" needed a reminder.
 - **Report a hiccup in one click** — When a conversation hits an error in the desktop app, its error card now offers **Send report** next to the way to fix it. One click sends this conversation and recent app logs privately to Mindstone, and the **i** shows exactly what goes. It asks at most once an hour and twice a day, and **Don't ask again** means it. If you already share logs weekly, you can let it send without asking.
 - **Your saved permissions now move with you to a new computer** — The things you've told Rebel it can do without asking are now kept in your Library. Open the same Library on a new computer and Rebel already knows them. Close Rebel on the old computer first.
 - **Forgetting, simplified** — Ask Rebel to forget something and it takes it out of your memory, or deletes the memory, and it stops turning up in search. Tell Rebel the same thing again later and it can remember it again. Your own Library edits still win over older background updates. Memory that behaves like memory.
 
 ### Fixes
 
+- **"In 10 minutes" means in 10 minutes** — Ask for a one-off automation a few minutes or hours from now and it's set for exactly then, and Rebel tells you how long until it runs. Before, it could guess the time and land a couple of hours late while promising otherwise.
+- **You can reply in an automation's conversation** — Ask a follow-up right where the run happened; your reply gets the same safety checks as any chat, without reusing its "for this automation" permissions.
 - **Your phone keeps its screen** — Check-ins now show once, folded into the reply they belong to, and only things that need you sit above the message box. Rating is one small row of stars you can wave away with ×, and Set finish line and Review share a row.
 - **Saved files open when you tap them** — When Rebel says it saved a file to one of your Spaces, tap the file name to open it, on your phone, on the web and on desktop. Messages from before this change stay as they were.
 - **Helpers save where Rebel does** — When Rebel hands part of a job to a helper, the helper now keeps its working files in the same task folder Rebel would use. It no longer wanders off to start a folder of its own outside your Spaces and then ask your permission to save there.
 - **Forget means forget** — "Forget cloud on this device" now always forgets, even when the cloud is offline. If the cloud can't confirm it removed your saved keys, Rebel tells you so afterwards instead of refusing and hiding a Forget anyway button.
 - **The Planner says what it does** — With no Planner chosen, the setting now reads **Same as working model**, because that's what happens: on bigger jobs your Main work model does the planning. It used to say "Off (no plan mode)", which it never quite was.
 - **Clearer guidance for task files** — Rebel instructs its agents to keep a task's drafts, batches and scratch notes in one task folder in your Chief of Staff space, and put only the finished piece in the space you named.
+- **Held-back automations stop crying wolf** — An automation that only waited for your approval no longer says "Ran with issues". Its card now says some actions were held back, and an automation asks once for one change instead of twice.
 
 ## v0.4.95 — Oct 18, 2026
 
