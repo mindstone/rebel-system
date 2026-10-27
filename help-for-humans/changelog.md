@@ -10,7 +10,7 @@ What's new in Rebel. We ship fast, so there's always something.
 
 - **Gemini finishes what it starts** — With the Gemini model, a reply that needed to use one of your connected apps could stop short and come back empty. Rebel now finishes the step and carries on, and the same fix covers other AI models that behave this way.
 
-- **A blank answer gets a second chance** — When a reply comes back empty, Rebel quietly tries once more, and that second try no longer gets cut off partway. If the reply is still empty, you now get a **Try again** button instead of a conversation that just goes quiet. If Rebel had already done some work, the button says **Start again** and warns that it may do that work twice.
+- **A blank answer gets a second chance** — When a reply comes back empty, Rebel can quietly try once more, and that second try no longer gets cut off partway. If the reply is still empty, you now get a **Try again** button instead of a conversation that just goes quiet. If Rebel had already done some work, the desktop app says **Start again** and warns that it may do that work twice.
 
 - **File names in replies open on your phone** — When Rebel names a file with its folder, or links a file it saved (even in a folder with spaces in its name), tap it and it opens; a folder opens in Files. Code that isn't a file no longer dresses up as a link.
 
