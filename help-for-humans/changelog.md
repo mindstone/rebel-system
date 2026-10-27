@@ -16,6 +16,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 - **File names in replies open on your phone** — When Rebel names a file with its folder, or links a file it saved (even in a folder with spaces in its name), tap it and it opens; a folder opens in Files. Code that isn't a file no longer dresses up as a link.
 
+- **Thinking isn't deciding** — Some AI models write their thinking into their reply, often the ones you add yourself. A half-formed guess in that thinking can no longer approve an action or stop your running task. And if Rebel's quick read of a message you send mid-task gets cut off, your message goes through the usual way instead of being guessed at. Rebel acts on the conclusion, not the muttering.
+
 ## v0.4.96 — Oct 27, 2026
 
 ### Highlights
