@@ -12,9 +12,9 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
-- **Gemini finishes what it starts** — With the Gemini model, a reply that needed to use one of your connected apps could stop short and come back empty. Rebel now finishes the step and carries on, and the same fix covers other AI models that behave this way.
+- **Gemini finishes what it starts** — With the Gemini model, a reply that needed to use one of your connected apps could end with nothing in it. Rebel now does that step and carries on, and the same fix covers other AI models that behave this way.
 
-- **A blank answer gets a second chance** — When a reply comes back empty, Rebel can quietly try once more, and that second try no longer gets cut off partway. If the reply is still empty, you now get a **Try again** button instead of a conversation that just goes quiet. If Rebel had already done some work, the desktop app says **Start again** and warns that it may do that work twice.
+- **A blank answer gets a second chance** — When a reply comes back empty, Rebel can try once more by itself if it has not done anything yet, and that second try no longer gets cut off partway. If the reply is still empty, you now get a **Try again** button instead of a conversation that just goes quiet. If Rebel had already done something, such as sending an email, the desktop app says **Start again** and warns that starting again may do it a second time.
 
 - **Fewer surprise conflict copies** — Rebel keeps a copy of your Library in Mindstone Cloud. When you changed a file only on this computer, it sometimes still put a second "conflict" copy of that file beside it, as if the cloud had changed it too. It no longer does, and there's nothing for you to do. When both sides really did change a file, Rebel's automatic merge of the two used to give up on longer files; now it handles them. Fewer twins, same files.
 
