@@ -8,6 +8,10 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **Gemini finishes what it starts** — With Gemini, a step where it asked to use a tool could be dropped, so the reply came back blank. Rebel now runs the tool and carries on, for any model that signs off the same way.
+
+- **A blank answer gets a second chance** — If a reply comes back blank, Rebel now gives you a real **Try again** button. If it already did some work, **Start again** warns that it may repeat it. Silence has lost its speaking slot.
+
 - **File names in replies open on your phone** — When Rebel names a file with its folder, or links a file it saved (even in a folder with spaces in its name), tap it and it opens; a folder opens in Files. Code that isn't a file no longer dresses up as a link.
 
 ## v0.4.96 — Oct 27, 2026
