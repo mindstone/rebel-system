@@ -8,6 +8,7 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **Fewer surprise conflict copies** — Rebel keeps a copy of your Library in Mindstone Cloud. When you changed a file only on this computer, it sometimes still put a second "conflict" copy of that file beside it, as if the cloud had changed it too. It no longer does, and there's nothing for you to do. When both sides really did change a file, Rebel's automatic merge of the two used to give up on longer files; now it handles them. Fewer twins, same files.
 - **File names in replies open on your phone** — When Rebel names a file with its folder, or links a file it saved (even in a folder with spaces in its name), tap it and it opens; a folder opens in Files. Code that isn't a file no longer dresses up as a link.
 
 ## v0.4.96 — Oct 27, 2026
