@@ -14,6 +14,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Improvements
 
+- **Cloud repair joins the conversation** — Ask Rebel to check your cloud or run the same check and fix as Settings. It can inspect the evidence and recent cloud logs, with your usual Safety Rules. Fewer mystery warnings; no terminal required.
+
 - **Reading, minus the paperwork** — Reading files no longer asks by default. Your Safety Rules now cover reads, and folders you've blocked stay blocked. The filing cabinet has retired its receptionist.
 - **Always means Always** — An Always you set on your phone or the web now works on your computer too, for the same connected service. It also stays put when Rebel re-rates a tool's risk. Apparently "always" needed a reminder.
 - **Report a hiccup in one click** — When a conversation hits an error in the desktop app, its error card now offers **Send report** next to the way to fix it. One click sends this conversation, recent app logs and app checks privately to Mindstone, and the **i** says what goes. It asks at most once an hour and twice a day, and **Don't ask again** means it. If you already share logs weekly, you can let it send without asking.
