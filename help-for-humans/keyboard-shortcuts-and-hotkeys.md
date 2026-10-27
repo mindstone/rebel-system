@@ -61,7 +61,7 @@ On Mac, you'll need to grant **Screen Recording** permission for screenshots to 
 
 ## Customizing Shortcuts
 
-Change or clear the **Quick answer shortcut** in **Settings → Appearance**. The current shortcut appears beside **Just a quick answer** and in its tooltip.
+Change or clear the **Quick answer shortcut** in **Settings → Account & Preferences → Appearance**. The current shortcut appears beside **Just a quick answer** and in its tooltip.
 
 The voice activation hotkey can be customized:
 

@@ -8,7 +8,7 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Improvements
 
-- **A shortcut to the short version** — When **Just a quick answer** is available, press **⌘/Ctrl+Shift+J** to get an answer from what Rebel has so far. The shortcut sits beside the button, for those of us who don't memorise release notes. Change it or turn it off in **Settings → Appearance**.
+- **A shortcut to the short version** — When **Just a quick answer** is available, press **⌘/Ctrl+Shift+J** to get an answer from what Rebel has so far. The shortcut sits beside the button, for those of us who don't memorise release notes. Change it or turn it off in **Settings → Account & Preferences → Appearance**.
 
 ### Fixes
 
