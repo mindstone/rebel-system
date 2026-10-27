@@ -139,7 +139,7 @@ Use **Settings → Privacy & Safety** for:
 - **Safety Rules** — natural-language rules that tell Rebel what's OK and what needs your approval
 - **What Rebel can do → Never allowed** — your permanent blocks from **Always block** approvals; enforced quietly across all conversations
 - **What Rebel can do → Allowed without asking** — saved permissions, including tools you've allowed to run without asking
-- **Memory Spaces** — control over when Rebel asks before saving to each space
+- **Saving to Spaces** — your saving preferences are lines in [Safety Rules](rebel://settings/safety#safetyRules); edit them there.
 - **Saved folder choices** — folders you've allowed or blocked for reading, listed under **What Rebel can do**; they apply on the computer where you made them
 - **Privacy Mode** — a temporary master switch for extra caution on sensitive work
 - **What Rebel can do → Recent activity** — a record of what Rebel has done

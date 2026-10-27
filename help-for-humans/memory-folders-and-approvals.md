@@ -69,22 +69,17 @@ If you are unsure, treat it as private first and share later on purpose.
 
 Rebel can update memory after a conversation when it spots something genuinely worth keeping. You do not have to save every note by hand.
 
-Rebel's per-space memory safety ladder has four settings. Shared spaces use one of the three asking options; **Save without asking** is for your own private spaces.
+Your saving preferences are lines in your [Safety Rules](rebel://settings/safety#safetyRules); read and edit them there. Your previous Space choices have moved into that document. Spaces with the same name are identified by their folder.
 
-| Setting | What it means |
-|---|---|
-| **Save without asking** | Rebel saves to this space automatically. |
-| **Ask only when Rebel spots something specific** | Rebel saves routine updates on its own and asks only when it spots something specific, such as a password or personal details. |
-| **Ask whenever Rebel is unsure** | Rebel checks with you whenever it is not fully confident, even when it cannot point to anything specific. This is the default for shared spaces. |
-| **Always ask before saving** | Every save to this space needs your OK. |
+Rebel normally saves routine notes to private Spaces without asking. A rule that names a Space or destination adds a check, even when the rule permits saving there. Team and shared Spaces are checked against your rules and the Space's description. If the check can't give an answer, a routine save to a team Space still goes ahead while you're chatting. An automation's save also goes ahead and is noted under **Recent activity** in Privacy & Safety. A memory update Rebel makes in the background waits for you. If your rules name that Space, or it's shared outside the company, Rebel asks you first whenever the check can't answer.
 
-A safety check that cannot complete can still ask rather than guess. [Privacy Mode](rebel://library/rebel-system%2Fhelp-for-humans%2Fprivacy-mode.md) also overrides these settings and asks before every memory save.
+If you had set a Space to always ask before saving, that choice is now a line in your Safety Rules, and the safety check follows it. [Privacy Mode](rebel://library/rebel-system%2Fhelp-for-humans%2Fprivacy-mode.md) keeps saves waiting for your approval.
 
 ### What something specific looks like
 
 When Rebel spots something specific, the approval card says **what** it is worried about — for example, something that looks like a password or key, personal details, or account and security information. You get a reason to review, not a vague raised eyebrow.
 
-In shared spaces, built-in checks for passwords and keys run whatever setting you choose. That means a document containing an obviously fake example key can still trigger a review card. The check is being cautious about the shape of the text; approve that save and move on. Your own private space is exempt from this built-in credential check, though its chosen setting or Privacy Mode may still ask.
+Built-in checks for passwords and keys run alongside your Safety Rules, in private Spaces as well as shared ones. That means a document containing an obviously fake example key can still trigger a review card. The check is being cautious about the shape of the text; approve that save and move on. Meeting transcripts saved to your own private Space skip this check.
 
 If a destination already has a save waiting for review, later saves to the same place keep asking until you clear the pending card. This prevents a newer save from quietly stepping around an earlier decision.
 
@@ -124,10 +119,9 @@ Buttons you may see:
 
 ## Getting too many approval cards?
 
-- **Choose fewer routine check-ins for a busy shared space.** Open [Settings → Safety → Memory Spaces](rebel://settings/safety#memorySpaces), find the space, and choose **Ask only when Rebel spots something specific**. Rebel will still ask when it spots something specific. You can also open **Settings → Spaces** and use **Open Privacy & Safety → Memory Spaces** at the bottom of the Spaces section.
-- **Ask less about a space from the card.** A card for a space set to **Ask whenever Rebel is unsure** can offer **Only ask when Rebel spots something specific?** Choose it to update that space without leaving the card. The save in front of you still needs its own decision.
-- **Remember recurring saves.** When a card offers **Allow and remember…**, use it to teach Rebel the rule instead of approving the same kind of save repeatedly.
-- **Check what happened without a card.** **Recent activity** under **[Settings → Privacy & Safety → What Rebel can do](rebel://settings/safety#approvalAuthorityLedger)** shows what Rebel saved without asking and why. You can switch any space back to more check-ins at any time.
+- **Edit your saving preferences.** Open [Safety Rules](rebel://settings/safety#safetyRules) and change the line for the Space. Settings → Spaces also links there.
+- **Review each waiting save.** The “Ask less” shortcut has gone. For now, in-Library save cards let you allow the save once or decline it; saved Space permissions arrive in a later update.
+- **Check what happened without a card.** **Recent activity** under **[What Rebel can do](rebel://settings/safety#approvalAuthorityLedger)** shows what Rebel saved without asking and why.
 
 ## Where staged files live before you decide
 
