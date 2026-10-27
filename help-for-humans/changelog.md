@@ -16,6 +16,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 - **File names in replies open on your phone** — When Rebel names a file with its folder, or links a file it saved (even in a folder with spaces in its name), tap it and it opens; a folder opens in Files. Code that isn't a file no longer dresses up as a link.
 
+- **Adding your own connector by hand, less fiddly** — In Settings → Connectors → Manual JSON setup, the box now starts empty instead of with an example to delete, a stray click outside the window no longer throws away what you typed, and it tells you up front that the server needs a name.
+
 ## v0.4.96 — Oct 27, 2026
 
 ### Highlights
