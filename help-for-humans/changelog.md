@@ -6,6 +6,10 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ## Unreleased
 
+### Improvements
+
+- **A shortcut to the short version** — When **Just a quick answer** is available, press **⌘/Ctrl+Shift+J** to get an answer from what Rebel has so far. The shortcut sits beside the button, for those of us who don't memorise release notes. Change it or turn it off in **Settings → Appearance**.
+
 ### Fixes
 
 - **Gemini finishes what it starts** — With the Gemini model, a reply that needed to use one of your connected apps could stop short and come back empty. Rebel now finishes the step and carries on, and the same fix covers other AI models that behave this way.

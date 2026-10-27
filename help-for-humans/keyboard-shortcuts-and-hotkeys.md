@@ -19,6 +19,7 @@ Use keyboard shortcuts to work more efficiently with Mindstone Rebel.
 | ⌘/Ctrl+I | Open Actions |
 | ⌘/Ctrl+Shift+N | Open Scratchpad (quick capture) |
 | ⌘/Ctrl+Enter | Archive conversation (when input empty and idle) |
+| ⌘/Ctrl+Shift+J | Just a quick answer, while Rebel is working and the button is available (customizable) |
 | Enter | Send message — while Rebel is working, this reaches the task it's already running |
 | Enter | Stop recording (when mic is active) |
 | Ctrl+Alt+Space | Voice activation with screenshot (customizable) |
@@ -59,6 +60,8 @@ Screenshots are captured directly into memory and are never saved to disk. They 
 On Mac, you'll need to grant **Screen Recording** permission for screenshots to work. If you haven't granted this, you'll see a note in the toast saying "no screenshot" — your voice message will still work, just without the visual context.
 
 ## Customizing Shortcuts
+
+Change or clear the **Quick answer shortcut** in **Settings → Appearance**. The current shortcut appears beside **Just a quick answer** and in its tooltip.
 
 The voice activation hotkey can be customized:
 
