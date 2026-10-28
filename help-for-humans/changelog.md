@@ -8,6 +8,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Improvements
 
+- **Your OK travels; the work stays put** — Approvals, held automation actions, memory saves and folder requests waiting on your computer now show up on your phone and on the web. Answer there and your computer runs it, once. If your computer's asleep, they wait for it.
+
 - **A shortcut to the short version** — When **Just a quick answer** is available, press **⌘/Ctrl+Shift+J** to get an answer from what Rebel has so far. The shortcut sits beside the button, for those of us who don't memorise release notes. Change it or turn it off in **Settings → Account & Preferences → Appearance**.
 
 - **One home for saving preferences** — Your Space saving choices now live as lines in [Safety Rules](rebel://settings/safety#safetyRules), alongside your other rules. The per-Space “how careful” setting and the “Ask less” button are gone. For now, when Rebel asks about saving a note, you can allow that one save or say no.
@@ -15,11 +17,15 @@ What's new in Rebel. We ship fast, so there's always something.
 - **Dashboards, with a sense of belonging** — Dashboards and reports now open in your Library preview and look like Rebel, in light and dark. The numbers have found suitable accommodation.
 <!-- detail: Pages use a shared Rebel style, with charts, maps, tables, calendars and diagrams from approved libraries. Key figures and HTML tables remain readable offline; charts need their libraries to load. -->
 
+- **Figures in good company** — Custom tabs can use shared charts, key figures and dashboards. Negative bars now point in the right direction.
+
 ### Fixes
 
 - **Rebel recognises its own tools** — Approval cards for Rebel's built-in tools now say "Using Rebel Inbox", or the tool's name, instead of "Using an unnamed service". There's nothing for you to do. Cards already waiting keep the old wording until you answer them.
 
-- **Less cloud clutter** — Rebel now clears idle task scratch and deleted-conversation leftovers after a week, exports after 30 days, and uploaded meeting audio once its transcript is saved. Failed recordings stay. Older tool results are compressed, and their original links still open in full. Ask Rebel to save a copy of any export you need longer. Your own files stay put. The attic, finally getting some attention.
+- **Cloud means the whole automation** — Choosing Cloud now sends everything it needs and checks that the cloud accepted it. If that fails, Rebel keeps the previous Runs on setting and tells you. If an older automation says Cloud but never runs there, switch Runs on to Desktop, then back to Cloud. No more travelling without its luggage.
+
+- **Less cloud clutter** — Rebel now tidies up after itself. Scratch files from finished tasks and files left behind by deleted conversations are deleted after a week, exports (the big data downloads Rebel makes for analysis) 30 days after they were last changed, and uploaded meeting audio once its transcript is saved. Recordings that failed to transcribe are kept. Older results Rebel saved from your apps are compressed to save space, and still open in full from your conversations. Your own files are never touched. Tidier, not forgetful.
 
 - **Gemini finishes what it starts** — With the Gemini model, a reply that needed to use one of your connected apps could end with nothing in it. Rebel now does that step and carries on, and the same fix covers other AI models that behave this way.
 

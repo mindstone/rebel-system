@@ -117,9 +117,9 @@ They can also import from `react` (React, useState, useEffect, useRef, useMemo, 
 
 ### UI Components (`@rebel/plugin-ui`)
 
-`Button`, `Card`, `Input`, `Stack`, `Badge`, `Textarea`, `LoadingCard`, `ErrorCard`, `Tabs` (TabsList, TabsTrigger, TabsContent), `Select`, `Dialog` (DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogBody, DialogFooter)
+`Button`, `Card`, `Input`, `Stack`, `Badge`, `Textarea`, `LoadingCard`, `ErrorCard`, `Tabs` (TabsList, TabsTrigger, TabsContent), `Select`, `Dialog` (DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogBody, DialogFooter), `Chart`, `KpiTile`, `Dashboard`, `DataTable`, and the shortcuts `BarChart`, `LineChart` and `PieChart`
 
-See [plugin-ui.md](references/plugin-ui.md) for props and usage.
+See [plugin-ui.md](references/plugin-ui.md) for props and usage, including [Charts and data](references/plugin-ui.md#charts-and-data).
 
 ### Events (`useRebelEvent`)
 
