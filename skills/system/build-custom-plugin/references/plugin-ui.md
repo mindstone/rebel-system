@@ -128,7 +128,7 @@ Import these components from `@rebel/plugin-ui`. Charts follow the theme and loa
 
 ### Chart
 Draw one of eight types: `line`, `bar`, `area`, `combo`, `scatter`, `heatmap`, `pie`, `funnel`.
-Props: `chart: ChartSpec`, `height?` (280), `className?`, `overrides?` (label, symbol, legend and shortcut-colour options).
+Props: `chart: ChartSpec`, `height?` (280), `className?`.
 
 ```tsx
 <Chart chart={{ type: 'line', title: 'Revenue', categories: ['Jan', 'Feb'], series: [{ name: 'Revenue', values: [120, 135] }], format: { style: 'currency', currency: 'USD', decimals: 0 } }} />
@@ -182,4 +182,4 @@ Shortcut for a pie with a label, value and percentage legend. Props: `data: { la
 <PieChart data={[{ label: 'North', value: 60 }, { label: 'South', value: 40 }]} />
 ```
 
-Formats use `{ style: 'number' | 'percent' | 'currency', currency?, decimals? }`. Currency requires a three-letter code, such as `USD`. Percent values are fractions (`0.25` means 25%). `decimals` is 0–4. Shortcut colours accept CSS literals or a custom property such as `var(--color-chart-1)`. Standard chart specs use the shared palette and have no colour field.
+Formats use `{ style: 'number' | 'percent', decimals? }` or `{ style: 'currency', currency, decimals? }`. Currency requires a three-letter code, such as `USD`. Percent values are fractions (`0.25` means 25%). `decimals` is 0–4. Shortcut colours accept CSS literals or a custom property such as `var(--color-chart-1)`. Standard chart specs use the shared palette and have no colour field.
