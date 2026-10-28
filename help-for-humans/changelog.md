@@ -21,6 +21,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **Sign-in reminders get the message** — Working connectors no longer ask you to sign in. With multiple accounts, the card names the account (for example, **Notion · jane@example.com**) and its button signs in that account. Sign in from Settings, setup or the card and the reminder clears. Rebel also skips the troubleshooting chat if the connector has already signed in.
+
 - **A quick answer, without the chase** — **Just a quick answer** now stays put while Rebel works, instead of playing hide and seek.
 
 - **Closing the lid isn't quitting** — If your computer went to sleep while Rebel was updating your memory or running a scheduled automation in the background, Rebel could decide the work had failed and say so. Now, if it hadn't saved or done anything yet, it tries again once after your computer wakes, without making a fuss. If it had already started doing things, it still stops and shows you, so nothing happens twice. Naps are allowed.
