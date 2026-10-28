@@ -78,24 +78,21 @@ When Rebel asks about a direct memory write:
 | **Preview saved note** | See the content before deciding. The preview has its own **Allow** and **Discard** (the same as declining), plus **Cancel** to close it without deciding. |
 | **Allow writes here** | When offered, lets Rebel create and edit files in an eligible folder and its subfolders, for this conversation, until Rebel restarts. It does not allow deleting files. Other safety checks still apply. |
 
-**Allow writes here** isn't offered for shared spaces, or when the card flags something specific in the content (a password, say). Those saves are still checked one at a time.
+**Allow writes here** is offered only for eligible folders outside your Library, when the card does not flag something specific in the content (a password, say). Those saves are still checked one at a time.
 
 If a note got stuck on its way to a space, you may see a recovery card instead. Depending on what can be recovered, its choices include saving the note (**Save**, or **Save to** the space), keeping it (**Keep private** or **Keep note**), or **Discard**.
 
 After you approve or decline, a compact receipt confirms your decision — so you always have a record without the prompt staying on screen.
 
-### How often each space asks about memory saves
+### When Rebel asks before saving
 
-Choose the setting that matches how you use each space:
+Your saving preferences are lines in your [Safety Rules](rebel://settings/safety#safetyRules); read and edit them there. Your previous Space choices have moved into that document. Spaces with the same name are identified by their folder.
 
-| Setting | What Rebel does |
-|---|---|
-| **Save without asking** | Saves automatically. This option is for your own private spaces. |
-| **Ask only when Rebel spots something specific** | Saves routine updates on its own and asks only when it spots something specific, such as a password or personal details. |
-| **Ask whenever Rebel is unsure** | Asks whenever it is not fully confident, even without anything specific to flag. This is the default for shared spaces. |
-| **Always ask before saving** | Asks before every save. |
+Rebel normally saves routine notes to private Spaces without asking. A rule that names a Space or destination adds a check, even when the rule permits saving there. Team and shared Spaces are checked against your rules and the Space's description. If the check can't give an answer, a routine save to a team Space still goes ahead while you're chatting. An automation's save also goes ahead and is noted under **Recent activity** in Privacy & Safety. A memory update Rebel makes in the background waits for you. If your rules name that Space, or it's shared outside the company, Rebel asks you first whenever the check can't answer.
 
-For **shared spaces**, Rebel's built-in checks for passwords and keys run whatever setting you choose. If one spots something credential-shaped, the approval card says what it noticed.
+If you had set a Space to always ask before saving, that choice is now a line in your Safety Rules, and the safety check follows it. [Privacy Mode](rebel://library/rebel-system%2Fhelp-for-humans%2Fprivacy-mode.md) keeps saves waiting for your approval.
+
+For **shared spaces**, Rebel's built-in checks for passwords and keys run alongside your Safety Rules. If one spots something credential-shaped, the approval card says what it noticed.
 
 When text looks credential-shaped, these checks prefer a review to quietly sharing a real credential. A document containing an obviously fake example key can therefore trigger a review card — that is the built-in credential check doing its job. Approve that save once and move on. Rebel may also ask if a safety check could not complete, rather than guessing.
 

@@ -71,11 +71,8 @@ Once you’ve found the right file, Rebel can usually show it in the **document 
 
 ### HTML files (new)
 
-HTML files can be previewed directly in Rebel.
-
-- You’ll see a **security notice** explaining the limits of the preview.
-- The preview runs in a **sandboxed** view (it’s designed to be safe, not perfectly faithful).
-- If you want the “real” page behavior, use **Open in Library** to jump to the file’s folder and open it with your normal browser.
+Dashboards and reports Rebel builds show properly in the preview. It runs in a **sandboxed** view,
+with a **security notice** explaining its limits. **Open in browser** opens the file in your web browser.
 
 Tip: If you’re right-clicking a file, look for **Open in Document Preview** (handy for HTML).
 
