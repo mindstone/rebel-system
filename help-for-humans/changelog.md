@@ -20,7 +20,7 @@ What's new in Rebel. We ship fast, so there's always something.
 
 - **Fewer surprise conflict copies** — Rebel keeps a copy of your Library in Mindstone Cloud. When you changed a file only on this computer, it sometimes still put a second "conflict" copy of that file beside it, as if the cloud had changed it too. It no longer does, and there's nothing for you to do. When both sides really did change a file, Rebel's automatic merge of the two used to give up on longer files; now it handles them. Fewer twins, same files.
 
-- **Send lets go** — The message box now empties the moment you hit Send, instead of clinging to your words while a new conversation gets going. If sending fails, they come back.
+- **Send lets go** — When you start a new conversation, the message box now empties the moment you press Send, instead of still showing your message for a few seconds. If the message fails to send, your words come back in the box so you can try again.
 
 - **File names in replies open on your phone** — When Rebel names a file with its folder, or links a file it saved (even in a folder with spaces in its name), tap it and it opens; a folder opens in Files. Code that isn't a file no longer dresses up as a link.
 
