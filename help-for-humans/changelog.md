@@ -8,6 +8,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **Less cloud clutter** — Rebel now clears idle task scratch and deleted-conversation leftovers after a week, exports after 30 days, and uploaded meeting audio once its transcript is saved. Failed recordings stay. Older tool results are compressed, and their original links still open in full. Ask Rebel to save a copy of any export you need longer. Your own files stay put. The attic, finally getting some attention.
+
 - **Gemini finishes what it starts** — With the Gemini model, a reply that needed to use one of your connected apps could stop short and come back empty. Rebel now finishes the step and carries on, and the same fix covers other AI models that behave this way.
 
 - **A blank answer gets a second chance** — When a reply comes back empty, Rebel can quietly try once more, and that second try no longer gets cut off partway. If the reply is still empty, you now get a **Try again** button instead of a conversation that just goes quiet. If Rebel had already done some work, the desktop app says **Start again** and warns that it may do that work twice.

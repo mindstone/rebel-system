@@ -11,7 +11,7 @@ When you ask Rebel to analyse a large amount of data — like "review my last 3 
 1. You ask Rebel to analyse a large dataset
 2. Rebel downloads the data from your connected service (Gmail, Slack, HubSpot, etc.) to a file in your workspace
 3. Rebel searches the file for what you need, and shows you the results
-4. The data follows your workspace's Cloud Continuity custody until you ask Rebel to clean it up
+4. Rebel removes the exported copy from your workspace after 30 days; the originals in your connected service stay put
 
 ## When Rebel uses this
 
@@ -37,4 +37,4 @@ Bulk Export data is subject to the same privacy protections as your other connec
 
 ## Cleaning up
 
-Ask Rebel to "clean up old exports" or "delete the exported email files" when you no longer need them. Exported files persist until you explicitly remove them.
+Rebel deletes exported files more than 30 days after their last update, on desktop and cloud. Ask Rebel to save a copy outside the exports folder if you need it longer, or to delete it sooner.
