@@ -21,6 +21,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **Started actions say they're running** — In Actions, once you start an action, its button now says **Queued** while it waits to begin and **Running** while Rebel works on it. Before, it said **Starting** the whole time (and **Prepping** in the window that opens when you click an action), so a busy action looked stuck. The work itself was never affected, and there's nothing for you to do.
+
 - **Rebel names its own features** — When Rebel asks your OK before using one of its own features, such as Rebel Inbox, the request now says "Using Rebel Inbox" instead of "Using an unnamed service". There's nothing for you to do: requests already waiting keep the old wording, and work the same when you answer them.
 
 - **Cloud means the whole automation** — Choosing Cloud now sends everything it needs and checks that the cloud accepted it. If that fails, Rebel keeps the previous Runs on setting and tells you. If an older automation says Cloud but never runs there, switch Runs on to Desktop, then back to Cloud. No more travelling without its luggage.
