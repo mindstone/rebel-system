@@ -1,7 +1,7 @@
 ---
 name: build-custom-plugin
 description: "Guides building custom sidebar tab plugins using rebel_plugins_create/rebel_plugins_list/rebel_plugins_get_source tools. Read this skill before generating any plugin code."
-last_updated: 2026-03-27
+last_updated: 2026-10-28
 agent_type: main_agent
 ---
 

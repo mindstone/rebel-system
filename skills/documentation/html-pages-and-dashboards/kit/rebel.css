@@ -1,6 +1,6 @@
 /* Rebel page kit. Link rebel-html://kit/rebel.css; no other CSS is required.
  * Layout: .page, .grid (--grid-min: 240px), .card, .section-header, .toolbar.
- * KPIs: .kpi > .kpi-label, .kpi-value, .delta.up|.down|.flat, .note.
+ * KPIs: .kpi > .kpi-label, .kpi-value, .delta.up|.delta.down|.delta.flat, .note.
  * Tables: .table-wrap > table; .num on numeric th/td; .sticky on table.
  * Details: .badge or .pill (+ .positive|.negative), .muted, .eyebrow,
  * .empty-state, .notice, .chart (fixed-height canvas parent), .legend, .key.
@@ -137,9 +137,9 @@ small, .note { font-size: 12px; color: var(--rebel-muted); }
 .kpi-value { display: block; margin: var(--space-2) 0; font-size: clamp(28px, 3vw, 36px); line-height: 1.2; font-weight: 600; letter-spacing: -0.04em; font-variant-numeric: tabular-nums; }
 .kpi .note { display: block; margin-top: var(--space-1); }
 .delta { font-size: 13px; font-weight: 600; font-variant-numeric: tabular-nums; }
-.up { color: var(--rebel-positive); }
-.down { color: var(--rebel-negative); }
-.flat { color: var(--rebel-muted); }
+.delta.up { color: var(--rebel-positive); }
+.delta.down { color: var(--rebel-negative); }
+.delta.flat { color: var(--rebel-muted); }
 .positive { color: var(--rebel-positive); }
 .negative { color: var(--rebel-negative); }
 .badge, .pill { display: inline-flex; align-items: center; gap: var(--space-1); padding: 3px 9px; border: 1px solid var(--color-border-soft); border-radius: var(--radius-pill); background: var(--color-surface-elevated); color: var(--rebel-muted); font-size: 12px; font-weight: 500; line-height: 1.5; white-space: nowrap; }
