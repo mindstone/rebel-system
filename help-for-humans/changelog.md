@@ -17,6 +17,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **Rebel recognises its own tools** — Approval cards for Rebel's built-in tools now say "Using Rebel Inbox", or the tool's name, instead of "Using an unnamed service". There's nothing for you to do. Cards already waiting keep the old wording until you answer them.
+
 - **Less cloud clutter** — Rebel now clears idle task scratch and deleted-conversation leftovers after a week, exports after 30 days, and uploaded meeting audio once its transcript is saved. Failed recordings stay. Older tool results are compressed, and their original links still open in full. Ask Rebel to save a copy of any export you need longer. Your own files stay put. The attic, finally getting some attention.
 
 - **Gemini finishes what it starts** — With the Gemini model, a reply that needed to use one of your connected apps could end with nothing in it. Rebel now does that step and carries on, and the same fix covers other AI models that behave this way.
