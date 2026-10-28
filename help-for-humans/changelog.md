@@ -8,6 +8,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **Cloud means the whole automation** — Choosing Cloud now sends everything it needs and checks that the cloud accepted it. If that fails, Rebel keeps the previous Runs on setting and tells you. If an older automation says Cloud but never runs there, switch Runs on to Desktop, then back to Cloud. No more travelling without its luggage.
+
 - **Gemini finishes what it starts** — With the Gemini model, a reply that needed to use one of your connected apps could stop short and come back empty. Rebel now finishes the step and carries on, and the same fix covers other AI models that behave this way.
 
 - **A blank answer gets a second chance** — When a reply comes back empty, Rebel can quietly try once more, and that second try no longer gets cut off partway. If the reply is still empty, you now get a **Try again** button instead of a conversation that just goes quiet. If Rebel had already done some work, the desktop app says **Start again** and warns that it may do that work twice.
