@@ -12,6 +12,9 @@ What's new in Rebel. We ship fast, so there's always something.
 
 - **One home for saving preferences** — Your Space saving choices now live as lines in [Safety Rules](rebel://settings/safety#safetyRules), alongside your other rules. The per-Space “how careful” setting and the “Ask less” button are gone. For now, when Rebel asks about saving a note, you can allow that one save or say no.
 
+- **Dashboards, with a sense of belonging** — Dashboards and reports now open in your Library preview and look like Rebel, in light and dark. The numbers have found suitable accommodation.
+<!-- detail: Pages use a shared Rebel style, with charts, maps, tables, calendars and diagrams from approved libraries. Key figures and HTML tables remain readable offline; charts need their libraries to load. -->
+
 ### Fixes
 
 - **Gemini finishes what it starts** — With the Gemini model, a reply that needed to use one of your connected apps could end with nothing in it. Rebel now does that step and carries on, and the same fix covers other AI models that behave this way.
@@ -19,6 +22,8 @@ What's new in Rebel. We ship fast, so there's always something.
 - **A blank answer gets a second chance** — When a reply comes back empty, Rebel can try once more by itself if it has not done anything yet, and that second try no longer gets cut off partway. If the reply is still empty, you now get a **Try again** button instead of a conversation that just goes quiet. If Rebel had already done something, such as sending an email, the desktop app says **Start again** and warns that starting again may do it a second time.
 
 - **Fewer surprise conflict copies** — Rebel keeps a copy of your Library in Mindstone Cloud. When you changed a file only on this computer, it sometimes still put a second "conflict" copy of that file beside it, as if the cloud had changed it too. It no longer does, and there's nothing for you to do. When both sides really did change a file, Rebel's automatic merge of the two used to give up on longer files; now it handles them. Fewer twins, same files.
+
+- **Send lets go** — The message box now empties the moment you hit Send, instead of clinging to your words while a new conversation gets going. If sending fails, they come back.
 
 - **File names in replies open on your phone** — When Rebel names a file with its folder, or links a file it saved (even in a folder with spaces in its name), tap it and it opens; a folder opens in Files. Code that isn't a file no longer dresses up as a link.
 
