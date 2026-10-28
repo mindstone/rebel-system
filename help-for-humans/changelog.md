@@ -6,6 +6,10 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ## Unreleased
 
+### Improvements
+
+- **Your OK travels; the work stays put** — Approvals, held automation actions, memory saves and folder requests waiting on your computer now show up on your phone and on the web. Answer there and your computer runs it, once. If your computer's asleep, they wait for it.
+
 ### Fixes
 
 - **Gemini finishes what it starts** — With the Gemini model, a reply that needed to use one of your connected apps could stop short and come back empty. Rebel now finishes the step and carries on, and the same fix covers other AI models that behave this way.
