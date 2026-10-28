@@ -17,7 +17,7 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
-- **Less cloud clutter** — Rebel now clears idle task scratch and deleted-conversation leftovers after a week, exports after 30 days, and uploaded meeting audio once its transcript is saved. Failed recordings stay. Older tool results are compressed, and their original links still open in full. Ask Rebel to save a copy of any export you need longer. Your own files stay put. The attic, finally getting some attention.
+- **Less cloud clutter** — Rebel now tidies up after itself. Scratch files from finished tasks and files left behind by deleted conversations are deleted after a week, exports (the big data downloads Rebel makes for analysis) 30 days after they were last changed, and uploaded meeting audio once its transcript is saved. Recordings that failed to transcribe are kept. Older results Rebel saved from your apps are compressed to save space, and still open in full from your conversations. Your own files are never touched. Tidier, not forgetful.
 
 - **Gemini finishes what it starts** — With the Gemini model, a reply that needed to use one of your connected apps could end with nothing in it. Rebel now does that step and carries on, and the same fix covers other AI models that behave this way.
 
