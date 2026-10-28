@@ -21,7 +21,9 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
-- **Your cloud stays signed in** — Automations on your cloud could lose their Notion, Google or other connector sign-in after you reconnected that connector on your computer, and stop until you reconnected again. Now, when your cloud runs a connector, only the cloud keeps it signed in, and your computer uses it through the cloud. You don't need to do anything for this. If your computer can't reach your cloud for a while, those connectors wait and carry on by themselves when the cloud's back. If you later stop using the cloud on this computer (**Forget cloud on this device** or **Remove Mindstone Cloud** in Settings), those connectors may ask you to sign in again on this computer. One key, one keyholder.
+- **Sign-in reminders get the message** — Working connectors no longer ask you to sign in. With multiple accounts, the card names the account (for example, **Notion · jane@example.com**) and its button signs in that account. Sign in from Settings, setup or the card and the reminder clears. Rebel also skips the troubleshooting chat if the connector has already signed in.
+
+- **Your cloud stays signed in** — Automations on your cloud could lose their Notion, Google or other connector sign-in after you reconnected that connector on your computer, and stop until you reconnected again. Now, when your cloud runs a connector you signed in to through Rebel, only the cloud keeps it signed in, and your computer uses it through the cloud. You don't need to do anything for this. If your computer can't reach your cloud for a while, those connectors pause, and work again by themselves once the cloud's back; ask Rebel again then for anything that didn't go through. If you later stop using the cloud on this computer (**Forget cloud on this device** or **Remove Mindstone Cloud** in Settings), those connectors may ask you to sign in again on this computer. One key, one keyholder.
 
 - **A quick answer, without the chase** — The **Just a quick answer** button used to vanish and reappear while Rebel worked. It now stays on screen until the reply is done. No more hide and seek.
 
@@ -32,6 +34,8 @@ What's new in Rebel. We ship fast, so there's always something.
 - **Rebel names its own features** — When Rebel asks your OK before using one of its own features, such as Rebel Inbox, the request now says "Using Rebel Inbox" instead of "Using an unnamed service". There's nothing for you to do: requests already waiting keep the old wording, and work the same when you answer them.
 
 - **Cloud means the whole automation** — Choosing Cloud now sends everything it needs and checks that the cloud accepted it. If that fails, Rebel keeps the previous Runs on setting and tells you. If an older automation says Cloud but never runs there, switch Runs on to Desktop, then back to Cloud. No more travelling without its luggage.
+
+- **A restart isn't a memory crisis** — Restarting, repairing or updating your cloud no longer makes Rebel think it ran out of memory or suggest a bigger, pricier size because of that restart. Real crashes still count.
 
 - **Less cloud clutter** — Rebel now tidies up after itself. Scratch files from finished tasks and files left behind by deleted conversations are deleted after a week, exports (the big data downloads Rebel makes for analysis) 30 days after they were last changed, and uploaded meeting audio once its transcript is saved. Recordings that failed to transcribe are kept. Older results Rebel saved from your apps are compressed to save space, and still open in full from your conversations. Your own files are never touched. Tidier, not forgetful.
 
