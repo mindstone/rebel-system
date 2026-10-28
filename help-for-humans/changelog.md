@@ -17,7 +17,7 @@ What's new in Rebel. We ship fast, so there's always something.
 - **Dashboards, with a sense of belonging** — Dashboards and reports now open in your Library preview and look like Rebel, in light and dark. The numbers have found suitable accommodation.
 <!-- detail: Pages use a shared Rebel style, with charts, maps, tables, calendars and diagrams from approved libraries. Key figures and HTML tables remain readable offline; charts need their libraries to load. -->
 
-- **Figures in good company** — Custom tabs can use shared charts, key figures and dashboards. Negative bars now point in the right direction.
+- **Figures in good company** — Ask to see your numbers here in the conversation: charts, key figures, sortable tables and whole dashboards now have a home. Custom tabs share the same charts, and negative bars point in the right direction.
 
 ### Fixes
 
