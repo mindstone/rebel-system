@@ -19,7 +19,7 @@ Use keyboard shortcuts to work more efficiently with Mindstone Rebel.
 | ⌘/Ctrl+I | Open Actions |
 | ⌘/Ctrl+Shift+N | Open Scratchpad (quick capture) |
 | ⌘/Ctrl+Enter | Archive conversation (when input empty and idle) |
-| ⌘/Ctrl+Shift+J | Just a quick answer, while Rebel is working and the button is available (customizable) |
+| ⌘/Ctrl+Shift+J | Just a quick answer, while Rebel is working and the button is available (you can change it) |
 | Enter | Send message — while Rebel is working, this reaches the task it's already running |
 | Enter | Stop recording (when mic is active) |
 | Ctrl+Alt+Space | Voice activation with screenshot (customizable) |
