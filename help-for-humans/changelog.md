@@ -21,6 +21,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **Your cloud keeps its sign-ins** — Automations on your cloud could lose their Notion, Google or other connector sign-in after you reconnected that connector on your computer, because both copies kept renewing the same sign-in and one went stale. Now, when your cloud runs a connector, only the cloud renews its sign-in and your computer uses the cloud's connection. If you later forget or remove the cloud, those connectors may ask you to sign in again on this computer. One key, one keyholder.
+
 - **A quick answer, without the chase** — **Just a quick answer** now stays put while Rebel works, instead of playing hide and seek.
 
 - **Closing the lid isn't quitting** — If your computer went to sleep while Rebel was updating your memory or running a scheduled automation in the background, Rebel could decide the work had failed and say so. Now, if it hadn't saved or done anything yet, it tries again once after your computer wakes, without making a fuss. If it had already started doing things, it still stops and shows you, so nothing happens twice. Naps are allowed.
