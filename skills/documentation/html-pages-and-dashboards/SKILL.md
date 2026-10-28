@@ -1,6 +1,6 @@
 ---
 name: html-pages-and-dashboards
-description: "Build dashboards, reports, charts, trackers-as-a-page and other HTML pages from existing data, saved in the Library and shown in Rebel’s preview."
+description: "Build dashboards, reports, charts, trackers-as-a-page and other HTML pages to keep from existing data, saved in the Library and shown in Rebel’s preview. For figures to see in the conversation now, use rebel_canvas_view."
 last_updated: 2026-10-28
 agent_type: main_agent
 ---
@@ -15,7 +15,7 @@ Save it in their Library and link it so they can open Rebel’s preview. Use the
 - Dashboards, reports and other visual snapshots belong here, including a tracker presented as a page.
 - A sidebar tab that stays current from Rebel’s own meetings, memory or conversations, or keeps state
   (a timer or tracker), is a plugin: read [build-custom-plugin](../../system/build-custom-plugin/SKILL.md).
-- For a quick chart or table inside the conversation, use the chat view tools.
+- For figures to see in the conversation now, use `rebel_canvas_view`.
 
 [PROCESS]
 1. Use the available data and clarify only what would materially improve the result.
