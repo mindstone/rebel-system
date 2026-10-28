@@ -39,6 +39,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 - **Adding your own connector by hand, less fiddly** — In Settings → Connectors → Manual JSON setup, the box now starts empty instead of with an example to delete, a stray click outside the window no longer throws away what you typed, and it tells you up front that the server needs a name.
 
+- **Save warnings, on the record** — When Rebel can't save a change, or shows you a warning, it now writes that to its log on your computer, so a bug report can show what went wrong. And a conversation with older unsaved changes no longer tells you it "still can't save" every time you save something new. Fewer false alarms.
+
 ## v0.4.96 — Oct 27, 2026
 
 ### Highlights
