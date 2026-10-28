@@ -1,6 +1,6 @@
 ---
 name: html-pages-and-dashboards
-description: "Build dashboards, reports, charts, trackers-as-a-page and other HTML pages to keep from existing data, saved in the Library and shown in Rebel’s preview. For figures to see in the conversation now, use rebel_canvas_view."
+description: "Build a page when the person asks to save, keep, share, print or open it in a browser, or a report from files or several sources. For a chart, table or dashboard of figures already in the conversation (typed, pasted or just fetched), use rebel_canvas_view; then you may offer to save it as a page."
 last_updated: 2026-10-28
 agent_type: main_agent
 ---
@@ -12,10 +12,10 @@ Make a useful visual page from data the person has now: a file, connector result
 Save it in their Library and link it so they can open Rebel’s preview. Use their data, not invented figures.
 
 [WHEN TO USE]
-- Dashboards, reports and other visual snapshots belong here, including a tracker presented as a page.
+- A page to save, keep, share, print or open in a browser, or a report built from files or several sources, belongs here, including a tracker presented as a page.
 - A sidebar tab that stays current from Rebel’s own meetings, memory or conversations, or keeps state
   (a timer or tracker), is a plugin: read [build-custom-plugin](../../system/build-custom-plugin/SKILL.md).
-- For figures to see in the conversation now, use `rebel_canvas_view`.
+- For a chart, table or dashboard of figures already in the conversation (typed, pasted or just fetched), use `rebel_canvas_view`; then you may offer to save it as a page.
 
 [PROCESS]
 1. Use the available data and clarify only what would materially improve the result.
