@@ -6,6 +6,11 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ## Unreleased
 
+### Improvements
+
+- **Dashboards, with a sense of belonging** — Dashboards and reports now open in your Library preview and look like Rebel, in light and dark. The numbers have found suitable accommodation.
+<!-- detail: Pages use a shared Rebel style, with charts, maps, tables, calendars and diagrams from approved libraries. Key figures and HTML tables remain readable offline; charts need their libraries to load. -->
+
 ### Fixes
 
 - **Gemini finishes what it starts** — With the Gemini model, a reply that needed to use one of your connected apps could stop short and come back empty. Rebel now finishes the step and carries on, and the same fix covers other AI models that behave this way.
