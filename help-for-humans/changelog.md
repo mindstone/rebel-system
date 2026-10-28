@@ -12,7 +12,12 @@ What's new in Rebel. We ship fast, so there's always something.
 
 - **One home for saving preferences** — Your Space saving choices now live as lines in [Safety Rules](rebel://settings/safety#safetyRules), alongside your other rules. The per-Space “how careful” setting and the “Ask less” button are gone. For now, when Rebel asks about saving a note, you can allow that one save or say no.
 
+- **Dashboards, with a sense of belonging** — Dashboards and reports now open in your Library preview and look like Rebel, in light and dark. The numbers have found suitable accommodation.
+<!-- detail: Pages use a shared Rebel style, with charts, maps, tables, calendars and diagrams from approved libraries. Key figures and HTML tables remain readable offline; charts need their libraries to load. -->
+
 ### Fixes
+
+- **Less cloud clutter** — Rebel now clears idle task scratch and deleted-conversation leftovers after a week, exports after 30 days, and uploaded meeting audio once its transcript is saved. Failed recordings stay. Older tool results are compressed, and their original links still open in full. Ask Rebel to save a copy of any export you need longer. Your own files stay put. The attic, finally getting some attention.
 
 - **Gemini finishes what it starts** — With the Gemini model, a reply that needed to use one of your connected apps could end with nothing in it. Rebel now does that step and carries on, and the same fix covers other AI models that behave this way.
 
@@ -24,7 +29,7 @@ What's new in Rebel. We ship fast, so there's always something.
 
 - **File names in replies open on your phone** — When Rebel names a file with its folder, or links a file it saved (even in a folder with spaces in its name), tap it and it opens; a folder opens in Files. Code that isn't a file no longer dresses up as a link.
 
-- **Thinking isn't deciding** — Some AI models jot down notes before giving their final answer, especially [custom models](rebel://library/rebel-system%2Fhelp-for-humans%2Fcustom-models-and-gateways.md) you set up yourself. Until this fix, a guess in those notes could sometimes let Rebel go ahead with an action or stop a running task. Now only the final answer counts. When Rebel checks an action against your [Safety Rules](rebel://settings/safety#safetyRules) and the reply it gets back has no answer it can use, the action pauses until a fresh check gives a clear answer or you give the go-ahead: in a chat Rebel asks you, and in an automation that one action is held back for your review while the rest of the run carries on. And a message you send while Rebel is working no longer stops the task by mistake.
+- **Thinking isn't deciding** — Some AI models jot down notes before giving their final answer, especially [custom models](rebel://library/rebel-system%2Fhelp-for-humans%2Fcustom-models-and-gateways.md) you set up yourself. Until this fix, a guess in those notes could sometimes let Rebel go ahead with an action or stop a running task. Now only the final answer counts. When Rebel checks an action against your [Safety Rules](rebel://settings/safety#safetyRules) and the reply it gets back has no answer it can use, Rebel doesn't guess: in a chat it asks you before going ahead, and in an automation that one action doesn't run while the rest of the run carries on. And a message you send while Rebel is working no longer stops the task by mistake.
 
 - **Adding your own connector by hand, less fiddly** — In Settings → Connectors → Manual JSON setup, the box now starts empty instead of with an example to delete, a stray click outside the window no longer throws away what you typed, and it tells you up front that the server needs a name.
 
