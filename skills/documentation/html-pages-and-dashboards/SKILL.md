@@ -24,6 +24,7 @@ Save it in their Library and link it so they can open Rebel’s preview. Use the
 4. Link the saved page by its workspace path so the person opens it in the Library preview. Don't check a Library page with `rebel_canvas_html`: it is a different sandbox without the kit.
 
 [PAGE SHAPE — SAFE PREVIEW]
+- Start every page’s `<head>` with `<meta charset="utf-8">`.
 - Save `name.html` and `name.js` side by side in the same folder.
 - No inline `<script>`, `on*=` event attributes or `javascript:` URLs: the preview blocks them.
 - Embed the data in the JS. No fetch/XHR (blocked), and no reading local files from the page.
@@ -86,7 +87,9 @@ the Rebel kit stylesheet is not available there. Folder mode does not allow CDN 
 use inline JS or local files in that mode. Prefer the dedicated chat chart/table tools when sufficient.
 
 [OPENING AND SHARING]
-Use the preview’s **Open in browser**. Browsers do not know `rebel-html://kit/`.
+Rebel’s preview is the faithful view for Rebel pages. **Open in browser** opens the original
+file in the web browser, which cannot load `rebel-html://kit/`; the page is unstyled there
+unless a browser-ready copy was made with the kit copied beside it.
 Only when asked for a browser-ready or shareable copy, copy this skill’s `kit/rebel.css` beside
 the page and link `rebel.css` instead. Include the sibling JS; CDN libraries still need the internet.
 To open a file in the system browser: `open "path/to/page.html"` (macOS),
