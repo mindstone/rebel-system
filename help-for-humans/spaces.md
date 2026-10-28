@@ -114,24 +114,13 @@ You can either:
 
 If the space points to an external shared folder, removing it does **not** delete the original folder.
 
-## Memory safety per space
+## Saving to your Spaces
 
-Each space has its own memory setting:
+Your saving preferences are lines in your [Safety Rules](rebel://settings/safety#safetyRules); read and edit them there. Your previous Space choices have moved into that document. Spaces with the same name are identified by their folder.
 
-| Setting | What it means |
-|---|---|
-| **Save without asking** | Rebel saves memory automatically. This option is for your own private spaces. |
-| **Ask only when Rebel spots something specific** | Rebel saves routine updates and asks only when it spots something specific, such as a password or personal details. |
-| **Ask whenever Rebel is unsure** | Rebel asks whenever it is not fully confident, even without anything specific to flag. This is the default for shared spaces. |
-| **Always ask before saving** | Every memory write needs your OK. |
+Rebel normally saves routine notes to private Spaces without asking. A rule that names a Space or destination adds a check, even when the rule permits saving there. Team and shared Spaces are checked against your rules and the Space's description. If the check can't give an answer, a routine save to a team Space still goes ahead while you're chatting. An automation's save also goes ahead and is noted under **Recent activity** in Privacy & Safety. A memory update Rebel makes in the background waits for you. If your rules name that Space, or it's shared outside the company, Rebel asks you first whenever the check can't answer.
 
-Shared spaces can use any of the three asking options, including **Ask only when Rebel spots something specific** when routine cards become noise. You cannot dial a shared space all the way down to **Save without asking**, and Rebel's built-in checks for passwords and keys keep running whatever shared-space option you choose.
-
-### Privacy Mode overrides space settings
-
-If [Privacy Mode](rebel://library/rebel-system%2Fhelp-for-humans%2Fprivacy-mode.md) is on, Rebel asks before memory saves **even if that space would normally save automatically**.
-
-Think of Privacy Mode as the master switch: per-space settings are your defaults, Privacy Mode is the temporary override. You can turn it on from [Settings → Privacy & Safety](rebel://settings/safety).
+If you had set a Space to always ask before saving, that choice is now a line in your Safety Rules, and the safety check follows it. [Privacy Mode](rebel://library/rebel-system%2Fhelp-for-humans%2Fprivacy-mode.md) keeps saves waiting for your approval.
 
 ## Grouping spaces by organisation
 

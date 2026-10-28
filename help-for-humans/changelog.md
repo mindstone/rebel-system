@@ -8,11 +8,30 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Improvements
 
+- **Your OK travels; the work stays put** — Approvals, held automation actions, memory saves and folder requests waiting on your computer now show up on your phone and on the web. Answer there and your computer runs it, once. If your computer's asleep, they wait for it.
+
 - **A shortcut to the short version** — When **Just a quick answer** is available, press **⌘/Ctrl+Shift+J** to get an answer from what Rebel has so far. The shortcut sits beside the button, for those of us who don't memorise release notes. Change it or turn it off in **Settings → Account & Preferences → Appearance**.
+
+- **One home for saving preferences** — Your Space saving choices now live as lines in [Safety Rules](rebel://settings/safety#safetyRules), alongside your other rules. The per-Space “how careful” setting and the “Ask less” button are gone. For now, when Rebel asks about saving a note, you can allow that one save or say no.
+
+- **Dashboards, with a sense of belonging** — Dashboards and reports now open in your Library preview and look like Rebel, in light and dark. The numbers have found suitable accommodation.
+<!-- detail: Pages use a shared Rebel style, with charts, maps, tables, calendars and diagrams from approved libraries. Key figures and HTML tables remain readable offline; charts need their libraries to load. -->
+
+- **Figures in good company** — Custom tabs can use shared charts, key figures and dashboards. Negative bars now point in the right direction.
 
 ### Fixes
 
 - **A quick answer, without the chase** — **Just a quick answer** now stays put while Rebel works, instead of playing hide and seek.
+
+- **Closing the lid isn't quitting** — If your computer went to sleep while Rebel was updating your memory or running a scheduled automation in the background, Rebel could decide the work had failed and say so. Now, if it hadn't saved or done anything yet, it tries again once after your computer wakes, without making a fuss. If it had already started doing things, it still stops and shows you, so nothing happens twice. Naps are allowed.
+
+- **Started actions say they're running** — In Actions, once you start an action, its button now says **Queued** while it waits to begin and **Running** while Rebel works on it. Before, it said **Starting** the whole time (and **Prepping** in the window that opens when you click an action), so a busy action looked stuck. The work itself was never affected, and there's nothing for you to do.
+
+- **Rebel names its own features** — When Rebel asks your OK before using one of its own features, such as Rebel Inbox, the request now says "Using Rebel Inbox" instead of "Using an unnamed service". There's nothing for you to do: requests already waiting keep the old wording, and work the same when you answer them.
+
+- **Cloud means the whole automation** — Choosing Cloud now sends everything it needs and checks that the cloud accepted it. If that fails, Rebel keeps the previous Runs on setting and tells you. If an older automation says Cloud but never runs there, switch Runs on to Desktop, then back to Cloud. No more travelling without its luggage.
+
+- **Less cloud clutter** — Rebel now tidies up after itself. Scratch files from finished tasks and files left behind by deleted conversations are deleted after a week, exports (the big data downloads Rebel makes for analysis) 30 days after they were last changed, and uploaded meeting audio once its transcript is saved. Recordings that failed to transcribe are kept. Older results Rebel saved from your apps are compressed to save space, and still open in full from your conversations. Your own files are never touched. Tidier, not forgetful.
 
 - **Gemini finishes what it starts** — With the Gemini model, a reply that needed to use one of your connected apps could end with nothing in it. Rebel now does that step and carries on, and the same fix covers other AI models that behave this way.
 
@@ -20,9 +39,11 @@ What's new in Rebel. We ship fast, so there's always something.
 
 - **Fewer surprise conflict copies** — Rebel keeps a copy of your Library in Mindstone Cloud. When you changed a file only on this computer, it sometimes still put a second "conflict" copy of that file beside it, as if the cloud had changed it too. It no longer does, and there's nothing for you to do. When both sides really did change a file, Rebel's automatic merge of the two used to give up on longer files; now it handles them. Fewer twins, same files.
 
+- **Send lets go** — When you start a new conversation, the message box now empties the moment you press Send, instead of still showing your message for a few seconds. If the message fails to send, your words come back in the box so you can try again.
+
 - **File names in replies open on your phone** — When Rebel names a file with its folder, or links a file it saved (even in a folder with spaces in its name), tap it and it opens; a folder opens in Files. Code that isn't a file no longer dresses up as a link.
 
-- **Thinking isn't deciding** — Some AI models write their thinking into their reply, often the ones you add yourself. A half-formed guess in that thinking can no longer approve an action or stop your running task. And if Rebel's quick read of a message you send mid-task gets cut off, your message goes through the usual way instead of being guessed at. Rebel acts on the conclusion, not the muttering.
+- **Thinking isn't deciding** — Some AI models jot down notes before giving their final answer, especially [custom models](rebel://library/rebel-system%2Fhelp-for-humans%2Fcustom-models-and-gateways.md) you set up yourself. Until this fix, a guess in those notes could sometimes let Rebel go ahead with an action or stop a running task. Now only the final answer counts. When Rebel checks an action against your [Safety Rules](rebel://settings/safety#safetyRules) and the reply it gets back has no answer it can use, Rebel doesn't guess: in a chat it asks you before going ahead, and in an automation that one action doesn't run while the rest of the run carries on. And a message you send while Rebel is working no longer stops the task by mistake.
 
 - **Adding your own connector by hand, less fiddly** — In Settings → Connectors → Manual JSON setup, the box now starts empty instead of with an example to delete, a stray click outside the window no longer throws away what you typed, and it tells you up front that the server needs a name.
 
