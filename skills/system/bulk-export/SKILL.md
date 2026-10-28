@@ -1,7 +1,7 @@
 ---
 name: bulk-export
 description: "Export large datasets from MCP tools to local NDJSON files for fast ripgrep search. Use when analysing hundreds or thousands of items (emails, messages, contacts) would overwhelm conversation context."
-last_updated: 2026-06-02
+last_updated: 2026-10-28
 agent_type: main_agent
 ---
 
@@ -100,6 +100,5 @@ rg '"hasAttachment":true' .rebel/exports/emails-q1.ndjson
 
 - **Always include `return_json: true`** in args for MCP tools that support it. `bulk_export` needs JSON output.
 - **Know your pagination fields.** Check the MCP tool's response format to get the right `token_field` and `input_param`. See the reference docs for common tools.
-- **Files persist in the workspace.** Clean up old exports when done: `Bash({ command: "rm .rebel/exports/*.ndjson" })`
-- **Best on desktop; on cloud the file is a session/workspace artifact.** `bulk_export` writes to the workspace filesystem, which exists on both desktop and cloud — but on desktop it's a durable local file you can re-query anytime, whereas on a cloud deployment treat the export as a within-session artifact (query it in the same session via `Bash`/`Read`/`SearchFiles`; don't assume it persists across deployments).
+- **Exports expire after 30 days.** Files in the configured workspace’s `.rebel/exports/` are automatically removed 30 days after their last modification, on desktop and cloud. Save a copy elsewhere if the user needs it longer; manual cleanup can remove exports sooner.
 - **Privacy.** Exported data is stored locally in the user's workspace. Treat it with the same care as the original data source.
