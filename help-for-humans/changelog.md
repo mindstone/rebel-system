@@ -17,9 +17,11 @@ What's new in Rebel. We ship fast, so there's always something.
 - **Dashboards, with a sense of belonging** — Dashboards and reports now open in your Library preview and look like Rebel, in light and dark. The numbers have found suitable accommodation.
 <!-- detail: Pages use a shared Rebel style, with charts, maps, tables, calendars and diagrams from approved libraries. Key figures and HTML tables remain readable offline; charts need their libraries to load. -->
 
-- **Figures in good company** — Ask to see your numbers here in the conversation: charts, key figures, sortable tables and whole dashboards now have a home. Custom tabs share the same charts, and negative bars point in the right direction.
+- **Charts and dashboards, right in the chat** — Ask Rebel to show your numbers as a chart, a table or a whole dashboard ("show me these sales figures as a dashboard"), and it draws them in the conversation. Hover over a chart for exact figures; sort and filter a table by clicking its headings or typing in its filter box. Sidebar tabs you've built with Rebel use the same charts, and bars for values below zero now point down, as nature intended.
 
 ### Fixes
+
+- **Your cloud stays signed in** — Automations on your cloud could lose their Notion, Google or other connector sign-in after you reconnected that connector on your computer, and stop until you reconnected again. Now, when your cloud runs a connector, only the cloud keeps it signed in, and your computer uses it through the cloud. You don't need to do anything for this. If your computer can't reach your cloud for a while, those connectors wait and carry on by themselves when the cloud's back. If you later stop using the cloud on this computer (**Forget cloud on this device** or **Remove Mindstone Cloud** in Settings), those connectors may ask you to sign in again on this computer. One key, one keyholder.
 
 - **A quick answer, without the chase** — The **Just a quick answer** button used to vanish and reappear while Rebel worked. It now stays on screen until the reply is done. No more hide and seek.
 
