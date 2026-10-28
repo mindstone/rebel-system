@@ -5,6 +5,9 @@ if (typeof L !== 'undefined') {
     { name: 'Acme East', location: [52.52, 13.40] },
   ];
   const map = L.map('map', { scrollWheelZoom: false });
+  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; OpenStreetMap contributors',
+  }).addTo(map);
   const outline = L.rectangle([[49, -3], [55, 16]], { weight: 1, fillOpacity: 0.06 }).addTo(map);
   const markers = offices.map(office => L.circleMarker(office.location, { radius: 9 })
     .addTo(map).bindTooltip(office.name, { permanent: true, direction: 'top' }));

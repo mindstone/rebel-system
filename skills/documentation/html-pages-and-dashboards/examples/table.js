@@ -11,7 +11,7 @@ if (typeof Tabulator !== 'undefined') {
     columns: [
       { title: 'Company', field: 'company', headerFilter: 'input' },
       { title: 'Stage', field: 'stage', headerFilter: 'input' },
-      { title: 'Value (USD)', field: 'value', sorter: 'number', hozAlign: 'right' },
+      { title: 'Value (USD)', field: 'value', sorter: 'number', hozAlign: 'right', formatter: 'money', formatterParams: { symbol: '$', precision: 0 } },
     ],
   });
   table.on('tableBuilt', () => {

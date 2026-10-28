@@ -12,7 +12,24 @@ if (typeof mermaid !== 'undefined') {
   ];
   const theme = matchMedia('(prefers-color-scheme: dark)');
   async function render() {
-    mermaid.initialize({ startOnLoad: false, theme: theme.matches ? 'dark' : 'default' });
+    const colour = name => getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+    mermaid.initialize({ startOnLoad: false, theme: 'base', themeVariables: {
+      fontFamily: colour('--font-family-sans'),
+      background: colour('--color-surface-1'),
+      primaryColor: colour('--rebel-chart-1'),
+      primaryBorderColor: colour('--rebel-chart-axis'),
+      primaryTextColor: colour('--color-text-inverse'),
+      lineColor: colour('--rebel-chart-axis'),
+      textColor: colour('--color-text-primary'),
+      titleColor: colour('--color-text-primary'),
+      taskBkgColor: colour('--rebel-chart-1'),
+      taskTextColor: colour('--color-text-inverse'),
+      taskTextOutsideColor: colour('--color-text-primary'),
+      taskBorderColor: colour('--rebel-chart-axis'),
+      gridColor: colour('--rebel-chart-grid'),
+      sectionBkgColor: colour('--color-surface-1'),
+      altSectionBkgColor: colour('--color-bg-page'),
+    } });
     sources.forEach(([id, source]) => {
       const node = document.getElementById(id);
       node.removeAttribute('data-processed');

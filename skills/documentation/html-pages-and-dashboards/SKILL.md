@@ -21,7 +21,7 @@ Save it in their Library and link it so they can open Rebel’s preview. Use the
 1. Use the available data and clarify only what would materially improve the result.
 2. Read the relevant example below; adapt it to answer the person’s actual question.
 3. Save the HTML and sibling JS in the destination Space. Keep important figures readable without charts.
-4. Open the page in Rebel’s preview, check light and dark, and fix any errors. Iterate on the person’s feedback.
+4. Link the saved page by its workspace path so the person opens it in the Library preview. Don't check a Library page with `rebel_canvas_html`: it is a different sandbox without the kit.
 
 [PAGE SHAPE — SAFE PREVIEW]
 - Save `name.html` and `name.js` side by side in the same folder.
@@ -46,8 +46,9 @@ Each example has a sibling `.js` with embedded fictional data.
 | Calendar | `https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/6.1.15/index.global.min.js` | [calendar.html](examples/calendar.html), [JS](examples/calendar.js) |
 | Gantt, timelines, flowcharts, org charts | `https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.min.js` | [timeline.html](examples/timeline.html), [JS](examples/timeline.js) |
 
-For Mermaid, call `mermaid.initialize({ startOnLoad: false, theme })` then `mermaid.run()`.
-Keep diagram sources so you can restore them before rerendering on a theme change.
+For Mermaid, call `mermaid.initialize({ startOnLoad: false, theme: 'base', themeVariables: {...} })`
+with font, background, primary, line and text colours read from the kit’s CSS variables, then
+`mermaid.run()`. Keep diagram sources and restore them before rerendering on a theme change.
 
 [REBEL KIT]
 The kit follows Rebel’s light/dark setting through `prefers-color-scheme`; no font download required.
@@ -75,8 +76,9 @@ calendar and Mermaid adapters, plus print styles; library-rendered chart colours
 [NETWORK AND OFFLINE]
 CDN libraries and map tiles need the internet. Offline, the local kit, HTML tables and KPI tiles
 still render; show a notice where a library could not load. No live data requests from the page.
-OpenStreetMap tiles may be refused in the preview’s sandboxed frame. The map example uses an
-outline and labelled markers without a tile layer, so it does not depend on a tile server.
+OpenStreetMap tiles work online in the sandboxed preview with attribution. Other tile providers
+usually need a key. Offline, the map’s labelled markers and HTML table remain when Leaflet is loaded;
+if the CDN library is unavailable too, the HTML table still works.
 
 [IN-CHAT HTML — rebel_canvas_html]
 Use the same libraries and pinned cdnjs URLs above. Inline scripts are allowed in this view;

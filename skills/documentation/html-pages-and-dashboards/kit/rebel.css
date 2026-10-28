@@ -183,6 +183,12 @@ tbody tr:last-child td { border-bottom: 0; }
 .fc { --fc-page-bg-color: var(--color-surface-1); --fc-neutral-bg-color: var(--color-surface-elevated); --fc-neutral-text-color: var(--rebel-muted); --fc-border-color: var(--color-border-soft); --fc-today-bg-color: var(--color-brand-indigo-soft); --fc-button-bg-color: var(--color-brand-indigo); --fc-button-border-color: var(--color-brand-indigo); --fc-button-hover-bg-color: #4338ca; --fc-button-hover-border-color: #4338ca; --fc-button-active-bg-color: #3730a3; --fc-button-active-border-color: #3730a3; --fc-event-bg-color: var(--color-brand-indigo); --fc-event-border-color: var(--color-brand-indigo); --fc-event-text-color: #ffffff; }
 .leaflet-popup-content-wrapper, .leaflet-popup-tip { background: var(--color-surface-1); color: var(--color-text-primary); }
 .leaflet-container a.leaflet-popup-close-button, .leaflet-popup-content a { color: var(--rebel-link); }
+@media (prefers-color-scheme: dark) {
+  .leaflet-tooltip, .leaflet-bar a, .leaflet-control-attribution { background: var(--color-surface-1); color: var(--color-text-primary); border-color: var(--color-border-strong); }
+  .leaflet-bar a:hover { background: var(--color-surface-elevated); }
+  .leaflet-control-attribution a { color: var(--rebel-link); }
+  .leaflet-tooltip-top::before { border-top-color: var(--color-surface-1); }
+}
 .mermaid { overflow-x: auto; padding: var(--space-4); border-radius: var(--radius-md); background: var(--color-surface-1); color: var(--color-text-primary); }
 .mermaid svg { max-width: 100%; height: auto; }
 @media (max-width: 600px) {
