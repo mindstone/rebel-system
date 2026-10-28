@@ -21,7 +21,7 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
-- **Your cloud stays signed in** — Automations on your cloud could lose their Notion, Google or other connector sign-in after you reconnected that connector on your computer, and stop until you reconnected again. Now, when your cloud runs a connector, only the cloud keeps it signed in, and your computer uses it through the cloud. You don't need to do anything for this. If your computer can't reach your cloud for a while, those connectors wait and carry on by themselves when the cloud's back. If you later stop using the cloud on this computer (**Forget cloud on this device** or **Remove Mindstone Cloud** in Settings), those connectors may ask you to sign in again on this computer. One key, one keyholder.
+- **Your cloud stays signed in** — Automations on your cloud could lose their Notion, Google or other connector sign-in after you reconnected that connector on your computer, and stop until you reconnected again. Now, when your cloud runs a connector you signed in to through Rebel, only the cloud keeps it signed in, and your computer uses it through the cloud. You don't need to do anything for this. If your computer can't reach your cloud for a while, those connectors pause, and work again by themselves once the cloud's back; ask Rebel again then for anything that didn't go through. If you later stop using the cloud on this computer (**Forget cloud on this device** or **Remove Mindstone Cloud** in Settings), those connectors may ask you to sign in again on this computer. One key, one keyholder.
 
 - **A quick answer, without the chase** — **Just a quick answer** now stays put while Rebel works, instead of playing hide and seek.
 
