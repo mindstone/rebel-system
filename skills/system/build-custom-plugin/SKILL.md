@@ -1,7 +1,7 @@
 ---
 name: build-custom-plugin
 description: "Guides building custom sidebar tab plugins using rebel_plugins_create/rebel_plugins_list/rebel_plugins_get_source tools. Read this skill before generating any plugin code."
-last_updated: 2026-03-27
+last_updated: 2026-10-28
 agent_type: main_agent
 ---
 
@@ -14,7 +14,9 @@ Build custom sidebar tab plugins for the user. Plugins are single-file TSX compo
 Read this skill whenever the user asks you to:
 - Create a new plugin or custom tab
 - Modify an existing plugin
-- Build a dashboard, tracker, timer, or any custom UI
+- Build a sidebar tab that stays current from Rebel’s own data or keeps state, such as a tracker or timer
+
+For a dashboard or report built from data the person has now, read [html-pages-and-dashboards](../../documentation/html-pages-and-dashboards/SKILL.md).
 
 ## Reference Docs (load as needed)
 
