@@ -21,6 +21,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **Closing the lid isn't quitting** — If your computer went to sleep while Rebel was updating your memory or running a scheduled automation in the background, Rebel could decide the work had failed and say so. Now, if it hadn't saved or done anything yet, it tries again once after your computer wakes, without making a fuss. If it had already started doing things, it still stops and shows you, so nothing happens twice. Naps are allowed.
+
 - **Cloud means the whole automation** — Choosing Cloud now sends everything it needs and checks that the cloud accepted it. If that fails, Rebel keeps the previous Runs on setting and tells you. If an older automation says Cloud but never runs there, switch Runs on to Desktop, then back to Cloud. No more travelling without its luggage.
 
 - **Less cloud clutter** — Rebel now tidies up after itself. Scratch files from finished tasks and files left behind by deleted conversations are deleted after a week, exports (the big data downloads Rebel makes for analysis) 30 days after they were last changed, and uploaded meeting audio once its transcript is saved. Recordings that failed to transcribe are kept. Older results Rebel saved from your apps are compressed to save space, and still open in full from your conversations. Your own files are never touched. Tidier, not forgetful.
