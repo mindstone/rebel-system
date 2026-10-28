@@ -6,6 +6,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ## Unreleased
 
+- **Figures in good company** — Custom tabs can use shared charts, key figures and dashboards. Negative bars now point in the right direction.
+
 ### Fixes
 
 - **Gemini finishes what it starts** — With the Gemini model, a reply that needed to use one of your connected apps could stop short and come back empty. Rebel now finishes the step and carries on, and the same fix covers other AI models that behave this way.
