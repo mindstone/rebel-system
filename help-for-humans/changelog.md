@@ -14,6 +14,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 - **Fewer surprise conflict copies** — Rebel keeps a copy of your Library in Mindstone Cloud. When you changed a file only on this computer, it sometimes still put a second "conflict" copy of that file beside it, as if the cloud had changed it too. It no longer does, and there's nothing for you to do. When both sides really did change a file, Rebel's automatic merge of the two used to give up on longer files; now it handles them. Fewer twins, same files.
 
+- **Send lets go** — The message box now empties the moment you hit Send, instead of clinging to your words while a new conversation gets going. If sending fails, they come back.
+
 - **File names in replies open on your phone** — When Rebel names a file with its folder, or links a file it saved (even in a folder with spaces in its name), tap it and it opens; a folder opens in Files. Code that isn't a file no longer dresses up as a link.
 
 - **Thinking isn't deciding** — Some AI models write their thinking into their reply, often the ones you add yourself. A half-formed guess in that thinking can no longer approve an action or stop your running task. And if Rebel's quick read of a message you send mid-task gets cut off, your message goes through the usual way instead of being guessed at. Rebel acts on the conclusion, not the muttering.
