@@ -21,7 +21,7 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
-- **Rebel recognises its own tools** — Approval cards for Rebel's built-in tools now say "Using Rebel Inbox", or the tool's name, instead of "Using an unnamed service". There's nothing for you to do. Cards already waiting keep the old wording until you answer them.
+- **Rebel names its own features** — When Rebel asks your OK before using one of its own features, such as Rebel Inbox, the request now says "Using Rebel Inbox" instead of "Using an unnamed service". There's nothing for you to do: requests already waiting keep the old wording, and work the same when you answer them.
 
 - **Cloud means the whole automation** — Choosing Cloud now sends everything it needs and checks that the cloud accepted it. If that fails, Rebel keeps the previous Runs on setting and tells you. If an older automation says Cloud but never runs there, switch Runs on to Desktop, then back to Cloud. No more travelling without its luggage.
 
