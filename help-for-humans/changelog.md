@@ -21,6 +21,10 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **A quick answer, without the chase** — **Just a quick answer** now stays put while Rebel works, instead of playing hide and seek.
+
+- **Closing the lid isn't quitting** — If your computer went to sleep while Rebel was updating your memory or running a scheduled automation in the background, Rebel could decide the work had failed and say so. Now, if it hadn't saved or done anything yet, it tries again once after your computer wakes, without making a fuss. If it had already started doing things, it still stops and shows you, so nothing happens twice. Naps are allowed.
+
 - **Started actions say they're running** — In Actions, once you start an action, its button now says **Queued** while it waits to begin and **Running** while Rebel works on it. Before, it said **Starting** the whole time (and **Prepping** in the window that opens when you click an action), so a busy action looked stuck. The work itself was never affected, and there's nothing for you to do.
 
 - **Rebel names its own features** — When Rebel asks your OK before using one of its own features, such as Rebel Inbox, the request now says "Using Rebel Inbox" instead of "Using an unnamed service". There's nothing for you to do: requests already waiting keep the old wording, and work the same when you answer them.
