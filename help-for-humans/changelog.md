@@ -23,7 +23,7 @@ What's new in Rebel. We ship fast, so there's always something.
 
 - **Your cloud stays signed in** — Automations on your cloud could lose their Notion, Google or other connector sign-in after you reconnected that connector on your computer, and stop until you reconnected again. Now, when your cloud runs a connector you signed in to through Rebel, only the cloud keeps it signed in, and your computer uses it through the cloud. You don't need to do anything for this. If your computer can't reach your cloud for a while, those connectors pause, and work again by themselves once the cloud's back; ask Rebel again then for anything that didn't go through. If you later stop using the cloud on this computer (**Forget cloud on this device** or **Remove Mindstone Cloud** in Settings), those connectors may ask you to sign in again on this computer. One key, one keyholder.
 
-- **A quick answer, without the chase** — **Just a quick answer** now stays put while Rebel works, instead of playing hide and seek.
+- **A quick answer, without the chase** — The **Just a quick answer** button used to vanish and reappear while Rebel worked. It now stays on screen until the reply is done. No more hide and seek.
 
 - **Closing the lid isn't quitting** — If your computer went to sleep while Rebel was updating your memory or running a scheduled automation in the background, Rebel could decide the work had failed and say so. Now, if it hadn't saved or done anything yet, it tries again once after your computer wakes, without making a fuss. If it had already started doing things, it still stops and shows you, so nothing happens twice. Naps are allowed.
 
