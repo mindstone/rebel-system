@@ -182,7 +182,7 @@ Rebel has layered safety mechanisms:
 Before executing any tool call, Rebel evaluates it against your Safety Rules (natural language rules you write in Settings → Account & Preferences → Privacy & Safety). Read-only actions auto-allow. Side-effect actions are evaluated by a fast AI model against your rules. If the rules allow it, Rebel proceeds. If not, you get an approval prompt. You can also mark specific tools as 'trusted' to bypass safety checks entirely.
 
 ### Memory Safety
-When Rebel wants to save something to your memory spaces, it goes through an approval flow with per-space save permissions (configured under Settings → Account & Preferences → Privacy & Safety). Shared spaces have a floor — Rebel still checks sensitivity before writing to company-wide memory, regardless of your personal setting. See [Security and Tool Safety](library://rebel-system/help-for-humans/security-and-tool-safety.md) for the user-facing explanation of the approval flow.
+A Space’s sharing sets how its saves are checked. Your saving preferences are lines in [Safety Rules](rebel://settings/safety#safetyRules); edit them there. Previous per-Space choices have moved into that document. See [Security and Tool Safety](library://rebel-system/help-for-humans/security-and-tool-safety.md) for the user-facing explanation of the approval flow.
 
 ### Privacy Mode
 A per-conversation toggle that tightens all safety checks. In Privacy Mode, Rebel requires your approval for all writes and tool calls — the most cautious setting.
