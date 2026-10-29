@@ -27,6 +27,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **Submit now submits** — Choosing an answer or filling in a form in the desktop app now sends it to Rebel when you press Submit. The button has accepted its responsibilities.
+
 - **Less freezing, less waiting** — Rebel no longer briefly freezes every few seconds while idle with a long conversation history, and conversations stuck at “Try again” get another attempt to sync after updates. Idle should mean idle.
 
 - **Sign-in reminders get the message** — Working connectors no longer ask you to sign in. With multiple accounts, the card names the account (for example, **Notion · jane@example.com**) and its button signs in that account. Sign in from Settings, setup or the card and the reminder clears. Rebel also skips the troubleshooting chat if the connector has already signed in.
