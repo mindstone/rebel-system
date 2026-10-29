@@ -21,6 +21,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **Less freezing, less waiting** — Rebel no longer briefly freezes every few seconds while idle with a long conversation history, and conversations stuck at “Try again” get another attempt to sync after updates. Idle should mean idle.
+
 - **Sign-in reminders get the message** — Working connectors no longer ask you to sign in. With multiple accounts, the card names the account (for example, **Notion · jane@example.com**) and its button signs in that account. Sign in from Settings, setup or the card and the reminder clears. Rebel also skips the troubleshooting chat if the connector has already signed in.
 
 - **Your cloud stays signed in** — Automations on your cloud could lose their Notion, Google or other connector sign-in after you reconnected that connector on your computer, and stop until you reconnected again. Now, when your cloud runs a connector you signed in to through Rebel, only the cloud keeps it signed in, and your computer uses it through the cloud. You don't need to do anything for this. If your computer can't reach your cloud for a while, those connectors pause, and work again by themselves once the cloud's back; ask Rebel again then for anything that didn't go through. If you later stop using the cloud on this computer (**Forget cloud on this device** or **Remove Mindstone Cloud** in Settings), those connectors may ask you to sign in again on this computer. One key, one keyholder.
