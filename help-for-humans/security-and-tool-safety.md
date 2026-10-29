@@ -98,7 +98,7 @@ When text looks credential-shaped, these checks prefer a review to quietly shari
 
 ### Live rule updates
 
-If you update your Safety Rules while approvals are pending, Rebel automatically re-evaluates them. Actions that now pass your updated rules auto-resolve — no need to approve them manually.
+Changes to your Safety Rules apply to future actions. Approvals already waiting stay there until you answer them. If you save a rule from an approval card, that also answers that card; other waiting cards still need your answer.
 
 
 ## What Never Requires Permission
