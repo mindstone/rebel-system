@@ -1,6 +1,6 @@
 ---
 name: html-pages-and-dashboards
-description: "Build a page when the person asks to save, keep, share, print or open it in a browser, or a report from files or several sources. For a chart, table or dashboard of figures already in the conversation (typed, pasted or just fetched), use rebel_canvas_view; then you may offer to save it as a page."
+description: "For charts, tables or dashboards of figures in the conversation (typed, pasted or just fetched), use rebel_canvas_view; then offer to save. Build pages to keep, share, print or open in a browser, or reports from files or several sources."
 last_updated: 2026-10-28
 agent_type: main_agent
 ---
@@ -8,7 +8,7 @@ agent_type: main_agent
 # HTML pages and dashboards
 
 [GOAL]
-Make a useful visual page from data the person has now: a file, connector results or research.
+Make a useful visual page to keep, share or print, or a report built from files or several sources.
 Save it in their Library and link it so they can open Rebel’s preview. Use their data, not invented figures.
 
 [WHEN TO USE]

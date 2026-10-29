@@ -8,6 +8,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Improvements
 
+- **One set of rules for terminal commands** — When Rebel runs a command in your computer's terminal, the same rules now apply whatever kind of computer you use. Everyday commands, like listing a folder, just run. Riskier ones, like deleting or moving files, sending data elsewhere, running downloaded code or using a password or key you've given Rebel, are checked against your [Safety Rules](rebel://settings/safety#safetyRules) first, and Rebel asks you if the check has a concern (or, for the riskiest ones, can't give an answer). The "Rebel can't check this command" warning is gone, and a terminal command that names a folder you've [blocked](rebel://settings/safety#approvalAuthorityLedger), or anything in it, is refused too. The "Extra safety checks" switch in Settings has retired: it only added checks to terminal commands, and they now get the right check by themselves, so you lose nothing. Same rules, fewer surprises.
+
 - **Your OK travels; the work stays put** — Approvals, held automation actions, memory saves and folder requests waiting on your computer now show up on your phone and on the web. Answer there and your computer runs it, once. If your computer's asleep, they wait for it.
 
 - **A shortcut to the short version** — When **Just a quick answer** is available, press **⌘/Ctrl+Shift+J** to get an answer from what Rebel has so far. The shortcut sits beside the button, for those of us who don't memorise release notes. Change it or turn it off in **Settings → Account & Preferences → Appearance**.
@@ -22,6 +24,8 @@ What's new in Rebel. We ship fast, so there's always something.
 - **Charts and dashboards, right in the chat** — Ask Rebel to show your numbers as a chart, a table or a whole dashboard ("show me these sales figures as a dashboard"), and it draws them in the conversation. Hover over a chart for exact figures; sort and filter a table by clicking its headings or typing in its filter box. Sidebar tabs you've built with Rebel use the same charts, and bars for values below zero now point down, as nature intended.
 
 ### Fixes
+
+- **Less freezing, less waiting** — Rebel no longer briefly freezes every few seconds while idle with a long conversation history, and conversations stuck at “Try again” get another attempt to sync after updates. Idle should mean idle.
 
 - **Sign-in reminders get the message** — Working connectors no longer ask you to sign in. With multiple accounts, the card names the account (for example, **Notion · jane@example.com**) and its button signs in that account. Sign in from Settings, setup or the card and the reminder clears. Rebel also skips the troubleshooting chat if the connector has already signed in.
 
