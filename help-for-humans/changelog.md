@@ -14,6 +14,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 - **One home for saving preferences** — Your Space saving choices now live as lines in [Safety Rules](rebel://settings/safety#safetyRules), alongside your other rules. The per-Space “how careful” setting and the “Ask less” button are gone. For now, when Rebel asks about saving a note, you can allow that one save or say no.
 
+- **Files on your phone and the web start with search** — Open Files and type to find any file in your Library by name; matches from your Spaces come first. Below the search are your Spaces, then **Browse all files** for the whole Library, folder by folder, and Back takes you the way you came. Rebel's own folders stay out of the way, and documents show their details as a small Properties row, with wide tables you can scroll sideways. Housekeeping should be our job.
+
 - **Dashboards, with a sense of belonging** — Dashboards and reports now open in your Library preview and look like Rebel, in light and dark. The numbers have found suitable accommodation.
 <!-- detail: Pages use a shared Rebel style, with charts, maps, tables, calendars and diagrams from approved libraries. Key figures and HTML tables remain readable offline; charts need their libraries to load. -->
 
