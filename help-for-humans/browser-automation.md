@@ -27,23 +27,23 @@ Control web browsers directly from Rebel for tasks like data collection, form fi
 
 ## Rebel's Browser
 
-Rebel's built-in browser automation drives a real browser window so you can watch what it's doing — every click, every keystroke. It keeps its own sign-ins between uses.
+Rebel's built-in browser automation uses its own browser on this computer. It keeps its own sign-ins between uses.
 
 ### Setup
 
 1. Go to **Settings → Connectors**
 2. In the **Available** section, find **Rebel's Browser**
 3. Click **Connect**
-4. Leave **Show the browser window** ticked if you want to watch Rebel work (recommended). Untick it if you'd rather Rebel work out of sight.
+4. Leave **Show the browser window** unticked and Rebel works without showing you a window. Tick it if you want to watch Rebel work.
 5. Click **Connect** to confirm.
 
 Requires Google Chrome or Brave to be installed.
 
 ### Show the browser window
 
-By default, Rebel opens a real browser so you can see every action as it happens — useful for trust, debugging, and learning what Rebel is up to. If the window gets in the way of your work, untick **Show the browser window** in the connector settings and Rebel will work quietly out of sight instead.
+If you connect Rebel's Browser from now on, it works without showing you a window. Tick **Show the browser window** to watch Rebel click around. If you'd already connected it, your earlier choice stays.
 
-You can change this any time in **Settings → Connectors → Rebel's Browser**.
+You can change this any time in **Settings → Connectors → Rebel's Browser**. A change takes effect the next time Rebel opens its browser, not in one that's already open.
 
 ### First-Time Login
 
@@ -52,7 +52,7 @@ The first time you need Rebel to access a logged-in service:
 1. Ask Rebel: "Log me into LinkedIn" (or whichever service)
 2. A browser window opens for you to log in manually
 3. Close the browser when done — your session is saved automatically
-4. Future requests reuse the saved session (still visible if you've left **Show the browser window** ticked)
+4. Next time, Rebel is still signed in (you'll see it if you've ticked **Show the browser window**)
 
 ### Example Uses
 
