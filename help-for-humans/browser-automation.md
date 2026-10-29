@@ -19,15 +19,15 @@ Control web browsers directly from Rebel for tasks like data collection, form fi
 
 | Connector | What it does | When to use it |
 |-----------|--------------|----------------|
-| **Your Browser** | Uses the Rebel extension in your own browser, signed in as you | Read the page you're looking at, quote a selection, fill fields or click on a site you're already logged into |
-| **Rebel's Browser** | Works in its own browser window on this computer; logins persist | Web tasks on sites with no connector or API, including forms, screenshots and data collection |
-| **Cloud Browser** | Runs browsers in the cloud through Browserbase; billed per session with a one-minute minimum | Unattended, scheduled or cloud runs when nobody is at this computer |
+| **Your Browser** (formerly Rebel Browser) | Uses the Rebel extension in your own browser, signed in as you | Read the page you're looking at, quote a selection, fill fields or click on a site you're already signed in to |
+| **Rebel's Browser** (formerly Browser Automation) | A separate browser Rebel runs on this computer; keeps its own sign-ins | Web tasks on sites none of your other connectors cover: forms, screenshots and collecting information |
+| **Cloud Browser** | Runs browsers online through Browserbase; billed per session with a one-minute minimum | Web tasks that run while you're away, such as scheduled automations |
 
-**Shared Browser Tab** is the older option being retired. It remains available while its capabilities move to Your Browser. Existing connections keep working.
+**Shared Browser Tab** is the older option being retired. For now it's the one to use if you want Rebel to open pages or take screenshots in your own tab; Your Browser reads, fills and clicks the page you're on, and gains the rest soon. Existing connections keep working.
 
 ## Rebel's Browser
 
-Rebel's built-in browser automation drives a real browser window so you can watch what it's doing — every click, every keystroke. It uses accessibility snapshots for reliable element targeting and persists login sessions between uses.
+Rebel's built-in browser automation drives a real browser window so you can watch what it's doing — every click, every keystroke. It keeps its own sign-ins between uses.
 
 ### Setup
 
