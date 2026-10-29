@@ -27,7 +27,7 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
-- **Submit now submits** — Choosing an answer or filling in a form in the desktop app now sends it to Rebel when you press Submit. The button has accepted its responsibilities.
+- **Submit now submits** — In the desktop app, pressing Submit after choosing an answer or filling in a form used to do nothing. Now it sends your answer to Rebel. The button has accepted its responsibilities.
 
 - **PDFs show their pages again** — When you opened a PDF in Rebel (from your Library, a search or a link in a reply), the preview panel stayed grey and never showed the pages. Now it shows them. The **Open in default app** button under the preview still opens the PDF in your usual PDF app. Grey is a fine colour, just not for a document.
 
