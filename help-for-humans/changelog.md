@@ -8,6 +8,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Improvements
 
+- **Clearer browser choices** — The Connectors page had seven browser options that mostly did the same thing. Three of them now have clear names and one job each: **Your Browser** (formerly Rebel Browser), the Rebel extension in your own browser, for the page you're on or a site you're already signed in to; **Rebel's Browser** (formerly Browser Automation), a separate browser Rebel runs on your computer with its own sign-ins, for sites none of your other connectors cover; and **Cloud Browser** (run by Browserbase), for tasks that run while you're away, like scheduled automations. **Shared Browser Tab** stays as a fourth option for now, until Your Browser can do everything it does. Two older browser connectors, Playwright and Simple Browser, are no longer offered; if either is under **Connected** on your [Connectors](rebel://settings/connectors) page, it keeps working. And if your Browserbase connection showed up twice, it now shows once, as Cloud Browser, still using the key you entered; if an automation of yours names specific old Browserbase tools, ask Rebel to update it. Otherwise there's nothing you need to do. Fewer browsers, same internet.
+
 - **One set of rules for terminal commands** — When Rebel runs a command in your computer's terminal, the same rules now apply whatever kind of computer you use. Everyday commands, like listing a folder, just run. Riskier ones, like deleting or moving files, sending data elsewhere, running downloaded code or using a password or key you've given Rebel, are checked against your [Safety Rules](rebel://settings/safety#safetyRules) first, and Rebel asks you if the check has a concern (or, for the riskiest ones, can't give an answer). The "Rebel can't check this command" warning is gone, and a terminal command that names a folder you've [blocked](rebel://settings/safety#approvalAuthorityLedger), or anything in it, is refused too. The "Extra safety checks" switch in Settings has retired: it only added checks to terminal commands, and they now get the right check by themselves, so you lose nothing. Same rules, fewer surprises.
 
 - **Your OK travels; the work stays put** — Approvals, held automation actions, memory saves and folder requests waiting on your computer now show up on your phone and on the web. Answer there and your computer runs it, once. If your computer's asleep, they wait for it.
@@ -24,6 +26,12 @@ What's new in Rebel. We ship fast, so there's always something.
 - **Charts and dashboards, right in the chat** — Ask Rebel to show your numbers as a chart, a table or a whole dashboard ("show me these sales figures as a dashboard"), and it draws them in the conversation. Hover over a chart for exact figures; sort and filter a table by clicking its headings or typing in its filter box. Sidebar tabs you've built with Rebel use the same charts, and bars for values below zero now point down, as nature intended.
 
 ### Fixes
+
+- **Submit now submits** — In the desktop app, pressing Submit after choosing an answer or filling in a form used to do nothing. Now it sends your answer to Rebel. The button has accepted its responsibilities.
+
+- **PDFs show their pages again** — When you opened a PDF in Rebel (from your Library, a search or a link in a reply), the preview panel stayed grey and never showed the pages. Now it shows them. The **Open in default app** button under the preview still opens the PDF in your usual PDF app. Grey is a fine colour, just not for a document.
+
+- **File links find their Space** — A file named in a reply now opens on desktop, phone and web when exactly one Space contains it, even if the link left out the Space. Less address-checking, more reading.
 
 - **Less freezing, less waiting** — Rebel no longer briefly freezes every few seconds while idle with a long conversation history, and conversations stuck at “Try again” get another attempt to sync after updates. Idle should mean idle.
 
