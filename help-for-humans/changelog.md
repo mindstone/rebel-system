@@ -8,6 +8,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Improvements
 
+- **One set of rules for terminal commands** — When Rebel runs a command in your computer's terminal, the same rules now apply whatever kind of computer you use. Everyday commands, like listing a folder, just run. Riskier ones, like deleting or moving files, sending data elsewhere, running downloaded code or using a password or key you've given Rebel, are checked against your [Safety Rules](rebel://settings/safety#safetyRules) first, and Rebel asks you if the check has a concern (or, for the riskiest ones, can't give an answer). The "Rebel can't check this command" warning is gone, and a terminal command that names a folder you've [blocked](rebel://settings/safety#approvalAuthorityLedger), or anything in it, is refused too. The "Extra safety checks" switch in Settings has retired: it only added checks to terminal commands, and they now get the right check by themselves, so you lose nothing. Same rules, fewer surprises.
+
 - **Your OK travels; the work stays put** — Approvals, held automation actions, memory saves and folder requests waiting on your computer now show up on your phone and on the web. Answer there and your computer runs it, once. If your computer's asleep, they wait for it.
 
 - **A shortcut to the short version** — When **Just a quick answer** is available, press **⌘/Ctrl+Shift+J** to get an answer from what Rebel has so far. The shortcut sits beside the button, for those of us who don't memorise release notes. Change it or turn it off in **Settings → Account & Preferences → Appearance**.
