@@ -1,27 +1,26 @@
 ---
-description: "What Rebel Browser is, how to install it, what it can see, and what to try when the pairing flow gets temperamental."
-last_updated: "2026-05-11"
+description: "What Your Browser is, how to install it, what it can see, and what to try when the pairing flow gets temperamental."
+last_updated: "2026-10-29"
 ---
 
-# Rebel Browser
+# Your Browser
 
-Rebel Browser is the browser extension that lets Rebel see the page you're looking at, so you can ask it to summarise, save, or act on that page without playing courier between tabs.
+Your Browser uses the Rebel extension that lets Rebel see the page you're looking at, so you can ask it to summarise, save, or act on that page without playing courier between tabs.
 
 It runs locally. Rebel does not get a permanent live feed of your browser. It only sees what you point it at.
 
 ## How to install it
 
-Open **Settings → Connections → Rebel Browser → Install**.
+Open **Settings → Connectors**, choose **Your Browser**, then **Set up with Rebel**.
 
 Rebel will walk you through the rest in chat. You pick the browser, it prepares the files, and opens the right windows. Follow its instructions.
 
 In practice, that usually means:
 
-1. Pick your browser in the chat.
-2. Rebel opens the extension folder and your browser's extensions page.
-3. Turn on **Developer Mode**.
-4. Drag the **Rebel Browser** folder into that page.
-5. Either type the 6-digit code Rebel shows you, or approve the connection when Rebel asks.
+1. Tell Rebel which browser to use, if it asks.
+2. Rebel prepares the extension folder and opens your browser's extensions page when possible.
+3. Follow the instructions in chat to enable **Developer Mode** and load the revealed **Rebel** extension folder.
+4. Tell Rebel when the extension is loaded or the Rebel icon appears. Rebel checks that it's connected.
 
 Should take about a minute. Even software occasionally behaves.
 
@@ -46,11 +45,11 @@ If that still fails, install Chrome first. It is the least surprising option.
 
 ### The extensions page won't open
 
-Open `chrome://extensions` manually in your browser and drag the **Rebel Browser** folder in.
+Open `chrome://extensions` manually in your browser and load the revealed **Rebel** extension folder.
 
-### The 6-digit code expired
+### The install window closed
 
-Ask Rebel to try again. It mints a fresh one.
+Set up **Your Browser** again from Settings and follow the new instructions.
 
 ### It says Developer Mode is required
 
@@ -67,7 +66,8 @@ Quit and reopen Rebel, then try again. The bridge sometimes benefits from a fres
 Rebel can use the extension to:
 
 - read page context
-- take screenshots on demand
+- quote selected text
+- fill fields and click on the page
 - help you summarise, save, or act on the current page
 
 Nothing is sent anywhere just because the extension exists. Rebel only uses it when you ask.
