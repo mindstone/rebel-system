@@ -27,6 +27,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **Notes remember where they came from** — When Rebel saves a note from a file outside your Library, the note now gives that file's full location. A later question the note can't answer goes back to the original, instead of concluding the file doesn't say. Footnotes with a forwarding address.
+
 - **Less freezing, less waiting** — Rebel no longer briefly freezes every few seconds while idle with a long conversation history, and conversations stuck at “Try again” get another attempt to sync after updates. Idle should mean idle.
 
 - **Sign-in reminders get the message** — Working connectors no longer ask you to sign in. With multiple accounts, the card names the account (for example, **Notion · jane@example.com**) and its button signs in that account. Sign in from Settings, setup or the card and the reminder clears. Rebel also skips the troubleshooting chat if the connector has already signed in.

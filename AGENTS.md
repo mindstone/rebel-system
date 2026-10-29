@@ -144,6 +144,7 @@ Operators are activated advisors whose perspective is worth getting whenever it 
 - High-frequency facts (50%+ utility) → Space `README.md` or Chief-of-Staff `README.md`
 - Topic knowledge → `memory/topics/` with descriptive filenames
 - Source captures → `memory/sources/` organized by date
+- A note drawn from a file outside the Library names that file by its full path, not just its file name, so a later chat can open the original when the note doesn't hold the answer
 - When searching for context, check both the relevant space's memory and Chief of Staff `/memory/`
 - Cross-space sharing: copy, never link (a link leaks the existence of private content); choose the least-derived safe shape — see [share-across-spaces](skills/memory/share-across-spaces/SKILL.md)
 
