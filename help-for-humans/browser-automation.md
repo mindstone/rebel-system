@@ -1,9 +1,9 @@
 ---
-description: "Guide to browser automation in Rebel — visible Browser Automation for autonomous tasks (with an option to run quietly) and Shared Browser Tab for collaborative control"
-last_updated: "2026-05-11"
+description: "Choose Your Browser, Rebel's Browser or Cloud Browser for the web task you need."
+last_updated: "2026-10-29"
 ---
 
-# Browser Automation
+# Browser tools
 
 Control web browsers directly from Rebel for tasks like data collection, form filling, research, and workflow automation.
 
@@ -12,28 +12,27 @@ Control web browsers directly from Rebel for tasks like data collection, form fi
 ## See also
 
 - [MCP connectors, tools, and integrations](library://rebel-system/help-for-humans/mcp-connectors-tools-and-integrations.md) - General connector setup and configuration
-- [Rebel Browser Extension](library://rebel-system/help-for-humans/browser-extension.md) - Rebel's own extension for reading, filling, and clicking in the tab you're looking at
-- [Playwright](library://rebel-system/help-for-humans/connectors/playwright.md) - Another browser automation option that runs locally
+- [Your Browser](rebel://library/rebel-system%2Fhelp-for-humans%2Fbrowser-extension.md) - Rebel's own extension for reading, filling, and clicking in the tab you're looking at
 - [Browser MCP Chrome Extension](https://chromewebstore.google.com/detail/browser-mcp-automate-your/bjfgambnhccakkhmkepdoekmckoijdlc) - Required for Shared Browser Tab
 
-## Three Browser Tools
+## Which browser?
 
-Rebel has three browser tools, each for a different workflow:
+| Connector | What it does | When to use it |
+|-----------|--------------|----------------|
+| **Your Browser** | Uses the Rebel extension in your own browser, signed in as you | Read the page you're looking at, quote a selection, fill fields or click on a site you're already logged into |
+| **Rebel's Browser** | Works in its own browser window on this computer; logins persist | Web tasks on sites with no connector or API, including forms, screenshots and data collection |
+| **Cloud Browser** | Runs browsers in the cloud through Browserbase; billed per session with a one-minute minimum | Unattended, scheduled or cloud runs when nobody is at this computer |
 
-| Tool | How it works | When to use |
-|------|-------------|-------------|
-| **Rebel Browser Extension** | A Rebel-native extension in your Chromium browser, paired via a 6-digit code | Collaborative — "read / fill / click the tab I'm looking at" |
-| **Browser Automation** | Rebel controls its own browser (visible by default; can run quietly) | Autonomous web tasks — filling forms, extracting data, taking screenshots |
-| **Shared Browser Tab** | You share a Chrome tab with Rebel via the third-party Browser MCP extension | Collaborative — "look at what I'm seeing" (older option, superseded by the Rebel Browser Extension for most cases) |
+**Shared Browser Tab** is the older option being retired. It remains available while its capabilities move to Your Browser. Existing connections keep working.
 
-## Browser Automation
+## Rebel's Browser
 
 Rebel's built-in browser automation drives a real browser window so you can watch what it's doing — every click, every keystroke. It uses accessibility snapshots for reliable element targeting and persists login sessions between uses.
 
 ### Setup
 
 1. Go to **Settings → Connectors**
-2. In the **Available** section, find **Browser Automation**
+2. In the **Available** section, find **Rebel's Browser**
 3. Click **Connect**
 4. Leave **Show the browser window** ticked if you want to watch Rebel work (recommended). Untick it if you'd rather Rebel work out of sight.
 5. Click **Connect** to confirm.
@@ -44,7 +43,7 @@ Requires Google Chrome or Brave to be installed.
 
 By default, Rebel opens a real browser so you can see every action as it happens — useful for trust, debugging, and learning what Rebel is up to. If the window gets in the way of your work, untick **Show the browser window** in the connector settings and Rebel will work quietly out of sight instead.
 
-You can change this any time in **Settings → Connectors → Browser Automation**.
+You can change this any time in **Settings → Connectors → Rebel's Browser**.
 
 ### First-Time Login
 
