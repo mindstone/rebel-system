@@ -6,6 +6,10 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ## Unreleased
 
+### Highlights
+
+- **Your reply can carry on in your cloud** — With cloud continuity and an updated cloud, close the laptop or lose the connection and a running reply can continue there. A model that runs only on your computer waits for it unless you choose a hosted fallback.
+
 ### Improvements
 
 - **Your Browser does a lot more, and stays out of your way** — Your Browser, the Rebel extension in your own browser, now works in its own tabs, grouped under **Rebel** in the background. It never switches you to them or brings your browser forward, and leaves your tabs alone. It can open pages, type, pick from drop-downs, press keys, wait for pages to load and take screenshots, as well as read, fill in forms and click. When it needs you, for a sign-in say, it asks in the conversation and waits for you to choose **Done** there; if you click or type in its tab while it works, it waits until you stop. It asks once for access to all websites (say no and it asks site by site instead), and your [Safety Rules](rebel://settings/safety#safetyRules) still decide what it does on each. Rebel's Browser now works without showing a window when you first connect it, and Shared Browser Tab bows out, though it keeps working if you already use it. A browser with manners, finally.
