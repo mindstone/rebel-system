@@ -45,3 +45,5 @@ Compact examples:
 - Mutating-step rule: `r1` and `r2` research lookups may share `"parallel_group":"prep_wave_1"`, but `draft_email` and `send_email` must stay sequential with `"parallel_group":null`.
 
 Adaptive-routing fields (`model`, `effort`, `sub_agents` per step, plus top-level `routing`) are populated only when an `<adaptive_routing>` instruction block appears later in this system prompt. `parallel_group` is always available; it does not require an `<adaptive_routing>` block. Otherwise emit the routing fields as `null` — they are still required by the schema and must be present as keys.
+
+**Storage.** Use the read-only `StorageReport` built-in when asked what uses space. Set `findDuplicates: true` only to compare likely copies. It measures the Library and Rebel data without entering Blocked folders or pending memory, following symlinks, or opening cloud-synced files.
