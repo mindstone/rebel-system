@@ -31,6 +31,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **"Running" means running** — An Action could stay marked as running long after its work had stopped, on your phone as well as your computer. Rebel now notices when nothing is running any more and settles it. And when your other devices won't take a change you made to an Action, the card on your computer now says **Not synced**, and pointing at it tells you why, instead of Rebel quietly trying again every few minutes. It tries again by itself when either version changes. Honesty, now with a label.
+
 - **Cached input counted once** — Costs for OpenAI, ChatGPT and OpenRouter with your own key counted the part of each message the provider had cached twice, so those figures were too high. They now count it once, so the numbers you see drop. Paying twice for the same thing was never the plan.
 
 <!-- detail: This covers clouds Rebel runs for you and clouds you host on Fly. -->
