@@ -31,6 +31,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **Bold text stands out again on iPhone** — In the Rebel app on iPhone, words in bold in a reply or a document showed in the same normal-weight letters as the text around them, so they didn't stand out. Now they show in bold. Emphasis, restored.
+
 - **Cached input counted once** — Costs for OpenAI, ChatGPT and OpenRouter with your own key counted the part of each message the provider had cached twice, so those figures were too high. They now count it once, so the numbers you see drop. Paying twice for the same thing was never the plan.
 
 <!-- detail: This covers clouds Rebel runs for you and clouds you host on Fly. -->
