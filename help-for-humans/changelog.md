@@ -29,6 +29,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **Cached input counted once** — Costs for OpenAI, ChatGPT and OpenRouter with your own key counted the part of each message the provider had cached twice, so those figures were too high. They now count it once, so the numbers you see drop. Paying twice for the same thing was never the plan.
+
 - **Notes remember where they came from** — When Rebel saves a note from a file outside your Library, the note now gives that file's full location. A later question the note can't answer goes back to the original, instead of concluding the file doesn't say. Footnotes with a forwarding address.
 
 - **Submit now submits** — In the desktop app, pressing Submit after choosing an answer or filling in a form used to do nothing. Now it sends your answer to Rebel. The button has accepted its responsibilities.
