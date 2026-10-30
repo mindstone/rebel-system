@@ -29,6 +29,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **Straight talk about files Rebel leaves out** — If one message has more files than Rebel can take, Rebel now says that's why it left one out and asks you to send it on its own, instead of claiming it couldn't read it. When a file's simply too long, it asks for the part you need first, with a shorter or split copy as the fallback, rather than suggesting screenshots of a document longer than most novels.
+
 - **Notes remember where they came from** — When Rebel saves a note from a file outside your Library, the note now gives that file's full location. A later question the note can't answer goes back to the original, instead of concluding the file doesn't say. Footnotes with a forwarding address.
 
 - **Submit now submits** — In the desktop app, pressing Submit after choosing an answer or filling in a form used to do nothing. Now it sends your answer to Rebel. The button has accepted its responsibilities.
