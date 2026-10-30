@@ -31,12 +31,16 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **"Running" means running** — An Action could stay marked as running long after its work had stopped, on your phone as well as your computer. Rebel now notices when nothing is running any more and settles it. And when your other devices won't take a change you made to an Action, the card on your computer now says **Not synced**, and pointing at it tells you why, instead of Rebel quietly trying again every few minutes. It tries again by itself when either version changes. Honesty, now with a label.
+
 - **Usage costs no longer counted twice** — With OpenAI, ChatGPT or your own OpenRouter key, the provider charges less for the part of a conversation it has already seen. Rebel's estimate counted that part twice, so the costs shown in Settings → Usage were too high. Nobody was charged extra: your provider bills you, and its bill was always right. Rebel's figures now match it and go down on their own. Overcounting your spending was never the plan.
 
-- **A way back from a freeze** — If your cloud stops responding, it now restarts itself within a few minutes. Saved files stay put; retry the interrupted task once it's back. The silent treatment has a time limit.
-<!-- detail: This covers clouds Rebel runs and clouds you host on Fly, but not yet clouds on your own server. -->
+<!-- detail: This covers clouds Rebel runs for you and clouds you host on Fly. -->
+- **A way back from a freeze** — If your cloud stops responding, it now restarts itself within a few minutes; clouds on your own server get this later. Saved files stay put; retry the interrupted task once it's back. The silent treatment has a time limit.
 
 - **Your model pick sticks to the conversation** — If you pick a model for one conversation on your computer, replies you send in that conversation from the web or your phone now use it too, instead of quietly switching back to your usual one. The same goes for when you press Continue, or approve something Rebel asked you about. One catch: a model that runs on your own computer can't answer you from the web or your phone. For those replies Rebel switches to the online model you've chosen to take over, or, if you haven't chosen one yet, asks you to pick one in Rebel's settings on your computer.
+
+- **Picking up without guessing** — After an interruption, Rebel says when it can’t confirm a reply resumed. Dismissing the window keeps the conversation’s recovery option, and one conversation’s recovery trouble no longer holds up the others. Less guesswork, fewer false starts.
 
 - **Notes remember where they came from** — When Rebel saves a note from a file outside your Library, the note now gives that file's full location. A later question the note can't answer goes back to the original, instead of concluding the file doesn't say. Footnotes with a forwarding address.
 
