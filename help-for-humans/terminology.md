@@ -95,7 +95,7 @@ In earlier v1/v2 layouts, this was your profile file (`memory/ABOUTME.md` in you
 ## Technical Concepts (Made Simple)
 
 ### Mindstone Cloud
-Optional managed cloud infrastructure that keeps your desktop, mobile, and browser in sync. One-click provisioning — you can use your own API keys or the managed service. Cloud Continuity is opt-in; Rebel works fully offline in desktop-only mode. ([Cloud Continuity and Mobile](library://rebel-system/help-for-humans/cloud-continuity-and-mobile.md))
+Optional managed cloud infrastructure that keeps your desktop, mobile, and browser in sync. One-click provisioning — you can use your own API keys or the managed service. It turns on by itself on a computer you sign in to when your account already has a Mindstone Cloud; choose Only this computer to keep Rebel fully on that computer. ([Cloud Continuity and Mobile](library://rebel-system/help-for-humans/cloud-continuity-and-mobile.md))
 
 ### MCP (Model Context Protocol)
 A connector that gives AI agents access to external tools and services. Rebel supports many connectors—some connect directly via OAuth, others are bundled, and some are community-provided. You manage all your connectors in **Settings → Connectors**. ([Understanding MCPs](library://rebel-system/help-for-humans/mcp-connectors-tools-and-integrations.md))
