@@ -56,7 +56,7 @@ If you connect a server manually, Rebel can copy data and credentials to it but 
 
 ### Already have a Mindstone Cloud?
 
-Then there's nothing to set up. When you sign in to Rebel on another computer, it connects to your Mindstone Cloud by itself and tells you so with a short notice. Its new chats can then carry on in the cloud when that computer sleeps, older chats follow when you next use them, and your Library syncs file by file without replacing what the cloud already has.
+Then there's nothing to set up. When you sign in to Rebel on another computer, it connects to your Mindstone Cloud by itself and tells you so with a short notice. Its new chats can then carry on in the cloud when that computer sleeps, older chats follow when you next use them, and your Library joins the cloud's without replacing anything. Where a file is different on the two, Rebel keeps both: the cloud's version keeps the name and this computer's sits beside it as "(this computer's copy)".
 
 This happens only on a computer that has never made a choice here. If you picked **Only this computer** on it, it stays that way. Rebel never creates a cloud for you, and a cloud you run yourself is never connected automatically.
 
