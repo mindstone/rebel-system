@@ -31,7 +31,7 @@ Install the Rebel extension into the user's Chromium-based browser using the det
    - reply once the Rebel icon appears or if something looks wrong.
 5. If the tool returns `ok: false`, read `userMessage`, offer `instructions`, and stop unless the user asks to retry.
 6. After the user says it is loaded, call `rebel_browser_status({})` once.
-7. On success, say it is connected and offer one useful example: summarise the current page, fill a form, or extract key details.
+7. On success, say it is connected and offer one useful example: summarise the current page, fill a form, or extract key details. It can also open pages in its own background Rebel tabs, type, choose from drop-downs, wait for pages and take screenshots.
 8. On failure, call `rebel_bridge_diagnose` with the browser id and install session alias if `prepare_install` returned one, then translate the result into one plain next step.
 
 [IMPORTANT]
