@@ -31,7 +31,9 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
-- **Cached input counted once** — Costs for OpenAI, ChatGPT and OpenRouter with your own key counted the part of each message the provider had cached twice, so those figures were too high. They now count it once, so the numbers you see drop. Paying twice for the same thing was never the plan.
+- **"Running" means running** — An Action could stay marked as running long after its work had stopped, on your phone as well as your computer. Rebel now notices when nothing is running any more and settles it. And when your other devices won't take a change you made to an Action, the card on your computer now says **Not synced**, and pointing at it tells you why, instead of Rebel quietly trying again every few minutes. It tries again by itself when either version changes. Honesty, now with a label.
+
+- **Usage costs no longer counted twice** — With OpenAI, ChatGPT or your own OpenRouter key, the provider charges less for the part of a conversation it has already seen. Rebel's estimate counted that part twice, so the costs shown in Settings → Usage were too high. Nobody was charged extra: your provider bills you, and its bill was always right. Rebel's figures now match it and go down on their own. Overcounting your spending was never the plan.
 
 <!-- detail: This covers clouds Rebel runs for you and clouds you host on Fly. -->
 - **A way back from a freeze** — If your cloud stops responding, it now restarts itself within a few minutes; clouds on your own server get this later. Saved files stay put; retry the interrupted task once it's back. The silent treatment has a time limit.
