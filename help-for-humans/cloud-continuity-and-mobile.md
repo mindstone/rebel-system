@@ -1,6 +1,6 @@
 ---
 description: "How to set up cloud continuity so Rebel works on your phone, tablet, or browser — step-by-step setup, pairing, privacy, limitations, and troubleshooting"
-last_updated: "2026-09-04"
+last_updated: "2026-10-30"
 ---
 
 # Cloud Continuity: Use Rebel on Your Phone, Tablet, or Browser
@@ -42,10 +42,10 @@ You need:
 - The **Rebel desktop app**
 - An **internet connection**
 - A decision between the two options shown in Cloud Sync:
-  - **Desktop only**
-  - **Add cloud continuity**
+  - **Only this computer**
+  - **Cloud continuity**
 
-If you choose **Add cloud continuity**, you can then use either:
+If you choose **Cloud continuity**, you can then use either:
 
 | Option shown in Settings | Choose this if... |
 |------|-------------------|
@@ -53,6 +53,12 @@ If you choose **Add cloud continuity**, you can then use either:
 | **Use your own cloud provider** | You want the copy on a machine 100% under your control. Mindstone does not get it. |
 
 If you connect a server manually, Rebel can copy data and credentials to it but cannot verify who operates that machine. Check with whoever gave you its address before connecting.
+
+### Already have a Mindstone Cloud?
+
+Then there's nothing to set up. When you sign in to Rebel on another computer, it connects to your Mindstone Cloud by itself and tells you so with a short notice. Its new chats can then carry on in the cloud when that computer sleeps, older chats follow when you next use them, and your Library syncs file by file without replacing what the cloud already has.
+
+This happens only on a computer that has never made a choice here. If you picked **Only this computer** on it, it stays that way. Rebel never creates a cloud for you, and a cloud you run yourself is never connected automatically.
 
 
 ---
@@ -65,10 +71,10 @@ Go to **Settings → Workspace → Cloud Sync**.
 
 You'll see two options:
 
-- **Desktop only** — Keep everything local on this computer
-- **Add cloud continuity** — Enable the cloud bridge
+- **Only this computer** — Chats stay on this computer and pause when it sleeps
+- **Cloud continuity** — Chats can carry on in your cloud when this computer sleeps
 
-Select **Add cloud continuity**.
+Select **Cloud continuity**.
 
 ### Step 2: Choose how you want it hosted
 
@@ -76,7 +82,7 @@ Select **Add cloud continuity**.
 
 This is the simplest route.
 
-1. Stay on **Add cloud continuity**
+1. Stay on **Cloud continuity**
 2. In the **Mindstone Cloud** section, choose a region if needed
 3. Click **Enable Mindstone Cloud**
 4. Wait for setup to finish
@@ -90,7 +96,7 @@ Choose this if you want the cloud instance on your own Fly.io account. You'll ha
 
 > **Currently supported:** Fly.io. Support for additional providers may come later.
 
-1. Stay on **Add cloud continuity**
+1. Stay on **Cloud continuity**
 2. Click **Use your own cloud provider instead**
 3. Follow the Fly.io prompts Rebel gives you
 4. Wait for the connection check to complete
@@ -433,7 +439,7 @@ What offline mode **can't** do: start an agent turn (Rebel needs the cloud to th
 If you want to turn off cloud continuity:
 
 1. Go to **Settings → Workspace → Cloud Sync**
-2. Switch back to **Desktop only**
+2. Switch back to **Only this computer**
 3. Confirm the change
 
 Your desktop data is unaffected. The cloud instance keeps the last synced copy until that instance is deleted, but it will stop receiving new updates.

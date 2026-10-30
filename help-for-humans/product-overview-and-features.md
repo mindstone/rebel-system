@@ -306,7 +306,7 @@ Bring multiple AI models into one conversation for second opinions, diverse pers
 
 ### Mindstone Cloud
 
-Optional managed cloud infrastructure that keeps your desktop, mobile, and browser in sync. Mindstone holds the cloud copy — including the credentials cloud tasks need — and never looks at it. Hosting and AI billing are separate choices: you can use your own AI credentials or a managed AI plan. Cloud Continuity is opt-in; with it off, your Rebel data and credentials stay on your device.
+Optional managed cloud infrastructure that keeps your desktop, mobile, and browser in sync. Mindstone holds the cloud copy — including the credentials cloud tasks need — and never looks at it. Hosting and AI billing are separate choices: you can use your own AI credentials or a managed AI plan. Cloud Continuity is off unless you turn it on, or your account already has a Mindstone Cloud, in which case a new computer you sign in to connects to it by itself and says so; with it off, your Rebel data and credentials stay on your device.
 
 **See also:** [Cloud Continuity and Mobile](library://rebel-system/help-for-humans/cloud-continuity-and-mobile.md)
 

@@ -15,7 +15,7 @@ Your passwords, API keys, and other sensitive credentials need to stay safe. Her
 
 ## Desktop-only mode
 
-If you leave Rebel on **Desktop only**, here's what happens:
+If Rebel is on **Only this computer**, or your account has no cloud, here's what happens:
 
 | Credential type | What Rebel stores | Where it stays |
 |---|---|---|
@@ -54,7 +54,7 @@ The honest framing: **Rebel gives a tool access to the key while it runs** — n
 
 ## With cloud continuity enabled
 
-If you switch from **Desktop only** to **Add cloud continuity**, your cloud instance needs some credentials so it can keep working when you're on mobile, in a browser, or away from your desktop.
+If you switch from **Only this computer** to **Cloud continuity**, your cloud instance needs some credentials so it can keep working when you're on mobile, in a browser, or away from your desktop.
 
 ### These stay local
 
