@@ -31,6 +31,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **A calmer start-up warning** — When you open Rebel and the apps you've connected to it, like Gmail or Slack, are slow to start or don't start at all, the warning now names them, says you can keep chatting, and offers **Try again** to reconnect them. It used to stay on screen even after your apps were working again; now it goes away by itself as soon as they work. If trying again doesn't help, Safe Mode is still there: it restarts Rebel with your apps switched off and opens a chat to help find the problem, and your chats and files are kept. The warning no longer outstays its welcome.
+
 - **Cached input counted once** — Costs for OpenAI, ChatGPT and OpenRouter with your own key counted the part of each message the provider had cached twice, so those figures were too high. They now count it once, so the numbers you see drop. Paying twice for the same thing was never the plan.
 
 <!-- detail: This covers clouds Rebel runs for you and clouds you host on Fly. -->
