@@ -84,7 +84,7 @@ Rebel does not touch anything else in your Fly account. If you stop using BYOK, 
 In Rebel:
 
 1. Open **Settings → Workspace → Cloud Sync**
-2. Choose **Add cloud continuity**
+2. Choose **Cloud continuity**
 3. Click **Use your own cloud provider instead**
 4. Select **Fly.io**
 5. Pick a **region** if prompted — pick the Fly region physically closest to you for the lowest latency. If you don't know which to pick, the default is fine and you can rebuild later.
@@ -240,7 +240,7 @@ The cloud service is designed to degrade gracefully. If you're happy with the fe
 
 To fully stop using BYOK:
 
-1. In Rebel: **Settings → Workspace → Cloud Sync → Desktop only**. This stops syncing.
+1. In Rebel: **Settings → Workspace → Cloud Sync → Only this computer**. This stops syncing.
 2. In the [Fly dashboard](https://fly.io/dashboard): find the `rebel-cloud-<something>` app and **Destroy** it. This removes the machine, the volume, and all associated resources.
 3. Double-check the **Volumes** section of your Fly dashboard is empty — Fly charges for volumes as long as they exist, even if the machine is stopped.
 
@@ -309,7 +309,7 @@ In your [Fly dashboard](https://fly.io/dashboard). You'll see one app named `reb
 
 ## Quick Reference
 
-- **In-app path:** Settings → Workspace → Cloud Sync → Add cloud continuity → Use your own cloud provider → Fly.io
+- **In-app path:** Settings → Workspace → Cloud Sync → Cloud continuity → Use your own cloud provider → Fly.io
 - **Token page:** [fly.io/user/personal_access_tokens](https://fly.io/user/personal_access_tokens)
 - **SSO command:** `fly tokens create org --org <your-org-slug>`
 - **Fly dashboard:** [fly.io/dashboard](https://fly.io/dashboard)
