@@ -75,7 +75,7 @@ Your conversation history lives in Rebel's local app data, not in the workspace.
 
 Cloud continuity is the bridge between desktop and the companion clients.
 
-Turn it on in **[Settings → Workspace → Cloud Sync](rebel://settings/cloud)**, choose **Add cloud continuity**, and then pair your phone, tablet, or browser.
+Turn it on in **[Settings → Workspace → Cloud Sync](rebel://settings/cloud)**, choose **Cloud continuity**, and then pair your phone, tablet, or browser.
 
 ### What the companions can do now
 
