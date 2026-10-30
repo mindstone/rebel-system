@@ -31,7 +31,7 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
-- **Straight talk about files Rebel leaves out** — If one message has more files than Rebel can take, Rebel now says that's why it left one out and asks you to send it on its own, instead of claiming it couldn't read it. When a file's simply too long, it asks for the part you need first, with a shorter or split copy as the fallback, rather than suggesting screenshots of a document longer than most novels.
+- **Straight talk about files Rebel leaves out** — When you attach more files than one message can carry, Rebel now says that's why it left one out and asks you to send that file in a message of its own, instead of claiming it couldn't read it. When a file is simply too long to read, Rebel asks for the part of it you need, or a shorter or split copy, rather than suggesting screenshots of a document longer than most novels.
 
 - **"Running" means running** — An Action could stay marked as running long after its work had stopped, on your phone as well as your computer. Rebel now notices when nothing is running any more and settles it. And when your other devices won't take a change you made to an Action, the card on your computer now says **Not synced**, and pointing at it tells you why, instead of Rebel quietly trying again every few minutes. It tries again by itself when either version changes. Honesty, now with a label.
 
