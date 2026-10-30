@@ -31,6 +31,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **A clear no, with no loose ends** — If Rebel can't add a folder as a Space, it now explains why and what to do next. Folders left in Library after an unsuccessful Space attempt are cleared at start-up; your original folders and files stay put. Administrative tidying, without the shredding.
+
 - **Cached input counted once** — Costs for OpenAI, ChatGPT and OpenRouter with your own key counted the part of each message the provider had cached twice, so those figures were too high. They now count it once, so the numbers you see drop. Paying twice for the same thing was never the plan.
 
 <!-- detail: This covers clouds Rebel runs for you and clouds you host on Fly. -->
