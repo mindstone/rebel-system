@@ -31,6 +31,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **No more false alarms about your ChatGPT sign-in** — Rebel could claim ChatGPT had rejected your credentials when nothing was wrong. A busy conversation now says so plainly, and a sign-in that really has lapsed asks you to reconnect, then the notice goes away by itself once it works again.
+
 - **Cached input counted once** — Costs for OpenAI, ChatGPT and OpenRouter with your own key counted the part of each message the provider had cached twice, so those figures were too high. They now count it once, so the numbers you see drop. Paying twice for the same thing was never the plan.
 
 <!-- detail: This covers clouds Rebel runs for you and clouds you host on Fly. -->
