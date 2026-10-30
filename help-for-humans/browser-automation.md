@@ -22,7 +22,7 @@ Control web browsers directly from Rebel for tasks like data collection, form fi
 | **Rebel's Browser** (formerly Browser Automation) | A separate browser Rebel runs on this computer; keeps its own sign-ins | Web tasks on sites none of your other connectors cover: forms, screenshots and collecting information |
 | **Cloud Browser** | Runs browsers online through Browserbase; billed per session with a one-minute minimum | Web tasks that run while you're away, such as scheduled automations |
 
-**Shared Browser Tab** is no longer offered: Your Browser now does what it did. If you already use it, it keeps working until you remove it.
+**Shared Browser Tab** is no longer offered for new connections. **Your Browser** handles web tasks in its own background tabs. If you already use Shared Browser Tab, it keeps working until you remove it.
 
 ## Rebel's Browser
 
@@ -63,4 +63,4 @@ Ask Rebel:
 
 ## Shared Browser Tab (no longer offered)
 
-Shared Browser Tab is no longer offered for new connections, because **Your Browser** now does what it did, in the browser you already use. If you already have it connected, it keeps working until you remove it in **Settings → Connectors**.
+Shared Browser Tab is no longer offered for new connections. **Your Browser** handles new web tasks in its own background tabs, in the browser you already use. If you already have it connected, it keeps working until you remove it in **Settings → Connectors**.
