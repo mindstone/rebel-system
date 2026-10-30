@@ -31,7 +31,7 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
-- **Your model pick sticks to the conversation** — If you pick a model for one conversation on your computer, replies you send in that conversation from the web or your phone now use it too, instead of quietly switching back to your usual one. The same goes for when you press Continue, or approve something Rebel asked you about. One catch: a model that runs on your own computer can't answer you from the web or your phone. If you picked one of those, Rebel tells you so and asks you to choose an online model for those replies in Rebel's settings on your computer.
+- **Your model pick sticks to the conversation** — If you pick a model for one conversation on your computer, replies you send in that conversation from the web or your phone now use it too, instead of quietly switching back to your usual one. The same goes for when you press Continue, or approve something Rebel asked you about. One catch: a model that runs on your own computer can't answer you from the web or your phone. For those replies Rebel switches to the online model you've chosen to take over, or, if you haven't chosen one yet, asks you to pick one in Rebel's settings on your computer.
 
 - **Notes remember where they came from** — When Rebel saves a note from a file outside your Library, the note now gives that file's full location. A later question the note can't answer goes back to the original, instead of concluding the file doesn't say. Footnotes with a forwarding address.
 
