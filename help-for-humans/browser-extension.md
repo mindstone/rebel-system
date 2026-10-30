@@ -15,7 +15,7 @@ Rebel works in its own tabs in your browser, grouped under **Rebel** at the top,
 - Read the page you're looking at, or one of its own, and quote what you've selected.
 - Type, pick from drop-downs, press keys, hover, click and fill in forms.
 - Wait for a page or a part of it to load.
-- Take a screenshot of one of its tabs. If you're using that browser window at the time, it reads the page instead and takes the picture later, so it never switches tabs under you.
+- Take a screenshot of one of its tabs. If you're using that browser window at the time, Rebel reads the page's text instead, so it never switches tabs under you. It can take the picture once you've moved to another window.
 
 When it needs you, for example to sign in, it asks in the conversation and waits until you choose **Done** there. If you click or type in one of its tabs while it works, it waits until you stop and reads the page again before carrying on.
 
@@ -24,7 +24,7 @@ The first time it needs a website, it asks once for access to all websites. Your
 ### What it can't do
 
 - A few sites only respond to typing and clicks made by a person. On those, Rebel tells you which step to do yourself, or you can use **Rebel's Browser**.
-- It doesn't use developer tools (network and console logs), save pages as PDF, or upload files from your computer. **Rebel's Browser** covers those.
+- It can't read records of the page's behind-the-scenes activity or errors, save pages as PDFs, or upload files from your computer. **Rebel's Browser** can save PDFs and upload files.
 
 Rebel only acts in your browser when a task needs it.
 
