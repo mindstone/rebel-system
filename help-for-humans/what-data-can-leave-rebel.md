@@ -23,7 +23,7 @@ Two of these you can switch off right now, in **[Settings → Privacy & Safety](
 | **Voice — read-aloud** (Rebel speaking a passage) | A cloud voice provider, or nowhere | Yes — an on-device model leaves it unavailable, or just don't use it |
 | **Voice — Live mode** (a spoken back-and-forth) | A cloud realtime voice provider | Yes — don't use Live mode |
 | **Web searches and pages Rebel fetches** | The search provider, and the site itself | Yes — by not asking for it |
-| **Your complete workspace, conversations, settings and saved service keys** | The cloud machine you choose: your own, Mindstone-run, or a manually configured host | Yes — Cloud Continuity is opt-in |
+| **Your complete workspace, conversations, settings and saved service keys** | The cloud machine you choose: your own, Mindstone-run, or a manually configured host | Yes — choose Only this computer in Settings. It is on by itself only on a computer that never chose, when your account already has a Mindstone Cloud |
 | **Update checks** | Mindstone's update service | No — always on |
 | **Signing in and account checks** | Mindstone | No — required to sign in |
 
