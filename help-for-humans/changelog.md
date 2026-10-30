@@ -31,7 +31,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
-- **A way back from a freeze** — If Rebel freezes on our hosted service, it now restarts itself within a few minutes. Saved files stay put; retry the interrupted task once it's back. The silent treatment has a time limit.
+- **A way back from a freeze** — If your cloud stops responding, it now restarts itself within a few minutes. Saved files stay put; retry the interrupted task once it's back. The silent treatment has a time limit.
+<!-- detail: This covers clouds Rebel runs and clouds you host on Fly, but not yet clouds on your own server. -->
 
 - **Your model pick sticks to the conversation** — If you pick a model for one conversation on your computer, replies you send in that conversation from the web or your phone now use it too, instead of quietly switching back to your usual one. The same goes for when you press Continue, or approve something Rebel asked you about. One catch: a model that runs on your own computer can't answer you from the web or your phone. For those replies Rebel switches to the online model you've chosen to take over, or, if you haven't chosen one yet, asks you to pick one in Rebel's settings on your computer.
 
