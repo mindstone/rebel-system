@@ -120,7 +120,7 @@ If you want extra help with Anthropic-specific setup, see [Claude Max setup](reb
 
 ## Model roles: Planner, Main work, and Behind the Scenes
 
-Rebel splits model choices into three jobs. Plan first, then do the work, then tidy up Behind the Scenes.
+Rebel splits model choices into three jobs. An optional Planner plans first, Main work does the job, and Behind the Scenes handles the tidying up.
 
 ### Planner
 
@@ -128,7 +128,7 @@ This is optional.
 
 It handles deeper planning before the Main work model gets on with it. For harder jobs, this can improve quality. For simple jobs, it can be overkill.
 
-You can leave it on **Same as working model** for the simplest setup — your Main work model does the planning too, so there's one model to think about.
+Leave it on **No separate planner** and Main work gets straight on with the job, with no planning step. Planning only runs when you pick a Planner model different from Main work. One less model to think about.
 
 ### Main work
 
@@ -161,7 +161,7 @@ A **Model team** is Rebel bringing together a set of models that each do a diffe
 The roles within a team are:
 
 - **Main work** — the model you talk to most, handling writing, editing, and tool use
-- **Deep thinking** — an optional separate planning model that thinks harder before Main work starts (leave it on Same as working model and Main work plans too)
+- **Deep thinking** — an optional separate planning model that thinks harder before Main work starts (planning only runs when you choose a model different from Main work)
 - **Behind the Scenes** — background jobs like safety checks, memory updates, and file indexing
 - **Council** — multiple models consulted in parallel for important decisions (see [Council Mode](rebel://library/rebel-system%2Fhelp-for-humans%2Fmulti-model-council-mode.md))
 - **Recovery** — a fallback that steps in when something hiccups, so work keeps going rather than stopping cold
@@ -178,7 +178,7 @@ You manage all of this in **Settings → Agent & Voice → Intelligence** under 
 
 Because Rebel works as a team, a single task — even something as ordinary as searching your email — can touch **several models**, each doing its bit:
 
-- the **Planner** maps out the approach on bigger jobs (your Main work model, unless you've picked a separate Planner)
+- the **Planner** maps out the approach on bigger jobs (only when you've picked a separate Planner model)
 - **Main work** does the actual searching and writes the answer you see
 - **Behind the Scenes** quietly runs safety checks, updates memory, indexes what it finds, and names the conversation
 
@@ -188,7 +188,7 @@ So if you notice a task used four or five models, nothing's gone wrong and there
 
 If you'd rather keep things to fewer moving parts, you can:
 
-- leave the **Planner** on **Same as working model**, so Main work handles the planning too
+- leave the **Planner** on **No separate planner**, so Main work starts without a planning step
 - set the **same model** for Main work and Behind the Scenes
 - or ignore the individual roles entirely and just use the **Quality Tier** slider inside a conversation
 
@@ -231,7 +231,7 @@ For most people, the honest answer is: **you don't need to manage models at all.
 - Use your preferred provider card
 - Pick a strong **Main work** model
 - Use the **Quality Tier** slider to set how much quality vs. speed you want per conversation — it's the simplest way to get good results without managing individual models (Smart model picking is a separate, experimental opt-in if you later want per-step routing)
-- Leave **Planner** on **Same as working model** unless you do lots of complex work — picking a separate model here gives planning a model of its own
+- Leave **Planner** on **No separate planner** unless you do lots of complex work — choose a different model from Main work here to add a planning step
 - Leave **Behind the Scenes** on the default unless you have a reason to change it
 
 That keeps Rebel fast without turning settings into a hobby.
