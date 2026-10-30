@@ -6,7 +6,17 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ## Unreleased
 
+### Highlights
+
+- **Your reply can carry on in your cloud** — With cloud continuity and an updated cloud, close the laptop or lose the connection and a running reply can continue there. A model that runs only on your computer waits for it unless you choose a hosted fallback.
+
 ### Improvements
+
+- **Out of allowance, still in conversation** — When your Mindstone AI allowance runs out and you have added your own key and picked a model on it, Rebel carries on with that key and tells you when it bills you. Your first message after the allowance runs out no longer claims the conversation is stuck. A fresh conversation was never going to refill the meter.
+
+- **Automations wait out a busy spell** — When your company's AI provider is busy, scheduled automations can now spend up to 15 minutes retrying, so more of them finish. Results may turn up later, and a really long busy spell can still make a run fail. Chats are unchanged. Patience is a virtue; we automated it.
+
+- **A little breathing room** — When storage runs low, Rebel clears its own leftovers and starts a conversation with one suggestion. Your files stay your call.
 
 - **Your Browser does a lot more, and stays out of your way** — Your Browser, the Rebel extension in your own browser, now works in its own tabs, grouped under **Rebel** in the background. It never switches you to them or brings your browser forward, and leaves your tabs alone. It can open pages, type, pick from drop-downs, press keys, wait for pages to load and take screenshots, as well as read, fill in forms and click. When it needs you, for a sign-in say, it asks in the conversation and waits for you to choose **Done** there; if you click or type in its tab while it works, it waits until you stop. It asks once for access to all websites (say no and it asks site by site instead), and your [Safety Rules](rebel://settings/safety#safetyRules) still decide what it does on each. Rebel's Browser now works without showing a window when you first connect it, and Shared Browser Tab bows out, though it keeps working if you already use it. A browser with manners, finally.
 
@@ -31,6 +41,13 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **New connectors don't wait their turn** — Adding a connector while a chat is replying used to park it until that reply finished, sometimes for minutes. Now it's ready within seconds and the reply carries on. The few changes that still have to wait (removing or changing a connector) say they'll apply by themselves and name the chat they're waiting for. Less queueing, more doing.
+
+- **No more false alarms about your ChatGPT sign-in** — Rebel could claim ChatGPT had rejected your credentials when nothing was wrong. A busy conversation now says so plainly, and a sign-in that really has lapsed asks you to reconnect, then the notice goes away by itself once it works again.
+
+- **A calmer start-up warning** — When you open Rebel and the apps you've connected to it, like Gmail or Slack, are slow to start or don't start at all, the warning now names them and says you can keep chatting. If they didn't start, it offers **Try again** to reconnect them. It used to stay on screen even after your apps were working again; now it goes away by itself as soon as they work. If trying again doesn't help, Safe Mode is still there: it restarts Rebel with your apps switched off and opens a chat to help find the problem, and your chats and files are kept. The warning no longer outstays its welcome.
+
+- **Cached input counted once** — Costs for OpenAI, ChatGPT and OpenRouter with your own key counted the part of each message the provider had cached twice, so those figures were too high. They now count it once, so the numbers you see drop. Paying twice for the same thing was never the plan.
 - **A clear no, with no loose ends** — If Rebel can't add a folder as a Space, it now explains why and what to do next. Folders left in Library after an unsuccessful Space attempt are cleared at start-up; your original folders and files stay put. Administrative tidying, without the shredding.
 
 - **Bold text stands out again on iPhone** — In the Rebel app on iPhone, words in bold in a reply or a document showed in the same normal-weight letters as the text around them, so they didn't stand out. Now they show in bold. Emphasis, restored.
