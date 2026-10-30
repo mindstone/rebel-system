@@ -8,7 +8,7 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Improvements
 
-- **Automations wait out a busy spell** — When your company's AI provider is too busy to answer, your automations now keep waiting and trying again for much longer, instead of giving up after a minute. A busy morning may mean a result arrives a little later, rather than not at all. Chats you're in aren't kept waiting any longer than before. Patience is a virtue; we automated it.
+- **Automations wait out a busy spell** — When your company's AI provider is busy, scheduled automations can now spend up to 15 minutes retrying, so more of them finish. Results may turn up later, and a really long busy spell can still make a run fail. Chats are unchanged. Patience is a virtue; we automated it.
 
 - **A little breathing room** — When storage runs low, Rebel clears its own leftovers and starts a conversation with one suggestion. Your files stay your call.
 
