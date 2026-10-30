@@ -31,7 +31,7 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
-- **Bold looks bold on iPhone** — In the Rebel app on iPhone, words Rebel puts in bold in a reply or a document drew in regular type, so they looked like everything else. They now show in proper bold. Emphasis, restored.
+- **Bold text stands out again on iPhone** — In the Rebel app on iPhone, words in bold in a reply or a document showed in the same normal-weight letters as the text around them, so they didn't stand out. Now they show in bold. Emphasis, restored.
 
 - **Straight talk about files Rebel leaves out** — When you attach more files than one message can carry, Rebel now says that's why it left one out and asks you to send that file in a message of its own, instead of claiming it couldn't read it. When a file is simply too long to read, Rebel asks for the part of it you need, or a shorter or split copy, rather than suggesting screenshots of a document longer than most novels.
 
