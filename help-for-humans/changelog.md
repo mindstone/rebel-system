@@ -29,6 +29,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **Picking up without guessing** — After an interruption, Rebel says when it can’t confirm a reply resumed. Dismissing the window keeps the conversation’s recovery option, and one conversation’s recovery trouble no longer holds up the others. Less guesswork, fewer false starts.
+
 - **Notes remember where they came from** — When Rebel saves a note from a file outside your Library, the note now gives that file's full location. A later question the note can't answer goes back to the original, instead of concluding the file doesn't say. Footnotes with a forwarding address.
 
 - **Submit now submits** — In the desktop app, pressing Submit after choosing an answer or filling in a form used to do nothing. Now it sends your answer to Rebel. The button has accepted its responsibilities.
