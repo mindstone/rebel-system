@@ -8,6 +8,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Improvements
 
+- **Out of allowance, still in conversation** — When your Mindstone AI allowance runs out and you have added your own key and picked a model on it, Rebel carries on with that key and tells you when it bills you. Your first message after the allowance runs out no longer claims the conversation is stuck. A fresh conversation was never going to refill the meter.
+
 - **Automations wait out a busy spell** — When your company's AI provider is busy, scheduled automations can now spend up to 15 minutes retrying, so more of them finish. Results may turn up later, and a really long busy spell can still make a run fail. Chats are unchanged. Patience is a virtue; we automated it.
 
 - **A little breathing room** — When storage runs low, Rebel clears its own leftovers and starts a conversation with one suggestion. Your files stay your call.
