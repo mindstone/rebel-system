@@ -31,6 +31,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **Web addresses on your phone are now links** — Tap an address Rebel writes out in a reply to open it in your browser. Less copying, more going places.
+
 - **Meetings no longer vanish after a hiccup** — If one of your calendars didn't answer when Rebel looked for changes (a dropped connection, say), its meetings disappeared from Rebel for up to half an hour, though your calendar itself was fine. Now Rebel keeps showing the meetings it already had until it can look again. You don't need to do anything. A dropped connection no longer looks like an empty week.
 
 - **A clear no, with no loose ends** — If Rebel can't add a folder as a Space, it now explains why and what to do next. Folders left in Library after an unsuccessful Space attempt are cleared at start-up; your original folders and files stay put. Administrative tidying, without the shredding.
