@@ -256,7 +256,9 @@ Rebel will:
 - Surface relevant context from your spaces
 - Suggest talking points
 
-Prep documents are saved and **automatically linked to the meeting transcript afterward** through document frontmatter—so you can jump between your prep notes and what actually happened. When Rebel analyzes a transcript, it includes your prep notes to compare what you intended to discuss with what actually came up.
+Open **Library**, go to your **Chief of Staff** space and open the file named after the meeting. It holds your prep, **My notes** and a transcript link added after the call. **Actions from this meeting** is a list of links inside the file; the action items themselves live on Rebel's **Actions** page, each with a link back to the meeting file. Less filing, more remembering why you agreed to things.
+
+**My notes** is yours: type there yourself, or ask Rebel during the meeting to “note that…” and it adds your note there. Rebel never changes what's there otherwise. When Rebel analyzes the transcript afterward, it uses your prep and notes to compare what you intended to discuss with what actually came up.
 
 Focus automations also classify each meeting relative to your goals—flagging whether it's productive, a blocker, noise, or travel—so your prep reflects what actually matters. Weekly briefings check previous briefings for follow-up accountability, surfacing anything that slipped through the cracks.
 
