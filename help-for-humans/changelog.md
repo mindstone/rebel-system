@@ -41,6 +41,10 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **Said once is enough** — A finished reply could show up twice in the same chat. It now shows once, the next time you open the chat, and there is nothing for you to do. Once was plenty.
+
+- **Old Actions look before they close** — Rebel no longer closes an old Action by itself while it might still be running somewhere else. If Rebel can't check, the Action stays open until you mark it done.
+
 - **Meetings no longer vanish after a hiccup** — If one of your calendars didn't answer when Rebel looked for changes (a dropped connection, say), its meetings disappeared from Rebel for up to half an hour, though your calendar itself was fine. Now Rebel keeps showing the meetings it already had until it can look again. You don't need to do anything. A dropped connection no longer looks like an empty week.
 
 - **New connectors don't wait their turn** — Adding a connector while a chat is replying used to park it until that reply finished, sometimes for minutes. Now it's ready within seconds and the reply carries on. The few changes that still have to wait (removing or changing a connector) say they'll apply by themselves and name the chat they're waiting for. Less queueing, more doing.
