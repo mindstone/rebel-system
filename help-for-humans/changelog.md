@@ -12,6 +12,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Improvements
 
+- **Downloaded means ready** — Downloaded updates on your Mac now stay ready to install when you fully quit Rebel. Downloading was meant to be the first step, not the last.
+
 - **Your Rebel can ask around** — Ask teammates' Rebels a question in a shared Space and have the replies gathered into a table. When approval is needed, you see exactly what goes before it goes. A history file keeps the trace. Even Rebels leave a paper trail.
 
 - **One meeting, one place to look** — Open **Library** → **Chief of Staff** for a file named after the meeting, with its prep, your notes and a transcript link. Inside, **Actions from this meeting** links to the action items on Rebel's **Actions** page, each with a link back to the file. The meeting may have wandered; its paperwork stays together.
