@@ -49,6 +49,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **A widget with a memory** — Your iPhone widget keeps its last confirmed actions, marks old updates clearly, and refreshes while Rebel is closed. "All clear" now waits for evidence.
+
 - **Said once is enough** — A finished reply could show up twice in the same chat. It now shows once, the next time you open the chat, and there is nothing for you to do. Once was plenty.
 
 - **Old Actions look before they close** — Rebel no longer closes an old Action by itself while it might still be running somewhere else. If Rebel can't check, the Action stays open until you mark it done.
