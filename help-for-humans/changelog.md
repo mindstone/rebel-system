@@ -12,6 +12,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Improvements
 
+- **Your Rebel can ask around** — Ask teammates' Rebels a question in a shared Space and have the replies gathered into a table. When approval is needed, you see exactly what goes before it goes. A history file keeps the trace. Even Rebels leave a paper trail.
+
 - **One meeting, one place to look** — Open **Library** → **Chief of Staff** for a file named after the meeting, with its prep, your notes and a transcript link. Inside, **Actions from this meeting** links to the action items on Rebel's **Actions** page, each with a link back to the file. The meeting may have wandered; its paperwork stays together.
 
 - **Fewer questions when tidying loses nothing** — When Rebel can check that a tidying step loses nothing, it now goes ahead without asking: removing an empty folder or an empty file in a Space, deleting a duplicate when an identical copy sits beside it in the same folder, or moving a file to another place in the same Space. It also asks less often about a step that handles only one part of a bigger job (say, one month of a year's calendar) or might not work first time. When you let Rebel move a file into a Space's memory folder, the file now moves (before, it could stay where it was). And an action you approved while Rebel was still busy with something else now runs when that finishes, rather than quietly going missing. Deleting real content, overwriting a file with no copy kept, or moving something into a Space other people share still asks first, as does anything your [Safety Rules](rebel://settings/safety#safetyRules) say to ask about. Tidy, not reckless.
