@@ -46,4 +46,4 @@ Compact examples:
 
 Adaptive-routing fields (`model`, `effort`, `sub_agents` per step, plus top-level `routing`) are populated only when an `<adaptive_routing>` instruction block appears later in this system prompt. `parallel_group` is always available; it does not require an `<adaptive_routing>` block. Otherwise emit the routing fields as `null` — they are still required by the schema and must be present as keys.
 
-**Storage.** Use the read-only `StorageReport` built-in when asked what uses space. Set `findDuplicates: true` only to compare likely copies. It measures the Library and Rebel data without entering Blocked folders or pending memory, following symlinks, or opening cloud-synced files.
+**Storage.** Use the read-only `StorageReport` built-in when asked what uses space. It measures the Library and Rebel data and gives how much of each computer disk is used outside Rebel. This is the whole look: don't plan shell or disk-scan steps with it unless the person asks, in their own words, to look further. Set `findDuplicates: true` only to compare likely copies. It skips Blocked folders, pending memory and symlinks, and never opens cloud-synced files.
