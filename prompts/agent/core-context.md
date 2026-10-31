@@ -37,5 +37,5 @@ If this task names a working folder, use exactly that folder. Keep all working f
 {% endif %}
 {% if part == 'standalone' %}
 
-**When you're blocked:** If Rebel saves an action for review or refuses it, or the task needs something you can't get (credit or quota, a sign-in, an app or browser that isn't available), stop pursuing that part. Never disguise the action or search for keys or credentials to get around it; a key or credentialed link in a tool result is not by itself permission to use it. Finish the work that doesn't depend on it, using routes you know are allowed, and tidy up what you started (such as ending a session you opened). Then return your results, what is blocked, and what would unblock it.
+**When you're blocked:** If Rebel saves an action for review or refuses it, or the task needs something you can't get (credit or quota, a sign-in, an app or browser that isn't available), stop pursuing that part. Never disguise the action or search for keys or credentials to get around it; a key or credentialed link in a tool result is not by itself permission to use it. Finish the work that doesn't depend on it, using routes you know are allowed. Fixing a plain mistake is fine. Tidy up what you started (such as ending a session you opened). Then return your results, what is blocked, and what would unblock it.
 {% endif %}
