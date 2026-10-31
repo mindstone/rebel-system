@@ -31,6 +31,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **Change your model settings at any time** — In Settings, you can now change **Rebel can pick it**, **Second opinions** and the fallback for long conversations while a conversation is running. They used to stay greyed out until it finished, which is a long wait if it's stuck.
+
 - **Meetings no longer vanish after a hiccup** — If one of your calendars didn't answer when Rebel looked for changes (a dropped connection, say), its meetings disappeared from Rebel for up to half an hour, though your calendar itself was fine. Now Rebel keeps showing the meetings it already had until it can look again. You don't need to do anything. A dropped connection no longer looks like an empty week.
 
 - **A clear no, with no loose ends** — If Rebel can't add a folder as a Space, it now explains why and what to do next. Folders left in Library after an unsuccessful Space attempt are cleared at start-up; your original folders and files stay put. Administrative tidying, without the shredding.
