@@ -6,11 +6,27 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ## Unreleased
 
+### Highlights
+
+- **Your reply can carry on in your cloud** — With cloud continuity and an updated cloud, close the laptop or lose the connection and a running reply can continue there. A model that runs only on your computer waits for it unless you choose a hosted fallback.
+
 ### Improvements
+
+- **Downloaded means ready** — Downloaded updates on your Mac now stay ready to install when you fully quit Rebel. Downloading was meant to be the first step, not the last.
 
 - **Your Rebel can ask around** — Ask teammates' Rebels a question in a shared Space and have the replies gathered into a table. When approval is needed, you see exactly what goes before it goes. A history file keeps the trace. Even Rebels leave a paper trail.
 
-- **Your Browser does a lot more, and stays out of your way** — Your Browser, the Rebel extension in your own browser, now works in its own tabs, grouped under **Rebel** in the background. It never switches you to them or brings your browser forward, and leaves your tabs alone. It can open pages, type, pick from drop-downs, press keys, wait for pages to load and take screenshots, as well as read, fill in forms and click. When it needs you, for a sign-in say, it asks in the conversation and waits for you to choose **Done** there; if you click or type in its tab while it works, it waits until you stop. It asks once for access to all websites (say no and it asks site by site instead), and your [Safety Rules](rebel://settings/safety#safetyRules) still decide what it does on each. Rebel's Browser now works without showing a window when you first connect it, and Shared Browser Tab bows out, though it keeps working if you already use it. A browser with manners, finally.
+- **One meeting, one place to look** — Open **Library** → **Chief of Staff** for a file named after the meeting, with its prep, your notes and a transcript link. Inside, **Actions from this meeting** links to the action items on Rebel's **Actions** page, each with a link back to the file. The meeting may have wandered; its paperwork stays together.
+
+- **Fewer questions when tidying loses nothing** — When Rebel can check that a tidying step loses nothing, it now usually goes ahead without asking: removing an empty folder or an empty file in a Space, deleting a duplicate when an identical copy sits beside it in the same folder, or moving a file to another place in the same Space. It also asks less often about a step that handles only one part of a bigger job (say, one month of a year's calendar) or might not work first time. When you let Rebel move a file into a Space's memory folder, the file now moves (before, it could stay where it was). And an action you approved while Rebel was still busy with something else now runs when that finishes, rather than quietly going missing. Deleting real content, overwriting a file with no copy kept, or moving something into a Space other people share still asks first, as does anything your [Safety Rules](rebel://settings/safety#safetyRules) say to ask about. Tidy, not reckless.
+
+- **Out of allowance, still in conversation** — When your Mindstone AI allowance runs out and you have added your own key and picked a model on it, Rebel carries on with that key and tells you when it bills you. Your first message after the allowance runs out no longer claims the conversation is stuck. A fresh conversation was never going to refill the meter.
+
+- **Automations wait out a busy spell** — When your company's AI provider is busy, scheduled automations can now spend up to 15 minutes retrying, so more of them finish. Results may turn up later, and a really long busy spell can still make a run fail. Chats are unchanged. Patience is a virtue; we automated it.
+
+- **A little breathing room** — When storage runs low, Rebel clears its own leftovers and starts a conversation with one suggestion. Your files stay your call.
+
+- **Your Browser does a lot more, and stays out of your way** — Your Browser, the Rebel extension in your own browser, now works in its own tabs, grouped under **Rebel** in the background. It never switches you to them or brings your browser forward, and leaves your tabs alone. It can open pages, type, pick from drop-downs, press keys, wait for pages to load and take screenshots, as well as read, fill in forms and click. When it needs you, for a sign-in say, it asks in the conversation and waits for you to choose **Done** there; if you click or type in its tab while it works, it waits until you stop. It has access to all websites as soon as it's installed, with no site-by-site asking, and your [Safety Rules](rebel://settings/safety#safetyRules) still decide what it does on each. Rebel's Browser now works without showing a window when you first connect it, and Shared Browser Tab bows out, though it keeps working if you already use it. A browser with manners, finally.
 
 - **See what changed, and ideas as a map** — Ask Rebel to rewrite an email or a document and show you what it changed ("tighten this email and show me what you changed"), and it marks its edits right in the conversation, like tracked changes in Word: removed words struck through, new ones underlined, there to read, with nothing to accept or reject. Ask for a mind map of a brainstorm or an org chart ("draw these ideas as a mind map") and it draws one you can drag, zoom, and open or close branch by branch. The windows where you approve a file or a memory, settle a sync conflict or look back at a skill's history look as they did, except that the sync-conflict one has finally noticed you're in dark mode.
 
@@ -33,7 +49,23 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **A widget with a memory** — Your iPhone widget keeps its last confirmed actions, marks old updates clearly, and refreshes while Rebel is closed. "All clear" now waits for evidence.
+
+- **Said once is enough** — A finished reply could show up twice in the same chat. It now shows once, the next time you open the chat, and there is nothing for you to do. Once was plenty.
+
+- **Old Actions look before they close** — Rebel no longer closes an old Action by itself while it might still be running somewhere else. If Rebel can't check, the Action stays open until you mark it done.
+
 - **Meetings no longer vanish after a hiccup** — If one of your calendars didn't answer when Rebel looked for changes (a dropped connection, say), its meetings disappeared from Rebel for up to half an hour, though your calendar itself was fine. Now Rebel keeps showing the meetings it already had until it can look again. You don't need to do anything. A dropped connection no longer looks like an empty week.
+
+- **New connectors don't wait their turn** — Adding a connector while a chat is replying used to park it until that reply finished, sometimes for minutes. Now it's ready within seconds and the reply carries on. The few changes that still have to wait (removing or changing a connector) say they'll apply by themselves and name the chat they're waiting for. Less queueing, more doing.
+
+- **No more false alarms about your ChatGPT sign-in** — Rebel could claim ChatGPT had rejected your credentials when nothing was wrong. A busy conversation now says so plainly, and a sign-in that really has lapsed asks you to reconnect, then the notice goes away by itself once it works again.
+
+- **A calmer start-up warning** — When you open Rebel and the apps you've connected to it, like Gmail or Slack, are slow to start or don't start at all, the warning now names them and says you can keep chatting. If they didn't start, it offers **Try again** to reconnect them. It used to stay on screen even after your apps were working again; now it goes away by itself as soon as they work. If trying again doesn't help, Safe Mode is still there: it restarts Rebel with your apps switched off and opens a chat to help find the problem, and your chats and files are kept. The warning no longer outstays its welcome.
+
+- **Cached input counted once** — Costs for OpenAI, ChatGPT and OpenRouter with your own key counted the part of each message the provider had cached twice, so those figures were too high. They now count it once, so the numbers you see drop. Paying twice for the same thing was never the plan.
+
+- **Finding your colleagues in Slack** — Asking Rebel about a colleague could fail with a suggestion to reconnect, even while the rest of Slack worked fine. Rebel now looks people up with your own Slack connection first, and the connection check tells you what actually works. Those lookups can now include a colleague's work email, where your Slack connection allows it. Disconnecting Slack is also now just your own business: it no longer revokes the app your colleagues share. Notes you send yourself still rely on that app, and if Slack refuses it, Rebel says so. Blame, correctly attributed.
 
 - **A clear no, with no loose ends** — If Rebel can't add a folder as a Space, it now explains why and what to do next. Folders left in Library after an unsuccessful Space attempt are cleared at start-up; your original folders and files stay put. Administrative tidying, without the shredding.
 
