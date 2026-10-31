@@ -33,6 +33,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **Meetings no longer vanish after a hiccup** — If one of your calendars didn't answer when Rebel looked for changes (a dropped connection, say), its meetings disappeared from Rebel for up to half an hour, though your calendar itself was fine. Now Rebel keeps showing the meetings it already had until it can look again. You don't need to do anything. A dropped connection no longer looks like an empty week.
+
 - **A clear no, with no loose ends** — If Rebel can't add a folder as a Space, it now explains why and what to do next. Folders left in Library after an unsuccessful Space attempt are cleared at start-up; your original folders and files stay put. Administrative tidying, without the shredding.
 
 - **Bold text stands out again on iPhone** — In the Rebel app on iPhone, words in bold in a reply or a document showed in the same normal-weight letters as the text around them, so they didn't stand out. Now they show in bold. Emphasis, restored.
