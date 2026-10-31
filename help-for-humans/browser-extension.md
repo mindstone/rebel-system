@@ -1,6 +1,6 @@
 ---
 description: "What Your Browser is, how to install it, what it can see, and what to try when the pairing flow gets temperamental."
-last_updated: "2026-10-29"
+last_updated: "2026-10-31"
 ---
 
 # Your Browser
@@ -19,7 +19,7 @@ Rebel works in its own tabs in your browser, grouped under **Rebel** at the top,
 
 When it needs you, for example to sign in, it asks in the conversation and waits until you choose **Done** there. If you click or type in one of its tabs while it works, it waits until you stop and reads the page again before carrying on.
 
-The first time it needs a website, it asks once for access to all websites. Your [Safety Rules](rebel://settings/safety#safetyRules) still decide what it may do on each one. If you say no, it keeps working, asking you site by site instead.
+Loading the extension gives Rebel access to all websites, so it doesn't ask site by site. Your [Safety Rules](rebel://settings/safety#safetyRules) still decide what it may do on each one. If you limit Rebel's site access in your browser's extension settings, your browser asks you when Rebel needs a site, and you can allow it there.
 
 ### What it can't do
 
