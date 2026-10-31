@@ -61,6 +61,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 - **Cached input counted once** — Costs for OpenAI, ChatGPT and OpenRouter with your own key counted the part of each message the provider had cached twice, so those figures were too high. They now count it once, so the numbers you see drop. Paying twice for the same thing was never the plan.
 
+- **Finding your colleagues in Slack** — Asking Rebel about a colleague could fail with a suggestion to reconnect, even while the rest of Slack worked fine. Rebel now looks people up with your own Slack connection first, and the connection check tells you what actually works. Those lookups can now include a colleague's work email, where your Slack connection allows it. Disconnecting Slack is also now just your own business: it no longer revokes the app your colleagues share. Notes you send yourself still rely on that app, and if Slack refuses it, Rebel says so. Blame, correctly attributed.
+
 - **A clear no, with no loose ends** — If Rebel can't add a folder as a Space, it now explains why and what to do next. Folders left in Library after an unsuccessful Space attempt are cleared at start-up; your original folders and files stay put. Administrative tidying, without the shredding.
 
 - **Bold text stands out again on iPhone** — In the Rebel app on iPhone, words in bold in a reply or a document showed in the same normal-weight letters as the text around them, so they didn't stand out. Now they show in bold. Emphasis, restored.
