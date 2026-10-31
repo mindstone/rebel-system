@@ -197,7 +197,7 @@ Rebel is more accurate about this now — trying to send a notetaker no longer h
 
 When the meeting ends:
 
-1. **Transcript saved** — Open the meeting file in **Library → Chief of Staff** for the transcript link. If you had no prep, Rebel creates the meeting file after the call.
+1. **Transcript saved** — Open the meeting file in **Library → Chief of Staff** for the transcript link. If you had no prep, Rebel creates the meeting file after a call with the notetaker or Rebel's desktop recording.
 2. **AI summary generated** — Key points, action items, decisions, and participants extracted
 3. **Action item created** — Review the analysis in your Rebel Actions
 
@@ -256,9 +256,9 @@ Rebel will:
 - Surface relevant context from your spaces
 - Suggest talking points
 
-Open **Library**, go to your **Chief of Staff** space and open the file named after the meeting. It holds your prep, **My notes** and a transcript link added after the call. Its filename ends in `-prep.md`, even when it was created after a call with no prep. **Actions from this meeting** is a list of links inside the file; the action items themselves live on Rebel's **Actions** page, each with a link back to the meeting file. Less filing, more remembering why you agreed to things.
+Open **Library**, go to your **Chief of Staff** space and open the file named after the meeting. It holds your prep, **My notes** and a transcript link added after the call. Its filename ends in `-prep.md`, even for a call with the notetaker or Rebel's desktop recording that had no prep. **Actions from this meeting** is a list of links inside the file; the action items themselves live on Rebel's **Actions** page, each with a link back to the meeting file. Less filing, more remembering why you agreed to things.
 
-**My notes** is yours: type there yourself, or ask Rebel in the meeting conversation to “note that…” and it adds your note there. Speaking to the notetaker in the call is a separate conversation. Rebel never changes your notes otherwise. When Rebel analyzes the transcript afterward, it uses your prep and notes to compare what you intended to discuss with what actually came up.
+**My notes** is yours: type there yourself, or ask Rebel in the **meeting companion** — the conversation Rebel opens for the meeting — to “note that…” and it adds your note there. Speaking to the notetaker in the call is a separate conversation. Rebel never changes your notes otherwise. When Rebel analyzes the transcript afterward, it uses your prep and notes to compare what you intended to discuss with what actually came up.
 
 Focus automations also classify each meeting relative to your goals—flagging whether it's productive, a blocker, noise, or travel—so your prep reflects what actually matters. Weekly briefings check previous briefings for follow-up accountability, surfacing anything that slipped through the cracks.
 
@@ -274,7 +274,7 @@ Transcripts are routed to your spaces based on meeting type:
 
 Configure routing in **Settings → Meetings → Transcript Storage**.
 
-Either way, the meeting file in **Library → Chief of Staff** links to the transcript; a meeting with no prep gets that file after the call.
+Either way, an existing meeting file in **Library → Chief of Staff** links to the transcript. For a meeting with the notetaker or Rebel's desktop recording, Rebel creates that file after the call if you had no prep.
 
 
 ## Recording In-Person Meetings
