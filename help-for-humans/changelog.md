@@ -27,7 +27,7 @@ What's new in Rebel. We ship fast, so there's always something.
 - **Dashboards, with a sense of belonging** — Dashboards and reports now open in your Library preview and look like Rebel, in light and dark. The numbers have found suitable accommodation.
 <!-- detail: Pages use a shared Rebel style, with charts, maps, tables, calendars and diagrams from approved libraries. Key figures and HTML tables remain readable offline; charts need their libraries to load. -->
 
-- **Charts and dashboards, right in the chat** — Ask Rebel to show your numbers as a chart, a table or a whole dashboard ("show me these sales figures as a dashboard"), and it draws them in the conversation. Hover over a chart for exact figures; sort and filter a table by clicking its headings or typing in its filter box. Sidebar tabs you've built with Rebel use the same charts, and bars for values below zero now point down, as nature intended.
+- **Charts and dashboards, right in the chat** — When an answer is a trend, a comparison, a breakdown or a long list of figures, Rebel now draws it as a chart, a table or a whole dashboard in the conversation, with the gist in a sentence or two, whether you asked or not. You can still ask outright ("show me these sales figures as a dashboard"), or ask for plain text if you'd rather. Hover over a chart for exact figures; sort and filter a table by clicking its headings or typing in its filter box. On your phone, on the web and in shared links you get every figure written out in full, a line per row. Sidebar tabs you've built with Rebel use the same charts, and bars for values below zero now point down, as nature intended.
 
 ### Fixes
 
