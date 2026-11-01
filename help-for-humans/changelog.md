@@ -41,6 +41,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 - **One allowance warning, with one number** — If you'd already used over 90% of your Mindstone allowance when you signed in to Rebel, you got two warnings at once, one saying 75% and one saying 90%. Now you get just the 90% one. If you reach 75% first, you still get that warning when you do. Nothing for you to do. One number is plenty.
 
+- **Attachments no longer go missing quietly** — Rebel sometimes passes a request to a different AI model. If that model couldn't take in everything, a file you'd attached could be left out of the reply without a word. Now Rebel goes back by itself to the model it started with, which can take the file. If your file is still too large, you see a note saying so, asking for a smaller file or the part you need. Silence was never golden.
+
 - **The phone app shows a new chat's title without being nudged** — At the top of a new chat, the phone app kept saying "New conversation" until you left the chat and came back. Now the real title appears by itself, moments after Rebel's first answer.
 
 - **Helpers bring their own login** — When Rebel hands part of a job to a helper that runs on a different AI service from your main conversation, the helper now uses that service's own account. Before, it tried the sign-in from your main conversation and failed at once. You don't need to do anything.
