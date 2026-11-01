@@ -17,14 +17,15 @@ The common thread: the endpoint speaks the **OpenAI-compatible** API, and you po
 
 ## Adding one
 
-1. Open [Settings → Agent & Voice → Intelligence](rebel://settings/agents).
-2. Under your models, choose **Add a model** → **Other (custom endpoint)**.
-3. Fill in:
-   - **Name** — anything memorable ("Work gateway", "Local Llama").
-   - **Server URL** — the endpoint address (e.g. `https://gateway.yourcompany.com/v1`, or `http://localhost:8000/v1` for a local server).
-   - **Model ID** — the exact name the endpoint expects (e.g. `claude-opus-4-8`).
-   - **API key** — if the endpoint needs one (leave blank for most local servers).
-4. Click **Test now**.
+To save a service and reuse it for several models:
+
+1. Open [Settings → Agent & Voice](rebel://settings/agents), then choose **Add an account or key** → **Connect your own AI service**.
+2. Enter a **Name**, the service's address in **Base URL**, and an **API Key** if needed. Choose **Save**.
+3. Under **Your API keys and connections**, choose **Add model** on that service's row.
+4. Enter a **Name** and the exact **Model ID** your service expects. The address and saved key come from the service you chose.
+5. Choose **Test now**, then **Add**.
+
+For a service that needs no key, you can also choose **Add a model** → **Add custom model** → **Other (OpenAI-compatible)**. Enter its **Name**, **Model ID** and **Server URL**. For example, a local server might use `http://localhost:8000/v1`. Choose **Test now**, then **Add**. If your service needs a key, save it first using the steps above.
 
 ## What "Test now" does
 

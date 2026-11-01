@@ -7,7 +7,7 @@ last_updated: "2026-07-17"
 
 **What it is:** Bring your own Fireworks AI API key to use hosted Qwen and DeepSeek models in Rebel. Fireworks bills you directly for what you use, so this is pay-per-use rather than part of a Mindstone plan.
 
-**Models Rebel offers:** Qwen 3.7 Plus, the balanced default, and DeepSeek V4 Pro for harder reasoning-heavy work.
+**Models that work well:** Qwen 3.7 Plus, the balanced default, and DeepSeek V4 Pro for harder reasoning-heavy work.
 
 **How to connect:** In [Settings → Agent & Voice](rebel://settings/agents), choose **Add an account or key** → **Connect your own AI service**. Enter a name, set **Base URL** to `https://api.fireworks.ai/inference/v1`, paste your Fireworks AI key, and choose **Save**. Under **Your API keys and connections**, choose **Add model** on that service's row and enter the model's Fireworks model ID.
 

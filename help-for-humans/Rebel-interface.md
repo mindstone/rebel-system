@@ -125,7 +125,7 @@ Use `rebel://` links in conversations to direct users to specific parts of the a
 | `rebel://settings/spaces` | Settings → Workspace → Spaces |
 | `rebel://settings/tools` | Settings → Connectors (alias: `rebel://settings/connectors`) |
 | `rebel://settings/plugins` | Settings → Advanced → Plugins |
-| `rebel://settings/agents` | Settings → Agent & Voice → Intelligence |
+| `rebel://settings/agents` | Settings → Agent & Voice |
 | `rebel://settings/voice` | Settings → Agent & Voice → Voice |
 | `rebel://settings/meetings` | Settings → Meetings |
 | `rebel://settings/safety` | Settings → Privacy & Safety |

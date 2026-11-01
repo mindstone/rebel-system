@@ -44,21 +44,11 @@ This costs roughly 4x the tokens of a single-model response (depending on how ma
 
 ### 1. Add model profiles
 
-In the same settings tab under **Model Profiles**, you have two ways to add council members:
+Open **Settings → Agent & Voice** and choose **Add a model**. You can add a model from an account or key, or choose **Add custom model** for your own service.
 
-#### Quick Add (recommended)
+For a saved API key, you can also choose **Add model** on its row under **Your API keys** (or **Your API keys and connections** if you have saved your own service).
 
-Pre-configured profiles appear as cards below the model list — for example, "GPT-5.5 — High Thinking" or "GPT-5 mini — Fast & Affordable." Click one, enter your API key (or reuse the one from your voice settings if it's the same provider), and you're done. The model, thinking level, and council membership are all pre-set.
-
-#### Manual setup
-
-For full control or custom endpoints:
-
-- Click **Add Profile**
-- Choose a provider (OpenAI, Google Gemini, Together AI, Cerebras) or configure a custom endpoint
-- Enter your API key for that provider
-- Optionally set a **thinking level** (Low, Medium, High, or Extra High) to control how deeply the model reasons — higher levels produce more thorough answers but use more tokens
-- Look for the **Council** chip on the model row — that's your toggle. Click it to add or remove this profile from council deliberations. (If the chip isn't visible, open the Model team section in Settings → Agent & Voice → Intelligence to access it.)
+On the same settings page, open **Customise**. In the **Your models** list, turn on **Second opinions** for each model you want to consult. You can turn it off there later.
 
 You can add as many council members as you like — there is no cap on the number of models.
 
