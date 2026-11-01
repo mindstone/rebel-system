@@ -53,6 +53,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **One allowance warning, with one number** — If you'd already used over 90% of your Mindstone allowance when you signed in, Rebel showed two warnings at once, one saying 75% and one saying 90%. Now you see just the 90% one. One number is plenty.
+
 - **Change your model settings at any time** — In Settings, you can now change **Rebel can pick it**, **Second opinions** and the fallback for long conversations while a conversation is running. They used to stay greyed out until it finished, which is a long wait if it's stuck.
 
 - **Helpers bring their own login** — When Rebel hands part of a job to a helper that runs on a different AI service from your main conversation, the helper now uses that service's own account. Before, it tried the sign-in from your main conversation and failed at once. You don't need to do anything.
