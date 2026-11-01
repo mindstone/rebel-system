@@ -85,6 +85,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 - **Meetings no longer vanish after a hiccup** — If one of your calendars didn't answer when Rebel looked for changes (a dropped connection, say), its meetings disappeared from Rebel for up to half an hour, though your calendar itself was fine. Now Rebel keeps showing the meetings it already had until it can look again. You don't need to do anything. A dropped connection no longer looks like an empty week.
 
+- **Continue now says what's missing** — If setup can't go further, the reason now appears right beside Continue, and a provider you've just added stays listed as saved. A button that ignores you is a poor way to start a relationship.
+
 - **New connectors don't wait their turn** — Adding a connector while a chat is replying used to park it until that reply finished, sometimes for minutes. Now it's ready within seconds and the reply carries on. The few changes that still have to wait (removing or changing a connector) say they'll apply by themselves and name the chat they're waiting for. Less queueing, more doing.
 
 - **No more false alarms about your ChatGPT sign-in** — Rebel could claim ChatGPT had rejected your credentials when nothing was wrong. A busy conversation now says so plainly, and a sign-in that really has lapsed asks you to reconnect, then the notice goes away by itself once it works again.
