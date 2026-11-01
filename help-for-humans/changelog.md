@@ -41,6 +41,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 - **A straight answer when your company's model can't run** — If your company requires a model only its own connection can run, and that connection isn't set up for you, Rebel now says so and points you to your admin, instead of sending you to Settings to connect something that can't help.
 
+- **Change your model settings at any time** — In Settings, you can now change **Rebel can pick it**, **Second opinions** and the fallback for long conversations while a conversation is running. They used to stay greyed out until it finished, which is a long wait if it's stuck.
+
 - **One allowance warning, with one number** — If you'd already used over 90% of your Mindstone allowance when you signed in to Rebel, you got two warnings at once, one saying 75% and one saying 90%. Now you get just the 90% one. If you reach 75% first, you still get that warning when you do. Nothing for you to do. One number is plenty.
 
 - **The phone app shows a new chat's title without being nudged** — At the top of a new chat, the phone app kept saying "New conversation" until you left the chat and came back. Now the real title appears by itself, moments after Rebel's first answer.
