@@ -9,7 +9,7 @@ last_updated: "2026-07-17"
 
 **Models Rebel offers:** Qwen 3.7 Plus, the balanced default, and DeepSeek V4 Pro for harder reasoning-heavy work.
 
-**How to connect:** Open [Settings → Agent & Voice → Intelligence](rebel://settings/agents), find **Other Providers**, and paste your Fireworks AI key. Then choose **Add its models**.
+**How to connect:** In [Settings → Agent & Voice](rebel://settings/agents), choose **Add an account or key** → **Connect your own AI service**. Enter a name, set **Base URL** to `https://api.fireworks.ai/inference/v1`, paste your Fireworks AI key, and choose **Save**. Under **Your API keys and connections**, choose **Add model** on that service's row and enter the model's Fireworks model ID.
 
 **Useful links:**
 

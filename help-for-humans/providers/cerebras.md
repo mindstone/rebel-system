@@ -7,7 +7,7 @@ last_updated: "2026-07-05"
 
 **What it is:** Connect a Cerebras API key for very fast inference of open models.
 
-**How to connect:** In [Settings → Agent & Voice → Intelligence](rebel://settings/agents), add a model, choose **Cerebras**, and paste your API key.
+**How to connect:** In [Settings → Agent & Voice](rebel://settings/agents), choose **Add an account or key** → **Paste an API key**, choose **Cerebras**, and paste your API key. Then choose **Add model** on the Cerebras row under **Your API keys**.
 
 **Useful links:**
 - [Get a Cerebras API key](https://cloud.cerebras.ai/)
