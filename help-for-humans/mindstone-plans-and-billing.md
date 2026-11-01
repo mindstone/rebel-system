@@ -31,9 +31,11 @@ So "Rogue" doesn't mean "more turns" — it means stronger models. If your work 
 
 ### Models included in your plan
 
-Each tier includes a curated set of models. You can see exactly which ones in **Settings → Agent & Voice → Intelligence** — the "Add a model" picker groups them under **Included with your plan**.
+Each tier includes a curated set of models. You can see exactly which ones in **Settings → Agent & Voice** — open **Customise**, then **Add a model**. The picker groups them under **Included with your Mindstone plan**.
 
 If you pick a model outside your tier mid-conversation, Rebel switches to an included one and says so ("Your plan runs on … Using it for this one.") rather than stopping with an error. Need frontier-class models? **Upgrade to Rogue** from the same settings section. Full behaviour is in [AI models](rebel://library/rebel-system%2Fhelp-for-humans%2FAI-models.md#picking-a-model-outside-your-plan).
+
+A Mindstone plan is **in use** when its row under **Your AI accounts** says **In use**; having a subscription alone is not enough. While it is in use, paid models from your other accounts and API keys use your plan's allowance first, then their own paid connection when the allowance runs out. Models supplied by the plan use its allowance. Local services stay on your computer, ChatGPT subscription models use your ChatGPT plan, and company-managed models stay company-paid. An organisation's OpenRouter connection still uses the Mindstone allowance first while that plan is in use.
 
 ## Plans for a whole company
 
@@ -51,8 +53,8 @@ Company arrangements aren't self-serve — email **hello@mindstone.com** and we'
 
 You can subscribe during onboarding (the **"Let Mindstone handle it"** option) or any time afterwards:
 
-1. Open [Settings → Agent & Voice → Intelligence](rebel://settings/agents)
-2. Find **"Let Mindstone handle it"** and pick **Dash** or **Rogue**
+1. Open [Settings → Agent & Voice](rebel://settings/agents)
+2. Choose **Add an account or key** → **Get a Mindstone plan**, then pick **Dash** or **Rogue**
 3. Click **Subscribe** — checkout opens in your browser (payment is handled by Stripe)
 4. Finish payment and return to Rebel
 
@@ -60,19 +62,19 @@ After checkout, Rebel provisions your AI automatically. You may briefly see *"Yo
 
 ## Your monthly allowance
 
-Once you're on a plan, [Settings → Agent & Voice → Intelligence](rebel://settings/agents) shows a **Monthly allowance** meter — roughly how much of your allowance you've used this month, as a simple percentage.
+Once you're on a plan, open **Plan details and subscription** on your plan's row under **Your AI accounts** in [Settings → Agent & Voice](rebel://settings/agents). The **Monthly allowance** meter shows roughly how much of your allowance you've used this month, as a simple percentage.
 
 - **It resets on the 1st of each calendar month** — *not* on your subscription's renewal day. Those two dates are deliberately different, so your first reset may land sooner than your next bill. Rebel flags this the first time so it isn't a surprise.
 - **Rebel nudges you as you get close.** As you approach your allowance, you'll get a gentle heads-up so there's no silent cliff-edge.
-- **The meter is a guide, not a gate.** It keeps you informed; Rebel won't abruptly cut you off mid-task at exactly 100%. If you regularly bump up against your allowance and want to keep working beyond it, **connect your own AI account** (ChatGPT Pro, OpenRouter, or Anthropic) and switch to it — that usage is billed separately, to that account. Upgrading **Dash → Rogue** won't help with capacity: it gives you stronger models, not a bigger allowance (both plans share the same allowance). See [AI models](rebel://library/rebel-system%2Fhelp-for-humans%2FAI-models.md).
+- **The meter is a guide, not a gate.** It keeps you informed; Rebel won't abruptly cut you off mid-task at exactly 100%. If you regularly bump up against your allowance and want to keep working beyond it, **connect your own AI account** (ChatGPT Pro, OpenRouter, or Anthropic) and switch to it — that usage is billed separately, to that account. If your Mindstone plan is in use, your saved OpenRouter or Anthropic account, or a key model you selected, can also take over automatically when its allowance runs out and bill you. Upgrading **Dash → Rogue** won't help with capacity: it gives you stronger models, not a bigger allowance (both plans share the same allowance). See [AI models](rebel://library/rebel-system%2Fhelp-for-humans%2FAI-models.md).
 
 ## Managing your plan
 
-In the same **"Let Mindstone handle it"** section you'll find (if your plan comes from a company arrangement, your company's admins handle changes instead — there's no personal billing to manage):
+Under **Your AI accounts**, open **Plan details and subscription** on your Mindstone plan row. You'll find (if your plan comes from a company arrangement, your company's admins handle changes instead — there's no personal billing to manage):
 
 - **Manage subscription** — opens the billing portal in your browser, where you can update your payment method, view invoices, or cancel.
 - **Upgrade to Rogue** — moves a Dash plan up to Rogue.
-- **Use this** — if you have other AI providers connected too, this makes your Mindstone plan the active one.
+- **Use for everyday work** — on your plan's row, this makes it your main connection. The plan details also offer **Use this** when another account is in use.
 
 ### If something needs attention
 
