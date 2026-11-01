@@ -31,7 +31,7 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
-- **When Chrome isn't there** — Some tasks let Rebel control Chrome on your computer. If Chrome isn't installed, Rebel no longer searches your computer for it or tries to install it on its own. It tells you in its reply that Chrome is missing and still finishes the rest of your request; install Chrome if you want those parts done too.
+- **When Chrome isn't there** — Some tasks let Rebel control Chrome on your computer. If Chrome isn't installed, Rebel no longer goes searching your computer for it. It tells you in its reply that Chrome is missing and carries on with anything that doesn't need it; install Chrome if you want those parts done too.
 
 - **A clear no, with no loose ends** — If Rebel can't add a folder as a Space, it now explains why and what to do next. Folders left in Library after an unsuccessful Space attempt are cleared at start-up; your original folders and files stay put. Administrative tidying, without the shredding.
 
