@@ -57,7 +57,7 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
-- **Finished means finished** — A conversation that finished while you were looking elsewhere no longer reopens looking busy, so your next message goes straight out instead of waiting about 15 seconds in line. The reply was done; now the waiting is too.
+- **Back to a reply that already finished** — If Rebel finished a reply while you were in another conversation, going back could still show it as busy replying, and your next message sat in the queue for about 15 seconds before Rebel got it. Now the conversation shows the reply as done and your message goes straight to Rebel. Nothing for you to do; no more waiting on a reply that was already finished.
 
 - **The model list stops saying it failed while it's right there** — If you use your own Anthropic key, Settings > Models said Rebel couldn't load your list of AI models, even while it showed them, and it left out models that are new on your account. Now that warning appears only when no models are showing, and new models on your account are listed again. Nothing for you to do.
 
