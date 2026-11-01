@@ -1,6 +1,6 @@
 ---
 description: "Guide to Rebel's Settings destinations: Agent & Voice, Connectors, Meetings, Workspace, Privacy & Safety (Safety Rules and Privacy Mode), Account & Preferences, Usage, and Advanced"
-last_updated: "2026-09-24"
+last_updated: "2026-10-31"
 ---
 
 # Settings and Configuration
@@ -11,7 +11,7 @@ Access Settings via the gear icon in the top-right corner, or use the keyboard s
 
 Settings is organised into eight destinations:
 
-- **Agent & Voice** — AI models, provider keys, and voice behaviour
+- **Agent & Voice**: AI models, accounts, API keys, and voice behaviour
 - **Connectors** — external tools and MCP integrations
 - **Meetings** — notetaker, join behaviour, transcript routing, and meeting imports
 - **Workspace** — library folder, scratchpad, spaces, and cloud sync
@@ -39,32 +39,29 @@ If your window is narrow, the Settings sidebar may collapse. Expand it to see th
 
 The place for how Rebel thinks, speaks, and listens.
 
-Inside **Agent & Voice** you'll see two sections:
+Inside **Agent & Voice** you'll find accounts and keys, model choices under **Customise**, and **Voice & Audio**.
 
-- **Intelligence** — authentication, model selection, fallbacks, permission mode, memory behaviour, file indexing, and related AI settings
-- **Voice** — transcription provider, text-to-speech voice, custom vocabulary, and voice hotkeys
+### AI accounts and models
 
-### Intelligence
+Use **Settings → Agent & Voice** for:
 
-Use **Settings → Agent & Voice → Intelligence** for:
-
-- **Authentication** — Anthropic, OpenAI, Gemini, and other provider keys are managed through a card-based grid. Each provider shows its connection status at a glance — connected providers stay connected between sessions, so you only need to set up your keys once. Connecting a provider automatically selects it as your active provider; disconnecting your active provider falls back to another connected one. Cards also include shortcuts to the provider's billing page so you can check your usage or upgrade your plan without hunting for the link. You can also connect a ChatGPT Pro or Claude Max subscription instead of using an API key. OpenRouter users can enter any model ID directly — not just those in Rebel's curated list. If you'd rather not manage any of this, the **"Let Mindstone handle it"** option here puts you on a flat-fee [Mindstone plan](rebel://library/rebel-system%2Fhelp-for-humans%2Fmindstone-plans-and-billing.md) where Mindstone covers the AI bill and shows your monthly allowance
-- **Thinking / Working / Background models** — which model plans, works, and handles behind-the-scenes tasks
+- **Accounts and API keys**: **Your AI accounts** shows the accounts and plans that can power everyday work, plus your Anthropic key. Each row says what it does and who pays. Other keys sit in **Your API keys**, with the number of models added from each and an **Add model** button. The title becomes **Your API keys and connections** if you connect TrustedRouter or your own AI service. Use **Add an account or key** below the cards to sign in, add a key, connect your own service, or choose a [Mindstone plan](rebel://library/rebel-system%2Fhelp-for-humans%2Fmindstone-plans-and-billing.md). Your connections stay saved between sessions.
+- **Thinking / Working / Background models** — open **Customise** to choose which model plans, works, and handles behind-the-scenes tasks
 - **Company-managed models** — if your company sets your team's models, you'll see a "Set by {your company}" note where a choice was made for you; see [AI models](library://rebel-system/help-for-humans/AI-models.md#if-your-company-manages-your-models)
-- **Fallbacks** — backup models if your primary choice is unavailable
+- **Fallbacks** — in **Customise**, choose backup models if your primary choice is unavailable
 - **Permission mode** — whether Rebel runs actions freely or stays in plan-only mode
 - **Auto memory updates** — whether Rebel should save useful facts automatically
 - **Expose provider keys in agent shell** — make provider keys available to Rebel-run shell sessions if you need that
 - **File indexing** — GPU acceleration and the quick link to Library indexing controls
 - **Learned model limits** — Rebel remembers what it learns about each model's effective context-window limit on your specific setup, so you don't have to re-establish the boundary after restarts or app updates
 - **Daily recommendations** — controls when Rebel generates daily recommendations for you. Three modes: **Ask** (shows a prompt card on your Homepage so you can trigger recommendations on demand), **Automatic** (Rebel generates recommendations daily on its own), or **Off** (disabled entirely)
-- **Backup connections** — add a backup connection and Rebel automatically fails over when your main one is busy or rate-limited. Opt-in by adding one; see [AI models](library://rebel-system/help-for-humans/AI-models.md#backup-connections)
+- **Backups**: in **Your AI accounts**, choose which accounts Rebel can use when your main one is busy or hits a limit, and set their order. There is one Backup list; the separate keys card has none. See [AI models](rebel://library/rebel-system%2Fhelp-for-humans%2FAI-models.md#backup-connections).
 
 See [AI models](library://rebel-system/help-for-humans/AI-models.md) for the full model guide.
 
-### Voice
+### Voice & Audio
 
-Use **Settings → Agent & Voice → Voice** for:
+Use **Settings → Agent & Voice → Voice & Audio** for:
 
 - **Voice provider** — Local (Moonshine), OpenAI Whisper, ElevenLabs Scribe, or a custom OpenAI-compatible provider
 - **Text-to-speech voice** — choose the voice Rebel uses for read-aloud and supported speaking features
@@ -229,7 +226,7 @@ See [where-rebel-stores-things](library://rebel-system/help-for-humans/where-reb
 
 **Voice not working?**
 - Check microphone permissions in your system settings
-- **For Local (Moonshine):** make sure the model is downloaded in **Settings → Agent & Voice → Voice**
+- **For Local (Moonshine):** make sure the model is downloaded in **Settings → Agent & Voice → Voice & Audio**
 - **For cloud providers (OpenAI, ElevenLabs):** verify your API key is correct in **Settings → Agent & Voice**
 
 **Connectors not connecting?**
