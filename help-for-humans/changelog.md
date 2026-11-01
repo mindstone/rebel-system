@@ -6,15 +6,33 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ## Unreleased
 
+### Highlights
+
+- **Your reply can carry on in your cloud** — With cloud continuity and an updated cloud, close the laptop or lose the connection and a running reply can continue there. A model that runs only on your computer waits for it unless you choose a hosted fallback.
+
 ### Improvements
 
-- **One meeting, one place to look** — Open **Library** → **Chief of Staff** for a file named after the meeting, with its prep, your notes and a transcript link. Inside, **Actions from this meeting** links to the action items on Rebel's **Actions** page, each with a link back to the file. The meeting may have wandered; its paperwork stays together.
+- **Automation questions, easier to find** — When a scheduled automation running on your computer asks a question, it now appears in the notification bell as it arrives. Click it to go to the question; answering clears the notification. Less hide-and-seek.
+
+- **Long automated saves get read to the end** — When an automation or a meeting saves something long, Rebel now checks all of it against your rules, in pieces, not just the opening stretch. Nothing new to approve, unless something late in the save really does break a rule. Long automated edits also stop pausing just for being long, though one single enormous change still asks first.
 
 - **Long notes save to your private Space without a fuss** — Before saving a note, Rebel checks it against your rules. For a long note it now reads the whole note instead of only the first part, so it no longer stops to ask you just because it couldn't see the end. And a note that only names a key, like `$CRM_API_KEY`, without the key itself, no longer looks like a password. Real passwords and keys still stop the save, and anything your [Safety Rules](rebel://settings/safety#safetyRules) say to ask about still asks. Nothing for you to do. Reading to the end: underrated.
 
-- **A little breathing room** — When storage runs low, Rebel clears its own leftovers and starts a conversation with one suggestion. Your files stay your call.
+- **Downloaded means ready** — Downloaded updates on your Mac now stay ready to install when you fully quit Rebel. Downloading was meant to be the first step, not the last.
+
+- **Your Rebel can ask around** — Ask teammates' Rebels a question in a shared Space and have the replies gathered into a table. When approval is needed, you see exactly what goes before it goes. A history file keeps the trace. Even Rebels leave a paper trail.
+
+- **One meeting, one place to look** — Open **Library** → **Chief of Staff** for a file named after the meeting, with its prep, your notes and a transcript link. Inside, **Actions from this meeting** links to the action items on Rebel's **Actions** page, each with a link back to the file. The meeting may have wandered; its paperwork stays together.
 
 - **Fewer questions when tidying loses nothing** — When Rebel can check that a tidying step loses nothing, it now usually goes ahead without asking: removing an empty folder or an empty file in a Space, deleting a duplicate when an identical copy sits beside it in the same folder, or moving a file to another place in the same Space. It also asks less often about a step that handles only one part of a bigger job (say, one month of a year's calendar) or might not work first time. When you let Rebel move a file into a Space's memory folder, the file now moves (before, it could stay where it was). And an action you approved while Rebel was still busy with something else now runs when that finishes, rather than quietly going missing. Deleting real content, overwriting a file with no copy kept, or moving something into a Space other people share still asks first, as does anything your [Safety Rules](rebel://settings/safety#safetyRules) say to ask about. Tidy, not reckless.
+
+- **Out of allowance, still in conversation** — When your Mindstone AI allowance runs out and you have added your own key and picked a model on it, Rebel carries on with that key and tells you when it bills you. Your first message after the allowance runs out no longer claims the conversation is stuck. A fresh conversation was never going to refill the meter.
+
+- **Automations wait out a busy spell** — When your company's AI provider is busy, scheduled automations can now spend up to 15 minutes retrying, so more of them finish. Results may turn up later, and a really long busy spell can still make a run fail. Chats are unchanged. Patience is a virtue; we automated it.
+
+- **A little breathing room** — When storage runs low, Rebel clears its own leftovers and starts a conversation with one suggestion. Your files stay your call.
+
+- **Accounts and keys, each in their place** - **Settings → Agent & Voice** now separates **Your AI accounts** from **Your API keys**, and each row says what it does and who pays. One **Add an account or key** button covers both, and **Models from your accounts and keys** follows the same split. Less detective work before the actual work.
 
 - **Your Browser does a lot more, and stays out of your way** — Your Browser, the Rebel extension in your own browser, now works in its own tabs, grouped under **Rebel** in the background. It never switches you to them or brings your browser forward, and leaves your tabs alone. It can open pages, type, pick from drop-downs, press keys, wait for pages to load and take screenshots, as well as read, fill in forms and click. When it needs you, for a sign-in say, it asks in the conversation and waits for you to choose **Done** there; if you click or type in its tab while it works, it waits until you stop. It has access to all websites as soon as it's installed, with no site-by-site asking, and your [Safety Rules](rebel://settings/safety#safetyRules) still decide what it does on each. Rebel's Browser now works without showing a window when you first connect it, and Shared Browser Tab bows out, though it keeps working if you already use it. A browser with manners, finally.
 
@@ -24,9 +42,13 @@ What's new in Rebel. We ship fast, so there's always something.
 
 - **One set of rules for terminal commands** — When Rebel runs a command in your computer's terminal, the same rules now apply whatever kind of computer you use. Everyday commands, like listing a folder, just run. Riskier ones, like deleting or moving files, sending data elsewhere, running downloaded code or using a password or key you've given Rebel, are checked against your [Safety Rules](rebel://settings/safety#safetyRules) first, and Rebel asks you if the check has a concern (or, for the riskiest ones, can't give an answer). The "Rebel can't check this command" warning is gone, and a terminal command that names a folder you've [blocked](rebel://settings/safety#approvalAuthorityLedger), or anything in it, is refused too. The "Extra safety checks" switch in Settings has retired: it only added checks to terminal commands, and they now get the right check by themselves, so you lose nothing. Same rules, fewer surprises.
 
+- **Smart picking reads the price tag** — When you add a model, whether Rebel can pick it for a step now depends on what it costs, not on how it thinks. Opus 5.5 and Sonnet 5.5, which cost less than Opus 5, now start ticked under **Rebel can pick it**; models that cost about twice as much or more to run, like Fable 5.1 and GPT-6 Astra, start unticked, even on a plan, where they use it up faster, and their row under [Your models](rebel://settings/agents#yourModels) now says why. Models you added earlier keep the tick you gave them, so if you'd like Rebel to pick one, tick it there. Thrifty, not stingy.
+
 - **Your OK travels; the work stays put** — Approvals, held automation actions, memory saves and folder requests waiting on your computer now show up on your phone and on the web. Answer there and your computer runs it, once. If your computer's asleep, they wait for it.
 
 - **A shortcut to the short version** — When **Just a quick answer** is available, press **⌘/Ctrl+Shift+J** to get an answer from what Rebel has so far. The shortcut sits beside the button, for those of us who don't memorise release notes. Change it or turn it off in **Settings → Account & Preferences → Appearance**.
+
+- **Less overthinking on small jobs** — On some AI models, two small jobs Rebel does behind the scenes now ask for a short, quick reply: choosing the search words before it answers you, and writing the progress lines you see while a task runs. Rebel's answers to you are unchanged, and there's nothing for you to do. Not every thought needs a committee.
 
 - **One home for saving preferences** — Your Space saving choices now live as lines in [Safety Rules](rebel://settings/safety#safetyRules), alongside your other rules. The per-Space “how careful” setting and the “Ask less” button are gone. For now, when Rebel asks about saving a note, you can allow that one save or say no.
 
@@ -35,15 +57,52 @@ What's new in Rebel. We ship fast, so there's always something.
 - **Dashboards, with a sense of belonging** — Dashboards and reports now open in your Library preview and look like Rebel, in light and dark. The numbers have found suitable accommodation.
 <!-- detail: Pages use a shared Rebel style, with charts, maps, tables, calendars and diagrams from approved libraries. Key figures and HTML tables remain readable offline; charts need their libraries to load. -->
 
-- **Charts and dashboards, right in the chat** — Ask Rebel to show your numbers as a chart, a table or a whole dashboard ("show me these sales figures as a dashboard"), and it draws them in the conversation. Hover over a chart for exact figures; sort and filter a table by clicking its headings or typing in its filter box. Sidebar tabs you've built with Rebel use the same charts, and bars for values below zero now point down, as nature intended.
+- **Charts and dashboards, right in the chat** — When an answer is a trend, a comparison, a breakdown or a long list of figures, Rebel now draws it as a chart, a table or a whole dashboard in the conversation, with the gist in a sentence or two, whether you asked or not. You can still ask outright ("show me these sales figures as a dashboard"), or ask for plain text if you'd rather. On your computer, hover over a chart for exact figures; sort and filter a table by clicking its headings or typing in its filter box. On your phone, on the web and in shared links you get every figure written out in full, a line per row. Sidebar tabs you've built with Rebel use the same charts, and bars for values below zero now point down, as nature intended.
 
 ### Fixes
 
-- **The phone app shows a new chat's title without being nudged** — At the top of a new chat, the phone app kept saying "New conversation" until you left the chat and came back. Now the real title appears by itself, moments after Rebel's first answer.
+- **Company model costs, now visible** — Settings → Usage now shows costs for new turns on models your organization provides. Your organization still covers them; this isn't a new charge to you. Earlier missing costs stay missing. Better receipts, same bill payer.
+<!-- detail: Company-managed Fireworks pricing now accepts the documented default serving-mode name. Usage groups organization-paid costs separately from out-of-pocket costs. -->
+
+- **Finished means finished** — A conversation that finished while you were looking elsewhere no longer reopens looking busy, so your next message goes straight out instead of waiting about 15 seconds in line. The reply was done; now the waiting is too.
+
+- **The model list stops saying it failed while it's right there** — If you use your own Anthropic key, Settings > Models said Rebel couldn't load your list of AI models, even while it showed them, and it left out models that are new on your account. Now that warning appears only when no models are showing, and new models on your account are listed again. Nothing for you to do.
+
+- **Deleting a provider no longer fibs about it** — If you deleted an AI provider you'd added while Rebel still used it for some work, Settings kept naming its model and saying you paid that provider, while your messages quietly went elsewhere. Now Rebel tells you which work will change before you delete it, and afterwards shows what really runs and who pays. Models you added from it stay in your list until you connect them to another account.
+
+- **File names in full** — In the Rebel app on your phone, long file names in a reply could split in the middle of a word, and links to files hid part of the name behind a "…". Now long names move to the next line at a sensible spot, and links show the whole name. Same files, fewer mysteries.
+
+- **One allowance warning, with one number** — If you'd already used over 90% of your Mindstone allowance when you signed in to Rebel, you got two warnings at once, one saying 75% and one saying 90%. Now you get just the 90% one. If you reach 75% first, you still get that warning when you do. Nothing for you to do. One number is plenty.
+
+- **Attachments no longer go missing quietly** — Rebel sometimes passes a request to a different AI model. If that model couldn't take in everything, a file you'd attached could be left out of the reply without a word. Now Rebel goes back by itself to the model it started with, which can take the file. If your file is still too large, you see a note saying so, asking for a smaller file or the part you need. Silence was never golden.
+
+- **Change your model settings at any time** — In Settings, you can now change **Rebel can pick it**, **Second opinions** and the fallback for long conversations while a conversation is running. They used to stay greyed out until it finished, which is a long wait if it's stuck.
 
 - **Helpers bring their own login** — When Rebel hands part of a job to a helper that runs on a different AI service from your main conversation, the helper now uses that service's own account. Before, it tried the sign-in from your main conversation and failed at once. You don't need to do anything.
 
+- **A straight answer when your company's model can't run** — If your company requires a model only its own connection can run, and that connection isn't set up for you, Rebel now says so and points you to your admin, instead of sending you to Settings to connect something that can't help.
+
+- **Web addresses on your phone are now links** — Tap an address Rebel writes out in a reply to open it in your browser. Less copying, more going places.
+- **Helpers bring their own login** — When Rebel hands part of a job to a helper that runs on a different AI service from your main conversation, the helper now uses that service's own account. Before, it tried the sign-in from your main conversation and failed at once. You don't need to do anything.
+
+- **The phone app shows a new chat's title without being nudged** — At the top of a new chat, the phone app kept saying "New conversation" until you left the chat and came back. Now the real title appears by itself, moments after Rebel's first answer.
+- **A widget with a memory** — Your iPhone widget keeps its last confirmed actions, marks old updates clearly, and refreshes while Rebel is closed. "All clear" now waits for evidence.
+
+- **Said once is enough** — A finished reply could show up twice in the same chat. It now shows once, the next time you open the chat, and there is nothing for you to do. Once was plenty.
+
+- **Old Actions look before they close** — Rebel no longer closes an old Action by itself while it might still be running somewhere else. If Rebel can't check, the Action stays open until you mark it done.
+
 - **Meetings no longer vanish after a hiccup** — If one of your calendars didn't answer when Rebel looked for changes (a dropped connection, say), its meetings disappeared from Rebel for up to half an hour, though your calendar itself was fine. Now Rebel keeps showing the meetings it already had until it can look again. You don't need to do anything. A dropped connection no longer looks like an empty week.
+
+- **New connectors don't wait their turn** — Adding a connector while a chat is replying used to park it until that reply finished, sometimes for minutes. Now it's ready within seconds and the reply carries on. The few changes that still have to wait (removing or changing a connector) say they'll apply by themselves and name the chat they're waiting for. Less queueing, more doing.
+
+- **No more false alarms about your ChatGPT sign-in** — Rebel could claim ChatGPT had rejected your credentials when nothing was wrong. A busy conversation now says so plainly, and a sign-in that really has lapsed asks you to reconnect, then the notice goes away by itself once it works again.
+
+- **A calmer start-up warning** — When you open Rebel and the apps you've connected to it, like Gmail or Slack, are slow to start or don't start at all, the warning now names them and says you can keep chatting. If they didn't start, it offers **Try again** to reconnect them. It used to stay on screen even after your apps were working again; now it goes away by itself as soon as they work. If trying again doesn't help, Safe Mode is still there: it restarts Rebel with your apps switched off and opens a chat to help find the problem, and your chats and files are kept. The warning no longer outstays its welcome.
+
+- **Cached input counted once** — Costs for OpenAI, ChatGPT and OpenRouter with your own key counted the part of each message the provider had cached twice, so those figures were too high. They now count it once, so the numbers you see drop. Paying twice for the same thing was never the plan.
+
+- **Finding your colleagues in Slack** — Asking Rebel about a colleague could fail with a suggestion to reconnect, even while the rest of Slack worked fine. Rebel now looks people up with your own Slack connection first, and the connection check tells you what actually works. Those lookups can now include a colleague's work email, where your Slack connection allows it. Disconnecting Slack is also now just your own business: it no longer revokes the app your colleagues share. Notes you send yourself still rely on that app, and if Slack refuses it, Rebel says so. Blame, correctly attributed.
 
 - **A clear no, with no loose ends** — If Rebel can't add a folder as a Space, it now explains why and what to do next. Folders left in Library after an unsuccessful Space attempt are cleared at start-up; your original folders and files stay put. Administrative tidying, without the shredding.
 
@@ -105,6 +164,8 @@ What's new in Rebel. We ship fast, so there's always something.
 - **Adding your own connector by hand, less fiddly** — In Settings → Connectors → Manual JSON setup, the box now starts empty instead of with an example to delete, a stray click outside the window no longer throws away what you typed, and it tells you up front that the server needs a name.
 
 - **Save warnings, on the record** — When Rebel can't save a change, or shows you a warning, it now writes that to its log on your computer, so a bug report can show what went wrong. And a conversation with older unsaved changes no longer tells you it "still can't save" every time you save something new. Fewer false alarms.
+
+- **Quitting mid-reply no longer leaves your phone guessing** — Close Rebel on your computer while it's still working and the web and phone apps now say so, with any work recorded so far, instead of showing your request and a polite silence. You didn't press Stop, so we won't claim you did.
 
 ## v0.4.96 — Oct 27, 2026
 
