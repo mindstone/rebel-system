@@ -132,7 +132,7 @@ Your saving preferences are lines in your [Safety Rules](rebel://settings/safety
 
 Rebel normally saves routine notes to private Spaces without asking. A rule that names a Space or destination adds a check, even when the rule permits saving there. Team and shared Spaces are checked against your rules and the Space's description. If the check can't give an answer, a routine save to a team Space still goes ahead while you're chatting. An automation's save also goes ahead and is noted under **Recent activity** in Privacy & Safety. A memory update Rebel makes in the background waits for you. If your rules name that Space, or it's shared outside the company, Rebel asks you first whenever the check can't answer.
 
-If you had set a Space to always ask before saving, that choice is now a line in your Safety Rules, and the safety check follows it. [Privacy Mode](rebel://library/rebel-system%2Fhelp-for-humans%2Fprivacy-mode.md) keeps saves waiting for your approval.
+If you had set a Space to always ask before saving, that choice is now a line in your Safety Rules, and the safety check follows it. In [Privacy Mode](rebel://library/rebel-system%2Fhelp-for-humans%2Fprivacy-mode.md), saves get the same checks, and Rebel doesn't add anything from that conversation to its memory afterwards.
 
 ## Grouping spaces by organisation
 

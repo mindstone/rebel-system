@@ -12,6 +12,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Improvements
 
+- **Every save gets the same safety check** — When Rebel saves a file in a conversation, it now goes through the same safety check as any other action, instead of a separate one for memory. When a save needs your OK, it waits in the notification drawer. If Rebel changes the file again before you decide, the waiting copy updates, and **Allow** saves the latest version, so nothing has to be redone. Your [Safety Rules](rebel://settings/safety#safetyRules) gain one default line: Rebel asks before changing a skill someone else made. And in Privacy Mode, Rebel doesn't save anything from the conversation to its memory afterwards. Simpler, and just as careful.
+
 - **Automation questions, easier to find** — When a scheduled automation running on your computer asks a question, it now appears in the notification bell as it arrives. Click it to go to the question; answering clears the notification. Less hide-and-seek.
 
 - **Long meeting transcripts get read to the end** — Before saving a long meeting transcript or a note from an automation, Rebel now checks all of it against your safety rules, not just the opening stretch. If something later on breaks a rule, Rebel holds the save for your OK. Automations also stop waiting for your approval just because an edit is long, unless one single change in it is very large.

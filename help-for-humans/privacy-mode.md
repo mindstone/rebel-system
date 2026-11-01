@@ -1,10 +1,10 @@
 ---
-description: "Privacy Mode makes Rebel ask for your approval before every action, even for tools you've trusted before — ideal for sensitive conversations or client work."
+description: "Privacy Mode gives a conversation Rebel's strictest safety checks and keeps it out of Rebel's memory — ideal for sensitive conversations or client work."
 ---
 
 # Privacy Mode
 
-Privacy Mode is a single toggle that tells Rebel to ask before taking actions — writing files, running tools, saving to memory.
+Privacy Mode is a single toggle for one conversation. Rebel uses its strictest safety checks on every action, and it doesn't learn from the conversation automatically.
 
 ## When to use it
 
@@ -13,29 +13,21 @@ Turn on Privacy Mode when you're working with:
 - **Unfamiliar territory** — new tools or integrations you want to understand first
 - **Shared workspaces** — when you want extra control over what gets written or modified
 
-Think of it as driving with a co-pilot who confirms every turn, even the ones you've approved before. More interruptions, more control.
-
 ## How to enable it
 
-Look for the **lock icon** in the input bar at the bottom of the screen.
+Open **Session settings** (the sliders button in the input bar) and turn on **Private mode**.
 
-- **Click to toggle** — lock closed = Privacy Mode on
-- **First time you enable it**, Rebel will confirm: "Private mode enabled. I'll ask before writing or taking any actions."
+The first time you turn it on, Rebel confirms: "Private mode on. Rebel uses its strictest safety checks and won't learn from this chat automatically."
 
 ## What happens when it's on
 
-Rebel will prompt you before:
-- Writing or modifying files
-- Running tools (even ones you've trusted in the past)
-- Saving to memory
-
-This means more approval dialogs. That's the point.
+- **Strictest checks.** Rebel checks every action against your [Safety Rules](rebel://settings/safety#safetyRules) at its strictest setting. An action the check clears still runs; anything it's unsure about, or can't check, waits for your OK.
+- **Nothing learned automatically.** Rebel doesn't save anything from the conversation to its memory afterwards. If you ask it to save or remember something, it saves that like any other file, with the same checks.
+- **Your earlier choices still count.** Permissions you've already given, such as **Always** or **for this chat**, still apply, and so do blocks.
 
 ### You can still approve actions
 
-When Rebel asks for permission, click **Allow once** to approve that specific action. Privacy Mode doesn't remove your ability to approve things — it just removes automatic approvals.
-
-In Privacy Mode, even tools you've trusted are checked. Every action requires your explicit approval — that's the point.
+When Rebel asks, click **Allow once** to approve that one action. Privacy Mode makes Rebel more careful; it doesn't take your choices away.
 
 ## What it doesn't do
 
@@ -49,7 +41,7 @@ The difference is in the doing, not the knowing.
 
 ## When to turn it off
 
-Once you're done with the sensitive work, toggle Privacy Mode off to return to your normal settings. Rebel will remember which tools you've trusted and which automations you've approved.
+Once you're done with the sensitive work, turn Privacy Mode off to go back to your normal settings.
 
 ---
 
