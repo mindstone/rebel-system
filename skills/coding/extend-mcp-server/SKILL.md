@@ -110,6 +110,7 @@ bundled_rebel_oss_ids:
   - bundled-apple-shortcuts
   - bundled-browser-automation
   - bundled-browserbase
+  - bundled-computers
   - bundled-custom-email
   - bundled-elevenlabs
   - bundled-elevenlabs-agents
