@@ -33,13 +33,13 @@ In **Settings → Agent & Voice**, **Your AI accounts** shows sign-ins, plans an
 - **Let Mindstone handle it:** [Mindstone plans](rebel://library/rebel-system%2Fhelp-for-humans%2Fmindstone-plans-and-billing.md) — flat-fee subscription, no keys
 - **Your own or company-hosted models:** [Custom models and gateways](rebel://library/rebel-system%2Fhelp-for-humans%2Fcustom-models-and-gateways.md) — Ollama, LM Studio, company gateways
 
-A Mindstone plan is **in use** when its row under **Your AI accounts** says **In use**; having a subscription alone is not enough. While it is in use, paid models from your other accounts and API keys use your plan's allowance first, then their own paid connection when the allowance runs out. Models supplied by the plan use its allowance. Local services stay on your computer, ChatGPT subscription models use your ChatGPT plan, and company-managed models stay company-paid. An organisation's OpenRouter connection still uses the Mindstone allowance first while that plan is in use.
+A Mindstone plan is **in use** when its row under **Your AI accounts** says **In use**; having a subscription alone is not enough. While it is in use, paid models from your other accounts and API keys use your plan's allowance first, then their own paid connection when the allowance runs out. Models supplied by the plan use its allowance. Local services stay on your computer, ChatGPT subscription models use your ChatGPT plan, and company-managed models stay company-paid. An organisation's OpenRouter connection isn't used while the plan is in use.
 
 ## Backup connections
 
 In **[Settings → Agent & Voice → Your AI accounts](rebel://settings/agents#backupConnections)**, choose **Use as Backup** for an account, then put your Backups in the order you want Rebel to try them. If your main account is busy or hits its limit, Rebel automatically switches to the next Backup. There is one Backup list in this card; the separate keys card has none.
 
-If you add no Backup, Rebel won't switch accounts on its own, and there's no extra spend. A Mindstone plan becomes a Backup only if you choose **Use as Backup** for it.
+If you add no Backup, Rebel won't switch accounts when one is busy. The exception is a Mindstone plan whose allowance has run out: your saved OpenRouter or Anthropic account, or a key model you selected, then takes over and bills you. A Mindstone plan becomes a Backup only if you choose **Use as Backup** for it.
 
 ## See also
 
