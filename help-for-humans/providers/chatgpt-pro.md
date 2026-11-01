@@ -7,7 +7,7 @@ last_updated: "2026-07-05"
 
 **What it is:** Connect your existing ChatGPT account by signing in — no API key needed. Uses your ChatGPT Pro subscription to power Rebel. One of the three first-class bring-your-own choices.
 
-**How to connect:** In [Settings → Agent & Voice → Intelligence](rebel://settings/agents), choose **ChatGPT Pro** and sign in with your ChatGPT account.
+**How to connect:** In [Settings → Agent & Voice](rebel://settings/agents), choose **Add an account or key** → **Sign in with ChatGPT** and sign in with your ChatGPT account.
 
 **Useful links:**
 - [ChatGPT](https://chatgpt.com/)

@@ -161,7 +161,7 @@ The more context Rebel has, the less you need to explain each time.
 ## Tips for Complex Tasks
 
 1. **Front-load constraints** — Mention limitations, preferences, and non-negotiables early
-2. **Specify the model** — Opus for planning and strategy, Sonnet for execution (Settings → Models)
+2. **Specify the model** — Opus for planning and strategy, Sonnet for execution (Settings → Agent & Voice)
 3. **Attach reference materials** — Drag in examples of what good output looks like
 4. **Use explicit checkpoints** — "After completing the research phase, pause and show me what you've found before proceeding"
 
@@ -172,7 +172,7 @@ Rebel automatically manages conversation context to keep you within limits:
 
 - **Lazy context escalation** — Conversations start at 200K tokens and automatically escalate to 1M when needed (if available). Watch the usage tooltip to see your current utilization.
 - **Context compaction** — When context gets full, Rebel summarizes the conversation and continues seamlessly
-- **Extended context** — Enable in **Settings → Agent & Voice → Intelligence** for access to 1M tokens (requires API Tier 4). See [AI Models](library://rebel-system/help-for-humans/AI-models.md#extended-context) for details.
+- **Large documents** — In **Settings → Agent & Voice**, choose a model suited to the amount of material you need it to read. See [AI models](rebel://library/rebel-system%2Fhelp-for-humans%2FAI-models.md) for model choices.
 
 
 ## Related
