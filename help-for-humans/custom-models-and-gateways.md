@@ -11,7 +11,7 @@ Most people only need one of Rebel's built-in providers (ChatGPT Pro, OpenRouter
 
 - A **company gateway** — many organisations route all AI traffic through their own endpoint (often built on something like litellm in front of Vertex, Bedrock, or Azure) for control and billing.
 - A **model running on your own machine** (e.g. via Ollama or a local server).
-- A **specialised or fine-tuned model** from a provider that isn't one of Rebel's built-in cards.
+- A **specialised or fine-tuned model** from a provider that isn't in Rebel's model catalogue.
 
 The common thread: the endpoint speaks the **OpenAI-compatible** API, and you point Rebel at it.
 
@@ -25,7 +25,7 @@ To save a service and reuse it for several models:
 4. Enter a **Name** and the exact **Model ID** your service expects. The address and saved key come from the service you chose.
 5. Choose **Test now**, then **Add**.
 
-For a service that needs no key, you can also choose **Add a model** → **Add custom model** → **Other (OpenAI-compatible)**. Enter its **Name**, **Model ID** and **Server URL**. For example, a local server might use `http://localhost:8000/v1`. Choose **Test now**, then **Add**. If your service needs a key, save it first using the steps above.
+For a service that needs no key, open **Customise** in **Settings → Agent & Voice**, then choose **Add a model** → **Add custom model** → **Other (OpenAI-compatible)**. Enter its **Name**, **Model ID** and **Server URL**. For example, a local server might use `http://localhost:8000/v1`. Choose **Test now**, then **Add**. If your service needs a key, save it first using the steps above.
 
 ## What "Test now" does
 

@@ -44,11 +44,11 @@ This costs roughly 4x the tokens of a single-model response (depending on how ma
 
 ### 1. Add model profiles
 
-Open **Settings → Agent & Voice** and choose **Add a model**. You can add a model from an account or key, or choose **Add custom model** for your own service.
+Open **Settings → Agent & Voice**, open **Customise**, then choose **Add a model**. You can add a model from an account or key, or choose **Add custom model** for your own service.
 
 For a saved API key, you can also choose **Add model** on its row under **Your API keys** (or **Your API keys and connections** if you have saved your own service).
 
-On the same settings page, open **Customise**. In the **Your models** list, turn on **Second opinions** for each model you want to consult. You can turn it off there later.
+In the **Your models** list under **Customise**, turn on **Second opinions** for each model you want to consult. You can turn it off there later.
 
 You can add as many council members as you like — there is no cap on the number of models.
 

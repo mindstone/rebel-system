@@ -31,9 +31,11 @@ So "Rogue" doesn't mean "more turns" — it means stronger models. If your work 
 
 ### Models included in your plan
 
-Each tier includes a curated set of models. You can see exactly which ones in **Settings → Agent & Voice** — the **Add a model** picker groups them under **Included with your Mindstone plan**.
+Each tier includes a curated set of models. You can see exactly which ones in **Settings → Agent & Voice** — open **Customise**, then **Add a model**. The picker groups them under **Included with your Mindstone plan**.
 
 If you pick a model outside your tier mid-conversation, Rebel switches to an included one and says so ("Your plan runs on … Using it for this one.") rather than stopping with an error. Need frontier-class models? **Upgrade to Rogue** from the same settings section. Full behaviour is in [AI models](rebel://library/rebel-system%2Fhelp-for-humans%2FAI-models.md#picking-a-model-outside-your-plan).
+
+A Mindstone plan is **in use** when its row under **Your AI accounts** says **In use**; having a subscription alone is not enough. While it is in use, paid models from your other accounts and API keys use your plan's allowance first, then their own paid connection when the allowance runs out. Models supplied by the plan use its allowance. Local services stay on your computer, ChatGPT subscription models use your ChatGPT plan, and company-managed models stay company-paid. An organisation's OpenRouter connection still uses the Mindstone allowance first while that plan is in use.
 
 ## Plans for a whole company
 
