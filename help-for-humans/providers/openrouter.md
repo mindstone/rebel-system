@@ -7,7 +7,7 @@ last_updated: "2026-07-05"
 
 **What it is:** One account, many models — reach Claude, GPT, Gemini, DeepSeek, Grok and more through a single OpenRouter connection. A first-class bring-your-own choice.
 
-**How to connect:** In [Settings → Agent & Voice → Intelligence](rebel://settings/agents), choose **OpenRouter** and sign in — no API key to paste.
+**How to connect:** In [Settings → Agent & Voice](rebel://settings/agents), choose **Add an account or key** → **Sign in with OpenRouter** and sign in — no API key to paste.
 
 **Useful links:**
 - [OpenRouter](https://openrouter.ai/)
