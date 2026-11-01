@@ -7,7 +7,7 @@ last_updated: "2026-07-05"
 
 **What it is:** Connect a Google Gemini API key to use Gemini models (Gemini 3.x and 2.5 — Pro, Flash).
 
-**How to connect:** In [Settings → Agent & Voice → Intelligence](rebel://settings/agents), add a model, choose **Google Gemini**, and paste your API key.
+**How to connect:** In [Settings → Agent & Voice](rebel://settings/agents), choose **Add an account or key** → **Paste an API key**, choose **Google Gemini**, and paste your API key. Then choose **Add model** on the Google Gemini row under **Your API keys**.
 
 **Useful links:**
 - [Create a Google Gemini API key](https://aistudio.google.com/apikey)
