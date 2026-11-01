@@ -7,6 +7,8 @@ last_updated: "2026-07-05"
 
 **What it is:** One account, many models — reach Claude, GPT, Gemini, DeepSeek, Grok and more through a single OpenRouter connection. A first-class bring-your-own choice.
 
+**While a Mindstone plan is in use:** models from this connection use your plan's allowance first. Here, **in use** means the plan's row in **Your AI accounts** says **In use**. Local services stay on your computer, and company-managed models stay company-paid. Pay-per-use prices apply when this connection pays.
+
 **How to connect:** In [Settings → Agent & Voice](rebel://settings/agents), choose **Add an account or key** → **Sign in with OpenRouter** and sign in — no API key to paste.
 
 **Useful links:**
