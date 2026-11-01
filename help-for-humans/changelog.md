@@ -63,7 +63,7 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
-- **When Chrome isn't there** — Some tasks let Rebel control Chrome on your computer. If Chrome isn't installed, Rebel no longer goes searching your computer for it. It tells you in its reply that Chrome is missing and carries on with anything that doesn't need it; install Chrome if you want those parts done too.
+- **When Chrome isn't there** — Rebel can use Chrome on your computer to browse websites for you. If Chrome isn't installed, Rebel now says so in its reply instead of hunting around your computer for it, and gets on with the rest of the job. Install Chrome and ask again if you want the browsing done too.
 
 - **Company model costs, now visible** — Settings → Usage now shows costs for new turns on models your organization provides. Your organization still covers them; this isn't a new charge to you. Earlier missing costs stay missing. Better receipts, same bill payer.
 <!-- detail: Company-managed Fireworks pricing now accepts the documented default serving-mode name. Usage groups organization-paid costs separately from out-of-pocket costs. -->
