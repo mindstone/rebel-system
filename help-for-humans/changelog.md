@@ -30,6 +30,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 - **Automations wait out a busy spell** — When your company's AI provider is busy, scheduled automations can now spend up to 15 minutes retrying, so more of them finish. Results may turn up later, and a really long busy spell can still make a run fail. Chats are unchanged. Patience is a virtue; we automated it.
 
+- **Your finish line survives the paperwork** — When Rebel couldn't save part of a conversation and you settle it by picking a saved answer, a finish line you set while it was stuck is now kept instead of quietly lost. Anything else still waiting to be saved stays put, and Rebel tells you so. One decision shouldn't cost you another.
+
 - **A little breathing room** — When storage runs low, Rebel clears its own leftovers and starts a conversation with one suggestion. Your files stay your call.
 
 - **Accounts and keys, each in their place** - **Settings → Agent & Voice** now separates **Your AI accounts** from **Your API keys**, and each row says what it does and who pays. One **Add an account or key** button covers both, and **Models from your accounts and keys** follows the same split. Less detective work before the actual work.
