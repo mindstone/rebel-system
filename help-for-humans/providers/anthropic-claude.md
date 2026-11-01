@@ -7,6 +7,8 @@ last_updated: "2026-07-05"
 
 **What it is:** Connect your Anthropic API key to use Claude models (Opus, Sonnet, Haiku, Fable) directly — Rebel's default model family. Claude is also reachable via [OpenRouter](rebel://library/rebel-system%2Fhelp-for-humans%2Fproviders%2Fopenrouter.md) and a [Mindstone plan](rebel://library/rebel-system%2Fhelp-for-humans%2Fmindstone-plans-and-billing.md).
 
+**While a Mindstone plan is in use:** models from this connection use your plan's allowance first. Here, **in use** means the plan's row in **Your AI accounts** says **In use**. Local services stay on your computer, and company-managed models stay company-paid. Pay-per-use prices apply when this connection pays.
+
 **How to connect:** In [Settings → Agent & Voice](rebel://settings/agents), choose **Add an account or key** → **Paste an API key**, choose **Anthropic**, and paste your API key.
 
 **Useful links:**
@@ -19,4 +21,4 @@ last_updated: "2026-07-05"
 - [Custom models and gateways](rebel://library/rebel-system%2Fhelp-for-humans%2Fcustom-models-and-gateways.md) — running your own or a company-hosted model
 - [Council Mode](rebel://library/rebel-system%2Fhelp-for-humans%2Fmulti-model-council-mode.md) — second opinions from several models at once
 - [Troubleshooting](rebel://library/rebel-system%2Fhelp-for-humans%2Ftroubleshooting.md) — if model setup goes sideways
-- [Setting up Anthropic](rebel://library/rebel-system%2Fhelp-for-humans%2Fclaude-max-setup.md) — a step-by-step walkthrough of connecting the Anthropic provider card
+- [Setting up Anthropic](rebel://library/rebel-system%2Fhelp-for-humans%2Fclaude-max-setup.md) — a step-by-step walkthrough of connecting your Anthropic key
