@@ -39,6 +39,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **File names in full** — In the Rebel app on your phone, long file names in a reply could split in the middle of a word, and links to files hid part of the name behind a "…". Now long names move to the next line at a sensible spot, and links show the whole name. Same files, fewer mysteries.
+
 - **Helpers bring their own login** — When Rebel hands part of a job to a helper that runs on a different AI service from your main conversation, the helper now uses that service's own account. Before, it tried the sign-in from your main conversation and failed at once. You don't need to do anything.
 
 - **Meetings no longer vanish after a hiccup** — If one of your calendars didn't answer when Rebel looked for changes (a dropped connection, say), its meetings disappeared from Rebel for up to half an hour, though your calendar itself was fine. Now Rebel keeps showing the meetings it already had until it can look again. You don't need to do anything. A dropped connection no longer looks like an empty week.
