@@ -50,6 +50,7 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **A straight answer when your company's model can't run** — If your company requires a model only its own connection can run, and that connection isn't set up for you, Rebel now says so and points you to your admin, instead of sending you to Settings to connect something that can't help.
 - **Change your model settings at any time** — In Settings, you can now change **Rebel can pick it**, **Second opinions** and the fallback for long conversations while a conversation is running. They used to stay greyed out until it finished, which is a long wait if it's stuck.
 
 - **Web addresses on your phone are now links** — Tap an address Rebel writes out in a reply to open it in your browser. Less copying, more going places.
