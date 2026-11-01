@@ -7,7 +7,7 @@ last_updated: "2026-07-05"
 
 **What it is:** Connect a Together AI API key to use fast, hosted open-source models (Llama, DeepSeek, GPT-OSS and more).
 
-**How to connect:** In [Settings → Agent & Voice → Intelligence](rebel://settings/agents), add a model, choose **Together AI**, and paste your API key.
+**How to connect:** In [Settings → Agent & Voice](rebel://settings/agents), choose **Add an account or key** → **Paste an API key**, choose **Together AI**, and paste your API key. Then choose **Add model** on the Together AI row under **Your API keys**.
 
 **Useful links:**
 - [Create a Together AI API key](https://api.together.xyz/settings/api-keys)
