@@ -8,6 +8,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Improvements
 
+- **Automation questions, easier to find** — When a scheduled automation running on your computer asks a question, it now appears in the notification bell as it arrives. Click it to go to the question; answering clears the notification. Less hide-and-seek.
+
 - **One meeting, one place to look** — Open **Library** → **Chief of Staff** for a file named after the meeting, with its prep, your notes and a transcript link. Inside, **Actions from this meeting** links to the action items on Rebel's **Actions** page, each with a link back to the file. The meeting may have wandered; its paperwork stays together.
 
 - **Long notes save to your private Space without a fuss** — Before saving a note, Rebel checks it against your rules. For a long note it now reads the whole note instead of only the first part, so it no longer stops to ask you just because it couldn't see the end. And a note that only names a key, like `$CRM_API_KEY`, without the key itself, no longer looks like a password. Real passwords and keys still stop the save, and anything your [Safety Rules](rebel://settings/safety#safetyRules) say to ask about still asks. Nothing for you to do. Reading to the end: underrated.
