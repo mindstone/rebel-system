@@ -8,6 +8,10 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Improvements
 
+- **One meeting, one place to look** — Open **Library** → **Chief of Staff** for a file named after the meeting, with its prep, your notes and a transcript link. Inside, **Actions from this meeting** links to the action items on Rebel's **Actions** page, each with a link back to the file. The meeting may have wandered; its paperwork stays together.
+
+- **Long notes save to your private Space without a fuss** — Before saving a note, Rebel checks it against your rules. For a long note it now reads the whole note instead of only the first part, so it no longer stops to ask you just because it couldn't see the end. And a note that only names a key, like `$CRM_API_KEY`, without the key itself, no longer looks like a password. Real passwords and keys still stop the save, and anything your [Safety Rules](rebel://settings/safety#safetyRules) say to ask about still asks. Nothing for you to do. Reading to the end: underrated.
+
 - **A little breathing room** — When storage runs low, Rebel clears its own leftovers and starts a conversation with one suggestion. Your files stay your call.
 
 - **Fewer questions when tidying loses nothing** — When Rebel can check that a tidying step loses nothing, it now usually goes ahead without asking: removing an empty folder or an empty file in a Space, deleting a duplicate when an identical copy sits beside it in the same folder, or moving a file to another place in the same Space. It also asks less often about a step that handles only one part of a bigger job (say, one month of a year's calendar) or might not work first time. When you let Rebel move a file into a Space's memory folder, the file now moves (before, it could stay where it was). And an action you approved while Rebel was still busy with something else now runs when that finishes, rather than quietly going missing. Deleting real content, overwriting a file with no copy kept, or moving something into a Space other people share still asks first, as does anything your [Safety Rules](rebel://settings/safety#safetyRules) say to ask about. Tidy, not reckless.
@@ -34,6 +38,10 @@ What's new in Rebel. We ship fast, so there's always something.
 - **Charts and dashboards, right in the chat** — Ask Rebel to show your numbers as a chart, a table or a whole dashboard ("show me these sales figures as a dashboard"), and it draws them in the conversation. Hover over a chart for exact figures; sort and filter a table by clicking its headings or typing in its filter box. Sidebar tabs you've built with Rebel use the same charts, and bars for values below zero now point down, as nature intended.
 
 ### Fixes
+
+- **The phone app shows a new chat's title without being nudged** — At the top of a new chat, the phone app kept saying "New conversation" until you left the chat and came back. Now the real title appears by itself, moments after Rebel's first answer.
+
+- **Helpers bring their own login** — When Rebel hands part of a job to a helper that runs on a different AI service from your main conversation, the helper now uses that service's own account. Before, it tried the sign-in from your main conversation and failed at once. You don't need to do anything.
 
 - **Meetings no longer vanish after a hiccup** — If one of your calendars didn't answer when Rebel looked for changes (a dropped connection, say), its meetings disappeared from Rebel for up to half an hour, though your calendar itself was fine. Now Rebel keeps showing the meetings it already had until it can look again. You don't need to do anything. A dropped connection no longer looks like an empty week.
 
