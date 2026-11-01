@@ -1,6 +1,6 @@
 ---
 name: html-pages-and-dashboards
-description: "For charts, tables or dashboards of figures in the conversation (typed, pasted or just fetched), asked for or not, use rebel_canvas_view; offer to save one the person asked for. Build pages to keep, share, print or open in a browser, or reports from files or several sources."
+description: "Build a page to print or open in a browser, or a report needing a page layout. For charts, tables or dashboards the shared blocks can express, asked for or not, use rebel_canvas_view, and rebel_save_app when the person wants to keep the view."
 last_updated: 2026-10-31
 agent_type: main_agent
 ---
@@ -12,10 +12,11 @@ Make a useful visual page to keep, share or print, or a report built from files 
 Save it in their Library and link it so they can open Rebel’s preview. Use their data, not invented figures.
 
 [WHEN TO USE]
-- A page to save, keep, share, print or open in a browser, or a report built from files or several sources, belongs here, including a tracker presented as a page.
+- A page to print or open in a browser, including a tracker presented as a page, or a report needing a page layout beyond the available blocks, belongs here.
+- A chart, table or dashboard the shared blocks can express belongs in `rebel_canvas_view`, asked for or not, whether its data comes from the conversation, files or connectors. When the person wants to keep the view, use `rebel_save_app`. Before creating an app, look for an existing one with the same purpose (Glob **/*.rebelapp). Update an existing app when the person means that app; otherwise save alongside it under a clear name (for example with the period in the name). Offer to save at most once, only for a view the person asked for and will clearly reuse. Never schedule anything unless asked.
 - A sidebar tab that stays current from Rebel’s own meetings, memory or conversations, or keeps state
   (a timer or tracker), is a plugin: read [build-custom-plugin](../../system/build-custom-plugin/SKILL.md).
-- For a chart, table or dashboard of figures already in the conversation (typed, pasted or just fetched), asked for or not, use `rebel_canvas_view`; when the person asked for it, you may offer to save it as a page.
+- This skill saves HTML pages. Do not offer to save an HTML page as an app.
 
 [PROCESS]
 1. Use the available data and clarify only what would materially improve the result.
