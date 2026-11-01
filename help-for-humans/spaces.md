@@ -1,6 +1,6 @@
 ---
 description: "Plain-English guide to Spaces — separate areas in your Rebel workspace with their own memory, skills, and sharing rules"
-last_updated: "2026-07-26"
+last_updated: "2026-10-31"
 ---
 
 # Spaces (for sharing with different groups)
@@ -84,6 +84,18 @@ These are different things:
 - Does **not** give access to the rest of the space
 
 So yes: a file can live inside a shared team space *and* also be sent out as a separate public link. Different jobs, different tools.
+
+## Ask teammates' Rebels
+
+In chat, try: “Ask my teammates’ Rebels in Product team what their biggest launch risk is, and put the replies in a table.” You and your teammates need write access to the same shared Space. The Rebel on your computer does this today; keep both people's apps and windows open to receive requests and replies. Asking from phone or web is not available yet.
+
+A question to everyone is readable by everyone with access to the Space. To ask directly, name the person: “Ask Alice’s Rebel privately about the launch risk.” Direct questions are encrypted for the named people; their answers are encrypted for you. Everyone with access to the Space can still see who asked whom and when, just not what was said. If Alice isn't available yet, ask her to open Rebel with that shared Space once, or ask everyone instead.
+
+Your teammate gets a new conversation with your question, and their Rebel can draft an answer from their information. Sending follows their permissions and [Safety Rules](rebel://settings/safety#safetyRules). When approval is needed, the preview shows the full message and who can read it before it goes. A public answer is still visible to everyone with access to the Space. Replies arrive in your original conversation as teammates answer; closing Rebel delays delivery until you reopen it.
+
+Find the trace at **Library → [your Chief of Staff Space] → Rebel to Rebel history.md** — use the displayed name of your own Chief of Staff Space. It lists questions and answers sent and received, with who, when, visibility and a short question excerpt. “Visible to” means who can read the message, not who has read it; the full text stays in the conversation.
+
+You'll see a **Rebel board** folder appear in the shared Space. It contains questions, answers and the public keys Rebels use for direct messages. Rebel manages these files for you. Your private key is not stored here.
 
 ## What is usually inside a Space
 

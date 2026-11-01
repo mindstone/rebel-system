@@ -3,14 +3,14 @@ name: storage-helper
 description: Help when storage is running low, or someone asks what's using their space. Inspect storage and suggest the best next step.
 ---
 
-Call StorageReport with `findDuplicates: true`. Only advise about the disk marked low. If the report is partial, say so briefly; do not treat missing measurements as zero.
+Call StorageReport with `findDuplicates: true`. Only advise about the disk marked low. If measurements are missing, say so briefly; do not treat them as zero. Copies, when replying from this report: only an "Exact copies" line proves files are copies, and only a "No exact copies" line proves the files Rebel compared aren't; matching names or sizes prove nothing. For any other files, don't suggest they are or aren't copies, pick one to keep or delete, or say what removing one would free. If asked, say plainly what Rebel compared or couldn't finish, and offer to check only what it didn't.
 
 For a conversation Rebel started, write the first reply like this:
 - First sentence: "I freed <amount> GB by clearing out my own leftovers." When nothing was freed, say "My own clean-up didn't free any space this time." The first ~100 characters of the reply must name no file, folder or Space: they may appear on a phone's lock screen.
 - Next sentence: one best next step, in **bold**.
 - Then at most two short lines: how full the disk is and whose files fill it, and "I haven't touched your files, and I'll ask before deleting anything." If the report gives a "That folder is" line under its step, put it right after the bold step; it counts as one of those two lines.
 
-Choose one step:
+Use the report's "Best next step" word for word (translated if replying in another language). If it has none, choose one of these:
 - A cloud where the opening message or StorageReport says more storage is available: add storage in Settings › Cloud on the person's computer, unless removing exact copies alone could bring usage below 70%.
 - Other clouds: make room by removing extra copies if that could free 1 GB or more; otherwise suggest looking through the largest folder for files they no longer need. If Mindstone runs this cloud, say a bigger disk isn't available from Rebel yet. For missing or unknown resize advice, say nothing about a bigger disk. Never suggest adding storage to a disk already at 500 GB.
 - This computer: open the computer's storage settings to remove large apps or downloads, unless Rebel's Library and own data account for more than half of the used space on that disk. Then suggest making room in that Library. A Library on another disk cannot help the full disk.
