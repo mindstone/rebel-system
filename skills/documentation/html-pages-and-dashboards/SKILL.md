@@ -1,7 +1,7 @@
 ---
 name: html-pages-and-dashboards
-description: "For charts, tables or dashboards of figures in the conversation (typed, pasted or just fetched), use rebel_canvas_view; then offer to save. Build pages to keep, share, print or open in a browser, or reports from files or several sources."
-last_updated: 2026-10-28
+description: "For charts, tables or dashboards of figures in the conversation (typed, pasted or just fetched), asked for or not, use rebel_canvas_view; offer to save one the person asked for. Build pages to keep, share, print or open in a browser, or reports from files or several sources."
+last_updated: 2026-10-31
 agent_type: main_agent
 ---
 
@@ -15,7 +15,7 @@ Save it in their Library and link it so they can open Rebel’s preview. Use the
 - A page to save, keep, share, print or open in a browser, or a report built from files or several sources, belongs here, including a tracker presented as a page.
 - A sidebar tab that stays current from Rebel’s own meetings, memory or conversations, or keeps state
   (a timer or tracker), is a plugin: read [build-custom-plugin](../../system/build-custom-plugin/SKILL.md).
-- For a chart, table or dashboard of figures already in the conversation (typed, pasted or just fetched), use `rebel_canvas_view`; then you may offer to save it as a page.
+- For a chart, table or dashboard of figures already in the conversation (typed, pasted or just fetched), asked for or not, use `rebel_canvas_view`; when the person asked for it, you may offer to save it as a page.
 
 [PROCESS]
 1. Use the available data and clarify only what would materially improve the result.
