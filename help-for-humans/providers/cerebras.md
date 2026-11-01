@@ -7,6 +7,8 @@ last_updated: "2026-07-05"
 
 **What it is:** Connect a Cerebras API key for very fast inference of open models.
 
+**While a Mindstone plan is in use:** models from this connection use your plan's allowance first. Here, **in use** means the plan's row in **Your AI accounts** says **In use**. Local services stay on your computer, and company-managed models stay company-paid. Pay-per-use prices apply when this connection pays.
+
 **How to connect:** In [Settings → Agent & Voice](rebel://settings/agents), choose **Add an account or key** → **Paste an API key**, choose **Cerebras**, and paste your API key. Then choose **Add model** on the Cerebras row under **Your API keys**.
 
 **Useful links:**
