@@ -41,6 +41,10 @@ What's new in Rebel. We ship fast, so there's always something.
 
 - **Change your model settings at any time** — In Settings, you can now change **Rebel can pick it**, **Second opinions** and the fallback for long conversations while a conversation is running. They used to stay greyed out until it finished, which is a long wait if it's stuck.
 
+- **One allowance warning, with one number** — If you'd already used over 90% of your Mindstone allowance when you signed in to Rebel, you got two warnings at once, one saying 75% and one saying 90%. Now you get just the 90% one. If you reach 75% first, you still get that warning when you do. Nothing for you to do. One number is plenty.
+
+- **The phone app shows a new chat's title without being nudged** — At the top of a new chat, the phone app kept saying "New conversation" until you left the chat and came back. Now the real title appears by itself, moments after Rebel's first answer.
+
 - **Helpers bring their own login** — When Rebel hands part of a job to a helper that runs on a different AI service from your main conversation, the helper now uses that service's own account. Before, it tried the sign-in from your main conversation and failed at once. You don't need to do anything.
 
 - **Meetings no longer vanish after a hiccup** — If one of your calendars didn't answer when Rebel looked for changes (a dropped connection, say), its meetings disappeared from Rebel for up to half an hour, though your calendar itself was fine. Now Rebel keeps showing the meetings it already had until it can look again. You don't need to do anything. A dropped connection no longer looks like an empty week.
