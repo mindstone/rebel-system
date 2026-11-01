@@ -69,6 +69,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **Custom connectors get to the point** — When you add one, Rebel tries it and starts sign-in if needed, instead of quizzing you first. If sign-in can't start, it says so rather than leaving you waiting.
+
 - **You asked for it, so it doesn't ask you** — Rebel sometimes stopped to ask your permission for something you'd already asked it to do, only because it guessed it might not work, such as making a video you'd asked for. Now it just goes ahead, and if something doesn't work, Rebel sees the error and can try to fix it. It still checks with you first when an action could send or share something with people you didn't mean, expose something private, or go against what you said.
 
 - **When Chrome isn't there** — Rebel can use Chrome on your computer to browse websites for you. If Chrome isn't installed, Rebel now says so in its reply instead of hunting around your computer for it, and gets on with the rest of the job. Install Chrome and ask again if you want the browsing done too.
