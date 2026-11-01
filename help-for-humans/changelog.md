@@ -57,6 +57,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **You asked for it, so it doesn't ask you** — Rebel sometimes stopped to ask your permission for something you'd already asked it to do, only because it guessed it might not work, such as making a video you'd asked for. Now it just goes ahead, and if something doesn't work, Rebel sees the error and can try to fix it. It still checks with you first when an action could send or share something with people you didn't mean, expose something private, or go against what you said.
+
 - **The model list stops saying it failed while it's right there** — If you use your own Anthropic key, Settings > Models said Rebel couldn't load your list of AI models, even while it showed them, and it left out models that are new on your account. Now that warning appears only when no models are showing, and new models on your account are listed again. Nothing for you to do.
 
 - **Deleting a provider no longer fibs about it** — If you deleted an AI provider you'd added while Rebel still used it for some work, Settings kept naming its model and saying you paid that provider, while your messages quietly went elsewhere. Now Rebel tells you which work will change before you delete it, and afterwards shows what really runs and who pays. Models you added from it stay in your list until you connect them to another account.
