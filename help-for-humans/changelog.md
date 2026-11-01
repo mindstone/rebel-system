@@ -39,7 +39,7 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
-- **One allowance warning, with one number** — If you'd already used over 90% of your Mindstone allowance when you signed in, Rebel showed two warnings at once, one saying 75% and one saying 90%. Now you see just the 90% one. One number is plenty.
+- **One allowance warning, with one number** — If you'd already used over 90% of your Mindstone allowance when you signed in to Rebel, you got two warnings at once, one saying 75% and one saying 90%. Now you get just the 90% one. If you reach 75% first, you still get that warning when you do. Nothing for you to do. One number is plenty.
 
 - **The phone app shows a new chat's title without being nudged** — At the top of a new chat, the phone app kept saying "New conversation" until you left the chat and came back. Now the real title appears by itself, moments after Rebel's first answer.
 
