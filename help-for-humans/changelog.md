@@ -12,6 +12,10 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Improvements
 
+- **Automation questions, easier to find** — When a scheduled automation running on your computer asks a question, it now appears in the notification bell as it arrives. Click it to go to the question; answering clears the notification. Less hide-and-seek.
+
+- **Long meeting transcripts get read to the end** — Before saving a long meeting transcript or a note from an automation, Rebel now checks all of it against your safety rules, not just the opening stretch. If something later on breaks a rule, Rebel holds the save for your OK. Automations also stop waiting for your approval just because an edit is long, unless one single change in it is very large.
+
 - **Long notes save to your private Space without a fuss** — Before saving a note, Rebel checks it against your rules. For a long note it now reads the whole note instead of only the first part, so it no longer stops to ask you just because it couldn't see the end. And a note that only names a key, like `$CRM_API_KEY`, without the key itself, no longer looks like a password. Real passwords and keys still stop the save, and anything your [Safety Rules](rebel://settings/safety#safetyRules) say to ask about still asks. Nothing for you to do. Reading to the end: underrated.
 
 - **Downloaded means ready** — Downloaded updates on your Mac now stay ready to install when you fully quit Rebel. Downloading was meant to be the first step, not the last.
@@ -56,6 +60,11 @@ What's new in Rebel. We ship fast, so there's always something.
 - **Charts and dashboards, right in the chat** — When an answer is a trend, a comparison, a breakdown or a long list of figures, Rebel now draws it as a chart, a table or a whole dashboard in the conversation, with the gist in a sentence or two, whether you asked or not. You can still ask outright ("show me these sales figures as a dashboard"), or ask for plain text if you'd rather. On your computer, hover over a chart for exact figures; sort and filter a table by clicking its headings or typing in its filter box. On your phone, on the web and in shared links you get every figure written out in full, a line per row. Sidebar tabs you've built with Rebel use the same charts, and bars for values below zero now point down, as nature intended.
 
 ### Fixes
+
+- **Company model costs, now visible** — Settings → Usage now shows costs for new turns on models your organization provides. Your organization still covers them; this isn't a new charge to you. Earlier missing costs stay missing. Better receipts, same bill payer.
+<!-- detail: Company-managed Fireworks pricing now accepts the documented default serving-mode name. Usage groups organization-paid costs separately from out-of-pocket costs. -->
+
+- **Finished means finished** — A conversation that finished while you were looking elsewhere no longer reopens looking busy, so your next message goes straight out instead of waiting about 15 seconds in line. The reply was done; now the waiting is too.
 
 - **The model list stops saying it failed while it's right there** — If you use your own Anthropic key, Settings > Models said Rebel couldn't load your list of AI models, even while it showed them, and it left out models that are new on your account. Now that warning appears only when no models are showing, and new models on your account are listed again. Nothing for you to do.
 
