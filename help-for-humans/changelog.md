@@ -8,6 +8,12 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Improvements
 
+- **One meeting, one place to look** — Open **Library** → **Chief of Staff** for a file named after the meeting, with its prep, your notes and a transcript link. Inside, **Actions from this meeting** links to the action items on Rebel's **Actions** page, each with a link back to the file. The meeting may have wandered; its paperwork stays together.
+
+- **Long notes save to your private Space without a fuss** — Before saving a note, Rebel checks it against your rules. For a long note it now reads the whole note instead of only the first part, so it no longer stops to ask you just because it couldn't see the end. And a note that only names a key, like `$CRM_API_KEY`, without the key itself, no longer looks like a password. Real passwords and keys still stop the save, and anything your [Safety Rules](rebel://settings/safety#safetyRules) say to ask about still asks. Nothing for you to do. Reading to the end: underrated.
+
+- **A little breathing room** — When storage runs low, Rebel clears its own leftovers and starts a conversation with one suggestion. Your files stay your call.
+
 - **Fewer questions when tidying loses nothing** — When Rebel can check that a tidying step loses nothing, it now usually goes ahead without asking: removing an empty folder or an empty file in a Space, deleting a duplicate when an identical copy sits beside it in the same folder, or moving a file to another place in the same Space. It also asks less often about a step that handles only one part of a bigger job (say, one month of a year's calendar) or might not work first time. When you let Rebel move a file into a Space's memory folder, the file now moves (before, it could stay where it was). And an action you approved while Rebel was still busy with something else now runs when that finishes, rather than quietly going missing. Deleting real content, overwriting a file with no copy kept, or moving something into a Space other people share still asks first, as does anything your [Safety Rules](rebel://settings/safety#safetyRules) say to ask about. Tidy, not reckless.
 
 - **Your Browser does a lot more, and stays out of your way** — Your Browser, the Rebel extension in your own browser, now works in its own tabs, grouped under **Rebel** in the background. It never switches you to them or brings your browser forward, and leaves your tabs alone. It can open pages, type, pick from drop-downs, press keys, wait for pages to load and take screenshots, as well as read, fill in forms and click. When it needs you, for a sign-in say, it asks in the conversation and waits for you to choose **Done** there; if you click or type in its tab while it works, it waits until you stop. It has access to all websites as soon as it's installed, with no site-by-site asking, and your [Safety Rules](rebel://settings/safety#safetyRules) still decide what it does on each. Rebel's Browser now works without showing a window when you first connect it, and Shared Browser Tab bows out, though it keeps working if you already use it. A browser with manners, finally.
@@ -34,6 +40,8 @@ What's new in Rebel. We ship fast, so there's always something.
 ### Fixes
 
 - **Change your model settings at any time** — In Settings, you can now change **Rebel can pick it**, **Second opinions** and the fallback for long conversations while a conversation is running. They used to stay greyed out until it finished, which is a long wait if it's stuck.
+
+- **Helpers bring their own login** — When Rebel hands part of a job to a helper that runs on a different AI service from your main conversation, the helper now uses that service's own account. Before, it tried the sign-in from your main conversation and failed at once. You don't need to do anything.
 
 - **Meetings no longer vanish after a hiccup** — If one of your calendars didn't answer when Rebel looked for changes (a dropped connection, say), its meetings disappeared from Rebel for up to half an hour, though your calendar itself was fine. Now Rebel keeps showing the meetings it already had until it can look again. You don't need to do anything. A dropped connection no longer looks like an empty week.
 
