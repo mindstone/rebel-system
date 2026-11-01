@@ -66,6 +66,6 @@ Change or clear the **Quick answer shortcut** in **Settings → Account & Prefer
 The voice activation hotkey can be customized:
 
 1. Open **Settings** (gear icon)
-2. Go to **Agent & Voice → Voice**
+2. Go to **Agent & Voice → Voice & Audio**
 3. Click **Global voice activation hotkey**
 4. Press your preferred key combination
