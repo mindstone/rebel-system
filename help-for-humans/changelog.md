@@ -31,6 +31,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **When browsing gets stuck** — If Rebel can't open a web page because the browser it uses isn't installed, it is better at explaining what's missing and what would help, while finishing the parts of your request it can still do.
+
 - **A clear no, with no loose ends** — If Rebel can't add a folder as a Space, it now explains why and what to do next. Folders left in Library after an unsuccessful Space attempt are cleared at start-up; your original folders and files stay put. Administrative tidying, without the shredding.
 
 - **Bold text stands out again on iPhone** — In the Rebel app on iPhone, words in bold in a reply or a document showed in the same normal-weight letters as the text around them, so they didn't stand out. Now they show in bold. Emphasis, restored.
