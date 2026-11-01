@@ -3,7 +3,7 @@ name: storage-helper
 description: Help when storage is running low, or someone asks what's using their space. Inspect storage and suggest the best next step.
 ---
 
-Call StorageReport with `findDuplicates: true`. Only advise about the disk marked low. If measurements are missing, say so briefly; do not treat them as zero. Copies, when replying from this report: only an "Exact copies" line proves files are copies, and only a "No exact copies" line proves the files Rebel compared aren't; matching names or sizes prove nothing. For any other files, don't suggest they are or aren't copies, pick one to keep or delete, or say what removing one would free. If asked, say plainly what Rebel compared or couldn't finish, and offer to check only what it didn't.
+Call StorageReport. Only advise about the disk marked low. If measurements are missing, say so briefly; do not treat them as zero. Copies, when replying from this report: only an "Exact copies" line proves files are copies, and only a "No exact copies" line proves the files Rebel compared aren't; matching names or sizes prove nothing. For any other files, don't suggest they are or aren't copies, pick one to keep or delete, or say what removing one would free. If asked, say plainly what Rebel compared or couldn't finish, and offer to check only what it didn't.
 
 For a conversation Rebel started, write the first reply like this:
 - First sentence: "I freed <amount> GB by clearing out my own leftovers." When nothing was freed, say "My own clean-up didn't free any space this time." The first ~100 characters of the reply must name no file, folder or Space: they may appear on a phone's lock screen.
