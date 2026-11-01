@@ -31,7 +31,7 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
-- **When browsing gets stuck** — If Rebel can't open a web page because the browser it uses isn't installed, it is better at explaining what's missing and what would help, while finishing the parts of your request it can still do.
+- **When Chrome isn't there** — Some tasks let Rebel control Chrome on your computer. If Chrome isn't installed, Rebel no longer searches your computer for it or tries to install it on its own. It tells you in its reply that Chrome is missing and still finishes the rest of your request; install Chrome if you want those parts done too.
 
 - **A clear no, with no loose ends** — If Rebel can't add a folder as a Space, it now explains why and what to do next. Folders left in Library after an unsuccessful Space attempt are cleared at start-up; your original folders and files stay put. Administrative tidying, without the shredding.
 
