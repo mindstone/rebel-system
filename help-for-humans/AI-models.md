@@ -1,6 +1,6 @@
 ---
 description: "How to power Rebel's AI — a flat-fee Mindstone plan or bring your own (ChatGPT Pro, OpenRouter, Anthropic) — then choose Planner, Main work, and Behind the Scenes models, why one task can use several models, and what happens when you pick a model outside your plan tier"
-last_updated: "2026-09-04"
+last_updated: "2026-10-31"
 ---
 
 # AI models
@@ -12,9 +12,11 @@ Rebel gives you two ways to power its AI:
 
 You only need **one** of these to get started.
 
-In onboarding and in [Settings → Agent & Voice → Intelligence](rebel://settings/agents), you pick how you want to power Rebel, then choose which models Rebel should use for **Planner**, **Main work**, and **Behind the Scenes**.
+In onboarding and in [Settings → Agent & Voice](rebel://settings/agents), you pick how you want to power Rebel, then choose which models Rebel should use for **Planner**, **Main work**, and **Behind the Scenes**. In Settings, model choices are under **Customise**.
 
 **You're not locked to one model or one provider.** Connect more than one and switch whenever you like — and through OpenRouter alone you can reach Claude, GPT, Gemini, DeepSeek, Grok, and others on a single account. You can also run models on your own machine (e.g. via Ollama or LM Studio) or point Rebel at a company gateway — see [Custom models and gateways](rebel://library/rebel-system%2Fhelp-for-humans%2Fcustom-models-and-gateways.md). And with [Council Mode](rebel://library/rebel-system%2Fhelp-for-humans%2Fmulti-model-council-mode.md) you can put a question to several models at once.
+
+In **Settings → Agent & Voice**, **Your AI accounts** shows sign-ins, plans and your Anthropic key for everyday work. Other keys appear in **Your API keys**, where **Add model** lets you add models from a key. That card becomes **Your API keys and connections** when it includes TrustedRouter or your own AI service. Use **Add an account or key** below the cards for either kind. Each row explains what it does and who pays.
 
 ## The providers, one by one
 
@@ -33,9 +35,9 @@ In onboarding and in [Settings → Agent & Voice → Intelligence](rebel://setti
 
 ## Backup connections
 
-In **[Settings → Agent & Voice → Backup connections](rebel://settings/agents)**, you can add a backup connection. If your main connection is busy or hitting its limit, Rebel automatically switches to the backup — no interruption, no extra setup mid-conversation.
+In **[Settings → Agent & Voice → Your AI accounts](rebel://settings/agents#backupConnections)**, choose **Use as Backup** for an account, then put your Backups in the order you want Rebel to try them. If your main account is busy or hits its limit, Rebel automatically switches to the next Backup. There is one Backup list in this card; the separate keys card has none.
 
-If you add no backup, nothing changes: Rebel won't switch connections on its own, and there's no extra spend. A Mindstone plan isn't used as an automatic backup.
+If you add no Backup, Rebel won't switch accounts on its own, and there's no extra spend. A Mindstone plan becomes a Backup only if you choose **Use as Backup** for it.
 
 ## See also
 
@@ -49,7 +51,7 @@ If you add no backup, nothing changes: Rebel won't switch connections on its own
 
 The simplest path: pick a flat-fee **Mindstone plan** and Mindstone covers the AI bill — no keys, no separate accounts. Two plans (**Dash** and **Rogue**) share the same monthly usage allowance and differ in the calibre of models you get.
 
-Subscribe from onboarding's **"Let Mindstone handle it"** option, or in [Settings → Agent & Voice → Intelligence](rebel://settings/agents). Full details — plans, allowance, billing, upgrades, and cancellation — are in [Mindstone plans](rebel://library/rebel-system%2Fhelp-for-humans%2Fmindstone-plans-and-billing.md).
+Subscribe from onboarding's **"Let Mindstone handle it"** option, or in [Settings → Agent & Voice](rebel://settings/agents). Full details — plans, allowance, billing, upgrades, and cancellation — are in [Mindstone plans](rebel://library/rebel-system%2Fhelp-for-humans%2Fmindstone-plans-and-billing.md).
 
 ### Picking a model outside your plan
 
@@ -86,7 +88,7 @@ One connection is enough. More than one is optional.
 
 If you already have ChatGPT Pro, this is the quickest route.
 
-1. Open **Settings → Agent & Voice → Intelligence**
+1. Open **Settings → Agent & Voice**
 2. On the **ChatGPT Pro** card, click **Connect**
 3. Sign in with your OpenAI account
 4. Once connected, click the card if you want ChatGPT Pro to be your active provider
@@ -97,7 +99,7 @@ Good fit if you want a simple setup and already live in ChatGPT anyway.
 
 OpenRouter is a first-class option in Rebel, not a workaround.
 
-1. Open **Settings → Agent & Voice → Intelligence**
+1. Open **Settings → Agent & Voice**
 2. On the **OpenRouter** card, click **Connect**
 3. Finish the sign-in flow
 4. Add credits to your OpenRouter account
@@ -109,7 +111,7 @@ Good fit if you want one billing account for multiple model families. You can al
 
 Use Anthropic if you want direct Claude access.
 
-1. Open **Settings → Agent & Voice → Intelligence**
+1. Open **Settings → Agent & Voice**
 2. On the **Anthropic** card, click **Add API Key**
 3. Paste your Anthropic key
 4. Click the card to make Anthropic your active provider if needed
@@ -172,7 +174,7 @@ When you pick which model to use for each role, you see a **unified list** — a
 
 Each role shows its **real status** at a glance. If a model is genuinely ready to use, it says so; if it would fail or still needs setup, it tells you that honestly rather than giving a false all-clear (or warning you about a model that's actually running fine). The fallback role — the model that steps in for very long conversations — gets its own **Pick fallback** nudge so it doesn't quietly go unset.
 
-You manage all of this in **Settings → Agent & Voice → Intelligence** under the Model team section. Each model row has a chip-toggle to mark it as part of Council or not — no checkbox, no wizard.
+You manage all of this in **Settings → Agent & Voice → Customise** under the Model team section. Each model row has a chip-toggle to mark it as part of Council or not — no checkbox, no wizard.
 
 ### Why one task can use several models
 
@@ -198,7 +200,7 @@ Note that the feature which adds *more* model variety — **Smart model picking*
 
 **Smart model picking** lets Rebel choose which of your models runs each step of a job, rather than using one model for everything — a fast, cheap model for routine steps, a stronger one for the hard thinking, without you having to decide.
 
-It's an **experimental feature and off by default.** Turn it on in **Settings → Agent & Voice → Intelligence**, under the Model team section: flip the **Smart model picking** toggle, then mark each model you want in the pool with its **Included in Smart picking** chip. You need at least two eligible models before it does anything.
+It's an **experimental feature and off by default.** Turn it on in **Settings → Agent & Voice → Customise**, under the Model team section: flip the **Smart model picking** toggle, then mark each model you want in the pool with its **Included in Smart picking** chip. You need at least two eligible models before it does anything.
 
 A few things worth knowing:
 
@@ -261,7 +263,7 @@ If you want to go further, Rebel also lets you add:
 - custom model profiles
 - local or specialised models
 
-These appear in the more advanced parts of **Settings → Agent & Voice → Intelligence**. They're optional — useful if you like tinkering, unnecessary if you don't.
+These appear in **Settings → Agent & Voice**, with model profiles under **Customise**. They're optional — useful if you like tinkering, unnecessary if you don't.
 
 Connecting your own model or a company gateway? See [Custom models and gateways](rebel://library/rebel-system%2Fhelp-for-humans%2Fcustom-models-and-gateways.md) — it covers setup, what the **Test** button checks, and how Rebel handles gateways that can't take certain settings.
 
@@ -273,7 +275,7 @@ That is especially handy if you use one model for **Planner** and another for **
 
 ## When your key is rejected
 
-If a provider turns down your credentials, Rebel names the **specific provider** and says the **saved** key was rejected — not that you mistyped it this turn. That matters: re-entering the same key won't help if it's been revoked or expired. The error points you to **Update key** and the right field in [Settings → Agent & Voice → Intelligence](rebel://settings/agents).
+If a provider turns down your credentials, Rebel names the **specific provider** and says the **saved** key was rejected — not that you mistyped it this turn. That matters: re-entering the same key won't help if it's been revoked or expired. The error points you to **Update key** and the right field in [Settings → Agent & Voice](rebel://settings/agents).
 
 If the bad key belongs to an automation's provider, scheduled runs may pause until you fix it — see [Automations](rebel://library/rebel-system%2Fhelp-for-humans%2Fautomations.md).
 
