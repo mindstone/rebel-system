@@ -12,6 +12,10 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Improvements
 
+- **Email addresses with somewhere to go** — Tap or click an email address in a reply and a new email opens in your mail app, on your phone and your computer. On the phone, call and text-message links work too. Copy and paste can have the afternoon off.
+
+- **Fewer introductions to the same tools** — Rebel remembers connector tools used earlier in a conversation, so follow-up requests spend less time looking them up again.
+
 - **Automation questions, easier to find** — When a scheduled automation running on your computer asks a question, it now appears in the notification bell as it arrives. Click it to go to the question; answering clears the notification. Less hide-and-seek.
 
 - **Long meeting transcripts get read to the end** — Before saving a long meeting transcript or a note from an automation, Rebel now checks all of it against your safety rules, not just the opening stretch. If something later on breaks a rule, Rebel holds the save for your OK. Automations also stop waiting for your approval just because an edit is long, unless one single change in it is very large.
@@ -61,14 +65,18 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **When Chrome isn't there** — Rebel can use Chrome on your computer to browse websites for you. If Chrome isn't installed, Rebel now says so in its reply instead of hunting around your computer for it, and gets on with the rest of the job. Install Chrome and ask again if you want the browsing done too.
+
 - **Company model costs, now visible** — Settings → Usage now shows costs for new turns on models your organization provides. Your organization still covers them; this isn't a new charge to you. Earlier missing costs stay missing. Better receipts, same bill payer.
 <!-- detail: Company-managed Fireworks pricing now accepts the documented default serving-mode name. Usage groups organization-paid costs separately from out-of-pocket costs. -->
 
-- **Finished means finished** — A conversation that finished while you were looking elsewhere no longer reopens looking busy, so your next message goes straight out instead of waiting about 15 seconds in line. The reply was done; now the waiting is too.
+- **Back to a reply that already finished** — If Rebel finished a reply while you were in another conversation, going back could still show it as busy replying, and your next message sat in the queue for about 15 seconds before Rebel got it. Now the conversation shows the reply as done and your message goes straight to Rebel. Nothing for you to do; no more waiting on a reply that was already finished.
 
 - **The model list stops saying it failed while it's right there** — If you use your own Anthropic key, Settings > Models said Rebel couldn't load your list of AI models, even while it showed them, and it left out models that are new on your account. Now that warning appears only when no models are showing, and new models on your account are listed again. Nothing for you to do.
 
 - **Deleting a provider no longer fibs about it** — If you deleted an AI provider you'd added while Rebel still used it for some work, Settings kept naming its model and saying you paid that provider, while your messages quietly went elsewhere. Now Rebel tells you which work will change before you delete it, and afterwards shows what really runs and who pays. Models you added from it stay in your list until you connect them to another account.
+
+- **No more false alarm about saving** — Every time you opened some conversations, a notice said a change hadn't saved, even though your work was already saved and nothing was lost. Now that notice goes away by itself the next time you open the conversation. If a change really hasn't saved, Rebel still keeps it safe and the notice stays. Either way, nothing for you to do here. An alarm should have something to be alarmed about.
 
 - **File names in full** — In the Rebel app on your phone, long file names in a reply could split in the middle of a word, and links to files hid part of the name behind a "…". Now long names move to the next line at a sensible spot, and links show the whole name. Same files, fewer mysteries.
 
@@ -93,6 +101,8 @@ What's new in Rebel. We ship fast, so there's always something.
 - **Old Actions look before they close** — Rebel no longer closes an old Action by itself while it might still be running somewhere else. If Rebel can't check, the Action stays open until you mark it done.
 
 - **Meetings no longer vanish after a hiccup** — If one of your calendars didn't answer when Rebel looked for changes (a dropped connection, say), its meetings disappeared from Rebel for up to half an hour, though your calendar itself was fine. Now Rebel keeps showing the meetings it already had until it can look again. You don't need to do anything. A dropped connection no longer looks like an empty week.
+
+- **Continue now says what's missing** — If setup can't go further, the reason now appears right beside Continue, and a provider you've just added stays listed as saved. A button that ignores you is a poor way to start a relationship.
 
 - **New connectors don't wait their turn** — Adding a connector while a chat is replying used to park it until that reply finished, sometimes for minutes. Now it's ready within seconds and the reply carries on. The few changes that still have to wait (removing or changing a connector) say they'll apply by themselves and name the chat they're waiting for. Less queueing, more doing.
 
