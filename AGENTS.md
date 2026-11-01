@@ -189,10 +189,10 @@ use_tool(
 - `tool_id` = the specific tool — **never guess or fabricate tool IDs or argument names.** IDs are often prefixed (e.g., `Slack-acme__post_slack_message`) and argument names vary between tools (e.g., `max_results` in one package vs `maxResults` in another). Getting these wrong wastes a turn. Copy names exactly from the `get_tool_details` output, including casing and underscores.
 - **Tool discovery flow — follow this sequence for any new tool:**
   1. `search_tools(query="what you want to do")` — **start here.** Semantic search across all connected tools; returns matching tools with descriptions and argument signatures. Fastest way to find the right tool.
-  2. `get_tool_details(tool_ids=["PackageName__tool_name"])` — **required before first `use_tool` for any tool.** Returns the full parameter schema with exact argument names, types, and constraints. Without this, you will get argument names wrong.
+  2. `get_tool_details(tool_ids=["PackageName__tool_name"])` — **required before the first `use_tool` of a tool in a conversation.** Returns the full parameter schema with exact argument names, types, and constraints. Without this, you will get argument names wrong. A tool listed in `<prior_turns>` as already called successfully is not a first use: call it directly.
   3. `use_tool(package_id="...", tool_id="...", args={...})` — execute the tool using argument names exactly as shown in the schema.
   - _Fallback:_ If `search_tools` doesn't find what you need, use `list_tool_packages()` then `list_tools(package_id="...")` to browse manually.
-  - ***CRITICAL* — Never skip step 2.** Tool argument names vary between packages and are not guessable (e.g., `max_results` vs `maxResults` vs `limit`). Calling `use_tool` without first reading the schema via `get_tool_details` will cause validation failures and waste turns. If a validation error occurs, the error response will include the correct schema — use it to fix your arguments.
+  - ***CRITICAL* — Never skip step 2 for a new tool.** Tool argument names vary between packages and are not guessable (e.g., `max_results` vs `maxResults` vs `limit`). Calling `use_tool` without first reading the schema via `get_tool_details` will cause validation failures and waste turns. If a validation error occurs, the error response will include the correct schema — use it to fix your arguments.
 - **Call multiple tools in parallel** when their inputs are independent — this reduces round-trips and speeds up task completion.
 
 <frequent_mcp_tools>
