@@ -39,6 +39,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **Change your model settings at any time** — In Settings, you can now change **Rebel can pick it**, **Second opinions** and the fallback for long conversations while a conversation is running. They used to stay greyed out until it finished, which is a long wait if it's stuck.
+
 - **One allowance warning, with one number** — If you'd already used over 90% of your Mindstone allowance when you signed in to Rebel, you got two warnings at once, one saying 75% and one saying 90%. Now you get just the 90% one. If you reach 75% first, you still get that warning when you do. Nothing for you to do. One number is plenty.
 
 - **Attachments no longer go missing quietly** — Rebel sometimes passes a request to a different AI model. If that model couldn't take in everything, a file you'd attached could be left out of the reply without a word. Now Rebel goes back by itself to the model it started with, which can take the file. If your file is still too large, you see a note saying so, asking for a smaller file or the part you need. Silence was never golden.
