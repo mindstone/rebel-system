@@ -7,7 +7,9 @@ last_updated: "2026-07-05"
 
 **What it is:** Connect a Together AI API key to use fast, hosted open-source models (Llama, DeepSeek, GPT-OSS and more).
 
-**How to connect:** In [Settings → Agent & Voice → Intelligence](rebel://settings/agents), add a model, choose **Together AI**, and paste your API key.
+**While a Mindstone plan is in use:** models from this connection use your plan's allowance first. Here, **in use** means the plan's row in **Your AI accounts** says **In use**. Local services stay on your computer, and company-managed models stay company-paid. Pay-per-use prices apply when this connection pays.
+
+**How to connect:** In [Settings → Agent & Voice](rebel://settings/agents), choose **Add an account or key** → **Paste an API key**, choose **Together AI**, and paste your API key. Then choose **Add model** on the Together AI row under **Your API keys**.
 
 **Useful links:**
 - [Create a Together AI API key](https://api.together.xyz/settings/api-keys)
