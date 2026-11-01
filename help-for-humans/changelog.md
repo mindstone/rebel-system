@@ -10,6 +10,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 - **One meeting, one place to look** — Open **Library** → **Chief of Staff** for a file named after the meeting, with its prep, your notes and a transcript link. Inside, **Actions from this meeting** links to the action items on Rebel's **Actions** page, each with a link back to the file. The meeting may have wandered; its paperwork stays together.
 
+- **Long automated saves get read to the end** — When an automation or a meeting saves something long, Rebel now checks all of it against your rules, in pieces, not just the opening stretch. Nothing new to approve, unless something late in the save really does break a rule. Long automated edits also stop pausing just for being long, though one single enormous change still asks first.
+
 - **Long notes save to your private Space without a fuss** — Before saving a note, Rebel checks it against your rules. For a long note it now reads the whole note instead of only the first part, so it no longer stops to ask you just because it couldn't see the end. And a note that only names a key, like `$CRM_API_KEY`, without the key itself, no longer looks like a password. Real passwords and keys still stop the save, and anything your [Safety Rules](rebel://settings/safety#safetyRules) say to ask about still asks. Nothing for you to do. Reading to the end: underrated.
 
 - **A little breathing room** — When storage runs low, Rebel clears its own leftovers and starts a conversation with one suggestion. Your files stay your call.
