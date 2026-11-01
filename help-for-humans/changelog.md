@@ -12,6 +12,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Improvements
 
+- **Fewer questions when Rebel splits up a big job** — For a big job, like going through a year of your calendar, Rebel sometimes hands each part to a helper: a second copy of itself that does one quarter, for example. Before each step, Rebel's safety check now knows which part that helper was given, so a helper reading its own quarter, or saving its notes along the way, no longer stops to ask you just because it isn't doing the whole year. Anything you didn't ask for, and anything your [Safety Rules](rebel://settings/safety#safetyRules) say to ask about, still asks you first. Nothing for you to do. Delegation, now with less paperwork.
+
 - **Automation questions, easier to find** — When a scheduled automation running on your computer asks a question, it now appears in the notification bell as it arrives. Click it to go to the question; answering clears the notification. Less hide-and-seek.
 
 - **Long meeting transcripts get read to the end** — Before saving a long meeting transcript or a note from an automation, Rebel now checks all of it against your safety rules, not just the opening stretch. If something later on breaks a rule, Rebel holds the save for your OK. Automations also stop waiting for your approval just because an edit is long, unless one single change in it is very large.
