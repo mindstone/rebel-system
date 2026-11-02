@@ -14,6 +14,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Improvements
 
+- **Email addresses with somewhere to go** — Tap or click an email address in a reply and a new email opens in your mail app, on your phone and your computer. On the phone, call and text-message links work too. Copy and paste can have the afternoon off.
+
 - **No more microphone nagging** — If you skipped voice when you set up Rebel, it no longer shows a microphone notice every time it opens. The first time you use voice, Rebel asks for the microphone. If you've turned the microphone off, or Rebel can't reach your Library folder, you still get a notice. Quiet is allowed.
 
 - **Automation questions, easier to find** — When a scheduled automation running on your computer asks a question, it now appears in the notification bell as it arrives. Click it to go to the question; answering clears the notification. Less hide-and-seek.
@@ -64,6 +66,8 @@ What's new in Rebel. We ship fast, so there's always something.
 - **Charts and dashboards, right in the chat** — When an answer is a trend, a comparison, a breakdown or a long list of figures, Rebel now draws it as a chart, a table or a whole dashboard in the conversation, with the gist in a sentence or two, whether you asked or not. You can still ask outright ("show me these sales figures as a dashboard"), or ask for plain text if you'd rather. On your computer, hover over a chart for exact figures; sort and filter a table by clicking its headings or typing in its filter box. On your phone, on the web and in shared links you get every figure written out in full, a line per row. Sidebar tabs you've built with Rebel use the same charts, and bars for values below zero now point down, as nature intended.
 
 ### Fixes
+
+- **You asked for it, so it doesn't ask you** — Rebel sometimes stopped to ask your permission for something you'd already asked it to do, only because it guessed it might not work, such as making a video you'd asked for. Now it just goes ahead, and if something doesn't work, Rebel sees the error and can try to fix it. It still checks with you first when an action could send or share something with people you didn't mean, expose something private, or go against what you said.
 
 - **Company model costs, now visible** — Settings → Usage now shows costs for new turns on models your organization provides. Your organization still covers them; this isn't a new charge to you. Earlier missing costs stay missing. Better receipts, same bill payer.
 <!-- detail: Company-managed Fireworks pricing now accepts the documented default serving-mode name. Usage groups organization-paid costs separately from out-of-pocket costs. -->
