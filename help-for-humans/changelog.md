@@ -18,6 +18,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Improvements
 
+- **Clearer step lists** — While Rebel works on a request, **Details** lists what it's aiming for and each step. Those steps now read like everyday to-dos, such as "Read your Q3 plan", instead of notes Rebel wrote for itself. Only the wording changed; Rebel does the same work.
+
 - **Email addresses with somewhere to go** — Tap or click an email address in a reply and a new email opens in your mail app, on your phone and your computer. On the phone, call and text-message links work too. Copy and paste can have the afternoon off.
 
 - **No more microphone nagging** — If you skipped voice when you set up Rebel, it no longer shows a microphone notice every time it opens. The first time you use voice, Rebel asks for the microphone. If you've turned the microphone off, or Rebel can't reach your Library folder, you still get a notice. Quiet is allowed.
