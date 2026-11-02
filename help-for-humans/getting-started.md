@@ -60,7 +60,7 @@ Try something like:
 - "Summarize my calendar for this week" (if calendar is connected)
 - "Help me draft an email about [topic]"
 
-**Tip:** For sensitive work, flip **Privacy Mode** on from the conversation header — Rebel will ask before every tool use and memory write. See [Session Modes](library://rebel-system/help-for-humans/session-modes.md) for the other modes.
+**Tip:** For sensitive work, flip **Private mode** on from the session settings menu in the message box — the notes Rebel would save to memory on its own wait for your OK, and Rebel asks before riskier actions whenever its safety check is unsure. See [Session Modes](library://rebel-system/help-for-humans/session-modes.md) for the other modes.
 
 ---
 

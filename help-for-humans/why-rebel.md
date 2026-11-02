@@ -48,7 +48,7 @@ This guide explains what makes Rebel different and helps you decide when to use 
 
 **Memory safety** — Writes to your memory spaces go through an approval flow, so Rebel won't accidentally overwrite important context.
 
-**Privacy Mode** — Toggle extra caution for sensitive conversations. In Privacy Mode, Rebel asks before every tool use and memory write — nothing happens without your say-so.
+**Privacy Mode** — Toggle extra caution for sensitive conversations. In Privacy Mode, the notes Rebel would save to memory on its own wait for your OK, and riskier actions ask you whenever the safety check can't give a clear answer. Everyday actions like reading and searching still run without asking.
 
 ### Workflow Automation
 
