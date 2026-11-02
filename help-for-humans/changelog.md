@@ -12,10 +12,6 @@ What's new in Rebel. We ship fast, so there's always something.
 
 - **Rebel on your Wear OS watch** — The same two buttons, and nothing else, on Wear OS watches. It signs in through Rebel on your Android phone, so sign in there first. To install it, open the **Play Store** on your watch and install Rebel.
 
-### Improvements
-
-- **Smart picking reads the price tag** — When you add a model, whether Rebel can pick it for a step now depends on what it costs, not on how it thinks. Opus 5.5 and Sonnet 5.5, which cost less than Opus 5, now start ticked under **Rebel can pick it**; models that cost about twice as much or more to run, like Fable 5.1 and GPT-6 Astra, start unticked, even on a plan, where they use it up faster, and their row under [Your models](rebel://settings/agents#yourModels) now says why. Models you added earlier keep the tick you gave them, so if you'd like Rebel to pick one, tick it there. Thrifty, not stingy.
-
 ### Fixes
 
 - **Good keys, less suspicion** — Test on an Anthropic model now checks your key the way a chat uses it, so a perfectly good key stops getting called bad.
