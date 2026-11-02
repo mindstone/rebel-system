@@ -186,13 +186,13 @@ use_tool(
 ```
 
 - `package_id` = the connector name (e.g., `GoogleWorkspace-user-example-com`, `Slack`, `Linear`)
-- `tool_id` = the specific tool — **never guess or fabricate tool IDs or argument names.** IDs are often prefixed (e.g., `Slack-acme__post_slack_message`) and argument names vary between tools (e.g., `max_results` in one package vs `maxResults` in another). Getting these wrong wastes a turn. Copy names exactly from the `get_tool_details` output, including casing and underscores.
+- `tool_id` = the specific tool — **never guess or fabricate tool IDs or argument names.** IDs are often prefixed (e.g., `Slack-acme__post_slack_message`) and argument names vary between tools (e.g., `max_results` in one package vs `maxResults` in another). Getting these wrong wastes a turn. Copy names exactly from the `get_tool_details` output or from the signature shown for a listed tool, including casing and underscores.
 - **Tool discovery flow — follow this sequence for any new tool:**
   1. `search_tools(query="what you want to do")` — **start here.** Semantic search across all connected tools; returns matching tools with descriptions and argument signatures. Fastest way to find the right tool.
-  2. `get_tool_details(tool_ids=["PackageName__tool_name"])` — **required before first `use_tool` for any tool.** Returns the full parameter schema with exact argument names, types, and constraints. Without this, you will get argument names wrong.
+  2. `get_tool_details(tool_ids=["PackageName__tool_name"])` — **required once, before the first `use_tool` of a tool, unless the tool is listed in `<prior_turns>` as already called successfully in this conversation** (then call it directly with the names shown there). Returns the full parameter schema with exact argument names, types, and constraints. Without this, you will get argument names wrong.
   3. `use_tool(package_id="...", tool_id="...", args={...})` — execute the tool using argument names exactly as shown in the schema.
   - _Fallback:_ If `search_tools` doesn't find what you need, use `list_tool_packages()` then `list_tools(package_id="...")` to browse manually.
-  - ***CRITICAL* — Never skip step 2.** Tool argument names vary between packages and are not guessable (e.g., `max_results` vs `maxResults` vs `limit`). Calling `use_tool` without first reading the schema via `get_tool_details` will cause validation failures and waste turns. If a validation error occurs, the error response will include the correct schema — use it to fix your arguments.
+  - ***CRITICAL* — Never skip step 2 unless the tool is listed in `<prior_turns>` or you have already read its schema earlier in this turn.** Tool argument names vary between packages and are not guessable (e.g., `max_results` vs `maxResults` vs `limit`). Calling `use_tool` without first reading the schema via `get_tool_details` will cause validation failures and waste turns. If a validation error occurs, the error response will include the correct schema — use it to fix your arguments.
 - **Call multiple tools in parallel** when their inputs are independent — this reduces round-trips and speeds up task completion.
 
 <frequent_mcp_tools>
