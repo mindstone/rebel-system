@@ -1,6 +1,6 @@
 ---
 description: "What Rebel can and can't do without asking you first"
-last_updated: "2026-09-24"
+last_updated: "2026-11-02"
 ---
 
 # Permissions — What Rebel Can Do
@@ -27,6 +27,12 @@ Rebel evaluates each tool action against your Safety Rules — the plain-English
 If you see an approval bar at the bottom of a conversation, Rebel has an action waiting for your review. Click View to open the notification drawer.
 
 For file-related actions, approval cards show the **full file path**. That is intentional: the fastest safety check is usually “Is that the file I think it is?”
+
+## Actions on connected-app cards
+
+Clicking a card's button approves that one action. Requests a card makes in the background use your ordinary Safety Rules and saved permissions, and appear in the notification drawer when a decision is needed. Click **View** in the approval bar at the bottom of the conversation to open the notification drawer. To stop a tool action, use **Block** or turn the tool off in Settings. Your organisation's restrictions still apply.
+
+The separate **Connected app permissions** panel has retired. See [Connected apps and trust](rebel://library/rebel-system%2Fhelp-for-humans%2Fconnected-apps-and-trust.md) for what happens when a card hands a request to approvals.
 
 ## Managing Safety Rules, Saved Permissions, and Memory Permissions
 
