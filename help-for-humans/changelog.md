@@ -8,11 +8,14 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Highlights
 
+- **Shared links, with a date and a point of view** — Shared links now keep a dated, read-only snapshot that draws the charts, tables, tracked changes, mind maps and other views from your conversation; saved apps can share their views too. Choose **Latest result** for your last finished reply, its views and the files you choose, with the request that led to it, or **The whole conversation** for every message so far, with its views. **Update link** replaces the saved copy at the same address; **Stop sharing** ends it. Your audience gets the version you meant to send. A modest ambition, now realised.
+
 - **Rebel can check back later** — Ask Rebel to check a report or reply again later; an hourglass beside the conversation shows when, with Wake now to check sooner and Cancel to stop. Rebel may also arrange one itself when it's waiting on something, and each check-back counts as ordinary usage. It runs with Cloud Continuity, or while Rebel is open on your computer: patience, delegated.
 
 - **Rebel on your Apple Watch** — A watch app with exactly two buttons: **Record meeting** and **Talk to Rebel**. Tap Record meeting and your notes arrive in Rebel afterwards. Tap Talk to Rebel, say what's on your mind, and your words start a new conversation, waiting for you on your phone or computer. The watch signs in through Rebel on your iPhone, and if it can't send yet it keeps your recording and tries again. To install it, update Rebel on your iPhone, open the iPhone's **Watch** app, and tap **Install** next to Rebel under **Available Apps**. Reading replies on a watch screen was never going to end well, so it doesn't try.
 
 - **Rebel on your Wear OS watch** — The same two buttons, and nothing else, on Wear OS watches. It signs in through Rebel on your Android phone, so sign in there first. To install it, open the **Play Store** on your watch and install Rebel.
+- **The notetaker gets a second look** — If an invitation's answer gets lost, Rebel checks whether the notetaker joined and keeps its notes when it finds it. While Rebel can't check, it says so and keeps Stop available. The check never sends another notetaker.
 
 - **A failed step, explained** — Rebel names the reason when it knows why a step failed. When it doesn't, open **Details** to see the error on your computer, phone or browser. A little less mystery in the paperwork.
 
@@ -40,6 +43,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **Safety Rules that turn up by themselves** — When you set up Rebel on another computer and your Safety Rules (your rules for when Rebel should check with you first) can't come over from your Mindstone Cloud straight away, Rebel now keeps trying by itself until they arrive. Nothing for you to do.
+
 - **Automations carry on after a dropped connection** — If your internet connection dropped partway through an automation running on your computer, the automation could stop and show as failed, even after doing most of its work. Now Rebel keeps the work done so far and continues the automation from there by itself; nothing for you to do. Its conversation then ends with the finished answer, not a connection error. If your connection is still down when Rebel continues, the automation stops and shows as failed, as before. Unfinished business, finished.
 
 - **Good keys, less suspicion** — Test on an Anthropic model now checks your key the way a chat uses it, so a perfectly good key stops getting called bad.
@@ -65,8 +70,6 @@ What's new in Rebel. We ship fast, so there's always something.
 - **A finish line is there to be reached** — Rebel now uses its full allowance to keep working toward your finish line. If it stops before confirming it's met, it says so and asks whether to carry on. No quiet exit through the gift shop.
 
 - **Email addresses with somewhere to go** — Tap or click an email address in a reply and a new email opens in your mail app, on your phone and your computer. On the phone, call and text-message links work too. Copy and paste can have the afternoon off.
-
-- **Fewer introductions to the same tools** — Within a conversation, Rebel now remembers how to use the apps you've connected once it has used them, so follow-up requests get going sooner.
 
 - **Automation questions, easier to find** — When a scheduled automation running on your computer asks a question, it now appears in the notification bell as it arrives. Click it to go to the question; answering clears the notification. Less hide-and-seek.
 
@@ -121,6 +124,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **Links in your documents go where they should** — A closing quote, long dash or the Japanese 。 straight after a web address in a Library document no longer gets swept into the link, so clicking it opens the right page. Links already saved with the wrong address stay as they are, in case you meant them.
+
 - **No more false alarm about saving** — Every time you opened some conversations, a notice said a change hadn't saved, even though your work was already saved and nothing was lost. Now that notice goes away by itself the next time you open the conversation. If a change really hasn't saved, Rebel still keeps it safe and the notice stays. Either way, nothing for you to do here. An alarm should have something to be alarmed about.
 
 - **Continue now says what's missing** — If setup can't go further, the reason now appears right beside Continue, and a provider you've just added stays listed as saved. A button that ignores you is a poor way to start a relationship.
@@ -128,6 +133,7 @@ What's new in Rebel. We ship fast, so there's always something.
 - **No vanishing act at the finish** — In the Rebel app on your phone, a reply could disappear for an instant just as it finished, then fade back. It now stays on screen. Rebel has given up the dramatic pause.
 
 - **You asked for it, so it doesn't ask you** — Rebel sometimes stopped to ask your permission for something you'd already asked it to do, only because it guessed it might not work, such as making a video you'd asked for. Now it just goes ahead, and if something doesn't work, Rebel sees the error and can try to fix it. It still checks with you first when an action could send or share something with people you didn't mean, expose something private, or go against what you said.
+- **Send means send** — Clicking Send on a connected app's card now approves that one action. Background tool requests use your usual rules and approvals. Submit on Rebel's own forms goes straight in, and the Connected app permissions section has left Settings. One permission system was plenty.
 
 - **The model list stops saying it failed while it's right there** — If you use your own Anthropic key, Settings > Models said Rebel couldn't load your list of AI models, even while it showed them, and it left out models that are new on your account. Now that warning appears only when no models are showing, and new models on your account are listed again. Nothing for you to do.
 
