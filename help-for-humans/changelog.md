@@ -13,6 +13,7 @@ What's new in Rebel. We ship fast, so there's always something.
 - **Rebel on your Apple Watch** — A watch app with exactly two buttons: **Record meeting** and **Talk to Rebel**. Tap Record meeting and your notes arrive in Rebel afterwards. Tap Talk to Rebel, say what's on your mind, and your words start a new conversation, waiting for you on your phone or computer. The watch signs in through Rebel on your iPhone, and if it can't send yet it keeps your recording and tries again. To install it, update Rebel on your iPhone, open the iPhone's **Watch** app, and tap **Install** next to Rebel under **Available Apps**. Reading replies on a watch screen was never going to end well, so it doesn't try.
 
 - **Rebel on your Wear OS watch** — The same two buttons, and nothing else, on Wear OS watches. It signs in through Rebel on your Android phone, so sign in there first. To install it, open the **Play Store** on your watch and install Rebel.
+- **The notetaker gets a second look** — If an invitation's answer gets lost, Rebel checks whether the notetaker joined and keeps its notes when it finds it. While Rebel can't check, it says so and keeps Stop available. The check never sends another notetaker.
 
 - **A failed step, explained** — Rebel names the reason when it knows why a step failed. When it doesn't, open **Details** to see the error on your computer, phone or browser. A little less mystery in the paperwork.
 
