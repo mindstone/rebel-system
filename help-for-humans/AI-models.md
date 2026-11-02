@@ -1,6 +1,6 @@
 ---
 description: "How to power Rebel's AI — a flat-fee Mindstone plan or bring your own (ChatGPT Pro, OpenRouter, Anthropic) — then choose Planner, Main work, and Behind the Scenes models, why one task can use several models, and what happens when you pick a model outside your plan tier"
-last_updated: "2026-10-31"
+last_updated: "2026-11-02"
 ---
 
 # AI models
@@ -95,7 +95,7 @@ If you already have ChatGPT Pro, this is the quickest route.
 3. Sign in with your OpenAI account
 4. On the ChatGPT row under **Your AI accounts**, choose **Use for everyday work** if you want it as your main connection
 
-Good fit if you want a simple setup and already live in ChatGPT anyway.
+Good fit if you want a simple setup and already live in ChatGPT anyway. New ChatGPT setups start on **GPT-6.1 Sol**; if Rebel set up your ChatGPT model and it was GPT-6 Sol, Rebel moves it to GPT-6.1 Sol once and tells you. A model you picked yourself stays as it is.
 
 ### OpenRouter
 
@@ -107,7 +107,7 @@ OpenRouter is a first-class option in Rebel, not a workaround.
 4. Add credits to your OpenRouter account
 5. On the OpenRouter row under **Your AI accounts**, choose **Use for everyday work** if needed
 
-Good fit if you want one billing account for multiple model families. You can also enter any OpenRouter model ID directly — not just the defaults in Rebel's curated list. If you work with very large documents, MiniMax M3 is now available here as a long-context option.
+Good fit if you want one billing account for multiple model families. You can also enter any OpenRouter model ID directly — not just the defaults in Rebel's curated list. If you work with very large documents, MiniMax M3 is now available here as a long-context option. OpenAI's newest models are here too: GPT-6 Astra, GPT-6.1 Sol and GPT-6.1 Terra (each with a Pro mode for harder problems), and GPT-6 Luna. In Rebel these GPT-6 models read up to about 272,000 tokens of context, because above that OpenAI charges more for the whole message.
 
 ### Anthropic
 
@@ -118,7 +118,7 @@ Use Anthropic if you want direct Claude access.
 3. Choose **Anthropic** and paste your API key; Rebel checks it when you leave the field
 4. On the Anthropic row under **Your AI accounts**, choose **Use for everyday work** if needed
 
-Good fit if you want the most direct Claude setup and pay-as-you-go pricing.
+Good fit if you want the most direct Claude setup and pay-as-you-go pricing. **Claude Haiku 5.5**, Anthropic's newest small model, is in the picker (and on OpenRouter): very cheap and quick, and it thinks before it answers unless you turn thinking off. Rebel gives it up to 100,000 tokens of context, because above that Anthropic charges five times as much.
 
 If you want extra help with Anthropic-specific setup, see [Claude Max setup](rebel://library/rebel-system%2Fhelp-for-humans%2Fclaude-max-setup.md).
 
