@@ -138,7 +138,7 @@ If a save would overwrite something that changed in the meantime, Rebel shows yo
 
 ## Privacy Mode changes the rules
 
-When [Privacy Mode](rebel://library/rebel-system%2Fhelp-for-humans%2Fprivacy-mode.md) is on, Rebel asks before **every** memory save — even in spaces that would normally save automatically.
+When [Privacy Mode](rebel://library/rebel-system%2Fhelp-for-humans%2Fprivacy-mode.md) is on, the notes Rebel would save on its own wait for your approval — even in spaces that would normally save automatically.
 
 Use it when you want maximum control for sensitive work. You can toggle it from [Settings → Privacy & Safety](rebel://settings/safety).
 
