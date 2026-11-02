@@ -142,7 +142,7 @@ A way to find files by meaning rather than exact keywords. Rebel indexes your wo
 The sidebar panel in Rebel where you browse files, skills, and memory. Click the folder icon to open it. (Previously called "Workspace panel" — note that your workspace folder on disk is still called a "workspace", but the UI panel is now "Library".)
 
 ### Privacy Mode
-A per-session toggle for extra-sensitive work. When enabled, Rebel will ask for your approval before every tool use and memory write—nothing happens without your explicit permission. Enable it from the conversation header when you need extra control. ([Privacy Mode guide](privacy-mode.md))
+A per-conversation toggle for extra-sensitive work. When enabled, Rebel won't learn from the conversation automatically, and riskier actions ask you whenever the safety check can't give a clear answer. Everyday actions like reading and searching still run without asking, and your Always and Block choices still apply. Turn it on with **Private mode** in the session settings menu in the message box. ([Privacy Mode guide](privacy-mode.md))
 
 ### Quality Filtering
 Action items are scored for relevance at write time — low-signal items are filtered before they reach you. This keeps your [Actions](library://rebel-system/help-for-humans/actions.md) focused on what actually matters.

@@ -1,6 +1,6 @@
 ---
 description: "What Rebel can and can't do without asking you first"
-last_updated: "2026-09-24"
+last_updated: "2026-11-02"
 ---
 
 # Permissions — What Rebel Can Do
@@ -16,7 +16,7 @@ For the five-paragraph version of what saying yes or no actually does, see [The 
 ## The Short Version
 
 - **Safety Rules** decide which actions Rebel can take automatically and which ones need your approval
-- **Trusted tools** skip routine approval prompts unless [Privacy Mode](library://rebel-system/help-for-humans/privacy-mode.md) is on
+- **Trusted tools** skip routine approval prompts, in [Privacy Mode](library://rebel-system/help-for-humans/privacy-mode.md) too
 - **Saving preferences live in Safety Rules** — your previous Space choices have moved there as editable lines.
 - **System permissions** like microphone or screen recording are separate from tool approvals
 
@@ -27,6 +27,12 @@ Rebel evaluates each tool action against your Safety Rules — the plain-English
 If you see an approval bar at the bottom of a conversation, Rebel has an action waiting for your review. Click View to open the notification drawer.
 
 For file-related actions, approval cards show the **full file path**. That is intentional: the fastest safety check is usually “Is that the file I think it is?”
+
+## Actions on connected-app cards
+
+Clicking a card's button approves that one action. Requests a card makes in the background use your ordinary Safety Rules and saved permissions, and appear in the notification drawer when a decision is needed. Click **View** in the approval bar at the bottom of the conversation to open the notification drawer. To stop a tool action, use **Block** or turn the tool off in Settings. Your organisation's restrictions still apply.
+
+The separate **Connected app permissions** panel has retired. See [Connected apps and trust](rebel://library/rebel-system%2Fhelp-for-humans%2Fconnected-apps-and-trust.md) for what happens when a card hands a request to approvals.
 
 ## Managing Safety Rules, Saved Permissions, and Memory Permissions
 
@@ -68,7 +74,7 @@ Reading doesn't give permission to save or edit outside Rebel's folders. Rebel a
 
 ## Privacy Mode
 
-For extra-sensitive conversations, enable **Privacy Mode** from the conversation header. Reading files follows the rules above in Private chats too.
+For extra-sensitive conversations, turn on **Private mode** from the session settings menu in the message box. Reading files follows the rules above in Private chats too.
 
 See [privacy-mode.md](library://rebel-system/help-for-humans/privacy-mode.md) for details.
 
