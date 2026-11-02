@@ -49,7 +49,7 @@ When the dialog appears, you'll see two choices:
 | Option | What it does |
 |--------|-------------|
 | **Keep my API keys** | Starts fresh, but keeps your compatible AI provider setup so you can actually use the demo straight away. That includes saved API keys plus provider settings Rebel can reuse — for example OpenRouter, custom model profiles, and related voice/provider configuration. |
-| **Completely fresh start** | Truly blank slate — no provider setup, no API keys, no carry-over configuration. Your provider cards start disconnected, so you'll need to connect one before Rebel can do live AI work. |
+| **Completely fresh start** | Truly blank slate — no provider setup, no API keys, no carry-over configuration. Your accounts and keys start disconnected, so you'll need to connect one before Rebel can do live AI work. |
 
 There's also an **"Include sample content"** checkbox that adds fictional skills and memories for a made-up company called ACME Corp. Useful if you want the demo to feel populated without doing real setup.
 
@@ -57,8 +57,8 @@ There's also an **"Include sample content"** checkbox that adds fictional skills
 
 Demo Mode does **not** fake an AI provider for you.
 
-- If you choose **Keep my API keys**, the provider cards in **Settings → Agent & Voice** should already be ready enough for a live demo.
-- If you choose **Completely fresh start**, expect the provider cards to look like a brand-new install until you connect one.
+- If you choose **Keep my API keys**, your accounts and keys in **Settings → Agent & Voice** should already be ready enough for a live demo.
+- If you choose **Completely fresh start**, expect your accounts and keys to look like a brand-new install until you connect one.
 
 
 ## What happens when Demo Mode is active

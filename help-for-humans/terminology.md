@@ -72,7 +72,7 @@ Now called [Homepage](#homepage). Previously the discovery hub shown when you st
 Reflections generated after conversations suggesting what you might want to explore next. These appear on the [Homepage](#homepage) and help you discover follow-up opportunities you might have missed.
 
 ### Council Mode
-Bring multiple AI models into one conversation for second opinions. Rebel consults several models simultaneously — Claude, GPT, Gemini, and others — then synthesizes their responses. Add model profiles and mark them as council members in **Settings → Agent & Voice → Intelligence**. ([Council Mode guide](library://rebel-system/help-for-humans/multi-model-council-mode.md))
+Bring multiple AI models into one conversation for second opinions. Rebel consults several models simultaneously — Claude, GPT, Gemini, and others — then synthesizes their responses. In **Settings → Agent & Voice → Customise**, add models and turn on **Second opinions** for the ones you want to consult. ([Council Mode guide](library://rebel-system/help-for-humans/multi-model-council-mode.md))
 
 ---
 

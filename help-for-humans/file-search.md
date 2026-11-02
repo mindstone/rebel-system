@@ -40,7 +40,7 @@ Rebel will search your workspace and suggest relevant files to include in the co
 
 Rebel automatically chunks and indexes your files locally when you open a workspace. Each chunk is enriched with document metadata (title and file path) to improve search accuracy — this happens entirely on your machine at no cost.
 
-**Tip:** You can access the GPU acceleration toggle and a quick link to the Library's indexing panel from **Settings → Agent & Voice → Intelligence → File Indexing**.
+**Tip:** You can access the GPU acceleration toggle and a quick link to the Library's indexing panel from **Settings → Agent & Voice → File Indexing**.
 
 
 ## What Gets Indexed
@@ -156,4 +156,4 @@ When a cloud-backed Space is reconnecting, Library may show your **last-known re
 If Rebel feels slow:
 - Try pausing indexing temporarily (Library panel > info icon > pause)
 - Check if indexing is actively processing a large number of files
-- Enable GPU acceleration in **Settings → Agent & Voice → Intelligence → File Indexing** for faster processing
+- Enable GPU acceleration in **Settings → Agent & Voice → File Indexing** for faster processing

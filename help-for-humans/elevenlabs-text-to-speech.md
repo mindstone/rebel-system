@@ -14,7 +14,7 @@ ElevenLabs gives Rebel a full audio toolkit. You can use it for Rebel's built-in
 2. Find **ElevenLabs** and click **Set up**
 3. Paste your ElevenLabs API key (starts with `sk_`)
 4. Click **Connect**
-5. If you want ElevenLabs in Rebel's built-in voice features, also go to **Settings → Agent & Voice → Voice** and choose **ElevenLabs Scribe** for transcription or an ElevenLabs voice for read-aloud and other supported speech
+5. If you want ElevenLabs in Rebel's built-in voice features, also go to **Settings → Agent & Voice → Voice & Audio** and choose **ElevenLabs Scribe** for transcription or an ElevenLabs voice for read-aloud and other supported speech
 
 ### Getting an API Key
 
@@ -30,9 +30,9 @@ ElevenLabs gives Rebel a full audio toolkit. You can use it for Rebel's built-in
 There are two places ElevenLabs shows up in Rebel:
 
 - **Settings → Connectors** — connect your ElevenLabs account so Rebel can use ElevenLabs-powered tools such as music generation, sound effects, voice browsing, standalone speech generation, and audio transcription
-- **Settings → Agent & Voice → Voice** — choose how Rebel handles dictation, read-aloud, and other supported speech
+- **Settings → Agent & Voice → Voice & Audio** — choose how Rebel handles dictation, read-aloud, and other supported speech
 
-Inside **Settings → Agent & Voice → Voice**:
+Inside **Settings → Agent & Voice → Voice & Audio**:
 
 - Choose **ElevenLabs Scribe** if you want ElevenLabs to transcribe what you say
 - Pick an **ElevenLabs voice** for read-aloud and other supported speaking features

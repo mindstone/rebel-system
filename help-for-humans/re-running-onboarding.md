@@ -61,13 +61,7 @@ Most of the time, this is what you actually want.
 
 Go to **[Settings → Agent & Voice](rebel://settings/agents)**.
 
-You'll see the same card-based provider setup used in onboarding:
-
-- **ChatGPT Pro**
-- **OpenRouter**
-- **Anthropic**
-
-You can connect a new provider, switch providers, or update your credentials there.
+Under **Your AI accounts**, choose **Add an account or key** to sign in with ChatGPT or OpenRouter, paste an API key, or connect your own AI service. To switch accounts, choose **Use for everyday work** on an account's row. You can also update saved credentials from the row's menu.
 
 ### Connectors and tools
 
@@ -77,7 +71,7 @@ This uses the current searchable connector catalogue and connection cards. You c
 
 ### Voice
 
-Go to **[Settings → Agent & Voice](rebel://settings/agents)** to update your microphone, transcription provider, or spoken voice.
+Go to **[Settings → Agent & Voice → Voice & Audio](rebel://settings/agents)** to update your microphone, transcription provider, or spoken voice.
 
 ### Spaces and workspace
 

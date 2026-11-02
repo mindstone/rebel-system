@@ -31,7 +31,7 @@ Rebel supports independent **Speak** and **Listen** modes—use either separatel
 
 - **Listen mode** — Rebel transcribes your speech. Use the global voice hotkey (default: Ctrl+Alt+Space) or click any mic button.
 - **Speak mode** — Rebel reads responses aloud using text-to-speech.
-- **Custom vocabulary** — Teach Rebel your domain-specific terms for better transcription accuracy (Settings → Agent & Voice → Voice).
+- **Custom vocabulary** — Teach Rebel your domain-specific terms for better transcription accuracy (Settings → Agent & Voice → Voice & Audio).
 
 **Unified mic buttons** — Microphone buttons across Rebel (main conversation, Home page, question cards, Actions/Today) now look and behave the same. Only one records at a time; if another is already listening, the rest grey out with "Finish the other recording first." On the **Home page**, double-tap the mic while recording to stop and send immediately.
 
@@ -125,8 +125,8 @@ Use `rebel://` links in conversations to direct users to specific parts of the a
 | `rebel://settings/spaces` | Settings → Workspace → Spaces |
 | `rebel://settings/tools` | Settings → Connectors (alias: `rebel://settings/connectors`) |
 | `rebel://settings/plugins` | Settings → Advanced → Plugins |
-| `rebel://settings/agents` | Settings → Agent & Voice → Intelligence |
-| `rebel://settings/voice` | Settings → Agent & Voice → Voice |
+| `rebel://settings/agents` | Settings → Agent & Voice |
+| `rebel://settings/voice` | Settings → Agent & Voice → Voice & Audio |
 | `rebel://settings/meetings` | Settings → Meetings |
 | `rebel://settings/safety` | Settings → Privacy & Safety |
 | `rebel://settings/diagnostics` | Settings → Advanced → Support (alias: `rebel://settings/support`) |

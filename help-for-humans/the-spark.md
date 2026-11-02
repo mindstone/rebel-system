@@ -58,7 +58,7 @@ If you already know what you want, this is the fastest route.
 
 Coach can show Rebel's take on your priorities: a short ranked set of recommendations based on your recent conversations, meetings, and goals, each with a concrete next step.
 
-In the app, this is controlled by **Daily recommendations** in **Settings → Agent & Voice → Intelligence**:
+In the app, this is controlled by **Daily recommendations** in **Settings → Agent & Voice**:
 
 - **Ask me each time** — Homepage shows a prompt card so you can generate recommendations on demand
 - **Run automatically** — Rebel generates them for you

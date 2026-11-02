@@ -199,9 +199,9 @@ Pending audio files are stored locally and can be retried later when connectivit
 - Speak clearly and at a moderate pace
 - Reduce background noise
 - Try adjusting your microphone position
-- Set your voice input language in **Settings → Agent & Voice → Voice** (auto-detection can sometimes misidentify languages)
+- Set your voice input language in **Settings → Agent & Voice → Voice & Audio** (auto-detection can sometimes misidentify languages)
 
-**Custom vocabulary:** If Rebel consistently misrecognizes specific terms (company names, technical jargon), add them to the custom vocabulary in **Settings → Agent & Voice → Voice → Custom vocabulary**. This only works with the OpenAI Whisper provider.
+**Custom vocabulary:** If Rebel consistently misrecognizes specific terms (company names, technical jargon), add them to the custom vocabulary in **Settings → Agent & Voice → Voice & Audio → Custom vocabulary**. This only works with the OpenAI Whisper provider.
 
 **Transcription is empty:** The recording was too short or the audio was too quiet. Speak for at least a second or two.
 
@@ -211,7 +211,7 @@ Pending audio files are stored locally and can be retried later when connectivit
 If Rebel's voice responses aren't playing:
 
 1. **Check your volume** — Make sure system audio isn't muted
-2. **Check voice settings** — Go to **Settings → Agent & Voice → Voice** and ensure a voice provider is selected
+2. **Check voice settings** — Go to **Settings → Agent & Voice → Voice & Audio** and ensure a voice provider is selected
 3. **Verify API key** — If using OpenAI or ElevenLabs for voice, ensure your API key is valid and has credits
 
 

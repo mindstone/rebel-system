@@ -19,7 +19,7 @@ That's it. On supported desktop platforms, Rebel uses built-in on-device transcr
 
 **Already on OpenRouter or a Mindstone plan?** Rebel can transcribe using that connection you already have — no separate voice API key. On a Mindstone subscription, transcription is included. It works on your computer and your phone.
 
-For other cloud providers with higher accuracy, go to **Settings → Agent & Voice → Voice**, choose a provider, and enter your API key.
+For other cloud providers with higher accuracy, go to **Settings → Agent & Voice → Voice & Audio**, choose a provider, and enter your API key.
 
 
 ## How Rebel picks your transcription provider
@@ -30,7 +30,7 @@ Rebel tries to match voice transcription to how you already use Rebel — so you
 - **ChatGPT with an OpenAI key** — Rebel uses OpenAI Whisper when you have a real OpenAI API key saved.
 - **Everyone else on desktop** — Rebel uses **Built-in** transcription on your computer (free, private, on-device).
 
-If you pick a voice provider yourself in **Settings → Agent & Voice → Voice**, Rebel keeps your choice. Changing your AI plan later will not override a provider you selected on purpose.
+If you pick a voice provider yourself in **Settings → Agent & Voice → Voice & Audio**, Rebel keeps your choice. Changing your AI plan later will not override a provider you selected on purpose.
 
 
 ## Talking to Rebel
@@ -89,7 +89,7 @@ Ordinary conversations stay quiet and reply in writing. When you want Rebel to s
 - **Read aloud** when you ask Rebel to read particular text
 - **Meeting coach** speech during a meeting, when you have enabled a speaking coach
 
-For read-aloud and other configured speech, choose a voice in **Settings → Agent & Voice → Voice**. Options depend on your provider:
+For read-aloud and other configured speech, choose a voice in **Settings → Agent & Voice → Voice & Audio**. Options depend on your provider:
 - **OpenAI** — Alloy, Echo, Fable, Onyx, Nova, Shimmer
 - **ElevenLabs** — Rachel, Bella, Elli, Josh, Arnold, Adam, Sam (plus custom voices)
 
@@ -160,7 +160,7 @@ Voice notes auto-retry in the background with increasing delays, so most failure
 
 ## Custom Voice Providers (Bring Your Own)
 
-Beyond the built-in options, you can connect your own speech-to-text or text-to-speech service—anything compatible with the OpenAI audio API format. Go to **Settings → Agent & Voice → Voice**, select "Custom" as a provider, and enter your service URL and API key. Rebel will use your custom endpoint for transcription, read-aloud, or both, depending on what you configure.
+Beyond the built-in options, you can connect your own speech-to-text or text-to-speech service—anything compatible with the OpenAI audio API format. Go to **Settings → Agent & Voice → Voice & Audio**, select "Custom" as a provider, and enter your service URL and API key. Rebel will use your custom endpoint for transcription, read-aloud, or both, depending on what you configure.
 
 
 ## Custom Vocabulary
@@ -171,7 +171,7 @@ Teach Rebel words it might mishear. Great for:
 - Names of people you work with
 - Industry-specific jargon
 
-**Set up:** Settings → Agent & Voice → Voice → Custom vocabulary
+**Set up:** Settings → Agent & Voice → Voice & Audio → Custom vocabulary
 
 Enter one term per line. When you speak, Rebel pays extra attention to these words.
 
@@ -192,7 +192,7 @@ The first time you use voice input, your system will ask for microphone permissi
 ### Missing API Key
 
 If you see a disabled mic button with a tooltip about API keys:
-1. Go to Settings → Agent & Voice → Voice
+1. Go to Settings → Agent & Voice → Voice & Audio
 2. Enter your API key for your chosen provider
 3. The mic button will enable automatically
 
@@ -222,7 +222,7 @@ If you see a disabled mic button with a tooltip about API keys:
 
 ## Built-in (on-device) transcription
 
-On desktop, **Built-in** runs transcription on your computer instead of sending audio to the cloud. In **Settings → Agent & Voice → Voice**, it is the option labeled **Built-in** (not a separate Moonshine entry — that engine is used behind the scenes on mobile, not as a desktop setting).
+On desktop, **Built-in** runs transcription on your computer instead of sending audio to the cloud. In **Settings → Agent & Voice → Voice & Audio**, it is the option labeled **Built-in** (not a separate Moonshine entry — that engine is used behind the scenes on mobile, not as a desktop setting).
 
 | | Desktop (Built-in) | Mobile app |
 |---|-------------------|------------|
@@ -231,7 +231,7 @@ On desktop, **Built-in** runs transcription on your computer instead of sending 
 | **What to know** | Free, private, no API key | Toggle on-device transcription in the mobile app; uses a separate on-device engine |
 
 **Setup on desktop:**
-1. Go to **Settings → Agent & Voice → Voice**
+1. Go to **Settings → Agent & Voice → Voice & Audio**
 2. Choose **Built-in**
 3. Click **Download** if prompted
 4. The mic button enables once the model is ready
