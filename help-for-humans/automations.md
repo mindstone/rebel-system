@@ -1,6 +1,6 @@
 ---
 description: "How to schedule recurring or event-triggered work in Rebel, including built-in automations, transcript triggers, Focus automations, and run status meanings"
-last_updated: "2026-10-09"
+last_updated: "2026-11-02"
 ---
 
 # Automations
@@ -14,7 +14,7 @@ The app's own summary for this feature is nicely blunt: **Rebel works while you 
 ## See also
 
 - [Using Skills](library://rebel-system/help-for-humans/using-skills.md) — many automations run a skill behind the scenes
-- [Cloud continuity](rebel://library/rebel-system%2Fhelp-for-humans%2Fcloud-continuity-and-mobile.md) — what lets an automation run 24/7, even with your laptop closed
+- [Cloud continuity](rebel://library/rebel-system%2Fhelp-for-humans%2Fcloud-continuity-and-mobile.md) — how scheduled work can carry on while your computer sleeps
 - [Actions](library://rebel-system/help-for-humans/actions.md) — for “save this for later” instead of “run this on a schedule”
 - [Meetings and notetaker](library://rebel-system/help-for-humans/meetings-and-notetaker.md) — where transcript-triggered automations fit in
 - [Security and tool safety](library://rebel-system/help-for-humans/security-and-tool-safety.md) — why approvals still apply
@@ -29,7 +29,7 @@ You tell Rebel:
 
 Rebel then runs it as a background conversation and saves the result for you to review later.
 
-Each automation also has a **where**: it can run on your desktop or on your cloud instance. See [Where automations run](#where-automations-run-desktop-or-cloud) below.
+Each automation also has a **where**: it can run on this computer or in your cloud. See [Where automations run](#where-automations-run) below.
 
 ## Creating an automation
 
@@ -53,28 +53,27 @@ Rebel understands natural language well enough to spare you most of the tedious 
 | **Monthly** | Runs on selected days of the month |
 | **Event trigger** | Runs when something happens instead of at a fixed time |
 
-## Where automations run: Desktop or Cloud
+## Where automations run
 
-Every automation has a **Runs on** control in [Automations](rebel://automations) with two choices:
+Scheduled automations you make have a **Runs on** choice in [Automations](rebel://automations):
 
-- **Desktop** — the default. Runs while Rebel is open on your computer. If Rebel is closed when a run comes due, it catches up next time you open it (hourly automations excepted — they just wait for the next slot).
-- **Cloud** — runs on your cloud instance around the clock, even when your laptop is closed. Handy for anything that should fire at 3am your time, or while you're on a beach pretending not to check. "Your cloud instance" means exactly that: if you brought your own cloud provider, it is your machine on your account, and Mindstone never runs it. Mindstone only hosts the instance if you chose Mindstone Cloud. Either way the automation runs there, not on someone else's desktop.
+- **This computer** — the starting default. Runs while Rebel is open on this computer. With Cloud continuity on and your cloud up to date, your cloud can run it instead while this computer sleeps, about ten minutes after the scheduled time. Otherwise, missed runs follow this computer's usual catch-up rules.
+- **My cloud** — runs in your cloud, so this computer does less. If your cloud misses a run, this computer picks it up about ten minutes later, once your cloud confirms it hasn't run it. If your cloud is down, scheduled automations wait and run when it's back, if there's still time. A run that has waited too long is skipped rather than run very late.
 
-**Once Cloud continuity takes over scheduled automations, this control goes away.** Your scheduled
-automations then run on your cloud instance by default — which is the point: they keep their schedule
-whether or not your laptop is open, instead of quietly waiting for you. The Automations page tells you
-when this has happened. Automations triggered by something on your computer still run there, because
-that is where the thing that triggered them happened.
+Cloud runs need [Cloud continuity](rebel://library/rebel-system%2Fhelp-for-humans%2Fcloud-continuity-and-mobile.md), turned on in [Settings → Cloud](rebel://settings/cloud). Without it, My cloud is unavailable as a new choice; anything already set to My cloud runs on this computer instead. Your cloud is the one you connected, whether Mindstone hosts it or you run it yourself.
 
-Cloud runs need [Cloud continuity](rebel://library/rebel-system%2Fhelp-for-humans%2Fcloud-continuity-and-mobile.md) set up first (Settings → Cloud). If it isn't, the **Cloud** option shows greyed out — hover over it and Rebel tells you what's missing. No phone or mobile app is required: your cloud instance runs on its own, and the mobile app is just one way of looking in on it.
+When your cloud is up to date, the Automations page asks once per computer, if you have scheduled automations, whether **new** automations should use your cloud by default. **Use my cloud** also offers to move your existing scheduled automations; **Only new ones** leaves them where they are. Change the default later in **Settings → Cloud → New automations run on**. Changing the default never moves existing work by itself.
 
-A few things worth knowing:
+Every started run says **Ran on this computer** or **Ran in your cloud** in its history. If a run in your cloud needs a tool that only works on your computer, its history says so: the run may be incomplete and won't restart by itself. For a This computer automation, your cloud then leaves it to this computer until you edit it. If it's set to My cloud, switch Runs on to This computer.
 
-- Cloud automations fire at the wall-clock time in **your** timezone (captured when you switch to Cloud), wherever in the world the cloud happens to be.
-- If the cloud connection has a rough patch when a run is due, Rebel catches the run up once it's back — see [A scheduled run was delayed by a connection hiccup](#a-scheduled-run-was-delayed-by-a-connection-hiccup).
-- **Event-triggered** automations and Rebel's **built-in** automations always run on the desktop, so they don't offer the choice.
-- You can also just ask Rebel in a conversation — "run this one in the cloud" — and it will move the automation for you. This works on the web too: in a conversation that runs on your cloud instance you can set up, list, change, pause, delete, or run automations just by asking, and your cloud's schedule picks up the change.
-- When you ask from the web, say your time zone as well ("weekdays at 9am, Europe/Berlin"). Rebel may not know your time zone in a cloud conversation — leave it out and the time zone your cloud machine sits in decides when the automation fires. And once Cloud continuity is actively running your automations, it keeps both the location and the time zone under its control; asking to change those from a conversation gets a polite no.
+A few details matter:
+
+- This computer schedules follow this computer's time zone. My cloud schedules keep the time zone chosen for them.
+- Event-triggered automations run where the event happens. They and Rebel's built-ins have no Runs on control, though scheduled built-ins can still run in your cloud while this computer sleeps.
+- Automations made in chat on web or phone run in your cloud. That chat cannot put one on your computer. You can still list, change, pause, delete or run the cloud's copies there. A change to one your computer runs applies to the **cloud's copy**; this computer keeps running its own. Moving it to My cloud there doesn't change this computer's copy, so this computer may still run it. Use the desktop Automations page to change what this computer runs.
+- In a web or phone chat, state your time zone for wall-clock schedules (for example, “weekdays at 9am, Europe/Berlin”). Otherwise the cloud machine's time zone is used.
+- Before a scheduled run starts, Rebel asks your cloud whether it has already run, so one run doesn't happen in two places. That stops almost all repeats, but it can't promise every run succeeds or that an outside action, like a sent email, never repeats.
+- If this computer cannot reach its cloud, scheduled work can wait even when this computer is awake. That includes when you're signed out of your cloud or a network blocks it. Your cloud can run it only if it already has this computer's automations; otherwise the run may be skipped once it has waited too long. This computer won't run it without hearing from your cloud, in case your cloud already did.
 
 ## Transcript event triggers
 
@@ -175,7 +174,7 @@ An automation whose saved schedule is broken — for example a weekly one with n
 
 - Check that it is **enabled**
 - Check the schedule
-- Check **Runs on**: a **Desktop** automation only fires while Rebel is open; if you need it to run with the laptop closed, switch it to **Cloud** (needs Cloud continuity). If you don't see the control, Cloud continuity has already taken over your scheduled automations and they run in the cloud anyway
+- Check **Runs on** and [where automations run](#where-automations-run). Without an updated cloud and Cloud continuity, This computer work needs Rebel open. Built-ins and event-triggered automations have no Runs on control.
 
 ### It says “Blocked by security”
 
@@ -199,7 +198,7 @@ Once you replace the key and a turn succeeds again, automations resume on their 
 
 ### A scheduled run was delayed by a connection hiccup
 
-If your cloud connection has a rough patch right when a scheduled automation is due, Rebel doesn't just skip it silently. You'll see a calm "on hold" banner while the connection's out, and as soon as it's back, Rebel catches the run up on its own — nothing to do, and nothing's lost.
+If your cloud is not answering when a scheduled automation is due, Rebel waits and tries again. It runs when your cloud is back, if there is still time; after the allowed time it is skipped. This can affect This computer automations too. The connection notice explains the wait.
 
 If you were away while this happened (desktop closed, or mid-reconnect), the run still shows up in your history in [Automations](rebel://automations) once things reconnect — so you're not left wondering whether it actually ran.
 
