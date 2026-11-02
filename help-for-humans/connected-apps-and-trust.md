@@ -17,7 +17,7 @@ An app cannot read this label or change it. The label is a Rebel guarantee, not 
 
 Clicking a card's button approves that one action. It does not give the app permission to keep acting. Your Blocks, tools you've turned off and your organisation's restrictions still apply.
 
-Requests a card makes in the background use your ordinary Safety Rules and saved permissions, and appear in the notification drawer when a decision is needed. The card then says: **"Rebel moved this to your approvals. It only goes ahead if you approve it there."** Click **View** in the approval bar at the bottom of the conversation to open the notification drawer and review the request; the outcome appears in the conversation.
+Requests a card makes in the background use your ordinary Safety Rules and saved permissions, and appear in the notification drawer when a decision is needed. The card then says: **"Nothing has happened yet. This needs your OK: open the bell at the top of Rebel and approve it there."** You can also click **View** in the approval bar at the bottom of the conversation to open the notification drawer and review the request; the outcome appears in the conversation.
 
 To stop a tool action, use **Block** in the notification drawer or turn the tool off in **[Settings → Connectors](rebel://settings/tools)**. The separate **Connected app permissions** panel has retired. Your Safety Rules and saved permissions live in **[Settings → Privacy & Safety](rebel://settings/safety)**.
 
