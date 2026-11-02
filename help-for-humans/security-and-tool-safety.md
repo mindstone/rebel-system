@@ -213,7 +213,7 @@ Rules work best when they're specific and actionable. Think about the situations
 |------|---------------------|
 | "Be careful" | Too vague — Rebel doesn't know what to be careful about |
 | "Don't do anything dangerous" | Your default rules already handle this |
-| "Ask me about everything" | Consider [Privacy Mode](library://rebel-system/help-for-humans/privacy-mode.md) instead |
+| "Ask me about everything" | Too broad — name what you want checked, such as "Check with me before sending any email" |
 
 ### Managing Your Rules
 
