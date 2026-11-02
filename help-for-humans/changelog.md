@@ -18,6 +18,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Improvements
 
+- **Newer image and video models** — OpenAI Image Generation now uses gpt-image-2.5 by default: quicker, cheaper at high quality, and it can finally do transparent backgrounds. Nano Banana moves to Google's current Gemini image models, with Nano Banana 2.1 as an option. Kling adds kling-v3 as an option (about twice the cost, so not the default), and Runway stops offering veo3, which Runway no longer accepts; veo3.1 is still there. If you picked a model yourself, that choice stays.
+
 - **Email addresses with somewhere to go** — Tap or click an email address in a reply and a new email opens in your mail app, on your phone and your computer. On the phone, call and text-message links work too. Copy and paste can have the afternoon off.
 
 - **Automation questions, easier to find** — When a scheduled automation running on your computer asks a question, it now appears in the notification bell as it arrives. Click it to go to the question; answering clears the notification. Less hide-and-seek.

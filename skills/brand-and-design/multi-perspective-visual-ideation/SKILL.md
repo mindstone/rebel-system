@@ -141,7 +141,7 @@ This annotation must survive end-to-end: in the longlist, in the shortlist, opti
 
 Skip this phase if the user only wants the prompt plan. Otherwise:
 
-1. **Confirm with the user** which generator to use and roughly how many to render this pass. Mention that OpenAI gpt-image-2 is billed per image (~$0.21 each at high quality); Nano Banana is free up to a daily quota on Google's free tier.
+1. **Confirm with the user** which generator to use and roughly how many to render this pass. Mention that OpenAI gpt-image-2.5 is billed per image (about $0.05-0.08 each at high quality); Nano Banana is free up to a daily quota on Google's free tier.
 2. **Check which image tools are connected.** Look at the tools available to you in this turn for any of: `nano_banana_generate`, `nano_banana_edit`, `generate_image`, `edit_image`. If none are available, tell the user which connector to enable in **Settings → Connectors** (Nano Banana or OpenAI Image Generation) and stop.
 3. **Render the shortlist** by calling the matching tool for each prompt, with the aspect ratio from Phase 6. Save under the workspace if available, otherwise `~/Pictures/RebelImages/`. Use filenames that encode set + ordinal + REAL/FABRICATED, e.g. `A1_comic-onboarding-pain_FABRICATED.png`.
 4. **Iterate.** Show the user the first batch, ask which to keep, which to redo (with prompt tweaks), and which to drop. Use `nano_banana_edit` / `edit_image` for targeted edits rather than full regenerations when possible.
@@ -155,7 +155,7 @@ Skip this phase if the user only wants the prompt plan. Otherwise:
 | Rendered text inside the image (headlines, labels, multilingual copy) | **OpenAI image generation** (`generate_image`) |
 | Stylistic edits to an existing image (recolor, redraw, swap elements) | **Nano Banana** (`nano_banana_edit`) — true image editing, not just inpainting |
 | Large batches at flat cost | **Nano Banana** — free tier covers a lot of iteration |
-| Photo-realistic faces / hands / fine detail | Try both; OpenAI gpt-image-2 currently has the edge on realism, Nano Banana Pro is close |
+| Photo-realistic faces / hands / fine detail | Try both; OpenAI gpt-image-2.5 currently has the edge on realism, Nano Banana Pro is close |
 | Quick infographic / diagram | Either; OpenAI is sharper on labels, Nano Banana cheaper to iterate |
 
 When in doubt, render the same prompt in both for the first 2–3 shortlist items and let the user pick the aesthetic before committing to a generator for the rest.
