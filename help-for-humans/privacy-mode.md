@@ -1,41 +1,33 @@
 ---
-description: "Privacy Mode makes Rebel ask for your approval before every action, even for tools you've trusted before — ideal for sensitive conversations or client work."
+description: "Privacy Mode keeps memory saves waiting for your approval and makes Rebel ask before riskier actions whenever its safety check is unsure. Ideal for sensitive conversations or client work."
 ---
 
 # Privacy Mode
 
-Privacy Mode is a single toggle that tells Rebel to ask before taking actions — writing files, running tools, saving to memory.
+Privacy Mode is a switch for sensitive work that applies to one conversation at a time. Notes Rebel would normally save to its memory on its own (what it keeps in your Spaces for later chats) wait for your OK, and it's more cautious with riskier actions. Everyday things, like reading files and searching, carry on without interruptions.
 
 ## When to use it
 
 Turn on Privacy Mode when you're working with:
 - **Sensitive information** — client data, contracts, confidential projects
 - **Unfamiliar territory** — new tools or integrations you want to understand first
-- **Shared workspaces** — when you want extra control over what gets written or modified
-
-Think of it as driving with a co-pilot who confirms every turn, even the ones you've approved before. More interruptions, more control.
+- **Shared Spaces** — when you want to approve each note Rebel saves
 
 ## How to enable it
 
-Look for the **lock icon** in the input bar at the bottom of the screen.
-
-- **Click to toggle** — lock closed = Privacy Mode on
-- **First time you enable it**, Rebel will confirm: "Private mode enabled. I'll ask before writing or taking any actions."
+In the message box where you type, click the **Session settings** button (the sliders icon), then switch on **Private mode**. The first time, Rebel confirms that Private mode is on.
 
 ## What happens when it's on
 
-Rebel will prompt you before:
-- Writing or modifying files
-- Running tools (even ones you've trusted in the past)
-- Saving to memory
-
-This means more approval dialogs. That's the point.
+- **Memory saves wait for you.** Rebel doesn't learn from a Private chat on its own: the notes it would normally save by itself wait for your approval, even in Spaces that normally save automatically.
+- **Riskier actions get a second look.** Before a riskier action, such as sending an email, Rebel automatically checks it against your Safety Rules (the instructions you write in Settings → Privacy & Safety), as it always does. Sometimes that check can't give a clear answer. A normal chat can then let a medium-risk action go ahead; a Private chat asks you first. [Security and Tool Safety](security-and-tool-safety.md) explains the risk levels.
+- **Everyday actions still just happen.** Low-risk actions, like reading, listing and searching files or looking things up, run without asking, as in any chat, unless one of your Safety Rules names them.
+- **Your saved choices still count.** An action you've chosen to always allow on an approval card still runs without asking, and anything you've blocked still never runs.
+- **The conversation stays yours.** You can't share a link to a Private conversation or ask teammates from it.
 
 ### You can still approve actions
 
-When Rebel asks for permission, click **Allow once** to approve that specific action. Privacy Mode doesn't remove your ability to approve things — it just removes automatic approvals.
-
-In Privacy Mode, even tools you've trusted are checked. Every action requires your explicit approval — that's the point.
+When Rebel asks, the approval card offers the usual choices: allow once, allow for this conversation, always allow, or Block. Always allow and Block are saved until you remove them in Settings → Privacy & Safety, exactly as in a normal chat. One difference: when Rebel wants to run a command on your computer, a Private chat doesn't offer to remember that command.
 
 ## What it doesn't do
 
@@ -44,12 +36,13 @@ Privacy Mode doesn't change what Rebel can *see*. It controls what Rebel can *do
 - Rebel still reads files you share
 - Rebel still accesses tools you've configured
 - Rebel still uses its normal judgment to answer questions
+- Your messages and files still go to the same AI provider as in any chat; Privacy Mode doesn't keep them on your computer. [What data can leave Rebel](what-data-can-leave-rebel.md) lists where data goes.
 
-The difference is in the doing, not the knowing.
+So Rebel still sees your client data in a Private chat; what changes is what it does and keeps afterwards.
 
 ## When to turn it off
 
-Once you're done with the sensitive work, toggle Privacy Mode off to return to your normal settings. Rebel will remember which tools you've trusted and which automations you've approved.
+Once you're done with the sensitive work, toggle Private mode off. Rebel's own memory saves go back to following your Safety Rules.
 
 ---
 
