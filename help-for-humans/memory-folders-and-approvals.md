@@ -73,7 +73,7 @@ Your saving preferences are lines in your [Safety Rules](rebel://settings/safety
 
 Rebel normally saves routine notes to private Spaces without asking. A rule that names a Space or destination adds a check, even when the rule permits saving there. Team and shared Spaces are checked against your rules and the Space's description. If the check can't give an answer, a routine save to a team Space still goes ahead while you're chatting. An automation's save also goes ahead and is noted under **Recent activity** in Privacy & Safety. A memory update Rebel makes in the background waits for you. If your rules name that Space, or it's shared outside the company, Rebel asks you first whenever the check can't answer.
 
-If you had set a Space to always ask before saving, that choice is now a line in your Safety Rules, and the safety check follows it. [Privacy Mode](rebel://library/rebel-system%2Fhelp-for-humans%2Fprivacy-mode.md) keeps saves waiting for your approval.
+If you had set a Space to always ask before saving, that choice is now a line in your Safety Rules, and the safety check follows it. In [Privacy Mode](rebel://library/rebel-system%2Fhelp-for-humans%2Fprivacy-mode.md), saves get the same checks, and Rebel doesn't add anything from that conversation to its memory afterwards.
 
 ### What something specific looks like
 
@@ -81,7 +81,7 @@ When Rebel spots something specific, the approval card says **what** it is worri
 
 Built-in checks for passwords and keys run alongside your Safety Rules, in private Spaces as well as shared ones. That means a document containing an obviously fake example key can still trigger a review card. The check is being cautious about the shape of the text; approve that save and move on. Meeting transcripts saved to your own private Space skip this check.
 
-If a destination already has a save waiting for review, later saves to the same place keep asking until you clear the pending card. This prevents a newer save from quietly stepping around an earlier decision.
+If a destination already has a save waiting for review, a later change from the same conversation goes into the waiting version, and **Allow** saves the latest one. A save from another conversation keeps asking until you clear the waiting one, so a newer save can't quietly step around an earlier decision.
 
 ## Where approvals appear now
 
@@ -136,9 +136,9 @@ That means:
 
 If a save would overwrite something that changed in the meantime, Rebel shows you the conflict instead of quietly bulldozing it.
 
-## Privacy Mode changes the rules
+## Privacy Mode keeps the conversation out of memory
 
-When [Privacy Mode](rebel://library/rebel-system%2Fhelp-for-humans%2Fprivacy-mode.md) is on, Rebel asks before **every** memory save — even in spaces that would normally save automatically.
+When [Privacy Mode](rebel://library/rebel-system%2Fhelp-for-humans%2Fprivacy-mode.md) is on, Rebel doesn't add anything from the conversation to its memory afterwards. Files you ask it to save get the same checks as in any other conversation.
 
 Use it when you want maximum control for sensitive work. You can toggle it from [Settings → Privacy & Safety](rebel://settings/safety).
 
