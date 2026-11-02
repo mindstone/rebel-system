@@ -185,7 +185,7 @@ Before executing any tool call, Rebel evaluates it against your Safety Rules (na
 A Space’s sharing sets how its saves are checked. Your saving preferences are lines in [Safety Rules](rebel://settings/safety#safetyRules); edit them there. Previous per-Space choices have moved into that document. See [Security and Tool Safety](library://rebel-system/help-for-humans/security-and-tool-safety.md) for the user-facing explanation of the approval flow.
 
 ### Privacy Mode
-A per-conversation toggle for sensitive work. In Privacy Mode, memory saves Rebel would make on its own judgement wait for your approval, and a riskier action asks you whenever the Safety Rules check gives no answer (a normal chat can let a medium-risk action go ahead then). Everyday low-risk actions that no Safety Rule names, and tools with a standing Always, still run without asking.
+A per-conversation toggle for sensitive work. In Privacy Mode, Rebel doesn't learn from the conversation automatically, and a riskier action asks you whenever the Safety Rules check gives no answer (a normal chat can let a medium-risk action go ahead then). Everyday low-risk actions that no Safety Rule names, and tools with a standing Always, still run without asking.
 
 ---
 

@@ -157,5 +157,5 @@ Everything else on this page — AI providers, connectors, meetings, web fetches
 - [Settings and configuration](rebel://library/rebel-system%2Fhelp-for-humans%2Fsettings-and-configuration.md) — where everything lives in Settings
 - [Where Rebel stores things](rebel://library/rebel-system%2Fhelp-for-humans%2Fwhere-rebel-stores-things.md) — what stays on your disk
 - [Security and tool safety](rebel://library/rebel-system%2Fhelp-for-humans%2Fsecurity-and-tool-safety.md) — what Rebel is allowed to do, and when it asks
-- [Privacy Mode](rebel://library/rebel-system%2Fhelp-for-humans%2Fprivacy-mode.md) — keep memory saves waiting for your approval and make Rebel more cautious with riskier actions
+- [Privacy Mode](rebel://library/rebel-system%2Fhelp-for-humans%2Fprivacy-mode.md) — Rebel doesn't learn from the chat automatically and is more cautious with riskier actions
 - [Connectors and integrations](rebel://library/rebel-system%2Fhelp-for-humans%2Fmcp-connectors-tools-and-integrations.md) — reviewing and disconnecting services
