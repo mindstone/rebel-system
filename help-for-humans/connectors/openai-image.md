@@ -1,10 +1,10 @@
 ---
-description: "Generate images with OpenAI's gpt-image-2 model"
+description: "Generate images with OpenAI's gpt-image-2.5 models"
 ---
 
 # OpenAI Image Generation
 
-Generate images from text. OpenAI's gpt-image-2 is particularly good at crisp text and multilingual copy. Saves to your workspace — no hunting around for the file.
+Generate images from text. OpenAI's gpt-image-2.5 is particularly good at crisp text and multilingual copy. Saves to your workspace — no hunting around for the file.
 
 
 ## What You Can Do
@@ -12,7 +12,8 @@ Generate images from text. OpenAI's gpt-image-2 is particularly good at crisp te
 - **Generate images** from text descriptions
 - **Generate multiple variations in one go** — request `count: 1–8`
 - **Edit an existing image** by describing the change — redraw, recolor, add/remove objects, or fix text
-- **Put readable text inside the image** — gpt-image-2 handles Latin and non-Latin scripts well
+- **Put readable text inside the image** — gpt-image-2.5 handles Latin and non-Latin scripts well
+- **Get a transparent background** — handy for logos, icons and stickers
 - **Pick a quality level** — `low`, `medium`, `high`, or `auto` (defaults to `high`)
 - **Choose a shape** — square, portrait, or landscape
 
