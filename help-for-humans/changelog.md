@@ -18,6 +18,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Improvements
 
+- **The right explanation** — When your app and your cloud are on different versions, Rebel now says it needs an update instead of blaming your connection or your wording. The diagnosis has improved.
+
 - **Clearer step lists** — While Rebel works on a request, **Details** lists what it's aiming for and each step. Those steps now read like everyday to-dos, such as "Read your Q3 plan", instead of notes Rebel wrote for itself. Only the wording changed; Rebel does the same work.
 
 - **Email addresses with somewhere to go** — Tap or click an email address in a reply and a new email opens in your mail app, on your phone and your computer. On the phone, call and text-message links work too. Copy and paste can have the afternoon off.
