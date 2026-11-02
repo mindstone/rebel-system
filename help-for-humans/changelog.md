@@ -14,6 +14,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Improvements
 
+- **The newest models, in the picker** — GPT-6.1 Sol and GPT-6.1 Terra arrive with an OpenAI key, a ChatGPT account and OpenRouter, and OpenRouter also gains GPT-6 Astra and GPT-6 Luna. Claude Haiku 5.5, Anthropic's newest and cheapest Claude, arrives with an Anthropic key and on OpenRouter. ChatGPT now starts new setups on GPT-6.1 Sol and moves a GPT-6 Sol that Rebel set up for you, with a one-time note; a model you chose yourself stays put. Usage costs for GPT-5.6 and Claude Sonnet 5.5 now match the providers' published prices, so they read lower. Newer, and cheaper than we thought.
+
 - **Email addresses with somewhere to go** — Tap or click an email address in a reply and a new email opens in your mail app, on your phone and your computer. On the phone, call and text-message links work too. Copy and paste can have the afternoon off.
 
 - **Automation questions, easier to find** — When a scheduled automation running on your computer asks a question, it now appears in the notification bell as it arrives. Click it to go to the question; answering clears the notification. Less hide-and-seek.
