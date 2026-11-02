@@ -65,6 +65,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **Links in your documents go where they should** — A closing quote, long dash or the Japanese 。 straight after a web address in a Library document no longer gets swept into the link, so clicking it opens the right page. Links already saved with the wrong address stay as they are, in case you meant them.
+
 - **You asked for it, so it doesn't ask you** — Rebel sometimes stopped to ask your permission for something you'd already asked it to do, only because it guessed it might not work, such as making a video you'd asked for. Now it just goes ahead, and if something doesn't work, Rebel sees the error and can try to fix it. It still checks with you first when an action could send or share something with people you didn't mean, expose something private, or go against what you said.
 
 - **Company model costs, now visible** — Settings → Usage now shows costs for new turns on models your organization provides. Your organization still covers them; this isn't a new charge to you. Earlier missing costs stay missing. Better receipts, same bill payer.
