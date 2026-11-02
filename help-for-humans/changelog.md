@@ -18,6 +18,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Improvements
 
+- **The right explanation** — When your app and your cloud are on different versions, Rebel now says it needs an update instead of blaming your connection or your wording. The diagnosis has improved.
+
 - **A second pair of eyes** — You can now send images on a text-only model when the Thinking model on your connected OpenRouter account can read them. Delegation has its uses.
 
 - **Every save gets the same safety check** — When Rebel saves a file in a conversation, it now goes through the same safety check as any other action, instead of a separate one for memory. When a save needs your OK, it waits in the notification drawer. If Rebel changes the file again before you decide, the waiting copy updates, and **Allow** saves the latest version, so nothing has to be redone. Your [Safety Rules](rebel://settings/safety#safetyRules) gain one default line: Rebel asks before changing a skill someone else made. And in Privacy Mode, Rebel doesn't save anything from the conversation to its memory afterwards. Simpler, and just as careful.
