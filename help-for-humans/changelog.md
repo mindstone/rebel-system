@@ -67,6 +67,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 - **You asked for it, so it doesn't ask you** — Rebel sometimes stopped to ask your permission for something you'd already asked it to do, only because it guessed it might not work, such as making a video you'd asked for. Now it just goes ahead, and if something doesn't work, Rebel sees the error and can try to fix it. It still checks with you first when an action could send or share something with people you didn't mean, expose something private, or go against what you said.
 
+- **Finished Actions actually finish** — An Action could finish its work but stay in Queued, and Rebel wouldn't let you complete or archive it. Now it moves to Done when Rebel's reply ends, or to Needs you if something is left, on your computer, the web and your phone, even with the window closed. Actions already stuck this way sort themselves out once you've opened this version. Nothing for you to tidy.
+
 - **Company model costs, now visible** — Settings → Usage now shows costs for new turns on models your organization provides. Your organization still covers them; this isn't a new charge to you. Earlier missing costs stay missing. Better receipts, same bill payer.
 <!-- detail: Company-managed Fireworks pricing now accepts the documented default serving-mode name. Usage groups organization-paid costs separately from out-of-pocket costs. -->
 
