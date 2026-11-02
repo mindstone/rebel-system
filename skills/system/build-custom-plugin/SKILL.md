@@ -146,7 +146,7 @@ See [plugin-ui.md](references/plugin-ui.md) for props and usage, including [Char
 9. **Lifecycle management** — use `rebel.lifecycle.registerInterval()` instead of raw `setInterval()`
 10. **Unicode in JSX text** — use actual characters or `{'\u2190'}`, not `\uXXXX` escape sequences in JSX text
 11. **React keys in lists** — always use unique string/number keys in `.map()` calls (e.g., `key={item.id}`). Never pass an object as a key.
-12. **Never use filesystem `Edit` / `Write` on plugin source files** — always use `rebel_plugins_create`. Direct filesystem edits bypass compile validation, trigger space-safety approval loops, and are blocked by the safety hook. This applies even when the plugin has been copied to a Space.
+12. **Never use filesystem `Edit` / `Write` on plugin source files** — always use `rebel_plugins_create`. Direct filesystem edits skip its compile check and live reload, and each one is checked as a separate write. This applies even when the plugin has been copied to a Space.
 
 See [constraints.md](references/constraints.md) for the full list with rationale.
 
