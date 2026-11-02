@@ -10,13 +10,21 @@ What's new in Rebel. We ship fast, so there's always something.
 
 - **Rebel can check back later** — Ask Rebel to check a report or reply again later; an hourglass beside the conversation shows when, with Wake now to check sooner and Cancel to stop. It runs with Cloud Continuity, or while Rebel is open on your computer: patience, delegated.
 
+- **Keep what Rebel shows you** — When Rebel draws a chart, table or dashboard in a conversation, press **Save as app** under it, or ask Rebel in your own words to save it, and it's kept as an app in your Library. Find your apps under **Library** → **Apps**. Each one shows when it was saved and which Space it's in, and links back to the conversation it came from. Ask Rebel to change an app and it updates that one rather than making a copy. An app keeps the figures from the moment you saved it; for the latest figures, ask Rebel to update it. On the web and on your phone, an app opens as plain text with its figures, without the chart, for now. Separately, the services you connect Rebel to, like Gmail or Slack, used to be called "connected apps" in a few places; they're now **Connectors** everywhere, as in **Settings** → **Connectors**. Nothing to reconnect.
+
 - **Your reply can carry on in your cloud** — With cloud continuity and an updated cloud, close the laptop or lose the connection and a running reply can continue there. A model that runs only on your computer waits for it unless you choose a hosted fallback.
 
 ### Improvements
 
+- **Every save gets the same safety check** — When Rebel saves a file in a conversation, it now goes through the same safety check as any other action, instead of a separate one for memory. When a save needs your OK, it waits in the notification drawer. If Rebel changes the file again before you decide, the waiting copy updates, and **Allow** saves the latest version, so nothing has to be redone. Your [Safety Rules](rebel://settings/safety#safetyRules) gain one default line: Rebel asks before changing a skill someone else made. And in Privacy Mode, Rebel doesn't save anything from the conversation to its memory afterwards. Simpler, and just as careful.
+
 - **Email addresses with somewhere to go** — Tap or click an email address in a reply and a new email opens in your mail app, on your phone and your computer. On the phone, call and text-message links work too. Copy and paste can have the afternoon off.
 
-- **Fewer introductions to the same tools** — Rebel remembers connector tools used earlier in a conversation, so follow-up requests spend less time looking them up again.
+- **Fewer introductions to the same tools** — Within a conversation, Rebel now remembers how to use the apps you've connected once it has used them, so follow-up requests get going sooner.
+
+- **Your phone, a little more honest** — If Rebel can't read your Actions, the phone now says so and keeps the list it had, rather than showing an empty one. Home waits until your conversations have loaded before saying there are none. Step titles keep their meaning ("Send it." stays "Send it", and "Book the room (Tuesday)" keeps its Tuesday, here and on your computer), and a plan's goal in Details shows in full. On Android, the back and home buttons stay visible when you switch between light and dark. Notifications you turn on in your phone's settings start working when you come back to Rebel. Tab labels at the largest text size get a little room, and Home's buttons are read aloud with the words written on them. Small things; we noticed.
+
+- **No more microphone nagging** — If you skipped voice when you set up Rebel, it no longer shows a microphone notice every time it opens. The first time you use voice, Rebel asks for the microphone. If you've turned the microphone off, or Rebel can't reach your Library folder, you still get a notice. Quiet is allowed.
 
 - **Automation questions, easier to find** — When a scheduled automation running on your computer asks a question, it now appears in the notification bell as it arrives. Click it to go to the question; answering clears the notification. Less hide-and-seek.
 
@@ -36,6 +44,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 - **Automations wait out a busy spell** — When your company's AI provider is busy, scheduled automations can now spend up to 15 minutes retrying, so more of them finish. Results may turn up later, and a really long busy spell can still make a run fail. Chats are unchanged. Patience is a virtue; we automated it.
 
+- **Your finish line survives the paperwork** — When Rebel couldn't save part of a conversation and you settle it by picking a saved answer, a finish line you set while it was stuck is now kept instead of quietly lost. Anything else still waiting to be saved stays put, and Rebel tells you so. One decision shouldn't cost you another.
+
 - **A little breathing room** — When storage runs low, Rebel clears its own leftovers and starts a conversation with one suggestion. Your files stay your call.
 
 - **Accounts and keys, each in their place** - **Settings → Agent & Voice** now separates **Your AI accounts** from **Your API keys**, and each row says what it does and who pays. One **Add an account or key** button covers both, and **Models from your accounts and keys** follows the same split. Less detective work before the actual work.
@@ -48,7 +58,7 @@ What's new in Rebel. We ship fast, so there's always something.
 
 - **One set of rules for terminal commands** — When Rebel runs a command in your computer's terminal, the same rules now apply whatever kind of computer you use. Everyday commands, like listing a folder, just run. Riskier ones, like deleting or moving files, sending data elsewhere, running downloaded code or using a password or key you've given Rebel, are checked against your [Safety Rules](rebel://settings/safety#safetyRules) first, and Rebel asks you if the check has a concern (or, for the riskiest ones, can't give an answer). The "Rebel can't check this command" warning is gone, and a terminal command that names a folder you've [blocked](rebel://settings/safety#approvalAuthorityLedger), or anything in it, is refused too. The "Extra safety checks" switch in Settings has retired: it only added checks to terminal commands, and they now get the right check by themselves, so you lose nothing. Same rules, fewer surprises.
 
-- **Smart picking reads the price tag** — When you add a model, whether Rebel can pick it for a step now depends on what it costs, not on how it thinks. Opus 5.5 and Sonnet 5.5, which cost less than Opus 5, now start ticked under **Rebel can pick it**; models that cost about twice as much or more to run, like Fable 5.1 and GPT-6 Astra, start unticked, even on a plan, where they use it up faster, and their row under [Your models](rebel://settings/agents#yourModels) now says why. Models you added earlier keep the tick you gave them, so if you'd like Rebel to pick one, tick it there. Thrifty, not stingy.
+- **Every model you add can be picked** — With Smart picking on, Rebel chooses which of your models handles each step of a task. A model you add now starts with its **Rebel can pick it** box ticked, however much it costs to run (dearer models use more of your plan or your pay-per-use credit). Before, some models started unticked, including Opus 5.5 and Sonnet 5.5. There's nothing you need to do: models you already have keep the setting they have now, and if you'd rather Rebel didn't choose a model, untick its box in Settings, under [Your models](rebel://settings/agents#yourModels). Your call, not ours.
 
 - **Your OK travels; the work stays put** — Approvals, held automation actions, memory saves and folder requests waiting on your computer now show up on your phone and on the web. Answer there and your computer runs it, once. If your computer's asleep, they wait for it.
 
@@ -67,7 +77,16 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **No vanishing act at the finish** — In the Rebel app on your phone, a reply could disappear for an instant just as it finished, then fade back. It now stays on screen. Rebel has given up the dramatic pause.
+
+- **Custom connectors get to the point** — When you add one, Rebel tries it and starts sign-in if needed, instead of quizzing you first. If sign-in can't start, it says so rather than leaving you waiting.
+
+- **You asked for it, so it doesn't ask you** — Rebel sometimes stopped to ask your permission for something you'd already asked it to do, only because it guessed it might not work, such as making a video you'd asked for. Now it just goes ahead, and if something doesn't work, Rebel sees the error and can try to fix it. It still checks with you first when an action could send or share something with people you didn't mean, expose something private, or go against what you said.
+- **Send means send** — Clicking Send on a connected app's card now approves that one action. Background tool requests use your usual rules and approvals. Submit on Rebel's own forms goes straight in, and the Connected app permissions section has left Settings. One permission system was plenty.
+
 - **When Chrome isn't there** — Rebel can use Chrome on your computer to browse websites for you. If Chrome isn't installed, Rebel now says so in its reply instead of hunting around your computer for it, and gets on with the rest of the job. Install Chrome and ask again if you want the browsing done too.
+
+- **Finished Actions actually finish** — An Action could finish its work but stay in Queued, and Rebel wouldn't let you complete or archive it. Now it moves to Done when Rebel's reply ends, or to Needs you if something is left, on your computer, the web and your phone, even with the window closed. Actions already stuck this way sort themselves out once you've opened this version. Nothing for you to tidy.
 
 - **Company model costs, now visible** — Settings → Usage now shows costs for new turns on models your organization provides. Your organization still covers them; this isn't a new charge to you. Earlier missing costs stay missing. Better receipts, same bill payer.
 <!-- detail: Company-managed Fireworks pricing now accepts the documented default serving-mode name. Usage groups organization-paid costs separately from out-of-pocket costs. -->
