@@ -42,7 +42,7 @@ When a tool action needs your OK, the approval card shows what Rebel wants to do
 
 The reason and option descriptions use plain language — no technical jargon. You'll see clear explanations of what Rebel wants to do and why it's asking.
 
-Memory saves have their own buttons, covered in the two memory tables below. In short: you allow the save or decline it, and some saves also offer **Allow writes here** for the rest of the conversation. A staged file that was paused by your Safety Rules can also show **Allow and remember…** in its preview.
+Saves have their own buttons, covered in the two tables below. A save to one of your Spaces that needs your approval waits as a staged file. A save outside your Library asks on a card, which can also offer **Allow writes here** for the rest of the conversation. A staged file that was paused by your Safety Rules can also show **Allow and remember…** in its preview.
 
 The choices depend on the action and why Rebel paused. Some requests only offer a one-time decision. Saved tool permissions do not add written Safety Rules, and other safety checks can still stop an action.
 
@@ -56,9 +56,9 @@ Approval cards are built to be readable at a glance, so you're making a real dec
 
 The single fastest safety check is usually "is that the destination — or the file — I think it is?" The card is designed to answer that in a second.
 
-### Memory write approvals (staged files)
+### Saves waiting for your approval (staged files)
 
-When Rebel stages a file for your review before saving to memory:
+When a save to one of your Spaces needs your approval, it waits in the notification drawer as a staged file. If Rebel changes the same file again before you decide, the change goes into the waiting version, and **Allow** saves the latest one. Nothing has to be redone.
 
 | Option | What it means |
 |--------|--------------|
@@ -67,9 +67,9 @@ When Rebel stages a file for your review before saving to memory:
 | **Allow and remember…** | In the preview, when your Safety Rules paused the save: publish, and adjust the rule that flagged it. |
 | The file name | Click it to preview the content or changes before deciding. |
 
-### Memory write approvals (direct writes)
+### Saves outside your Library
 
-When Rebel asks about a direct memory write:
+When Rebel asks before saving a file outside your Library:
 
 | Option | What it means |
 |--------|--------------|
@@ -90,7 +90,7 @@ Your saving preferences are lines in your [Safety Rules](rebel://settings/safety
 
 Rebel normally saves routine notes to private Spaces without asking. A rule that names a Space or destination adds a check, even when the rule permits saving there. Team and shared Spaces are checked against your rules and the Space's description. If the check can't give an answer, a routine save to a team Space still goes ahead while you're chatting. An automation's save also goes ahead and is noted under **Recent activity** in Privacy & Safety. A memory update Rebel makes in the background waits for you. If your rules name that Space, or it's shared outside the company, Rebel asks you first whenever the check can't answer.
 
-If you had set a Space to always ask before saving, that choice is now a line in your Safety Rules, and the safety check follows it. [Privacy Mode](rebel://library/rebel-system%2Fhelp-for-humans%2Fprivacy-mode.md) keeps saves waiting for your approval.
+If you had set a Space to always ask before saving, that choice is now a line in your Safety Rules, and the safety check follows it. In [Privacy Mode](rebel://library/rebel-system%2Fhelp-for-humans%2Fprivacy-mode.md), saves get the same checks, and Rebel doesn't add anything from that conversation to its memory afterwards.
 
 For **shared spaces**, Rebel's built-in checks for passwords and keys run alongside your Safety Rules. If one spots something credential-shaped, the approval card says what it noticed.
 
@@ -108,7 +108,7 @@ Some actions are considered inherently safe and run without prompting:
 - **Read-only operations** — Searching, listing, and retrieving data from connectors
 - **Web search** — Looking things up online
 - **Writing to temporary files** — Scratch work that doesn't touch your important data
-- **Tools with standing permission** — These can skip the approval card while your other protections allow it. A saved Always stays in place when a tool's safety rating changes; **Everything from [app]** still covers only the level you approved. Checked levels still inspect every request, the highest level never offers standing permission, and [Privacy Mode](library://rebel-system/help-for-humans/privacy-mode.md) suspends automatic use.
+- **Tools with standing permission** — These can skip the approval card while your other protections allow it. A saved Always stays in place when a tool's safety rating changes; **Everything from [app]** still covers only the level you approved. Checked levels still inspect every request, the highest level never offers standing permission, and standing permission still applies in [Privacy Mode](library://rebel-system/help-for-humans/privacy-mode.md).
 - **Built-in safe tools** — Operations that are safe by design
 
 These skip the approval flow so you're not interrupted by routine lookups.
