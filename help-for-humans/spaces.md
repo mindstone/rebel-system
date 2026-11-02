@@ -78,10 +78,11 @@ These are different things:
 - Best for regular collaboration inside Rebel
 
 ### Public file sharing
-- Shares **one file only**
+- Shares a dated, read-only **saved copy of one file**
 - Requires [Cloud Continuity](cloud-continuity-and-mobile.md)
 - Can include an optional **password** and **expiry**
 - Does **not** give access to the rest of the space
+- Ongoing folder sync doesn't change the shared copy. Choose **Update link** to replace it at the same address, or **Stop sharing** to end the link.
 
 So yes: a file can live inside a shared team space *and* also be sent out as a separate public link. Different jobs, different tools.
 

@@ -8,6 +8,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Highlights
 
+- **Shared links, with a date and a point of view** — Shared links now keep a dated, read-only snapshot that draws the charts, tables, tracked changes, mind maps and other views from your conversation; saved apps can share their views too. Choose **Latest result** for your last finished reply, its views and the files you choose, with the request that led to it, or **The whole conversation** for every message so far, with its views. **Update link** replaces the saved copy at the same address; **Stop sharing** ends it. Your audience gets the version you meant to send. A modest ambition, now realised.
+
 - **Rebel can check back later** — Ask Rebel to check a report or reply again later; an hourglass beside the conversation shows when, with Wake now to check sooner and Cancel to stop. Rebel may also arrange one itself when it's waiting on something, and each check-back counts as ordinary usage. It runs with Cloud Continuity, or while Rebel is open on your computer: patience, delegated.
 
 - **Rebel on your Apple Watch** — A watch app with exactly two buttons: **Record meeting** and **Talk to Rebel**. Tap Record meeting and your notes arrive in Rebel afterwards. Tap Talk to Rebel, say what's on your mind, and your words start a new conversation, waiting for you on your phone or computer. The watch signs in through Rebel on your iPhone, and if it can't send yet it keeps your recording and tries again. To install it, update Rebel on your iPhone, open the iPhone's **Watch** app, and tap **Install** next to Rebel under **Available Apps**. Reading replies on a watch screen was never going to end well, so it doesn't try.
@@ -70,8 +72,6 @@ What's new in Rebel. We ship fast, so there's always something.
 - **A finish line is there to be reached** — Rebel now uses its full allowance to keep working toward your finish line. If it stops before confirming it's met, it says so and asks whether to carry on. No quiet exit through the gift shop.
 
 - **Email addresses with somewhere to go** — Tap or click an email address in a reply and a new email opens in your mail app, on your phone and your computer. On the phone, call and text-message links work too. Copy and paste can have the afternoon off.
-
-- **Fewer introductions to the same tools** — Within a conversation, Rebel now remembers how to use the apps you've connected once it has used them, so follow-up requests get going sooner.
 
 - **Automation questions, easier to find** — When a scheduled automation running on your computer asks a question, it now appears in the notification bell as it arrives. Click it to go to the question; answering clears the notification. Less hide-and-seek.
 
