@@ -16,7 +16,7 @@ For the five-paragraph version of what saying yes or no actually does, see [The 
 ## The Short Version
 
 - **Safety Rules** decide which actions Rebel can take automatically and which ones need your approval
-- **Trusted tools** skip routine approval prompts unless [Privacy Mode](library://rebel-system/help-for-humans/privacy-mode.md) is on
+- **Trusted tools** skip routine approval prompts, in [Privacy Mode](library://rebel-system/help-for-humans/privacy-mode.md) too
 - **Saving preferences live in Safety Rules** — your previous Space choices have moved there as editable lines.
 - **System permissions** like microphone or screen recording are separate from tool approvals
 
@@ -74,7 +74,7 @@ Reading doesn't give permission to save or edit outside Rebel's folders. Rebel a
 
 ## Privacy Mode
 
-For extra-sensitive conversations, enable **Privacy Mode** from the conversation header. Reading files follows the rules above in Private chats too.
+For extra-sensitive conversations, turn on **Private mode** from the session settings menu in the message box. Reading files follows the rules above in Private chats too.
 
 See [privacy-mode.md](library://rebel-system/help-for-humans/privacy-mode.md) for details.
 
