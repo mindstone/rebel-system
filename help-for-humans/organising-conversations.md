@@ -21,6 +21,16 @@ When you've finished with a conversation, right-click it in the sidebar (or use 
 
 Changed your mind? Open the **Done** tab, find it, and choose **Reopen**. It comes straight back to Active. Done conversations stay completely usable in the meantime: open, rename, star, or delete them like any other.
 
+## When Rebel checks back later
+
+Waiting for a report or a reply? Ask Rebel to check again at a later time, for example, “Check whether the report is ready in ten minutes.” Rebel pauses, then returns to the same conversation to do that check — a check-back. No need to sit and watch it wait.
+
+An **hourglass beside the conversation** means a check-back is waiting; the time is when Rebel plans to return. On your computer, hover over that conversation in the list to see when and why; on the web, click the hourglass. On your phone, tap the hourglass or long-press the conversation. Choose **Wake now** to check sooner, or **Cancel** to stop the check-back. Inside the conversation, a card beside Rebel's scheduling message has the same controls. If the conversation is busy, Wake now waits for that work to finish. A conversation marked Done won't check back.
+
+If you've connected [Cloud Continuity](rebel://library/rebel-system%2Fhelp-for-humans%2Fcloud-continuity-and-mobile.md), Rebel's cloud copy runs check-backs even with your computer closed. Otherwise, the Rebel app needs to stay open on this computer; if it's closed or the computer is asleep, Rebel checks back when the app is running again.
+
+Turning Cloud Continuity on in Settings cancels check-backs waiting on this computer. Using **Forget** in your cloud settings disconnects this computer and attempts to cancel the cloud's pending check-backs. You'll see a cancellation line in the affected conversations; send a message to arrange another check-back. **Forgetting a cloud doesn't shut it down**: it keeps running, and if Rebel couldn't reach it to cancel, a check-back may still happen there.
+
 ## Folders
 
 Folders group related conversations — a project, a client, a recurring topic.
