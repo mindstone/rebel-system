@@ -1,5 +1,5 @@
 ---
-description: "Organising the conversations sidebar: folders, the Active / Starred / Done / All tabs, marking conversations done, and the inline Done (N) folder group"
+description: "Organising the conversations sidebar: folders, the Active / Starred / Done / All tabs, marking conversations done, the inline Done (N) folder group, and check-backs with an hourglass"
 ---
 
 # Organising your conversations
@@ -23,13 +23,15 @@ Changed your mind? Open the **Done** tab, find it, and choose **Reopen**. It com
 
 ## When Rebel checks back later
 
-Waiting for a report or a reply? Ask Rebel to check again at a later time, for example, “Check whether the report is ready in ten minutes.” Rebel pauses, then returns to the same conversation to do that check — a check-back. No need to sit and watch it wait.
+Waiting for a report or a reply? Ask Rebel to check again at a later time, for example, “Check whether the report is ready in ten minutes.” Rebel pauses, then returns to the same conversation to do that check — a check-back. Rebel may also set one itself when it's waiting on something. Each check-back counts as ordinary usage. No need to sit and watch it wait.
 
-An **hourglass beside the conversation** means a check-back is waiting; the time is when Rebel plans to return. On your computer, hover over that conversation in the list to see when and why; on the web, click the hourglass. On your phone, tap the hourglass or long-press the conversation. Choose **Wake now** to check sooner, or **Cancel** to stop the check-back. Inside the conversation, a card beside Rebel's scheduling message has the same controls. If the conversation is busy, Wake now waits for that work to finish. A conversation marked Done won't check back.
+An **hourglass beside the conversation** means a check-back is waiting; the time is when Rebel plans to return. On your computer, hover over that conversation in the list to see when and why; on the web, click the hourglass. On your phone, tap the hourglass or long-press the conversation. Choose **Wake now** to check sooner, or **Cancel** to stop the check-back. Inside the conversation, a card beside Rebel's scheduling message has the same controls. If Rebel is already working in that conversation, Wake now waits for that work to finish. While a conversation is marked Done, it won't check back.
 
-If you've connected [Cloud Continuity](rebel://library/rebel-system%2Fhelp-for-humans%2Fcloud-continuity-and-mobile.md), Rebel's cloud copy runs check-backs even with your computer closed. Otherwise, the Rebel app needs to stay open on this computer; if it's closed or the computer is asleep, Rebel checks back when the app is running again.
+After 10 check-backs in a row without a word from you, Rebel stops and asks you to send a message before it can arrange another.
 
-Turning Cloud Continuity on in Settings cancels check-backs waiting on this computer. Using **Forget** in your cloud settings disconnects this computer and attempts to cancel the cloud's pending check-backs. You'll see a cancellation line in the affected conversations; send a message to arrange another check-back. **Forgetting a cloud doesn't shut it down**: it keeps running, and if Rebel couldn't reach it to cancel, a check-back may still happen there.
+If you've connected [Cloud Continuity](rebel://library/rebel-system%2Fhelp-for-humans%2Fcloud-continuity-and-mobile.md), Rebel's cloud copy runs check-backs even with your computer closed. A conversation you've chosen to keep on this computer can't get a check-back while Cloud Continuity is on. With Cloud Continuity off, the Rebel app needs to stay open on this computer; if it's closed or the computer is asleep, Rebel checks back when the app is running again.
+
+Turning Cloud Continuity on in Settings cancels check-backs waiting on this computer. Using **Forget cloud on this device**, removing your cloud or switching to another cloud also asks Rebel to cancel the cloud's pending check-backs. When cancellation succeeds, you'll see a cancellation line in the affected conversations; send a message to arrange another check-back. If Rebel can't reach the cloud then, you won't see a line and a check-back may still happen on that cloud. **Forgetting a cloud doesn't shut it down**: the cloud machine keeps running.
 
 ## Folders
 
