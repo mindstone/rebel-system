@@ -12,6 +12,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Improvements
 
+- **Your phone, a little more honest** — If Rebel can't read your Actions, the phone now says so and keeps the list it had, rather than showing an empty one. Home waits until your conversations have loaded before saying there are none. Step titles keep their meaning ("Send it." stays "Send it", and "Book the room (Tuesday)" keeps its Tuesday, here and on your computer), and a plan's goal in Details shows in full. On Android, the back and home buttons stay visible when you switch between light and dark. Notifications you turn on in your phone's settings start working when you come back to Rebel. Tab labels at the largest text size get a little room, and Home's buttons are read aloud with the words written on them. Small things; we noticed.
+
 - **Automation questions, easier to find** — When a scheduled automation running on your computer asks a question, it now appears in the notification bell as it arrives. Click it to go to the question; answering clears the notification. Less hide-and-seek.
 
 - **Long meeting transcripts get read to the end** — Before saving a long meeting transcript or a note from an automation, Rebel now checks all of it against your safety rules, not just the opening stretch. If something later on breaks a rule, Rebel holds the save for your OK. Automations also stop waiting for your approval just because an edit is long, unless one single change in it is very large.
