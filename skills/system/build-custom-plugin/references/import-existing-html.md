@@ -104,4 +104,4 @@ When the user later asks to modify a plugin that uses this pattern:
 3. Edit the TSX in your response — modify the relevant numbered section of `pageHtml` and leave the rest untouched.
 4. Call `rebel_plugins_create` with the **same exact id** and the full updated source.
 
-**Do NOT use filesystem `Edit` / `Write` on the plugin's `index.tsx` file**, even when the plugin has been copied to a Space (`work/<space>/plugins/<id>/index.tsx`). Direct filesystem writes are blocked by the safety hook and trigger redundant approval prompts; `rebel_plugins_create` is the one supported update path.
+**Do NOT use filesystem `Edit` / `Write` on the plugin's `index.tsx` file**, even when the plugin has been copied to a Space (`work/<space>/plugins/<id>/index.tsx`). Direct filesystem writes skip its compile check and live reload, and each one is checked as a separate write; `rebel_plugins_create` is the one supported update path.
