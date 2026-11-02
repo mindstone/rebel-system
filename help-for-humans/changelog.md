@@ -69,6 +69,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **Safety Rules that turn up by themselves** — When you set up Rebel on another computer and your Safety Rules (your rules for when Rebel should check with you first) can't come over from your Mindstone Cloud straight away, Rebel now keeps trying by itself until they arrive. Nothing for you to do.
+
 - **Good keys, less suspicion** — Test on an Anthropic model now checks your key the way a chat uses it, so a perfectly good key stops getting called bad.
 
 - **You asked for it, so it doesn't ask you** — Rebel sometimes stopped to ask your permission for something you'd already asked it to do, only because it guessed it might not work, such as making a video you'd asked for. Now it just goes ahead, and if something doesn't work, Rebel sees the error and can try to fix it. It still checks with you first when an action could send or share something with people you didn't mean, expose something private, or go against what you said.
