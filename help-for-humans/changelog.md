@@ -8,6 +8,10 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Highlights
 
+- **Rebel on your Apple Watch** — A watch app with exactly two buttons: **Record meeting** and **Talk to Rebel**. Tap Record meeting and your notes arrive in Rebel afterwards. Tap Talk to Rebel, say what's on your mind, and your words start a new conversation, waiting for you on your phone or computer. The watch signs in through Rebel on your iPhone, and if it can't send yet it keeps your recording and tries again. To install it, update Rebel on your iPhone, open the iPhone's **Watch** app, and tap **Install** next to Rebel under **Available Apps**. Reading replies on a watch screen was never going to end well, so it doesn't try.
+
+- **Rebel on your Wear OS watch** — The same two buttons, and nothing else, on Wear OS watches. It signs in through Rebel on your Android phone, so sign in there first. To install it, open the **Play Store** on your watch and install Rebel.
+
 - **Keep what Rebel shows you** — When Rebel draws a chart, table or dashboard in a conversation, press **Save as app** under it, or ask Rebel in your own words to save it, and it's kept as an app in your Library. Find your apps under **Library** → **Apps**. Each one shows when it was saved and which Space it's in, and links back to the conversation it came from. Ask Rebel to change an app and it updates that one rather than making a copy. An app keeps the figures from the moment you saved it; for the latest figures, ask Rebel to update it. On the web and on your phone, an app opens as plain text with its figures, without the chart, for now. Separately, the services you connect Rebel to, like Gmail or Slack, used to be called "connected apps" in a few places; they're now **Connectors** everywhere, as in **Settings** → **Connectors**. Nothing to reconnect.
 
 - **Your reply can carry on in your cloud** — With cloud continuity and an updated cloud, close the laptop or lose the connection and a running reply can continue there. A model that runs only on your computer waits for it unless you choose a hosted fallback.
