@@ -65,7 +65,7 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Improvements
 
-- **A finish line is there to be reached** — Rebel now uses its full allowance to keep working toward your finish line. If it stops before confirming it's met, it says so and asks whether to carry on. No quiet exit through the gift shop.
+- **A finish line is there to be reached** — When your finish line isn't met yet, Rebel now keeps working toward it for up to three more tries (ten in Unleashed mode). If it still stops short, it says so and asks whether to carry on. No more slipping out the side door.
 
 - **Email addresses with somewhere to go** — Tap or click an email address in a reply and a new email opens in your mail app, on your phone and your computer. On the phone, call and text-message links work too. Copy and paste can have the afternoon off.
 
