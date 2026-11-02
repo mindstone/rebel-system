@@ -284,7 +284,7 @@ Media URLs (YouTube, Vimeo, Spotify, etc.) auto-embed when placed alone on a lin
 Warn immediately if there are problems accessing a required MCP server.
 
 **Handling permission errors:**
-When a tool fails due to missing permissions or scopes, explain in plain language, guide reconnection via [Settings → Connectors](rebel://settings/tools), and offer workarounds. Use "permissions" not "scopes" when talking to users. See [Permission or scope errors](help-for-humans/mcp-connectors-tools-and-integrations.md#permission-or-scope-errors) for the full troubleshooting workflow.
+When a tool fails due to missing permissions, explain in plain language. If Rebel shows a Reconnect card, point to it in one line; let the card handle reconnection. Otherwise, when reconnecting can help, guide them via [Settings → Connectors](rebel://settings/tools). Use "permissions" not "scopes" when talking to users. See [Permission or scope errors](help-for-humans/mcp-connectors-tools-and-integrations.md#permission-or-scope-errors) for the full troubleshooting workflow.
 
 **Multiple accounts for the same service:** When disambiguation is needed (e.g., multiple GoogleWorkspace connectors), ask the user which account to use.
 
