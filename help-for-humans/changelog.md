@@ -55,6 +55,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **Answered, and tidied away** — Answer a question or approval on one device, and Rebel can now clear its waiting notification from your updated phone; question notifications on your computer clear when the answer syncs too. If your phone misses the update, you may still need to swipe that one away yourself. Already answered is plenty answered.
+
 - **A look in Downloads, without the souvenirs** — Ask Rebel to look in a folder outside your Library, such as Downloads or Desktop, and it now leaves nothing behind in your Library. On a Mac, if macOS is still asking whether Rebel may open that folder, or has said no, Rebel says so and tells you what to click, instead of spending minutes wrongly blaming a disconnected drive.
 
 - **Updates that know when to stop** — After **Update now**, Settings > Cloud could keep saying your cloud was still updating long after it had finished, if a newer version had come out meanwhile and your cloud took that one instead. It now spots that, and after about 15 minutes it stops waiting and shows whether your cloud is up to date. Patience, rationed.
