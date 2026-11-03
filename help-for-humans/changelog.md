@@ -21,6 +21,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Improvements
 
+- **A reply that knows when to carry on** — If your computer stops mid-reply and your cloud carries on, Rebel's own low-risk steps and saves to your Library or a private Space can now keep going. Changes that could repeat for other people or services still wait. If your cloud can't confirm it has your latest files, it says "Waiting for your computer." and waits before carrying on. Patience, where it helps.
+
 - **The author gets a say** — Edit someone else's skill in a shared Space and Rebel sends your changes as a suggestion for its recorded owner. On the desktop, click the notification bell (**Show notifications**) and look under **Skill updates** in **Notifications** to review it. In Spaces shared through Rebel, which have manager roles, a Space manager can decide too; elsewhere only the owner can decide. Accept updates the shared skill; Decline leaves it alone. Managers' own edits and edits to older skills with no recorded owner still save directly. Reopen the skill to carry on with your suggestion, or ask Rebel for a personal version. The old “confirm your own edits” step has retired. A modest improvement to the separation of powers.
 
 - **Same question, one answer** — When Rebel stops to check with you before doing the same thing several times in one go (say, transcribing three recordings), your phone and the web now show one question with a count, like ×3, and why Rebel is asking, written once. Your answer, yes or no, applies to all of them. To answer some differently, tap ⋯ (More) on the question and answer each one on its own. Three identical questions were two too many.
