@@ -35,7 +35,7 @@ Each tier includes a curated set of models. You can see exactly which ones in **
 
 If you pick a model outside your tier mid-conversation, Rebel switches to an included one and says so ("Your plan runs on … Using it for this one.") rather than stopping with an error. Need frontier-class models? **Upgrade to Rogue** from the same settings section. Full behaviour is in [AI models](rebel://library/rebel-system%2Fhelp-for-humans%2FAI-models.md#picking-a-model-outside-your-plan).
 
-A Mindstone plan is **in use** when its row under **Your AI accounts** says **In use**; having a subscription alone is not enough. While it is in use, paid models from your other accounts and API keys use your plan's allowance first, then their own paid connection when the allowance runs out. Models supplied by the plan use its allowance. Local services stay on your computer, ChatGPT subscription models use your ChatGPT plan, and company-managed models stay company-paid. An organisation's OpenRouter connection still uses the Mindstone allowance first while that plan is in use.
+A Mindstone plan is **in use** when its row in **Settings → Agent & Voice** says **In use**; having a subscription alone is not enough. While it is in use, paid models from your other accounts and API keys use your plan's allowance first, then their own paid connection when the allowance runs out. Models supplied by the plan use its allowance. Local services stay on your computer, ChatGPT subscription models use your ChatGPT plan, and company-managed models stay company-paid. An organisation's OpenRouter connection still uses the Mindstone allowance first while that plan is in use.
 
 ## Plans for a whole company
 
@@ -62,7 +62,7 @@ After checkout, Rebel provisions your AI automatically. You may briefly see *"Yo
 
 ## Your monthly allowance
 
-Once you're on a plan, open **Plan details and subscription** on your plan's row under **Your AI accounts** in [Settings → Agent & Voice](rebel://settings/agents). The **Monthly allowance** meter shows roughly how much of your allowance you've used this month, as a simple percentage.
+Once you're on a plan, open **Plan details and subscription** on your plan's row in [Settings → Agent & Voice](rebel://settings/agents). The **Monthly allowance** meter shows roughly how much of your allowance you've used this month, as a simple percentage.
 
 - **It resets on the 1st of each calendar month** — *not* on your subscription's renewal day. Those two dates are deliberately different, so your first reset may land sooner than your next bill. Rebel flags this the first time so it isn't a surprise.
 - **Rebel nudges you as you get close.** As you approach your allowance, you'll get a gentle heads-up so there's no silent cliff-edge.
@@ -70,7 +70,7 @@ Once you're on a plan, open **Plan details and subscription** on your plan's row
 
 ## Managing your plan
 
-Under **Your AI accounts**, open **Plan details and subscription** on your Mindstone plan row. You'll find (if your plan comes from a company arrangement, your company's admins handle changes instead — there's no personal billing to manage):
+In **Settings → Agent & Voice**, open **Plan details and subscription** on your Mindstone plan row. You'll find (if your plan comes from a company arrangement, your company's admins handle changes instead — there's no personal billing to manage):
 
 - **Manage subscription** — opens the billing portal in your browser, where you can update your payment method, view invoices, or cancel.
 - **Upgrade to Rogue** — moves a Dash plan up to Rogue.
