@@ -70,7 +70,7 @@ Your conversation history is organised into sections:
 | Section | What's there |
 |---|---|
 | **Starred** | Starred conversations (always at top) |
-| **Active** | Recent and ongoing conversations you're working on (not automation runs) |
+| **Active** | Recent and ongoing conversations within your Show choice |
 | **Done** | Older conversations you have finished or explicitly marked as done |
 | **Trash** | Deleted conversations awaiting permanent removal |
 
@@ -84,7 +84,7 @@ To do that: use the conversation menu and select **Mark as done**.
 
 To bring it back: find it in **Done** and select **Reopen**.
 
-**Automation runs aren't Active.** Scheduled or event-triggered runs stay out of **Active** — and out of pinned tabs, unread counts, and the "active" lists on Homepage and mobile — so your sidebar reflects *your* conversations, not background jobs Rebel kicked off on its own. Open them from [Automations](rebel://automations) run history, or find them in the **All** tab. They can still appear in **Starred** or **Done** if you put them there; they just won't masquerade as Active while they run.
+The conversation filter's **Show** choice starts on **Your conversations**. Choose **Messages** for Slack threads, **Automations** for automation runs, **Meeting recaps** for recaps, or **All conversations** to see them together. Show applies in every tab, including **All**. A count beside a choice shows how many conversations need you. You can also open each automation run from its history in [Automations](rebel://automations).
 
 ## Quick reference
 

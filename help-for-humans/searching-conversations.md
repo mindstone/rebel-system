@@ -40,7 +40,7 @@ Use the **recency filters** to narrow the search itself:
 
 The time filter narrows the actual search, not just the handful of results shown — so a time-boxed search surfaces far more of what's genuinely in that window. Need a broader pass? **Search all messages** scans deeper across the whole window (up to the result cap). Recent conversations are boosted in results too, so your latest work appears first even when searching broadly.
 
-Automation runs are searchable as well — switch the history filter to **Automations** to search across them.
+Search follows the conversation filter's **Show** choice. It starts on **Your conversations**; choose **Messages** for Slack threads, **Automations** for automation runs, **Meeting recaps** for recaps, or **All conversations** to search them together. A count beside a choice shows how many conversations need you.
 
 ### Direct Navigation
 
