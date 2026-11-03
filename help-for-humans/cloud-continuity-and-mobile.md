@@ -1,6 +1,6 @@
 ---
 description: "How to set up cloud continuity so Rebel works on your phone, tablet, or browser — step-by-step setup, pairing, privacy, limitations, and troubleshooting"
-last_updated: "2026-10-30"
+last_updated: "2026-11-02"
 ---
 
 # Cloud Continuity: Use Rebel on Your Phone, Tablet, or Browser
@@ -27,7 +27,7 @@ When you enable cloud continuity, Rebel keeps a secure cloud copy of the Rebel d
 
 - **Phone and tablet**: Open the Rebel mobile app and continue working away from your desk
 - **Browser**: Open your cloud address in a browser and carry on there too
-- **Automations that never sleep**: Scheduled automations set to **Runs on → Cloud** run on your cloud instance around the clock — even with your laptop closed, and no mobile app required
+- **Scheduled automations**: each runs on **This computer** or **My cloud**. With your cloud up to date, it can run This computer automations while your computer sleeps, and My cloud ones run there so your computer does less. During a cloud outage they wait and run when it's back, if there's still time. Chat on web or phone puts new automations in your cloud. See [Automations](library://rebel-system/help-for-humans/automations.md) for the details.
 - **Desktop stays in charge**: Your desktop app is still the main control point, but cloud continuity keeps a synced copy available elsewhere
 
 Your local desktop copy stays intact. Cloud continuity adds a cloud copy so your conversations, Actions, files, and related Rebel state can continue across devices. Some credentials also sync so your cloud instance can work on your behalf. See **Privacy and Data** below for the details that matter.

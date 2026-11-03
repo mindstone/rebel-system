@@ -21,7 +21,7 @@ To save a service and reuse it for several models:
 
 1. Open [Settings → Agent & Voice](rebel://settings/agents), then choose **Add an account or key** → **Connect your own AI service**.
 2. Enter a **Name**, the service's address in **Base URL**, and an **API Key** if needed. Choose **Save**.
-3. Under **Your API keys and connections**, choose **Add model** on that service's row.
+3. In **Settings → Agent & Voice**, choose **Add model** on that service's row.
 4. Enter a **Name** and the exact **Model ID** your service expects. The address and saved key come from the service you chose.
 5. Choose **Test now**, then **Add**.
 
