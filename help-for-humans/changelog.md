@@ -79,7 +79,7 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
-- **A clear way to reconnect** — A connector whose sign-in has run out now shows a Reconnect card instead of sitting silently "not connected". Connectors renew their sign-in by themselves where the service allows it.
+- **A clear way to reconnect** — A connector whose sign-in has run out now shows a Reconnect card instead of sitting silently "not connected". Once reconnected, it renews its sign-in by itself where the service allows it.
 
 - **When Chrome isn't there** — Rebel can use Chrome on your computer to browse websites for you. If Chrome isn't installed, Rebel now says so in its reply instead of hunting around your computer for it, and gets on with the rest of the job. Install Chrome and ask again if you want the browsing done too.
 
