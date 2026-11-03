@@ -55,6 +55,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **Offline, honestly** — After your connection dropped, reopening Rebel could show the offline notice twice and keep saying you were offline once you were back. Now there's one notice, worded so it stays true, and a reply that never finished no longer claims its work was preserved or asks you to rate it.
+
 - **No more silent treatment** — If Rebel on your computer hit a problem before answering you, the web and your phone could show only your message, as though it had been ignored. Now they say Rebel stopped, and **Try again** sends your message again.
 
 - **PDFs go by their name** — A PDF preview's title bar now shows the file's name (or the PDF's own title, if it has one) instead of the whole path to it on your computer. Your folder layout stays off the shared screen.
