@@ -152,6 +152,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 - **No vanishing act at the finish** — In the Rebel app on your phone, a reply could disappear for an instant just as it finished, then fade back. It now stays on screen. Rebel has given up the dramatic pause.
 
+- **Duplicate files, no more guessing** — Ask Rebel which files are duplicates and it now answers in seconds from its usual storage check, instead of searching through your Library for a quarter of an hour. It only suggests deleting a file once it has confirmed the file is identical to another. If it couldn't finish checking two large files, it offers to compare them in full, says how long that may take, and asks before it starts. Looking alike isn't the same as being the same.
+
 - **You asked for it, so it doesn't ask you** — Rebel sometimes stopped to ask your permission for something you'd already asked it to do, only because it guessed it might not work, such as making a video you'd asked for. Now it just goes ahead, and if something doesn't work, Rebel sees the error and can try to fix it. It still checks with you first when an action could send or share something with people you didn't mean, expose something private, or go against what you said.
 - **Send means send** — Clicking Send on a connected app's card now approves that one action. Background tool requests use your usual rules and approvals. Submit on Rebel's own forms goes straight in, and the Connected app permissions section has left Settings. One permission system was plenty.
 
