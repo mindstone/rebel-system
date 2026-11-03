@@ -83,6 +83,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **Clearer AI connection headings** — Settings and the model list now say which connections run your everyday work and which power more models. Your Anthropic key stays in the everyday list, marked **API key**.
+
 - **Quitting no longer eats your last sentence** — If you typed in a Library document and quit Rebel a moment later, what you had just typed could be lost without a warning. Rebel now finishes saving your open documents before it quits. Your parting words, kept.
 
 - **When Chrome isn't there** — Rebel can use Chrome on your computer to browse websites for you. If Chrome isn't installed, Rebel now says so in its reply instead of hunting around your computer for it, and gets on with the rest of the job. Install Chrome and ask again if you want the browsing done too.
