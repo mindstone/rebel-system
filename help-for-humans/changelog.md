@@ -51,6 +51,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **Connections keep their place** — If Rebel can't read your saved Microsoft 365 or Slack connection list, it leaves your sign-ins untouched and asks you to try again. Connections that still need setup now say so, with a hint to try reconnecting in Settings on your computer. Ready should mean ready.
+
 - **Clearer AI connection headings** — Settings and the model list now say which connections run your everyday work and which power more models. Your Anthropic key stays in the everyday list, marked **API key**.
 
 - **Quitting no longer eats your last sentence** — If you typed in a Library document and quit Rebel a moment later, what you had just typed could be lost without a warning. Rebel now finishes saving your open documents before it quits. Your parting words, kept.
