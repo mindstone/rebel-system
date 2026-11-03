@@ -81,6 +81,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 - **A clear way to reconnect** — A connector whose sign-in has run out now shows a Reconnect card instead of sitting silently "not connected". Connectors renew their sign-in by themselves where the service allows it.
 
+- **Safety Rules that turn up by themselves** — When you set up Rebel on another computer and your Safety Rules (your rules for when Rebel should check with you first) can't come over from your Mindstone Cloud straight away, Rebel now keeps trying by itself until they arrive. Nothing for you to do.
+
 - **Automations carry on after a dropped connection** — If your internet connection dropped partway through an automation running on your computer, the automation could stop and show as failed, even after doing most of its work. Now Rebel keeps the work done so far and continues the automation from there by itself; nothing for you to do. Its conversation then ends with the finished answer, not a connection error. If your connection is still down when Rebel continues, the automation stops and shows as failed, as before. Unfinished business, finished.
 
 - **Good keys, less suspicion** — Test on an Anthropic model now checks your key the way a chat uses it, so a perfectly good key stops getting called bad.
