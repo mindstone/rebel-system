@@ -14,6 +14,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Improvements
 
+- **The author gets a say** — Edit someone else's skill in a shared Space and Rebel sends your changes as a suggestion for its recorded owner. On the desktop, click the notification bell (**Show notifications**) and look under **Skill updates** in **Notifications** to review it. In Spaces shared through Rebel, which have manager roles, a Space manager can decide too; elsewhere only the owner can decide. Accept updates the shared skill; Decline leaves it alone. Managers' own edits and edits to older skills with no recorded owner still save directly. Reopen the skill to carry on with your suggestion, or ask Rebel for a personal version. The old “confirm your own edits” step has retired. A modest improvement to the separation of powers.
+
 - **Email addresses with somewhere to go** — Tap or click an email address in a reply and a new email opens in your mail app, on your phone and your computer. On the phone, call and text-message links work too. Copy and paste can have the afternoon off.
 
 - **Automation questions, easier to find** — When a scheduled automation running on your computer asks a question, it now appears in the notification bell as it arrives. Click it to go to the question; answering clears the notification. Less hide-and-seek.
