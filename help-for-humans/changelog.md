@@ -22,7 +22,7 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Improvements
 
-- Your conversations now have the list to themselves. Slack threads, automation runs and meeting recaps wait behind the filter, with a small count when one needs you, on desktop, phone and web.
+- **Your conversations, first** — Slack threads, automation runs and meeting recaps now wait behind the filter button, under **Show**, with a small count when one of them needs you. Your own conversations open first, on desktop, phone and web.
 
 - **Clearer step lists** — While Rebel works on a request, **Details** lists what it's aiming for and each step. Those steps now read like everyday to-dos, such as "Read your Q3 plan", instead of notes Rebel wrote for itself. Only the wording changed; Rebel does the same work.
 
