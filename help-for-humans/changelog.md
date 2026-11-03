@@ -82,6 +82,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **Automations tell it straight** — Unfinished runs say **Didn't finish**, questions say **Asked you a question**, and notices name the automation. A question is not a catastrophe.
+
 - **When Chrome isn't there** — Rebel can use Chrome on your computer to browse websites for you. If Chrome isn't installed, Rebel now says so in its reply instead of hunting around your computer for it, and gets on with the rest of the job. Install Chrome and ask again if you want the browsing done too.
 
 - **Links in your documents go where they should** — A closing quote, long dash or the Japanese 。 straight after a web address in a Library document no longer gets swept into the link, so clicking it opens the right page. Links already saved with the wrong address stay as they are, in case you meant them.

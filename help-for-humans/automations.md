@@ -133,8 +133,9 @@ These are the current status labels to know:
 | **Pending** | Waiting for its turn |
 | **Running** | Currently in progress |
 | **Completed** | Finished successfully |
+| **Asked you a question** | Asked for your answer in its conversation |
 | **Some actions held back** | Finished, but some actions still needed review or were blocked |
-| **Failed** | Something went wrong |
+| **Didn't finish** | Couldn't complete its work; open the conversation for the reason |
 | **Blocked by security** | Stopped because approvals or safety rules blocked it |
 | **Cancelled** | Stopped before completion |
 
