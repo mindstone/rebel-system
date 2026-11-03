@@ -61,7 +61,7 @@ Most of the time, this is what you actually want.
 
 Go to **[Settings → Agent & Voice](rebel://settings/agents)**.
 
-Under **Your AI accounts**, choose **Add an account or key** to sign in with ChatGPT or OpenRouter, paste an API key, or connect your own AI service. To switch accounts, choose **Use for everyday work** on an account's row. You can also update saved credentials from the row's menu.
+In **Settings → Agent & Voice**, choose **Add an account or key** to sign in with ChatGPT or OpenRouter, paste an API key, or connect your own AI service. To switch accounts, choose **Use for everyday work** on an account's row. You can also update saved credentials from the row's menu.
 
 ### Connectors and tools
 
