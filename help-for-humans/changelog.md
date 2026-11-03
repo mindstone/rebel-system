@@ -51,7 +51,7 @@ What's new in Rebel. We ship fast, so there's always something.
 
 - **Quitting no longer eats your last sentence** — If you typed in a Library document and quit Rebel a moment later, what you had just typed could be lost without a warning. Rebel now finishes saving your open documents before it quits. Your parting words, kept.
 
-- **A clear way to reconnect** — A connector whose sign-in has run out now shows a Reconnect card instead of sitting silently "not connected". Connectors renew their sign-in by themselves where the service allows it.
+- **A clear way to reconnect** — A connector whose sign-in has run out now shows a Reconnect card instead of sitting silently "not connected". Once reconnected, it renews its sign-in by itself where the service allows it.
 
 - **Duplicate files, no more guessing** — Ask Rebel which files are duplicates and it now answers in seconds from its usual storage check, instead of searching through your Library for a quarter of an hour. It only suggests deleting a file once it has confirmed the file is identical to another. If it couldn't finish checking two large files, it offers to compare them in full, says how long that may take, and asks before it starts. Looking alike isn't the same as being the same.
 
@@ -74,6 +74,9 @@ What's new in Rebel. We ship fast, so there's always something.
 ### Highlights
 
 - **Keep what Rebel shows you** — When Rebel draws a chart, table or dashboard in a conversation, press **Save as app** under it, or ask Rebel in your own words to save it, and it's kept as an app in your Library. Find your apps under **Library** → **Apps**. Each one shows when it was saved and which Space it's in, and links back to the conversation it came from. Ask Rebel to change an app and it updates that one rather than making a copy. An app keeps the figures from the moment you saved it; for the latest figures, ask Rebel to update it. On the web and on your phone, an app opens as plain text with its figures, without the chart, for now. Separately, the services you connect Rebel to, like Gmail or Slack, used to be called "connected apps" in a few places; they're now **Connectors** everywhere, as in **Settings** → **Connectors**. Nothing to reconnect. A saved app keeps what Rebel made, not edits typed into a draft card; the fix is on its way.
+
+<!-- feature: pinned-views | detail: One chart, table or dashboard can be pinned per conversation; pinning another unpins the first, which stays in the conversation where it was. The pin follows the conversation to your other devices, and Rebel's replies stay in the conversation as usual. -->
+- **Keep a chart in sight** — Press **Pin** under a chart, table or dashboard Rebel drew, and it stays on screen while you keep talking: beside the conversation when Rebel's window is wide, above it when it's narrow. Drag its edge to resize it, and when you ask Rebel to update it, it changes in place. On your phone and the web, it sits in a bar at the top of the conversation; tap it to open. No more scrolling back up to find it.
 
 - **Your reply can carry on in your cloud** — With cloud continuity and an updated cloud, close the laptop or lose the connection and a running reply can continue there. A model that runs only on your computer waits for it unless you choose a hosted fallback.
 
