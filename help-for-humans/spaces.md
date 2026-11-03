@@ -78,10 +78,11 @@ These are different things:
 - Best for regular collaboration inside Rebel
 
 ### Public file sharing
-- Shares **one file only**
+- Shares a dated, read-only **saved copy of one file**
 - Requires [Cloud Continuity](cloud-continuity-and-mobile.md)
 - Can include an optional **password** and **expiry**
 - Does **not** give access to the rest of the space
+- Ongoing folder sync doesn't change the shared copy. Choose **Update link** to replace it at the same address, or **Stop sharing** to end the link.
 
 So yes: a file can live inside a shared team space *and* also be sent out as a separate public link. Different jobs, different tools.
 
@@ -132,7 +133,7 @@ Your saving preferences are lines in your [Safety Rules](rebel://settings/safety
 
 Rebel normally saves routine notes to private Spaces without asking. A rule that names a Space or destination adds a check, even when the rule permits saving there. Team and shared Spaces are checked against your rules and the Space's description. If the check can't give an answer, a routine save to a team Space still goes ahead while you're chatting. An automation's save also goes ahead and is noted under **Recent activity** in Privacy & Safety. A memory update Rebel makes in the background waits for you. If your rules name that Space, or it's shared outside the company, Rebel asks you first whenever the check can't answer.
 
-If you had set a Space to always ask before saving, that choice is now a line in your Safety Rules, and the safety check follows it. [Privacy Mode](rebel://library/rebel-system%2Fhelp-for-humans%2Fprivacy-mode.md) keeps saves waiting for your approval.
+If you had set a Space to always ask before saving, that choice is now a line in your Safety Rules, and the safety check follows it. In [Privacy Mode](rebel://library/rebel-system%2Fhelp-for-humans%2Fprivacy-mode.md), saves get the same checks, and Rebel doesn't add anything from that conversation to its memory afterwards.
 
 ## Grouping spaces by organisation
 
