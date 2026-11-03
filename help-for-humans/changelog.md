@@ -71,6 +71,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **Attachments make the trip** — Attaching a file stored in your Library through a connector that takes files now works when cloud continuity is on, up to 50 MB in total for one send. Files linked in from elsewhere still can't be attached this way. The rest come along for the ride.
+
 - **Automations carry on after a dropped connection** — If your internet connection dropped partway through an automation running on your computer, the automation could stop and show as failed, even after doing most of its work. Now Rebel keeps the work done so far and continues the automation from there by itself; nothing for you to do. Its conversation then ends with the finished answer, not a connection error. If your connection is still down when Rebel continues, the automation stops and shows as failed, as before. Unfinished business, finished.
 
 - **Good keys, less suspicion** — Test on an Anthropic model now checks your key the way a chat uses it, so a perfectly good key stops getting called bad.
