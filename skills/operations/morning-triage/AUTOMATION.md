@@ -133,6 +133,7 @@ For items with Linear/GitHub/Asana references:
 Log: N new items created, M items enriched, K items archived. Be brief.
 
 ## Rules
+- **If a source fails, process the others and say what you skipped.**
 - **Only update/archive with HIGH confidence.** When in doubt, leave unchanged.
 - **Use structured data, not the visual app UI.** Actions state must come from `rebel_inbox_list`, `rebel_inbox_query`, and `rebel_inbox_update`. Do not use `rebel_navigate_app`, `rebel_get_app_screenshot`, screenshot-capture skills, or any live UI inspection to understand Actions.
 - **Do NOT archive user-request items** — the user explicitly added them.

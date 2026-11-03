@@ -30,6 +30,8 @@ Once enabled, Rebel detects your video meetings (Zoom, Google Meet, or Microsoft
 
 The notetaker joins as a participant, records the conversation, and saves a transcript to your workspace when the meeting ends.
 
+While a meeting is being recorded by the notetaker, your phone, your watch or another computer, it shows as in progress at the top of Rebel on your computer and in the green bar on your phone. Open its notes from either place once it has them.
+
 **Open-source build:** The managed notetaker above isn't included there — you install a local recorder add-on instead. See [The Open Build — The meeting recorder](library://rebel-system/help-for-humans/fair-source-and-open-source-build.md#the-meeting-recorder) for the one-time **Set up recorder** flow in [Settings → Meetings](rebel://settings/meetings).
 
 
@@ -197,7 +199,7 @@ Rebel is more accurate about this now — trying to send a notetaker no longer h
 
 When the meeting ends:
 
-1. **Transcript saved** — Open the meeting file in **Library → Chief of Staff** for the transcript link. If you had no prep, Rebel creates the meeting file after a call with the notetaker or Rebel's desktop recording.
+1. **Transcript saved** — Open the meeting file in **Library → Chief of Staff** for the transcript link. If you had no prep, Rebel creates the meeting file after a call with the notetaker, Rebel's desktop recording, or a recording from your phone or watch.
 2. **AI summary generated** — Key points, action items, decisions, and participants extracted
 3. **Action item created** — Review the analysis in your Rebel Actions
 
@@ -274,7 +276,7 @@ Transcripts are routed to your spaces based on meeting type:
 
 Configure routing in **Settings → Meetings → Transcript Storage**.
 
-Either way, an existing meeting file in **Library → Chief of Staff** links to the transcript. For a meeting with the notetaker or Rebel's desktop recording, Rebel creates that file after the call if you had no prep.
+Either way, an existing meeting file in **Library → Chief of Staff** links to the transcript. For a meeting with the notetaker, Rebel's desktop recording, or a recording from your phone or watch, Rebel creates that file after the call if you had no prep.
 
 
 ## Recording In-Person Meetings
