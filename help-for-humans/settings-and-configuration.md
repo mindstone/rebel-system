@@ -45,7 +45,7 @@ Inside **Agent & Voice** you'll find accounts and keys, model choices under **Cu
 
 Use **Settings → Agent & Voice** for:
 
-- **Accounts and API keys**: **Your AI accounts** shows the accounts and plans that can power everyday work, plus your Anthropic key. Each row says what it does and who pays. Other keys sit in **Your API keys**, with the number of models added from each and an **Add model** button. The title becomes **Your API keys and connections** if you connect TrustedRouter or your own AI service. Use **Add an account or key** below the cards to sign in, add a key, connect your own service, or choose a [Mindstone plan](rebel://library/rebel-system%2Fhelp-for-humans%2Fmindstone-plans-and-billing.md). Your connections stay saved between sessions.
+- **Accounts and API keys**: **AI for everyday work** shows the accounts and plans that can power everyday work, plus your Anthropic key, labelled **API key**. Each row says what it does and who pays. Other keys sit in **Keys for more models**, with the number of models added from each and an **Add model** button. The title becomes **Keys and connections for more models** if you connect TrustedRouter or your own AI service. Use **Add an account or key** below the cards to sign in, add a key, connect your own service, or choose a [Mindstone plan](rebel://library/rebel-system%2Fhelp-for-humans%2Fmindstone-plans-and-billing.md). Your connections stay saved between sessions.
 - **Thinking / Working / Background models** — open **Customise** to choose which model plans, works, and handles behind-the-scenes tasks
 - **Company-managed models** — if your company sets your team's models, you'll see a "Set by {your company}" note where a choice was made for you; see [AI models](library://rebel-system/help-for-humans/AI-models.md#if-your-company-manages-your-models)
 - **Fallbacks** — in **Customise**, choose backup models if your primary choice is unavailable
@@ -55,7 +55,7 @@ Use **Settings → Agent & Voice** for:
 - **File indexing** — GPU acceleration and the quick link to Library indexing controls
 - **Learned model limits** — Rebel remembers what it learns about each model's effective context-window limit on your specific setup, so you don't have to re-establish the boundary after restarts or app updates
 - **Daily recommendations** — controls when Rebel generates daily recommendations for you. Three modes: **Ask** (shows a prompt card on your Homepage so you can trigger recommendations on demand), **Automatic** (Rebel generates recommendations daily on its own), or **Off** (disabled entirely)
-- **Backups**: in **Your AI accounts**, choose which accounts Rebel can use when your main one is busy or hits a limit, and set their order. There is one Backup list; the separate keys card has none. See [AI models](rebel://library/rebel-system%2Fhelp-for-humans%2FAI-models.md#backup-connections).
+- **Backups**: in **Settings → Agent & Voice**, choose which connections Rebel can use when your main one is busy or hits a limit, and set their order. There is one Backup list; the separate keys card has none. See [AI models](rebel://library/rebel-system%2Fhelp-for-humans%2FAI-models.md#backup-connections).
 
 See [AI models](library://rebel-system/help-for-humans/AI-models.md) for the full model guide.
 
