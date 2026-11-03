@@ -32,6 +32,8 @@ When you enable cloud continuity, Rebel keeps a secure cloud copy of the Rebel d
 
 Your local desktop copy stays intact. Cloud continuity adds a cloud copy so your conversations, Actions, files, and related Rebel state can continue across devices. Some credentials also sync so your cloud instance can work on your behalf. See **Privacy and Data** below for the details that matter.
 
+Rebel can also [check back on a conversation later](rebel://library/rebel-system%2Fhelp-for-humans%2Forganising-conversations.md#when-rebel-checks-back-later), even with your computer closed; that guide explains the hourglass and what happens to check-backs when you forget, remove or switch your cloud.
+
 
 ---
 
