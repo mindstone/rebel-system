@@ -1,28 +1,30 @@
 ---
-description: "Privacy Mode keeps memory saves waiting for your approval and makes Rebel ask before riskier actions whenever its safety check is unsure. Ideal for sensitive conversations or client work."
+description: "Privacy Mode keeps a conversation out of Rebel's memory and makes Rebel ask before riskier actions whenever its safety check is unsure — ideal for sensitive conversations or client work."
 ---
 
 # Privacy Mode
 
-Privacy Mode is a switch for sensitive work that applies to one conversation at a time. Notes Rebel would normally save to its memory on its own (what it keeps in your Spaces for later chats) wait for your OK, and it's more cautious with riskier actions. Everyday things, like reading files and searching, carry on without interruptions.
+Privacy Mode is a switch for sensitive work that applies to one conversation at a time. Rebel doesn't learn from the conversation automatically, and it's more cautious with riskier actions. Everyday things, like reading files and searching, carry on without interruptions.
 
 ## When to use it
 
 Turn on Privacy Mode when you're working with:
 - **Sensitive information** — client data, contracts, confidential projects
 - **Unfamiliar territory** — new tools or integrations you want to understand first
-- **Shared Spaces** — when you want to approve each note Rebel saves
+- **Shared workspaces** — when you want extra control over what gets written or modified
 
 ## How to enable it
 
-In the message box where you type, click the **Session settings** button (the sliders icon), then switch on **Private mode**. The first time, Rebel confirms that Private mode is on.
+In the message box where you type, click the **Session settings** button (the sliders icon), then switch on **Private mode**.
+
+The first time you turn it on, Rebel confirms: "Private mode on. Rebel uses its strictest safety checks and won't learn from this chat automatically."
 
 ## What happens when it's on
 
-- **Memory saves wait for you.** Rebel doesn't learn from a Private chat on its own: the notes it would normally save by itself wait for your approval, even in Spaces that normally save automatically.
+- **Nothing learned automatically.** Rebel doesn't save anything from the conversation to its memory afterwards. If you ask it to save or remember something, it saves that like any other file, with the same checks.
 - **Riskier actions get a second look.** Before a riskier action, such as sending an email, Rebel automatically checks it against your Safety Rules (the instructions you write in Settings → Privacy & Safety), as it always does. Sometimes that check can't give a clear answer. A normal chat can then let a medium-risk action go ahead; a Private chat asks you first. [Security and Tool Safety](security-and-tool-safety.md) explains the risk levels.
 - **Everyday actions still just happen.** Low-risk actions, like reading, listing and searching files or looking things up, run without asking, as in any chat, unless one of your Safety Rules names them.
-- **Your saved choices still count.** An action you've chosen to always allow on an approval card still runs without asking, and anything you've blocked still never runs.
+- **Your earlier choices still count.** Permissions you've already given, such as **Always** or **for this chat**, still apply, and so do blocks.
 - **The conversation stays yours.** You can't share a link to a Private conversation or ask teammates from it.
 
 ### You can still approve actions
@@ -42,7 +44,7 @@ So Rebel still sees your client data in a Private chat; what changes is what it 
 
 ## When to turn it off
 
-Once you're done with the sensitive work, toggle Private mode off. Rebel's own memory saves go back to following your Safety Rules.
+Once you're done with the sensitive work, turn Privacy Mode off to go back to your normal settings.
 
 ---
 
