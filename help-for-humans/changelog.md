@@ -82,6 +82,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **Connections keep their place** — If Rebel can't read your saved Microsoft 365 or Slack connection list, it leaves your sign-ins untouched and asks you to try again. Connections that still need setup now say so, with a hint to try reconnecting in Settings on your computer. Ready should mean ready.
+
 - **Quitting no longer eats your last sentence** — If you typed in a Library document and quit Rebel a moment later, what you had just typed could be lost without a warning. Rebel now finishes saving your open documents before it quits. Your parting words, kept.
 
 - **When Chrome isn't there** — Rebel can use Chrome on your computer to browse websites for you. If Chrome isn't installed, Rebel now says so in its reply instead of hunting around your computer for it, and gets on with the rest of the job. Install Chrome and ask again if you want the browsing done too.
