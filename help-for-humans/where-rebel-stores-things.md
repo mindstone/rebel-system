@@ -99,14 +99,14 @@ When Cloud Continuity is enabled, Rebel can sync a cloud copy of:
 
 For the full picture, read [Cloud Continuity and Mobile](cloud-continuity-and-mobile.md).
 
-## Shared links use the cloud copy
+## Shared links keep a saved copy
 
-When you share a conversation or a library file publicly, the link is served from the **cloud copy**, not directly from your laptop.
+When you share a conversation or a Library file publicly, Rebel saves a dated snapshot on your own cloud. The person opening the link sees that read-only copy, with **Snapshot from** and its date, without needing Rebel.
 
-That means:
-- the person opening the link sees the latest **cloud-synced** version
-- public sharing requires Cloud Continuity for files
-- if Cloud Continuity is disconnected, existing links only reflect the last synced version until syncing is turned back on again
+- **Latest result** shares your last finished reply, its views and the files you choose, with the request that led to it. You can untick files before sharing.
+- **The whole conversation** shares every message so far, with its views. Files aren't included.
+- Public sharing requires [Cloud Continuity](cloud-continuity-and-mobile.md). Syncing a file or continuing a conversation doesn't update its shared copy; choose **Update link** to replace the copy at the same address.
+- **Stop sharing** ends the link and removes its shared copies, not your originals. Deleting a file from your Library won't remove a copy included with a Latest result link.
 
 ## Your conversations are safe
 

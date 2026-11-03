@@ -8,29 +8,52 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Highlights
 
+- **Shared links, with a date and a point of view** — Shared links now keep a dated, read-only snapshot that draws the charts, tables, tracked changes, mind maps and other views from your conversation; saved apps can share their views too. Choose **Latest result** for your last finished reply, its views and the files you choose, with the request that led to it, or **The whole conversation** for every message so far, with its views. **Update link** replaces the saved copy at the same address; **Stop sharing** ends it. Your audience gets the version you meant to send. A modest ambition, now realised.
+
 - **Rebel can check back later** — Ask Rebel to check a report or reply again later; an hourglass beside the conversation shows when, with Wake now to check sooner and Cancel to stop. Rebel may also arrange one itself when it's waiting on something, and each check-back counts as ordinary usage. It runs with Cloud Continuity, or while Rebel is open on your computer: patience, delegated.
 
 - **Rebel on your Apple Watch** — A watch app with exactly two buttons: **Record meeting** and **Talk to Rebel**. Tap Record meeting and your notes arrive in Rebel afterwards. Tap Talk to Rebel, say what's on your mind, and your words start a new conversation, waiting for you on your phone or computer. The watch signs in through Rebel on your iPhone, and if it can't send yet it keeps your recording and tries again. To install it, update Rebel on your iPhone, open the iPhone's **Watch** app, and tap **Install** next to Rebel under **Available Apps**. Reading replies on a watch screen was never going to end well, so it doesn't try.
 
 - **Rebel on your Wear OS watch** — The same two buttons, and nothing else, on Wear OS watches. It signs in through Rebel on your Android phone, so sign in there first. To install it, open the **Play Store** on your watch and install Rebel.
+- **The notetaker gets a second look** — If an invitation's answer gets lost, Rebel checks whether the notetaker joined and keeps its notes when it finds it. While Rebel can't check, it says so and keeps Stop available. The check never sends another notetaker.
+
+- **A failed step, explained** — Rebel names the reason when it knows why a step failed. When it doesn't, open **Details** to see the error on your computer, phone or browser. A little less mystery in the paperwork.
 
 ### Improvements
+
+- **The author gets a say** — Edit someone else's skill in a shared Space and Rebel sends your changes as a suggestion for its recorded owner. On the desktop, click the notification bell (**Show notifications**) and look under **Skill updates** in **Notifications** to review it. In Spaces shared through Rebel, which have manager roles, a Space manager can decide too; elsewhere only the owner can decide. Accept updates the shared skill; Decline leaves it alone. Managers' own edits and edits to older skills with no recorded owner still save directly. Reopen the skill to carry on with your suggestion, or ask Rebel for a personal version. The old “confirm your own edits” step has retired. A modest improvement to the separation of powers.
+
+- **Same question, one answer** — When Rebel stops to check with you before doing the same thing several times in one go (say, transcribing three recordings), your phone and the web now show one question with a count, like ×3, and why Rebel is asking, written once. Your answer, yes or no, applies to all of them. To answer some differently, tap ⋯ (More) on the question and answer each one on its own. Three identical questions were two too many.
 
 - **Clearer step lists** — While Rebel works on a request, **Details** lists what it's aiming for and each step. Those steps now read like everyday to-dos, such as "Read your Q3 plan", instead of notes Rebel wrote for itself. Only the wording changed; Rebel does the same work.
 
 - **The newest models, in the picker** — GPT-6.1 Sol and GPT-6.1 Terra arrive with an OpenAI key, a ChatGPT account and OpenRouter, and OpenRouter also gains GPT-6 Astra and GPT-6 Luna. Claude Haiku 5.5, Anthropic's newest and cheapest Claude, arrives with an Anthropic key and on OpenRouter. ChatGPT now starts new setups on GPT-6.1 Sol and moves a GPT-6 Sol that Rebel set up for you, with a one-time note; a model you chose yourself stays put. Usage costs for GPT-5.6 and Claude Sonnet 5.5 now match the providers' published prices, so they read lower. Newer, and cheaper than we thought.
 
-- **Newer image and video models** — OpenAI Image Generation now uses gpt-image-2.5 by default: quicker, cheaper at high quality, and it can finally do transparent backgrounds. Nano Banana moves to Google's current Gemini image models, with Nano Banana 2.1 as an option. Kling adds kling-v3 as an option (about twice the cost, so not the default), and Runway stops offering veo3, which Runway no longer accepts; veo3.1 is still there. If you picked a model yourself, that choice stays.
+- **The right explanation** — When your app and your cloud are on different versions, Rebel now says it needs an update instead of blaming your connection or your wording. The diagnosis has improved.
 
-- **No more microphone nagging** — If you skipped voice when you set up Rebel, it no longer shows a microphone notice every time it opens. The first time you use voice, Rebel asks for the microphone. If you've turned the microphone off, or Rebel can't reach your Library folder, you still get a notice. Quiet is allowed.
+- **A second pair of eyes** — You can now send images on a text-only model when the Thinking model on your connected OpenRouter account can read them. Delegation has its uses.
+
+- **Every save gets the same safety check** — When Rebel saves a file in a conversation, it now goes through the same safety check as any other action, instead of a separate one for memory. When a save needs your OK, it waits in the notification drawer. If Rebel changes the file again before you decide, the waiting copy updates, and **Allow** saves the latest version, so nothing has to be redone. Your [Safety Rules](rebel://settings/safety#safetyRules) gain one default line: Rebel asks before changing a skill someone else made. And in Privacy Mode, Rebel doesn't save anything from the conversation to its memory afterwards. Simpler, and just as careful.
 
 - **Fewer introductions to the same tools** — Within a conversation, Rebel now remembers how to use the apps you've connected once it has used them, so follow-up requests get going sooner.
 
+- **Your phone, a little more honest** — If Rebel can't read your Actions, the phone now says so and keeps the list it had, rather than showing an empty one. Home waits until your conversations have loaded before saying there are none. Step titles keep their meaning ("Send it." stays "Send it", and "Book the room (Tuesday)" keeps its Tuesday, here and on your computer), and a plan's goal in Details shows in full. On Android, the back and home buttons stay visible when you switch between light and dark. Notifications you turn on in your phone's settings start working when you come back to Rebel. Tab labels at the largest text size get a little room, and Home's buttons are read aloud with the words written on them. Small things; we noticed.
+
+- **No more microphone nagging** — If you skipped voice when you set up Rebel, it no longer shows a microphone notice every time it opens. The first time you use voice, Rebel asks for the microphone. If you've turned the microphone off, or Rebel can't reach your Library folder, you still get a notice. Quiet is allowed.
+
+- **Your cloud can take the automations** — Choose **This computer** or **My cloud** for scheduled work. With Cloud continuity and an updated cloud, your cloud can run it while this computer sleeps; each started run says where it ran. Rebel asks once where new automations should run, with an option to move existing ones. Change the default in Settings → Cloud. During a cloud outage, scheduled work waits and runs when it is back, if there is still time. Chat on web or phone puts new automations in your cloud, and says so if you ask for your computer. If this computer can't reach your cloud, its automations wait too. Even automation gets the occasional rain check.
+
+- **Your finish line survives the paperwork** — When Rebel couldn't save part of a conversation and you settle it by picking a saved answer, a finish line you set while it was stuck is now kept instead of quietly lost. Anything else still waiting to be saved stays put, and Rebel tells you so. One decision shouldn't cost you another.
+
 ### Fixes
 
-- **When Chrome isn't there** — Rebel can use Chrome on your computer to browse websites for you. If Chrome isn't installed, Rebel now says so in its reply instead of hunting around your computer for it, and gets on with the rest of the job. Install Chrome and ask again if you want the browsing done too.
+- **Clearer AI connection headings** — Settings and the model list now say which connections run your everyday work and which power more models. Your Anthropic key stays in the everyday list, marked **API key**.
 
-- **Links in your documents go where they should** — A closing quote, long dash or the Japanese 。 straight after a web address in a Library document no longer gets swept into the link, so clicking it opens the right page. Links already saved with the wrong address stay as they are, in case you meant them.
+- **Quitting no longer eats your last sentence** — If you typed in a Library document and quit Rebel a moment later, what you had just typed could be lost without a warning. Rebel now finishes saving your open documents before it quits. Your parting words, kept.
+
+- **A clear way to reconnect** — A connector whose sign-in has run out now shows a Reconnect card instead of sitting silently "not connected". Once reconnected, it renews its sign-in by itself where the service allows it.
+
+- **Duplicate files, no more guessing** — Ask Rebel which files are duplicates and it now answers in seconds from its usual storage check, instead of searching through your Library for a quarter of an hour. It only suggests deleting a file once it has confirmed the file is identical to another. If it couldn't finish checking two large files, it offers to compare them in full, says how long that may take, and asks before it starts. Looking alike isn't the same as being the same.
 
 - **Safety Rules that turn up by themselves** — When you set up Rebel on another computer and your Safety Rules (your rules for when Rebel should check with you first) can't come over from your Mindstone Cloud straight away, Rebel now keeps trying by itself until they arrive. Nothing for you to do.
 
@@ -38,9 +61,13 @@ What's new in Rebel. We ship fast, so there's always something.
 
 - **Good keys, less suspicion** — Test on an Anthropic model now checks your key the way a chat uses it, so a perfectly good key stops getting called bad.
 
+- **When Chrome isn't there** — Rebel can use Chrome on your computer to browse websites for you. If Chrome isn't installed, Rebel now says so in its reply instead of hunting around your computer for it, and gets on with the rest of the job. Install Chrome and ask again if you want the browsing done too.
+
 - **Finished Actions actually finish** — An Action could finish its work but stay in Queued, and Rebel wouldn't let you complete or archive it. Now it moves to Done when Rebel's reply ends, or to Needs you if something is left, on your computer, the web and your phone, even with the window closed. Actions already stuck this way sort themselves out once you've opened this version. Nothing for you to tidy.
 
 - **Back to a reply that already finished** — If Rebel finished a reply while you were in another conversation, going back could still show it as busy replying, and your next message sat in the queue for about 15 seconds before Rebel got it. Now the conversation shows the reply as done and your message goes straight to Rebel. Nothing for you to do; no more waiting on a reply that was already finished.
+
+- **Stop means stop** — Rebel no longer starts itself again from a waiting approval or question answer after you press Stop. Your answer stays saved; no encore.
 
 ## v0.4.99 — Nov 2, 2026
 
@@ -48,9 +75,16 @@ What's new in Rebel. We ship fast, so there's always something.
 
 - **Keep what Rebel shows you** — When Rebel draws a chart, table or dashboard in a conversation, press **Save as app** under it, or ask Rebel in your own words to save it, and it's kept as an app in your Library. Find your apps under **Library** → **Apps**. Each one shows when it was saved and which Space it's in, and links back to the conversation it came from. Ask Rebel to change an app and it updates that one rather than making a copy. An app keeps the figures from the moment you saved it; for the latest figures, ask Rebel to update it. On the web and on your phone, an app opens as plain text with its figures, without the chart, for now. Separately, the services you connect Rebel to, like Gmail or Slack, used to be called "connected apps" in a few places; they're now **Connectors** everywhere, as in **Settings** → **Connectors**. Nothing to reconnect. A saved app keeps what Rebel made, not edits typed into a draft card; the fix is on its way.
 
+<!-- feature: pinned-views | detail: One chart, table or dashboard can be pinned per conversation; pinning another unpins the first, which stays in the conversation where it was. The pin follows the conversation to your other devices, and Rebel's replies stay in the conversation as usual. -->
+- **Keep a chart in sight** — Press **Pin** under a chart, table or dashboard Rebel drew, and it stays on screen while you keep talking: beside the conversation when Rebel's window is wide, above it when it's narrow. Drag its edge to resize it, and when you ask Rebel to update it, it changes in place. On your phone and the web, it sits in a bar at the top of the conversation; tap it to open. No more scrolling back up to find it.
+
 - **Your reply can carry on in your cloud** — With cloud continuity and an updated cloud, close the laptop or lose the connection and a running reply can continue there. A model that runs only on your computer waits for it unless you choose a hosted fallback.
 
 ### Improvements
+
+- **Newer image and video models** — OpenAI Image Generation now uses gpt-image-2.5 by default: quicker, cheaper at high quality, and it can finally do transparent backgrounds. Nano Banana moves to Google's current Gemini image models, with Nano Banana 2.1 as an option. Kling adds kling-v3 as an option (about twice the cost, so not the default), and Runway stops offering veo3, which Runway no longer accepts; veo3.1 is still there. If you picked a model yourself, that choice stays.
+
+- **A finish line is there to be reached** — When your finish line isn't met yet, Rebel now keeps working toward it for up to three more tries (ten in Unleashed mode). If it still stops short, it says so and asks whether to carry on. No more slipping out the side door.
 
 - **Email addresses with somewhere to go** — Tap or click an email address in a reply and a new email opens in your mail app, on your phone and your computer. On the phone, call and text-message links work too. Copy and paste can have the afternoon off.
 
@@ -107,13 +141,21 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **Attachments make the trip** — Attaching a file stored in your Library through a connector that takes files now works when cloud continuity is on, up to 50 MB in total for one send. Files linked in from elsewhere still can't be attached this way. The rest come along for the ride.
+
+- **Automations carry on after a dropped connection** — If your internet connection dropped partway through an automation running on your computer, the automation could stop and show as failed, even after doing most of its work. Now Rebel keeps the work done so far and continues the automation from there by itself; nothing for you to do. Its conversation then ends with the finished answer, not a connection error. If your connection is still down when Rebel continues, the automation stops and shows as failed, as before. Unfinished business, finished.
+- **Links in your documents go where they should** — A closing quote, long dash or the Japanese 。 straight after a web address in a Library document no longer gets swept into the link, so clicking it opens the right page. Links already saved with the wrong address stay as they are, in case you meant them.
+
 - **No more false alarm about saving** — Every time you opened some conversations, a notice said a change hadn't saved, even though your work was already saved and nothing was lost. Now that notice goes away by itself the next time you open the conversation. If a change really hasn't saved, Rebel still keeps it safe and the notice stays. Either way, nothing for you to do here. An alarm should have something to be alarmed about.
 
 - **Continue now says what's missing** — If setup can't go further, the reason now appears right beside Continue, and a provider you've just added stays listed as saved. A button that ignores you is a poor way to start a relationship.
 
 - **No vanishing act at the finish** — In the Rebel app on your phone, a reply could disappear for an instant just as it finished, then fade back. It now stays on screen. Rebel has given up the dramatic pause.
 
+- **Duplicate files, no more guessing** — Ask Rebel which files are duplicates and it now answers in seconds from its usual storage check, instead of searching through your Library for a quarter of an hour. It only suggests deleting a file once it has confirmed the file is identical to another. If it couldn't finish checking two large files, it offers to compare them in full, says how long that may take, and asks before it starts. Looking alike isn't the same as being the same.
+
 - **You asked for it, so it doesn't ask you** — Rebel sometimes stopped to ask your permission for something you'd already asked it to do, only because it guessed it might not work, such as making a video you'd asked for. Now it just goes ahead, and if something doesn't work, Rebel sees the error and can try to fix it. It still checks with you first when an action could send or share something with people you didn't mean, expose something private, or go against what you said.
+- **Send means send** — Clicking Send on a connected app's card now approves that one action. Background tool requests use your usual rules and approvals. Submit on Rebel's own forms goes straight in, and the Connected app permissions section has left Settings. One permission system was plenty.
 
 - **The model list stops saying it failed while it's right there** — If you use your own Anthropic key, Settings > Models said Rebel couldn't load your list of AI models, even while it showed them, and it left out models that are new on your account. Now that warning appears only when no models are showing, and new models on your account are listed again. Nothing for you to do.
 
@@ -202,7 +244,9 @@ What's new in Rebel. We ship fast, so there's always something.
 
 - **A blank answer gets a second chance** — When a reply comes back empty, Rebel can try once more by itself if it has not done anything yet, and that second try no longer gets cut off partway. If the reply is still empty, you now get a **Try again** button instead of a conversation that just goes quiet. If Rebel had already done something, such as sending an email, the desktop app says **Start again** and warns that starting again may do it a second time.
 
-- **Fewer surprise conflict copies** — Rebel keeps a copy of your Library in Mindstone Cloud. When you changed a file only on this computer, it sometimes still put a second "conflict" copy of that file beside it, as if the cloud had changed it too. It no longer does, and there's nothing for you to do. When both sides really did change a file, Rebel's automatic merge of the two used to give up on longer files; now it handles them. Fewer twins, same files.
+- **Fewer surprise conflict copies** — Rebel keeps a copy of your Library in Mindstone Cloud. When you changed a file only on this computer, it sometimes still put a second "conflict" copy of that file beside it, as if the cloud had changed it too. It no longer does, and there's nothing for you to do. When both sides really did change a file, Rebel keeps both versions for you to review. Fewer twins, same files.
+
+- **Your words get a vote** — Daily tidy-ups leave different file versions for you to review before combining them. Scratchpad saves now ask when another edit arrives first.
 
 - **Send lets go** — When you start a new conversation, the message box now empties the moment you press Send, instead of still showing your message for a few seconds. If the message fails to send, your words come back in the box so you can try again.
 
