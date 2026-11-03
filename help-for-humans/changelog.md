@@ -85,6 +85,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 - **Good keys, less suspicion** — Test on an Anthropic model now checks your key the way a chat uses it, so a perfectly good key stops getting called bad.
 
+- **Duplicate files, no more guessing** — Ask Rebel which files are duplicates and it now answers in seconds from its usual storage check, instead of searching through your Library for a quarter of an hour. It only suggests deleting a file once it has confirmed the file is identical to another. If it couldn't finish checking two large files, it offers to compare them in full, says how long that may take, and asks before it starts. Looking alike isn't the same as being the same.
+
 - **You asked for it, so it doesn't ask you** — Rebel sometimes stopped to ask your permission for something you'd already asked it to do, only because it guessed it might not work, such as making a video you'd asked for. Now it just goes ahead, and if something doesn't work, Rebel sees the error and can try to fix it. It still checks with you first when an action could send or share something with people you didn't mean, expose something private, or go against what you said.
 
 - **Company model costs, now visible** — Settings → Usage now shows costs for new turns on models your organization provides. Your organization still covers them; this isn't a new charge to you. Earlier missing costs stay missing. Better receipts, same bill payer.
