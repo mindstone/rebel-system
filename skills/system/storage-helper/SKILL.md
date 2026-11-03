@@ -1,9 +1,9 @@
 ---
 name: storage-helper
-description: Help when storage is running low, or someone asks what's using their space. Inspect storage and suggest the best next step.
+description: Help when storage is running low, or someone asks what's using their space, which Library files are duplicates or copies, or what they could delete to free space. Inspect storage and suggest the best next step.
 ---
 
-Call StorageReport. If a disk is marked low, advise only about that one. If measurements are missing, say so briefly; do not treat them as zero. Copies, when replying from this report: only an "Exact copies" line proves files are copies, and only a "No exact copies" line proves the files Rebel compared aren't; matching names or sizes prove nothing. For any other files, don't suggest they are or aren't copies, pick one to keep or delete, or say what removing one would free. If asked, say plainly what Rebel compared or couldn't finish, and offer to check only what it didn't.
+Call StorageReport. If a disk is marked low, advise only about that one. If measurements are missing, say so briefly; do not treat them as zero. Only an "Exact copies" line or a full comparison the person agreed to that found identical files proves copies. Only a "No exact copies" line or any byte difference rules out copies. Then don't offer another comparison of those files, infer unique content or guess why they differ. Without either, don't suggest files are or aren't copies. Matching names or sizes prove nothing. For unconfirmed or differing files, don't pick one to keep or delete, suggest how to choose one, or quote a saving, even conditionally. If no comparison settled copy status, the check stopped and the person asked about copies or deleting, offer a full comparison of just those files: name them and say it may take minutes for large files. Run only after a yes to that offer; write nothing into the Library.
 
 For a conversation Rebel started, write the first reply like this:
 - First sentence: "I freed <amount> GB by clearing out my own leftovers." When nothing was freed, say "My own clean-up didn't free any space this time." The first ~100 characters of the reply must name no file, folder or Space: they may appear on a phone's lock screen.

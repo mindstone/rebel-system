@@ -36,13 +36,13 @@ What an organisation **cannot** currently do: push a shared set of Safety Rules,
 
 Most day-to-day consistency doesn't come from admin switches — it comes from **shared skills and shared spaces**, which work through ordinary cloud folders.
 
-A **skill** is a short set of instructions Rebel follows for a recurring task ("how we write a weekly update," "how we qualify a lead"). A **space** is a folder with its own memory, skills, and context. When a space lives in a shared cloud folder (a Google Shared Drive, a shared Dropbox or OneDrive folder, and so on), everyone who connects that same folder sees the same skills, the same memory, and the same way of doing things. Update the shared skill once, and everyone who has that folder picks up the change.
+A **skill** is a short set of instructions Rebel follows for a recurring task ("how we write a weekly update," "how we qualify a lead"). A **space** is a folder with its own memory, skills, and context. When a space lives in a shared cloud folder (a Google Shared Drive, a shared Dropbox or OneDrive folder, and so on), everyone who connects that same folder sees the same skills, the same memory, and the same way of doing things. Once the shared skill is updated, everyone who has that folder picks up the change.
 
 So the answer to "won't everyone drift into slightly different habits?" is: the shared parts — the skills and knowledge that define *how your team works* — live in one shared place, so they stay in step. Personalisation happens around the edges:
 
 - **Use a shared skill as-is**, and you get your team's version.
-- **Make it your own** with **Save as Copy** — that gives you a personal copy to tweak without changing everyone else's.
-- **Edit the shared one** and Rebel warns you first (especially if a colleague created it), and asks you to confirm before the change lands for the whole team — so nobody silently rewrites the team playbook.
+- **Make it your own** by asking Rebel for a personal version (a personal extension) — changes just for you, while everyone else keeps the shared version.
+- **Suggest changes to someone else's shared skill** by editing it in Rebel. Rebel automatically records who added a skill; that person is its owner and reviews suggestions in the desktop app: click the notification bell (**Show notifications**), then look under **Skill updates** in **Notifications**. In Spaces shared through Rebel, which have manager roles, Space managers can decide too; elsewhere only the owner can decide. Until accepted, the original stays as it is. Managers' own edits and edits to older skills with no recorded owner save directly. See [Using skills → Reviewing suggestions](rebel://library/rebel-system%2Fhelp-for-humans%2Fusing-skills.md#reviewing-suggestions) for the current limits.
 
 Because sharing runs on your cloud storage, who can see or edit a shared space is governed by that folder's permissions — the same access control you already use for files. (For the mechanics, see [Space shared folders](rebel://library/rebel-system%2Fhelp-for-humans%2Fspace-shared-folders.md).)
 
