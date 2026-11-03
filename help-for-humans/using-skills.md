@@ -1,6 +1,6 @@
 ---
 description: "How to find, use, and manage skills in Rebel, including built-in skills, Library browsing, and asking Rebel to add new ones"
-last_updated: "2026-04-16"
+last_updated: "2026-11-03"
 ---
 
 # Using Skills
@@ -25,11 +25,13 @@ There isn't a separate **Marketplace** tab in the current app. If you're looking
 
 This three-way split is what lets a team share a common way of working while still leaving room to personalise — the "base skills everyone shares, tweaked individually" idea.
 
-- **Built-in skills** are the common foundation Rebel ships with. You can't edit them in place, but you can **Save as Copy** and adjust the copy.
-- **Space skills** are how a *team* shares its own playbook. When a space lives in a shared cloud folder (a Google Shared Drive, shared Dropbox, etc.), everyone who connects that folder sees the same skills — so "how we write a weekly update" stays the same for the whole team. Update the shared skill once and everyone picks up the change.
+- **Built-in skills** are the common foundation Rebel ships with. You can't edit them in place, but you can ask Rebel for a personal version to customise.
+- **Space skills** are how a *team* shares its own playbook. When a space lives in a shared cloud folder (a Google Shared Drive, shared Dropbox, etc.), everyone who connects that folder sees the same skills — so "how we write a weekly update" stays the same for the whole team. Once the shared skill is updated, everyone picks up the change.
 - **Your Skills** are yours alone.
 
-**Customising a shared skill without disrupting others:** use **Save as Copy** to make a personal version you can change freely — the shared original is untouched. If you *do* edit the shared one directly, Rebel warns you first (especially if a teammate created it) and, for team skills, asks you to confirm before the change lands for everyone — so nobody silently rewrites the team's playbook. (More on team sharing in [Teams and admin controls](library://rebel-system/help-for-humans/teams-and-admin-controls.md).)
+**Customising a shared skill without disrupting others:** ask Rebel for a personal version (a personal extension) that changes how the skill works just for you.
+
+When you edit someone else's shared skill with a recorded owner, Rebel sends your changes as a suggestion for them to review. Until it's accepted, everyone keeps using the original. Reopening the skill carries on from your sent suggestion. Your own skills, and older skills with no recorded owner, still save directly. In Spaces shared through Rebel, Space managers can also edit directly. See [Reviewing suggestions](#reviewing-suggestions) below for who can decide and where. More on sharing: [Teams and admin controls](rebel://library/rebel-system%2Fhelp-for-humans%2Fteams-and-admin-controls.md).
 
 ## Three common ways to get a skill
 
@@ -88,12 +90,16 @@ Skills keep version history, which is exactly what it sounds like: a safety net 
 - See **when** a skill changed
 - See **who** changed it
 - Compare old and new versions
-- **Restore** an older version
-- **Save as Copy** if you want to branch off without touching the original
+- **Restore** an older version — for someone else's shared skill, this sends a suggestion under the same ownership rule as editing
+- Ask Rebel for a **personal version** if you want changes just for you
 
-### Shared skill checkpoints
+### Reviewing suggestions
 
-If a shared skill changes, Rebel can ask you to review it before the update takes effect. That helps teams avoid mysterious workflow changes showing up unannounced.
+Rebel automatically records who added a skill. That person is its owner and can review suggestions in the desktop app: click the notification bell (**Show notifications**), then look under **Skill updates** in **Notifications**. Choose **Review** to compare the current skill with the proposed changes, then **Accept** to update it for everyone, or **Decline** to leave it as it is. In Spaces shared through Rebel, which have manager roles, Space managers can accept or decline too. Accepting and declining aren't available on the phone or web yet.
+
+In other Spaces, only the skill's owner can decide. If they've left the Space, the original can't be updated through Rebel's skill editor until they return. You can still use the skill or ask Rebel for a personal version — changes just for you, while everyone else keeps the shared version.
+
+This covers edits to the skill's own file (`SKILL.md` for a folder skill, or a single-file skill), including most edits Rebel makes for you. Other files in a skill's folder save directly. Deleting, renaming or moving a skill, terminal commands, connectors that change files directly, and edits outside Rebel can also change the original without a suggestion.
 
 ## Running skills in Cursor or Claude Code
 
