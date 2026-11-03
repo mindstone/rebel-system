@@ -21,6 +21,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Improvements
 
+- **Longer conversations on more models** — With an API key or OpenRouter, Claude Haiku 5.5, the GPT-6 and GPT-6.1 models and Grok 4.7 can now hold much more of a conversation before Rebel shortens the older parts into a summary. A very long request costs more with these providers (about twice the usual rate on GPT and Grok, five times on Haiku 5.5), and **Settings → Usage** now shows what they actually charge. With a ChatGPT account, GPT-6 Sol and GPT-6 Luna now summarise a little sooner, to match what ChatGPT allows; GPT-6 Astra and GPT-6.1 don't change. A context size already saved on a model stays as it is.
+
 - **Nothing left running behind your back** — If Rebel finishes a reply while something it started is still running, like a website preview or a sound, the chat now says so and gives you a **Stop it** button. Not on Windows yet.
 
 - **Rebel can read along** — On your phone or the web, ask Rebel what's been said so far in a phone or watch recording.
