@@ -7,7 +7,7 @@ last_updated: "2026-07-05"
 
 **What it is:** Connect your Anthropic API key to use Claude models (Opus, Sonnet, Haiku, Fable) directly — Rebel's default model family. Claude is also reachable via [OpenRouter](rebel://library/rebel-system%2Fhelp-for-humans%2Fproviders%2Fopenrouter.md) and a [Mindstone plan](rebel://library/rebel-system%2Fhelp-for-humans%2Fmindstone-plans-and-billing.md).
 
-**While a Mindstone plan is in use:** models from this connection use your plan's allowance first. Here, **in use** means the plan's row in **Your AI accounts** says **In use**. Local services stay on your computer, and company-managed models stay company-paid. Pay-per-use prices apply when this connection pays.
+**While a Mindstone plan is in use:** models from this connection use your plan's allowance first. Here, **in use** means the plan's row in **Settings → Agent & Voice** says **In use**. Local services stay on your computer, and company-managed models stay company-paid. Pay-per-use prices apply when this connection pays.
 
 **How to connect:** In [Settings → Agent & Voice](rebel://settings/agents), choose **Add an account or key** → **Paste an API key**, choose **Anthropic**, and paste your API key.
 
