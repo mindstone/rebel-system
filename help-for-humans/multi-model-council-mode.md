@@ -46,7 +46,7 @@ This costs roughly 4x the tokens of a single-model response (depending on how ma
 
 Open **Settings → Agent & Voice**, open **Customise**, then choose **Add a model**. You can add a model from an account or key, or choose **Add custom model** for your own service.
 
-For a saved API key, you can also choose **Add model** on its row in **Settings → Agent & Voice**.
+You can also use **Add model** where it appears beside a saved key in **Settings → Agent & Voice**.
 
 In the **Your models** list under **Customise**, turn on **Second opinions** for each model you want to consult. You can turn it off there later.
 
