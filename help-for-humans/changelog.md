@@ -55,6 +55,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **Rebel's notes stay in your conversations** — When you approve something, Rebel adds a short line you can see in the conversation saying so. That line, and other notes like it, could disappear later, for example after you edited one of your messages or when the conversation synced between your devices. Those notes now stay where Rebel put them. The paper trail, no longer shredded.
+
 - **No more silent treatment** — If Rebel on your computer hit a problem before answering you, the web and your phone could show only your message, as though it had been ignored. Now they say Rebel stopped, and **Try again** sends your message again.
 
 - **PDFs go by their name** — A PDF preview's title bar now shows the file's name (or the PDF's own title, if it has one) instead of the whole path to it on your computer. Your folder layout stays off the shared screen.
