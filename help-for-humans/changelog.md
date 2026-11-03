@@ -55,6 +55,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **Updates that know when to stop** — After **Update now**, Settings > Cloud could keep saying your cloud was still updating long after it had finished, if a newer version had come out meanwhile and your cloud took that one instead. It now spots that, and after about 15 minutes it stops waiting and shows whether your cloud is up to date. Patience, rationed.
+
 - **No more silent treatment** — If Rebel on your computer hit a problem before answering you, the web and your phone could show only your message, as though it had been ignored. Now they say Rebel stopped, and **Try again** sends your message again.
 
 - **PDFs go by their name** — A PDF preview's title bar now shows the file's name (or the PDF's own title, if it has one) instead of the whole path to it on your computer. Your folder layout stays off the shared screen.
