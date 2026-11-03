@@ -8,13 +8,30 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Highlights
 
+- **Rebel can check back later** — Ask Rebel to check a report or reply again later; an hourglass beside the conversation shows when, with Wake now to check sooner and Cancel to stop. Rebel may also arrange one itself when it's waiting on something, and each check-back counts as ordinary usage. It runs with Cloud Continuity, or while Rebel is open on your computer: patience, delegated.
+
+- **Rebel on your Apple Watch** — A watch app with exactly two buttons: **Record meeting** and **Talk to Rebel**. Tap Record meeting and your notes arrive in Rebel afterwards. Tap Talk to Rebel, say what's on your mind, and your words start a new conversation, waiting for you on your phone or computer. The watch signs in through Rebel on your iPhone, and if it can't send yet it keeps your recording and tries again. To install it, update Rebel on your iPhone, open the iPhone's **Watch** app, and tap **Install** next to Rebel under **Available Apps**. Reading replies on a watch screen was never going to end well, so it doesn't try.
+
+- **Rebel on your Wear OS watch** — The same two buttons, and nothing else, on Wear OS watches. It signs in through Rebel on your Android phone, so sign in there first. To install it, open the **Play Store** on your watch and install Rebel.
+
 - **Keep what Rebel shows you** — When Rebel draws a chart, table or dashboard in a conversation, press **Save as app** under it, or ask Rebel in your own words to save it, and it's kept as an app in your Library. Find your apps under **Library** → **Apps**. Each one shows when it was saved and which Space it's in, and links back to the conversation it came from. Ask Rebel to change an app and it updates that one rather than making a copy. An app keeps the figures from the moment you saved it; for the latest figures, ask Rebel to update it. On the web and on your phone, an app opens as plain text with its figures, without the chart, for now. Separately, the services you connect Rebel to, like Gmail or Slack, used to be called "connected apps" in a few places; they're now **Connectors** everywhere, as in **Settings** → **Connectors**. Nothing to reconnect.
+
 
 - **Your reply can carry on in your cloud** — With cloud continuity and an updated cloud, close the laptop or lose the connection and a running reply can continue there. A model that runs only on your computer waits for it unless you choose a hosted fallback.
 
 ### Improvements
 
+- **Clearer step lists** — While Rebel works on a request, **Details** lists what it's aiming for and each step. Those steps now read like everyday to-dos, such as "Read your Q3 plan", instead of notes Rebel wrote for itself. Only the wording changed; Rebel does the same work.
+
+- **The newest models, in the picker** — GPT-6.1 Sol and GPT-6.1 Terra arrive with an OpenAI key, a ChatGPT account and OpenRouter, and OpenRouter also gains GPT-6 Astra and GPT-6 Luna. Claude Haiku 5.5, Anthropic's newest and cheapest Claude, arrives with an Anthropic key and on OpenRouter. ChatGPT now starts new setups on GPT-6.1 Sol and moves a GPT-6 Sol that Rebel set up for you, with a one-time note; a model you chose yourself stays put. Usage costs for GPT-5.6 and Claude Sonnet 5.5 now match the providers' published prices, so they read lower. Newer, and cheaper than we thought.
+
+- **Newer image and video models** — OpenAI Image Generation now uses gpt-image-2.5 by default: quicker, cheaper at high quality, and it can finally do transparent backgrounds. Nano Banana moves to Google's current Gemini image models, with Nano Banana 2.1 as an option. Kling adds kling-v3 as an option (about twice the cost, so not the default), and Runway stops offering veo3, which Runway no longer accepts; veo3.1 is still there. If you picked a model yourself, that choice stays.
+
 - **Email addresses with somewhere to go** — Tap or click an email address in a reply and a new email opens in your mail app, on your phone and your computer. On the phone, call and text-message links work too. Copy and paste can have the afternoon off.
+
+- **No more microphone nagging** — If you skipped voice when you set up Rebel, it no longer shows a microphone notice every time it opens. The first time you use voice, Rebel asks for the microphone. If you've turned the microphone off, or Rebel can't reach your Library folder, you still get a notice. Quiet is allowed.
+
+- **Fewer introductions to the same tools** — Within a conversation, Rebel now remembers how to use the apps you've connected once it has used them, so follow-up requests get going sooner.
 
 - **Automation questions, easier to find** — When a scheduled automation running on your computer asks a question, it now appears in the notification bell as it arrives. Click it to go to the question; answering clears the notification. Less hide-and-seek.
 
@@ -65,7 +82,19 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **When Chrome isn't there** — Rebel can use Chrome on your computer to browse websites for you. If Chrome isn't installed, Rebel now says so in its reply instead of hunting around your computer for it, and gets on with the rest of the job. Install Chrome and ask again if you want the browsing done too.
+
+- **Links in your documents go where they should** — A closing quote, long dash or the Japanese 。 straight after a web address in a Library document no longer gets swept into the link, so clicking it opens the right page. Links already saved with the wrong address stay as they are, in case you meant them.
+
+- **Safety Rules that turn up by themselves** — When you set up Rebel on another computer and your Safety Rules (your rules for when Rebel should check with you first) can't come over from your Mindstone Cloud straight away, Rebel now keeps trying by itself until they arrive. Nothing for you to do.
+
+- **Automations carry on after a dropped connection** — If your internet connection dropped partway through an automation running on your computer, the automation could stop and show as failed, even after doing most of its work. Now Rebel keeps the work done so far and continues the automation from there by itself; nothing for you to do. Its conversation then ends with the finished answer, not a connection error. If your connection is still down when Rebel continues, the automation stops and shows as failed, as before. Unfinished business, finished.
+
+- **Good keys, less suspicion** — Test on an Anthropic model now checks your key the way a chat uses it, so a perfectly good key stops getting called bad.
+
 - **You asked for it, so it doesn't ask you** — Rebel sometimes stopped to ask your permission for something you'd already asked it to do, only because it guessed it might not work, such as making a video you'd asked for. Now it just goes ahead, and if something doesn't work, Rebel sees the error and can try to fix it. It still checks with you first when an action could send or share something with people you didn't mean, expose something private, or go against what you said.
+
+- **Finished Actions actually finish** — An Action could finish its work but stay in Queued, and Rebel wouldn't let you complete or archive it. Now it moves to Done when Rebel's reply ends, or to Needs you if something is left, on your computer, the web and your phone, even with the window closed. Actions already stuck this way sort themselves out once you've opened this version. Nothing for you to tidy.
 
 - **Company model costs, now visible** — Settings → Usage now shows costs for new turns on models your organization provides. Your organization still covers them; this isn't a new charge to you. Earlier missing costs stay missing. Better receipts, same bill payer.
 <!-- detail: Company-managed Fireworks pricing now accepts the documented default serving-mode name. Usage groups organization-paid costs separately from out-of-pocket costs. -->

@@ -108,7 +108,7 @@ Some actions are considered inherently safe and run without prompting:
 - **Read-only operations** — Searching, listing, and retrieving data from connectors
 - **Web search** — Looking things up online
 - **Writing to temporary files** — Scratch work that doesn't touch your important data
-- **Tools with standing permission** — These can skip the approval card while your other protections allow it. A saved Always stays in place when a tool's safety rating changes; **Everything from [app]** still covers only the level you approved. Checked levels still inspect every request, the highest level never offers standing permission, and [Privacy Mode](library://rebel-system/help-for-humans/privacy-mode.md) suspends automatic use.
+- **Tools with standing permission** — These can skip the approval card while your other protections allow it. A saved Always stays in place when a tool's safety rating changes; **Everything from [app]** still covers only the level you approved. Checked levels still inspect every request, the highest level never offers standing permission. Standing permission applies in [Privacy Mode](library://rebel-system/help-for-humans/privacy-mode.md) too.
 - **Built-in safe tools** — Operations that are safe by design
 
 These skip the approval flow so you're not interrupted by routine lookups.
@@ -213,7 +213,7 @@ Rules work best when they're specific and actionable. Think about the situations
 |------|---------------------|
 | "Be careful" | Too vague — Rebel doesn't know what to be careful about |
 | "Don't do anything dangerous" | Your default rules already handle this |
-| "Ask me about everything" | Consider [Privacy Mode](library://rebel-system/help-for-humans/privacy-mode.md) instead |
+| "Ask me about everything" | Too broad — name what you want checked, such as "Check with me before sending any email" |
 
 ### Managing Your Rules
 
