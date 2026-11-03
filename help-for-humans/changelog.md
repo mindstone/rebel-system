@@ -47,6 +47,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **Clearer AI connection headings** — Settings and the model list now say which connections run your everyday work and which power more models. Your Anthropic key stays in the everyday list, marked **API key**.
+
 - **Quitting no longer eats your last sentence** — If you typed in a Library document and quit Rebel a moment later, what you had just typed could be lost without a warning. Rebel now finishes saving your open documents before it quits. Your parting words, kept.
 
 - **A clear way to reconnect** — A connector whose sign-in has run out now shows a Reconnect card instead of sitting silently "not connected". Connectors renew their sign-in by themselves where the service allows it.
@@ -103,7 +105,7 @@ What's new in Rebel. We ship fast, so there's always something.
 
 - **A little breathing room** — When storage runs low, Rebel clears its own leftovers and starts a conversation with one suggestion. Your files stay your call.
 
-- **Clearer AI connection headings** — Settings and the model list now say which connections run your everyday work and which power more models. Your Anthropic key stays in the everyday list, marked **API key**.
+- **Accounts and keys, each in their place** - **Settings → Agent & Voice** now separates **Your AI accounts** from **Your API keys**, and each row says what it does and who pays. One **Add an account or key** button covers both, and **Models from your accounts and keys** follows the same split. Less detective work before the actual work.
 
 - **Your Browser does a lot more, and stays out of your way** — Your Browser, the Rebel extension in your own browser, now works in its own tabs, grouped under **Rebel** in the background. It never switches you to them or brings your browser forward, and leaves your tabs alone. It can open pages, type, pick from drop-downs, press keys, wait for pages to load and take screenshots, as well as read, fill in forms and click. When it needs you, for a sign-in say, it asks in the conversation and waits for you to choose **Done** there; if you click or type in its tab while it works, it waits until you stop. It has access to all websites as soon as it's installed, with no site-by-site asking, and your [Safety Rules](rebel://settings/safety#safetyRules) still decide what it does on each. Rebel's Browser now works without showing a window when you first connect it, and Shared Browser Tab bows out, though it keeps working if you already use it. A browser with manners, finally.
 
