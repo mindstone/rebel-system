@@ -55,6 +55,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **Cloud settings stop arguing with themselves** — On Mindstone Cloud, Settings > Cloud no longer offers to switch to the cloud you're already on, its "couldn't verify this cloud" warning points you to Report a bug instead of telling you to ask whoever runs your cloud (that's us), and Last checked refreshes when your cloud answers. And if you sign in to ChatGPT while Rebel is reconnecting to your cloud, your cloud now gets that sign-in as soon as Rebel and your cloud are connected again.
+
 - **No more silent treatment** — If Rebel on your computer hit a problem before answering you, the web and your phone could show only your message, as though it had been ignored. Now they say Rebel stopped, and **Try again** sends your message again.
 
 - **PDFs go by their name** — A PDF preview's title bar now shows the file's name (or the PDF's own title, if it has one) instead of the whole path to it on your computer. Your folder layout stays off the shared screen.
