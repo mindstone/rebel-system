@@ -23,7 +23,7 @@ That's the language you'll actually see in the app.
 | **Privacy Mode** | Extra approval and caution for sensitive work |
 | **Voice Mode** | Shorter, more spoken-style replies while you're talking to Rebel |
 
-In the history filter, for example, the choices are **All**, **Conversations**, and **Automations**. Automation runs stay out of your **Active** conversation list — they won't crowd pinned tabs, unread counts, or Homepage/mobile "active" surfaces. Open them from [Automations](rebel://automations) run history, or browse **All** if you want everything in one place.
+The conversation filter's **Show** choice starts on **Your conversations**. Choose **Messages** for Slack threads, **Automations** for automation runs, **Meeting recaps** for recaps, or **All conversations** to see them together. A count beside a choice shows how many conversations need you. Background work can wait quietly; work that needs you gets a number.
 
 ## Conversations
 
@@ -48,7 +48,7 @@ When an automation runs:
 
 So: more independent, not less safe.
 
-They also stay out of **Active** on purpose — your sidebar is for conversations you're in, not every background job Rebel runs on a schedule. Find automation runs in [Automations](rebel://automations), or in the **All** history filter.
+Find automation runs through the conversation filter's **Show → Automations** choice, or open a run's history in [Automations](rebel://automations). Show applies in **Active**, **Starred**, **Done**, and **All**; switching tabs keeps your current Show choice.
 
 See [Automations](library://rebel-system/help-for-humans/automations.md) for the full guide.
 
