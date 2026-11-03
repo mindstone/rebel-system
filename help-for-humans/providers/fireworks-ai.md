@@ -9,9 +9,9 @@ last_updated: "2026-07-17"
 
 **Models that work well:** Qwen 3.7 Plus, the balanced default, and DeepSeek V4 Pro for harder reasoning-heavy work.
 
-**While a Mindstone plan is in use:** models from this connection use your plan's allowance first. Here, **in use** means the plan's row in **Your AI accounts** says **In use**. Local services stay on your computer, and company-managed models stay company-paid. Pay-per-use prices apply when this connection pays.
+**While a Mindstone plan is in use:** models from this connection use your plan's allowance first. Here, **in use** means the plan's row in **Settings → Agent & Voice** says **In use**. Local services stay on your computer, and company-managed models stay company-paid. Pay-per-use prices apply when this connection pays.
 
-**How to connect:** In [Settings → Agent & Voice](rebel://settings/agents), choose **Add an account or key** → **Connect your own AI service**. Enter a name, set **Base URL** to `https://api.fireworks.ai/inference/v1`, paste your Fireworks AI key, and choose **Save**. Under **Your API keys and connections**, choose **Add model** on that service's row and enter the model's Fireworks model ID.
+**How to connect:** In [Settings → Agent & Voice](rebel://settings/agents), choose **Add an account or key** → **Connect your own AI service**. Enter a name, set **Base URL** to `https://api.fireworks.ai/inference/v1`, paste your Fireworks AI key, and choose **Save**. In **Settings → Agent & Voice**, choose **Add model** on that service's row and enter the model's Fireworks model ID.
 
 **Useful links:**
 

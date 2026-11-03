@@ -51,15 +51,15 @@ These sound similar. They are not the same.
 - the recipient should **not** get access to the rest of the folder
 - you want optional **password** and **expiry** controls
 
-## Public file sharing needs Cloud Continuity
+## Public file sharing keeps a saved copy
 
-Public file sharing only works when [Cloud Continuity](cloud-continuity-and-mobile.md) is enabled.
+Public file sharing requires [Cloud Continuity](cloud-continuity-and-mobile.md). Rebel saves a dated, read-only copy on your own cloud when you create the link.
 
-Why? Because the public link is served from Rebel's cloud copy, not directly from the folder on your machine.
+Ongoing folder sync doesn't change that shared copy. Choose **Update link** to replace it at the same address, or **Stop sharing** to end the link.
 
 So:
-- **shared folder space** = local synced folder + normal folder permissions
-- **public file share** = one cloud-served link to one file
+- **shared folder space** = ongoing folder sync + normal folder permissions
+- **public file share** = one public link to a saved copy of one file, with optional password and expiry
 
 ## Provider pattern
 
