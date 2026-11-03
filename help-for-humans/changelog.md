@@ -55,7 +55,7 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
-- **No more silent treatment** — If Rebel on your computer hit a problem before answering you, the web and your phone could show only your message, as though it had been ignored. Now they say so and offer **Try again**.
+- **No more silent treatment** — If Rebel on your computer hit a problem before answering you, the web and your phone could show only your message, as though it had been ignored. Now they say Rebel stopped, and **Try again** sends your message again.
 
 - **Held means held** — If an automation's save is waiting for your approval, its run now says **some actions held back**, not just **Ran**, so you know that file hasn't changed yet. Once you approve, the run shows as finished.
 
