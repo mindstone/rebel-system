@@ -8,6 +8,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Highlights
 
+- **Shared links, with a date and a point of view** — Shared links now keep a dated, read-only snapshot that draws the charts, tables, tracked changes, mind maps and other views from your conversation; saved apps can share their views too. Choose **Latest result** for your last finished reply, its views and the files you choose, with the request that led to it, or **The whole conversation** for every message so far, with its views. **Update link** replaces the saved copy at the same address; **Stop sharing** ends it. Your audience gets the version you meant to send. A modest ambition, now realised.
+
 - **Rebel can check back later** — Ask Rebel to check a report or reply again later; an hourglass beside the conversation shows when, with Wake now to check sooner and Cancel to stop. Rebel may also arrange one itself when it's waiting on something, and each check-back counts as ordinary usage. It runs with Cloud Continuity, or while Rebel is open on your computer: patience, delegated.
 
 - **Rebel on your Apple Watch** — A watch app with exactly two buttons: **Record meeting** and **Talk to Rebel**. Tap Record meeting and your notes arrive in Rebel afterwards. Tap Talk to Rebel, say what's on your mind, and your words start a new conversation, waiting for you on your phone or computer. The watch signs in through Rebel on your iPhone, and if it can't send yet it keeps your recording and tries again. To install it, update Rebel on your iPhone, open the iPhone's **Watch** app, and tap **Install** next to Rebel under **Available Apps**. Reading replies on a watch screen was never going to end well, so it doesn't try.
