@@ -21,6 +21,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Improvements
 
+- **Nothing left running behind your back** — If Rebel finishes a reply while something it started is still running, like a website preview or a sound, the chat now says so and gives you a **Stop it** button. Not on Windows yet.
+
 - **Rebel can read along** — On your phone or the web, ask Rebel what's been said so far in a phone or watch recording.
 
 - **Your conversations, first** — Slack threads, automation runs and meeting recaps now wait behind the filter button, under **Show**, with a small count when one of them needs you. Your own conversations open first, on desktop, phone and web.
@@ -52,6 +54,10 @@ What's new in Rebel. We ship fast, so there's always something.
 - **Your finish line survives the paperwork** — When Rebel couldn't save part of a conversation and you settle it by picking a saved answer, a finish line you set while it was stuck is now kept instead of quietly lost. Anything else still waiting to be saved stays put, and Rebel tells you so. One decision shouldn't cost you another.
 
 ### Fixes
+
+- **Held means held** — If an automation's save is waiting for your approval, its run now says **some actions held back**, not just **Ran**, so you know that file hasn't changed yet. Once you approve, the run shows as finished.
+
+- **One false alarm fewer** — Approving a save while your Rebel cloud was updating could wrongly say the save failed. Rebel now waits for the update to finish, then saves it.
 
 - **Connections keep their place** — If Rebel can't read your saved Microsoft 365 or Slack connection list, it leaves your sign-ins untouched and asks you to try again. Connections that still need setup now say so, with a hint to try reconnecting in Settings on your computer. Ready should mean ready.
 
