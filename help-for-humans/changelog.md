@@ -21,6 +21,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Improvements
 
+- **Keep an app current** — On your computer, an app can show its linked automations, their schedules and last runs. Open one or run it now from the app. **Keep this current** sets up an ordinary update automation, so its schedule and instructions stay in the usual place. Choose **When I open it** to refresh on opening, at most once every 15 minutes. The last snapshot stays visible while the update runs.
+
 - **Nothing left running behind your back** — If Rebel finishes a reply while something it started is still running, like a website preview or a sound, the chat now says so and gives you a **Stop it** button. Not on Windows yet.
 
 - **Rebel can read along** — On your phone or the web, ask Rebel what's been said so far in a phone or watch recording.
