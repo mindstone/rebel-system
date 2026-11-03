@@ -9,9 +9,9 @@ last_updated: "2026-07-05"
 
 **About reasoning:** These are reasoning models — they think before they answer. Rebel can't dial that thinking up or down on Doubleword (unlike, say, Claude or GPT), so you won't see a thinking-effort control for them. Worth knowing for the bill: the thinking can count as output, so a "cheap" model can quietly cost a bit more than the sticker price suggests. Still cheap — just not free of its own thoughts.
 
-**While a Mindstone plan is in use:** models from this connection use your plan's allowance first. Here, **in use** means the plan's row in **Your AI accounts** says **In use**. Local services stay on your computer, and company-managed models stay company-paid. Pay-per-use prices apply when this connection pays.
+**While a Mindstone plan is in use:** models from this connection use your plan's allowance first. Here, **in use** means the plan's row in **Settings → Agent & Voice** says **In use**. Local services stay on your computer, and company-managed models stay company-paid. Pay-per-use prices apply when this connection pays.
 
-**How to connect:** In [Settings → Agent & Voice](rebel://settings/agents), choose **Add an account or key** → **Paste an API key**, choose **Doubleword**, and paste your API key. Then choose **Add model** on the Doubleword row under **Your API keys**.
+**How to connect:** In [Settings → Agent & Voice](rebel://settings/agents), choose **Add an account or key** → **Paste an API key**, choose **Doubleword**, and paste your API key. Then choose **Add model** on the Doubleword row in **Settings → Agent & Voice**.
 
 **Useful links:**
 - [Create a Doubleword API key](https://docs.doubleword.ai/inference-api/creating-an-api-key)
