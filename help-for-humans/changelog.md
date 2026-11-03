@@ -21,6 +21,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Improvements
 
+- **Slack files, and no half-sent messages** — Rebel can attach files in Slack again: reconnect Slack once to give it permission to send files. Ask for a message with a file and Rebel now keeps the message back until the file has gone. If the file can't go, it asks: send the message without the file, wait, or try again. No more being asked to approve a message you just asked for, and nobody gets the message without its file before you've chosen.
+
 - **Nothing left running behind your back** — If Rebel finishes a reply while something it started is still running, like a website preview or a sound, the chat now says so and gives you a **Stop it** button. Not on Windows yet.
 
 - **Rebel can read along** — On your phone or the web, ask Rebel what's been said so far in a phone or watch recording.
