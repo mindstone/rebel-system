@@ -268,7 +268,7 @@ What's new in Rebel. We ship fast, so there's always something.
 
 - **Fewer surprise conflict copies** — Rebel keeps a copy of your Library in Mindstone Cloud. When you changed a file only on this computer, it sometimes still put a second "conflict" copy of that file beside it, as if the cloud had changed it too. It no longer does, and there's nothing for you to do. When both sides really did change a file, Rebel keeps both versions for you to review. Fewer twins, same files.
 
-- **Your words get a vote** — Daily tidy-ups leave different file versions for you to review before combining them. Scratchpad saves now ask when another edit arrives first.
+- **Two versions? You choose** — If a file was edited on two devices before they synced, Rebel no longer blends the two copies into one on its own. It keeps both and shows a message where you pick which one to keep. The Scratchpad does the same: if a note changed on another device while you were typing, it keeps what you typed and asks which version you want.
 
 - **Send lets go** — When you start a new conversation, the message box now empties the moment you press Send, instead of still showing your message for a few seconds. If the message fails to send, your words come back in the box so you can try again.
 
