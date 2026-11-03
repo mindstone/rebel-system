@@ -21,6 +21,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Improvements
 
+- **Rebel can read along** — On your phone or the web, ask Rebel what's been said so far in a phone or watch recording.
+
 - **Your conversations, first** — Slack threads, automation runs and meeting recaps now wait behind the filter button, under **Show**, with a small count when one of them needs you. Your own conversations open first, on desktop, phone and web.
 
 - **A reply that knows when to carry on** — If your computer stops mid-reply and your cloud carries on, Rebel's own low-risk steps and saves to your Library or a private Space can now keep going. Changes that could repeat for other people or services still wait. If your cloud can't confirm it has your latest files, it says "Waiting for your computer." and waits before carrying on. Patience, where it helps.
