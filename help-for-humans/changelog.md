@@ -55,7 +55,7 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
-- **Answered, and tidied away** — Answer a question or approval on one device, and Rebel can now clear its waiting notification from your updated phone; question notifications on your computer clear when the answer syncs too. If your phone misses the update, you may still need to swipe that one away yourself. Already answered is plenty answered.
+- **Answered, and tidied away** — Answer a question or approval on one device, and Rebel now removes its notification from your phone, once you update Rebel on your phone. On your computer, a question's notification goes away as soon as your answer arrives there. If your phone misses it, for example because it was offline, you may still need to swipe that one away yourself. Already answered is plenty answered.
 
 - **A look in Downloads, without the souvenirs** — Ask Rebel to look in a folder outside your Library, such as Downloads or Desktop, and it now leaves nothing behind in your Library. On a Mac, if macOS is still asking whether Rebel may open that folder, or has said no, Rebel says so and tells you what to click, instead of spending minutes wrongly blaming a disconnected drive.
 
