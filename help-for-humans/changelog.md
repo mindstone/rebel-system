@@ -21,6 +21,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Improvements
 
+- **The author gets a say** — Edit someone else's skill in a shared Space and Rebel sends your changes as a suggestion for its recorded owner. On the desktop, click the notification bell (**Show notifications**) and look under **Skill updates** in **Notifications** to review it. In Spaces shared through Rebel, which have manager roles, a Space manager can decide too; elsewhere only the owner can decide. Accept updates the shared skill; Decline leaves it alone. Managers' own edits and edits to older skills with no recorded owner still save directly. Reopen the skill to carry on with your suggestion, or ask Rebel for a personal version. The old “confirm your own edits” step has retired. A modest improvement to the separation of powers.
+
 - **Clearer step lists** — While Rebel works on a request, **Details** lists what it's aiming for and each step. Those steps now read like everyday to-dos, such as "Read your Q3 plan", instead of notes Rebel wrote for itself. Only the wording changed; Rebel does the same work.
 
 - **The newest models, in the picker** — GPT-6.1 Sol and GPT-6.1 Terra arrive with an OpenAI key, a ChatGPT account and OpenRouter, and OpenRouter also gains GPT-6 Astra and GPT-6 Luna. Claude Haiku 5.5, Anthropic's newest and cheapest Claude, arrives with an Anthropic key and on OpenRouter. ChatGPT now starts new setups on GPT-6.1 Sol and moves a GPT-6 Sol that Rebel set up for you, with a one-time note; a model you chose yourself stays put. Usage costs for GPT-5.6 and Claude Sonnet 5.5 now match the providers' published prices, so they read lower. Newer, and cheaper than we thought.
@@ -42,6 +44,10 @@ What's new in Rebel. We ship fast, so there's always something.
 - **Your finish line survives the paperwork** — When Rebel couldn't save part of a conversation and you settle it by picking a saved answer, a finish line you set while it was stuck is now kept instead of quietly lost. Anything else still waiting to be saved stays put, and Rebel tells you so. One decision shouldn't cost you another.
 
 ### Fixes
+
+- **A clear way to reconnect** — A connector whose sign-in has run out now shows a Reconnect card instead of sitting silently "not connected". Connectors renew their sign-in by themselves where the service allows it.
+
+- **Duplicate files, no more guessing** — Ask Rebel which files are duplicates and it now answers in seconds from its usual storage check, instead of searching through your Library for a quarter of an hour. It only suggests deleting a file once it has confirmed the file is identical to another. If it couldn't finish checking two large files, it offers to compare them in full, says how long that may take, and asks before it starts. Looking alike isn't the same as being the same.
 
 - **Safety Rules that turn up by themselves** — When you set up Rebel on another computer and your Safety Rules (your rules for when Rebel should check with you first) can't come over from your Mindstone Cloud straight away, Rebel now keeps trying by itself until they arrive. Nothing for you to do.
 
@@ -67,7 +73,9 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Improvements
 
-- **A finish line is there to be reached** — Rebel now uses its full allowance to keep working toward your finish line. If it stops before confirming it's met, it says so and asks whether to carry on. No quiet exit through the gift shop.
+- **Newer image and video models** — OpenAI Image Generation now uses gpt-image-2.5 by default: quicker, cheaper at high quality, and it can finally do transparent backgrounds. Nano Banana moves to Google's current Gemini image models, with Nano Banana 2.1 as an option. Kling adds kling-v3 as an option (about twice the cost, so not the default), and Runway stops offering veo3, which Runway no longer accepts; veo3.1 is still there. If you picked a model yourself, that choice stays.
+
+- **A finish line is there to be reached** — When your finish line isn't met yet, Rebel now keeps working toward it for up to three more tries (ten in Unleashed mode). If it still stops short, it says so and asks whether to carry on. No more slipping out the side door.
 
 - **Email addresses with somewhere to go** — Tap or click an email address in a reply and a new email opens in your mail app, on your phone and your computer. On the phone, call and text-message links work too. Copy and paste can have the afternoon off.
 
@@ -124,6 +132,9 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **Attachments make the trip** — Attaching a file stored in your Library through a connector that takes files now works when cloud continuity is on, up to 50 MB in total for one send. Files linked in from elsewhere still can't be attached this way. The rest come along for the ride.
+
+- **Automations carry on after a dropped connection** — If your internet connection dropped partway through an automation running on your computer, the automation could stop and show as failed, even after doing most of its work. Now Rebel keeps the work done so far and continues the automation from there by itself; nothing for you to do. Its conversation then ends with the finished answer, not a connection error. If your connection is still down when Rebel continues, the automation stops and shows as failed, as before. Unfinished business, finished.
 - **Links in your documents go where they should** — A closing quote, long dash or the Japanese 。 straight after a web address in a Library document no longer gets swept into the link, so clicking it opens the right page. Links already saved with the wrong address stay as they are, in case you meant them.
 
 - **No more false alarm about saving** — Every time you opened some conversations, a notice said a change hadn't saved, even though your work was already saved and nothing was lost. Now that notice goes away by itself the next time you open the conversation. If a change really hasn't saved, Rebel still keeps it safe and the notice stays. Either way, nothing for you to do here. An alarm should have something to be alarmed about.
