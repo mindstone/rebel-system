@@ -47,6 +47,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **Quitting no longer eats your last sentence** — If you typed in a Library document and quit Rebel a moment later, what you had just typed could be lost without a warning. Rebel now finishes saving your open documents before it quits. Your parting words, kept.
+
 - **A clear way to reconnect** — A connector whose sign-in has run out now shows a Reconnect card instead of sitting silently "not connected". Connectors renew their sign-in by themselves where the service allows it.
 
 - **Duplicate files, no more guessing** — Ask Rebel which files are duplicates and it now answers in seconds from its usual storage check, instead of searching through your Library for a quarter of an hour. It only suggests deleting a file once it has confirmed the file is identical to another. If it couldn't finish checking two large files, it offers to compare them in full, says how long that may take, and asks before it starts. Looking alike isn't the same as being the same.
