@@ -57,6 +57,12 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **A look in Downloads, without the souvenirs** — Ask Rebel to look in a folder outside your Library, such as Downloads or Desktop, and it now leaves nothing behind in your Library. On a Mac, if macOS is still asking whether Rebel may open that folder, or has said no, Rebel says so and tells you what to click, instead of spending minutes wrongly blaming a disconnected drive.
+
+- **Updates that know when to stop** — After **Update now**, Settings > Cloud could keep saying your cloud was still updating long after it had finished, if a newer version had come out meanwhile and your cloud took that one instead. It now spots that, and after about 15 minutes it stops waiting and shows whether your cloud is up to date. Patience, rationed.
+
+- **No more silent treatment** — If Rebel on your computer hit a problem before answering you, the web and your phone could show only your message, as though it had been ignored. Now they say Rebel stopped, and **Try again** sends your message again.
+
 - **PDFs go by their name** — A PDF preview's title bar now shows the file's name (or the PDF's own title, if it has one) instead of the whole path to it on your computer. Your folder layout stays off the shared screen.
 
 - **Held means held** — If an automation's save is waiting for your approval, its run now says **some actions held back**, not just **Ran**, so you know that file hasn't changed yet. Once you approve, the run shows as finished.
@@ -268,7 +274,7 @@ What's new in Rebel. We ship fast, so there's always something.
 
 - **Fewer surprise conflict copies** — Rebel keeps a copy of your Library in Mindstone Cloud. When you changed a file only on this computer, it sometimes still put a second "conflict" copy of that file beside it, as if the cloud had changed it too. It no longer does, and there's nothing for you to do. When both sides really did change a file, Rebel keeps both versions for you to review. Fewer twins, same files.
 
-- **Your words get a vote** — Daily tidy-ups leave different file versions for you to review before combining them. Scratchpad saves now ask when another edit arrives first.
+- **Two versions? You choose** — If a file was edited on two devices before they synced, Rebel no longer blends the two copies into one on its own. It keeps both and shows a message where you pick which one to keep. The Scratchpad does the same: if a note changed on another device while you were typing, it keeps what you typed and asks which version you want.
 
 - **Send lets go** — When you start a new conversation, the message box now empties the moment you press Send, instead of still showing your message for a few seconds. If the message fails to send, your words come back in the box so you can try again.
 
