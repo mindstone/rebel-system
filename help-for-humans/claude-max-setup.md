@@ -25,7 +25,7 @@ Use the **Get API key** link below the field to open Anthropic's console in your
 
 Paste the key into the field. Click outside it so Rebel can check it. The line below the field tells you whether the check worked.
 
-You can then find Anthropic under **Your AI accounts**. Choose **Use for everyday work** on its row to use it as your main connection.
+You can then find the Anthropic row in **Settings → Agent & Voice**, labelled **API key**. Choose **Use for everyday work** on its row to use it as your main connection.
 
 ## Do I need a Claude subscription?
 
@@ -33,7 +33,7 @@ No. For this setup, you need an **Anthropic account with an API key**. It is a p
 
 ## Can I switch later?
 
-Yes. In **[Settings → Agent & Voice](rebel://settings/agents)** → **Your AI accounts**, choose **Use for everyday work** on the account you want to use.
+Yes. In **[Settings → Agent & Voice](rebel://settings/agents)**, choose **Use for everyday work** on the account you want to use.
 
 ## Troubleshooting
 
