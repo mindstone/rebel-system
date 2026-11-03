@@ -29,7 +29,7 @@ An **hourglass beside the conversation** means a check-back is waiting; the time
 
 After 10 check-backs in a row without a word from you, Rebel stops and asks you to send a message before it can arrange another.
 
-If you've connected [Cloud Continuity](rebel://library/rebel-system%2Fhelp-for-humans%2Fcloud-continuity-and-mobile.md), Rebel's cloud copy runs check-backs even with your computer closed. A conversation you've chosen to keep on this computer can't get a check-back while Cloud Continuity is on. With Cloud Continuity off, the Rebel app needs to stay open on this computer; if it's closed or the computer is asleep, Rebel checks back when the app is running again.
+If you've connected [Cloud Continuity](rebel://library/rebel-system%2Fhelp-for-humans%2Fcloud-continuity-and-mobile.md), Rebel's cloud copy runs check-backs even with your computer closed. A conversation you've chosen to keep on this computer can't get a check-back while Cloud Continuity is on. With Cloud Continuity off, check-backs run on your computer while Rebel is running. If Rebel is closed or your computer is asleep when one is due, it waits until Rebel is running there again.
 
 Turning Cloud Continuity on in Settings cancels check-backs waiting on this computer. Using **Forget cloud on this device**, removing your cloud or switching to another cloud also asks Rebel to cancel the cloud's pending check-backs. When cancellation succeeds, you'll see a cancellation line in the affected conversations; send a message to arrange another check-back. If Rebel can't reach the cloud then, you won't see a line and a check-back may still happen on that cloud. **Forgetting a cloud doesn't shut it down**: the cloud machine keeps running.
 
