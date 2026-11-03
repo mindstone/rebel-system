@@ -21,6 +21,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Improvements
 
+- **Sent means sent** — When you send an email or message, or submit a form, from inside a Rebel conversation, Rebel now remembers it. Scroll away and back, open it full screen or restart Rebel, and it still says it was sent instead of offering Send again. While it's sending, the Send button is greyed out. If Rebel can't tell whether it went (say the connection dropped), it asks you to check your Sent folder before trying again. If your organisation has turned sending off, it tells you so and doesn't offer to try again. After a restart it shows when it was sent; the message itself is in your email or chat app as usual. Click once, and Rebel sends once.
+
 - **Nothing left running behind your back** — If Rebel finishes a reply while something it started is still running, like a website preview or a sound, the chat now says so and gives you a **Stop it** button. Not on Windows yet.
 
 - **Rebel can read along** — On your phone or the web, ask Rebel what's been said so far in a phone or watch recording.
