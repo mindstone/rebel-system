@@ -16,7 +16,7 @@ In onboarding and in [Settings → Agent & Voice](rebel://settings/agents), you 
 
 **You're not locked to one model or one provider.** Connect more than one and switch whenever you like — and through OpenRouter alone you can reach Claude, GPT, Gemini, DeepSeek, Grok, and others on a single account. You can also run models on your own machine (e.g. via Ollama or LM Studio) or point Rebel at a company gateway — see [Custom models and gateways](rebel://library/rebel-system%2Fhelp-for-humans%2Fcustom-models-and-gateways.md). And with [Council Mode](rebel://library/rebel-system%2Fhelp-for-humans%2Fmulti-model-council-mode.md) you can put a question to several models at once.
 
-In **Settings → Agent & Voice**, **Your AI accounts** shows sign-ins, plans and your Anthropic key for everyday work. Other keys appear in **Your API keys**, where **Add model** lets you add models from a key. That card becomes **Your API keys and connections** when it includes TrustedRouter or your own AI service. Use **Add an account or key** below the cards for either kind. Each row explains what it does and who pays.
+In **Settings → Agent & Voice**, **AI for everyday work** shows sign-ins, plans and your Anthropic key for everyday work. The Anthropic row is labelled **API key**. Other keys appear in **Keys for more models**, where **Add model** lets you add models from a key. That card becomes **Keys and connections for more models** when it includes TrustedRouter or your own AI service. Use **Add an account or key** below the cards for either kind. Each row explains what it does and who pays.
 
 ## The providers, one by one
 
@@ -33,13 +33,13 @@ In **Settings → Agent & Voice**, **Your AI accounts** shows sign-ins, plans an
 - **Let Mindstone handle it:** [Mindstone plans](rebel://library/rebel-system%2Fhelp-for-humans%2Fmindstone-plans-and-billing.md) — flat-fee subscription, no keys
 - **Your own or company-hosted models:** [Custom models and gateways](rebel://library/rebel-system%2Fhelp-for-humans%2Fcustom-models-and-gateways.md) — Ollama, LM Studio, company gateways
 
-A Mindstone plan is **in use** when its row under **Your AI accounts** says **In use**; having a subscription alone is not enough. While it is in use, paid models from your other accounts and API keys use your plan's allowance first, then their own paid connection when the allowance runs out. Models supplied by the plan use its allowance. Local services stay on your computer, ChatGPT subscription models use your ChatGPT plan, and company-managed models stay company-paid. An organisation's OpenRouter connection isn't used while the plan is in use.
+A Mindstone plan is **in use** when its row in **Settings → Agent & Voice** says **In use**; having a subscription alone is not enough. While it is in use, paid models from your other accounts and API keys use your plan's allowance first, then their own paid connection when the allowance runs out. Models supplied by the plan use its allowance. Local services stay on your computer, ChatGPT subscription models use your ChatGPT plan, and company-managed models stay company-paid. An organisation's OpenRouter connection isn't used while the plan is in use.
 
 ## Backup connections
 
-In **[Settings → Agent & Voice → Your AI accounts](rebel://settings/agents#backupConnections)**, choose **Use as Backup** for an account, then put your Backups in the order you want Rebel to try them. If your main account is busy or hits its limit, Rebel automatically switches to the next Backup. There is one Backup list in this card; the separate keys card has none.
+In **[Settings → Agent & Voice](rebel://settings/agents#backupConnections)**, choose **Use as Backup** for an account, then put your Backups in the order you want Rebel to try them. If your main account is busy or hits its limit, Rebel automatically switches to the next Backup. There is one Backup list in the everyday card; the separate keys card has none.
 
-If you add no Backup, Rebel won't switch accounts when one is busy. The exception is a Mindstone plan whose allowance has run out: your saved OpenRouter or Anthropic account, or a key model you selected, then takes over and bills you. A Mindstone plan becomes a Backup only if you choose **Use as Backup** for it.
+If you add no Backup, Rebel won't switch accounts when one is busy. The exception is a Mindstone plan whose allowance has run out: your saved OpenRouter account or Anthropic key, or a key model you selected, then takes over and bills you. A Mindstone plan becomes a Backup only if you choose **Use as Backup** for it.
 
 ## See also
 
@@ -77,9 +77,9 @@ If you'd rather use an account or key you already have, Rebel has three first-cl
 
 In onboarding, choose a provider card to connect your AI. In Settings:
 
-1. Choose **Add an account or key** below **Your AI accounts**
+1. Choose **Add an account or key** in **Settings → Agent & Voice**
 2. Choose a sign-in method or **Paste an API key**, then finish connecting
-3. On the account's row under **Your AI accounts**, choose **Use for everyday work** to make it your main connection
+3. On the account's row in **Settings → Agent & Voice**, choose **Use for everyday work** to make it your main connection
 4. To switch later, choose **Use for everyday work** on another account's row
 
 One connection is enough. More than one is optional.
@@ -93,7 +93,7 @@ If you already have ChatGPT Pro, this is the quickest route.
 1. Open **Settings → Agent & Voice**
 2. Choose **Add an account or key** → **Sign in with ChatGPT**
 3. Sign in with your OpenAI account
-4. On the ChatGPT row under **Your AI accounts**, choose **Use for everyday work** if you want it as your main connection
+4. On the ChatGPT row in **Settings → Agent & Voice**, choose **Use for everyday work** if you want it as your main connection
 
 Good fit if you want a simple setup and already live in ChatGPT anyway. New ChatGPT setups start on **GPT-6.1 Sol**; if Rebel set up your ChatGPT model and it was GPT-6 Sol, Rebel moves it to GPT-6.1 Sol once and tells you. A model you picked yourself stays as it is.
 
@@ -105,7 +105,7 @@ OpenRouter is a first-class option in Rebel, not a workaround.
 2. Choose **Add an account or key** → **Sign in with OpenRouter**
 3. Finish the sign-in flow
 4. Add credits to your OpenRouter account
-5. On the OpenRouter row under **Your AI accounts**, choose **Use for everyday work** if needed
+5. On the OpenRouter row in **Settings → Agent & Voice**, choose **Use for everyday work** if needed
 
 Good fit if you want one billing account for multiple model families. You can also enter any OpenRouter model ID directly — not just the defaults in Rebel's curated list. If you work with very large documents, MiniMax M3 is now available here as a long-context option. OpenAI's newest models are here too: GPT-6 Astra, GPT-6.1 Sol and GPT-6.1 Terra (each with a Pro mode for harder problems), and GPT-6 Luna. In Rebel these GPT-6 models read up to about 272,000 tokens of context, because above that OpenAI charges more for the whole message.
 
@@ -116,7 +116,7 @@ Use Anthropic if you want direct Claude access.
 1. Open **Settings → Agent & Voice**
 2. Choose **Add an account or key** → **Paste an API key**
 3. Choose **Anthropic** and paste your API key; Rebel checks it when you leave the field
-4. On the Anthropic row under **Your AI accounts**, choose **Use for everyday work** if needed
+4. On the Anthropic row in **Settings → Agent & Voice**, choose **Use for everyday work** if needed
 
 Good fit if you want the most direct Claude setup and pay-as-you-go pricing. **Claude Haiku 5.5**, Anthropic's newest small model, is in the picker (and on OpenRouter): very cheap and quick, and it thinks before it answers unless you turn thinking off. Rebel gives it up to 100,000 tokens of context, because above that Anthropic charges five times as much.
 
