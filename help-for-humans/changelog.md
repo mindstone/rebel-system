@@ -20,6 +20,10 @@ What's new in Rebel. We ship fast, so there's always something.
 
 - **Clearer step lists** — While Rebel works on a request, **Details** lists what it's aiming for and each step. Those steps now read like everyday to-dos, such as "Read your Q3 plan", instead of notes Rebel wrote for itself. Only the wording changed; Rebel does the same work.
 
+- **The newest models, in the picker** — GPT-6.1 Sol and GPT-6.1 Terra arrive with an OpenAI key, a ChatGPT account and OpenRouter, and OpenRouter also gains GPT-6 Astra and GPT-6 Luna. Claude Haiku 5.5, Anthropic's newest and cheapest Claude, arrives with an Anthropic key and on OpenRouter. ChatGPT now starts new setups on GPT-6.1 Sol and moves a GPT-6 Sol that Rebel set up for you, with a one-time note; a model you chose yourself stays put. Usage costs for GPT-5.6 and Claude Sonnet 5.5 now match the providers' published prices, so they read lower. Newer, and cheaper than we thought.
+
+- **Newer image and video models** — OpenAI Image Generation now uses gpt-image-2.5 by default: quicker, cheaper at high quality, and it can finally do transparent backgrounds. Nano Banana moves to Google's current Gemini image models, with Nano Banana 2.1 as an option. Kling adds kling-v3 as an option (about twice the cost, so not the default), and Runway stops offering veo3, which Runway no longer accepts; veo3.1 is still there. If you picked a model yourself, that choice stays.
+
 - **Email addresses with somewhere to go** — Tap or click an email address in a reply and a new email opens in your mail app, on your phone and your computer. On the phone, call and text-message links work too. Copy and paste can have the afternoon off.
 
 - **No more microphone nagging** — If you skipped voice when you set up Rebel, it no longer shows a microphone notice every time it opens. The first time you use voice, Rebel asks for the microphone. If you've turned the microphone off, or Rebel can't reach your Library folder, you still get a notice. Quiet is allowed.
