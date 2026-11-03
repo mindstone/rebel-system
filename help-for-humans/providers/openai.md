@@ -7,9 +7,9 @@ last_updated: "2026-11-02"
 
 **What it is:** Connect your OpenAI API key to use GPT models (GPT-6 Astra, GPT-6.1 Sol and Terra, GPT-6 Sol and Luna, GPT-5.x, GPT-4.1, o-series) on pay-as-you-go API billing. This is the developer API key — if you'd rather use your existing ChatGPT subscription, see [ChatGPT Pro](rebel://library/rebel-system%2Fhelp-for-humans%2Fproviders%2Fchatgpt-pro.md) instead.
 
-**While a Mindstone plan is in use:** models from this connection use your plan's allowance first. Here, **in use** means the plan's row in **Your AI accounts** says **In use**. Local services stay on your computer, and company-managed models stay company-paid. Pay-per-use prices apply when this connection pays.
+**While a Mindstone plan is in use:** models from this connection use your plan's allowance first. Here, **in use** means the plan's row in **Settings → Agent & Voice** says **In use**. Local services stay on your computer, and company-managed models stay company-paid. Pay-per-use prices apply when this connection pays.
 
-**How to connect:** In [Settings → Agent & Voice](rebel://settings/agents), choose **Add an account or key** → **Paste an API key**, choose **OpenAI**, and paste your API key. Then choose **Add model** on the OpenAI row under **Your API keys**.
+**How to connect:** In [Settings → Agent & Voice](rebel://settings/agents), choose **Add an account or key** → **Paste an API key**, choose **OpenAI**, and paste your API key. Then choose **Add model** on the OpenAI row in **Settings → Agent & Voice**.
 
 **Useful links:**
 - [Create an OpenAI API key](https://platform.openai.com/api-keys)

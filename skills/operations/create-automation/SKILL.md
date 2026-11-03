@@ -1,6 +1,6 @@
 ---
 name: create-automation
-description: Creates scheduled automations through natural language conversation. Rebel interprets schedule intent, configures the automation, and runs a supervised first run to generate access rules.
+description: Creates scheduled automations through natural language conversation. Rebel interprets schedule intent, configures the automation, and runs a supervised first run so the person can see it work.
 use_cases:
   - "Set up a weekly summary automation"
   - "Create a daily standup prep that runs at 8:30am"
@@ -14,7 +14,7 @@ last_updated: "2026-10-25"
 
 # Create Automation
 
-You're helping the user set up a scheduled automation. Your job is to understand what they want automated, when they want it to run, configure it, and do a supervised first run so access rules can be generated.
+You're helping the user set up a scheduled automation. Your job is to understand what they want automated, when they want it to run, configure it, and do a supervised first run so they can see it work.
 
 ## Conversation Flow
 
@@ -22,8 +22,8 @@ You're helping the user set up a scheduled automation. Your job is to understand
 2. **Identify the skill file**: Which skill or file should be executed? Help them pick from their Library.
 3. **Parse the schedule**: Convert natural language like "every Monday at 9am" into a schedule.
 4. **Confirm and create**: Show what will be created, then create it.
-5. **Supervised first run**: Run the automation right now so Rebel can learn what tools it needs. This is a real run — the user gets value from it and any tool approvals happen inline as normal.
-6. **Access rules**: After the run, access rules are auto-generated and auto-approved. If the automation tries something outside its rules in the future, those actions get staged for the user's approval — and the rules expand automatically once approved.
+5. **Supervised first run**: Run the automation right now so the person can see it work. This is a real run — the user gets value from it and any tool approvals happen inline as normal.
+6. **Confirm the result**: Tell the person what actually ran and what, if anything, needs their review. Future runs follow their Safety Rules; actions that need approval are saved for review.
 
 ## One-Off (Once) Automations
 
@@ -35,15 +35,13 @@ For `once` automations, **do NOT do a supervised first run**. A successful first
 
 For **recurring** automations, you MUST trigger a first run using `rebel_automations_run` after creation. **Skip this for `once` automations** (see above). This is critical because:
 
-- Automations run unattended on a schedule, but they need **access rules** to know what they're allowed to do without asking the user
-- The first run observes which tools the automation uses and auto-generates access rules from that
-- Access rules are auto-approved after the first run — no manual approval step needed
-- If future runs try something new, those actions are staged for the user's approval and rules expand automatically
+- The first run is a real run so the person can see the automation work and get its results now
+- Actions that need approval ask as normal; future unattended runs save those actions for review under the person's Safety Rules
 
 Tell the user something like:
-> "I'll run this now so Rebel can learn what it needs access to. This is a real run — you'll get the results. Any actions that need your approval will ask you inline. After this, Rebel will know what the automation is allowed to do and it'll run on its own going forward. If it ever needs to do something new, it'll stage those actions for your review and update its rules once you approve."
+> "I'll run this now so you can see it work and get the results. Any actions that need your approval will ask as usual. After this, it'll run on schedule and save any actions that need your OK for review."
 
-If the user declines the first run, that's fine — let them know the automation will still run on schedule, but may need to stage actions for approval the first time since it hasn't learned what tools it needs yet.
+If rebel_automations_run comes back saved for review, tell the person in one sentence that the first run is waiting for their OK, and that if they'd rather skip it the automation still runs on schedule. Don't say it's waiting again unless you know it still is: once they decline it, that's finished with.
 
 ## Schedule Parsing
 
@@ -87,13 +85,13 @@ Creating this now...
 
 *[Uses rebel_automations_create tool]*
 
-Done! Now I'll run it so Rebel can learn what it needs access to. This is a real run — you'll get your weekly summary now, and any actions that need your go-ahead will ask you inline.
+Done! Now I'll run it so you can see it work. This is a real run — you'll get your weekly summary now, and any actions that need your go-ahead will ask you inline.
 
 *[Uses rebel_automations_run tool]*
 
 All done! Your summary is ready.
 
-That's it! Rebel now knows what this automation needs access to and it'll run on its own every Friday at 5pm. If it ever tries something new that isn't covered by the current rules, it'll stage those actions for your review and update its rules once you approve.
+That's it! It'll run on its own every Friday at 5pm. Any actions that need your OK will be saved for review under your Safety Rules.
 
 ## Tool Usage
 
@@ -131,4 +129,4 @@ Then trigger the first run with `rebel_automations_run`:
 - Suggest sensible defaults (e.g., "09:00" if no time specified)
 - For event-triggered automations, explain what events are available (transcript-ready, etc.)
 - Always do the supervised first run after creation for recurring automations — don't just tell the user to test it later. **Exception: skip the first run for `once` automations.**
-- After the first run, let the user know the automation is ready to go — access rules are auto-approved
+- After the first run, report its actual result and confirm that the automation will run on schedule
