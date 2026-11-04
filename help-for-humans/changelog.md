@@ -71,6 +71,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **Home keeps what you hand it** — A picture sent from Home now shows in your message and stays with it, and a Library file you @-mention there is attached, as it already was in a conversation. A picture with no words now waits for a message, instead of leaving an empty bubble. Fewer things lost in transit.
+
 - **Offline, honestly** — After your connection dropped, reopening Rebel could show the offline notice twice and keep saying you were offline once you were back. Now there's one notice, worded so it stays true, and a reply that never finished no longer claims its work was preserved or asks you to rate it.
 
 - **A key, with somewhere to go** — **Add your own key** in the 90% allowance notice now opens the place to add one, not a page with nowhere to put it.
