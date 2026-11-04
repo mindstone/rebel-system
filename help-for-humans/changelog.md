@@ -26,6 +26,7 @@ What's new in Rebel. We ship fast, so there's always something.
 ### Improvements
 
 - **Tables take a breath** — Tables in replies now show line breaks instead of a stray `<br>`. A small break with proper manners.
+- **Example keys stay examples** — When a note explains how to connect an app and uses a made-up stand-in for its password or key, like "your-token-here", Rebel no longer shows "Possible credentials detected" on every edit of that note. A note that seems to hold a real password or key is still held for your OK before it's saved, as before. Fewer false alarms, same smoke detector.
 - **Nothing lost when a file wanders off** — If Rebel is waiting to update a file that's since moved or been deleted, you can now save Rebel's version as a new file instead of watching it vanish. If the file was only renamed, Preview finds it and offers to update it there.
 - **Asked means asked** — When you clearly ask Rebel to do something, that counts as your approval for that action: a Safety Rule that says "ask me before…" no longer makes Rebel ask a second time, and Rebel will type a password you gave it into the site you named. If you tell Rebel to wait, it waits. If one of your Safety Rules says to show you a card first even when you ask, Rebel still asks.
 
@@ -83,7 +84,7 @@ What's new in Rebel. We ship fast, so there's always something.
 
 - **Automations pack lighter** — On your computer, automations could quietly keep an extra copy of each conversation they ran, which could slow Rebel down. They don't any more, and the old copies clear by themselves. There's nothing for you to do, and your conversations are untouched.
 
-- **Cloud trouble, in plain words** — Settings > Cloud now explains what couldn’t finish syncing and what to try next, instead of internal step names and error codes. Mindstone Cloud users are no longer told to check a server they don’t have.
+- **Cloud trouble, in plain words** — Settings > Cloud now explains what couldn’t finish syncing and what to try next, instead of internal step names and error codes. Mindstone Cloud users are no longer told to check a server they don’t have, or to update an access token they never set.
 
 - **Cloud settings stop arguing with themselves** — On Mindstone Cloud, Settings > Cloud no longer offers to switch to the cloud you're already on, its "couldn't verify this cloud" warning points you to Report a bug instead of telling you to ask whoever runs your cloud (that's us), and Last checked refreshes when your cloud answers. And if you sign in to ChatGPT while Rebel is reconnecting to your cloud, your cloud now gets that sign-in as soon as Rebel and your cloud are connected again.
 
