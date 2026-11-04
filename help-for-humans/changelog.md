@@ -23,6 +23,7 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Improvements
 
+- **Nothing lost when a file wanders off** — If Rebel is waiting to update a file that's since moved or been deleted, you can now save Rebel's version as a new file instead of watching it vanish. If the file was only renamed, Preview finds it and offers to update it there.
 - **Asked means asked** — When you clearly ask Rebel to do something, that counts as your approval for that action: a Safety Rule that says "ask me before…" no longer makes Rebel ask a second time, and Rebel will type a password you gave it into the site you named. If you tell Rebel to wait, it waits. If one of your Safety Rules says to show you a card first even when you ask, Rebel still asks.
 
 - **Google, Slack and friends, now on your phone too** — If Mindstone runs your cloud, Google Workspace, Slack, Microsoft 365 and HubSpot could fail in automations and on your phone while working fine on your computer. That's fixed: open Rebel on your computer and it should sort itself out, with nothing for you to do. Signing in again was never going to help, so you can skip that.
