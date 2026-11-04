@@ -82,7 +82,7 @@ What's new in Rebel. We ship fast, so there's always something.
 
 - **Automations pack lighter** — On your computer, automations could quietly keep an extra copy of each conversation they ran, which could slow Rebel down. They don't any more, and the old copies clear by themselves. There's nothing for you to do, and your conversations are untouched.
 
-- **Cloud trouble, in plain words** — Settings > Cloud now explains what couldn’t finish syncing and what to try next, instead of internal step names and error codes. Mindstone Cloud users are no longer told to check a server they don’t have.
+- **Cloud trouble, in plain words** — Settings > Cloud now explains what couldn’t finish syncing and what to try next, instead of internal step names and error codes. Mindstone Cloud users are no longer told to check a server they don’t have, or to update an access token they never set.
 
 - **Cloud settings stop arguing with themselves** — On Mindstone Cloud, Settings > Cloud no longer offers to switch to the cloud you're already on, its "couldn't verify this cloud" warning points you to Report a bug instead of telling you to ask whoever runs your cloud (that's us), and Last checked refreshes when your cloud answers. And if you sign in to ChatGPT while Rebel is reconnecting to your cloud, your cloud now gets that sign-in as soon as Rebel and your cloud are connected again.
 
