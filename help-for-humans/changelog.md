@@ -70,6 +70,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **Offline, honestly** — After your connection dropped, reopening Rebel could show the offline notice twice and keep saying you were offline once you were back. Now there's one notice, worded so it stays true, and a reply that never finished no longer claims its work was preserved or asks you to rate it.
+
 - **A key, with somewhere to go** — **Add your own key** in the 90% allowance notice now opens the place to add one, not a page with nowhere to put it.
 
 - **TalkBack reads a table once** — On Android, TalkBack read each table in a reply twice in a row. Now you hear it once, along with the rest of the reply, and columns too wide for the screen are read too.
