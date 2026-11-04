@@ -8,6 +8,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Highlights
 
+- **A Rebel of your own in Slack** — Give your Rebel its own name in Slack by pasting one token, so colleagues can tell it apart from theirs. Colleagues can @mention it too: it answers from that Slack thread, and anything that needs your files or connected apps waits for you to OK it in Rebel. Set it up in Rebel under Settings → Connectors → Slack.
+
 - **Fewer questions when Rebel splits up a big job** — For a big job, like going through a year of your calendar, Rebel can hand each part to a helper: a second copy of itself that does one quarter, say. These helpers used to stop and ask you about steps that were plainly part of your request, because the check Rebel runs before each step couldn't see which part they'd been given. Now it can. Anything you didn't ask for, and anything your [Safety Rules](rebel://settings/safety#safetyRules) say to ask about, still asks you first. Nothing for you to do. Delegation, now with fewer permission slips.
 
 - **Shared links, with a date and a point of view** — Shared links now keep a dated, read-only snapshot that draws the charts, tables, tracked changes, mind maps and other views from your conversation; saved apps can share their views too. Choose **Latest result** for your last finished reply, its views and the files you choose, with the request that led to it, or **The whole conversation** for every message so far, with its views. **Update link** replaces the saved copy at the same address; **Stop sharing** ends it. Your audience gets the version you meant to send. A modest ambition, now realised.
@@ -23,6 +25,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Improvements
 
+- **Example keys stay examples** — When a note explains how to connect an app and uses a made-up stand-in for its password or key, like "your-token-here", Rebel no longer shows "Possible credentials detected" on every edit of that note. A note that seems to hold a real password or key is still held for your OK before it's saved, as before. Fewer false alarms, same smoke detector.
+- **Nothing lost when a file wanders off** — If Rebel is waiting to update a file that's since moved or been deleted, you can now save Rebel's version as a new file instead of watching it vanish. If the file was only renamed, Preview finds it and offers to update it there.
 - **Asked means asked** — When you clearly ask Rebel to do something, that counts as your approval for that action: a Safety Rule that says "ask me before…" no longer makes Rebel ask a second time, and Rebel will type a password you gave it into the site you named. If you tell Rebel to wait, it waits. If one of your Safety Rules says to show you a card first even when you ask, Rebel still asks.
 
 - **Google, Slack and friends, now on your phone too** — If Mindstone runs your cloud, Google Workspace, Slack, Microsoft 365 and HubSpot could fail in automations and on your phone while working fine on your computer. That's fixed: open Rebel on your computer and it should sort itself out, with nothing for you to do. Signing in again was never going to help, so you can skip that.
@@ -71,13 +75,19 @@ What's new in Rebel. We ship fast, so there's always something.
 
 - **Notices in Rebel's own style** — The small notices in the top-right corner now appear in Rebel's own dark or light style; a notice with two buttons puts them beneath the message, so the text gets the full width. They had been showing up as plain white boxes. Dressed properly, at last.
 
+- **Offline, honestly** — After your connection dropped, reopening Rebel could show the offline notice twice and keep saying you were offline once you were back. Now there's one notice, worded so it stays true, and a reply that never finished no longer claims its work was preserved or asks you to rate it.
+
+- **A key, with somewhere to go** — **Add your own key** in the 90% allowance notice now opens the place to add one, not a page with nowhere to put it.
+
+- **TalkBack reads a table once** — On Android, TalkBack read each table in a reply twice in a row. Now you hear it once, along with the rest of the reply, and columns too wide for the screen are read too.
+
 - **Rebel's notes stay in your conversations** — When you approve something, Rebel adds a short line you can see in the conversation saying so. That line, and other notes like it, could disappear later, for example after you edited one of your messages or when the conversation synced between your devices. Those notes now stay where Rebel put them. The paper trail, no longer shredded.
 
 - **Restored conversations unpack properly** — Tool outputs and images in conversations you restore on a new computer now open, instead of claiming they can't be found. Nothing gets uploaded twice.
 
 - **Automations pack lighter** — On your computer, automations could quietly keep an extra copy of each conversation they ran, which could slow Rebel down. They don't any more, and the old copies clear by themselves. There's nothing for you to do, and your conversations are untouched.
 
-- **Cloud trouble, in plain words** — Settings > Cloud now explains what couldn’t finish syncing and what to try next, instead of internal step names and error codes. Mindstone Cloud users are no longer told to check a server they don’t have.
+- **Cloud trouble, in plain words** — Settings > Cloud now explains what couldn’t finish syncing and what to try next, instead of internal step names and error codes. Mindstone Cloud users are no longer told to check a server they don’t have, or to update an access token they never set.
 
 - **Cloud settings stop arguing with themselves** — On Mindstone Cloud, Settings > Cloud no longer offers to switch to the cloud you're already on, its "couldn't verify this cloud" warning points you to Report a bug instead of telling you to ask whoever runs your cloud (that's us), and Last checked refreshes when your cloud answers. And if you sign in to ChatGPT while Rebel is reconnecting to your cloud, your cloud now gets that sign-in as soon as Rebel and your cloud are connected again.
 
