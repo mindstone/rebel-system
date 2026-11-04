@@ -103,6 +103,7 @@ If nothing was written (Step 0 STOP gate, or all candidates skipped at Step 3): 
 ## Important
 
 - **Privacy first.** When unsure about sensitivity, choose the more private space. Sensitive content (credentials, personal financials, HR, health, emotions) NEVER goes into shared company spaces.
+- **Example keys must look fake.** When a note shows how to set up a key or token, write the value as an obvious placeholder, `<your Slack bot token>` or `xoxb-…`, never a realistic-looking made-up value: anything shaped like a real key is held as a possible credential before it is saved.
 - **Default skip.** Memory should be high-signal. Save only what genuinely earns its place.
 - **Optimise for semantic search.** Descriptive filenames with keywords; front-load key concepts in the first paragraph.
 - **Sources for provenance.** When facts come from a captured source, cite it. Topics cite sources; sources do not backlink to topics (one-way linking).
