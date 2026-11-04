@@ -21,6 +21,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Improvements
 
+- **Nothing lost when a file wanders off** — If Rebel is waiting to update a file that's since moved or been deleted, you can now save Rebel's version as a new file instead of watching it vanish. If the file was only renamed, Preview finds it and offers to update it there.
+
 - **Slack files, and no half-sent messages** — Rebel can attach files in Slack again: reconnect Slack once to give it permission to send files. Ask for a message with a file and Rebel now keeps the message back until the file has gone. If the file can't go, it asks: send the message without the file, wait, or try again. No more being asked to approve a message you just asked for, and nobody gets the message without its file before you've chosen.
 
 - **Keep an app current** — On your computer, an app can show its linked automations, their schedules and last runs. Open one or run it now from the app. **Keep this current** sets up an ordinary update automation, so its schedule and instructions stay in the usual place. Choose **When I open it** to refresh on opening, at most once every 15 minutes. The last snapshot stays visible while the update runs.
