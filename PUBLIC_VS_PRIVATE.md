@@ -27,7 +27,7 @@ The answer is usually simple: publish the useful method, remove the private brea
 
 | Directory / file | Classification | Notes | Status after M10 |
 |---|---|---|---|
-| `.github/` | **mirror-exclude** | Rebel app §4a policy parallel. | None today: since the A5 fold, `rebel-system/` is a folder of the Rebel repository, whose own CI covers it, and neither it nor the public repository has a `.github/`. |
+| `.github/` | **mirror-exclude** | Rebel app §4a policy parallel. | One workflow, `.github/workflows/secret-scan.yml`, the public repository's required secret scan on pull requests. Since the A5 fold, `rebel-system/` is a folder of the Rebel repository, whose own CI covers it, so nothing else lives here. |
 | `cli/` | **publish** | Clean. | Published as-is. |
 | `help-for-humans/` | **scrub-then-publish** | End-user help docs; scrubbed for internal support routes, tenant examples, ticket IDs, and internal workflow comments. | Scrubbed and public-facing; public support inbox references remain allowlisted. |
 | `operators/` | **publish** | Clean across all operator definitions. | Published as-is. |
