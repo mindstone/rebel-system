@@ -72,6 +72,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **File conflicts, mentioned once** — When a file changes after Rebel drafts an update to it, web and phone now show the conflict once, and say so once. On web, **Review** shows both versions so you can keep either. The buttons say **Use Rebel's draft** and **Keep current version** everywhere, and file locations on web no longer fill up with backslashes.
+
 - **A tap too short, said plainly** — A voice recording too short to hold any words now says "Too short to catch" instead of showing a transcription error. Rebel also stops quietly retrying such a recording in the background every ten minutes, since there was never anything in it to hear.
 
 - **Offline, honestly** — After your connection dropped, reopening Rebel could show the offline notice twice and keep saying you were offline once you were back. Now there's one notice, worded so it stays true, and a reply that never finished no longer claims its work was preserved or asks you to rate it.
