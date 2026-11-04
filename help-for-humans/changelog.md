@@ -21,6 +21,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Improvements
 
+- **Asked means asked** — When you clearly ask Rebel to do something, that counts as your approval for that action: a Safety Rule that says "ask me before…" no longer makes Rebel ask a second time, and Rebel will type a password you gave it into the site you named. If you tell Rebel to wait, it waits. If one of your Safety Rules says to show you a card first even when you ask, Rebel still asks.
+
 - **Google, Slack and friends, now on your phone too** — If Mindstone runs your cloud, Google Workspace, Slack, Microsoft 365 and HubSpot could fail in automations and on your phone while working fine on your computer. That's fixed: open Rebel on your computer and it should sort itself out, with nothing for you to do. Signing in again was never going to help, so you can skip that.
 
 - **Slack files, and no half-sent messages** — Rebel can attach files in Slack again: reconnect Slack once to give it permission to send files. Ask for a message with a file and Rebel now keeps the message back until the file has gone. If the file can't go, it asks: send the message without the file, wait, or try again. No more being asked to approve a message you just asked for, and nobody gets the message without its file before you've chosen.
