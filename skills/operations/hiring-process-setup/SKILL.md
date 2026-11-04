@@ -261,7 +261,7 @@ position: [Role]
 ```
 
 **Naming convention for candidates:**
-- Folder: `First-Last` (e.g., `Jane-Smith`)
+- Folder: `First-Last` (e.g., `Jane-Doe`)
 - CV: `First-Last-CV.pdf` or `FirstLast-CV.pdf`
 
 ### 7. Create signposts and cross-references
@@ -325,12 +325,12 @@ Give hiring manager:
 - `NewHire2025/` (too vague)
 
 **Good candidate folders:**
-- `candidates/John-Smith/`
+- `candidates/Jane-Doe/`
 
 **Bad candidate folders:**
 - `candidate1/` (no name)
-- `john/` (need full name)
-- `candidates/john-smith/` (wrong capitalization)
+- `jane/` (need full name)
+- `candidates/jane-doe/` (wrong capitalization)
 
 ## Success Criteria
 
