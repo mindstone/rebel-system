@@ -72,6 +72,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **File conflicts, mentioned once** — When a file changes after Rebel drafts an update to it, web and phone now show the conflict once, and say so once. On web, **Review** shows both versions so you can keep either. The buttons say **Use Rebel's draft** and **Keep current version** everywhere, and file locations on web no longer fill up with backslashes.
+
 - **Offline, honestly** — After your connection dropped, reopening Rebel could show the offline notice twice and keep saying you were offline once you were back. Now there's one notice, worded so it stays true, and a reply that never finished no longer claims its work was preserved or asks you to rate it.
 
 - **A key, with somewhere to go** — **Add your own key** in the 90% allowance notice now opens the place to add one, not a page with nowhere to put it.
