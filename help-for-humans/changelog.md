@@ -175,6 +175,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **A busy safety check waits its turn** — Before Rebel takes certain actions, a safety check asks an AI service whether they're OK. When that service is busy, the check now waits for it, about a minute while you're using Rebel and longer for automations that run on their own, instead of giving up after a few quick tries. So Rebel stops to ask for your OK less often. If the service is still too busy, the card asking for your OK now says the safety check hit a rate limit (too many requests at once), instead of only that it couldn't finish. Waiting beats giving up.
+
 - **Automations tell it straight** — Unfinished runs say **Didn't finish**, questions say **Asked you a question**, and notices name the automation. A question is not a catastrophe.
 
 - **Attachments make the trip** — Attaching a file stored in your Library through a connector that takes files now works when cloud continuity is on, up to 50 MB in total for one send. Files linked in from elsewhere still can't be attached this way. The rest come along for the ride.
