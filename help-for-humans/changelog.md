@@ -68,6 +68,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **TalkBack reads a table once** — On Android, TalkBack read each table in a reply twice in a row. Now you hear it once, along with the rest of the reply, and columns too wide for the screen are read too.
+
 - **Rebel's notes stay in your conversations** — When you approve something, Rebel adds a short line you can see in the conversation saying so. That line, and other notes like it, could disappear later, for example after you edited one of your messages or when the conversation synced between your devices. Those notes now stay where Rebel put them. The paper trail, no longer shredded.
 
 - **Restored conversations unpack properly** — Tool outputs and images in conversations you restore on a new computer now open, instead of claiming they can't be found. Nothing gets uploaded twice.
