@@ -8,6 +8,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Highlights
 
+- **Fewer questions when Rebel splits up a big job** — For a big job, like going through a year of your calendar, Rebel can hand each part to a helper: a second copy of itself that does one quarter, say. These helpers used to stop and ask you about steps that were plainly part of your request, because the check Rebel runs before each step couldn't see which part they'd been given. Now it can. Anything you didn't ask for, and anything your [Safety Rules](rebel://settings/safety#safetyRules) say to ask about, still asks you first. Nothing for you to do. Delegation, now with fewer permission slips.
+
 - **Shared links, with a date and a point of view** — Shared links now keep a dated, read-only snapshot that draws the charts, tables, tracked changes, mind maps and other views from your conversation; saved apps can share their views too. Choose **Latest result** for your last finished reply, its views and the files you choose, with the request that led to it, or **The whole conversation** for every message so far, with its views. **Update link** replaces the saved copy at the same address; **Stop sharing** ends it. Your audience gets the version you meant to send. A modest ambition, now realised.
 
 - **Rebel can check back later** — Ask Rebel to check a report or reply again later; an hourglass beside the conversation shows when, with Wake now to check sooner and Cancel to stop. Rebel may also arrange one itself when it's waiting on something, and each check-back counts as ordinary usage. It runs with Cloud Continuity, or on your computer. If Rebel is closed on your computer when it's due, it waits until Rebel is running there again. Patience, delegated.
