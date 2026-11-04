@@ -15,7 +15,7 @@ Rebel is a user-friendly, voice-first desktop app. For Mindstone Rebel v3, it is
 
 Rebel's main window is now organised into four working zones:
 
-- **Left conversation sidebar** — your conversation history, filters, and starred chats. Background automation runs live under [Automations](rebel://automations), not here.
+- **Left conversation sidebar**: your conversation history, filters, and starred chats. The filter's **Show** choice starts on **Your conversations**. Choose **Messages** for Slack threads, **Automations** for automation runs, **Meeting recaps** for recaps, or **All conversations** to see them together. A count beside a choice shows how many conversations need you.
 - **Main surface area** — the part you're actively using: a conversation, Homepage, Focus, Library, Actions, or another surface
 - **Right-side drawer** — extra context such as **Behind the scenes**, document preview, or approvals
 - **Bottom interaction strip** — the composer, voice controls, attachments, mode toggle, and per-conversation settings
@@ -66,7 +66,7 @@ Drag files into the composer or paste from clipboard.
 - **Export** — Save conversations as PDF or DOCX
 - **Copy as Markdown** — Right-click any conversation in the sidebar and select "Copy as Markdown" to get a clean text version of the entire conversation
 - **Reply & Comment** — Select text in Rebel's responses to copy, ask a follow-up question, or add inline comments. Collect multiple comments and send them all at once. See [Reply, Comment & Annotations](library://rebel-system/help-for-humans/reply-comment-annotations.md).
-- **Sidebar tabs & folders** — Switch what the sidebar shows with the tabs at the top: **Active**, **Starred** (the star), **Done**, and **All**. Background automation runs are kept out of **Active** so they don't crowd your working list — open them from [Automations](rebel://automations) run history (they're still in **All** if you want everything). You can group related conversations into folders, and mark finished ones **done** to clear them out of Active without deleting them. See [Organising your conversations](organising-conversations.md).
+- **Sidebar tabs & folders**: switch between **Active**, **Starred** (the star), **Done**, and **All**. Your **Show** choice applies in each tab, so choose **Show → Automations** to include automation runs or **Show → All conversations** to include every source. You can group related conversations into folders, and mark finished ones **done** to clear them out of Active without deleting them. See [Organising your conversations](rebel://library/rebel-system%2Fhelp-for-humans%2Forganising-conversations.md).
 - **Context menus** — Right-click in the conversation area for cut/copy/paste options. Right-click conversations in the sidebar for quick actions like mark as done, star, move to folder, or delete.
 - **Privacy Mode toggle** — Flip **Private mode** on from the session settings menu in the message box: Rebel won't learn from the chat automatically, and riskier actions ask whenever the safety check can't give a clear answer. See [Privacy Mode](library://rebel-system/help-for-humans/privacy-mode.md) and [Session Modes](library://rebel-system/help-for-humans/session-modes.md).
 - **Composer settings** — Click the settings menu in the composer to adjust model, thinking effort, and context settings per session. A file indicator button shows attached files at a glance.
