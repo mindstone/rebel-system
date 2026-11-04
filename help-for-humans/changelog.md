@@ -59,6 +59,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **Cloud settings stop arguing with themselves** — On Mindstone Cloud, Settings > Cloud no longer offers to switch to the cloud you're already on, its "couldn't verify this cloud" warning points you to Report a bug instead of telling you to ask whoever runs your cloud (that's us), and Last checked refreshes when your cloud answers. And if you sign in to ChatGPT while Rebel is reconnecting to your cloud, your cloud now gets that sign-in as soon as Rebel and your cloud are connected again.
+
 - **A look in Downloads, without the souvenirs** — Ask Rebel to look in a folder outside your Library, such as Downloads or Desktop, and it now leaves nothing behind in your Library. On a Mac, if macOS is still asking whether Rebel may open that folder, or has said no, Rebel says so and tells you what to click, instead of spending minutes wrongly blaming a disconnected drive.
 
 - **Updates that know when to stop** — After **Update now**, Settings > Cloud could keep saying your cloud was still updating long after it had finished, if a newer version had come out meanwhile and your cloud took that one instead. It now spots that, and after about 15 minutes it stops waiting and shows whether your cloud is up to date. Patience, rationed.
