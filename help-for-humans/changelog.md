@@ -8,6 +8,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Highlights
 
+- **A Rebel of your own in Slack** — Give your Rebel its own name in Slack by pasting one token, so colleagues can tell it apart from theirs. Colleagues can @mention it too: it answers from that Slack thread, and anything that needs your files or connected apps waits for you to OK it in Rebel. Set it up in Rebel under Settings → Connectors → Slack.
+
 - **Fewer questions when Rebel splits up a big job** — For a big job, like going through a year of your calendar, Rebel can hand each part to a helper: a second copy of itself that does one quarter, say. These helpers used to stop and ask you about steps that were plainly part of your request, because the check Rebel runs before each step couldn't see which part they'd been given. Now it can. Anything you didn't ask for, and anything your [Safety Rules](rebel://settings/safety#safetyRules) say to ask about, still asks you first. Nothing for you to do. Delegation, now with fewer permission slips.
 
 - **Shared links, with a date and a point of view** — Shared links now keep a dated, read-only snapshot that draws the charts, tables, tracked changes, mind maps and other views from your conversation; saved apps can share their views too. Choose **Latest result** for your last finished reply, its views and the files you choose, with the request that led to it, or **The whole conversation** for every message so far, with its views. **Update link** replaces the saved copy at the same address; **Stop sharing** ends it. Your audience gets the version you meant to send. A modest ambition, now realised.
