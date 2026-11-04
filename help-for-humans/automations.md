@@ -153,7 +153,7 @@ From the Automations area, you can:
 
 You can also reply in a run's conversation to ask a follow-up. Your reply is treated like any other chat: approvals ask as usual, and it doesn't borrow the automation's "for this automation" permissions.
 
-Automation conversations stay out of your **Active** list on purpose. They won't show up there, in the pinned tabs, in unread counts, or in the "active" lists on Homepage and mobile — so they don't crowd your working conversations. Open them from each run's history in [Automations](rebel://automations) (they remain in the **All** tab if you want to see everything).
+To see automation runs in the conversation list, open the filter and choose **Show → Automations**. Show starts on **Your conversations** and applies in every tab, including **All**. Choose **Messages** for Slack threads, **Meeting recaps** for recaps, or **All conversations** to see every source together. A count beside a choice shows how many conversations need you. Each run is also available from its history in [Automations](rebel://automations).
 
 ## Approvals still apply
 

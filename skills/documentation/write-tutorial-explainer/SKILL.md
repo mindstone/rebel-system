@@ -19,8 +19,8 @@ Create deep-dive tutorial explainers that help people build strong mental models
 - [write-skill.md](documentation/write-skill/SKILL.md) - For writing skill documentation specifically
 
 **Original inspiration**:
-- `/Users/yourname/dev/company-work/CompanyDrive/src/github.com/example/tutorial-project/docs/instructions/WRITE_TUTORIAL_EXPLAINER.md` - Code tutorial writing guide
-- `/Users/yourname/dev/company-work/CompanyDrive/src/github.com/example/tutorial-project/docs/tutorials/TUTORIAL_TEMPLATE.html` - Code tutorial template
+- `<your-workspace>/tutorial-project/docs/instructions/WRITE_TUTORIAL_EXPLAINER.md` - Code tutorial writing guide
+- `<your-workspace>/tutorial-project/docs/tutorials/TUTORIAL_TEMPLATE.html` - Code tutorial template
 - Adapted for general knowledge work (not just code)
 
 
@@ -159,7 +159,7 @@ Include metadata comment at top (already in template):
 - **Use `cursor://file/` links for local files** - When linking to `.md` files or other local files in Mindstone Rebel, use the `cursor://file/` protocol so users can click to open them directly in Cursor
   - Format: `cursor://file/[ABSOLUTE_PATH]` where ABSOLUTE_PATH is the full workspace path
   - Get the workspace path from `<user_info>` Workspace Path
-  - Example: `<a href="cursor://file//Users/username/Library/CloudStorage/GoogleDrive-you@example.com/Shared drives/CompanyDrive/help/README.md">README.md</a>`
+  - Example: `<a href="cursor://file/<your-workspace>/help/README.md">README.md</a>`
   - Worst case: link doesn't work and user opens file manually
 
 ### 5. Polish and finalize
