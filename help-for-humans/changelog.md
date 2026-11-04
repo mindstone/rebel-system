@@ -61,6 +61,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **Restored conversations unpack properly** — Tool outputs and images in conversations you restore on a new computer now open, instead of claiming they can't be found. Nothing gets uploaded twice.
+
 - **Automations pack lighter** — On your computer, automations could quietly keep an extra copy of each conversation they ran, which could slow Rebel down. They don't any more, and the old copies clear by themselves. There's nothing for you to do, and your conversations are untouched.
 
 - **Cloud trouble, in plain words** — Settings > Cloud now explains what couldn’t finish syncing and what to try next, instead of internal step names and error codes. Mindstone Cloud users are no longer told to check a server they don’t have.
