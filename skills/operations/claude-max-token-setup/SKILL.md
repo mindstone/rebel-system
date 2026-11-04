@@ -25,7 +25,7 @@ Rebel automates Claude Max token generation — user never opens Terminal. Rebel
 
 **Source of truth for commands:** [claude-max-setup.md](../../../help-for-humans/claude-max-setup.md)
 
-**Previous version:** Emma's instructional walkthrough (2026-03-16) guided users through Terminal commands. This version has Rebel execute those commands directly.
+**Previous version:** an instructional walkthrough (2026-03-16) guided users through Terminal commands. This version has Rebel execute those commands directly.
 
 ## [PERSONA]
 

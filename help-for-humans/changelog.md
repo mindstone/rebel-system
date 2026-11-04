@@ -21,6 +21,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Improvements
 
+- **Slack files, and no half-sent messages** — Rebel can attach files in Slack again: reconnect Slack once to give it permission to send files. Ask for a message with a file and Rebel now keeps the message back until the file has gone. If the file can't go, it asks: send the message without the file, wait, or try again. No more being asked to approve a message you just asked for, and nobody gets the message without its file before you've chosen.
+
 - **Keep an app current** — On your computer, an app can show its linked automations, their schedules and last runs. Open one or run it now from the app. **Keep this current** sets up an ordinary update automation, so its schedule and instructions stay in the usual place. Choose **When I open it** to refresh on opening, at most once every 15 minutes. The last snapshot stays visible while the update runs.
 
 - **Longer conversations on more models** — With an API key or OpenRouter, Claude Haiku 5.5, the GPT-6 and GPT-6.1 models and Grok 4.7 can now hold much more of a conversation before Rebel shortens the older parts into a summary. A very long request costs more with these providers (about twice the usual rate on GPT and Grok, five times on Haiku 5.5), and **Settings → Usage** now shows what they actually charge. With a ChatGPT account, GPT-6 Sol and GPT-6 Luna now summarise a little sooner, to match what ChatGPT allows; GPT-6 Astra and GPT-6.1 don't change. A context size already saved on a model stays as it is.
@@ -61,6 +63,14 @@ What's new in Rebel. We ship fast, so there's always something.
 
 - **Rebel's notes stay in your conversations** — When you approve something, Rebel adds a short line you can see in the conversation saying so. That line, and other notes like it, could disappear later, for example after you edited one of your messages or when the conversation synced between your devices. Those notes now stay where Rebel put them. The paper trail, no longer shredded.
 
+- **Restored conversations unpack properly** — Tool outputs and images in conversations you restore on a new computer now open, instead of claiming they can't be found. Nothing gets uploaded twice.
+
+- **Automations pack lighter** — On your computer, automations could quietly keep an extra copy of each conversation they ran, which could slow Rebel down. They don't any more, and the old copies clear by themselves. There's nothing for you to do, and your conversations are untouched.
+
+- **Cloud trouble, in plain words** — Settings > Cloud now explains what couldn’t finish syncing and what to try next, instead of internal step names and error codes. Mindstone Cloud users are no longer told to check a server they don’t have.
+
+- **Cloud settings stop arguing with themselves** — On Mindstone Cloud, Settings > Cloud no longer offers to switch to the cloud you're already on, its "couldn't verify this cloud" warning points you to Report a bug instead of telling you to ask whoever runs your cloud (that's us), and Last checked refreshes when your cloud answers. And if you sign in to ChatGPT while Rebel is reconnecting to your cloud, your cloud now gets that sign-in as soon as Rebel and your cloud are connected again.
+
 - **A look in Downloads, without the souvenirs** — Ask Rebel to look in a folder outside your Library, such as Downloads or Desktop, and it now leaves nothing behind in your Library. On a Mac, if macOS is still asking whether Rebel may open that folder, or has said no, Rebel says so and tells you what to click, instead of spending minutes wrongly blaming a disconnected drive.
 
 - **Updates that know when to stop** — After **Update now**, Settings > Cloud could keep saying your cloud was still updating long after it had finished, if a newer version had come out meanwhile and your cloud took that one instead. It now spots that, and after about 15 minutes it stops waiting and shows whether your cloud is up to date. Patience, rationed.
@@ -96,6 +106,8 @@ What's new in Rebel. We ship fast, so there's always something.
 - **Back to a reply that already finished** — If Rebel finished a reply while you were in another conversation, going back could still show it as busy replying, and your next message sat in the queue for about 15 seconds before Rebel got it. Now the conversation shows the reply as done and your message goes straight to Rebel. Nothing for you to do; no more waiting on a reply that was already finished.
 
 - **Stop means stop** — Rebel no longer starts itself again from a waiting approval or question answer after you press Stop. Your answer stays saved; no encore.
+
+- **Less silence before a reply** — If you use your own Anthropic key in Rebel on your computer, **Rebel's thinking** shows short notes on what it's considering while you wait. Those notes had gone missing for the first part of the wait, while Rebel decides how to handle your request. Now they show then too, and clear once your answer starts. Nothing for you to do. Half a minute of silence wasn't adding much.
 
 ## v0.4.99 — Nov 2, 2026
 
@@ -171,11 +183,12 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **A busy safety check waits its turn** — Before Rebel takes certain actions, a safety check asks an AI service whether they're OK. When that service is busy, the check now waits for it, about a minute while you're using Rebel and longer for automations that run on their own, instead of giving up after a few quick tries. So Rebel stops to ask for your OK less often. If the service is still too busy, the card asking for your OK now says the safety check hit a rate limit (too many requests at once), instead of only that it couldn't finish. Waiting beats giving up.
+
 - **Automations tell it straight** — Unfinished runs say **Didn't finish**, questions say **Asked you a question**, and notices name the automation. A question is not a catastrophe.
 
 - **Attachments make the trip** — Attaching a file stored in your Library through a connector that takes files now works when cloud continuity is on, up to 50 MB in total for one send. Files linked in from elsewhere still can't be attached this way. The rest come along for the ride.
 
-- **Automations carry on after a dropped connection** — If your internet connection dropped partway through an automation running on your computer, the automation could stop and show as failed, even after doing most of its work. Now Rebel keeps the work done so far and continues the automation from there by itself; nothing for you to do. Its conversation then ends with the finished answer, not a connection error. If your connection is still down when Rebel continues, the automation stops and shows as failed, as before. Unfinished business, finished.
 - **Links in your documents go where they should** — A closing quote, long dash or the Japanese 。 straight after a web address in a Library document no longer gets swept into the link, so clicking it opens the right page. Links already saved with the wrong address stay as they are, in case you meant them.
 
 - **No more false alarm about saving** — Every time you opened some conversations, a notice said a change hadn't saved, even though your work was already saved and nothing was lost. Now that notice goes away by itself the next time you open the conversation. If a change really hasn't saved, Rebel still keeps it safe and the notice stays. Either way, nothing for you to do here. An alarm should have something to be alarmed about.
@@ -183,8 +196,6 @@ What's new in Rebel. We ship fast, so there's always something.
 - **Continue now says what's missing** — If setup can't go further, the reason now appears right beside Continue, and a provider you've just added stays listed as saved. A button that ignores you is a poor way to start a relationship.
 
 - **No vanishing act at the finish** — In the Rebel app on your phone, a reply could disappear for an instant just as it finished, then fade back. It now stays on screen. Rebel has given up the dramatic pause.
-
-- **Duplicate files, no more guessing** — Ask Rebel which files are duplicates and it now answers in seconds from its usual storage check, instead of searching through your Library for a quarter of an hour. It only suggests deleting a file once it has confirmed the file is identical to another. If it couldn't finish checking two large files, it offers to compare them in full, says how long that may take, and asks before it starts. Looking alike isn't the same as being the same.
 
 - **You asked for it, so it doesn't ask you** — Rebel sometimes stopped to ask your permission for something you'd already asked it to do, only because it guessed it might not work, such as making a video you'd asked for. Now it just goes ahead, and if something doesn't work, Rebel sees the error and can try to fix it. It still checks with you first when an action could send or share something with people you didn't mean, expose something private, or go against what you said.
 - **Send means send** — Clicking Send on a connected app's card now approves that one action. Background tool requests use your usual rules and approvals. Submit on Rebel's own forms goes straight in, and the Connected app permissions section has left Settings. One permission system was plenty.
@@ -206,7 +217,6 @@ What's new in Rebel. We ship fast, so there's always something.
 - **A straight answer when your company's model can't run** — If your company requires a model only its own connection can run, and that connection isn't set up for you, Rebel now says so and points you to your admin, instead of sending you to Settings to connect something that can't help.
 
 - **Web addresses on your phone are now links** — Tap an address Rebel writes out in a reply to open it in your browser. Less copying, more going places.
-- **Helpers bring their own login** — When Rebel hands part of a job to a helper that runs on a different AI service from your main conversation, the helper now uses that service's own account. Before, it tried the sign-in from your main conversation and failed at once. You don't need to do anything.
 
 - **The phone app shows a new chat's title without being nudged** — At the top of a new chat, the phone app kept saying "New conversation" until you left the chat and came back. Now the real title appears by itself, moments after Rebel's first answer.
 - **A widget with a memory** — Your iPhone widget keeps its last confirmed actions, marks old updates clearly, and refreshes while Rebel is closed. "All clear" now waits for evidence.
