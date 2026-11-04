@@ -21,6 +21,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Improvements
 
+- **Slack files, and no half-sent messages** — Rebel can attach files in Slack again: reconnect Slack once to give it permission to send files. Ask for a message with a file and Rebel now keeps the message back until the file has gone. If the file can't go, it asks: send the message without the file, wait, or try again. No more being asked to approve a message you just asked for, and nobody gets the message without its file before you've chosen.
+
 - **Keep an app current** — On your computer, an app can show its linked automations, their schedules and last runs. Open one or run it now from the app. **Keep this current** sets up an ordinary update automation, so its schedule and instructions stay in the usual place. Choose **When I open it** to refresh on opening, at most once every 15 minutes. The last snapshot stays visible while the update runs.
 
 - **Longer conversations on more models** — With an API key or OpenRouter, Claude Haiku 5.5, the GPT-6 and GPT-6.1 models and Grok 4.7 can now hold much more of a conversation before Rebel shortens the older parts into a summary. A very long request costs more with these providers (about twice the usual rate on GPT and Grok, five times on Haiku 5.5), and **Settings → Usage** now shows what they actually charge. With a ChatGPT account, GPT-6 Sol and GPT-6 Luna now summarise a little sooner, to match what ChatGPT allows; GPT-6 Astra and GPT-6.1 don't change. A context size already saved on a model stays as it is.
