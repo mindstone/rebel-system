@@ -85,7 +85,7 @@ What's new in Rebel. We ship fast, so there's always something.
 
 - **One false alarm fewer** — Approving a save while your Rebel cloud was updating could wrongly say the save failed. Rebel now waits for the update to finish, then saves it.
 
-- **Connections keep their place** — If Rebel can't read your saved Microsoft 365 or Slack connection list, it leaves your sign-ins untouched and asks you to try again. Connections that still need setup now say so, with a hint to try reconnecting in Settings on your computer. Ready should mean ready.
+- **Connections that need setup say so** — If Rebel couldn't finish setting up one of your connections, it used to say it was ready and then fail. Now it says it needs setup, so you know to reconnect it in Rebel's Settings on your computer. And if Rebel can't read its list of your connected Microsoft 365 or Slack accounts, it leaves them all connected and asks you to try again.
 
 - **Clearer AI connection headings** — Settings and the model list now say which connections run your everyday work and which power more models. Your Anthropic key stays in the everyday list, marked **API key**.
 
