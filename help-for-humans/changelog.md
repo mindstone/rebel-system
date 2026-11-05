@@ -25,7 +25,7 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Improvements
 
-- **Spaces that explain themselves** — A Space with no description, or one shorter than about a line, now shows a quiet note with **Add a description** in **Settings → Spaces**, and again when Rebel saves something there. A line on what belongs in a Space helps Rebel judge what's fine to save in it. Nothing is blocked; it's a nudge, not a nag.
+- **Spaces that explain themselves** — If a Space has no description, or only a few words, Rebel now shows a short note with an **Add a description** link: in **Settings → Spaces**, and in the **Memory updated** card when Rebel saves a note to that Space. A sentence on what the Space is for helps Rebel decide which notes belong there. It's optional and blocks nothing: a nudge, not a nag.
 
 - **Approval, with the important bit first** — When Rebel pauses before deleting, moving or sending something, the approval window now starts with what Rebel said and shows exactly what will change. The full command is tucked under **More details**, ready to copy, while broader permission choices wait under **Other options**. Less archaeology, more informed decisions.
 
