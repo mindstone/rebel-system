@@ -25,6 +25,7 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Improvements
 
+- **Drafts you can actually see** — When Rebel writes a message for your OK, like a Slack reply, it now shows the draft in an editable card and stops there, with an "A draft needs your OK" notification if you're elsewhere. Before, it could ask you to approve a draft it never showed you, then keep going in circles. Edit it, press Send, done. Approval works better with something to approve.
 - **Kimi K3.1 Pro joins the choices** — Kimi K3.1 Pro is an AI model you can add or choose in **Settings → Agent & Voice** through OpenRouter. If your company or organisation uses Fireworks for its AI, your admin can set it up for you too. Your existing model choices stay as they are.
 
 - **Tables take a breath** — Tables in replies now show line breaks instead of a stray `<br>`. A small break with proper manners.
