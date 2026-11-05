@@ -84,14 +84,14 @@ teamDirectory:
 2) For action == "dm"
    - Construct the message text (optionally apply lightweight template formatting)
    - Show it as a `rebel_canvas_view` draft (kind `message`, a To field with the recipient's name, the text as the body) and stop; never ask for approval of the message in prose
-   - When the person presses Send, post the card's body exactly, as the authenticated user, to the existing IM `channelId`
+   - When the person presses Send, use the card's fields and body exactly as submitted: if the To field changed, resolve the new recipient's existing IM `channelId` first (lookup only); then post the body as the authenticated user
    - Return: `ok`, `channelId`, `ts`, and `permalink` if available
 
 3) For action == "channel_post"
    - Resolve `channelId` from `channelHint`
    - Apply optional `template: announcement` formatting (e.g., bold title, separators)
    - Show it as a `rebel_canvas_view` draft (kind `message`, a Channel field, the text as the body) and stop; never ask for approval of the message in prose
-   - When the person presses Send, post the card's body exactly, as the authenticated user; for a reply in a thread, use the thread-reply tool with the original channel and thread
+   - When the person presses Send, use the card's fields and body exactly as submitted: if the Channel field changed, resolve the new channel first; then post the body as the authenticated user. For a reply in a thread, use the thread-reply tool with that channel and the original thread
    - Return: `ok`, `channelId`, `ts`, `permalink`
 
 4) For action == "fetch_messages"
