@@ -25,6 +25,10 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Improvements
 
+- **Approval, with the important bit first** — When Rebel pauses before deleting, moving or sending something, the approval window now starts with what Rebel said and shows exactly what will change. The full command is tucked under **More details**, ready to copy, while broader permission choices wait under **Other options**. Less archaeology, more informed decisions.
+
+- **Kimi K3.1 Pro joins the choices** — Kimi K3.1 Pro is an AI model you can add or choose in **Settings → Agent & Voice** through OpenRouter. If your company or organisation uses Fireworks for its AI, your admin can set it up for you too. Your existing model choices stay as they are.
+
 - **Tables take a breath** — Tables in replies now show line breaks instead of a stray `<br>`. A small break with proper manners.
 - **Example keys stay examples** — When a note explains how to connect an app and uses a made-up stand-in for its password or key, like "your-token-here", Rebel no longer shows "Possible credentials detected" on every edit of that note. A note that seems to hold a real password or key is still held for your OK before it's saved, as before. Fewer false alarms, same smoke detector.
 - **Nothing lost when a file wanders off** — If Rebel is waiting to update a file that's since moved or been deleted, you can now save Rebel's version as a new file instead of watching it vanish. If the file was only renamed, Preview finds it and offers to update it there.
@@ -73,6 +77,21 @@ What's new in Rebel. We ship fast, so there's always something.
 ### Fixes
 
 - **Settings that stay set** — Clear or change a conversation's finish line, model choice or other settings on your computer and your choice now sticks, even if your cloud syncs before the change reaches it. Changes you just made on your phone no longer get overwritten along the way. Syncing needn't be a difference of opinion.
+
+- During Rebel setup, Continue now checks the work folder again after an error. Once the folder is usable again, setup can continue without restarting Rebel.
+
+- **Room for the last column** — Ordinary three-column tables in Rebel’s phone replies now show the last column instead of cutting it off. You can still swipe left or right to read wider tables.
+- **Out of allowance, less guesswork** — Allowance errors now explain that another task's model can still use your exhausted plan after you add an account or change **Everyday work**, and point to account and task controls in **Settings → Agent & Voice**. Saved-account descriptions no longer promise to take over for every task.
+
+- **Search a single file** — Rebel can now search within one text file, as well as across a folder.
+
+- **Quick answers survive tab switches** — Switching to another conversation and back no longer hides the **Just a quick answer** button while Rebel is still replying. Back where you left it.
+
+- **Home keeps what you hand it** — A picture sent from Home now shows in your message and stays with it, and a Library file you @-mention there is attached, as it already was in a conversation. A picture with no words now waits for a message, instead of leaving an empty bubble. Fewer things lost in transit.
+
+- **File conflicts, mentioned once** — When a file changes after Rebel drafts an update to it, web and phone now show the conflict once, and say so once. On web, **Review** shows both versions so you can keep either. The buttons say **Use Rebel's draft** and **Keep current version** everywhere, and file locations on web no longer fill up with backslashes.
+
+- **A tap too short, said plainly** — A voice recording too short to hold any words now says "Too short to catch" instead of showing a transcription error. Rebel also stops quietly retrying such a recording in the background every ten minutes, since there was never anything in it to hear.
 
 - **Offline, honestly** — After your connection dropped, reopening Rebel could show the offline notice twice and keep saying you were offline once you were back. Now there's one notice, worded so it stays true, and a reply that never finished no longer claims its work was preserved or asks you to rate it.
 

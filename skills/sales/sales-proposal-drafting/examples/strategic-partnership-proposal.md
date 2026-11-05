@@ -109,7 +109,7 @@ This proposal is a **starting point for discussion**. We'd love your input on ho
 ---
 
 **Contact:**
-Jane Smith  
+Jane Doe  
 CEO, Acme Training Co.  
 jane@acmetraining.example.com
 
