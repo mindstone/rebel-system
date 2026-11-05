@@ -76,6 +76,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **The whole picture** — iPhone photos attached on desktop now convert at their full size and proper colours, rather than as one corner or a patchwork.
+
 - **Settings that stay set** — Clear or change a conversation's finish line, model choice or other settings on your computer and your choice now sticks, even if your cloud syncs before the change reaches it. Changes you just made on your phone no longer get overwritten along the way. Syncing needn't be a difference of opinion.
 
 - During Rebel setup, Continue now checks the work folder again after an error. Once the folder is usable again, setup can continue without restarting Rebel.
