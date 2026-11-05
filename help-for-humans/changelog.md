@@ -76,6 +76,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **Files in linked folders** — When Rebel reads a file from a folder linked into your Library to use with a connected app, it now follows your usual folder permissions. If it needs your OK, it asks instead of refusing the file.
+
 - During Rebel setup, Continue now checks the work folder again after an error. Once the folder is usable again, setup can continue without restarting Rebel.
 
 - **Room for the last column** — Ordinary three-column tables in Rebel’s phone replies now show the last column instead of cutting it off. You can still swipe left or right to read wider tables.
