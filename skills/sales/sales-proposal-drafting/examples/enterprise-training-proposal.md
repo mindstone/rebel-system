@@ -121,7 +121,7 @@ On average, participants reclaim 5.5 hours per week by programme completion—me
 
 ## Proven Results
 
-### TechCorp Industries
+### Acme Corp
 52% increase in AI adoption (31% to 83%), 29 use cases discovered within 4 weeks—comparable profile to GlobalMedia's organisational transformation challenge.
 
 ### FinanceGroup Holdings
@@ -166,7 +166,7 @@ Following successful pilot, full organisational rollout becomes available:
 
 ## Contact
 
-**Jane Smith**  
+**Jane Doe**  
 CEO, Acme Training Co.  
 jane@acmetraining.example.com  
 +1 555 123 4567

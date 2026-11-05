@@ -58,8 +58,8 @@ Each extension has `extends:` pointing to its parent. When using a skill:
 **Example chain:**
 ```
 Chief-of-Staff/skills/sales/email-to-customers/SKILL.md
-  extends: work/AcmeCorp/Sales/skills/sales/email-to-customers/SKILL.md
-    extends: work/AcmeCorp/skills/sales/email-to-customers/SKILL.md
+  extends: work/Acme Corp/Sales/skills/sales/email-to-customers/SKILL.md
+    extends: work/Acme Corp/skills/sales/email-to-customers/SKILL.md
       extends: rebel-system/skills/sales/email-to-customers/SKILL.md
 ```
 
@@ -108,11 +108,11 @@ last_modified_at: "2025-12-27"
 5. **Ask the user** - If nothing found: "What name should I use for attribution?"
 
 **Name format rules:**
-- Prefer full name with proper capitalization: "Jane Smith"
+- Prefer full name with proper capitalization: "Jane Doe"
 - If using email, use full email: "jane@example.com"
 - NO parenthetical notes - just the clean name/email
 - Use "Rebel" for AI contributions (not "Rebel (Claude)")
-- **BE CONSISTENT** - don't mix "Jane Smith" and "jane@example.com" in the same batch
+- **BE CONSISTENT** - don't mix "Jane Doe" and "jane@example.com" in the same batch
 
 **WRONG formats:**
 ```yaml
@@ -123,10 +123,10 @@ contributed:
 # WRONG - object format
 contributed:
   - role: "Original Author"
-    entity: "user@email.com"
+    entity: "user@example.com"
 
 # WRONG - inconsistent naming in same session
-# Skill 1: author: "Jane Smith"
+# Skill 1: author: "Jane Doe"
 # Skill 2: author: "jane@example.com"  # Should match Skill 1!
 ```
 
@@ -296,7 +296,7 @@ extension_type: overlay
 >
 > **Any recurring context?** For example, your role, company, or meeting types you have most often?"
 
-**User**: "I'm a PM at TechCorp, mostly internal stakeholder meetings"
+**User**: "I'm a PM at Acme Corp, mostly internal stakeholder meetings"
 
 **Assistant**: *Creates extension*
 

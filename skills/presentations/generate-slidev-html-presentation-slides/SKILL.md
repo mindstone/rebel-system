@@ -424,7 +424,7 @@ Customize colors, fonts, and logo for your company/team.
 ```yaml
 ---
 name: generate-slidev-html-presentation-slides
-description: "AcmeCorp branded presentations"
+description: "Acme Corp branded presentations"
 extends: rebel-system/skills/presentations/generate-slidev-html-presentation-slides/SKILL.md
 extension_type: overlay
 author: "Your Name"
@@ -435,7 +435,7 @@ last_modified_by: "Rebel"
 last_modified_at: "2026-01-14"
 ---
 
-# AcmeCorp Brand Extension
+# Acme Corp Brand Extension
 
 ## Brand Colors
 
@@ -563,8 +563,8 @@ Extensions chain automatically:
 **Example chain:**
 ```
 Chief-of-Staff/skills/presentations/generate-slidev-html-presentation-slides/
-  extends: work/AcmeCorp/Sales/skills/presentations/generate-slidev-html-presentation-slides/
-    extends: work/AcmeCorp/skills/presentations/generate-slidev-html-presentation-slides/
+  extends: work/Acme Corp/Sales/skills/presentations/generate-slidev-html-presentation-slides/
+    extends: work/Acme Corp/skills/presentations/generate-slidev-html-presentation-slides/
       extends: rebel-system/skills/presentations/generate-slidev-html-presentation-slides/
 ```
 
