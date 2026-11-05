@@ -25,6 +25,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Improvements
 
+- **Spaces that explain themselves** — A Space with no description, or one shorter than about a line, now shows a quiet note with **Add a description** in **Settings → Spaces**, and again when Rebel saves something there. A line on what belongs in a Space helps Rebel judge what's fine to save in it. Nothing is blocked; it's a nudge, not a nag.
+
 - **Approval, with the important bit first** — When Rebel pauses before deleting, moving or sending something, the approval window now starts with what Rebel said and shows exactly what will change. The full command is tucked under **More details**, ready to copy, while broader permission choices wait under **Other options**. Less archaeology, more informed decisions.
 
 - **Kimi K3.1 Pro joins the choices** — Kimi K3.1 Pro is an AI model you can add or choose in **Settings → Agent & Voice** through OpenRouter. If your company or organisation uses Fireworks for its AI, your admin can set it up for you too. Your existing model choices stay as they are.
