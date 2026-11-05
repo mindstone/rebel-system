@@ -72,6 +72,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **Out of allowance, less guesswork** — Allowance errors now explain that another task's model can still use your exhausted plan after you add an account or change **Everyday work**, and point to account and task controls in **Settings → Agent & Voice**. Saved-account descriptions no longer promise to take over for every task.
+
 - **Search a single file** — Rebel can now search within one text file, as well as across a folder.
 
 - **Quick answers survive tab switches** — Switching to another conversation and back no longer hides the **Just a quick answer** button while Rebel is still replying. Back where you left it.

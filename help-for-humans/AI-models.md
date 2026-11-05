@@ -39,7 +39,7 @@ A Mindstone plan is **in use** when its row in **Settings → Agent & Voice** sa
 
 In **[Settings → Agent & Voice](rebel://settings/agents#backupConnections)**, choose **Use as Backup** for an account, then put your Backups in the order you want Rebel to try them. If your main account is busy or hits its limit, Rebel automatically switches to the next Backup. There is one Backup list in the everyday card; the separate keys card has none.
 
-If you add no Backup, Rebel won't switch accounts when one is busy. The exception is a Mindstone plan whose allowance has run out: your saved OpenRouter account or Anthropic key, or a key model you selected, then takes over and bills you. A Mindstone plan becomes a Backup only if you choose **Use as Backup** for it.
+If you add no Backup, Rebel won't switch accounts when one is busy. The exception is a Mindstone plan whose allowance has run out: your saved OpenRouter account or Anthropic key, or a key model you selected, can take over for some model choices and bill you. Saving an account does not change every task's model; check your choices under **Customise**. A Mindstone plan becomes a Backup only if you choose **Use as Backup** for it.
 
 ## See also
 
