@@ -68,14 +68,14 @@ Strategic partnership discussion with DataFlow (leading data integration platfor
 ## Context & Recent Activity
 
 **How this partnership emerged:**
-- **Inbound email from Rachel (Dec 15, 2024)**: Reached out after 3 mutual customers (including our top customer, TechCorp) requested DataFlow integration
+- **Inbound email from Rachel (Dec 15, 2024)**: Reached out after 3 mutual customers (including our top customer, Acme Corp) requested DataFlow integration
 - **Exploratory call with Lisa (Jan 5)**: Rachel outlined vision for analytics partnership; suggested formal discussion with decision-makers
 - **Follow-up email (Jan 10)**: Rachel shared preliminary integration spec document showing two-way data sync + embedded analytics UI
 
 **Recent conversations:**
 - **Slack #partnerships (Jan 12)**: Lisa shared Rachel's proposal; team generally positive but Raj concerned about 3-4 month build timeline displacing other priorities
 - **1:1 with Sarah (Jan 15)**: Discussed trade-offs; Sarah interested if it truly unlocks distribution, but skeptical of "partnership theater" without real GTM commitment
-- **Email from Customer Success (Jan 16)**: TechCorp (our largest customer, $240K ARR) specifically requested DataFlow integration and would "significantly expand" usage if available
+- **Email from Customer Success (Jan 16)**: Acme Corp (our largest customer, $240K ARR) specifically requested DataFlow integration and would "significantly expand" usage if available
 
 **Internal considerations:**
 - Q1 product roadmap already has 3 major integration projects (Salesforce, HubSpot, Slack)
@@ -125,14 +125,14 @@ Strategic partnership discussion with DataFlow (leading data integration platfor
 **Power dynamics:**
 - DataFlow is much larger ($400M ARR vs. our ~$20M) and has strong brand - we need this more than they do
 - But: we have analytics expertise they lack, and mutual customers are asking for this (not just theoretical)
-- Key leverage point: TechCorp's expansion interest - shows real customer demand, not just nice-to-have
+- Key leverage point: Acme Corp's expansion interest - shows real customer demand, not just nice-to-have
 
 ---
 
 ## Quick Reference for During Meeting
 
 **Key talking points:**
-- **Mutual customer validation**: TechCorp specifically requested this integration and will expand usage significantly if available
+- **Mutual customer validation**: Acme Corp specifically requested this integration and will expand usage significantly if available
 - **Our distribution value**: We have 200+ customers in DataFlow's ICP; could drive adoption of DataFlow among our customer base (bidirectional benefit)
 - **Technical capability**: Raj's team has built 15 integrations (Salesforce, HubSpot, Slack, etc.); we know how to build production-quality integrations
 - **Timeline realism**: If we commit, we can deliver in Q2 (Apr-May launch), but we need mutual commitment to GTM support
@@ -140,7 +140,7 @@ Strategic partnership discussion with DataFlow (leading data integration platfor
 **Numbers to remember:**
 - DataFlow: $400M ARR, 50K+ customers
 - Our company: ~$20M ARR, 200+ customers
-- TechCorp (mutual customer): $240K ARR, will expand significantly with DataFlow integration
+- Acme Corp (mutual customer): $240K ARR, will expand significantly with DataFlow integration
 - Estimated build: 3-4 months, 1.5 engineers
 - Opportunity size: 5K qualified leads from DataFlow distribution (Rachel's estimate)
 
@@ -172,7 +172,7 @@ Strategic partnership discussion with DataFlow (leading data integration platfor
 - **Call notes: Rachel Kim exploratory call** (Jan 5, 2025) - Lisa's initial conversation with Rachel (Google Doc)
 - **Email: "DataFlow Integration Spec - Preliminary"** (Jan 10, 2025) - Rachel shared technical overview document (attached PDF)
 - **Slack #partnerships discussion** (Jan 12, 2025) - Internal team reactions to partnership proposal (Lisa, Raj, Sarah)
-- **Email from Customer Success re: TechCorp** (Jan 16, 2025) - TechCorp's specific request for DataFlow integration and expansion interest
+- **Email from Customer Success re: Acme Corp** (Jan 16, 2025) - Acme Corp's specific request for DataFlow integration and expansion interest
 - **DataFlow partner ecosystem overview** (public web page: dataflow.com/partners) - Lists current integration and technology partners
 - **Rachel Kim LinkedIn profile** (linkedin.com/in/rachelkim-partnerships) - Background on her role and DataFlow tenure
 - **Q1 Product Roadmap** (internal Google Sheet) - Current integration priorities (Salesforce, HubSpot, Slack)

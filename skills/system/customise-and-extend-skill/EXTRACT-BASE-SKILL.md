@@ -98,7 +98,7 @@ last_modified_at: "{YYYY-MM-DD}"
 {Generic structure}
 ```
 
-**Path convention**: Use workspace-root-relative paths for `extends:` (e.g., `rebel-system/skills/...` or `work/AcmeCorp/skills/...`), not filesystem-relative paths like `../`.
+**Path convention**: Use workspace-root-relative paths for `extends:` (e.g., `rebel-system/skills/...` or `work/Acme Corp/skills/...`), not filesystem-relative paths like `../`.
 
 **Quality checks for the base:**
 - [ ] No references to specific companies, roles, or contexts (unless it's a company-layer base)
@@ -184,7 +184,7 @@ This skill can be extended with personal or team preferences. See `@customise-an
 
 **In your extension** (the `extends:` field already documents this):
 ```yaml
-extends: work/AcmeCorp/skills/productivity/meeting-prep/SKILL.md
+extends: work/Acme Corp/skills/productivity/meeting-prep/SKILL.md
 ```
 
 ## Example: Extracting a Meeting Prep Skill
@@ -197,7 +197,7 @@ This example shows a 3-layer chain: platform base → company extension → pers
 ```yaml
 ---
 name: client-meeting-prep
-description: "Prepare for client meetings at TechCorp"
+description: "Prepare for client meetings at Acme Corp"
 ---
 
 # Client Meeting Prep
@@ -217,12 +217,12 @@ description: "Prepare for client meetings at TechCorp"
 Always one page. Bullet points. Include health score prominently.
 
 ## Context
-I'm a CSM at TechCorp. Our clients are enterprise SaaS companies.
+I'm a CSM at Acme Corp. Our clients are enterprise SaaS companies.
 ```
 
 ### After (Base + Extension)
 
-**Base skill** at `work/TechCorp/skills/productivity/client-meeting-prep/SKILL.md`:
+**Base skill** at `work/Acme Corp/skills/productivity/client-meeting-prep/SKILL.md`:
 ```yaml
 ---
 name: client-meeting-prep
@@ -235,7 +235,7 @@ extension_type: overlay
 
 ## Company Context
 
-TechCorp-specific additions to standard meeting prep.
+Acme Corp-specific additions to standard meeting prep.
 
 ## Additional Research Sources
 - Check CRM for account details
@@ -258,7 +258,7 @@ Send brief to account team before meeting.
 ---
 name: client-meeting-prep
 description: "My preferences for client meeting prep"
-extends: work/TechCorp/skills/productivity/client-meeting-prep/SKILL.md
+extends: work/Acme Corp/skills/productivity/client-meeting-prep/SKILL.md
 extension_type: overlay
 ---
 

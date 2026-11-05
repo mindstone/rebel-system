@@ -104,7 +104,7 @@ node query_linkedin_data.js connections-by-date --year 2020 --month 6
 node query_linkedin_data.js messages-search --query "fundraising"
 
 # Messages with person
-node query_linkedin_data.js messages-with --person "Jane Smith"
+node query_linkedin_data.js messages-with --person "Jane Doe"
 
 # View profile
 node query_linkedin_data.js profile-summary
@@ -215,10 +215,10 @@ node query_linkedin_data.js connections-by-company --company "Partners"
 ### Meeting Prep
 ```bash
 # Find the person
-node query_linkedin_data.js find-person --name "Jane Smith"
+node query_linkedin_data.js find-person --name "Jane Doe"
 
 # Check message history
-node query_linkedin_data.js messages-with --person "Jane Smith"
+node query_linkedin_data.js messages-with --person "Jane Doe"
 ```
 
 ### CRM Export
