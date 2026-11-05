@@ -72,6 +72,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **Search a single file** — Rebel can now search within one text file, as well as across a folder.
+
 - **Quick answers survive tab switches** — Switching to another conversation and back no longer hides the **Just a quick answer** button while Rebel is still replying. Back where you left it.
 
 - **Home keeps what you hand it** — A picture sent from Home now shows in your message and stays with it, and a Library file you @-mention there is attached, as it already was in a conversation. A picture with no words now waits for a message, instead of leaving an empty bubble. Fewer things lost in transit.
