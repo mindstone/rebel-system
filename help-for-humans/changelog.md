@@ -78,6 +78,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **Files in linked folders** — When Rebel reads a file from a folder linked into your Library to use with a connected app, it now follows your usual folder permissions. If it needs your OK, it asks instead of refusing the file.
+
 - **The whole picture** — iPhone photos attached on desktop now convert at their full size and proper colours, rather than as one corner or a patchwork.
 
 - **Settings that stay set** — Clear or change a conversation's finish line, model choice or other settings on your computer and your choice now sticks, even if your cloud syncs before the change reaches it. Changes you just made on your phone no longer get overwritten along the way. Syncing needn't be a difference of opinion.
