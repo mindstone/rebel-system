@@ -72,6 +72,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **Out of allowance, less guesswork** — Allowance errors now explain that another task's model can still use your exhausted plan after you add an account or change **Everyday work**, and point to account and task controls in **Settings → Agent & Voice**. Saved-account descriptions no longer promise to take over for every task.
+
 - **Quick answers survive tab switches** — Switching to another conversation and back no longer hides the **Just a quick answer** button while Rebel is still replying. Back where you left it.
 
 - **Home keeps what you hand it** — A picture sent from Home now shows in your message and stays with it, and a Library file you @-mention there is attached, as it already was in a conversation. A picture with no words now waits for a message, instead of leaving an empty bubble. Fewer things lost in transit.
