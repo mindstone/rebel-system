@@ -119,7 +119,7 @@ Inputs
 ```yaml
 action: "dm"
 dm:
-  recipient: "Jane Smith"
+  recipient: "Jane Doe"
   text: "Heads-up: shipping the feature updates today. Ok to proceed?"
   preview: true
   imStrategy: "im_lookup_only"
@@ -127,7 +127,7 @@ dm:
 
 Draft card (example `rebel_canvas_view` input)
 ```json
-{"title": "Message to Jane Smith", "sections": [{"type": "draft", "kind": "message", "title": "Message to Jane Smith", "fields": [{"label": "To", "value": "Jane Smith"}], "body": "Heads-up: shipping the feature updates today. Ok to proceed?"}]}
+{"title": "Message to Jane Doe", "sections": [{"type": "draft", "kind": "message", "title": "Message to Jane Doe", "fields": [{"label": "To", "value": "Jane Doe"}], "body": "Heads-up: shipping the feature updates today. Ok to proceed?"}]}
 ```
 
 Channel Announcement (example)
