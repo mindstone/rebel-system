@@ -72,6 +72,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **Folder access, explained** — When Rebel cannot open the Library folder where it keeps your files, it now suggests checking for a folder-access request from your computer. If access was denied, Rebel shows how to allow it. If you choose a different folder in Settings and Rebel cannot save the change, the folder you typed stays there so you can try again.
+
 - **Out of allowance, less guesswork** — Allowance errors now explain that another task's model can still use your exhausted plan after you add an account or change **Everyday work**, and point to account and task controls in **Settings → Agent & Voice**. Saved-account descriptions no longer promise to take over for every task.
 
 - **Search a single file** — Rebel can now search within one text file, as well as across a folder.
