@@ -38,7 +38,7 @@ cat ventures.json capital.json partners.json | \
 ### Step 4: Check warm intros via messages
 ```bash
 # For each top prospect, check message history
-node query_linkedin_data.js messages-with --person "Jane Smith"
+node query_linkedin_data.js messages-with --person "Jane Doe"
 ```
 
 ---
@@ -49,14 +49,14 @@ node query_linkedin_data.js messages-with --person "Jane Smith"
 
 ### Quick lookup
 ```bash
-node query_linkedin_data.js find-person --name "Jane Smith"
+node query_linkedin_data.js find-person --name "Jane Doe"
 ```
 
 **Output:**
 ```json
 [
   {
-    "name": "Jane Smith",
+    "name": "Jane Doe",
     "company": "Acme Corp",
     "position": "VP Engineering",
     "connected_on": "15 Mar 2019",
@@ -67,7 +67,7 @@ node query_linkedin_data.js find-person --name "Jane Smith"
 
 ### Check messages
 ```bash
-node query_linkedin_data.js messages-with --person "Jane Smith"
+node query_linkedin_data.js messages-with --person "Jane Doe"
 ```
 
 ### Get mutual connections at their company

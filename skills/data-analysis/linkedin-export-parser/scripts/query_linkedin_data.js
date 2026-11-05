@@ -352,7 +352,7 @@ function main() {
       console.log('  node query_linkedin_data.js connections-by-company --company "Google"');
       console.log('  node query_linkedin_data.js connections-by-date --year 2020 --month 6');
       console.log('  node query_linkedin_data.js messages-search --query "fundraising"');
-      console.log('  node query_linkedin_data.js messages-with --person "Jane Smith"');
+      console.log('  node query_linkedin_data.js messages-with --person "Jane Doe"');
       console.log(`\nDefault data directory: ${getDefaultDataDir()}`);
       process.exit(0);
   }

@@ -419,7 +419,7 @@
 
 Key facts:
 - Name: [Your Name]
-- Email: [your.email@company.com]
+- Email: [your.email@example.com]
 - Teams: [Your teams]
 - Location/timezone: [Your timezone]
 
@@ -543,12 +543,12 @@ Tech startup client since March 2024, AI enablement project, monthly retainer.
 description: Q3 quarterly review with leadership
 source_type: meeting
 source_system: fireflies
-source_account: user@company.com
+source_account: user@example.com
 source_uid: abc123xyz
 source_url: https://app.fireflies.ai/view/abc123xyz
 stored_at: 2025-12-15
 occurred_at: 2025-12-15
-participants: [Jane Smith, Bob Chen, Carol Davis]
+participants: [Jane Doe, User A, User B]
 duration_minutes: 45
 ---
 
@@ -646,7 +646,7 @@ space_type: "company"        # personal | company | team | shared | project | ro
 sharing: "company-wide"      # private | team | company-wide | public
 sensitivity: "standard"      # standard | confidential | restricted
 related_spaces: ["Exec", "Chief-of-Staff"]
-owner: "jane@company.com"
+owner: "jane@example.com"
 ---</code></pre>
         <p><strong>How Rebel uses this</strong>:</p>
         <ul>
@@ -968,22 +968,22 @@ sensitivity: 0.9
 description: "Salary and equity compensation details - HIGHLY SENSITIVE"
 ---
 
-# Compensation - Jane Smith
+# Compensation - Jane Doe
 
 ## PERSONAL
 
 ### Current compensation (as of Dec 2025)
-- Base salary: $120,000/year (increased from $100k)
-  - SSOT: Email from manager@company.com "Re: Salary Adjustment" Dec 15, 2025
+- Base salary: [amount]/year (after the latest adjustment)
+  - SSOT: Email from manager@example.com "Re: Salary Adjustment" Dec 15, 2025
   - Updated: 251216 | Confidence: high
 
-- Equity: 1.5% of company (vested over 4 years)
+- Equity: [percentage] of company (vesting schedule)
   - SSOT: /Users/jane/Documents/Employment/Equity-Agreement-2025-12-15.pdf
   - Updated: 251216 | Confidence: high
 
 ## Signposts
 - Primary: /Users/jane/Documents/Employment/
-- Related: Gmail query: `from:manager@company.com subject:salary OR subject:compensation`</code></pre>
+- Related: Gmail query: `from:manager@example.com subject:salary OR subject:compensation`</code></pre>
         <p><strong>Why this works</strong>: Completely private, clear SSOT, high sensitivity marking, never touches company-shared spaces.</p>
     </details>
 
@@ -1121,8 +1121,8 @@ description: "Email contact patterns and Gmail query strings for frequent corres
 ## Internal Team Communication
 
 ### Manager 1:1s
-- **Contact**: Manager Name (manager@company.com)
-- **Gmail query**: `from:manager@company.com subject:"1:1" OR subject:"check-in" newer_than:180d`
+- **Contact**: Manager Name (manager@example.com)
+- **Gmail query**: `from:manager@example.com subject:"1:1" OR subject:"check-in" newer_than:180d`
 - **Cadence**: Bi-weekly
 - **Recent**: Career development discussion (Dec 5)</code></pre>
         <p><strong>What NOT to do</strong>:</p>

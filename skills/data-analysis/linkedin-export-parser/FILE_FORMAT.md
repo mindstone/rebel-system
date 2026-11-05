@@ -49,7 +49,7 @@ John,Doe,https://www.linkedin.com/in/johndoe,john@example.com,Acme Corp,CEO,17 J
 
 ```csv
 CONVERSATION ID,CONVERSATION TITLE,FROM,TO,DATE,SUBJECT,CONTENT,FOLDER
-abc123,Chat with John,John Doe,Jane Smith,2026-01-15 10:30:00 UTC,Re: Meeting,Sounds good!,INBOX
+abc123,Chat with Sample Colleague,Sample Colleague,Jane Doe,2026-01-15 10:30:00 UTC,Re: Meeting,Sounds good!,INBOX
 ```
 
 | Column | Type | Notes |
