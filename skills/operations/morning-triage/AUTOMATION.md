@@ -119,7 +119,7 @@ For meeting-prep items:
 For system receipts and automation logs ("memory hygiene completed", "draft saved", "source capture complete", "cleanup receipt"):
 - Dismiss/archive once recorded. These are audit trail entries, not Actions.
 
-For delegated tasks ("Greg said he would check", "Harry is working on", "Josh will confirm"):
+For delegated tasks ("Sam said he would check", "Jordan is working on", "Alex will confirm"):
 - Archive/dismiss unless the item clearly asks the user to follow up by a deadline.
 - Other people's owned work should not stay in the user's active Actions.
 
@@ -137,7 +137,7 @@ Log: N new items created, M items enriched, K items archived. Be brief.
 - **Only update/archive with HIGH confidence.** When in doubt, leave unchanged.
 - **Use structured data, not the visual app UI.** Actions state must come from `rebel_inbox_list`, `rebel_inbox_query`, and `rebel_inbox_update`. Do not use `rebel_navigate_app`, `rebel_get_app_screenshot`, screenshot-capture skills, or any live UI inspection to understand Actions.
 - **Do NOT archive user-request items** — the user explicitly added them.
-- **Drafts/clarifying questions are a caution flag, not an absolute block.** Do not archive a pending draft just because it exists. However, if exact source/reference evidence or a targeted search shows the underlying open loop was already completed by the user or another responsible teammate, archive it. Example: an item drafted as "ask Josh whether Operators is feature-flagged" can resolve if Josh/product already answered that in the referenced thread.
+- **Drafts/clarifying questions are a caution flag, not an absolute block.** Do not archive a pending draft just because it exists. However, if exact source/reference evidence or a targeted search shows the underlying open loop was already completed by the user or another responsible teammate, archive it. Example: an item drafted as "ask Alex whether Operators is feature-flagged" can resolve if Alex/product already answered that in the referenced thread.
 - **Do NOT archive items less than 24 hours old.**
 - **Prefer targeted email searches** over broad ones to minimize API usage and cost.
 - **Cap at 15 existing items per enrichment run** to keep cost bounded.

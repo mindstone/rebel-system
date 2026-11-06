@@ -30,7 +30,7 @@ Rebel uses OpenAI's speech-to-text API with custom vocabulary hints. These hints
 - Uncommon proper nouns (Anthropic, Claude)
 
 **Not needed (STT handles these well):**
-- Common English names (Peter, Hannah, Harry, John, Sarah)
+- Common English names (Peter, Priya, Jordan, John, Sarah)
 - Common English words
 - Well-known technical terms (JavaScript, GitHub, email, API, OpenAI)
 - Numbers or dates

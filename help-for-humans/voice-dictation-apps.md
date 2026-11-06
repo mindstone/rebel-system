@@ -27,8 +27,8 @@ See [voice-and-audio](library://rebel-system/help-for-humans/voice-and-audio.md)
 
 ## External dictation apps
 
-- Josh likes [Monologue](https://www.monologue.to/)
-- Greg likes [Aqua](https://aquavoice.com/)
+- A teammate likes [Monologue](https://www.monologue.to/)
+- Another teammate likes [Aqua](https://aquavoice.com/)
 - [VoiceInk](https://tryvoiceink.com/) has the benefit of being private (runs entirely on your computer)
 - Other people like [Wispr Flow](https://wisprflow.ai/), and [Superwhisper](https://superwhisper.com/).
 
