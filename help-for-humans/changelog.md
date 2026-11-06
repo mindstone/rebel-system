@@ -92,6 +92,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **Long replies stay awake, and notices let go** — With Prevent sleep on, Rebel keeps idle-sleep protection for the whole reply. An interrupted reply’s notice clears when continuing succeeds and stays cleared after reopening, even without new text. Close a recovery notice on that device without stopping work; its actions explain what happens next, without a clipped message quote. Connection and syncing notices stick to facts and available actions, and browser and Office chat stop repeating an internal error message alongside useful guidance.
+
 - **Fewer blind spots in terminal commands** — A few commands could slip past Rebel's checks because of how they were written, such as a delete placed after a redirect, or one held inside `su -c` or `trap`. Rebel now reads these as what they are, and a folder you've Blocked stays Blocked inside them too. A few false alarms went away along the way, which is the rare fix that asks you less.
 
 - **Folder access, explained** — When Rebel cannot open the Library folder where it keeps your files, it now suggests checking for a folder-access request from your computer. If access was denied, Rebel shows how to allow it. If you choose a different folder in Settings and Rebel cannot save the change, the folder you typed stays there so you can try again.
