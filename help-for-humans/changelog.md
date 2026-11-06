@@ -26,6 +26,11 @@ What's new in Rebel. We ship fast, so there's always something.
 ### Improvements
 
 - **Drafts you can actually see** — When Rebel writes a message for your OK, like a Slack reply, it now shows the draft in an editable card and stops there, with an "A draft needs your OK" notification if you're elsewhere. Before, it could ask you to approve a draft it never showed you, then keep going in circles. Edit it, press Send, done. Approval works better with something to approve.
+
+- **Spaces that explain themselves** — If a Space has no description, or only a few words, Rebel now shows a short note with an **Add a description** link: in **Settings → Spaces**, and in the **Memory updated** card when Rebel saves a note to that Space. A sentence on what the Space is for helps Rebel decide which notes belong there. It's optional and blocks nothing: a nudge, not a nag.
+
+- **Approval, with the important bit first** — When Rebel pauses before deleting, moving or sending something, the approval window now starts with what Rebel said and shows exactly what will change. The full command is tucked under **More details**, ready to copy, while broader permission choices wait under **Other options**. Less archaeology, more informed decisions.
+
 - **Kimi K3.1 Pro joins the choices** — Kimi K3.1 Pro is an AI model you can add or choose in **Settings → Agent & Voice** through OpenRouter. If your company or organisation uses Fireworks for its AI, your admin can set it up for you too. Your existing model choices stay as they are.
 
 - **Tables take a breath** — Tables in replies now show line breaks instead of a stray `<br>`. A small break with proper manners.
@@ -57,6 +62,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 - **The newest models, in the picker** — GPT-6.1 Sol and GPT-6.1 Terra arrive with an OpenAI key, a ChatGPT account and OpenRouter, and OpenRouter also gains GPT-6 Astra and GPT-6 Luna. Claude Haiku 5.5, Anthropic's newest and cheapest Claude, arrives with an Anthropic key and on OpenRouter. ChatGPT now starts new setups on GPT-6.1 Sol and moves a GPT-6 Sol that Rebel set up for you, with a one-time note; a model you chose yourself stays put. Usage costs for GPT-5.6 and Claude Sonnet 5.5 now match the providers' published prices, so they read lower. Newer, and cheaper than we thought.
 
+- **Newer, if you want it** — When a newer version of a model you chose yourself comes out, with the same thinking level and no higher price, Rebel asks once, in a pop-up the next time you open Rebel, whether to switch. Your settings change only if you click **Switch**: it moves whichever of Everyday work and Planning used the old model, and the confirmation that follows says where to switch back. **Keep**, or closing the pop-up, means Rebel won't suggest that switch again; you can still switch any time in Settings → Agent & Voice. This works with a ChatGPT account, your own Anthropic or OpenAI key, and OpenRouter; models your company has set for you, and the Mindstone plan's, stay as they are. Progress, at your own pace.
+
 - **The right explanation** — When your app and your cloud are on different versions, Rebel now says it needs an update instead of blaming your connection or your wording. The diagnosis has improved.
 
 - **A second pair of eyes** — You can now send images on a text-only model when the Thinking model on your connected OpenRouter account can read them. Delegation has its uses.
@@ -74,6 +81,16 @@ What's new in Rebel. We ship fast, so there's always something.
 - **Your finish line survives the paperwork** — When Rebel couldn't save part of a conversation and you settle it by picking a saved answer, a finish line you set while it was stuck is now kept instead of quietly lost. Anything else still waiting to be saved stays put, and Rebel tells you so. One decision shouldn't cost you another.
 
 ### Fixes
+
+- **Folder access, explained** — When Rebel cannot open the Library folder where it keeps your files, it now suggests checking for a folder-access request from your computer. If access was denied, Rebel shows how to allow it. If you choose a different folder in Settings and Rebel cannot save the change, the folder you typed stays there so you can try again.
+
+- **Notices in Rebel's own style** — The small notices in the top-right corner now appear in Rebel's own dark or light style; a notice with two buttons puts them beneath the message, so the text gets the full width. They had been showing up as plain white boxes. Dressed properly, at last.
+
+- **Files in linked folders** — When Rebel reads a file from a folder linked into your Library to use with a connected app, it now follows your usual folder permissions. If it needs your OK, it asks instead of refusing the file.
+
+- **The whole picture** — iPhone photos attached on desktop now convert at their full size and proper colours, rather than as one corner or a patchwork.
+
+- **Settings that stay set** — Clear or change a conversation's finish line, model choice or other settings on your computer and your choice now sticks, even if your cloud syncs before the change reaches it. Changes you just made on your phone no longer get overwritten along the way. Syncing needn't be a difference of opinion.
 
 - During Rebel setup, Continue now checks the work folder again after an error. Once the folder is usable again, setup can continue without restarting Rebel.
 
