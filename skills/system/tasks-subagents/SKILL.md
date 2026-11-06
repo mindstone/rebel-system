@@ -31,7 +31,7 @@ Sources: gmail_search_emails, gmail_read_email
 Here are the 3 emails matching your criteria:
 
 1. **Subject:** Q4 Budget Review
-   **From:** sarah@company.com
+   **From:** jane@example.com
    **Date:** Dec 20, 2025
    **Summary:** Requesting approval for revised Q4 marketing budget of $50k...
 

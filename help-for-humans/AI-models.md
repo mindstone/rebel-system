@@ -1,6 +1,6 @@
 ---
 description: "How to power Rebel's AI — a flat-fee Mindstone plan or bring your own (ChatGPT Pro, OpenRouter, Anthropic) — then choose Planner, Main work, and Behind the Scenes models, why one task can use several models, and what happens when you pick a model outside your plan tier"
-last_updated: "2026-11-02"
+last_updated: "2026-11-05"
 ---
 
 # AI models
@@ -39,7 +39,7 @@ A Mindstone plan is **in use** when its row in **Settings → Agent & Voice** sa
 
 In **[Settings → Agent & Voice](rebel://settings/agents#backupConnections)**, choose **Use as Backup** for an account, then put your Backups in the order you want Rebel to try them. If your main account is busy or hits its limit, Rebel automatically switches to the next Backup. There is one Backup list in the everyday card; the separate keys card has none.
 
-If you add no Backup, Rebel won't switch accounts when one is busy. The exception is a Mindstone plan whose allowance has run out: your saved OpenRouter account or Anthropic key, or a key model you selected, then takes over and bills you. A Mindstone plan becomes a Backup only if you choose **Use as Backup** for it.
+If you add no Backup, Rebel won't switch accounts when one is busy. The exception is a Mindstone plan whose allowance has run out: your saved OpenRouter account or Anthropic key, or a key model you selected, can take over for some model choices and bill you. Saving an account does not change every task's model; check your choices under **Customise**. A Mindstone plan becomes a Backup only if you choose **Use as Backup** for it.
 
 ## See also
 
@@ -107,7 +107,7 @@ OpenRouter is a first-class option in Rebel, not a workaround.
 4. Add credits to your OpenRouter account
 5. On the OpenRouter row in **Settings → Agent & Voice**, choose **Use for everyday work** if needed
 
-Good fit if you want one billing account for multiple model families. You can also enter any OpenRouter model ID directly — not just the defaults in Rebel's curated list. If you work with very large documents, MiniMax M3 is now available here as a long-context option. OpenAI's newest models are here too: GPT-6 Astra, GPT-6.1 Sol and GPT-6.1 Terra (each with a Pro mode for harder problems), and GPT-6 Luna. In Rebel these GPT-6 models read up to about 272,000 tokens of context, because above that OpenAI charges more for the whole message.
+Good fit if you want one billing account for multiple model families. You can also enter any OpenRouter model ID directly — not just the defaults in Rebel's curated list. Kimi K3.1 Pro is an AI model now available as an OpenRouter choice; add or choose it in **Settings → Agent & Voice**. If your company or organisation uses Fireworks for its AI, your admin can set it up for you too. If you work with very large documents, MiniMax M3 is now available here as a long-context option. OpenAI's newest models are here too: GPT-6 Astra, GPT-6.1 Sol and GPT-6.1 Terra (each with a Pro mode for harder problems), and GPT-6 Luna. In Rebel these GPT-6 models read up to about 272,000 tokens of context, because above that OpenAI charges more for the whole message.
 
 ### Anthropic
 

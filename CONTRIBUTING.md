@@ -23,7 +23,7 @@ This is a hard rule. **Do not include in any contribution:**
   names, conversation excerpts, log fragments, or screenshots containing
   identifying information.
 - Real company names in examples, fixtures, prompts, or test data. Illustrative
-  content must use fictional placeholders (e.g. `Acme Corp`, `TechCorp`,
+  content must use fictional placeholders (e.g. `Acme Corp`, `Jane Doe`,
   `jane@example.com`) — never a real customer, design-partner, or prospect
   name. Known names are checked before each release, but that only catches
   names already known — so don't introduce new ones.
