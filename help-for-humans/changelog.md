@@ -25,6 +25,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Improvements
 
+- **Security fixes, still arriving** — Rebel now runs on a newer version of the browser engine inside it, which still gets security fixes; the old one stopped getting them on October 20. On a Mac, this version needs macOS 13 or later. Patched, quietly.
+
 - **Drafts you can actually see** — When Rebel writes a message for your OK, like a Slack reply, it now shows the draft in an editable card and stops there, with an "A draft needs your OK" notification if you're elsewhere. Before, it could ask you to approve a draft it never showed you, then keep going in circles. Edit it, press Send, done. Approval works better with something to approve.
 
 - **Spaces that explain themselves** — If a Space has no description, or only a few words, Rebel now shows a short note with an **Add a description** link: in **Settings → Spaces**, and in the **Memory updated** card when Rebel saves a note to that Space. A sentence on what the Space is for helps Rebel decide which notes belong there. It's optional and blocks nothing: a nudge, not a nag.
