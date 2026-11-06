@@ -25,6 +25,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Improvements
 
+- **Drafts you can actually see** — When Rebel writes a message for your OK, like a Slack reply, it now shows the draft in an editable card and stops there, with an "A draft needs your OK" notification if you're elsewhere. Before, it could ask you to approve a draft it never showed you, then keep going in circles. Edit it, press Send, done. Approval works better with something to approve.
+
 - **Spaces that explain themselves** — If a Space has no description, or only a few words, Rebel now shows a short note with an **Add a description** link: in **Settings → Spaces**, and in the **Memory updated** card when Rebel saves a note to that Space. A sentence on what the Space is for helps Rebel decide which notes belong there. It's optional and blocks nothing: a nudge, not a nag.
 
 - **Approval, with the important bit first** — When Rebel pauses before deleting, moving or sending something, the approval window now starts with what Rebel said and shows exactly what will change. The full command is tucked under **More details**, ready to copy, while broader permission choices wait under **Other options**. Less archaeology, more informed decisions.
