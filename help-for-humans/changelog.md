@@ -39,7 +39,7 @@ What's new in Rebel. We ship fast, so there's always something.
 
 - **Approval, with the important bit first** — When Rebel pauses before deleting, moving or sending something, the approval window now starts with what Rebel said and shows exactly what will change. The full command is tucked under **More details**, ready to copy, while broader permission choices wait under **Other options**. Less archaeology, more informed decisions.
 
-- **Kimi K3.1 Pro joins the choices** — Kimi K3.1 Pro is an AI model you can add or choose in **Settings → Agent & Voice** through OpenRouter. If your company or organisation uses Fireworks for its AI, your admin can set it up for you too. Your existing model choices stay as they are.
+- **Kimi K3.1 Pro joins the choices** — Kimi K3.1 Pro is an AI model you can add or choose in **Settings → Agent & Voice** through OpenRouter. If your company or organisation uses Fireworks for its AI, ask your admin whether Kimi K3.1 Pro is available to you. Your existing model choices stay as they are.
 
 - **Tables take a breath** — Tables in replies now show line breaks instead of a stray `<br>`. A small break with proper manners.
 - **Example keys stay examples** — When a note explains how to connect an app and uses a made-up stand-in for its password or key, like "your-token-here", Rebel no longer shows "Possible credentials detected" on every edit of that note. A note that seems to hold a real password or key is still held for your OK before it's saved, as before. Fewer false alarms, same smoke detector.
