@@ -5,14 +5,14 @@ last_updated: "2026-10-31"
 
 # Your Browser
 
-Your Browser uses the Rebel extension that lets Rebel see the page you're looking at, so you can ask it to summarise, save, or act on that page without playing courier between tabs.
+Your Browser uses the Rebel extension that lets Rebel see the page you're looking at, so you can ask it to summarise, save, or act on that page without playing courier between tabs. This is the browser you already use, distinct from **Rebel's Browser**, the separate browser Rebel runs.
 
 ## What it can do
 
-Rebel works in its own tabs in your browser, grouped under **Rebel** at the top, in the background. It doesn't switch you to them or bring your browser forward, and it leaves your own tabs alone. You can watch at any time by clicking one of its tabs.
+Rebel works in tabs it opens inside your browser, grouped under **Rebel** at the top, in the background. It doesn't switch you to them or bring your browser forward, and it leaves your own tabs alone. You can watch at any time by clicking one of its tabs.
 
-- Open pages, and list, use and close its own tabs.
-- Read the page you're looking at, or one of its own, and quote what you've selected.
+- Open pages, and list, use and close the tabs it opens in your browser.
+- Read the page you're looking at, or one of the tabs it opened, and quote what you've selected.
 - Type, pick from drop-downs, press keys, hover, click and fill in forms.
 - Wait for a page or a part of it to load.
 - Take a screenshot of one of its tabs. If you're using that browser window at the time, Rebel reads the page's text instead, so it never switches tabs under you. It can take the picture once you've moved to another window.

@@ -12,17 +12,21 @@ Control web browsers directly from Rebel for tasks like data collection, form fi
 ## See also
 
 - [MCP connectors, tools, and integrations](library://rebel-system/help-for-humans/mcp-connectors-tools-and-integrations.md) - General connector setup and configuration
-- [Your Browser](rebel://library/rebel-system%2Fhelp-for-humans%2Fbrowser-extension.md) - Rebel's own extension, working in its own tabs in the browser you already use
+- [Your Browser](rebel://library/rebel-system%2Fhelp-for-humans%2Fbrowser-extension.md) - The Rebel extension, working in tabs it opens inside the browser you already use
 
 ## Which browser?
 
 | Connector | What it does | When to use it |
 |-----------|--------------|----------------|
-| **Your Browser** (formerly Rebel Browser) | Uses the Rebel extension in your own browser, signed in as you | Work on sites you're already signed in to, in its own background tabs: open pages, read, type, fill forms, click and take screenshots. Asks you when it needs you, for example to sign in |
-| **Rebel's Browser** (formerly Browser Automation) | A separate browser Rebel runs on this computer; keeps its own sign-ins | Web tasks on sites none of your other connectors cover: forms, screenshots and collecting information |
+| **Your Browser** | Uses the Rebel extension in the browser you already use, signed in as you | Work on sites you're already signed in to, in background tabs Rebel opens inside your browser, in the Rebel tab group: open pages, read, type, fill forms, click and take screenshots. Asks you when it needs you, for example to sign in |
+| **Rebel's Browser** | A separate browser Rebel runs on this computer; keeps its own sign-ins | Web tasks on sites none of your other connectors cover: forms, screenshots and collecting information |
 | **Cloud Browser** | Runs browsers online through Browserbase; billed per session with a one-minute minimum | Web tasks that run while you're away, such as scheduled automations |
 
-**Shared Browser Tab** is no longer offered for new connections. **Your Browser** handles web tasks in its own background tabs. If you already use Shared Browser Tab, it keeps working until you remove it.
+Choose Your Browser for work in accounts you're already signed in to. Choose Rebel's Browser when you want separate sign-ins; it won't use the accounts signed in to Your Browser.
+
+Name the browser in your request: “Use Your Browser”, “Use Rebel's Browser” or “Use Cloud Browser”.
+
+**Shared Browser Tab** is no longer offered for new connections. **Your Browser** handles web tasks in background tabs Rebel opens inside your browser. If you already use Shared Browser Tab, it keeps working until you remove it.
 
 ## Rebel's Browser
 
@@ -63,4 +67,4 @@ Ask Rebel:
 
 ## Shared Browser Tab (no longer offered)
 
-Shared Browser Tab is no longer offered for new connections. **Your Browser** handles new web tasks in its own background tabs, in the browser you already use. If you already have it connected, it keeps working until you remove it in **Settings → Connectors**.
+Shared Browser Tab is no longer offered for new connections. **Your Browser** handles new web tasks in background tabs Rebel opens inside the browser you already use. If you already have it connected, it keeps working until you remove it in **Settings → Connectors**.
