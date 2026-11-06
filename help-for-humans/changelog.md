@@ -8,6 +8,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Highlights
 
+- **Snooze an Action** — Not today? Snooze an Action for 3 days (or your own default) or any number of days you pick, on desktop, web or phone. It waits in a Snoozed group showing the day it comes back, then returns to its place by itself, due date untouched.
+
 - **A Rebel of your own in Slack** — Give your Rebel its own name in Slack by pasting one token, so colleagues can tell it apart from theirs. Colleagues can @mention it too: it answers from that Slack thread, and anything that needs your files or connected apps waits for you to OK it in Rebel. Set it up in Rebel under Settings → Connectors → Slack.
 
 - **Fewer questions when Rebel splits up a big job** — For a big job, like going through a year of your calendar, Rebel can hand each part to a helper: a second copy of itself that does one quarter, say. These helpers used to stop and ask you about steps that were plainly part of your request, because the check Rebel runs before each step couldn't see which part they'd been given. Now it can. Anything you didn't ask for, and anything your [Safety Rules](rebel://settings/safety#safetyRules) say to ask about, still asks you first. Nothing for you to do. Delegation, now with fewer permission slips.
