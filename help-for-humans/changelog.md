@@ -94,6 +94,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **Recording recovery after a reload** — If you reload Rebel while recording, Stop still works. Audio kept after an interrupted or failed recording is offered when you reopen the app; you can also ask for it in a new conversation on the computer where you recorded it. When Rebel cannot yet confirm that a meeting notetaker has stopped, the notice now says so.
+
 - **Long replies stay awake, and notices let go** — With Prevent sleep on, Rebel keeps idle-sleep protection for the whole reply. An interrupted reply’s notice clears when continuing succeeds and stays cleared after reopening, even without new text. Close a recovery notice on that device without stopping work; its actions explain what happens next, without a clipped message quote. Connection and syncing notices stick to facts and available actions, and browser and Office chat stop repeating an internal error message alongside useful guidance.
 
 - **Fewer blind spots in terminal commands** — A few commands could slip past Rebel's checks because of how they were written, such as a delete placed after a redirect, or one held inside `su -c` or `trap`. Rebel now reads these as what they are, and a folder you've Blocked stays Blocked inside them too. A few false alarms went away along the way, which is the rare fix that asks you less.
