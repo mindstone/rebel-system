@@ -27,6 +27,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 - **Apps that do things** — Ask Rebel for a timer, a tracker or another small tool, and it builds one as an app in your Library, buttons and all. It can turn one of your Library pages into an app, too, and an update you've set up with **Keep this current** now refreshes these apps as well. On your computer, Rebel may ask before an app uses your files, conversations or connectors. Allow it or not: Rebel remembers your answer for that app. Updates you've set up keep it; changes by someone else ask again. Change an answer in [Settings → Safety](rebel://settings/safety). Small tools, good manners.
 
+- **Always now covers the whole command** — Always on a terminal command used to cover only that exact line, so Rebel kept asking about small variations. Now Always on, say, `rm` (which deletes files) means Rebel stops asking about `rm` on this computer, whatever the options or files, in automations and Private mode too. The confirmation says exactly what you're agreeing to, and you can take it back in Settings > Privacy & Safety. Choices you've already made stay as narrow as they were. A promise is a promise.
+
 ### Improvements
 
 - **Word gets around** — In a Rebel-hosted or Google Shared Drive Space, the note saying a teammate changed your skill now reaches your notification bell, instead of staying on their computer.
