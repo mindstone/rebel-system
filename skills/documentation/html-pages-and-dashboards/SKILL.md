@@ -1,22 +1,29 @@
 ---
 name: html-pages-and-dashboards
-description: "Build a page to print or open in a browser, or a report needing a page layout. For charts, tables or dashboards the shared blocks can express, asked for or not, use rebel_canvas_view, and rebel_save_app when the person wants to keep the view."
-last_updated: 2026-10-31
+description: "Build a page to print or open in a browser, a report needing a page layout, or a code app: a small interactive tool the shared blocks can't express. For charts, tables or dashboards the blocks can express, asked for or not, use rebel_canvas_view, and rebel_save_app when the person wants to keep the view."
+last_updated: 2026-11-04
 agent_type: main_agent
 ---
 
 # HTML pages and dashboards
 
 [GOAL]
-Make a useful visual page to keep, share or print, or a report built from files or several sources.
-Save it in their Library and link it so they can open Rebel’s preview. Use their data, not invented figures.
+Make a useful visual page to keep, share or print, a report built from files or several sources,
+or a small tool kept as a code app. Save it in their Library and link it so they can open it.
+Use their data, not invented figures.
 
 [WHEN TO USE]
 - A page to print or open in a browser, including a tracker presented as a page, or a report needing a page layout beyond the available blocks, belongs here.
 - A chart, table or dashboard the shared blocks can express belongs in `rebel_canvas_view`, asked for or not, whether its data comes from the conversation, files or connectors. When the person wants to keep the view, use `rebel_save_app`. Before creating an app, look for an existing one with the same purpose (Glob **/*.rebelapp). Update an existing app when the person means that app; otherwise save alongside it under a clear name (for example with the period in the name). Offer to save at most once, only for a view the person asked for and will clearly reuse. Never schedule anything unless asked.
-- A sidebar tab that stays current from Rebel’s own meetings, memory or conversations, or keeps state
-  (a timer or tracker), is a plugin: read [build-custom-plugin](../../system/build-custom-plugin/SKILL.md).
-- This skill saves HTML pages. Do not offer to save an HTML page as an app.
+- A tool the person will keep using that the blocks can't express (a timer, a tracker, a checklist
+  that remembers what was ticked) is a code app: follow [CODE APPS] below. Blocks first: never write
+  code for a chart, table or dashboard the blocks can show.
+- A sidebar tab that stays current from Rebel’s own meetings, memory or conversations is still a
+  plugin: read [build-custom-plugin](../../system/build-custom-plugin/SKILL.md).
+- A page stays an HTML page. When a page needs what an app has (remembering things, using the
+  person's files, being kept current), offer once to make it an app. When they agree, or ask, save
+  it with `rebel_save_app` (`fromPage` set to the page's path), which brings its scripts and the kit
+  along and leaves the page as it is.
 
 [PROCESS]
 1. Use the available data and clarify only what would materially improve the result.
@@ -81,6 +88,57 @@ still render; show a notice where a library could not load. No live data request
 OpenStreetMap tiles work online in the sandboxed preview with attribution. Other tile providers
 usually need a key. Offline, the map’s labelled markers and HTML table remain when Leaflet is loaded;
 if the CDN library is unavailable too, the HTML table still works.
+
+[CODE APPS]
+A code app is one HTML document. Look for an existing app with the same purpose first
+(Glob **/*.rebelapp), then save it with `rebel_save_app`: `mode: 'create'`, a `name`, and the
+document as `html`. To change one, read it and pass the whole updated document as `html`.
+A converted plugin, including one that failed to convert, keeps its old code in `legacy.source`.
+Read that before changing or rebuilding it on the person's request; save the replacement as `html`
+at the same path. Rebel keeps its identity, data and legacy source, and removes the old runtime.
+An automation cannot do this rebuild.
+- Unlike a page, scripts go inline in `<script>` elements: an app can't load other Library files.
+- Link `rebel-html://kit/rebel.css` as a page does; Rebel puts the kit inside the app when it saves.
+  Read colours from the kit's variables, as above, so the app follows light and dark.
+- Libraries only from the pinned cdnjs URLs above. No fetch or XHR: use Rebel's connector calls for data.
+- The whole document must stay under 512 KB.
+
+Using Rebel from a code app: the app sends Rebel JSON-RPC messages through `window.parent`,
+and each answer carries the same `id`:
+
+```js
+let nextId = 0;
+const waiting = new Map();
+addEventListener('message', ({ data }) => {
+  const call = data && waiting.get(data.id);
+  if (data?.jsonrpc !== '2.0' || !call) return;
+  waiting.delete(data.id);
+  if (data.error) call.reject(new Error(data.error.message)); else call.resolve(data.result);
+});
+const rebel = (method, params) => new Promise((resolve, reject) => {
+  const id = ++nextId;
+  waiting.set(id, { resolve, reject });
+  parent.postMessage({ jsonrpc: '2.0', id, method, params }, '*');
+});
+const tool = (name, args = {}) => rebel('tools/call', { name, arguments: args });
+```
+
+- Remember things: `tool('app_state_set', { key, value })`, `tool('app_state_get', { key })` and
+  `tool('app_state_delete', { key })`. Values are JSON. Add `scope: 'shared'` for data everyone in a
+  shared Space sees; otherwise it is the person's own.
+- Read: `read_library_file` (`{ path }`), `rebel_search_files`, `rebel_search_sources`,
+  `rebel_conversations_list`, `rebel_conversations_search` and `rebel_conversations_get_summary`.
+  An app in a shared Space reads only that Space, and no conversations.
+- Use a connector: `tool('use_tool', { family, tool, arguments })`, where `family` is the connector's
+  name without an account, such as `GoogleWorkspace`. A call that needs the person's OK returns
+  `{ status: 'waiting' }`: say so in the app and don't retry. If they approve while the app is open,
+  the result arrives as a `notifications/app-tool-result` message with the same `requestId`.
+- Open a link: `rebel('ui/open-external-link', { url })`; `rebel://` links open inside Rebel.
+  Copy: `rebel('ui/clipboard/write', { text })`. Both work only while the person is using the app.
+- Before an app uses the person's data, Rebel may ask whether it may. An update the person set
+  up keeps their answer; other people's changes ask again. Until they allow it, and after a no,
+  these calls fail with an error: show the app's own
+  content and a short note, never a blank screen.
 
 [IN-CHAT HTML — rebel_canvas_html]
 Use the same libraries and pinned cdnjs URLs above. Inline scripts are allowed in this view;

@@ -25,6 +25,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 - **A failed step, explained** — Rebel names the reason when it knows why a step failed. When it doesn't, open **Details** to see the error on your computer, phone or browser. A little less mystery in the paperwork.
 
+- **Apps that do things** — Ask Rebel for a timer, a tracker or another small tool, and it builds one as an app in your Library, buttons and all. It can turn one of your Library pages into an app, too, and an update you've set up with **Keep this current** now refreshes these apps as well. On your computer, Rebel may ask before an app uses your files, conversations or connectors. Allow it or not: Rebel remembers your answer for that app. Updates you've set up keep it; changes by someone else ask again. Change an answer in [Settings → Safety](rebel://settings/safety). Small tools, good manners.
+
 ### Improvements
 
 - **Sent means sent** — When you send an email or message, or submit a form, from inside a Rebel conversation, Rebel now remembers it. Scroll away and back, open it full screen or restart Rebel, and it still says it was sent instead of offering Send again. While it's sending, the Send button is greyed out. If Rebel can't tell whether it went (say the connection dropped), it asks you to check your Sent folder before trying again. If your organisation has turned sending off, it tells you so and doesn't offer to try again. After a restart it shows when it was sent; the message itself is in your email or chat app as usual. Click once, and Rebel sends once.
