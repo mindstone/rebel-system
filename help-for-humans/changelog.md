@@ -25,6 +25,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Improvements
 
+- **Sent means sent** — When you send an email or message, or submit a form, from inside a Rebel conversation, Rebel now remembers it. Scroll away and back, open it full screen or restart Rebel, and it still says it was sent instead of offering Send again. While it's sending, the Send button is greyed out. If Rebel can't tell whether it went (say the connection dropped), it asks you to check your Sent folder before trying again. If your organisation has turned sending off, it tells you so and doesn't offer to try again. After a restart it shows when it was sent; the message itself is in your email or chat app as usual. Click once, and Rebel sends once.
+
 - **Drafts you can actually see** — When Rebel writes a message for your OK, like a Slack reply, it now shows the draft in an editable card and stops there, with an "A draft needs your OK" notification if you're elsewhere. Before, it could ask you to approve a draft it never showed you, then keep going in circles. Edit it, press Send, done. Approval works better with something to approve.
 
 - **Spaces that explain themselves** — If a Space has no description, or only a few words, Rebel now shows a short note with an **Add a description** link: in **Settings → Spaces**, and in the **Memory updated** card when Rebel saves a note to that Space. A sentence on what the Space is for helps Rebel decide which notes belong there. It's optional and blocks nothing: a nudge, not a nag.
