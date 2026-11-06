@@ -80,6 +80,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **Folder access, explained** — When Rebel cannot open the Library folder where it keeps your files, it now suggests checking for a folder-access request from your computer. If access was denied, Rebel shows how to allow it. If you choose a different folder in Settings and Rebel cannot save the change, the folder you typed stays there so you can try again.
+
 - **Notices in Rebel's own style** — The small notices in the top-right corner now appear in Rebel's own dark or light style; a notice with two buttons puts them beneath the message, so the text gets the full width. They had been showing up as plain white boxes. Dressed properly, at last.
 
 - **Files in linked folders** — When Rebel reads a file from a folder linked into your Library to use with a connected app, it now follows your usual folder permissions. If it needs your OK, it asks instead of refusing the file.
