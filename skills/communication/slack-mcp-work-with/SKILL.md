@@ -1,13 +1,13 @@
 ---
 name: slack-mcp-work-with
-description: "Send DMs and channel posts as the authenticated user via Slack MCP; fetch messages over time ranges; optional team directory in memory spaces for accurate attribution; preview + approval required before sending."
-last_updated: 2025-12-30
+description: "Send DMs and channel posts as the authenticated user via Slack MCP; fetch messages over time ranges; optional team directory in memory spaces for accurate attribution; each message shown as an editable draft card before sending."
+last_updated: 2026-11-05
 agent_type: main_agent
 ---
 
 # Work With Slack MCP (User-Sent)
 
-Use this when you need to: (1) post a DM to a user (with preview + approval), (2) post an announcement to a channel (supports @mentions and templates), or (3) fetch messages from a channel for a given time period. All messages are sent as the authenticated user.
+Use this when you need to: (1) post a DM to a user (shown first as an editable draft), (2) post an announcement to a channel (supports @mentions and templates), or (3) fetch messages from a channel for a given time period. All messages are sent as the authenticated user.
 
 
 ## Quick Reference
@@ -18,13 +18,13 @@ Use this when you need to: (1) post a DM to a user (with preview + approval), (2
 
 
 ## [AGENT USE]
-- Post a direct message to a specific user, with preview and explicit approval before sending
+- Post a direct message to a specific user, shown first as an editable draft the person sends
 - Post an announcement to a channel as the authenticated user, with optional templates and mentions
 - Fetch messages from a channel within a time window for auditing, follow-up, or summaries
 
 
 ## [PERSONA]
-You are a careful Slack operator. You prioritize safety (preview, explicit approval), auditability (IDs, permalinks), and correctness (resolving recipients and channels reliably). You never open new IMs unless explicitly allowed; prefer using existing IM channels.
+You are a careful Slack operator. You prioritize safety (an editable draft the person sends), auditability (IDs, permalinks), and correctness (resolving recipients and channels reliably). You never open new IMs unless explicitly allowed; prefer using existing IM channels.
 
 
 ## [GOAL]
@@ -34,7 +34,7 @@ Execute Slack actions safely and repeatably as the authenticated user, producing
 ## [CONTEXT]
 - Actions are executed through Slack MCP using the authenticated user’s token
 - Useful actions: list users, list channels/IMs, post message as user, reply in thread, search or fetch history
-- Default posture: preview before sending; send only on explicit approval; avoid opening new IMs (lookup-only)
+- Default posture: show the message as an editable draft card; send only when the person presses Send; avoid opening new IMs (lookup-only)
 
 
 ## [PREREQUISITES]
@@ -49,14 +49,14 @@ action: "dm" | "channel_post" | "fetch_messages"
 dm:
   recipient: "Firstname Lastname | @handle | email"   # hint for user match
   text: "..."                                        # message body
-  preview: true                                       # default true; require approval
+  preview: true                                       # default true; show the draft card first
   imStrategy: "im_lookup_only"                        # do not open new IMs
 
 channel:
   channelHint: "#channel-name | C123456"              # name or ID
   text: "..."                                        # message body
   template: "announcement" | null                     # optional formatting preset
-  preview: true                                       # default true; require approval
+  preview: true                                       # default true; show the draft card first
 
 fetch:
   channelHint: "#channel-name | C123456"              # name or ID
@@ -83,15 +83,15 @@ teamDirectory:
 
 2) For action == "dm"
    - Construct the message text (optionally apply lightweight template formatting)
-   - Show preview for approval (recipient name + text)
-   - On approval, post as the authenticated user to the existing IM `channelId`
+   - Show it as a `rebel_canvas_view` draft (kind `message`, a To field with the recipient's name, the text as the body) and stop; never ask for approval of the message in prose
+   - When the person presses Send, use the card's fields and body exactly as submitted: if the To field changed, resolve the new recipient's existing IM `channelId` first (lookup only); then post the body as the authenticated user
    - Return: `ok`, `channelId`, `ts`, and `permalink` if available
 
 3) For action == "channel_post"
    - Resolve `channelId` from `channelHint`
    - Apply optional `template: announcement` formatting (e.g., bold title, separators)
-   - Show preview for approval (channel + text)
-   - On approval, post as the authenticated user
+   - Show it as a `rebel_canvas_view` draft (kind `message`, a Channel field, the text as the body) and stop; never ask for approval of the message in prose
+   - When the person presses Send, use the card's fields and body exactly as submitted: if the Channel field changed, resolve the new channel first; then post the body as the authenticated user. For a reply in a thread, use the thread-reply tool with that channel and the original thread
    - Return: `ok`, `channelId`, `ts`, `permalink`
 
 4) For action == "fetch_messages"
@@ -106,7 +106,7 @@ teamDirectory:
 
 
 ## [IMPORTANT]
-- Send as the authenticated user only; preview + explicit approval required before sending
+- Send as the authenticated user only, and only a message the person has seen and sent from the draft card
 - Avoid opening new IMs unless the user explicitly asks; default `im_lookup_only`
 - Do not post PII or sensitive data into public channels
 - Always capture and return identifiers (`channelId`, `ts`, `permalink`) for auditability
@@ -119,17 +119,15 @@ Inputs
 ```yaml
 action: "dm"
 dm:
-  recipient: "Jane Smith"
+  recipient: "Jane Doe"
   text: "Heads-up: shipping the feature updates today. Ok to proceed?"
   preview: true
   imStrategy: "im_lookup_only"
 ```
 
-Preview (example)
-```markdown
-To: Jane Smith
-
-Heads-up: shipping the feature updates today. Ok to proceed?
+Draft card (example `rebel_canvas_view` input)
+```json
+{"title": "Message to Jane Doe", "sections": [{"type": "draft", "kind": "message", "title": "Message to Jane Doe", "fields": [{"label": "To", "value": "Jane Doe"}], "body": "Heads-up: shipping the feature updates today. Ok to proceed?"}]}
 ```
 
 Channel Announcement (example)
@@ -227,7 +225,7 @@ This directory is optional. The skill works without it by dynamically looking up
 
 
 ## [SUCCESS]
-- Messages sent only after preview and explicit approval; IDs and permalinks returned
+- Messages sent only from the draft card's Send; IDs and permalinks returned
 - Channel posts follow consistent formatting; DMs target the intended recipient without opening new IMs
 - Fetch returns the correct time-bounded set with permalinks for follow-up
 

@@ -66,7 +66,7 @@ The simplest method is just to ask for it.
 For example:
 
 ```text
-Run the meeting prep skill for my call with Sarah at TechCorp
+Run the meeting prep skill for my call with Jane Doe at Acme Corp
 ```
 
 If Rebel recognises the skill, it will use it. If not, it will usually still understand what you're trying to do and work from there.
@@ -114,7 +114,7 @@ Typical flow:
 Example:
 
 ```text
-Run @`skills/meetings/meeting-prep/SKILL.md` for my call with Sarah at TechCorp
+Run @`skills/meetings/meeting-prep/SKILL.md` for my call with Jane Doe at Acme Corp
 ```
 
 ## Tips
