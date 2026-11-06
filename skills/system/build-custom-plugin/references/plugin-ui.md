@@ -158,7 +158,7 @@ Arrange tiles, charts and tables in responsive cards. Props: `view` with `title`
 Sort, filter and page through records. Props: `columns: { key, label, sortable?, align?, format? }[]`, `rows: Record<string, string | number>[]`, `pageSize?` (10). Sorting uses raw values. Missing cells show “—”. There is no row-click callback.
 
 ```tsx
-<DataTable columns={[{ key: 'name', label: 'Name', sortable: true }]} rows={[{ name: 'Ada' }]} pageSize={10} />
+<DataTable columns={[{ key: 'name', label: 'Name', sortable: true }]} rows={[{ name: 'Jane Doe' }]} pageSize={10} />
 ```
 
 ### BarChart
