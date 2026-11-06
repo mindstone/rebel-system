@@ -5116,7 +5116,7 @@ What's new in Rebel. We ship fast, so there's always something.
 - **Keynote text extraction** — New skill extracts text from Apple Keynote presentations. Presentations, parsed.
 - **ESC to stop** — Press Escape to halt a running agent turn. No mouse required. Keyboard warriors, rejoice.
 - **Import from ChatGPT & Claude** — New migration skills help you bring your conversation history from other AI assistants. Your memories, migrated.
-- **Personalized meeting notetaker** — Meeting bot now introduces itself with your name. "Josh & co." feels warmer than "Rebel Notetaker." Professional courtesy.
+- **Personalized meeting notetaker** — Meeting bot now introduces itself with your name. "Alex & co." feels warmer than "Rebel Notetaker." Professional courtesy.
 - **Settings load faster** — Two-phase MCP health checks mean Settings opens in moments, not seconds. Time is precious.
 - **Tool tooltips enhanced** — Hover over tool labels to see full paths and commands. Know exactly what's running.
 - **Usage insights expanded** — Conversation turn counts now appear in usage insights. Track what matters.

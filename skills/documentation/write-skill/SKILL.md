@@ -177,7 +177,7 @@ Use exactly these section names in square brackets:
 
 **[CONTEXT]** - 1-2 sentences only: what this IS and ISN'T. Not backstory, not who discussed it when, not the full product description.
 - Good: "The video accompanies a proposal. It is not supposed to replicate the proposal and it is not a generic brand film."
-- Bad: "This is the optional video step Josh and Marina discussed on 23 Mar 2026: one transformation methodology backbone, then overt personalisation..." *(backstory — irrelevant to execution)*
+- Bad: "This is the optional video step Alex and Marina discussed on 23 Mar 2026: one transformation methodology backbone, then overt personalisation..." *(backstory — irrelevant to execution)*
 
 **[PROCESS]** - Numbered steps, specific, actionable
 - Each step starts with a verb

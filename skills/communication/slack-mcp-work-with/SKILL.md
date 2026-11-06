@@ -180,7 +180,7 @@ last_updated: 2025-01-15
 
 | Name | Slack ID | Role | Aliases/Notes |
 |------|----------|------|---------------|
-| Hannah Smith | U0A1M65FV6U | Engineering Lead | @hannah, "HS" |
+| Alex Smith | U0A1M65FV6U | Engineering Lead | @alex, "AS" |
 | Sam Lee | U0B2N76GW7V | Product Manager | @sam |
 | Sarah Johnson | U0C3O87HX8W | CEO | @sarah, usually posts in #leadership |
 

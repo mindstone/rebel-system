@@ -51,7 +51,7 @@ Click **Join with Rebel** to send the notetaker immediately.
 
 **Pre-scheduled meetings:** If a notetaker is already scheduled for an upcoming meeting, you'll see a "pre-scheduled" indicator in the meeting preview. Rebel prevents duplicate bots from being scheduled for the same meeting.
 
-**Personalized notetaker:** The notetaker joins with a friendly name based on your first name (e.g., "Josh & co.") so other participants know who requested it.
+**Personalized notetaker:** The notetaker joins with a friendly name based on your first name (e.g., "Alex & co.") so other participants know who requested it.
 
 Configure these options in **Settings → Meetings**, which shows your connected meeting services in a card-based layout.
 
