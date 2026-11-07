@@ -80,7 +80,7 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
-- **Folder access, explained** — When Rebel cannot open the Library folder where it keeps your files, it now suggests checking for a folder-access request from your computer. If access was denied, Rebel shows how to allow it. If you choose a different folder in Settings and Rebel cannot save the change, the folder you typed stays there so you can try again.
+- **Folder access, explained** — When Rebel can't open your Library folder, it now suggests looking for your computer asking whether Rebel can open it, which may be behind other windows. If your computer said no, Rebel shows where to allow it. If you pick a different folder in Settings and Rebel can't use it, what you entered stays in the box, unsaved, so you can try again. If the old folder's saved permissions can't be read, switching to a folder Rebel can open can get work going again without a restart; your files stay in the old folder. Saved permissions in a folder Rebel can't open may not carry over, including Blocks set on this computer and permissions removed here. A permission allowed on your phone or the web but later removed or Blocked on this computer may return after syncing. [What carries over](library://rebel-system/help-for-humans/permissions.md#moving-away-from-an-inaccessible-library).
 
 - **Notices in Rebel's own style** — The small notices in the top-right corner now appear in Rebel's own dark or light style; a notice with two buttons puts them beneath the message, so the text gets the full width. They had been showing up as plain white boxes. Dressed properly, at last.
 

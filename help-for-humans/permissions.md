@@ -1,6 +1,6 @@
 ---
 description: "What Rebel can and can't do without asking you first"
-last_updated: "2026-11-02"
+last_updated: "2026-11-07"
 ---
 
 # Permissions — What Rebel Can Do
@@ -64,13 +64,23 @@ Rebel can read, list and search files anywhere on your computer without asking e
 - **The folder card is for those decisions.** It says “Rebel wants to read a file” (or “Rebel wants to look through a folder” for a search or listing) and lets you allow once, allow for this conversation, always allow, or Block the file or folder you pick. Inside a Space, the choices stay within that Space. To block a new place, name it in your Safety Rules; if the check objects, choose Block on the card. Older requests still waiting for an answer still work.
 - **Allowed folders still mean go ahead.** An allowed folder skips routine Safety Rules checks, but reads there and searches of that folder still get checked when your rules name a place inside it. A permission on the named folder itself still applies, whether saved or just for this conversation. You don't need to allow a folder for ordinary reading, and attaching a file still lets Rebel read it. When you save a folder permission, Rebel names any known places inside it that hold keys or passwords and asks you to confirm.
 - **Saved choices live with your other permissions in your Library.** Find and remove them in [Settings → Privacy & Safety → What Rebel can do](rebel://settings/safety#approvalAuthorityLedger). Folder choices belong to the computer you made them on; opening the Library on another computer doesn't apply them there. Existing choices are brought over once per computer when you upgrade. Switching Libraries uses that Library's choices, without bringing the old list over again.
-- **If Rebel can't read your saved folder choices, file reads wait — even inside your Spaces.** Reconnect an unavailable Library and try again. A damaged choice appears under blocked permissions as “Rebel can't read this saved choice”; Remove clears it. If the old folder list is already unreadable during the upgrade, Rebel records the problem and carries on without that list.
+- **If Rebel can't read your saved folder choices, file reads wait — even inside your Spaces.** Reconnect an unavailable Library and try again. A damaged choice appears under blocked permissions as “Rebel can't read this saved choice”; Remove clears it. If the old folder list is already unreadable during the upgrade, Rebel records the problem and carries on without that list. If you move away from an inaccessible Library, see [which saved choices may stay behind](#moving-away-from-an-inaccessible-library).
 
 On your cloud computer, folder Blocks apply, including those from your other computers when the paths match; allowed folders don't carry over. Restoring a computer from a backup or a transfer file keeps its folder choices. If you restore the same backup onto two computers, matching folder paths share those choices. For a cloud computer, this works if it was set up after this update.
 
 If a folder card asks about a place you weren't expecting, don't allow it, and check what Rebel was asked to do before going further.
 
 Reading doesn't give permission to save or edit outside Rebel's folders. Rebel also refuses to read memories still waiting for your approval and its running program's environment or memory.
+
+## Moving away from an inaccessible Library
+
+If your computer won't let Rebel open your Library folder, the notice Rebel shows says how to allow it. To carry on somewhere else instead, open [Settings → Workspace → Core Directory](rebel://settings/system#coreDirectory) and pick a folder with **Choose...**, or type its location and press Enter. Rebel checks the folder before switching. If the old folder's saved permissions can't be read, Rebel can start using a fresh permission list in the new folder without a restart.
+
+Changing folders doesn't move, copy or delete your files: they stay in the old folder, and Rebel works from the new one.
+
+Your saved permissions stay in the old folder too, so they may not carry over, even if they synced with your other devices. That includes Blocks you set on this computer, Blocked folders among them, and permissions you removed here. A permission allowed on your phone or the web and later removed or Blocked on this computer may apply again after syncing. Review [What Rebel can do](rebel://settings/safety#approvalAuthorityLedger) and remove anything you don't want.
+
+When your computer lets Rebel open the old folder again, choose it again in Settings to get its permissions back. That can't undo anything Rebel did in the meantime, and what you saved or chose while using the new folder stays there.
 
 ## Privacy Mode
 
