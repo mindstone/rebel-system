@@ -12,6 +12,32 @@ What's new in Rebel. We ship fast, so there's always something.
 
 - **A page, straight to Rebel** — With Rebel's Chrome extension installed, right-click a page or selected text and choose **Ask Rebel**. Check what will be sent, add an optional note and press **Send to Rebel**: a new conversation opens in Rebel. On Android, share a page to Rebel or select text and choose **Ask Rebel**; on iPhone, share from Safari to Rebel. The same box opens in the app. Android page sharing sends only the title and link, and says so. Copy and paste can take the afternoon off.
 
+### Improvements
+
+- **Less repeating yourself after a restart** — Typed requests and Slack @mentions waiting to start can recover automatically after Rebel restarts. Voice recordings waiting to send from a conversation keep the same transcribed text when they retry.
+
+- **Your company's time-saved report** — If your company has asked Mindstone to show it how much time Rebel saves its people, Rebel now sends a few figures for each finished day, usually within the hour: the time it estimates it saved you, broken down by kind of task, and how many conversations you had. Days missed while Rebel was closed or offline follow later, and a day is sent again if its figures change. Numbers only, never what you or Rebel wrote; nothing from Private Mode, and only conversations in the desktop app. To make the estimates, Rebel sends your conversations to the AI model it uses in the background for time estimates, along with a short summary it keeps only on this computer. When it's on, a note in **Settings → Privacy & Safety** → Privacy & Data says so; no note, nothing sent. **Share usage analytics** now says it covers how you use the app, which is all it ever covered. Your company gets the numbers, not the words.
+
+- **Clearer browser choices** — Updated browser descriptions and guidance distinguish your signed-in browser from Rebel's separate browser, and tell Rebel to explain and ask before switching if the one you requested is unavailable.
+
+### Fixes
+
+- **Declined skill edits stay declined** — When you suggest changes to a shared set of instructions for Rebel (a skill) and the person who manages it declines them, the declined wording no longer reappears in your next suggestion. Your cursor also stays beside the text you’re editing when those declined changes are removed from the editor.
+
+- **Your Browser, back after a restart** — Your Browser reconnects after a computer restart even when old connection details were left behind.
+
+- **Backups that turn up mid-job** — If you've set a backup in Settings (under your AI accounts) and your usual AI account runs out while Rebel is working, the backup now takes over by itself and picks up the reply where it left off; steps Rebel already finished aren't repeated. Before, it only stepped in if your account ran out before the work began. A backup is an account you added, so its provider (Anthropic, say) bills that account at its usual rates, separately from your usual one. A notice in the conversation says this has happened, and it stays after you press Stop, because whatever the backup already started is still billed. With no backup, the message names the account that ran out, and **Open settings** goes straight to your accounts. A backup that waits for a convenient moment was never much of a backup.
+
+- **Rebel's Browser leaves when you do** — Quit Rebel and the browser it opens for you now closes too, even on a page that's stuck loading. It used to stay open in the background, then pop up over whatever you were doing the next time you opened Rebel. Pages left open close with it, and anything you typed but didn't submit goes with them. You stay signed in to your sites.
+
+- **Recording recovery after a reload** — If you reload Rebel while recording, Stop still works. Audio kept after an interrupted or failed recording is offered when you reopen the app; you can also ask for it in a new conversation on the computer where you recorded it. When Rebel cannot yet confirm that a meeting notetaker has stopped, the notice now says so.
+
+- **Long replies stay awake, and notices let go** — With Prevent sleep on, Rebel keeps idle-sleep protection for the whole reply. An interrupted reply’s notice clears when continuing succeeds and stays cleared after reopening, even without new text. Close a recovery notice on that device without stopping work; its actions explain what happens next, without a clipped message quote. Connection and syncing notices stick to facts and available actions, and browser and Office chat stop repeating an internal error message alongside useful guidance.
+
+## v0.4.102 — Nov 7, 2026
+
+### Highlights
+
 - **Snooze an Action** — Not today? Snooze an Action for 3 days (or your own default) or any number of days you pick, on desktop, web or phone. It waits in a Snoozed group showing the day it comes back, then returns to its place by itself, due date untouched.
 
 - **A Rebel of your own in Slack** — Give your Rebel its own name in Slack by pasting one token, so colleagues can tell it apart from theirs. Colleagues can @mention it too: it answers from that Slack thread, and anything that needs your files or connected apps waits for you to OK it in Rebel. Set it up in Rebel under Settings → Connectors → Slack.
@@ -34,10 +60,6 @@ What's new in Rebel. We ship fast, so there's always something.
 - **Always now covers the whole command** — Always on a terminal command used to cover only that exact line, so Rebel kept asking about small variations. Now Always on, say, `rm` (which deletes files) means Rebel stops asking about `rm` on this computer, whatever the options or files, in automations and Private mode too. The confirmation says exactly what you're agreeing to, and you can take it back in Settings > Privacy & Safety. Choices you've already made stay as narrow as they were. A promise is a promise.
 
 ### Improvements
-
-- **Your company's time-saved report** — If your company has asked Mindstone to show it how much time Rebel saves its people, Rebel now sends a few figures for each finished day, usually within the hour: the time it estimates it saved you, broken down by kind of task, and how many conversations you had. Days missed while Rebel was closed or offline follow later, and a day is sent again if its figures change. Numbers only, never what you or Rebel wrote; nothing from Private Mode, and only conversations in the desktop app. To make the estimates, Rebel sends your conversations to the AI model it uses in the background for time estimates, along with a short summary it keeps only on this computer. When it's on, a note in **Settings → Privacy & Safety** → Privacy & Data says so; no note, nothing sent. **Share usage analytics** now says it covers how you use the app, which is all it ever covered. Your company gets the numbers, not the words.
-
-- **Clearer browser choices** — Updated browser descriptions and guidance distinguish your signed-in browser from Rebel's separate browser, and tell Rebel to explain and ask before switching if the one you requested is unavailable.
 
 - **Word gets around** — In a Rebel-hosted or Google Shared Drive Space, the note saying a teammate changed your skill now reaches your notification bell, instead of staying on their computer.
 
@@ -99,16 +121,6 @@ What's new in Rebel. We ship fast, so there's always something.
 - **Your finish line survives the paperwork** — When Rebel couldn't save part of a conversation and you settle it by picking a saved answer, a finish line you set while it was stuck is now kept instead of quietly lost. Anything else still waiting to be saved stays put, and Rebel tells you so. One decision shouldn't cost you another.
 
 ### Fixes
-
-- **Declined skill edits stay declined** — When you suggest changes to a shared set of instructions for Rebel (a skill) and the person who manages it declines them, the declined wording no longer reappears in your next suggestion. Your cursor also stays beside the text you’re editing when those declined changes are removed from the editor.
-
-- **Backups that turn up mid-job** — If you've set a backup in Settings (under your AI accounts) and your usual AI account runs out while Rebel is working, the backup now takes over by itself and picks up the reply where it left off; steps Rebel already finished aren't repeated. Before, it only stepped in if your account ran out before the work began. A backup is an account you added, so its provider (Anthropic, say) bills that account at its usual rates, separately from your usual one. A notice in the conversation says this has happened, and it stays after you press Stop, because whatever the backup already started is still billed. With no backup, the message names the account that ran out, and **Open settings** goes straight to your accounts. A backup that waits for a convenient moment was never much of a backup.
-
-- **Rebel's Browser leaves when you do** — Quit Rebel and the browser it opens for you now closes too, even on a page that's stuck loading. It used to stay open in the background, then pop up over whatever you were doing the next time you opened Rebel. Pages left open close with it, and anything you typed but didn't submit goes with them. You stay signed in to your sites.
-
-- **Recording recovery after a reload** — If you reload Rebel while recording, Stop still works. Audio kept after an interrupted or failed recording is offered when you reopen the app; you can also ask for it in a new conversation on the computer where you recorded it. When Rebel cannot yet confirm that a meeting notetaker has stopped, the notice now says so.
-
-- **Long replies stay awake, and notices let go** — With Prevent sleep on, Rebel keeps idle-sleep protection for the whole reply. An interrupted reply’s notice clears when continuing succeeds and stays cleared after reopening, even without new text. Close a recovery notice on that device without stopping work; its actions explain what happens next, without a clipped message quote. Connection and syncing notices stick to facts and available actions, and browser and Office chat stop repeating an internal error message alongside useful guidance.
 
 - **Fewer blind spots in terminal commands** — A few commands could slip past Rebel's checks because of how they were written, such as a delete placed after a redirect, or one held inside `su -c` or `trap`. Rebel now reads these as what they are, and a folder you've Blocked stays Blocked inside them too. A few false alarms went away along the way, which is the rare fix that asks you less.
 
