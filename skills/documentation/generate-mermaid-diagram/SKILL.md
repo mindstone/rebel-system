@@ -1,7 +1,7 @@
 ---
 name: generate-mermaid-diagram
-description: "Create and update Mermaid diagrams with proper file naming, automated SVG generation, and best practices for visual documentation."
-last_updated: 2025-10-26
+description: "Create and update Mermaid diagram files with proper file naming, automated SVG generation, and best practices for visual documentation. Only for a diagram file or Mermaid code the person asked for; a diagram in a reply uses rebel_canvas_view's graph section."
+last_updated: 2026-11-07
 agent_type: either
 dependencies: []
 ---
@@ -9,6 +9,8 @@ dependencies: []
 # Generate Mermaid Diagram Images
 
 Quick instructions for creating and updating Mermaid diagrams in your project.
+
+This skill is for diagram files and Mermaid code the person asked for. To show a diagram in a reply, use `rebel_canvas_view`'s `graph` section instead.
 
 ## Setup
 
