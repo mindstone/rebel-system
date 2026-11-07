@@ -22,6 +22,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **Clearer results after approval** — When an approved action fails, Rebel says what happened and what to do next. File uploads also find workspace files without needing the full path.
+
 - **Declined skill edits stay declined** — When you suggest changes to a shared set of instructions for Rebel (a skill) and the person who manages it declines them, the declined wording no longer reappears in your next suggestion. Your cursor also stays beside the text you’re editing when those declined changes are removed from the editor.
 
 - **Your Browser, back after a restart** — Your Browser reconnects after a computer restart even when old connection details were left behind.
