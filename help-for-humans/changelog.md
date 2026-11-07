@@ -100,6 +100,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **Declined skill edits stay declined** — When the owner turns down your suggested skill edit, your next edit no longer quietly brings the declined text back. Your cursor also stays beside the text you were editing when the saved suggestion changes around it.
+
 - **Backups that turn up mid-job** — If you've set a backup in Settings (under your AI accounts) and your usual AI account runs out while Rebel is working, the backup now takes over by itself and picks up the reply where it left off; steps Rebel already finished aren't repeated. Before, it only stepped in if your account ran out before the work began. A backup is an account you added, so its provider (Anthropic, say) bills that account at its usual rates, separately from your usual one. A notice in the conversation says this has happened, and it stays after you press Stop, because whatever the backup already started is still billed. With no backup, the message names the account that ran out, and **Open settings** goes straight to your accounts. A backup that waits for a convenient moment was never much of a backup.
 
 - **Rebel's Browser leaves when you do** — Quit Rebel and the browser it opens for you now closes too, even on a page that's stuck loading. It used to stay open in the background, then pop up over whatever you were doing the next time you opened Rebel. Pages left open close with it, and anything you typed but didn't submit goes with them. You stay signed in to your sites.
