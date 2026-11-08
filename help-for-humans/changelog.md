@@ -8,6 +8,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Highlights
 
+- **Amount flow views (coming soon)** — Follow money, funnel, or time-use amounts between categories or stages with Sankey flows or signed waterfalls (ups and downs) on desktop, web, and phone. Hover, select, or tap to inspect only the original entries included in the view, such as a purchase or time entry; inspecting does not change source data or fetch more automatically.
+
 - **Requests from your meeting** — Anyone in your meeting can ask the notetaker to pass a request to your Rebel. Your usual permissions decide what runs; results appear in Rebel.
 
 - **Ask the notetaker in meeting chat** — Start with its displayed name and a comma, such as "Spark, what did we decide?" (Spark is a fictional example.) Replies appear for everyone in the meeting. Answers start with this meeting; **Also answer from my notes and connected apps** in **Settings → Meetings** is the saved default for new meetings and starts Off. The brain button controls wider context for the current meeting, and questions only look things up — actions stay with their owner in Rebel.
@@ -27,6 +29,10 @@ What's new in Rebel. We ship fast, so there's always something.
 ### Fixes
 
 - **Bold, not asterisks** — When Rebel puts a list of choices, a form or a chart in the conversation, the short message above it now formats bold words as bold text. Before, they showed with asterisks (*) around them. Fewer asterisks, more emphasis.
+
+- **Readable plugin text** — Fixed garbled accented characters and Japanese text in some plugin views.
+
+- **Clearer results after approval** — When an approved action fails, Rebel says what happened and what to do next. Connector names stay complete in activity and failure descriptions on your phone and desktop, and failed batches no longer show the contradictory **All approved** reminder. File uploads also find workspace files without needing the full path.
 
 - **Quick answers survive tab switches** — Switching to another conversation and back no longer hides the **Just a quick answer** button while Rebel is still replying. Back where you left it.
 

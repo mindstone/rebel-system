@@ -48,7 +48,7 @@ The primary way you interact with Rebel. Each conversation maintains its own his
 - **Dock notifications** — A red badge appears on the dock icon when background conversations finish, so you never miss a result
 - **Status banners** — See at a glance whether a conversation was stopped by you, is waiting for you, or finished in the background
 
-**See also:** [Getting Started](library://rebel-system/help-for-humans/getting-started.md)
+**See also:** [Getting Started](library://rebel-system/help-for-humans/getting-started.md) | [Amount flow views (coming soon)](library://rebel-system/help-for-humans/amount-views.md)
 
 ### Spaces
 
