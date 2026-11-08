@@ -8,6 +8,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Highlights
 
+- **Ask the notetaker in meeting chat** — Start with its displayed name and a comma, such as "Spark, what did we decide?" (Spark is a fictional example.) Replies appear for everyone in the meeting. Answers start with this meeting; **Also answer from my notes and connected apps** in **Settings → Meetings** is the saved default for new meetings and starts Off. The brain button controls wider context for the current meeting, and questions only look things up — actions stay with their owner in Rebel.
+
 - **Live voice, rebuilt on a newer model** — Live, where you talk to Rebel out loud, now runs on OpenAI's newer GPT-Live 1 voice model when you've added your own OpenAI key. Quick questions get a quick answer; longer tasks, like research, carry on in the background so the conversation doesn't stall, and Rebel no longer keeps telling you it's still working. When a task finishes, Rebel tells you once. End the call before then and the answer waits in the conversation.
 
 - **A page, straight to Rebel** — With Rebel's Chrome extension installed, right-click a page or selected text and choose **Ask Rebel**. Check what will be sent, add an optional note and press **Send to Rebel**: a new conversation opens in Rebel. On Android, share a page to Rebel or select text and choose **Ask Rebel**; on iPhone, share from Safari to Rebel. The same box opens in the app. Android page sharing sends only the title and link, and says so. Copy and paste can take the afternoon off.
