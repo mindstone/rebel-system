@@ -170,7 +170,9 @@ The brain choice is for this meeting only. It survives a connection recovery and
 
 **Privacy consideration:** Answers that use wider context are checked against your Safety Rules before they are shared with everyone in the meeting — either spoken aloud or posted in the meeting chat. You can review those rules in [Settings → Privacy & Safety](rebel://settings/safety#safetyRules). Only enable this when you're comfortable sharing information from your notes, past meetings or connected apps with the current participants.
 
-Meeting questions only look things up, including when you ask aloud. If an answer is withheld, the notetaker directs the question back to its owner. If someone asks Rebel to send, save or change something, it explains that the owner can do it in Rebel. It does not automatically forward or queue the request.
+Meeting questions look things up, including when you ask aloud. If an answer is withheld, the notetaker directs the question back to its owner.
+
+You and other participants can also ask Rebel to do work, such as drafting a follow-up. Rebel passes the captured request to the meeting owner’s Rebel app, where the owner’s usual permission settings decide whether it runs, is blocked or needs approval. Any approval request appears in Rebel. You can read the full request, meeting and participant-reported name before deciding. The name is unverified. Choosing **This conversation** applies to this meeting. Automatic results appear privately in Rebel; requested sends or shares still follow your usual permissions.
 
 **When it's useful:**
 - Client calls where you need to reference past agreements
