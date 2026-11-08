@@ -8,6 +8,10 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Highlights
 
+- **Requests from your meeting** — Anyone in your meeting can ask the notetaker to pass a request to your Rebel. Your usual permissions decide what runs; results appear in Rebel.
+
+- **Ask the notetaker in meeting chat** — Start with its displayed name and a comma, such as "Spark, what did we decide?" (Spark is a fictional example.) Replies appear for everyone in the meeting. Answers start with this meeting; **Also answer from my notes and connected apps** in **Settings → Meetings** is the saved default for new meetings and starts Off. The brain button controls wider context for the current meeting, and questions only look things up — actions stay with their owner in Rebel.
+
 - **Live voice, rebuilt on a newer model** — Live, where you talk to Rebel out loud, now runs on OpenAI's newer GPT-Live 1 voice model when you've added your own OpenAI key. Quick questions get a quick answer; longer tasks, like research, carry on in the background so the conversation doesn't stall, and Rebel no longer keeps telling you it's still working. When a task finishes, Rebel tells you once. End the call before then and the answer waits in the conversation.
 
 - **A page, straight to Rebel** — With Rebel's Chrome extension installed, right-click a page or selected text and choose **Ask Rebel**. Check what will be sent, add an optional note and press **Send to Rebel**: a new conversation opens in Rebel. On Android, share a page to Rebel or select text and choose **Ask Rebel**; on iPhone, share from Safari to Rebel. The same box opens in the app. Android page sharing sends only the title and link, and says so. Copy and paste can take the afternoon off.
@@ -24,17 +28,35 @@ What's new in Rebel. We ship fast, so there's always something.
 
 - **Clearer results after approval** — When an approved action fails, Rebel says what happened and what to do next. Connector names stay complete in activity and failure descriptions on your phone and desktop, and failed batches no longer show the contradictory **All approved** reminder. File uploads also find workspace files without needing the full path.
 
+- **Quick answers survive tab switches** — Switching to another conversation and back no longer hides the **Just a quick answer** button while Rebel is still replying. Back where you left it.
+
+- **Back online, without a restart** — If Rebel starts offline and cannot load the details of your plan, a new request can wait up to five seconds for them after the connection returns. Your account settings and remaining allowance still apply.
+
+- **Memory errors stay visible** — Failed Memory updates keep their error indicator and existing recovery instructions visible when the conversation refreshes or reopens.
+
+- **Review catches up when a file comes back** — If a deleted file returns with conflicting changes while **Review** is open, **Save as new file** now reloads the review and asks you to choose again. The returned file stays untouched, and Rebel's unsaved draft remains available.
+
+- **Saved files stop looking like failures** — Some messages after saving, skipping or keeping a file private were wrongly shown as red errors on the web and phone. They now appear as plain notes.
+
+- **File and folder sync keeps both** — When a file on one device shares a name with a folder on another, Rebel keeps both, including everything inside the folder. It gives the saved copy an unused name and tells you where to find it. No more trying the same impossible rename on repeat.
+
 - **Declined skill edits stay declined** — When you suggest changes to a shared set of instructions for Rebel (a skill) and the person who manages it declines them, the declined wording no longer reappears in your next suggestion. Your cursor also stays beside the text you’re editing when those declined changes are removed from the editor.
 
 - **Your Browser, back after a restart** — Your Browser reconnects after a computer restart even when old connection details were left behind.
 
 - **Backups that turn up mid-job** — If you've set a backup in Settings (under your AI accounts) and your usual AI account runs out while Rebel is working, the backup now takes over by itself and picks up the reply where it left off; steps Rebel already finished aren't repeated. Before, it only stepped in if your account ran out before the work began. A backup is an account you added, so its provider (Anthropic, say) bills that account at its usual rates, separately from your usual one. A notice in the conversation says this has happened, and it stays after you press Stop, because whatever the backup already started is still billed. With no backup, the message names the account that ran out, and **Open settings** goes straight to your accounts. A backup that waits for a convenient moment was never much of a backup.
 
+- **Helpers keep going** — Models you add can now continue after using tools such as search, without a mistaken error about changing AI providers. When a second attempt fails, Rebel shows the error from that attempt.
+
 - **Rebel's Browser leaves when you do** — Quit Rebel and the browser it opens for you now closes too, even on a page that's stuck loading. It used to stay open in the background, then pop up over whatever you were doing the next time you opened Rebel. Pages left open close with it, and anything you typed but didn't submit goes with them. You stay signed in to your sites.
 
-- **Recording recovery after a reload** — If you reload Rebel while recording, Stop still works. Audio kept after an interrupted or failed recording is offered when you reopen the app; you can also ask for it in a new conversation on the computer where you recorded it. When Rebel cannot yet confirm that a meeting notetaker has stopped, the notice now says so.
+- **Quick Capture recording recovery** — If Quick Capture’s recording screen crashes, closes or reloads, its recording indicator stops and the audio already saved is kept. After an interrupted or failed recording, a notice offers the saved audio when you reopen Rebel; **Show file** opens its containing folder, and you can also ask Rebel to find it in a new conversation on the computer where you recorded it. When Rebel cannot yet confirm that a meeting notetaker has stopped, the notice says so.
 
 - **Long replies stay awake, and notices let go** — With Prevent sleep on, Rebel keeps idle-sleep protection for the whole reply. An interrupted reply’s notice clears when continuing succeeds and stays cleared after reopening, even without new text. Close a recovery notice on that device without stopping work; its actions explain what happens next, without a clipped message quote. Connection and syncing notices stick to facts and available actions, and browser and Office chat stop repeating an internal error message alongside useful guidance.
+
+- **Honest connection messages** — When a connected app becomes unreachable, Rebel no longer promises that work will resume by itself. It warns that an action already in progress may have gone through.
+
+- **More room when the meter is missing** — On a cloud you host yourself, Rebel now checks free space every five minutes. The **Add storage** button in Settings also works when usage cannot be read. You choose the new total size and confirm before your hosting provider adds paid storage.
 
 ## v0.4.102 — Nov 7, 2026
 

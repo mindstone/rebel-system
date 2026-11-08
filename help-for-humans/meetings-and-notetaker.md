@@ -118,7 +118,15 @@ When a meeting ends, you can clear the coaching context. This resets any meeting
 
 ## Interactive Q&A During Meetings
 
-When the meeting bot has the interactive avatar enabled, you can talk to Rebel during the meeting:
+During a meeting, Rebel joins as the notetaker, and its displayed name is the name it uses in that meeting. You can ask the notetaker in the meeting chat. When the meeting bot has the interactive avatar enabled, you can also talk to Rebel during the meeting.
+
+### Ask in the meeting chat
+
+Start your message with the name shown for the notetaker in the meeting and a comma, for example, "Spark, what did we decide?" (Spark is a fictional example.) You can also put "@" before that displayed name, such as "@Spark …". This chat prefix is separate from the spoken trigger word: say "Rebel" by default, or your configured trigger word, to ask aloud (see below). Replies appear in the meeting chat for everyone. The notetaker introduces itself once after it joins and is ready. Silent and local recording modes are record-only and do not answer.
+
+You can ask follow-up questions in the same meeting; Rebel does not limit how many questions you can ask.
+
+### Ask aloud
 
 **To get Rebel's attention:**
 - Say "Rebel" (or your configured trigger word) to interrupt or get a response
@@ -140,21 +148,29 @@ Configure the trigger word and response mode (voice or chat) in **Settings → M
 
 ### Knowledge Q&A Toggle
 
-During a meeting, you'll see a brain icon (🧠) in the recording indicator. This controls whether Rebel can search your Spaces to answer questions:
+Answers start with the current meeting transcript. By default, Rebel answers from this meeting only.
+
+The saved default is initially Off. To let new meetings also use your notes, past meetings and connected apps such as email and calendar, enable **Also answer from my notes and connected apps** in **Settings → Meetings**. This saved default applies to new meetings.
+
+During a meeting, the brain button (🧠) in the recording indicator at the top of Rebel's title bar controls wider context for that meeting:
 
 | Setting | What Rebel Can Answer From | Example |
 |---------|---------------------------|---------|
-| **Off (default)** | Only what's been said in this meeting | "What did Sarah just say about the deadline?" |
-| **On** | Your Spaces — notes, docs, past transcripts | "What deadline did we agree on in last week's meeting?" |
+| **Off** | Only what's been said in this meeting | "What did Sarah just say about the deadline?" |
+| **On** | Your notes, past meetings and connected apps | "What deadline did we agree on in last week's meeting?" |
 
 **How to use it:**
 
-1. When Rebel is recording, click the brain icon in the title bar
+1. When Rebel is recording, click the brain button in the recording indicator at the top of Rebel's title bar
 2. When enabled, the icon highlights to show Knowledge Q&A is active
 3. Meeting participants can ask questions like "Spark, what was the budget we discussed last month?"
-4. Rebel searches your Spaces and speaks (or chats) the answer
+4. Rebel searches the enabled sources and speaks (or chats) the answer
 
-**Privacy consideration:** When Knowledge Q&A is on, answers drawn from your Spaces are shared with everyone in the meeting — either spoken aloud or posted in the meeting chat. Only enable this when you're comfortable sharing information from your notes with the current participants.
+The brain choice is for this meeting only. It survives a connection recovery and an app restart. To change the saved default for new meetings, use **Also answer from my notes and connected apps** in **Settings → Meetings**; changing that saved default during a meeting affects new meetings, not the one already under way.
+
+**Privacy consideration:** Answers that use wider context are checked against your Safety Rules before they are shared with everyone in the meeting — either spoken aloud or posted in the meeting chat. You can review those rules in [Settings → Privacy & Safety](rebel://settings/safety#safetyRules). Only enable this when you're comfortable sharing information from your notes, past meetings or connected apps with the current participants.
+
+Meeting questions only look things up, including when you ask aloud. If an answer is withheld, the notetaker directs the question back to its owner. If someone asks Rebel to send, save or change something, it explains that the owner can do it in Rebel. It does not automatically forward or queue the request.
 
 **When it's useful:**
 - Client calls where you need to reference past agreements
@@ -162,8 +178,8 @@ During a meeting, you'll see a brain icon (🧠) in the recording indicator. Thi
 - Recurring meetings where you want to recall previous decisions
 
 **When to leave it off:**
-- Meetings with external parties where your notes contain sensitive info
-- When you're unsure what's in your Spaces
+- Meetings with external parties where your notes, past meetings or connected apps contain sensitive info
+- When you do not want Rebel to use your notes, past meetings or connected apps
 - General meetings where transcript-only context is sufficient
 
 
