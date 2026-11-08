@@ -48,6 +48,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 - **Honest connection messages** — When a connected app becomes unreachable, Rebel no longer promises that work will resume by itself. It warns that an action already in progress may have gone through.
 
+- **More room when the meter is missing** — On a cloud you host yourself, Rebel now checks free space every five minutes. The **Add storage** button in Settings also works when usage cannot be read. You choose the new total size and confirm before your hosting provider adds paid storage.
+
 ## v0.4.102 — Nov 7, 2026
 
 ### Highlights
