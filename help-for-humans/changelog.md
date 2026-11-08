@@ -44,6 +44,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 - **Long replies stay awake, and notices let go** — With Prevent sleep on, Rebel keeps idle-sleep protection for the whole reply. An interrupted reply’s notice clears when continuing succeeds and stays cleared after reopening, even without new text. Close a recovery notice on that device without stopping work; its actions explain what happens next, without a clipped message quote. Connection and syncing notices stick to facts and available actions, and browser and Office chat stop repeating an internal error message alongside useful guidance.
 
+- **Honest connection messages** — When a connected app becomes unreachable, Rebel no longer promises that work will resume by itself. It warns that an action already in progress may have gone through.
+
 ## v0.4.102 — Nov 7, 2026
 
 ### Highlights
