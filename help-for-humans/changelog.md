@@ -28,6 +28,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **Bold, not asterisks** — When Rebel puts a list of choices, a form or a chart in the conversation, the short message above it now formats bold words as bold text. Before, they showed with asterisks (*) around them. Fewer asterisks, more emphasis.
+
 - **Readable plugin text** — Fixed garbled accented characters and Japanese text in some plugin views.
 
 - **Clearer results after approval** — When an approved action fails, Rebel says what happened and what to do next. Connector names stay complete in activity and failure descriptions on your phone and desktop, and failed batches no longer show the contradictory **All approved** reminder. File uploads also find workspace files without needing the full path.
