@@ -24,6 +24,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **Review catches up when a file comes back** — If a deleted file returns with conflicting changes while **Review** is open, **Save as new file** now reloads the review and asks you to choose again. The returned file stays untouched, and Rebel's unsaved draft remains available.
+
 - **Saved files stop looking like failures** — Some messages after saving, skipping or keeping a file private were wrongly shown as red errors on the web and phone. They now appear as plain notes.
 
 - **File and folder sync keeps both** — When a file on one device shares a name with a folder on another, Rebel keeps both, including everything inside the folder. It gives the saved copy an unused name and tells you where to find it. No more trying the same impossible rename on repeat.
