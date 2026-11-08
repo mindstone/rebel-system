@@ -20,6 +20,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Improvements
 
+- **Maps for the complicated bits** — Ask Rebel for an org chart, a map of how things connect or a flowchart, and explore it in the conversation on your computer, phone or browser. Zoom in, fit the whole diagram on screen, or use its **Read as text** button for a list of every item and connection. Ask for a change and Rebel updates the diagram in place. The boxes finally joined up.
+
 - **Less repeating yourself after a restart** — Typed requests and Slack @mentions waiting to start can recover automatically after Rebel restarts. Voice recordings waiting to send from a conversation keep the same transcribed text when they retry.
 
 - **Your company's time-saved report** — If your company has asked Mindstone to show it how much time Rebel saves its people, Rebel now sends a few figures for each finished day, usually within the hour: the time it estimates it saved you, broken down by kind of task, and how many conversations you had. Days missed while Rebel was closed or offline follow later, and a day is sent again if its figures change. Numbers only, never what you or Rebel wrote; nothing from Private Mode, and only conversations in the desktop app. To make the estimates, Rebel sends your conversations to the AI model it uses in the background for time estimates, along with a short summary it keeps only on this computer. When it's on, a note in **Settings → Privacy & Safety** → Privacy & Data says so; no note, nothing sent. **Share usage analytics** now says it covers how you use the app, which is all it ever covered. Your company gets the numbers, not the words.
