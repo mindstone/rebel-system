@@ -26,6 +26,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **Quick answers survive tab switches** — Switching to another conversation and back no longer hides the **Just a quick answer** button while Rebel is still replying. Back where you left it.
+
 - **Back online, without a restart** — If Rebel starts offline and cannot load the details of your plan, a new request can wait up to five seconds for them after the connection returns. Your account settings and remaining allowance still apply.
 
 - **Memory errors stay visible** — Failed Memory updates keep their error indicator and existing recovery instructions visible when the conversation refreshes or reopens.
