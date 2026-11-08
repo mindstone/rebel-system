@@ -10,6 +10,9 @@ runs Rebel — **treat all of it as public.**
 > process notes — anything added there is injected into every user's agent.
 > Contributor rules live in this file.
 
+For shared-initializer worktrees, see the
+[contributor worktree configuration](docs/project/PROJECT_OVERRIDES.md).
+
 ## No secrets, no credentials, no internal data
 
 This is a hard rule. **Do not include in any contribution:**
