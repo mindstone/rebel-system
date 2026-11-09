@@ -36,6 +36,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **Reopened cloud replies keep Stop** — Replies running in **Cloud Continuity**, which lets Rebel keep working while your computer is closed, keep **Stop** available when you reopen the conversation. A connection problem alone no longer marks a reply as interrupted: Rebel needs confirmation from your cloud that it is no longer running. Requests that never started return as **Not sent**, ready for you to send yourself. If Rebel cannot read the information it uses to keep conversations up to date across devices, it keeps changes still waiting to reach your other devices.
+
 - **Redacted means redacted** — Rebel no longer asks you to approve a save just because a note uses “redacted” to show that a password or token has been removed.
 
 - **Views get room to breathe** — In web chats, comparison cards such as SWOT now use more of the available width on large screens, so two-column cards stay readable; on phones, they still stack, and cards meant to use one column still do.
