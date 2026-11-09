@@ -79,6 +79,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 - **Memory errors stay visible** — Failed Memory updates keep their error indicator and existing recovery instructions visible when the conversation refreshes or reopens.
 
+- **Memory saves look like success** — On web and phone, successful memory-save feedback appears as a normal notice instead of a red error, while actual failures keep their recovery guidance. A save should look saved.
+
 - **Review catches up when a file comes back** — If a deleted file returns with conflicting changes while **Review** is open, **Save as new file** now reloads the review and asks you to choose again. The returned file stays untouched, and Rebel's unsaved draft remains available.
 
 - **Saved files stop looking like failures** — Some messages after saving, skipping or keeping a file private were wrongly shown as red errors on the web and phone. They now appear as plain notes.
