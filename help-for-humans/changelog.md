@@ -41,6 +41,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **Research replies after closing** — After you closed the app while Rebel was handling several research tasks at once, a reply could stop with an error saying it couldn't continue. On resuming, Rebel kept the research it had already finished; it omitted only the unfinished text of the earlier reply, not that completed research.
+
 - **Clearer setup steps** — Browser setup help now matches the buttons on screen and includes Cloud Browser steps. Shortcut hints no longer send Windows and Linux users to Mac settings.
 
 - **Meeting notes on your phone** — Your phone now shows a banner while Rebel's bot is taking notes in a call. Tap it to open that meeting's notes. If the banner misses a status change, Rebel checks again automatically. There's nothing for you to do.
