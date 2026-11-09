@@ -111,6 +111,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 - **Sign-in notices follow you** — If one of your connected services needs you to sign in again during a web or phone chat, Rebel on your computer now shows it promptly, too. Once you sign in again, the notice clears.
 
+- **Stopped links stop lingering** — When you try to update a link that was stopped elsewhere, Rebel removes it from sharing controls instead of reporting your conversation missing.
+
 ## v0.4.102 — Nov 7, 2026
 
 ### Highlights
