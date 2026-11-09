@@ -36,6 +36,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **File conflict warnings** — After you resolve a conflict and save the file, the old warning clears.
+
 - **Connected-service permissions stay specific** — Harmless description updates and differences in capitalisation no longer make Rebel forget your permission choices. Temporary approvals still apply only to the connected account and service address you approved.
 
 - **Files in the send review** — Before you approve an email, its chosen files now appear beside the recipients and message. No more opening the technical details to check the attachments.
