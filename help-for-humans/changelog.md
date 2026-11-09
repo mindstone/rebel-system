@@ -36,6 +36,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **Views get room to breathe** — In web chats, comparison cards such as SWOT now use more of the available width on large screens, so two-column cards stay readable; on phones, they still stack, and cards meant to use one column still do.
+
 - **Connected-service permissions stay specific** — Harmless description updates and differences in capitalisation no longer make Rebel forget your permission choices. Temporary approvals still apply only to the connected account and service address you approved.
 
 - **Files in the send review** — Before you approve an email, its chosen files now appear beside the recipients and message. No more opening the technical details to check the attachments.
