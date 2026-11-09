@@ -36,6 +36,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **Redacted means redacted** — Rebel no longer asks you to approve a save just because a note uses “redacted” to show that a password or token has been removed.
+
 - **Views get room to breathe** — In web chats, comparison cards such as SWOT now use more of the available width on large screens, so two-column cards stay readable; on phones, they still stack, and cards meant to use one column still do.
 
 - **Work folders stay in view during setup** — Work folders Rebel finds in your chosen location now stay visible as it refreshes the folder list. The list also remembers which folders you chose to include.
