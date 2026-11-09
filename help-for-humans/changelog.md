@@ -66,6 +66,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 - **More room when the meter is missing** — On a cloud you host yourself, Rebel now checks free space every five minutes. The **Add storage** button in Settings also works when usage cannot be read. You choose the new total size and confirm before your hosting provider adds paid storage.
 
+- **Quick Capture errors** — When transcription included with your Rebel plan fails, Quick Capture no longer tells you to fix a personal API key.
+
 ## v0.4.102 — Nov 7, 2026
 
 ### Highlights
