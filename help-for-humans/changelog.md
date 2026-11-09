@@ -22,6 +22,10 @@ What's new in Rebel. We ship fast, so there's always something.
 
 - **Clearer views, with the point explained** — Tables and charts now make better use of the space available, while answers put the headline figures up front and explain what matters after the view. The point stays visible.
 
+- **Room for a pinned view** — In a phone browser, an open pinned view now leaves room to read the conversation, with controls and navigation still within reach in portrait and landscape.
+
+- **Maps for the complicated bits** — Ask Rebel for an org chart, a map of how things connect or a flowchart, and explore it in the conversation on your computer, phone or browser. Zoom in, fit the whole diagram on screen, or use its **Read as text** button for a list of every item and connection. Ask for a change and Rebel updates the diagram in place. The boxes finally joined up.
+
 - **Less repeating yourself after a restart** — Typed requests and Slack @mentions waiting to start can recover automatically after Rebel restarts. Voice recordings waiting to send from a conversation keep the same transcribed text when they retry.
 
 - **Your company's time-saved report** — If your company has asked Mindstone to show it how much time Rebel saves its people, Rebel now sends a few figures for each finished day, usually within the hour: the time it estimates it saved you, broken down by kind of task, and how many conversations you had. Days missed while Rebel was closed or offline follow later, and a day is sent again if its figures change. Numbers only, never what you or Rebel wrote; nothing from Private Mode, and only conversations in the desktop app. To make the estimates, Rebel sends your conversations to the AI model it uses in the background for time estimates, along with a short summary it keeps only on this computer. When it's on, a note in **Settings → Privacy & Safety** → Privacy & Data says so; no note, nothing sent. **Share usage analytics** now says it covers how you use the app, which is all it ever covered. Your company gets the numbers, not the words.
@@ -29,6 +33,16 @@ What's new in Rebel. We ship fast, so there's always something.
 - **Clearer browser choices** — Updated browser descriptions and guidance distinguish your signed-in browser from Rebel's separate browser, and tell Rebel to explain and ask before switching if the one you requested is unavailable.
 
 ### Fixes
+
+- **Files in the send review** — Before you approve an email, its chosen files now appear beside the recipients and message. No more opening the technical details to check the attachments.
+
+- **Failures that explain themselves** — When several parts of a request fail, Rebel now gives a short summary and puts each failed step in **Details**, including attempts it made again. If a service asks Rebel to slow down, it may wait and try an information lookup again; that retry may still fail. This automatic retry never repeats an action such as sending an email. If an AI helper could not start, Rebel says so. A long failed request still names the service and what Rebel was trying to do. If an email may have been sent or a file may have changed, Rebel tells you to check whether it happened before trying again.
+
+- **Spaces on shared drives** — You can add work folders from shared drives and other disks again. The permissions you set in Rebel still apply.
+
+- **Bold, not asterisks** — When Rebel puts a list of choices, a form or a chart in the conversation, the short message above it now formats bold words as bold text. Before, they showed with asterisks (*) around them. Fewer asterisks, more emphasis.
+
+- **Readable plugin text** — Fixed garbled accented characters and Japanese text in some plugin views.
 
 - **Clearer results after approval** — When an approved action fails, Rebel says what happened and what to do next. Connector names stay complete in activity and failure descriptions on your phone and desktop, and failed batches no longer show the contradictory **All approved** reminder. File uploads also find workspace files without needing the full path.
 
@@ -58,9 +72,17 @@ What's new in Rebel. We ship fast, so there's always something.
 
 - **Long replies stay awake, and notices let go** — With Prevent sleep on, Rebel keeps idle-sleep protection for the whole reply. An interrupted reply’s notice clears when continuing succeeds and stays cleared after reopening, even without new text. Close a recovery notice on that device without stopping work; its actions explain what happens next, without a clipped message quote. Connection and syncing notices stick to facts and available actions, and browser and Office chat stop repeating an internal error message alongside useful guidance.
 
+- **Accurate reply status** — Unrelated meeting updates and notices no longer make an interrupted reply look busy again.
+
 - **Honest connection messages** — When a connected app becomes unreachable, Rebel no longer promises that work will resume by itself. It warns that an action already in progress may have gone through.
 
 - **More room when the meter is missing** — On a cloud you host yourself, Rebel now checks free space every five minutes. The **Add storage** button in Settings also works when usage cannot be read. You choose the new total size and confirm before your hosting provider adds paid storage.
+
+- **Quick Capture errors** — When transcription included with your Rebel plan fails, Quick Capture no longer tells you to fix a personal API key.
+
+- **Meeting prep on your phone** — Preparing for a meeting on your phone no longer gets stuck when a recording starts or stops. If Rebel needs a code to connect to an AI service, it explains how to add it on your computer.
+
+- **Sign-in notices follow you** — If one of your connected services needs you to sign in again during a web or phone chat, Rebel on your computer now shows it promptly, too. Once you sign in again, the notice clears.
 
 ## v0.4.102 — Nov 7, 2026
 
