@@ -1,5 +1,5 @@
 ---
-description: "Every point where data can leave Rebel — usage analytics, crash reports, AI providers, connectors, meetings, updates, sign-in, cloud sync and, if your company asked for it, its time-saved report — which of them you can switch off, and exactly what the two Privacy & Data toggles do and don't cover"
+description: "Every point where data can leave Rebel — usage analytics, crash reports, AI providers, connectors, meetings, updates, sign-in, cloud sync and, if your company asked for it, its time-saved report, tips and success stories — which of them you can switch off, and exactly what the two Privacy & Data toggles do and don't cover"
 last_updated: "2026-11-09"
 ---
 
@@ -7,7 +7,7 @@ last_updated: "2026-11-09"
 
 Rebel runs on your machine, but it is not sealed off from the internet — no useful assistant is. This page is the complete list of the places data can go, in plain language, so you (or the person on your team who asks these questions for a living) can see the whole picture in one sitting.
 
-Two of these you can switch off right now, in **[Settings → Privacy & Safety](rebel://settings/safety)** → Privacy & Data. The rest either can't be switched off (updates, signing in), are your company's decision (its time-saved report, if it asked for one), or are switched off by simply not using the feature (connectors, meetings, cloud). All of them are listed below either way.
+Two of these you can switch off right now, in **[Settings → Privacy & Safety](rebel://settings/safety)** → Privacy & Data. The rest either can't be switched off (updates, signing in), are your company's decision (its time-saved report, tips and success stories, if it asked for them), or are switched off by simply not using the feature (connectors, meetings, cloud). All of them are listed below either way.
 
 ## The whole list, at a glance
 
@@ -27,7 +27,7 @@ Two of these you can switch off right now, in **[Settings → Privacy & Safety](
 | **Your complete workspace, conversations, settings and saved service keys** | The cloud machine you choose: your own, Mindstone-run, or a manually configured host | Yes — choose Only this computer in Settings. It is on by itself only on a computer that never chose, when your account already has a Mindstone Cloud |
 | **Update checks** | Mindstone's update service | No — always on |
 | **Signing in and account checks** | Mindstone | No — required to sign in |
-| **Your company's time-saved report** — only if your company asked for it: daily time saved and conversation counts, as numbers | Mindstone, for your company's dashboard | Not with a switch — your company decides. Private Mode chats are never counted |
+| **Your company's time-saved report, tips and success stories** — only if your company asked for them: daily time saved and conversation counts as numbers, which tips fit you, and short success stories written by Rebel | Mindstone, for your company's dashboard | Not with a switch — your company decides. You can edit a story or keep it private. Private Mode chats are never used |
 
 The rest of this page explains each one.
 
@@ -79,11 +79,11 @@ Rebel checks for new versions and installs them. This can't be turned off, and t
 
 Rebel signs you in to verify your account, work out whether you belong to an organisation, and apply any settings your organisation administers. Turning it off isn't offered, because it's the mechanism the rest of your account depends on. It carries who you are, not what you chose here — the toggles travel by a different road, described below.
 
-### Your company's time-saved report — only if your company asked for it
+### Your company's time-saved report, tips and success stories — only if your company asked for them
 
-Some companies ask Mindstone to show them how much time Rebel saves their people. If yours has, a note headed **Your company's time-saved report** appears in **[Settings → Privacy & Safety](rebel://settings/safety)** → Privacy & Data. No note means none of this applies to you and nothing is sent.
+Some companies ask Mindstone to show them how much time Rebel saves their people, and to share tips and success stories from it: the time saved shows your company what Rebel is worth, tips help you get more out of it, and stories show what its people achieve with it. If yours has, a note headed **What Rebel sends to Mindstone, and who sees it** appears in **[Settings → Privacy & Safety](rebel://settings/safety)** → Privacy & Data. No note means none of this applies to you and nothing is sent.
 
-**What's sent.** For each day that has finished, Rebel sends Mindstone these figures for your company's dashboard:
+**What's sent: the daily figures.** For each day that has finished, Rebel sends Mindstone these figures for your company's dashboard:
 
 - how much time Rebel estimates it saved you that day: a total and a low-to-high range, broken down by the kind of task (writing, research, analysis, coordination, automation or mixed), by how much the work mattered, and by how sure the estimate is;
 - how many conversations you had that day;
@@ -102,11 +102,20 @@ That's the lot: numbers, dates and those fixed category names. No conversation t
 - Automations and the notetaker's meeting work.
 - With **Estimate time saved after conversations** turned off, Rebel makes no new estimates but still counts your conversations. Estimates it made before you turned it off can still be sent with their day.
 
-**Can you stop it?** Not with a switch: your company decides, which is why the note in Settings has none. **Share usage analytics** doesn't affect it — that switch covers Mindstone's product analytics only. Anything you send with Private Mode on stays out of it entirely.
+**Weekly tips.** Once a week, Rebel sends the messages you typed that week, never Private Mode ones, to the AI model it uses in the background, which picks a few tips on using AI better. Mindstone gets only which tips fit you, how often each came up and how well it fits: codes and numbers, never your words. If your company has tips switched on, they show on your **My Progress** page and in your weekly tips email from your company's Mindstone dashboard. Only you see your tips.
 
-**Who sees it.** The figures go to Mindstone, linked to your Rebel account, so they aren't anonymous. Mindstone shows them on your company's dashboard, where your company's leaders, and your team champion if you have one, see them by name, the same way they already see your other Rebel usage. Nobody there sees what you or Rebel wrote. Colleagues without those roles don't see your figures. If you have questions about how your company uses them, ask whoever looks after Rebel there; for questions about the data itself, contact Mindstone (see the [privacy policy](rebel://library/rebel-system%2Fhelp-for-humans%2FRebel-privacy-policy.md)).
+**Success stories.** If your company has success stories switched on, Rebel may write up to **two short stories a week** about work it helped you finish, with the AI model it uses in the background. It writes them only from conversations it has already estimated, so never from Private Mode ones. A story can name you, your team, and things like clients' names, products or tools.
 
-**When it stops.** If you sign out, Rebel stops estimating and sending straight away. If your company turns it off, Rebel stops the next time it checks your account, within a few minutes. Figures already sent stay with Mindstone under the privacy policy.
+- Before a story leaves this computer, a privacy check removes any story that seems to name a colleague or to contain a password, another secret or contact details. For this check, Rebel gets your company's list of people's names from Mindstone and keeps it only in memory, never on disk.
+- **Mindstone gets the story before you've seen it** and emails it to you. Only you can see it until it's shared.
+- From that email, you can edit it, choose who sees it, or keep it private, which deletes it. Read it as your leaders would: if it says anything you'd rather they didn't see, edit it or keep it private.
+- If you do nothing, **3 working days** after that email your company's leaders and admins, and your team champion if you have one, see it with your name. You can still withdraw it after it's shared.
+
+**Can you stop it?** Not with a switch: your company decides, which is why the note in Settings has none. You can still edit any story, or keep it private, before it's shared. **Share usage analytics** doesn't affect it — that switch covers Mindstone's product analytics only. Anything you send with Private Mode on stays out of it entirely.
+
+**Who sees it.** Everything goes to Mindstone, linked to your Rebel account, so none of it is anonymous. Your company's leaders, and your team champion if you have one, see your daily figures by name, the same way they already see your other Rebel usage; colleagues without those roles don't. Only you see your tips. A success story is seen by its readers only once it's shared, as above. Apart from a shared story, nobody there sees what you or Rebel wrote. If you have questions about how your company uses them, ask whoever looks after Rebel there; for questions about the data itself, contact Mindstone (see the [privacy policy](rebel://library/rebel-system%2Fhelp-for-humans%2FRebel-privacy-policy.md)).
+
+**When it stops.** If you sign out, Rebel stops estimating, writing and sending straight away. If your company turns it off, Rebel stops the next time it checks your account, within a few minutes. Figures, tips and stories already sent stay with Mindstone under the privacy policy.
 
 ### The AI itself
 
