@@ -1,6 +1,6 @@
 ---
 description: "Every point where data can leave Rebel — usage analytics, crash reports, AI providers, connectors, meetings, updates, sign-in, cloud sync and, if your company asked for it, its time-saved report — which of them you can switch off, and exactly what the two Privacy & Data toggles do and don't cover"
-last_updated: "2026-11-07"
+last_updated: "2026-11-09"
 ---
 
 # What Data Can Leave Rebel
@@ -23,6 +23,7 @@ Two of these you can switch off right now, in **[Settings → Privacy & Safety](
 | **Voice — read-aloud** (Rebel speaking a passage) | A cloud voice provider, or nowhere | Yes — an on-device model leaves it unavailable, or just don't use it |
 | **Voice — Live mode** (a spoken back-and-forth) | A cloud realtime voice provider | Yes — don't use Live mode |
 | **Web searches and pages Rebel fetches** | The search provider, and the site itself | Yes — by not asking for it |
+| **Street map pictures** (in versions with geographic maps) — the area you're looking at | OpenFreeMap, a free map service | Only by not viewing maps — ask for the places as text instead |
 | **Your complete workspace, conversations, settings and saved service keys** | The cloud machine you choose: your own, Mindstone-run, or a manually configured host | Yes — choose Only this computer in Settings. It is on by itself only on a computer that never chose, when your account already has a Mindstone Cloud |
 | **Update checks** | Mindstone's update service | No — always on |
 | **Signing in and account checks** | Mindstone | No — required to sign in |
@@ -122,6 +123,10 @@ Review or disconnect anything in **Settings → Connectors**. See [connectors an
 ### Web searches and pages Rebel fetches
 
 When you ask Rebel to look something up, your search query goes to a search provider, and any page it opens gets a request from your machine. Ordinary web browsing, but worth naming: if you ask about something sensitive by name, that name is in the search query.
+
+### Map pictures
+
+In versions with geographic map views, showing a map loads its street background from OpenFreeMap, a free map service built on OpenStreetMap. Your device asks for the part of the map you're looking at, initially the area around your places. The service sees that area and, like any website, your internet address. These background requests don't include your place labels, figures or button text. If you'd rather it didn't, ask for the places as text instead.
 
 ### Voice — dictation, read-aloud and Live mode
 
