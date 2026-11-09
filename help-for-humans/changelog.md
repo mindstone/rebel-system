@@ -41,6 +41,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **Settings tests tell the truth about OpenRouter models** — A test could pass, and save results such as image or tool support, through a provider your chats aren't allowed to use. Settings now tests through the same approved providers, and any provider your administrator chose, as chats. To refresh a model you tested before, press **Test** again.
+
 - **Clearer setup steps** — Browser setup help now matches the buttons on screen and includes Cloud Browser steps. Shortcut hints no longer send Windows and Linux users to Mac settings.
 
 - **Meeting notes on your phone** — Your phone now shows a banner while Rebel's bot is taking notes in a call. Tap it to open that meeting's notes. If the banner misses a status change, Rebel checks again automatically. There's nothing for you to do.
@@ -112,6 +114,8 @@ What's new in Rebel. We ship fast, so there's always something.
 - **Sign-in notices follow you** — If one of your connected services needs you to sign in again during a web or phone chat, Rebel on your computer now shows it promptly, too. Once you sign in again, the notice clears.
 
 - **Stopped links stop lingering** — When you try to update a link that was stopped elsewhere, Rebel removes it from sharing controls instead of reporting your conversation missing.
+
+- **Research replies after closing** — After you closed the app while Rebel was handling several research tasks at once, a reply could stop with an error saying it couldn't continue. On resuming, Rebel kept the research it had already finished; it omitted only the unfinished text of the earlier reply, not that completed research.
 
 ## v0.4.102 — Nov 7, 2026
 
