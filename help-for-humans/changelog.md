@@ -36,6 +36,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **Work folders stay in view during setup** — Work folders Rebel finds in your chosen location now stay visible as it refreshes the folder list. The list also remembers which folders you chose to include.
+
 - **File conflict warnings** — After you resolve a conflict and save the file, the old warning clears.
 
 - **Connected-service permissions stay specific** — Harmless description updates and differences in capitalisation no longer make Rebel forget your permission choices. Temporary approvals still apply only to the connected account and service address you approved.
