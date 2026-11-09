@@ -72,6 +72,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 - **Quick Capture errors** — When transcription included with your Rebel plan fails, Quick Capture no longer tells you to fix a personal API key.
 
+- **Meeting prep on your phone** — Preparing for a meeting on your phone no longer gets stuck when a recording starts or stops. If Rebel needs a code to connect to an AI service, it explains how to add it on your computer.
+
 ## v0.4.102 — Nov 7, 2026
 
 ### Highlights
