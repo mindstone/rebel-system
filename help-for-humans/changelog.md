@@ -32,6 +32,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **Failures that explain themselves** — When several parts of a request fail, Rebel now gives a short summary and puts each failed step in **Details**, including attempts it made again. If a service asks Rebel to slow down, it may wait and try an information lookup again; that retry may still fail. This automatic retry never repeats an action such as sending an email. If an AI helper could not start, Rebel says so. A long failed request still names the service and what Rebel was trying to do. If an email may have been sent or a file may have changed, Rebel tells you to check whether it happened before trying again.
+
 - **Spaces on shared drives** — You can add work folders from shared drives and other disks again. The permissions you set in Rebel still apply.
 
 - **Bold, not asterisks** — When Rebel puts a list of choices, a form or a chart in the conversation, the short message above it now formats bold words as bold text. Before, they showed with asterisks (*) around them. Fewer asterisks, more emphasis.
