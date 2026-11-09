@@ -41,7 +41,7 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
-- **Research replies after closing** — After you closed the app while Rebel was handling several research tasks at once, a reply could stop with an error saying it couldn't continue. On resuming, Rebel kept the research it had already finished; it omitted only the unfinished text of the earlier reply, not that completed research.
+- **Settings tests tell the truth about OpenRouter models** — A test could pass, and save results such as image or tool support, through a provider your chats aren't allowed to use. Settings now tests through the same approved providers, and any provider your administrator chose, as chats. To refresh a model you tested before, press **Test** again.
 
 - **Clearer setup steps** — Browser setup help now matches the buttons on screen and includes Cloud Browser steps. Shortcut hints no longer send Windows and Linux users to Mac settings.
 
@@ -112,6 +112,8 @@ What's new in Rebel. We ship fast, so there's always something.
 - **Meeting prep on your phone** — Preparing for a meeting on your phone no longer gets stuck when a recording starts or stops. If Rebel needs a code to connect to an AI service, it explains how to add it on your computer.
 
 - **Sign-in notices follow you** — If one of your connected services needs you to sign in again during a web or phone chat, Rebel on your computer now shows it promptly, too. Once you sign in again, the notice clears.
+
+- **Research replies after closing** — After you closed the app while Rebel was handling several research tasks at once, a reply could stop with an error saying it couldn't continue. On resuming, Rebel kept the research it had already finished; it omitted only the unfinished text of the earlier reply, not that completed research.
 
 ## v0.4.102 — Nov 7, 2026
 
