@@ -28,6 +28,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **Spaces on shared drives** — You can add work folders from shared drives and other disks again. The permissions you set in Rebel still apply.
+
 - **Bold, not asterisks** — When Rebel puts a list of choices, a form or a chart in the conversation, the short message above it now formats bold words as bold text. Before, they showed with asterisks (*) around them. Fewer asterisks, more emphasis.
 
 - **Readable plugin text** — Fixed garbled accented characters and Japanese text in some plugin views.
