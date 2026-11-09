@@ -39,6 +39,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **Clearer setup steps** — Browser setup help now matches the buttons on screen and includes Cloud Browser steps. Shortcut hints no longer send Windows and Linux users to Mac settings.
+
 - **Clearer cloud reply timing** — Cloud replies now show the elapsed time as of when you open them, with “under a minute” for very short runs and useful seconds for completed runs under an hour. On phone and web, Chats replaces “Continuing in your cloud.” with **Running in your cloud** while a reply is running.
 
 - **Reopened cloud replies keep Stop** — Replies running in **Cloud Continuity**, which lets Rebel keep working while your computer is closed, keep **Stop** available when you reopen the conversation. A connection problem alone no longer marks a reply as interrupted: Rebel needs confirmation from your cloud that it is no longer running. Requests that never started return as **Not sent**, ready for you to send yourself. If Rebel cannot read the information it uses to keep conversations up to date across devices, it keeps changes still waiting to reach your other devices.
