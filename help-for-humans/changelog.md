@@ -78,6 +78,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 - **Meeting prep on your phone** — Preparing for a meeting on your phone no longer gets stuck when a recording starts or stops. If Rebel needs a code to connect to an AI service, it explains how to add it on your computer.
 
+- **Sign-in notices follow you** — If one of your connected services needs you to sign in again during a web or phone chat, Rebel on your computer now shows it promptly, too. Once you sign in again, the notice clears.
+
 ## v0.4.102 — Nov 7, 2026
 
 ### Highlights
