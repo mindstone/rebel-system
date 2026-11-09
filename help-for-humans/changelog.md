@@ -30,6 +30,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **No more false "Cloud Copy needs attention"** — Rebel could show this warning every few minutes for days when nothing was wrong. It kept asking your cloud copy (the copy of your conversations Rebel keeps online) to drop a few conversations that Rebel itself, not you, had removed from this computer. The cloud rightly kept them, every minute, and Rebel took that for trouble. It no longer asks, and there's nothing for you to do. And when a health warning's **See details** opens Settings, you now land on that check, highlighted, with what to do about it. Crying wolf is a hard habit to break; we broke it.
+
 - **Spaces on shared drives** — You can add work folders from shared drives and other disks again. The permissions you set in Rebel still apply.
 
 - **Bold, not asterisks** — When Rebel puts a list of choices, a form or a chart in the conversation, the short message above it now formats bold words as bold text. Before, they showed with asterisks (*) around them. Fewer asterisks, more emphasis.
