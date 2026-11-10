@@ -23,6 +23,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Improvements
 
+- **Settle cloud-file conflicts in one go** — When several files changed in more than one place, choose **Keep mine for all**, **Keep cloud for all**, or **Ask Rebel to merge all**. Equivalent copies clear automatically. Bulk choices save each different version in a recovery folder before changing the original; exact duplicates can be removed because the original remains. Merging opens one conversation immediately; results follow there. Saved permissions are never merged.
+
 - **Clearer views, with the point explained** — Tables and charts now make better use of the space available, while answers put the headline figures up front and explain what matters after the view. The point stays visible.
 
 - **Room for a pinned view** — In a phone browser, an open pinned view now leaves room to read the conversation, with controls and navigation still within reach in portrait and landscape.
