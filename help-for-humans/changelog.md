@@ -23,6 +23,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Improvements
 
+- **Form previews keep your answers** — Your answers stay put when you expand a form, close its larger preview or open that preview again. Submit from the form in the conversation or the larger preview; your latest answers are used.
+
 - **Operator management** — Rebel can now find, create, edit and activate Operators — specialist advisors that live in a Space — and Operators in Spaces linked to another folder no longer disappear from the Operators panel.
 - **Settle cloud-file conflicts in one go** — When several files changed in more than one place, choose **Keep mine for all**, **Keep cloud for all**, or **Ask Rebel to merge all**. Equivalent copies clear automatically. Bulk choices save each different version in a recovery folder before changing the original; exact duplicates can be removed because the original remains. Merging opens one conversation immediately; results follow there. Saved permissions are never merged.
 
