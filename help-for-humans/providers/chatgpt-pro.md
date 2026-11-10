@@ -14,7 +14,7 @@ last_updated: "2026-11-02"
 - [ChatGPT pricing](https://openai.com/chatgpt/pricing/)
 
 
-**Which models:** whatever your ChatGPT plan offers, including GPT-6 Astra, GPT-6.1 Sol and GPT-6.1 Terra, and the same list in every role picker (Planner, Main work, Behind the scenes), each model shown once. The most capable models use more of your allowance.
+**Which models:** whatever your ChatGPT plan offers, including GPT-6 Astra, GPT-6.1 Sol and GPT-6.1 Terra, and the same list in every model picker (Planning, Everyday work and its For long conversations fallback, Behind the scenes), each model shown once. The most capable models use more of your allowance.
 ## See also
 
 - [AI models](rebel://library/rebel-system%2Fhelp-for-humans%2FAI-models.md) — how to power Rebel's AI and pick models for each role

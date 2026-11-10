@@ -15,7 +15,7 @@ These plans can power **one person or a whole company**: individuals subscribe f
 
 - **We cover the AI bill.** Your plan fee is all you pay for Rebel's AI — there's no separate token bill arriving from another provider.
 - **No setup.** No API keys to paste, no third-party account to create. Subscribe and Rebel sorts out the rest.
-- **Sensible models, chosen for you.** Each plan comes with a curated set of models, and Rebel picks good defaults for planning, main work, and behind-the-scenes tasks so you don't have to. (You can still adjust them in Settings if you like to tinker.)
+- **Sensible models, chosen for you.** Each plan comes with a curated set of models, and Rebel picks good defaults for Planning, Everyday work, and Behind the scenes so you don't have to. (You can still adjust them in Settings if you like to tinker.)
 - **Your main connection, not a silent backup.** A Mindstone plan is never used as an automatic fallback if another provider hits a limit — see [Backup connections](rebel://library/rebel-system%2Fhelp-for-humans%2FAI-models.md#backup-connections) in AI models.
 
 ## The two plans

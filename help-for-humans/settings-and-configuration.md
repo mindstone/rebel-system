@@ -46,7 +46,7 @@ Inside **Agent & Voice** you'll find accounts and keys, model choices under **Cu
 Use **Settings → Agent & Voice** for:
 
 - **Accounts and API keys**: **AI for everyday work** shows the accounts and plans that can power everyday work, plus your Anthropic key, labelled **API key**. Each row says what it does and who pays. Other keys sit in **Keys for more models**, with the number of models added from each and an **Add model** button. The title becomes **Keys and connections for more models** if you connect TrustedRouter or your own AI service. Use **Add an account or key** below the cards to sign in, add a key, connect your own service, or choose a [Mindstone plan](rebel://library/rebel-system%2Fhelp-for-humans%2Fmindstone-plans-and-billing.md). Your connections stay saved between sessions.
-- **Thinking / Working / Background models** — open **Customise** to choose which model plans, works, and handles behind-the-scenes tasks
+- **Planning / Everyday work / Behind the scenes models** — open **Customise** to choose which model plans, works, and handles behind-the-scenes tasks
 - **Company-managed models** — if your company sets your team's models, you'll see a "Set by {your company}" note where a choice was made for you; see [AI models](library://rebel-system/help-for-humans/AI-models.md#if-your-company-manages-your-models)
 - **Fallbacks** — in **Customise**, choose backup models if your primary choice is unavailable
 - **Permission mode** — whether Rebel runs actions freely or stays in plan-only mode

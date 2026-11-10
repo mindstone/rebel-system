@@ -10,8 +10,8 @@ Council Mode lets Rebel consult multiple AI models simultaneously — Claude, GP
 
 ## See also
 
-- [AI models](library://rebel-system/help-for-humans/AI-models.md) — Model configuration basics, including Smart model picking (Rebel's automatic per-step model selection within your Quality Tier — different from Council, but complementary)
-- [Settings and configuration](library://rebel-system/help-for-humans/settings-and-configuration.md) — Where to find Council Mode settings
+- [AI models](library://rebel-system/help-for-humans/AI-models.md) — Model configuration basics, including **Rebel picks the best model for each step** (Rebel's automatic per-step model selection within your Quality Tier — different from Council, but complementary)
+- [Settings and configuration](library://rebel-system/help-for-humans/settings-and-configuration.md) — Where to find **Second opinions** in Settings
 
 
 ## Quick model routing with @-mentions
@@ -107,7 +107,7 @@ You can also configure custom endpoints for other providers like Ollama, LM Stud
 
 ## Tips
 
-- Mark only the profiles you want as council members — other profiles can be used as Planner, Main work, or Behind the Scenes instead
+- Mark only the profiles you want for second opinions — other profiles can be used for Planning, Everyday work, Behind the scenes, or For long conversations instead
 - Each council member runs independently, so a slow provider won't block faster ones
 - If you already have an API key set up for voice (e.g., OpenAI), Quick Add can reuse it — no need to paste it again
 - Expand sub-agent results to see how each model approached the problem differently
