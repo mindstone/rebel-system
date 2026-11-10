@@ -23,6 +23,9 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Improvements
 
+<!-- feature: slack-reply-views -->
+- **More of Rebel's work in Slack replies** — When the Rebel app replies in a Slack thread, figures, tables that fit, decisions and complete unsent drafts can appear directly in the thread as readable text. Charts, diagrams and other views show a picture preview for quick reading, with a link to the complete view that opens in any web browser, no Rebel needed; it is saved when the reply is sent, so later changes won't alter it. Drafts for emails or invitations remain text in the thread only: Rebel does not send them, and drafts never appear in the preview picture or saved complete view. Anyone with the link can open the saved view; if Rebel asks you to approve the reply, it tells you so first.
+
 - **Clearer views, with the point explained** — Tables and charts now make better use of the space available, while answers put the headline figures up front and explain what matters after the view. The point stays visible.
 
 - **Room for a pinned view** — In a phone browser, an open pinned view now leaves room to read the conversation, with controls and navigation still within reach in portrait and landscape.
