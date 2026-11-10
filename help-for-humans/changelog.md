@@ -48,6 +48,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 - **Close means close** — Closing the final tab for a document or app now dismisses the panel containing it completely instead of showing **No document open**.
 
+- **The whole diagram in view** — Pressing **Fit** no longer leaves boxes or connections off screen in narrow windows. Diagrams still open at a readable size, and **Read as text** lists every item and connection.
+
 - **Sharing uses the current name** — When you share a conversation, the dialog and the follow-up notification now show its current name instead of an older one. One conversation, one name.
 - **Settings tests tell the truth about OpenRouter models** — A test could pass, and save results such as image or tool support, through a provider your chats aren't allowed to use. Settings now tests through the same approved providers, and any provider your administrator chose, as chats. To refresh a model you tested before, press **Test** again.
 
