@@ -14,7 +14,7 @@ last_updated: "2026-11-10"
 - [ChatGPT pricing](https://openai.com/chatgpt/pricing/)
 
 
-**Which models:** whatever your ChatGPT plan offers, including GPT-6 Astra, GPT-6.1 Sol and GPT-6.1 Terra, and the same list in the Planning, Everyday work and Behind the scenes pickers, each model shown once. The For long conversations backup has its own list: models that handle very long conversations, available once you add a Claude account or key. Models you've added under Your models can also be picked there. The most capable models use more of your allowance.
+**Which models:** whatever your ChatGPT plan offers, including GPT-6 Astra, GPT-6.1 Sol and GPT-6.1 Terra, and the same list in the Everyday work, Planning and Behind the scenes pickers, each model shown once. The For long conversations fallback has its own list: models that handle very long conversations, available once you add an Anthropic key. Models you've added under Your models can also be picked there. The most capable models use more of your allowance.
 ## See also
 
 - [AI models](rebel://library/rebel-system%2Fhelp-for-humans%2FAI-models.md) — how to power Rebel's AI and pick models for each role

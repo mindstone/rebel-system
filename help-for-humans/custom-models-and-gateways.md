@@ -65,5 +65,5 @@ Fix the detail, then **Test now** again.
 
 ## See also
 
-- [AI models](library://rebel-system/help-for-humans/AI-models.md) — connecting the built-in providers and choosing your Everyday work, Planning, and Behind the scenes models, plus Everyday work's For long conversations backup.
+- [AI models](library://rebel-system/help-for-humans/AI-models.md) — connecting the built-in providers and choosing your Everyday work, Planning, and Behind the scenes models, plus Everyday work's For long conversations fallback.
 - [Settings and configuration](library://rebel-system/help-for-humans/settings-and-configuration.md) — where these controls live.
