@@ -57,6 +57,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 - New messages in the sharing dialog now scroll into view, and web notices about links that are no longer shared stay visible longer.
 
+- **Saved notes, fully readable** — Save confirmations no longer hide behind the buttons for jumping through a conversation while another action waits for your approval. You can read the whole confirmation, including where each note was saved.
+
 - Removing or disabling a model profile (a saved connection to a model) now preserves your selected models and reports when a chat or job can't use one, instead of quietly choosing another. Scheduled automations flag detected problems with a model choice and offer Open Settings; warnings for automations running on this computer update after you fix that choice.
 
 - **One restart gets the latest** — On Mac, if a newer version came out after Rebel had already downloaded an update, the **Install & Relaunch** button on the message offering the update put you on the older one and then offered the newer one straight away. Rebel now downloads the newer version in the background while you work, so once that download finishes, one restart is enough. Restarting twice was never the plan.
