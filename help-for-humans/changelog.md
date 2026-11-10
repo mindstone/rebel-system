@@ -23,6 +23,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Improvements
 
+- **Settle cloud-file conflicts in one go** — When several files changed in more than one place, choose **Keep mine for all**, **Keep cloud for all**, or **Ask Rebel to merge all**. Equivalent copies clear automatically. Bulk choices save each different version in a recovery folder before changing the original; exact duplicates can be removed because the original remains. Merging opens one conversation immediately; results follow there. Saved permissions are never merged.
+
 - **Fewer detours after a change of plan** — When you redirect Rebel, it can stop an assistant whose work is no longer needed, say why, and keep useful findings. The other assistants carry on. No need to finish researching a trip you've just cancelled.
 
 <!-- feature: slack-reply-views -->

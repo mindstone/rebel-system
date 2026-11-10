@@ -1,6 +1,6 @@
 ---
 description: "Why duplicate files and folders like 'note (1).md' or 'Project (1)/' pile up when you run Rebel on two computers via a shared cloud drive, what Rebel now does about it (including whole-folder conflict copies), and how to tidy an existing mess safely."
-last_updated: "2026-06-07"
+last_updated: "2026-11-10"
 ---
 
 # Cleaning up duplicate files from cloud sync
@@ -38,6 +38,10 @@ amplification is what turned a handful of copies into thousands.
 - **It no longer multiplies them.** As before, Rebel also recognises any conflict copies that do
   exist and refuses to pass them around between your machines, so an old stray copy can't breed
   more. This covers whole **folders** too (like `Project (1)/`), not just individual files.
+- **It checks the easy cases first.** When you open the conflict dialog, Rebel clears copies that match the file exactly, or where some simple formatting of the details at the top of the file differs (same values, same main text). If anything else differs, Rebel leaves the copy where it is for you to choose. Saved permission files only match when their bytes match exactly.
+- **It gives you one place to settle real differences.** When several files changed in more than one place, choose **Keep mine for all**, **Keep cloud for all**, or **Ask Rebel to merge all**. Bulk choices save each different version they replace in the dated recovery folder before changing the original; an exact duplicate can be removed because the original remains. A merge opens one conversation straight away with the files as context; the full results follow in that same conversation when the work settles. The dialog shows available versions and their ages when known, and you can still make an individual choice for a file. When there are several different cloud versions, Rebel may ask you to choose one rather than picking the newest automatically. Saved permission files are never merged by Rebel.
+- For one file, choose **Keep mine**, **Keep cloud version**, or **Ask Rebel to merge**. A merge may still need your review; if Rebel cannot safely combine the file, it leaves the copies for you to choose.
+- If Rebel cannot confirm an outcome, it keeps the affected files locked so nothing is applied twice. Any copies Rebel saved, if there are any, are in the workspace's `.rebel/conflicts-cleanup` folder, in dated folders (possibly hidden in your file browser), and may not be verified. Check the original files, and any saved copies the results list. To choose again for those files, restart Rebel.
 - **It shows two disagreeing copies where they live, and lets you settle them.** When a file and its copy genuinely differ, the pair now appears next to the file itself rather than in Settings. Open it and Rebel shows the two versions side by side; keep either one, keep both, or ask Rebel to propose a merge. Every place that lists files needing review agrees, so clearing one clears the others.
 - **It offers to tidy up.** If Rebel notices conflict copies in your folders, it shows a
   one-time note — *"Tidy up duplicate files? Rebel found N duplicate files from a cloud-sync
