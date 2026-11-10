@@ -41,6 +41,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **Settings search lands in view** — Selecting Shared links in Settings search now brings its controls into view after loading, without another manual scroll.
+
 - **Close means close** — Closing the final tab for a document or app now dismisses the panel containing it completely instead of showing **No document open**.
 
 - **Sharing uses the current name** — When you share a conversation, the dialog and the follow-up notification now show its current name instead of an older one. One conversation, one name.
