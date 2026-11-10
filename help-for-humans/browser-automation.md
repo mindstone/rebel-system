@@ -1,6 +1,6 @@
 ---
 description: "Choose Your Browser, Rebel's Browser or Cloud Browser for the web task you need."
-last_updated: "2026-10-29"
+last_updated: "2026-11-09"
 ---
 
 # Browser tools
@@ -34,11 +34,10 @@ Rebel's built-in browser automation uses its own browser on this computer. It ke
 
 ### Setup
 
-1. Go to **Settings → Connectors**
-2. In the **Available** section, find **Rebel's Browser**
-3. Click **Connect**
-4. Leave **Show the browser window** unticked and Rebel works without showing you a window. Tick it if you want to watch Rebel work.
-5. Click **Connect** to confirm.
+1. In Settings, open **Connectors**.
+2. In **Available**, select **Rebel's Browser** to open its settings.
+3. Leave **Show the browser window** off to let Rebel work without showing a window. Turn it on if you want to watch Rebel work.
+4. Click **Set up with Rebel**.
 
 Requires Google Chrome or Brave to be installed.
 
@@ -64,6 +63,19 @@ Ask Rebel:
 - "Fill out this web form with data from my CRM"
 - "Extract the pricing table from this page"
 - "Check if this URL is working"
+
+## Cloud Browser
+
+### Setup
+
+You'll need an API key from Browserbase, the online browser service Cloud Browser uses. The key lets Rebel use your Browserbase account.
+
+1. In Settings, open **Connectors** and select **Cloud Browser** in **Available**.
+2. Click **Open Cloud Browser** to open Browserbase's settings page in your web browser.
+3. Sign in if needed, then copy your API key or create a new one.
+4. Paste the key into **Browserbase API Key**, then click **Set up with Rebel**.
+
+Enter the key in Settings, not in the conversation.
 
 ## Shared Browser Tab (no longer offered)
 
