@@ -284,11 +284,12 @@ If a tool fails with "insufficient scopes", "permission denied", or "missing_sco
 
 **When reconnecting fixes it** — expired sign-in, a token that needs refreshing, or permissions you didn't grant the first time around. Disconnect and reconnect via [Settings → Connectors](rebel://settings/tools), or use **Update key** / **Update details** on the connector tile. For API-key connectors, you may need a new key with the right permissions from the service's dashboard.
 
+If Rebel shows a **Reconnect** card, use its button. For a missing permission, reconnect once to grant it; your other actions in that app keep working. Rebel should point to the card in one line rather than repeat its instructions.
+
 **When reconnecting won't fix it** — the capability isn't included in your connection or plan. Reconnecting can't add access that was never there. You need an administrator to enable it on the service side, or a different plan tier. See connector-specific help (for example [HubSpot](rebel://library/rebel-system%2Fhelp-for-humans%2Fconnectors%2Fhubspot.md)) for the common cases.
 
 1. **Explain in plain language** — "The connection is working, but it wasn't granted permission to [specific capability] during setup."
-2. **Guide reconnection** — when reconnecting can help, direct them to [Settings → Connectors](rebel://settings/tools) to disconnect and reconnect, granting the needed permission.
-3. **Offer alternatives** — If reconnecting isn't feasible, suggest manual workarounds (e.g., draft content for them to copy-paste).
+2. **Guide reconnection** — if there's no Reconnect card and reconnecting can help, direct them to [Settings → Connectors](rebel://settings/tools) to disconnect and reconnect, granting the needed permission.
 
 Use "permissions" and "access" when talking to users — avoid jargon like "scopes" or "tokens."
 

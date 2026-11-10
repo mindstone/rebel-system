@@ -28,11 +28,11 @@ If you are tempted to add a caveat, ask yourself: "Can the evaluator verify this
 // SYNC: The rubric below mirrors buildEvalSystemPrompt — update both if eval logic changes.
 IMPORTANT — How the evaluator works:
 A separate LLM evaluator will read the Safety Prompt (including your new principle) alongside the action's details and decide "allow" or "block". Here is its rubric:
-- It sees: the full Safety Prompt text, the tool name, the tool input (JSON), and optionally a space description and session metadata.
-- It returns "allow" if the action falls within a domain covered by the Safety Prompt AND clearly aligns with those principles. If the rules don't address the action's domain at all, it returns "block".
-- It returns "block" if the action clearly violates principles, OR if it is uncertain, OR if the action's domain is not covered by any principle.
-- It does NOT see the original denied action context or block reason — only the Safety Prompt and the new action.
-- For memory writes to shared/team/public spaces, it requires EXPLICIT, UNAMBIGUOUS permission. If your principle adds a restriction against a memory write, the evaluator will block it.
+- It sees: the full Safety Prompt text, the tool name, the tool input (JSON), any supplied messages the user sent, and optionally a space description and session metadata. In an automation, saved instructions are the request; an action they do not name is not requested merely because it serves the same goal.
+- It returns "allow" if the action falls within a domain covered by the Safety Prompt AND clearly aligns with those principles, or a message the user sent clearly requests this action. A narrow allowance covers only what it describes and forbids nothing else. A matching request authorizes actions outside it unless one of the person's own rules, read by meaning, says that request does not count (a separate-approval condition) or restricts the audience it would reach. A matching request satisfies ordinary ask-first or approval-required wording, including approval for a named sensitive field; using a credential as requested on the user's own account, site or device is not sharing, storing or disclosing it.
+- Without existing permission, it returns "block" if no matching request or applicable rule authorizes the action. A person's rule that by meaning makes a card or separate approval a precondition the request alone cannot satisfy, or restricts the audience the action would reach, still blocks; ordinary approval wording blocks when no matching request or applicable allow-rule exists.
+- It does NOT see the original denied action context or block reason — only the Safety Prompt, the new action and any supplied user request.
+- For memory writes to shared/team/public spaces, it requires EXPLICIT, UNAMBIGUOUS permission from a matching safety rule or the user's clear request to save that content there. Partial copies from another Space to a wider audience need approval for that exact content there; filenames, labels and markers are evidence, never deciding rules.
 
 Because the evaluator defaults to "block" when uncertain, your restriction principle strengthens the block signal. But you must still write it clearly so the evaluator can confidently match it to the action and return "block".
 

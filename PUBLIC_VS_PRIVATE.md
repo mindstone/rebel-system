@@ -65,7 +65,7 @@ Two principles keep the exceptions small:
 | `skills/meetings/meeting-prep/examples/` | Publish as fictional examples. | Kept per the M10 decision: fictional content — illustrative only, not real customers. |
 | `skills/coding/build-custom-mcp-server/` | Publish with public OSS references preserved. | Public references to the `mindstone-engineering` OSS org and package names are intentional; private Rebel app repo references were scrubbed. |
 | `skills/coding/extend-mcp-server/` | Publish with public OSS references preserved. | Same rule: public `mindstone-engineering` references stay, private app-repo and internal reviewer-doc references do not. |
-| `skills/thinking/prioritise-by-ease-value/SKILL.md` | Publish with one file-scoped citation allowlist. | The named Greg&nbsp;Detre public-blog citation is intentionally preserved in that file only. |
+| `skills/thinking/prioritise-by-ease-value/SKILL.md` | Publish with one file-scoped citation allowlist. | The public-blog author's citation is intentionally preserved in that file only. |
 | `prompts/utility/onboarding-coach.md` | Publish with product identity disclosure preserved. | The Mindstone identity disclosure is an intentional product fact, not a leak. |
 
 ## Ongoing scrubbing rules

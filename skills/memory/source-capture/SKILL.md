@@ -165,7 +165,7 @@ Collect required frontmatter fields:
 | `description` | Brief description of this source | `Q3 quarterly review with leadership` |
 | `source_type` | Category of source | `meeting`, `doc`, `pdf`, `thread`, `email`, `ticket`, `web`, `data`, `image` |
 | `source_system` | Tool/platform that produced it | `fireflies`, `notion`, `slack`, `gmail`, `browser`, `postgres` |
-| `source_account` | User account or workspace | `user@company.com`, `company-workspace` |
+| `source_account` | User account or workspace | `user@example.com`, `company-workspace` |
 | `source_uid` | Unique ID within system+account | `abc123`, `page_xyz`, `thread_456` |
 | `source_url` | URL to canonical source (or file path) | `https://fireflies.ai/meeting/abc123` |
 | `stored_at` | Date file was created (YYYY-MM-DD) | `2025-12-15` |
@@ -282,16 +282,16 @@ The examples below cover common source types. For unlisted types, follow the gen
 **Source systems:** Fireflies, Otter, Fathom, Zoom transcripts, Google Meet, Teams
 **Getting content:** Use the appropriate MCP connector to retrieve meeting transcripts
 **Key metadata:** Include `participants` and `duration_minutes`
-**Content format:** Preserve speaker attribution in the transcript (e.g., `**Jane:** We should...`)
+**Content format:** Preserve speaker attribution in the transcript (e.g., `**Jane Doe:** We should...`)
 
 **Example frontmatter:**
 ```yaml
 source_type: meeting
 source_system: fireflies
-source_account: user@company.com
+source_account: user@example.com
 source_uid: abc123xyz
 source_url: https://app.fireflies.ai/view/abc123xyz
-participants: [Jane Smith, Bob Chen, Carol Davis]
+participants: [Jane Doe, User A, User B]
 duration_minutes: 45
 ```
 
@@ -328,7 +328,7 @@ When the same meeting is captured by multiple notetakers (e.g., Rebel + Fireflie
 ```markdown
 ## Summary
 
-> **Note:** This meeting was captured by both Rebel and Fireflies. The sources differ on the Q2 budget figure ($450k vs $480k) — verify with Jane.
+> **Note:** This meeting was captured by both Rebel and Fireflies. The sources differ on the Q2 budget figure ($450k vs $480k) — verify with Jane Doe.
 
 [Rest of summary...]
 ```
@@ -368,8 +368,8 @@ source_type: thread
 source_system: slack
 source_account: company-workspace
 source_uid: C01234567:1234567890.123456
-source_url: https://company.slack.com/archives/C01234567/p1234567890123456
-participants: [jane, bob, carol]
+source_url: https://acme-corp.slack.com/archives/C01234567/p1234567890123456
+participants: [jane.doe, user-a, user-b]
 ```
 
 ### Email Threads
@@ -385,10 +385,10 @@ participants: [jane, bob, carol]
 ```yaml
 source_type: email
 source_system: gmail
-source_account: user@company.com
+source_account: user@example.com
 source_uid: thread_abc123
 source_url: https://mail.google.com/mail/u/0/#inbox/thread_abc123
-participants: [jane@company.com, client@external.com]
+participants: [jane@example.com, client@example.org]
 ```
 
 ### Tickets (Linear, Jira)
@@ -422,7 +422,7 @@ source_url: https://tracker.example.com/company/issue/ABC-123
 ```yaml
 source_type: pdf
 source_system: gdrive
-source_account: user@company.com
+source_account: user@example.com
 source_uid: 1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms
 source_url: https://drive.google.com/file/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms
 file_type: pdf

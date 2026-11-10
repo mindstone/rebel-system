@@ -5,14 +5,14 @@ last_updated: "2026-10-31"
 
 # Your Browser
 
-Your Browser uses the Rebel extension that lets Rebel see the page you're looking at, so you can ask it to summarise, save, or act on that page without playing courier between tabs.
+Your Browser uses the Rebel extension that lets Rebel see the page you're looking at, so you can ask it to summarise, save, or act on that page without playing courier between tabs. This is the browser you already use, distinct from **Rebel's Browser**, the separate browser Rebel runs.
 
 ## What it can do
 
-Rebel works in its own tabs in your browser, grouped under **Rebel** at the top, in the background. It doesn't switch you to them or bring your browser forward, and it leaves your own tabs alone. You can watch at any time by clicking one of its tabs.
+Rebel works in tabs it opens inside your browser, grouped under **Rebel** at the top, in the background. It doesn't switch you to them or bring your browser forward, and it leaves your own tabs alone. You can watch at any time by clicking one of its tabs.
 
-- Open pages, and list, use and close its own tabs.
-- Read the page you're looking at, or one of its own, and quote what you've selected.
+- Open pages, and list, use and close the tabs it opens in your browser.
+- Read the page you're looking at, or one of the tabs it opened, and quote what you've selected.
 - Type, pick from drop-downs, press keys, hover, click and fill in forms.
 - Wait for a page or a part of it to load.
 - Take a screenshot of one of its tabs. If you're using that browser window at the time, Rebel reads the page's text instead, so it never switches tabs under you. It can take the picture once you've moved to another window.
@@ -27,6 +27,18 @@ Loading the extension gives Rebel access to all websites, so it doesn't ask site
 - It can't read records of the page's behind-the-scenes activity or errors, save pages as PDFs, or upload files from your computer. **Rebel's Browser** can save PDFs and upload files.
 
 Rebel only acts in your browser when a task needs it.
+
+## Ask Rebel about a page or selection
+
+With the extension installed in Chrome ([how to install it](#how-to-install-it)), right-click a page or some selected text and choose **Ask Rebel**. A box in Chrome's side panel shows exactly what will be sent: your selection, or the whole page's text if nothing is selected, with the page's title and address. You can switch between **Selection** and **Whole page**. Add an optional note, then press **Send to Rebel**. Every send starts a new conversation in Rebel and opens the Rebel app on it. What you send is handled like a message you type to Rebel: it goes into that conversation and to the AI model Rebel uses.
+
+The first time, Chrome asks **Open Mindstone Rebel?**: that is Chrome checking before an extension opens an app on your computer. Tick **Always allow** in that prompt: from then on Chrome opens Rebel without asking. It only skips Chrome's question; the box still shows you what will be sent, every time, before you press **Send to Rebel**. Until you do, Chrome asks on each send.
+
+Chrome's own pages, the Chrome Web Store and PDFs in Chrome's viewer send only their title and address. The box says **Chrome won’t let Rebel read this page. Only the title and URL below will be sent.** Very long pages or selections send only the first 200,000 characters, and the rest isn't sent; the box says so before you send. To ask about a later part, select that part and send it.
+
+### From your phone
+
+On Android, share a page to Rebel, or select text and choose **Ask Rebel**. On iPhone, share to Rebel from Safari; select some text first to send just that. The same box opens in the Rebel app: check what's being sent, add an optional note and press **Send to Rebel** to start a new conversation. Android page sharing sends only the title and link; the box says **Only the title and link are sent.**
 
 ## How to install it
 
