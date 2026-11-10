@@ -179,7 +179,7 @@ All file operations enforce that targets live within the workspace root — path
 Rebel has layered safety mechanisms:
 
 ### Tool Safety
-Before executing any tool call, Rebel evaluates it against your Safety Rules (natural language rules you write in Settings → Account & Preferences → Privacy & Safety). Read-only actions auto-allow. Side-effect actions are evaluated by a fast AI model against your rules. If the rules allow it, Rebel proceeds. If not, you get an approval prompt. You can also mark specific tools as 'trusted' to bypass safety checks entirely.
+Rebel checks tool actions against your Safety Rules (natural language rules you write in Settings → Account & Preferences → Privacy & Safety), subject to existing permissions and Blocks. A terminal command skips the ordinary check as read-only only when Rebel's command analysis is ready and confirms that the whole command uses supported read-only actions. Otherwise, it receives the ordinary Safety Rules check, even if it looks like a read. A check does not always mean an approval prompt. See [Security and Tool Safety](rebel://library/rebel-system%2Fhelp-for-humans%2Fsecurity-and-tool-safety.md) for saved permissions, Blocks and how different modes handle the result.
 
 ### Memory Safety
 A Space’s sharing sets how its saves are checked. Your saving preferences are lines in [Safety Rules](rebel://settings/safety#safetyRules); edit them there. Previous per-Space choices have moved into that document. See [Security and Tool Safety](library://rebel-system/help-for-humans/security-and-tool-safety.md) for the user-facing explanation of the approval flow.
