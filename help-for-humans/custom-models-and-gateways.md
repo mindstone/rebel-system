@@ -1,6 +1,6 @@
 ---
 description: "How to connect your own model or a company gateway (a custom OpenAI-compatible endpoint), what the Test button checks, and how to fix common gateway issues like thinking and tool use"
-last_updated: "2026-06-18"
+last_updated: "2026-11-10"
 ---
 
 # Custom models and gateways
@@ -65,5 +65,5 @@ Fix the detail, then **Test now** again.
 
 ## See also
 
-- [AI models](library://rebel-system/help-for-humans/AI-models.md) — connecting the built-in providers and choosing your Planning / Everyday work / Behind the scenes / For long conversations models.
+- [AI models](library://rebel-system/help-for-humans/AI-models.md) — connecting the built-in providers and choosing your Everyday work, Planning, and Behind the scenes models, plus Everyday work's For long conversations fallback.
 - [Settings and configuration](library://rebel-system/help-for-humans/settings-and-configuration.md) — where these controls live.

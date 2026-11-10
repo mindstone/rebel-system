@@ -1,6 +1,6 @@
 ---
 description: "How to route messages to specific AI models with @-mentions, and use Council Mode to consult multiple models in parallel"
-last_updated: "2026-05-11"
+last_updated: "2026-11-10"
 ---
 
 # Council Mode
@@ -107,7 +107,7 @@ You can also configure custom endpoints for other providers like Ollama, LM Stud
 
 ## Tips
 
-- Mark only the profiles you want for second opinions — other profiles can be used for Planning, Everyday work, Behind the scenes, or For long conversations instead
+- Mark only the profiles you want for second opinions — other profiles can be used for Everyday work, Planning, or Behind the scenes instead; models in Your models can also be picked as the For long conversations fallback
 - Each council member runs independently, so a slow provider won't block faster ones
 - If you already have an API key set up for voice (e.g., OpenAI), Quick Add can reuse it — no need to paste it again
 - Expand sub-agent results to see how each model approached the problem differently
