@@ -53,7 +53,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
-- **One restart gets the latest** — If a newer version came out after Rebel had already downloaded an update, the **Install & Relaunch** button on the update message put you on the older one and then offered the newer one straight away. Rebel now downloads the newer version in the background while you work, so one restart is enough. Restarting twice was never the plan.
+- **One restart gets the latest** — On Mac, if a newer version came out after Rebel had already downloaded an update, the **Install & Relaunch** button on the update message put you on the older one and then offered the newer one straight away. Rebel now downloads the newer version in the background while you work, so once that download finishes, one restart is enough. Restarting twice was never the plan.
+- **Update messages that mean it** — On Windows, the hourly update check could leave the update message showing while its **Install** button no longer worked. The message now stays ready for the version you were offered, and closes if a newer version replaces it.
 
 - **Terminal file changes get checked** — Some terminal commands that change a file, such as adding text to the end of it, could run without your usual Safety Rules check. Now they get it.
 
