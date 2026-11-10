@@ -57,6 +57,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 - **Saved notes, fully readable** — Save confirmations no longer hide behind the buttons for jumping through a conversation while another action waits for your approval. You can read the whole confirmation, including where each note was saved.
 
+- Removing or disabling a model profile (a saved connection to a model) now preserves your selected models and reports when a chat or job can't use one, instead of quietly choosing another. Scheduled automations flag detected problems with a model choice and offer Open Settings; warnings for automations running on this computer update after you fix that choice.
+
 - **One restart gets the latest** — On Mac, if a newer version came out after Rebel had already downloaded an update, the **Install & Relaunch** button on the message offering the update put you on the older one and then offered the newer one straight away. Rebel now downloads the newer version in the background while you work, so once that download finishes, one restart is enough. Restarting twice was never the plan.
 - **Update messages that mean it** — On Windows, Rebel checks for updates every hour, and that check could leave the message offering the update on screen while its **Install** button no longer worked. The message now stays ready for the version you were offered, and closes if a newer version replaces it.
 
@@ -110,6 +112,8 @@ What's new in Rebel. We ship fast, so there's always something.
 - **Memory errors stay visible** — Failed Memory updates keep their error indicator and existing recovery instructions visible when the conversation refreshes or reopens.
 
 - **Memory saves look like success** — On web and phone, successful memory-save feedback appears as a normal notice instead of a red error, while actual failures keep their recovery guidance. A save should look saved.
+
+- **Review a changed note on the web** — If you change a note in your Library while Rebel is waiting for your approval to update it, the approval card now offers **Review changes**, showing your current note beside Rebel's proposed version, instead of sending you to an empty Actions screen. You still choose what gets saved.
 
 - **Review catches up when a file comes back** — If a deleted file returns with conflicting changes while **Review** is open, **Save as new file** now reloads the review and asks you to choose again. The returned file stays untouched, and Rebel's unsaved draft remains available.
 
