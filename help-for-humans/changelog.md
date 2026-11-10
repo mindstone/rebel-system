@@ -55,6 +55,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- New messages in the sharing dialog now scroll into view, and web notices about links that are no longer shared stay visible longer.
+
 - **Saved notes, fully readable** — Save confirmations no longer hide behind the buttons for jumping through a conversation while another action waits for your approval. You can read the whole confirmation, including where each note was saved.
 
 - Removing or disabling a model profile (a saved connection to a model) now preserves your selected models and reports when a chat or job can't use one, instead of quietly choosing another. Scheduled automations flag detected problems with a model choice and offer Open Settings; warnings for automations running on this computer update after you fix that choice.
