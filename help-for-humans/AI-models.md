@@ -228,6 +228,8 @@ If you prefer the old way, power users can still open the advanced panel inside 
 
 Choosing **Maximum** now uses **Claude Fable 5.1** for new selections. Conversations already set to Maximum stay on **Claude Fable 5** and show as **Custom** until you pick Maximum again; Fable 5 also remains available in the model picker.
 
+Claude Fable 5.2 is available in the model pickers when you use an Anthropic key or OpenRouter. If you chose Fable 5 or 5.1 yourself, Rebel offers 5.2 once. Choose **Keep** or close the pop-up and Rebel won't suggest the switch again; you can still switch any time in **Settings → Agent & Voice**. **Maximum** still uses Fable 5.1; if you switch while on Maximum, your setting shows as **Custom** until you pick **Maximum** again.
+
 ## A simple starting point
 
 For most people, the honest answer is: **you don't need to manage models at all.** Rebel optimises which model runs which part of a task for you, out of the box. If you want to steer it anyway:
