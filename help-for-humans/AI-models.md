@@ -1,5 +1,5 @@
 ---
-description: "How to power Rebel's AI — a flat-fee Mindstone plan or bring your own (ChatGPT Pro, OpenRouter, Anthropic) — then choose Everyday work, Planning, Behind the scenes, and For long conversations models, why one task can use several models, and what happens when you pick a model outside your plan tier"
+description: "How to power Rebel's AI — a flat-fee Mindstone plan or bring your own (ChatGPT Pro, OpenRouter, Anthropic) — then choose Everyday work, Planning, and Behind the scenes models, why one task can use several models, and what happens when you pick a model outside your plan tier"
 last_updated: "2026-11-05"
 ---
 
@@ -12,7 +12,7 @@ Rebel gives you two ways to power its AI:
 
 You only need **one** of these to get started.
 
-In onboarding and in [Settings → Agent & Voice](rebel://settings/agents), you pick how you want to power Rebel, then choose which models Rebel should use for **Everyday work**, **Planning**, **Behind the scenes**, and **For long conversations**. In Settings, model choices are under **Customise**.
+In onboarding and in [Settings → Agent & Voice](rebel://settings/agents), you pick how you want to power Rebel, then choose which models Rebel should use for **Everyday work**, **Planning**, and **Behind the scenes**. Everyday work also has a **For long conversations** fallback for conversations that are too long for it. In Settings, model choices are under **Customise**.
 
 **You're not locked to one model or one provider.** Connect more than one and switch whenever you like — and through OpenRouter alone you can reach Claude, GPT, Gemini, DeepSeek, Grok, and others on a single account. You can also run models on your own machine (e.g. via Ollama or LM Studio) or point Rebel at a company gateway — see [Custom models and gateways](rebel://library/rebel-system%2Fhelp-for-humans%2Fcustom-models-and-gateways.md). And with [Council Mode](rebel://library/rebel-system%2Fhelp-for-humans%2Fmulti-model-council-mode.md) you can put a question to several models at once.
 
@@ -122,9 +122,9 @@ Good fit if you want the most direct Claude setup and pay-as-you-go pricing. **C
 
 If you want extra help with Anthropic-specific setup, see [Claude Max setup](rebel://library/rebel-system%2Fhelp-for-humans%2Fclaude-max-setup.md).
 
-## Model jobs: Everyday work, Planning, Behind the scenes, and For long conversations
+## Model jobs: Everyday work, Planning, and Behind the scenes
 
-Rebel splits model choices into four jobs. Plan first, then do the work, keep background tasks moving, and handle conversations that are too long for the everyday model.
+Rebel splits model choices into three main jobs. Plan first, then do the work, and keep background tasks moving. For long conversations is Everyday work's fallback when a conversation is too long for it.
 
 ### Planning
 
@@ -164,17 +164,15 @@ A set of model jobs lets Rebel bring together models that each do a different jo
 
 The jobs are:
 
-- **Everyday work** — the model you talk to most, handling writing, editing, and tool use
+- **Everyday work** — the model you talk to most, handling writing, editing, and tool use; its **For long conversations** fallback steps in when a conversation is too long for it
 - **Planning** — an optional separate planning model that thinks harder before Everyday work starts (leave it on Same as everyday work and Everyday work plans too)
 - **Behind the scenes** — background jobs like safety checks, memory updates, and file indexing
-- **Second opinions** — multiple models consulted in parallel for important decisions (see [Council Mode](rebel://library/rebel-system%2Fhelp-for-humans%2Fmulti-model-council-mode.md))
-- **For long conversations** — a fallback that steps in when a conversation is too long for the everyday model, so work keeps going rather than stopping cold
 
 If a chosen model can't be found, Rebel quietly switches to a working one and carries on instead of stopping with an error. And if a reply stutters mid-stream for a moment, Rebel retries on its own — you usually won't even notice.
 
 When you pick which model to use for each role, you see a **unified list** — all your connected providers' models appear together, so you don't need to flip between tabs or providers to find the right fit. If you have both a subscription (e.g. ChatGPT Pro) and an API key for the same provider, they appear as **separate, distinct profiles** so the two don't get muddled.
 
-Each job shows its **real status** at a glance. If a model is genuinely ready to use, it says so; if it would fail or still needs setup, it tells you that honestly rather than giving a false all-clear (or warning you about a model that's actually running fine). The **For long conversations** job — the model that steps in for very long conversations — gets its own **Pick fallback** nudge so it doesn't quietly go unset.
+Each job shows its **real status** at a glance. If a model is genuinely ready to use, it says so; if it would fail or still needs setup, it tells you that honestly rather than giving a false all-clear (or warning you about a model that's actually running fine). The **Everyday work** job's **For long conversations** fallback — the model that steps in for very long conversations — gets its own **Pick fallback** nudge so it doesn't quietly go unset.
 
 Choose role models in **Settings → Agent & Voice → Customise**. In **Your models**, turn on **Second opinions** for each model you want to consult.
 
