@@ -120,6 +120,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 - **Research replies after closing** — After you closed the app while Rebel was handling several research tasks at once, a reply could stop with an error saying it couldn't continue. On resuming, Rebel kept the research it had already finished; it omitted only the unfinished text of the earlier reply, not that completed research.
 
+- **Saved skill suggestions stay safe** — Shared skills are reusable instructions for Rebel. Approving an older request to save suggested edits no longer overwrites a newer saved suggestion. If Rebel cannot confirm your saved suggestion is unchanged since that request was prepared, the older request remains available to review and your saved suggestion stays unchanged.
+
 ## v0.4.102 — Nov 7, 2026
 
 ### Highlights
