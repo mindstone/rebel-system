@@ -53,6 +53,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **One restart gets the latest** — If a newer version came out after Rebel had already downloaded an update, the **Install & Relaunch** button on the update message put you on the older one and then offered the newer one straight away. Rebel now downloads the newer version in the background while you work, so one restart is enough. Restarting twice was never the plan.
+
 - **Terminal file changes get checked** — Some terminal commands that change a file, such as adding text to the end of it, could run without your usual Safety Rules check. Now they get it.
 
 - **Settings search lands in view** — Selecting Shared links in Settings search now brings its controls into view after loading, without another manual scroll.
