@@ -39,6 +39,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **Close means close** — Closing the final tab for a document or app now dismisses the panel containing it completely instead of showing **No document open**.
+
 - **Clearer setup steps** — Browser setup help now matches the buttons on screen and includes Cloud Browser steps. Shortcut hints no longer send Windows and Linux users to Mac settings.
 
 - **Meeting notes on your phone** — Your phone now shows a banner while Rebel's bot is taking notes in a call. Tap it to open that meeting's notes. If the banner misses a status change, Rebel checks again automatically. There's nothing for you to do.
