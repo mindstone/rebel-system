@@ -65,5 +65,5 @@ Fix the detail, then **Test now** again.
 
 ## See also
 
-- [AI models](library://rebel-system/help-for-humans/AI-models.md) — connecting the built-in providers and choosing your Planner / Main work / Behind the Scenes models.
+- [AI models](library://rebel-system/help-for-humans/AI-models.md) — connecting the built-in providers and choosing your Planning / Everyday work / Behind the scenes / For long conversations models.
 - [Settings and configuration](library://rebel-system/help-for-humans/settings-and-configuration.md) — where these controls live.

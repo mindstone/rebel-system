@@ -1,5 +1,5 @@
 ---
-description: "How to power Rebel's AI — a flat-fee Mindstone plan or bring your own (ChatGPT Pro, OpenRouter, Anthropic) — then choose Planner, Main work, and Behind the Scenes models, why one task can use several models, and what happens when you pick a model outside your plan tier"
+description: "How to power Rebel's AI — a flat-fee Mindstone plan or bring your own (ChatGPT Pro, OpenRouter, Anthropic) — then choose Everyday work, Planning, Behind the scenes, and For long conversations models, why one task can use several models, and what happens when you pick a model outside your plan tier"
 last_updated: "2026-11-05"
 ---
 
@@ -12,7 +12,7 @@ Rebel gives you two ways to power its AI:
 
 You only need **one** of these to get started.
 
-In onboarding and in [Settings → Agent & Voice](rebel://settings/agents), you pick how you want to power Rebel, then choose which models Rebel should use for **Planner**, **Main work**, and **Behind the Scenes**. In Settings, model choices are under **Customise**.
+In onboarding and in [Settings → Agent & Voice](rebel://settings/agents), you pick how you want to power Rebel, then choose which models Rebel should use for **Everyday work**, **Planning**, **Behind the scenes**, and **For long conversations**. In Settings, model choices are under **Customise**.
 
 **You're not locked to one model or one provider.** Connect more than one and switch whenever you like — and through OpenRouter alone you can reach Claude, GPT, Gemini, DeepSeek, Grok, and others on a single account. You can also run models on your own machine (e.g. via Ollama or LM Studio) or point Rebel at a company gateway — see [Custom models and gateways](rebel://library/rebel-system%2Fhelp-for-humans%2Fcustom-models-and-gateways.md). And with [Council Mode](rebel://library/rebel-system%2Fhelp-for-humans%2Fmulti-model-council-mode.md) you can put a question to several models at once.
 
@@ -122,19 +122,19 @@ Good fit if you want the most direct Claude setup and pay-as-you-go pricing. **C
 
 If you want extra help with Anthropic-specific setup, see [Claude Max setup](rebel://library/rebel-system%2Fhelp-for-humans%2Fclaude-max-setup.md).
 
-## Model roles: Planner, Main work, and Behind the Scenes
+## Model jobs: Everyday work, Planning, Behind the scenes, and For long conversations
 
-Rebel splits model choices into three jobs. Plan first, then do the work, then tidy up Behind the Scenes.
+Rebel splits model choices into four jobs. Plan first, then do the work, keep background tasks moving, and handle conversations that are too long for the everyday model.
 
-### Planner
+### Planning
 
 This is optional.
 
-It handles deeper planning before the Main work model gets on with it. For harder jobs, this can improve quality. For simple jobs, it can be overkill.
+It handles deeper planning before the Everyday work model gets on with it. For harder jobs, this can improve quality. For simple jobs, it can be overkill.
 
-You can leave it on **Same as working model** for the simplest setup — your Main work model does the planning too, so there's one model to think about.
+You can leave it on **Same as everyday work** for the simplest setup — your Everyday work model does the planning too, so there's one model to think about.
 
-### Main work
+### Everyday work
 
 This is the main model you notice most.
 
@@ -147,7 +147,7 @@ It handles the actual conversation work:
 
 If you're only going to change one thing, change this.
 
-### Behind the Scenes
+### Behind the scenes
 
 This model handles quieter jobs in the background, such as:
 
@@ -156,25 +156,25 @@ This model handles quieter jobs in the background, such as:
 - file indexing
 - conversation titles
 
-In the app this is labeled **Behind the Scenes**.
+In the app this is labeled **Behind the scenes**.
 
-### Model team
+### Model jobs
 
-A **Model team** is Rebel bringing together a set of models that each do a different job. Instead of one model doing everything, Rebel picks the right tool for each step of a task.
+A set of model jobs lets Rebel bring together models that each do a different job. Instead of one model doing everything, Rebel picks the right tool for each step of a task.
 
-The roles within a team are:
+The jobs are:
 
-- **Main work** — the model you talk to most, handling writing, editing, and tool use
-- **Deep thinking** — an optional separate planning model that thinks harder before Main work starts (leave it on Same as working model and Main work plans too)
-- **Behind the Scenes** — background jobs like safety checks, memory updates, and file indexing
-- **Council** — multiple models consulted in parallel for important decisions (see [Council Mode](rebel://library/rebel-system%2Fhelp-for-humans%2Fmulti-model-council-mode.md))
-- **Recovery** — a fallback that steps in when something hiccups, so work keeps going rather than stopping cold
+- **Everyday work** — the model you talk to most, handling writing, editing, and tool use
+- **Planning** — an optional separate planning model that thinks harder before Everyday work starts (leave it on Same as everyday work and Everyday work plans too)
+- **Behind the scenes** — background jobs like safety checks, memory updates, and file indexing
+- **Second opinions** — multiple models consulted in parallel for important decisions (see [Council Mode](rebel://library/rebel-system%2Fhelp-for-humans%2Fmulti-model-council-mode.md))
+- **For long conversations** — a fallback that steps in when a conversation is too long for the everyday model, so work keeps going rather than stopping cold
 
 If a chosen model can't be found, Rebel quietly switches to a working one and carries on instead of stopping with an error. And if a reply stutters mid-stream for a moment, Rebel retries on its own — you usually won't even notice.
 
 When you pick which model to use for each role, you see a **unified list** — all your connected providers' models appear together, so you don't need to flip between tabs or providers to find the right fit. If you have both a subscription (e.g. ChatGPT Pro) and an API key for the same provider, they appear as **separate, distinct profiles** so the two don't get muddled.
 
-Each role shows its **real status** at a glance. If a model is genuinely ready to use, it says so; if it would fail or still needs setup, it tells you that honestly rather than giving a false all-clear (or warning you about a model that's actually running fine). The fallback role — the model that steps in for very long conversations — gets its own **Pick fallback** nudge so it doesn't quietly go unset.
+Each job shows its **real status** at a glance. If a model is genuinely ready to use, it says so; if it would fail or still needs setup, it tells you that honestly rather than giving a false all-clear (or warning you about a model that's actually running fine). The **For long conversations** job — the model that steps in for very long conversations — gets its own **Pick fallback** nudge so it doesn't quietly go unset.
 
 Choose role models in **Settings → Agent & Voice → Customise**. In **Your models**, turn on **Second opinions** for each model you want to consult.
 
@@ -182,9 +182,9 @@ Choose role models in **Settings → Agent & Voice → Customise**. In **Your mo
 
 Because Rebel works as a team, a single task — even something as ordinary as searching your email — can touch **several models**, each doing its bit:
 
-- the **Planner** maps out the approach on bigger jobs (your Main work model, unless you've picked a separate Planner)
-- **Main work** does the actual searching and writes the answer you see
-- **Behind the Scenes** quietly runs safety checks, updates memory, indexes what it finds, and names the conversation
+- **Planning** maps out the approach on bigger jobs (your Everyday work model, unless you've picked a separate Planning model)
+- **Everyday work** does the actual searching and writes the answer you see
+- **Behind the scenes** quietly runs safety checks, updates memory, indexes what it finds, and names the conversation
 
 So if you notice a task used four or five models, nothing's gone wrong and there's nothing to tidy up — that's Rebel matching each step to the right model on its own.
 
@@ -192,21 +192,21 @@ So if you notice a task used four or five models, nothing's gone wrong and there
 
 If you'd rather keep things to fewer moving parts, you can:
 
-- leave the **Planner** on **Same as working model**, so Main work handles the planning too
-- set the **same model** for Main work and Behind the Scenes
+- leave **Planning** on **Same as everyday work**, so Everyday work handles the planning too
+- set the **same model** for Everyday work and Behind the scenes
 - or ignore the individual roles entirely and just use the **Quality Tier** slider inside a conversation
 
-Note that the feature which adds *more* model variety — **Smart model picking**, described next — is **off by default**. If you haven't switched it on, the models you see come purely from the roles above, not from Rebel picking a different model for each step.
+Note that the choice which adds *more* model variety — **Rebel picks the best model for each step**, described next — is **off by default**. If you leave **Always use the models I choose** selected, the models you see come purely from the jobs above, not from Rebel picking a different model for each step.
 
-### Smart model picking
+### Smart picking
 
-**Smart model picking** lets Rebel choose which of your models runs each step of a job, rather than using one model for everything — a fast, cheap model for routine steps, a stronger one for the hard thinking, without you having to decide.
+With **Rebel picks the best model for each step**, Rebel chooses which of your models runs each step of a job, rather than using one model for everything — a fast, cheap model for routine steps, a stronger one for the hard thinking, without you having to decide. Choose **Always use the models I choose** when you want to keep using the models assigned to each job.
 
-It's an **experimental feature and off by default.** In **Settings → Agent & Voice**, choose **Rebel picks the best model for each step**, then open **Customise**. In **Your models**, turn on **Rebel can pick it** for each extra model you want Rebel to choose from. You need at least two eligible models before it does anything.
+This choice is **off by default**. In **Settings → Agent & Voice**, choose **Rebel picks the best model for each step**, then open **Customise**. In **Your models**, turn on **Rebel can pick it** for each extra model you want Rebel to choose from. You need at least two eligible models before it does anything.
 
 A few things worth knowing:
 
-- It only kicks in when Rebel **plans** a job first, as it does for bigger jobs. For an ordinary one-shot reply, your Main work model handles it.
+- It only kicks in when Rebel **plans** a job first, as it does for bigger jobs. For an ordinary one-shot reply, your Everyday work model handles it.
 - If you've **explicitly picked a model** for the conversation, Rebel honours that and steps aside — Smart picking won't override your choice.
 - It only ever picks from the models *you* marked eligible; it won't reach for something you haven't enabled.
 
@@ -222,9 +222,9 @@ Inside any conversation, Rebel offers a **Quality Tier** slider that lets you pi
 | **Balanced** | $$ | Deep reasoning for everyday work |
 | **Maximum** | $$$$ | Rebel's most capable model for the hardest work |
 
-The tier overrides your global **Planner** and **Main work** settings for that conversation only — your Settings defaults are untouched. Pick the tier that matches the job, not the model catalogue.
+The tier overrides your global **Planning** and **Everyday work** settings for that conversation only — your Settings defaults are untouched. Pick the tier that matches the job, not the model catalogue.
 
-If you prefer the old way, power users can still open the advanced panel inside the conversation's model selector to override specific Planner / Main work / effort fields directly.
+If you prefer the old way, power users can still open the advanced panel inside the conversation's model selector to override specific Planning / Everyday work / effort fields directly.
 
 Choosing **Maximum** now uses **Claude Fable 5.1** for new selections. Conversations already set to Maximum stay on **Claude Fable 5** and show as **Custom** until you pick Maximum again; Fable 5 also remains available in the model picker.
 
@@ -233,10 +233,10 @@ Choosing **Maximum** now uses **Claude Fable 5.1** for new selections. Conversat
 For most people, the honest answer is: **you don't need to manage models at all.** Rebel optimises which model runs which part of a task for you, out of the box. If you want to steer it anyway:
 
 - Use your preferred provider card
-- Pick a strong **Main work** model
-- Use the **Quality Tier** slider to set how much quality vs. speed you want per conversation — it's the simplest way to get good results without managing individual models (Smart model picking is a separate, experimental opt-in if you later want per-step routing)
-- Leave **Planner** on **Same as working model** unless you do lots of complex work — picking a separate model here gives planning a model of its own
-- Leave **Behind the Scenes** on the default unless you have a reason to change it
+- Pick a strong **Everyday work** model
+- Use the **Quality Tier** slider to set how much quality vs. speed you want per conversation — it's the simplest way to get good results without managing individual models (choose **Rebel picks the best model for each step** if you later want per-step routing; it is off by default)
+- Leave **Planning** on **Same as everyday work** unless you do lots of complex work — picking a separate model here gives planning a model of its own
+- Leave **Behind the scenes** on the default unless you have a reason to change it
 
 That keeps Rebel fast without turning settings into a hobby.
 
@@ -244,11 +244,11 @@ That keeps Rebel fast without turning settings into a hobby.
 
 If your team brings its own AI accounts, a company admin can choose which models everyone uses for each kind of work — either as a **default** you're free to change, or as a **set choice** that stays put. Wherever a choice has been made for you, Rebel shows a small **“Set by {your company}”** note, so a picker that won't budge is never a mystery. Change a default and your pick sticks — Rebel only switches you back if your admin actually changes the company default.
 
-And if a company-set Main work or Planner choice that stays put can't run — say it needs an AI account you haven't connected — Rebel tells you whose move it is: a **Connect** button when the fix is yours, or “ask your admin” when it isn't. It won't quietly run a different model for Main work or Planner. Behind-the-Scenes work may still switch to another model after a genuine failure. On Mindstone plans, nothing changes.
+And if a company-set Everyday work or Planning choice that stays put can't run — say it needs an AI account you haven't connected — Rebel tells you whose move it is: a **Connect** button when the fix is yours, or “ask your admin” when it isn't. It won't quietly run a different model for Everyday work or Planning. Behind-the-scenes work may still switch to another model after a genuine failure. On Mindstone plans, nothing changes.
 
 ## Your models
 
-Open **Customise** in **Settings → Agent & Voice** to find **Your models**, the list of models Rebel can use. The role choices above it assign jobs like Planner and Main work; the list controls which models are available.
+Open **Customise** in **Settings → Agent & Voice** to find **Your models**, the list of models Rebel can use. The job choices above it assign jobs like Planning and Everyday work; the list controls which models are available.
 
 - **On/Off per model** — each row has a clear On/Off toggle. Switch a model off and it stops showing up as a choice without leaving your list — flip it back on whenever. No deleting and re-adding.
 - **Add a model** — opens a picker with a live **search** (by name or provider), a **Recommended for most people** shortlist for when you're not sure where to start, and — if you're on a Mindstone plan — an **Included with your Mindstone plan** group surfacing the models your subscription already covers, one click to add.
@@ -273,7 +273,7 @@ Connecting your own model or a company gateway? See [Custom models and gateways]
 
 Rebel tracks AI spend across the providers you use. Open [Settings → Usage](rebel://settings/usage) for an honest **You paid** total (what actually left your wallet, with any subscription coverage shown as context), plus expandable breakdowns by model, provider, automation, and day.
 
-That is especially handy if you use one model for **Planner** and another for **Main work** — or if you want to know which conversation ran up the bill.
+That is especially handy if you use one model for **Planning** and another for **Everyday work** — or if you want to know which conversation ran up the bill.
 
 ## When your key is rejected
 
