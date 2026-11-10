@@ -23,6 +23,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Improvements
 
+- **Fewer detours after a change of plan** — When you redirect Rebel, it can stop an assistant whose work is no longer needed, say why, and keep useful findings. The other assistants carry on. No need to finish researching a trip you've just cancelled.
+
 - **Clearer views, with the point explained** — Tables and charts now make better use of the space available, while answers put the headline figures up front and explain what matters after the view. The point stays visible.
 
 - **Room for a pinned view** — In a phone browser, an open pinned view now leaves room to read the conversation, with controls and navigation still within reach in portrait and landscape.
