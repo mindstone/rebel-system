@@ -44,6 +44,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **Terminal file changes get checked** — Some terminal commands that change a file, such as adding text to the end of it, could run without your usual Safety Rules check. Now they get it.
+
 - **Settings search lands in view** — Selecting Shared links in Settings search now brings its controls into view after loading, without another manual scroll.
 
 - **Close means close** — Closing the final tab for a document or app now dismisses the panel containing it completely instead of showing **No document open**.
