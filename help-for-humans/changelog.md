@@ -23,7 +23,7 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Improvements
 
-- **Claude Fable 5.2 is here** — Fable 5.2 is available with an Anthropic key and through OpenRouter, at lower cost than Fable 5.1. If you picked Fable 5 or 5.1 yourself, a one-time “newer version” pop-up offers it; nothing changes unless you click **Switch**. **Maximum** still uses Fable 5.1. Like earlier Fable models, it may decline requests its safety training says no to. New model, same Rebel.
+- **Claude Fable 5.2 is here** — Fable 5.2 is available with an Anthropic key or through OpenRouter. If you use Fable 5 or 5.1, including through **Maximum**, a one-time “newer version” pop-up offers it; nothing changes unless you click **Switch**. **Maximum** still uses Fable 5.1; switching from Maximum shows your setting as **Custom**. Like earlier Fable models, it may decline requests its safety training says no to. New model, same Rebel.
 
 - **Form previews keep your answers** — Your answers stay put when you expand a form, close its larger preview or open that preview again. Submit from the form in the conversation or the larger preview; your latest answers are used.
 
