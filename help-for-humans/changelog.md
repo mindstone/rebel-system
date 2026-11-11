@@ -55,6 +55,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **Feedback without the freeze** — Rebel stays responsive while gathering diagnostic details for a bug report or a rating, including when it retries a saved report.
+
 - **The right document beside your conversation** — After you close or switch document tabs in the Library, return to a conversation and its side preview shows the document still selected. The preview had been reopening a document you had closed or left unselected.
 
 - **Report a problem keeps your text** — On your phone, close Report a problem and reopen it to find your unsent text still there; Cancel discards it.
