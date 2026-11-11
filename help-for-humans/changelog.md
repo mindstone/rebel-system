@@ -55,7 +55,7 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
-- **The Library preview follows your selection** — After you close or switch tabs, leaving the Library now previews the document you selected.
+- **The right document beside your conversation** — After you close or switch document tabs in the Library, return to a conversation and its side preview shows the document still selected. The preview had been reopening a document you had closed or left unselected.
 
 - New messages in the sharing dialog now scroll into view, and web notices about links that are no longer shared stay visible longer.
 
