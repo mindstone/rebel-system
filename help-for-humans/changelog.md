@@ -49,7 +49,7 @@ What's new in Rebel. We ship fast, so there's always something.
 
 - **Clearer browser choices** — Updated browser descriptions and guidance distinguish your signed-in browser from Rebel's separate browser, and tell Rebel to explain and ask before switching if the one you requested is unavailable.
 
-- **Clearer browser setup guidance** — Rebel’s instructions now spell out browser setup needs and asking for a missing page link. It can still offer an unavailable browser without clearly explaining setup, then ask another setup question after you choose it.
+- **Browser setup reminders** — On your computer, when Rebel asks which browser to use, a choice can now say its connection needs setting up and point you to Settings → Connectors, where you connect apps and browsers. Some choices can still lack the reminder, so you may need to answer an extra setup question after choosing.
 
 - **Saving outside your Library follows your safety choices** — When Rebel saves outside your Library, it follows your safety settings and [Safety Rules](rebel://settings/safety#safetyRules). If its safety check finds no concern, it can save to the requested destination without an extra location-permission question; if it finds a concern, it still asks before saving.
 
