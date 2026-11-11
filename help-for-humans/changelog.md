@@ -55,6 +55,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- Keyboard navigation stays inside the dialog you open, including while an action is running or after it fails.
+
 - **Report a problem keeps your text** — On your phone, close Report a problem and reopen it to find your unsent text still there; Cancel discards it.
 
 - New messages in the sharing dialog now scroll into view, and web notices about links that are no longer shared stay visible longer.
