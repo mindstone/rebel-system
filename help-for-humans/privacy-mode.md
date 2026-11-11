@@ -23,7 +23,7 @@ The first time you turn it on, Rebel confirms: "Private mode on. Rebel uses its 
 
 - **Nothing learned automatically.** Rebel doesn't save anything from the conversation to its memory afterwards. If you ask it to save or remember something, it saves that like any other file, with the same checks.
 - **Riskier actions get a second look.** Before a riskier action, such as sending an email, Rebel automatically checks it against your Safety Rules (the instructions you write in Settings → Privacy & Safety), as it always does. Sometimes that check can't give a clear answer. A normal chat can then let a medium-risk action go ahead; a Private chat asks you first. [Security and Tool Safety](security-and-tool-safety.md) explains the risk levels.
-- **Everyday actions still just happen.** Low-risk actions, like reading, listing and searching files or looking things up, run without asking, as in any chat, unless one of your Safety Rules names them.
+- **Everyday actions still just happen.** Low-risk actions, like reading, listing and searching files or looking things up, run without asking or a Safety Rules check, as in any chat; naming them in a rule doesn't change that.
 - **Your earlier choices still count.** Permissions you've already given, such as **Always** or **for this chat**, still apply, and so do blocks.
 - **The conversation stays yours.** You can't share a link to a Private conversation or ask teammates from it.
 

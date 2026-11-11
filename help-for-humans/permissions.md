@@ -1,6 +1,6 @@
 ---
 description: "What Rebel can and can't do without asking you first"
-last_updated: "2026-11-02"
+last_updated: "2026-11-11"
 ---
 
 # Permissions — What Rebel Can Do
@@ -15,14 +15,14 @@ For the five-paragraph version of what saying yes or no actually does, see [The 
 
 ## The Short Version
 
-- **Safety Rules** decide which actions Rebel can take automatically and which ones need your approval
+- **Safety Rules** decide which higher-risk actions Rebel can take automatically and which need your approval. Everyday low-risk actions, such as reading files, don't consult them ([when they're checked](library://rebel-system/help-for-humans/security-and-tool-safety.md#when-your-safety-rules-are-checked))
 - **Trusted tools** skip routine approval prompts, in [Privacy Mode](library://rebel-system/help-for-humans/privacy-mode.md) too
 - **Saving preferences live in Safety Rules** — your previous Space choices have moved there as editable lines.
 - **System permissions** like microphone or screen recording are separate from tool approvals
 
 ## How Tool Safety Works
 
-Rebel evaluates each tool action against your Safety Rules — the plain-English rules you set in Settings. If the action passes, it runs automatically. If not, Rebel pauses and asks for your approval.
+Rebel checks actions that could change things or reach other people against your Safety Rules — the plain-English rules you set in Settings. If the action passes, it runs automatically. If not, Rebel pauses and asks for your approval. Everyday low-risk actions, such as reading files, low-risk terminal commands and connector tools at the two lowest safety levels, run without that check: see [When your Safety Rules are checked](library://rebel-system/help-for-humans/security-and-tool-safety.md#when-your-safety-rules-are-checked).
 
 If you see an approval bar at the bottom of a conversation, Rebel has an action waiting for your review. Click View to open the notification drawer.
 
@@ -48,7 +48,7 @@ If you want the deeper explanation of how approvals, trusted tools, and memory s
 
 Rebel has built-in guardrails:
 
-- **Reading follows your choices** — Rebel can read files beyond your workspace without asking. Blocked folders stay off limits, and your Safety Rules can require a check first (see **Reading Beyond Your Workspace** below)
+- **Reading follows your choices** — Rebel can read files beyond your workspace without asking. Blocked folders stay off limits (see **Reading Beyond Your Workspace** below)
 - **System files protected** — Rebel is instructed not to modify your computer's system files
 - **No destructive commands** — Commands like `rm -rf` require explicit approval
 - **Configuration files protected** — Rebel won't modify its own settings files without asking
@@ -59,10 +59,10 @@ Your Safety Rules add another layer — custom natural language rules that tell 
 
 Rebel can read, list and search files anywhere on your computer without asking each time — including Downloads, other drives and folders that hold keys or passwords. This also applies in Private chats and automations. Your computer's own access permissions still apply.
 
-- **Blocked folders stay blocked.** Rebel won't read them, including through a shortcut. Searching or listing a larger folder leaves them out, as does Rebel's search of your Spaces. A Block inside a Space holds there too; blocking your whole home folder still lets Rebel read your Spaces. When Rebel runs a command on your computer, it checks the command for a blocked folder's location, and won't run it if it finds one. If you have Blocked folders, scripts get a separate check against them using available script content. Project commands with no single script to read get that separate check only when they work in or near a Blocked folder. Scripts and project commands also receive ordinary Safety Rules checking wherever they run, unless an existing permission or Block decides first. A Block prevents accidental reads; it isn't a sandbox for every program on your computer.
-- **Your Safety Rules cover reads.** Name a file or folder in your Safety Rules to have Rebel check before reading there, for example "Check with me before reading anything in ~/Documents/Finance". If the check agrees, Rebel reads it. If it objects or can't answer, Rebel asks on a folder card; an automation waits. For searches of a larger folder, name the place by its full path or a path starting from your home folder. A place reached only through a shortcut is checked when read directly; Blocks still apply through shortcuts. Rebel's separate search of your Spaces follows Blocks, but doesn't check rules naming folders.
-- **The folder card is for those decisions.** It says “Rebel wants to read a file” (or “Rebel wants to look through a folder” for a search or listing) and lets you allow once, allow for this conversation, always allow, or Block the file or folder you pick. Inside a Space, the choices stay within that Space. To block a new place, name it in your Safety Rules; if the check objects, choose Block on the card. Older requests still waiting for an answer still work.
-- **Allowed folders still mean go ahead.** An allowed folder skips routine Safety Rules checks, but reads there and searches of that folder still get checked when your rules name a place inside it. A permission on the named folder itself still applies, whether saved or just for this conversation. You don't need to allow a folder for ordinary reading, and attaching a file still lets Rebel read it. When you save a folder permission, Rebel names any known places inside it that hold keys or passwords and asks you to confirm.
+- **Blocked folders stay blocked.** Rebel won't read them, including through a shortcut. Searching or listing a larger folder leaves them out, as does Rebel's search of your Spaces. A Block inside a Space holds there too; blocking your whole home folder still lets Rebel read your Spaces. When Rebel runs a command on your computer, it checks the command for a blocked folder's location, and won't run it if it finds one. If you have Blocked folders, scripts get a separate check against them using available script content. Project commands with no single script to read get that separate check only when they work in or near a Blocked folder. Apart from that Block check, a script or project command usually counts as a low-risk command, which doesn't get a Safety Rules check ([details](library://rebel-system/help-for-humans/security-and-tool-safety.md#when-your-safety-rules-are-checked)). A Block prevents accidental reads; it isn't a sandbox for every program on your computer.
+- **Your Safety Rules don't cover reads.** Reading is a low-risk action, so Rebel reads without checking your Safety Rules, even when a rule names the place. A rule such as "Check with me before reading anything in ~/Documents/Finance" won't make Rebel ask. A Block is what keeps Rebel out of a folder: it refuses outright, without asking. See [When your Safety Rules are checked](library://rebel-system/help-for-humans/security-and-tool-safety.md#when-your-safety-rules-are-checked).
+- **The folder card is rare now.** Rebel shows it only when it can't read your Safety Rules or your saved folder choices. It says “Rebel wants to read a file” (or “Rebel wants to look through a folder” for a search or listing) and lets you allow once, allow for this conversation, always allow, or Block the file or folder you pick. Inside a Space, the choices stay within that Space. Older requests still waiting for an answer still work.
+- **Allowed folders.** You don't need to allow a folder for ordinary reading, and attaching a file still lets Rebel read it. When you save a folder permission, Rebel names any known places inside it that hold keys or passwords and asks you to confirm.
 - **Saved choices live with your other permissions in your Library.** Find and remove them in [Settings → Privacy & Safety → What Rebel can do](rebel://settings/safety#approvalAuthorityLedger). Folder choices belong to the computer you made them on; opening the Library on another computer doesn't apply them there. Existing choices are brought over once per computer when you upgrade. Switching Libraries uses that Library's choices, without bringing the old list over again.
 - **If Rebel can't read your saved folder choices, file reads wait — even inside your Spaces.** Reconnect an unavailable Library and try again. A damaged choice appears under blocked permissions as “Rebel can't read this saved choice”; Remove clears it. If the old folder list is already unreadable during the upgrade, Rebel records the problem and carries on without that list.
 

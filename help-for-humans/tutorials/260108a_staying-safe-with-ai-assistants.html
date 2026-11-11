@@ -257,7 +257,7 @@
 
     <!-- TL;DR -->
     <div class="callout">
-        <strong>TL;DR</strong>: AI assistants like Rebel can be tricked by hidden instructions in documents or messages (called "prompt injection"). When AI has access to your private data AND can take actions like sending emails, this becomes risky. Rebel protects you by checking every action before it happens and asking for your approval when something looks potentially harmful.
+        <strong>TL;DR</strong>: AI assistants like Rebel can be tricked by hidden instructions in documents or messages (called "prompt injection"). When AI has access to your private data AND can take actions like sending emails, this becomes risky. Rebel protects you by checking riskier actions before they happen and asking for your approval when something looks potentially harmful.
     </div>
 
     <!-- TABLE OF CONTENTS -->
@@ -303,7 +303,7 @@
 
     <div class="callout mental-model">
         <h3>Concept 3: The Checkpoint System</h3>
-        <p>Imagine a security guard who checks every package before it leaves the building. Rebel has a similar system that evaluates every action before it happens. Low-risk actions (like reading a file) go through automatically. High-risk actions (like sending an email) require your explicit approval.</p>
+        <p>Imagine a security guard who checks every package before it leaves the building. Rebel has a similar system for actions that could change things or reach other people. Low-risk actions (like reading a file) go through automatically, without a check. High-risk actions (like sending an email) require your explicit approval.</p>
         <p><strong>Why this matters</strong>: Even if Rebel is tricked by hidden instructions, you'll be asked to approve any potentially harmful action before it happens.</p>
     </div>
 
@@ -440,7 +440,7 @@
 
     <details>
         <summary>How does the risk evaluation work?</summary>
-        <p>A separate AI model (not the one doing your task) evaluates each action by looking at:</p>
+        <p>A separate AI model (not the one doing your task) evaluates each riskier action by looking at:</p>
         <ul>
             <li>What tool is being used (send_email is riskier than create_draft)</li>
             <li>What the inputs are (who's the recipient? what's being sent?)</li>
@@ -567,7 +567,7 @@
     <p>Find all of this in <strong>Settings &rarr; Account &amp; Preferences &rarr; Privacy &amp; Safety</strong>.</p>
 
     <h3>Safety Rules (the main control)</h3>
-    <p>Safety Rules are natural-language rules you write to tell Rebel what's OK and what needs your approval. Every time Rebel is about to use a tool or write to memory, a fast background check evaluates the action against your rules. If the rules say it's fine, Rebel proceeds. If not, you get an approval prompt.</p>
+    <p>Safety Rules are natural-language rules you write to tell Rebel what's OK and what needs your approval. When Rebel is about to do something riskier, such as sending, deleting or writing to memory, a fast background check evaluates the action against your rules. Low-risk actions, such as reading files, skip this check. If the rules say it's fine, Rebel proceeds. If not, you get an approval prompt.</p>
 
     <p>Examples that work well:</p>
     <ul>
@@ -748,7 +748,7 @@
         <summary>How is Rebel different from other AI assistants in terms of safety?</summary>
         <p>Many AI assistants have some safety measures, but Rebel's approach is particularly comprehensive:</p>
         <ul>
-            <li><strong>Separate safety evaluator:</strong> A different AI checks each action (not just the same AI policing itself)</li>
+            <li><strong>Separate safety evaluator:</strong> A different AI checks riskier actions (not just the same AI policing itself)</li>
             <li><strong>Non-blocking design:</strong> The system doesn't hang if something goes wrong</li>
             <li><strong>Granular controls:</strong> Per-tool, per-space, and per-session trust settings</li>
             <li><strong>Transparency:</strong> You see exactly what's being approved</li>
