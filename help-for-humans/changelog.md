@@ -57,9 +57,13 @@ What's new in Rebel. We ship fast, so there's always something.
 
 - **The right document beside your conversation** — After you close or switch document tabs in the Library, return to a conversation and its side preview shows the document still selected. The preview had been reopening a document you had closed or left unselected.
 
+- **Report a problem keeps your text** — On your phone, close Report a problem and reopen it to find your unsent text still there; Cancel discards it.
+
 - New messages in the sharing dialog now scroll into view, and web notices about links that are no longer shared stay visible longer.
 
 - **Saved notes, fully readable** — Save confirmations no longer hide behind the buttons for jumping through a conversation while another action waits for your approval. You can read the whole confirmation, including where each note was saved.
+
+- **Long rating notes stay editable** — When you rate a conversation, a note over the 1,500-character limit is no longer quietly lost. Your whole draft stays editable while the form is open, with a clear length warning; shorten it to 1,500 characters or fewer to send.
 
 - Removing or disabling a model profile (a saved connection to a model) now preserves your selected models and reports when a chat or job can't use one, instead of quietly choosing another. Scheduled automations flag detected problems with a model choice and offer Open Settings; warnings for automations running on this computer update after you fix that choice.
 
