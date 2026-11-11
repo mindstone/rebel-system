@@ -55,6 +55,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **The Library preview follows your selection** — Leaving the Library now previews the document you were viewing, even after you close another tab.
+
 - New messages in the sharing dialog now scroll into view, and web notices about links that are no longer shared stay visible longer.
 
 - **Saved notes, fully readable** — Save confirmations no longer hide behind the buttons for jumping through a conversation while another action waits for your approval. You can read the whole confirmation, including where each note was saved.
