@@ -55,6 +55,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **No more green iPhone photos** — An iPhone photo that hadn't finished downloading used to attach as a mostly green picture, on desktop and the web, with no warning, so Rebel was looking at a lawn. Rebel now says the photo is incomplete and asks you to add it again.
+
 - Keyboard navigation stays inside the dialog you open, including while an action is running or after it fails.
 
 - **Feedback without the freeze** — Rebel stays responsive while gathering diagnostic details for a bug report or a rating, including when it retries a saved report.
