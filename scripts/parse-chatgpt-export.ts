@@ -1,4 +1,4 @@
-#!/usr/bin/env -S npx -y -p tsx@^4 tsx
+#!/usr/bin/env -S npx -y -p tsx@4.23.15 tsx
 
 /**
  * ChatGPT Export Parser

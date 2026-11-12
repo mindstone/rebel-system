@@ -318,7 +318,7 @@ Users may paste JSON in various formats. Look for these patterns:
   "mcpServers": {
     "filesystem": {
       "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-filesystem"]
+      "args": ["-y", "@modelcontextprotocol/server-filesystem@2.2.0"]
     }
   }
 }
@@ -422,17 +422,17 @@ For npm-distributed MCP servers:
 {
   "name": "filesystem",
   "command": "npx",
-  "args": ["-y", "@modelcontextprotocol/server-filesystem", "/path/to/allow"]
+  "args": ["-y", "@modelcontextprotocol/server-filesystem@2.2.0", "/path/to/allow"]
 }
 ```
 
-**GitHub:**
+**With an API key:**
 ```json
 {
-  "name": "github",
+  "name": "example",
   "command": "npx",
-  "args": ["-y", "@modelcontextprotocol/server-github"],
-  "env": { "GITHUB_TOKEN": "ghp_..." }
+  "args": ["-y", "@example/some-mcp@1.2.3"],
+  "env": { "EXAMPLE_API_KEY": "..." }
 }
 ```
 

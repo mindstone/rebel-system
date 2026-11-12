@@ -86,7 +86,7 @@ export async function createClient(): Promise<AnthropicClient> {
   } catch {
     throw new Error(
       'Failed to load @anthropic-ai/sdk. Make sure to run with the full shebang:\n' +
-      '#!/usr/bin/env -S npx -y -p tsx@^4 -p @anthropic-ai/sdk -p nunjucks tsx\n\n' +
+      '#!/usr/bin/env -S npx -y -p tsx@4.23.15 -p @anthropic-ai/sdk@1.5.0 -p nunjucks@3.2.4 tsx\n\n' +
       'Or install the package: npm install @anthropic-ai/sdk'
     );
   }

@@ -23,7 +23,7 @@ Catalog id: `n8n-community`. See [SKILL.md](../SKILL.md) for when to pick this v
    - Non-enterprise API keys have full account access. Treat like a powerful secret.
 
 3. **Configure the connector**:
-   - Catalog id `n8n-community` runs via `npx -y n8n-mcp` in stdio mode.
+   - Catalog id `n8n-community` runs a pinned `n8n-mcp` release via `npx`, in stdio mode. If you add it by hand, pin the version too (`npx -y n8n-mcp@<version>`), never bare `n8n-mcp`.
    - Required env vars:
      ```
      MCP_MODE=stdio
