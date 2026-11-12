@@ -55,7 +55,7 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
-- **Blocked helpers say what would fix it** — When a helper hits something it can't get past, such as an action waiting for your approval, used-up credit or a missing browser, its report now lists each one with what you can do to clear it, including ones it worked around.
+- **Clearer reports when something is blocked** — When Rebel hits something it can't get past, such as an action waiting for your approval, used-up credit or a missing browser, it now says what you can do about each one, including ones it worked around.
 
 - Keyboard navigation stays inside the dialog you open, including while an action is running or after it fails.
 
