@@ -5067,26 +5067,26 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Highlights
 
-<!-- action: rebel://settings/memory | author: Greg -->
+<!-- action: rebel://settings/memory | author: the Rebel team -->
 <!-- detail: We replaced the confusing 4-level trust system with two simple options. "Always save" means Rebel writes to your memory without asking. "Ask, if content is sensitive" means Rebel uses AI to detect potentially sensitive content (personal info, credentials, private data) and prompts you before saving those. For shared spaces (used by your team), Rebel always prompts for sensitive content regardless of your setting—this is a safety floor that can't be bypassed. -->
 - **Simplified Memory Safety** — Two clear options: "Always save" or "Ask, if content is sensitive." No more confusing trust levels. Shared spaces always prompt for sensitive content. Clarity, achieved.
-<!-- action: rebel://settings/tools | author: Josh -->
+<!-- action: rebel://settings/tools | author: the Rebel team -->
 <!-- detail: During meetings with the Rebel Notetaker, you can now interrupt Rebel mid-response by saying "Rebel" (or your custom trigger word). Rebel will stop talking and listen. When Rebel has something to say, its avatar pulses with a "ready to speak" animation—say "go ahead" to let it continue. This makes conversations feel more natural and collaborative instead of one-sided. -->
 - **Meeting Bot Interruption** — Say "Rebel" to interrupt and "go ahead" to continue. Visual ready-to-speak state with avatar animation shows when Rebel has something to say. Conversations, collaborative.
-<!-- action: rebel://conversation | author: Greg -->
+<!-- action: rebel://conversation | author: the Rebel team -->
 <!-- detail: If your network drops mid-conversation (Wi-Fi hiccup, laptop sleep, etc.), Rebel now detects the interruption and offers to resume where it left off when you reconnect. This works even if you switch to a different conversation in the meantime. A modal appears explaining what happened and giving you the choice to continue or start fresh. -->
 - **Network Resilience** — Auto-resume interrupted turns across multiple sessions with modal UI. Your work, protected.
-<!-- action: rebel://conversation | author: Greg -->
+<!-- action: rebel://conversation | author: the Rebel team -->
 <!-- detail: When you trigger Rebel with the global voice hotkey, it now automatically captures a screenshot of your current screen and includes it in the conversation. This means you can ask "what's wrong with this?" or "help me with what I'm looking at" without manually taking and attaching screenshots. The screenshot is captured at hotkey press, before you start speaking. -->
 - **Voice + Screenshot** — Global voice hotkey now captures your screen automatically. Context, visual.
-<!-- action: rebel://settings/tools | author: Josh -->
+<!-- action: rebel://settings/tools | author: the Rebel team -->
 <!-- detail: The Browser Automation connector launches a Chrome instance that Rebel can control—clicking, typing, navigating, and reading page content. Unlike typical browser automation, your login sessions persist between uses. This means Rebel can access authenticated pages (your email, internal tools, dashboards) without you re-logging in each time. The browser runs visibly so you can watch what's happening. -->
 - **Browser Automation** — New Chrome connector with persistent login sessions. Your browser, automated.
-<!-- action: rebel://settings | author: Mel -->
+<!-- action: rebel://settings | author: the Rebel team -->
 - **Settings Redesign** — Navigation moves from horizontal tabs to a sidebar layout. Every section gets a proper header. Settings, organized.
-<!-- action: rebel://conversation | author: Mel -->
+<!-- action: rebel://conversation | author: the Rebel team -->
 - **Composer Overhaul** — Unified input container with collapsible message queue and simplified mode toggle. Cleaner, faster.
-<!-- action: rebel://settings/tools | author: Greg -->
+<!-- action: rebel://settings/tools | author: the Rebel team -->
 <!-- detail: Connect your GitHub account with one click using OAuth—no need to generate Personal Access Tokens or run Docker containers. Rebel can then search your repositories, read files, create issues, and review pull requests. Your GitHub credentials are stored securely and can be revoked anytime from Settings. -->
 - **GitHub Direct** — New OAuth-based GitHub connector. No Docker, no PAT tokens. Just click and connect.
 
@@ -5143,11 +5143,11 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Highlights
 
-<!-- action: rebel://settings/tools | author: Josh -->
+<!-- action: rebel://settings/tools | author: the Rebel team -->
 - **Plaud Voice Recorder** — Connect your Plaud physical recorder for automatic cloud sync. Files chunk intelligently, transcribe locally or via cloud, and store in your memory. Recording, everywhere.
-<!-- action: rebel://settings/tools | author: Greg -->
+<!-- action: rebel://settings/tools | author: the Rebel team -->
 - **HubSpot Read-Only Mode** — Free HubSpot accounts now work with automatic scope detection. Access your data even without paid features. The free tier, respected.
-<!-- action: rebel://settings/tools | author: Greg -->
+<!-- action: rebel://settings/tools | author: the Rebel team -->
 - **Salesforce Integration** — Connect your Salesforce account with OAuth. Your CRM, one conversation away.
 
 ### Improvements
@@ -5180,45 +5180,45 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Highlights
 
-<!-- action: rebel://settings/tools | author: Josh -->
+<!-- action: rebel://settings/tools | author: the Rebel team -->
 - **Figma Local Connector** — Connect Figma with a Personal Access Token. Design files, components, and assets—all accessible from your conversations. Your designs, your control.
-<!-- action: rebel://settings/tools | author: Josh -->
+<!-- action: rebel://settings/tools | author: the Rebel team -->
 - **Multi-Workspace Slack** — Connect multiple Slack workspaces. Work, side project, community—all accessible, all separate. The disambiguation you didn't know you needed.
-<!-- action: rebel://library | author: Greg -->
+<!-- action: rebel://library | author: the Rebel team -->
 - **Quick Open** — Press Cmd/Ctrl+O to instantly open any file in your Library. Filter by Everything, Spaces, Skills, or Memory. Context-aware icons show you what you're looking at. Discovery, accelerated.
-<!-- action: rebel://library | author: Greg -->
+<!-- action: rebel://library | author: the Rebel team -->
 - **HTML Tutorials** — Tutorials now display beautifully in the Document Preview Drawer with syntax highlighting. No more raw HTML. Learning, polished.
-<!-- action: rebel://search | author: Greg -->
+<!-- action: rebel://search | author: the Rebel team -->
 - **Smarter Conversation Search** — Recency filters (last day, week, month), prefix boosting, and semantic re-embedding make finding past conversations actually useful. Your history, findable.
-<!-- action: rebel://settings/tools | author: Josh -->
+<!-- action: rebel://settings/tools | author: the Rebel team -->
 - **Multi-Account MCP Support** — Connect multiple accounts for the same service. Work Gmail AND personal Gmail. Salesforce sandbox AND production. Rebel tracks which email belongs where. Account disambiguation, solved.
-<!-- action: rebel://settings/spaces | author: Greg -->
+<!-- action: rebel://settings/spaces | author: the Rebel team -->
 - **Space Email Associations** — Spaces now remember which accounts they work with. Set `domain.com` or specific emails per space, and Rebel automatically knows which Slack workspace, which Google account, which everything. Context without confusion.
-<!-- action: rebel://conversation | author: Greg -->
+<!-- action: rebel://conversation | author: the Rebel team -->
 - **Edit Any Message** — Edit any of your messages in a conversation, not just the last one. Rebel truncates from that point and resumes. Mistakes, correctable.
-<!-- action: rebel://library | author: Mel -->
+<!-- action: rebel://library | author: the Rebel team -->
 - **Library Overhaul** — The old tabs evolved into the lens model (`Show` + `View as`) with cleaner organization and navigation. Everything has a place.
-<!-- action: rebel://library/atlas | author: Josh -->
+<!-- action: rebel://library/atlas | author: the Rebel team -->
 - **Atlas AI Insights** — Click any file in Atlas for "The gist" summary or "Zoom out" to see how it relates to nearby files. Context, instant.
-<!-- action: rebel://library/atlas | author: Josh -->
+<!-- action: rebel://library/atlas | author: the Rebel team -->
 - **Atlas** — Interactive semantic graph visualization of your workspace. See how your files and spaces connect through meaning, not just folders. Click a space in the legend to focus. Your knowledge, mapped.
-<!-- action: rebel://settings/tools | author: Josh -->
+<!-- action: rebel://settings/tools | author: the Rebel team -->
 - **Limitless Pendant** — Connect your Limitless physical recording device for in-person meeting capture. Real-world conversations, digitally remembered.
-<!-- action: rebel://composer | author: Greg -->
+<!-- action: rebel://composer | author: the Rebel team -->
 - **Typing Feels Fast Again** — Major performance fixes to the composer. Debounced draft sync and deferred sidebar updates mean your keystrokes keep up with your thoughts. Latency, eliminated.
-<!-- action: rebel://conversation | author: Josh -->
+<!-- action: rebel://conversation | author: the Rebel team -->
 - **Streaming Text Animation** — Watch responses appear smoothly as they're generated. No more jarring text blocks. The future types itself.
-<!-- action: rebel://settings/tools | author: Greg -->
+<!-- action: rebel://settings/tools | author: the Rebel team -->
 - **Agent Self-Management Tools** — 7 new RebelWorkspace tools let Rebel manage your spaces and skills programmatically. List spaces, search items, add skills—all from conversation. Your assistant, empowered.
-<!-- action: rebel://conversation | author: Greg -->
+<!-- action: rebel://conversation | author: the Rebel team -->
 - **Auto-Resume on Reconnect** — Network drops mid-conversation? Rebel picks up where it left off when you reconnect. Resilience, built in.
-<!-- action: rebel://settings/voice | author: Greg -->
+<!-- action: rebel://settings/voice | author: the Rebel team -->
 - **Local Speech-to-Text** — Transcribe your voice entirely on-device with the Parakeet V3 model. No audio leaves your computer. Privacy-first voice input for the privacy-conscious. Your words stay yours.
-<!-- action: rebel://settings/tools | author: Greg -->
+<!-- action: rebel://settings/tools | author: the Rebel team -->
 - **Zendesk Connector** — Support tickets, views, and comments accessible directly from Rebel. Customer context at your fingertips. Help desk, meet help desk.
-<!-- action: rebel://settings/tools | author: Greg -->
+<!-- action: rebel://settings/tools | author: the Rebel team -->
 - **Salesforce PKCE OAuth** — Enterprise-ready authentication with Cloudflare redirect. Secure, standards-compliant, and just works. The compliance team approves.
-<!-- action: rebel://composer | author: Greg -->
+<!-- action: rebel://composer | author: the Rebel team -->
 - **Send & Archive** — Finish a conversation and archive it in one click. Inbox zero, one button closer.
 
 ### Improvements
