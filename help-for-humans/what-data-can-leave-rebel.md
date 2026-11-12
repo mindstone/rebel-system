@@ -135,7 +135,7 @@ When you ask Rebel to look something up, your search query goes to a search prov
 
 ### Map pictures
 
-In versions with geographic map views, showing a map loads its street background from OpenFreeMap, a free map service built on OpenStreetMap. Your device asks for the part of the map you're looking at, initially the area around your places. The service sees that area and, like any website, your internet address. These background requests don't include your place labels, figures or button text. If you'd rather it didn't, ask for the places as text instead.
+In versions with geographic map views, showing a map loads its street background from OpenFreeMap, a free map service built on OpenStreetMap. Your device asks for the part of the map you're looking at, initially the area around your places. The service sees that area and, like any website, your internet address. These background requests don't include your place labels, figures or button text. If you'd rather it didn't, ask for the places as text instead. For map controls, see [Maps and place lists](rebel://library/rebel-system%2Fhelp-for-humans%2Fmaps-and-place-lists.md).
 
 ### Voice — dictation, read-aloud and Live mode
 
