@@ -19,28 +19,6 @@ You are given access to my emails, messages and potentially other systems that h
 5. Rank all the learnings/wins from 0 to 100 based on what makes [GREAT_LEARNINGS_AND_WINS]
 6. Select the most impactful learning and the most impactful win
 7. Add either or both to Actions with the share actions, so long as they rate 85+
-8. **Freshness check**: After completing your main task, check if any active action items have been completed externally:
-   - Call rebel_inbox_list to get active items
-   - **Triage first, search second** — sort items oldest-first and process up to 10 per run. Skip items less than 24h old (too fresh). This keeps cost and time bounded.
-   - Determine which email tools are available (Gmail: gmail:list_messages / gmail:get_message; Outlook: Microsoft365Mail tools). Use whichever the user has connected.
-   - For each triaged item, determine its type from the title:
-     a. **Email-action items** (title contains "reply to", "respond to", "follow up" + a person/company name, "email X about"):
-        - Use a **targeted** search: search sent mail for the specific person/company/subject mentioned in the title (e.g., `from:me to:taberna newer_than:5d`). Match the search window to the item age, cap at 14 days. Do NOT fetch all sent mail.
-        - If the item has an email reference with threadId and messageId, fetch that specific thread (cheapest check — do this first)
-        - If the item has an email reference with a provider field, use that provider's tools; otherwise try all available email tools
-        - If no threadId, search by person name, company name, or subject keywords
-        - A colleague replying in the same thread counts as resolved
-        - Do NOT require exact name matching — search for partial names, company names, or email domains
-        - The 24h age guard does NOT apply to email items — if evidence of a reply exists, archive regardless of item age
-     b. **Meeting/calendar items** (title contains "prep for", "prepare for", or has a relevantDate):
-        - If the meeting/event date has passed by 24h+, archive
-     c. **Other items** (e.g., "Fix bugs", "Add instructions to Notion"):
-        - Check Slack for mentions of the task topic in the last few days
-        - Check calendar for related completed events
-        - Only archive when you find HIGH confidence evidence of completion
-        - The 24h minimum age guard applies to non-email items
-   - Archive confirmed-complete items via rebel_inbox_update with archived=true and `resolution: 'completed'`, plus a short `evidenceNote` naming the evidence; for items archived because they are no longer relevant rather than done (e.g. case b's passed meetings), pass `resolution: 'stale'` instead. Whenever you set `resolution`, also pass `expectedTitle` (the item's exact title, copied verbatim) and `expectedThreadId` when it has an email reference — the server rejects the call if these don't match the id, so you never resolve the wrong item when handling several at once
-   - When in doubt, leave the item — false positives are worse than stale items
 
 [GREAT_LEARNINGS_AND_WINS]
 - Are non-obvious
