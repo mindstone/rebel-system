@@ -55,6 +55,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **Your numbers count** — Ask why the 10% fee took a $500 payment to $450 and Rebel explains it from the figures you gave, instead of asking for records first. It still asks when a figure is missing.
+
 - Keyboard navigation stays inside the dialog you open, including while an action is running or after it fails.
 
 - **Feedback without the freeze** — Rebel stays responsive while gathering diagnostic details for a bug report or a rating, including when it retries a saved report.
