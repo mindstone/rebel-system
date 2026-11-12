@@ -16,7 +16,7 @@ Write the one follow-up email the user owes after a meeting, ready to send after
 
 [IMPORTANT]
 - Plain text, down-to-earth tone: no flattery ("impressive", "perfect"), not salesy ("this is what I would suggest", not "here's why this fits perfectly").
-- No signature; it is added automatically.
+- Keep the user's sign-off from their skill or examples; don't invent a signature block.
 - Write in the language of the meeting.
 - Addresses come only from the invite, attendee data or transcript; never invent one.
 - Mark anything you could not confirm with `[VERIFY]` instead of guessing.
