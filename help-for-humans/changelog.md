@@ -145,6 +145,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 - **Quick Capture recording recovery** — If Quick Capture’s recording screen crashes, closes or reloads, its recording indicator stops and the audio already saved is kept. After an interrupted or failed recording, a notice offers the saved audio when you reopen Rebel; **Show file** opens its containing folder, and you can also ask Rebel to find it in a new conversation on the computer where you recorded it. When Rebel cannot yet confirm that a meeting notetaker has stopped, the notice says so.
 
+- **Recording problems say so** — During Quick Capture, if recording stops unexpectedly (say, your microphone disconnects or saving fails), Rebel now warns you promptly instead of still showing it as recording. If Rebel can't keep up and misses part of a recording, it tells you and keeps recording.
+
 - **Long replies stay awake, and notices let go** — With Prevent sleep on, Rebel keeps idle-sleep protection for the whole reply. An interrupted reply’s notice clears when continuing succeeds and stays cleared after reopening, even without new text. Close a recovery notice on that device without stopping work; its actions explain what happens next, without a clipped message quote. Connection and syncing notices stick to facts and available actions, and browser and Office chat stop repeating an internal error message alongside useful guidance.
 
 - **Accurate reply status** — Unrelated meeting updates and notices no longer make an interrupted reply look busy again.
