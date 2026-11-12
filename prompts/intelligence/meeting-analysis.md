@@ -118,7 +118,6 @@ For 1:1s or internal team meetings, this won't change anything.
 When the meeting leaves the user owing a message (they promised to send, share, recap or introduce something, or accepted a request to), put the complete email in rebel_inbox_add's `draft` field as plain text: a `To:` line, an optional `Cc:` line, a `Subject:` line, a blank line, then the body.
 - One draft, for the main follow-up; list any other messages owed in the Action text. No `draft` when the user owes no message.
 - Before drafting, look for a follow-up skill the user wrote: Glob `**/skills/**/SKILL.md` across their spaces (outside `rebel-system/`) for one named or described as meeting follow-ups or follow-up emails. If there is one, read it and follow it, including its sign-off, over the built-in one; only if there is none, follow `meeting-follow-up-drafting`.
-- If `topics/meeting-follow-up-examples.md` exists in the Chief-of-Staff memory folder this session names (the private-meeting memory path when one is given), read it and match its style.
 - Take addresses only from the invite, attendee data or transcript; never invent one. If an address is unknown, put no address on `To:`; write `[VERIFY]` and the name where it goes (`To: [VERIFY] Jane Doe`).
 - Write the draft in the meeting's language.
 
