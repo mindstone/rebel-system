@@ -244,6 +244,8 @@ If your team brings its own AI accounts, a company admin can choose which models
 
 And if a company-set Everyday work or Planning choice that stays put can't run — say it needs an AI account you haven't connected — Rebel tells you whose move it is: a **Connect** button when the fix is yours, or “ask your admin” when it isn't. It won't quietly run a different model for Everyday work or Planning. Behind-the-scenes work may still switch to another model after a genuine failure. On Mindstone plans, nothing changes.
 
+Company models carry a **Managed** badge in **Settings → Agent & Voice**, with no Edit or Delete: "Managed by your company. Contact your admin to change." Some messages name the kinds of work differently: **Main work** is Everyday work and **Planner** is Planning. If one says Rebel "couldn't verify which account owns this organization setting", sign out and back in. When your company also provides the AI keys, see [Company-provided keys](rebel://library/rebel-system%2Fhelp-for-humans%2Fcompany-provided-keys.md) for how they arrive and what to do if they don't.
+
 ## Your models
 
 Open **Customise** in **Settings → Agent & Voice** to find **Your models**, the list of models Rebel can use. The job choices below it assign jobs like Planning and Everyday work; the list controls which models are available.

@@ -23,6 +23,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Improvements
 
+- **Ask Rebel about company keys** — If your company provides your AI, Rebel can now explain how your key gets to you, what "Set" and "Claimed by the app" mean on the admin side, and what to do when a key seems stuck (spoiler: usually update Rebel). Admins get the full tour of the Transformation Engine pages too. See [Company-provided keys](rebel://library/rebel-system%2Fhelp-for-humans%2Fcompany-provided-keys.md).
+
 - **Claude Fable 5.2 is here** — Fable 5.2 is available with an Anthropic key or through OpenRouter. If Fable 5 or 5.1 is your Everyday work or Planning model (Maximum counts), a one-time “newer version” pop-up offers it; nothing changes unless you click **Switch**. **Maximum** still uses Fable 5.1; switching from Maximum shows your setting as **Custom**. Like earlier Fable models, it may decline requests its safety training says no to. New model, same Rebel.
 
 - **Form previews keep your answers** — Your answers stay put when you expand a form, close its larger preview or open that preview again. Submit from the form in the conversation or the larger preview; your latest answers are used.
