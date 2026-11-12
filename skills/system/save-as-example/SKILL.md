@@ -23,7 +23,7 @@ Keep questions and explanations plain. The person chooses the lessons; you handl
 The message may say `Save this as an example for <skill name> (<skill path>)`.
 Use that path. Otherwise check this conversation's skill reads and @mentions.
 Use `inspect_prior_turns`, first for the index, then with `turn_id` for the relevant turns.
-Look for `SKILL.md` reads or single-file skills at `skills/<category>/<name>.md`.
+Look for `SKILL.md` reads or single-file skills at any depth under `skills/` (`skills/<name>.md` or `skills/<folders>/<name>.md`).
 If several skills helped, ask which one with one AskUserQuestion single-select card listing their names.
 If none can be identified, ask which skill this should teach. Read the chosen skill before continuing.
 
