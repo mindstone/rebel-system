@@ -23,6 +23,7 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Improvements
 
+- **Smart picking on by default** — New people now start with Rebel picking the right model for each step when it plans a task. Already have it off? Rebel asks once on Home, then leaves you be.
 - **Claude Fable 5.2 is here** — Fable 5.2 is available with an Anthropic key or through OpenRouter. If Fable 5 or 5.1 is your Everyday work or Planning model (Maximum counts), a one-time “newer version” pop-up offers it; nothing changes unless you click **Switch**. **Maximum** still uses Fable 5.1; switching from Maximum shows your setting as **Custom**. Like earlier Fable models, it may decline requests its safety training says no to. New model, same Rebel.
 
 - **Form previews keep your answers** — Your answers stay put when you expand a form, close its larger preview or open that preview again. Submit from the form in the conversation or the larger preview; your latest answers are used.
