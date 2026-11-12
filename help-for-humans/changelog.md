@@ -55,6 +55,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **The safety check knows what day it is** — Before Rebel acts, its safety check is now told today's date and your time zone, so "the past year" means the past year, and a date later than the check expected no longer looks like a mistake that needs your OK.
+
 - Keyboard navigation stays inside the dialog you open, including while an action is running or after it fails.
 
 - **Feedback without the freeze** — Rebel stays responsive while gathering diagnostic details for a bug report or a rating, including when it retries a saved report.
