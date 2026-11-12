@@ -55,6 +55,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **Own-server clouds bounce back too** — A cloud you set up on your own server now restarts itself within a few minutes if it stops responding, like Mindstone's clouds already do. Your saved files stay put. A cloud set up before this update needs a one-time change on its server first; contact support for the steps.
+
 - Keyboard navigation stays inside the dialog you open, including while an action is running or after it fails.
 
 - **Feedback without the freeze** — Rebel stays responsive while gathering diagnostic details for a bug report or a rating, including when it retries a saved report.
