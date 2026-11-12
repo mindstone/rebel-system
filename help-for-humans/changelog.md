@@ -8,6 +8,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Highlights
 
+- **Teach a skill by example** — Say “save this as an example” after finishing a document or draft. Pick what Rebel should learn from your changes, keep the example for yourself or share it with your team, and the skill reads it next time. Repeating yourself can retire early.
+
 <!-- feature: conversation-forms -->
 - **Forms in your conversation** — Ask Rebel for a form or checklist and fill it in directly in your conversation, with calendars, sliders and other familiar controls. The form points out answers that need fixing. Submit sends your answers to Rebel; any approvals and the result stay in the conversation.
 
