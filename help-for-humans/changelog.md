@@ -47,6 +47,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **Your words stay put** — Typed something in **Something else** on one of Rebel's questions, then picked an option? The text is no longer thrown away. On a question where you can pick several, it is sent along with your picks; on a pick-one question it waits for you to come back to it, and the card waits for **Submit** rather than sending itself.
+
 - **Your notetaker, your name** — The meeting bot now joins as "Sam's Rebel" (when your name is Sam) using the name in **Settings → Account → Your name**, not whatever your sign-in profile happens to say. It answers to that same name.
 
 - **Replies after sleep** — Fixed a case where Rebel would not resume a reply after your computer went to sleep when your subscription had already selected a model included in your plan instead of the one you saved.
