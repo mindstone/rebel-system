@@ -10,6 +10,7 @@ Welcome to the Rebel system — the skills, help docs, templates, and guidance t
   - [What's Inside](#whats-inside)
     - [Skills](#skills)
     - [Documentation](#documentation)
+  - [Contributing](#contributing)
   - [Infrastructure](#infrastructure)
   - [Getting Help](#getting-help)
 
@@ -109,6 +110,10 @@ The `AGENTS.md` file is a Nunjucks template. These variables are available for d
 ```
 
 ---
+
+## Contributing
+
+This repository is exported from Mindstone's private main codebase, the Mindstone Rebel repo, one commit per change. Pull requests here can't be merged directly, but they're welcome: a maintainer carries them into the main codebase. See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Getting Help
 

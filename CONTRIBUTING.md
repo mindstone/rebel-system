@@ -10,8 +10,13 @@ runs Rebel — **treat all of it as public.**
 > process notes — anything added there is injected into every user's agent.
 > Contributor rules live in this file.
 
-For shared-initializer worktrees, see the
-[contributor worktree configuration](docs/project/PROJECT_OVERRIDES.md).
+## How Changes Are Published
+
+This repository is published from Mindstone's private main codebase, the Mindstone Rebel repo. Changes land there first and are exported here as one commit each.
+
+Pull requests on this repository can't be merged here directly, but they're still welcome: a maintainer will carry the change into the main codebase, where it can be reviewed and exported back here.
+
+For maintainers: For shared-initializer worktrees, see the [contributor worktree configuration](docs/project/PROJECT_OVERRIDES.md).
 
 ## No secrets, no credentials, no internal data
 
