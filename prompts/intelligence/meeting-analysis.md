@@ -35,12 +35,12 @@ A person's stated intention, opinion, or reflection is THEIR internal matter, no
 
 [MANDATORY OWNERSHIP TEST]
 Before calling rebel_inbox_add for ANY candidate item, you MUST explicitly answer these three questions:
-1. "Who initiated this action?" — Must be the current user, not someone else.
+1. "Who took this on?" — Must be the current user: they proposed it, or accepted someone's request to do it ("Can you send me the deck?" "Sure, I'll send it today" is the user's action).
 2. "Who is responsible for executing it?" — Must be the current user.
 3. "Would the user need to DO something new if they missed the meeting?" — Must be yes.
 If ANY answer does not clearly point to the current user, SKIP the item. Write to memory instead.
 Example: "Schedule exec discussion: ROI measurement + open source strategy" — Alex flagged it, Sam agreed.
-→ Q1: Alex initiated. Q2: Alex/Sam own it. Q3: No new action for user. → SKIP. Write to memory.
+→ Q1: Alex and Sam took it on. Q2: Alex/Sam own it. Q3: No new action for user. → SKIP. Write to memory.
 
 [SKIP EXAMPLES]
 These are examples of items that should NOT be added to Actions:
@@ -74,7 +74,6 @@ Do NOT add action items like:
 - "Insight: Chief of Staff page — high visits but zero interaction"
 - "Win: 3+ connectors correlates with strong user retention"
 - "Office Hour recap: feedback summary"
-- "CTOcraft workshop recap: 30 CTOs impressed" (recap — write to memory instead)
 - "ROI surfacing idea: salary → hourly rate" (idea — write to memory instead)
 - Someone's personal reflections on their work style or priorities (their matter, not yours)
 
@@ -110,10 +109,17 @@ For 1:1s or internal team meetings, this won't change anything.
    a. "Is the CURRENT USER the owner or a stakeholder who must act?"
    b. "Would this person need to DO something if they missed the meeting?"
    c. "Does the title start with an action verb directed at the user?"
-   d. "Did someone OTHER than the current user initiate, flag, or propose this action? If yes, it's their task — skip."
+   d. "Did someone OTHER than the current user initiate, flag, or propose this action, without the user taking it on? If yes, it's their task — skip."
    If ANY answer is no (or yes for d), SKIP the item. Write it to memory instead if it has lasting value.
 5. Match outcomes to capabilities - only propose actions you have skills/tools for
 6. SELF-CHECK before calling rebel_inbox_add: re-read each proposed item title. If the title reads like a topic name, company name, status update, or someone else's task rather than something the user must DO — remove it. Zero action items is better than one wrong one.
+
+[FOLLOW-UP DRAFT]
+When the meeting leaves the user owing a message (they promised to send, share, recap or introduce something, or accepted a request to), put the complete email in rebel_inbox_add's `draft` field as plain text: a `To:` line, an optional `Cc:` line, a `Subject:` line, a blank line, then the body.
+- One draft, for the main follow-up; list any other messages owed in the Action text. No `draft` when the user owes no message.
+- Before drafting, look for a follow-up skill the user wrote: Glob `**/skills/**/*.md` across their spaces (outside `rebel-system/`; a skill is a `SKILL.md` or a standalone `.md` file, not a file in a skill's own subfolders such as `references/` or `examples/`) for one named or described as meeting follow-ups or follow-up emails. If there is one, read it and follow it, including its sign-off, over the built-in one; only if there is none, follow `meeting-follow-up-drafting`.
+- Take addresses only from the invite, attendee data or transcript; never invent one. If an address is unknown, put no address on `To:`; write `[VERIFY]` and the name where it goes (`To: [VERIFY] Jane Doe`).
+- Write the draft in the meeting's language.
 
 [OUTPUT]
 Call rebel_inbox_add with:
@@ -126,11 +132,10 @@ Call rebel_inbox_add with:
 ## What I Can Do
 
 **{Action}**: {Description}
-- Using: {skill or tool name}
 
 (Only include actions you can execute. Examples IF capable:)
 - Add tasks to Todoist
-- Draft follow-up email (using meeting-follow-up-drafting skill)
+- Send follow-up email (drafted in `draft`)
 - Share to Slack
 - Schedule follow-up
 - Update memory with decisions
@@ -140,24 +145,23 @@ Call rebel_inbox_add with:
 
 - source: { "kind": "meeting", "meetingTitle": "{meeting_title}" }
 - references: [{ "kind": "workspace", "path": "{transcript_path}" }]
+- draft: The follow-up email, only as [FOLLOW-UP DRAFT] says
 - actions: [{ "type": "execute" }]
 - priority: "p2"
 - category: "meeting-action"
-- clarifyingQuestion: A short, specific question asking the user what Rebel needs to know before acting. Focus on preferences, priorities, or missing context. Examples: "Should I include enterprise pricing?" or "Formal or friendly tone for the follow-up?" Include only when the user genuinely needs to decide something before you can act. Omit if the action is clear and self-contained.
+- clarifyingQuestion: A short, specific question asking the user what Rebel needs to know before acting. Focus on preferences, priorities, or missing context. Example: "Should I include enterprise pricing?" Include only when the user genuinely needs to decide something before you can act. Omit if the action is clear and self-contained. Never ask about the tone or wording of a draft: the user adjusts those on the draft.
 - relevantDate: Epoch ms — the date when this item is most relevant/time-sensitive. For meeting follow-ups: set to the next business day after the meeting (the natural "act on it" day). For event-related items: the event date. Items surface in Today when relevantDate is today. Items are auto-archived when relevantDate is 3+ days in the past without action signals.
 - dueBy: Epoch ms — target completion date. Set when evidence exists: for follow-up emails, 48h after meeting; for prep tasks, before the next related meeting; for items with explicit deadlines mentioned in the meeting, use that date. If no deadline is stated or inferable, omit — a missing dueBy is better than a guessed one.
 
 [IMPORTANT]
 - Check capabilities FIRST - only propose what you can do
 - Be concrete: "Email Sarah about Q1 pricing" not "Consider following up"
-- Reference skill/tool: "Using: meeting-follow-up-drafting"
 - No actionable outcomes? Do NOT call rebel_inbox_add — write noteworthy context to memory instead
-
 - Quality over quantity - fewer confident proposals beats many uncertain
 - Only call rebel_inbox_add when there is at least one concrete action for the user
 - DO NOT write files to /tmp or any temporary directory
 - Skip other people's tasks — only the user's actions belong here
-- If the body text attributes the initiative to someone else (e.g., "Alex flagged...", "Sam agreed...", "Sarah proposed..."), this is THEIR action. Do NOT create an action item — write to memory instead.
+- If the body text attributes the initiative to someone else (e.g., "Alex flagged...", "Sam agreed...", "Sarah proposed...") and the user did not take it on, this is THEIR action. Do NOT create an action item — write to memory instead.
 - If ownership is unclear or ambiguous, do NOT call rebel_inbox_add. When in doubt, write to memory.
 - Skip insights, recaps, FYI items, and status updates — those belong in memory, not Actions
 - TITLE FORMAT: Every action item title MUST start with an action verb (Review, Follow up, Send, Draft, Prepare, Schedule, etc.) or "Meeting: {title}". Titles like "Customer training" or "Q4 Revenue" are topics, not actions — never use them.

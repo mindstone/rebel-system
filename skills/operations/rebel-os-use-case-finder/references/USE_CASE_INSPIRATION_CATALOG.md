@@ -280,7 +280,7 @@ Summary of skills already available in the Rebel system, grouped by category. Th
 - **meeting-external-prep** — Adds web research on attendees/companies for external meetings
 - **meeting-weekly-brief** — Weekly meeting briefing aggregation
 - **meeting-performance-review** — Prep for performance review meetings
-- **meeting-follow-up-drafting** — Drafts follow-up communications after meetings
+- **meeting-follow-up-drafting** — Drafts the follow-up email a meeting leaves you owing, ready to review and send from its Action
 - **transcript-analysis** — Processes transcripts from any source (Notetaker, Plaud, external), extracts action items and summaries
 - **calendar-check-availability** — Checks calendar availability
 
