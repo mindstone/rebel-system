@@ -192,13 +192,13 @@ If you'd rather keep things to fewer moving parts, you can:
 - set the **same model** for Everyday work and Behind the scenes
 - or ignore the individual jobs entirely and just use the **Quality Tier** slider inside a conversation
 
-Note that the choice which adds *more* model variety — **Rebel picks the best model for each step**, described next — is **off by default**. If you leave **Always use the models I choose** selected, the models you see come purely from the jobs above, not from Rebel picking a different model for each step.
+Note that the choice which adds *more* model variety — **Rebel picks the best model for each step**, described next — is **on for new people**; if you had it off before, Rebel asks you once on Home. If you choose **Always use the models I choose**, the models you see come purely from the jobs above, not from Rebel picking a different model for each step.
 
 ### Smart picking
 
 With **Rebel picks the best model for each step**, Rebel chooses which of your models runs each step of a job, rather than using one model for everything — a fast, cheap model for routine steps, a stronger one for the hard thinking, without you having to decide. Choose **Always use the models I choose** when you want to keep using the models assigned to each job.
 
-This choice is **off by default**. In **Settings → Agent & Voice**, choose **Rebel picks the best model for each step**, then open **Customise**. In **Your models**, turn on **Rebel can pick it** for each extra model you want Rebel to choose from. You need at least two eligible models before it does anything.
+This choice is **on for new people**. If you had it off before, Rebel asks you once on Home whether to turn it on. To set it yourself, in **Settings → Agent & Voice**, choose **Rebel picks the best model for each step**, then open **Customise**. In **Your models**, turn on **Rebel can pick it** for each extra model you want Rebel to choose from. You need at least two eligible models before it does anything.
 
 A few things worth knowing:
 
@@ -232,7 +232,7 @@ For most people, the honest answer is: **you don't need to manage models at all.
 
 - Use your preferred provider card
 - Pick a strong **Everyday work** model
-- Use the **Quality Tier** slider to set how much quality vs. speed you want per conversation — it's the simplest way to get good results without managing individual models (choose **Rebel picks the best model for each step** if you later want per-step routing; it is off by default)
+- Use the **Quality Tier** slider to set how much quality vs. speed you want per conversation — it's the simplest way to get good results without managing individual models (per-step routing, **Rebel picks the best model for each step**, is on for new people; if you had it off before, Rebel asks you once on Home)
 - Leave **Planning** on **Same as everyday work** unless you do lots of complex work — picking a separate model here gives planning a model of its own
 - Leave **Behind the scenes** on the default unless you have a reason to change it
 

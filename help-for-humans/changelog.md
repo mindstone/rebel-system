@@ -13,6 +13,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 - **Amount flow views (coming soon)** — Follow money, funnel, or time-use amounts between categories or stages with Sankey flows or signed waterfalls (ups and downs) on desktop, web, and phone. Hover, select, or tap to inspect only the original entries included in the view, such as a purchase or time entry; inspecting does not change source data or fetch more automatically.
 
+- **Places on a map (coming soon)** — Ask Rebel to show places and their figures on a street map, inspect a place, or send Rebel a request from its actions. Switch between **Map first** and **List first**; if the map cannot load, the full place list stays available.
+
 - **Requests from your meeting** — Anyone in your meeting can ask the notetaker to pass a request to your Rebel. Your usual permissions decide what runs; results appear in Rebel.
 
 - **Ask the notetaker in meeting chat** — Start with its displayed name and a comma, such as "Spark, what did we decide?" (Spark is a fictional example.) Replies appear for everyone in the meeting. Answers start with this meeting; **Also answer from my notes and connected apps** in **Settings → Meetings** is the saved default for new meetings and starts Off. The brain button controls wider context for the current meeting, and questions only look things up — actions stay with their owner in Rebel.
@@ -23,6 +25,7 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Improvements
 
+- **Smart picking on by default** — New people now start with Rebel picking the right model for each step when it plans a task. Already have it off? Rebel asks once on Home, then leaves you be.
 - **Claude Fable 5.2 is here** — Fable 5.2 is available with an Anthropic key or through OpenRouter. If Fable 5 or 5.1 is your Everyday work or Planning model (Maximum counts), a one-time “newer version” pop-up offers it; nothing changes unless you click **Switch**. **Maximum** still uses Fable 5.1; switching from Maximum shows your setting as **Custom**. Like earlier Fable models, it may decline requests its safety training says no to. New model, same Rebel.
 
 - **Form previews keep your answers** — Your answers stay put when you expand a form, close its larger preview or open that preview again. Submit from the form in the conversation or the larger preview; your latest answers are used.
@@ -55,7 +58,15 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **Your numbers count** — Ask why the 10% fee took a $500 payment to $450 and Rebel explains it from the figures you gave, instead of asking for records first. It still asks when a figure is missing.
+
+- **Clearer reports when something is blocked** — When Rebel hits something it can't get past, such as an action waiting for your approval, used-up credit or a missing browser, it now says what you can do about each one, including ones it worked around.
+
+- **Own-server clouds bounce back too** — A cloud you set up on your own server now restarts itself within a few minutes if it stops responding, like Mindstone's clouds already do. Your saved files stay put. A cloud set up before this update needs a one-time change on its server first; contact support for the steps.
+
 - Keyboard navigation stays inside the dialog you open, including while an action is running or after it fails.
+
+- **Every meeting gets its own prep** — Rebel no longer drops an Action as a "duplicate" just because it looks like another one. Prep for two different meetings, or this week's summary next to last week's, now both reach your Actions; a true repeat is still caught. Morning Triage can also see each Action's category, source and dates when sorting them. Déjà vu, but only when it's real.
 
 - **Feedback without the freeze** — Rebel stays responsive while gathering diagnostic details for a bug report or a rating, including when it retries a saved report.
 
@@ -145,6 +156,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 - **Quick Capture recording recovery** — If Quick Capture’s recording screen crashes, closes or reloads, its recording indicator stops and the audio already saved is kept. After an interrupted or failed recording, a notice offers the saved audio when you reopen Rebel; **Show file** opens its containing folder, and you can also ask Rebel to find it in a new conversation on the computer where you recorded it. When Rebel cannot yet confirm that a meeting notetaker has stopped, the notice says so.
 
+- **Recording problems say so** — During Quick Capture, if recording stops unexpectedly (say, your microphone disconnects or saving fails), Rebel now warns you promptly instead of still showing it as recording. If Rebel can't keep up and misses part of a recording, it tells you and keeps recording.
+
 - **Long replies stay awake, and notices let go** — With Prevent sleep on, Rebel keeps idle-sleep protection for the whole reply. An interrupted reply’s notice clears when continuing succeeds and stays cleared after reopening, even without new text. Close a recovery notice on that device without stopping work; its actions explain what happens next, without a clipped message quote. Connection and syncing notices stick to facts and available actions, and browser and Office chat stop repeating an internal error message alongside useful guidance.
 
 - **Accurate reply status** — Unrelated meeting updates and notices no longer make an interrupted reply look busy again.
@@ -162,6 +175,8 @@ What's new in Rebel. We ship fast, so there's always something.
 - **Stopped links stop lingering** — When you try to update a link that was stopped elsewhere, Rebel removes it from sharing controls instead of reporting your conversation missing.
 
 - **Research replies after closing** — After you closed the app while Rebel was handling several research tasks at once, a reply could stop with an error saying it couldn't continue. On resuming, Rebel kept the research it had already finished; it omitted only the unfinished text of the earlier reply, not that completed research.
+
+- **Research replies settle after closing** — When a research reply continued after you closed Rebel, the research progress shown on screen could stay on **Fetching** with a ticking timer even after the reply finished. It now settles when the reply does; if Rebel cannot tell what an earlier research task produced, it says the outcome is unknown and keeps that uncertainty separate from a new research task it declined to start.
 
 - **Saved skill suggestions stay safe** — Shared skills are reusable instructions for Rebel. Approving an older request to save suggested edits no longer overwrites a newer saved suggestion. If Rebel cannot confirm your saved suggestion is unchanged since that request was prepared, the older request remains available to review and your saved suggestion stays unchanged.
 
