@@ -51,6 +51,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **Expired sign-ins ask nicely** — When an app you've connected, such as Notion, needs you to sign in again, Rebel now shows the sign-in card instead of saying it couldn't reach it. Sign in from the card, then ask again. The app was never lost, just logged out.
+
 - **Slack setup points the right way** — While you set up Slack during onboarding, its tile now says **Continue in your browser**, then **Connecting…** once Slack says yes. Gone: a hint about a developer-tools dialog that never appeared and didn't fit the tile.
 
 - **Neighbouring links stay two links** — Two links right next to each other in a Library file, or a web address pasted up against a link, no longer merge into one link pointing at the second address when you save. Each keeps its own address.
