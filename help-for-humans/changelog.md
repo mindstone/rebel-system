@@ -170,6 +170,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 - **Saved skill suggestions stay safe** — Shared skills are reusable instructions for Rebel. Approving an older request to save suggested edits no longer overwrites a newer saved suggestion. If Rebel cannot confirm your saved suggestion is unchanged since that request was prepared, the older request remains available to review and your saved suggestion stays unchanged.
 
+- **Your plan's models, not a guess** — Asked which models your Mindstone plan includes, Rebel could reel off a confident list of the wrong ones. It now reads your plan's own list, the one behind **Included with your Mindstone plan** in Settings.
+
 ## v0.4.102 — Nov 7, 2026
 
 ### Highlights

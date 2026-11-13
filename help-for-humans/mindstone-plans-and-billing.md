@@ -1,6 +1,6 @@
 ---
 description: "Mindstone plans — the flat-fee subscription (Dash and Rogue tiers) where Mindstone covers your AI bill, which models each tier includes, monthly allowance, billing, upgrades, cancellation, and company-wide plans for whole teams"
-last_updated: "2026-08-14"
+last_updated: "2026-11-13"
 ---
 
 # Mindstone plans
@@ -32,6 +32,8 @@ So "Rogue" doesn't mean "more turns" — it means stronger models. If your work 
 ### Models included in your plan
 
 Each tier includes a curated set of models. You can see exactly which ones in **Settings → Agent & Voice** — open **Customise**, then **Add a model**. The picker groups them under **Included with your Mindstone plan**.
+
+Mindstone updates that set as better models arrive, so this page doesn't list them, and models named elsewhere in these help pages don't tell you which ones your plan includes. Ask Rebel which models your plan includes and it reads your plan's own list.
 
 If you pick a model outside your tier mid-conversation, Rebel switches to an included one and says so ("Your plan runs on … Using it for this one.") rather than stopping with an error. Need frontier-class models? **Upgrade to Rogue** from the same settings section. Full behaviour is in [AI models](rebel://library/rebel-system%2Fhelp-for-humans%2FAI-models.md#picking-a-model-outside-your-plan).
 
