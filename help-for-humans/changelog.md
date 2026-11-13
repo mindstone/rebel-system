@@ -57,6 +57,7 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **Custom Email, set straight** — Changing your address in Advanced settings now updates the account Rebel shows, and the settings now explain that an entirely different address is set up as its own connection; setup no longer mentions a button that isn't there, and it tests the connection it actually made. When an email step hits a snag, the note under the message now says plainly when it was a folder you asked for that couldn't be created, skips warnings about steps that worked on a second try, and no longer offers to remove the attachment when the whole email was refused. Fewer red herrings in your outbox.
 - **GPT sees the pictures tools return** — With a ChatGPT account, GPT models now see the images a tool hands back, such as a screenshot or a picture Rebel opens. If a model can't take an image, Rebel tells it one was left out, so it doesn't guess. In the desktop app, a very large photo or screenshot is now shrunk to fit instead of refused.
 
 - **Cloud copies don't get forgotten** — If Rebel can't confirm that your workspace files finished copying to the cloud, **Settings → Cloud** now says so, even after a restart. **Copy now** lets you try again, with a warning before replacing the cloud's files. “All good” waits its turn.
