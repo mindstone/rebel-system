@@ -63,6 +63,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **Long transcripts, saved whole** — Ask Rebel to save a long meeting transcript, email thread or document into a file, and it now copies the full text across instead of giving up and saying it couldn't. If Rebel didn't try something, it now says so plainly, and asking "Why not?" gets the real reason and then the job done. No more mystery shrugs.
+
 - **Custom Email, set straight** — Changing your address in Advanced settings now updates the account Rebel shows, and the settings now explain that an entirely different address is set up as its own connection; setup no longer mentions a button that isn't there, and it tests the connection it actually made. When an email step hits a snag, the note under the message now says plainly when it was a folder you asked for that couldn't be created, skips warnings about steps that worked on a second try, and no longer offers to remove the attachment when the whole email was refused. Fewer red herrings in your outbox.
 - **GPT sees the pictures tools return** — With a ChatGPT account, GPT models now see the images a tool hands back, such as a screenshot or a picture Rebel opens. If a model can't take an image, Rebel tells it one was left out, so it doesn't guess. Wherever Rebel runs, a large PNG or JPEG — a phone photo or a screenshot — is now shrunk to fit instead of refused, and the original file is left untouched.
 

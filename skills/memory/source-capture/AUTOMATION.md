@@ -15,7 +15,7 @@ Capture citable sources from recent activity into memory, surface actionable ite
    - **Mandatory meeting-transcript lane:** when a meeting-transcript connector (for example Fireflies) is connected, query that connector directly for transcripts whose activity falls between [LAST_EXECUTED_SUCCESS] and now. Use its exact tool schema. Do not infer that no transcript exists, or treat the meeting as searched, from Calendar results alone.
    - **Authoritative provenance and verbatim appendix:** when a tool result carries `source_*` provenance fields, copy them verbatim; they override inferences from the user's own account or Calendar.
      For each meeting transcript, make one bounded `get_transcript`/`search_transcripts` fetch for its body before any Write; do not re-fetch it.
-     In that same Write, the note MUST end with `## Appendix` containing the verbatim transcript text copied from that output—or, for a very long transcript, its verbatim most-relevant contiguous excerpt—never a summary, paraphrase, or action items.
+     In that same Write, the note MUST end with `## Appendix` containing the verbatim transcript text copied from that output (if the output was saved to a file under `.rebel/tool-outputs/`, pass that path as the Write's `content_from_file` instead of retyping it), all of it unless it is over the skill's 1MB truncation limit—never a summary, paraphrase, or action items.
      Never write-then-edit or delegate verbatim-capture lanes to subagents; “Parallelise” means parent-level tool batches only.
    - Parallelise these searches when possible
 3. Decide whether step 2 found any citable source material:

@@ -193,6 +193,8 @@ Structure the source file content:
 
 **Appendix (raw content):** Always include the complete, unedited source content (transcript, document text, thread, etc.) as the final section of the file. This is the raw material — preserve it exactly as received so it can be re-interrogated, processed differently, or cited as evidence. The Summary and Key Takeaways above are derived from this; the Appendix is the canonical record.
 
+**Long raw content:** Don't retype it. Fetch it without raising `max_output_chars`, so a long output is saved under `.rebel/tool-outputs/` and you get its path. Then create the file in one Write: everything above the Appendix in `content`, ending with the `## Appendix: Raw Content` heading and a blank line, and `content_from_file` set to the saved path, which adds that file's exact text. A saved connector output starts with a short header naming the tool; leave it.
+
 **Truncation handling:** If full content exceeds 1MB:
 1. Set `truncated: true` in frontmatter
 2. Include a note at the start of the Appendix with the actual URL: `*Content truncated due to size. See full source at https://actual-url-here*`
