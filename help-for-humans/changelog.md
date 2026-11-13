@@ -53,6 +53,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **See what ran before you pressed Stop** — In a stopped reply, the **Activity** row now says how much Rebel had done, such as "2 tools", instead of "No longer running". Open it to see the commands and searches that ran. Stopping no longer looks like nothing happened.
+
 - **Click beside the text, type in the text** — In a Library document, clicking the empty space below the last line or beside a line now puts your cursor at the nearest text, including after switching tabs. Typing and pasting no longer vanish into the margin.
 
 - **Expired sign-ins ask nicely** — When an app you've connected, such as Notion, needs you to sign in again, Rebel now shows the sign-in card instead of saying it couldn't reach it. Sign in from the card, then ask again. The app was never lost, just logged out.
