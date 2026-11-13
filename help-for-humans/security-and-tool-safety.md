@@ -108,7 +108,7 @@ Some actions are considered inherently safe and run without prompting:
 - **Read-only operations** — Searching, listing, and retrieving data from connectors
 - **Web search** — Looking things up online
 - **Writing to temporary files** — Scratch work that doesn't touch your important data
-- **Tools with standing permission** — These can skip the approval card while your other protections allow it. A saved Always stays in place when a tool's safety rating changes; **Everything from [app]** still covers only the level you approved. Checked levels still inspect every request, the highest level never offers standing permission, and standing permission still applies in [Privacy Mode](library://rebel-system/help-for-humans/privacy-mode.md).
+- **Tools with standing permission** — These can skip the approval card while your other protections allow it. A saved Always stays in place when a tool's safety rating changes; **Everything from [app]** still covers only the level you approved. Checked levels still inspect every request, and standing permission still applies in [Privacy Mode](library://rebel-system/help-for-humans/privacy-mode.md).
 - **Built-in safe tools** — Operations that are safe by design
 
 These skip the approval flow so you're not interrupted by routine lookups.
@@ -140,13 +140,13 @@ When Rebel is about to use a tool, a fast AI model checks the action against you
 
 **Automations cannot borrow permission from an earlier chat.** When Rebel is working unattended, your messages are useful context but not standing permission. The tool's safety rating, any permission you saved, and your Safety Rules decide what happens instead. Tools at the first two levels can run without separate review; higher levels keep the checks described below. (See [Automations](library://rebel-system/help-for-humans/automations.md).)
 
-**Consequences raise the safety level.** Routine, reversible, read-only work stays at the low end so lookups do not interrupt you. Sending, posting, deleting, paying, or changing something out in the world pushes a tool higher. At **Rebel can act for you**, Rebel asks the first time and checks every later request; at **Rebel always asks about this one**, it asks every time — unless you allow it for the current conversation, which lasts only until that conversation ends. Changing a rating doesn't remove an Always you already saved; to be asked again, remove it in Settings.
+**Consequences raise the safety level.** Routine, reversible, read-only work stays at the low end so lookups do not interrupt you. Sending, posting, deleting, paying, or changing something out in the world pushes a tool higher. At **Rebel can act for you**, Rebel checks every request and may ask first; at **Rebel asks unless your Safety Rules or a saved choice allow it**, it asks unless your Safety Rules allow the action or you already said yes: for the current conversation (which lasts only until it ends), or with an Always. When Rebel is working unattended, it pauses the action for your approval instead of asking. Changing a rating doesn't remove an Always you already saved; to be asked again, remove it in Settings.
 
 ## Calendar Safety
 
 **A calendar tool's safety rating decides when Rebel asks.** Calendar and scheduling tools follow the same four levels as other tools. At either of the first two levels, Rebel can be allowed to change an event without a separate approval; that includes when an automation uses the tool on your behalf.
 
-At **Rebel can act for you**, Rebel asks the first time. If you choose **Any time**, it still checks every request for obvious mistakes. At **Rebel always asks about this one**, Rebel does not offer standing permission. You can review or change a tool's rating in [Settings → Safety](rebel://settings/safety), and your Safety Rules can add narrower limits — for example, requiring approval for invitations with external attendees.
+At **Rebel can act for you**, Rebel checks every request and may ask first; if you choose **Any time**, it still checks every request for obvious mistakes. At **Rebel asks unless your Safety Rules or a saved choice allow it**, Rebel asks unless your Safety Rules or a saved choice cover the change. You can review or change a tool's rating in [Settings → Safety](rebel://settings/safety), and your Safety Rules can add narrower limits — for example, requiring approval for invitations with external attendees.
 
 
 ## App Settings and Configuration

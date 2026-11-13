@@ -26,6 +26,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Improvements
 
+- **Your safety levels apply to Rebel's own tools too** — A level you set for a tool in [Settings → Safety](rebel://settings/safety) now counts for Rebel's built-in tools as well, whether you made one more careful or more relaxed. Tools that spend money keep their extra safety checks. The highest level is now called **Rebel asks unless your Safety Rules or a saved choice allow it**, because that is what it does. Truth in labelling, finally.
+
 - **Updates on Mac say how they finish** — A downloaded update installs when you restart or quit Rebel. Closing the window leaves Rebel running, so the update notice now says so instead of letting the update wait for a quit that never comes.
 
 - **Ask Rebel about company keys** — If your company provides your AI, Rebel can now explain how your key gets to you, what "Set" and "Claimed by the app" mean on the admin side, and what to do when a key seems stuck (spoiler: usually update Rebel). Admins get the full tour of the Transformation Engine pages too. See [Company-provided keys](rebel://library/rebel-system%2Fhelp-for-humans%2Fcompany-provided-keys.md).
