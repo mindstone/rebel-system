@@ -53,6 +53,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **Click beside the text, type in the text** — In a Library document, clicking the empty space below the last line or beside a line now puts your cursor at the nearest text, including after switching tabs. Typing and pasting no longer vanish into the margin.
+
 - **Expired sign-ins ask nicely** — When an app you've connected, such as Notion, needs you to sign in again, Rebel now shows the sign-in card instead of saying it couldn't reach it. Sign in from the card, then ask again. The app was never lost, just logged out.
 
 - **Slack setup points the right way** — While you set up Slack during onboarding, its tile now says **Continue in your browser**, then **Connecting…** once Slack says yes. Gone: a hint about a developer-tools dialog that never appeared and didn't fit the tile.
