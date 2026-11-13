@@ -1,6 +1,6 @@
 ---
 description: "Friendly glossary of key concepts and terms in Mindstone Rebel, including definitions for spaces, skills, memory, MCPs, wikilinks, and other core terminology"
-last_updated: "2026-06-04"
+last_updated: "2026-11-11"
 ---
 
 # Mindstone Rebel Terminology
@@ -124,7 +124,7 @@ A router that aggregates multiple MCP servers into one. This lets Rebel access m
 Natural language rules you write to tell Rebel what actions are OK and what needs your approval. Found in [Settings → Privacy & Safety](rebel://settings/safety). Think of them as a personalised safety policy — 'always ask before emailing external contacts' or 'never modify files in the Finance folder without asking.' See [Security and Tool Safety](library://rebel-system/help-for-humans/security-and-tool-safety.md#your-own-rules-custom-safety-instructions) for examples and tips.
 
 ### Tool Safety
-A protection system that evaluates every tool action against your Safety Rules — natural language rules you write in [Settings → Privacy & Safety](rebel://settings/safety). Actions that pass your rules run automatically. Actions that don't trigger an approval prompt. You can also mark specific tools as trusted to bypass checks entirely.
+A protection system that checks higher-risk tool actions against your Safety Rules — natural language rules you write in [Settings → Privacy & Safety](rebel://settings/safety). Actions that pass your rules run automatically. Actions that don't trigger an approval prompt. Everyday low-risk actions, such as reading files, run without the check ([details](library://rebel-system/help-for-humans/security-and-tool-safety.md#when-your-safety-rules-are-checked)). You can also mark specific tools as trusted to bypass checks entirely.
 
 ### Session Modes
 Rebel's labels for how a chat is running. The four you'll actually see:

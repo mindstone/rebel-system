@@ -1,6 +1,6 @@
 ---
 description: "A friendly overview of how Rebel works: conversations, spaces, skills, connectors, memory, and safety features"
-last_updated: "2026-05-11"
+last_updated: "2026-11-11"
 ---
 
 # How Rebel Works
@@ -59,7 +59,7 @@ What Rebel learns about you over time—your preferences, ongoing projects, key 
 
 ## Safety
 
-Rebel asks permission before doing anything potentially risky. You write Safety Rules — natural language rules that tell Rebel what needs your approval. Rebel checks every tool action and memory write against your rules. Privacy Mode gives you even more control when needed.
+Rebel asks permission before doing anything potentially risky. You write Safety Rules — natural language rules that tell Rebel what needs your approval. Rebel checks higher-risk tool actions and memory writes against your rules; everyday low-risk actions, such as reading files, run without that check ([details](library://rebel-system/help-for-humans/security-and-tool-safety.md#when-your-safety-rules-are-checked)). Privacy Mode gives you even more control when needed.
 
 **See also:** [Permissions](library://rebel-system/help-for-humans/permissions.md) | [Privacy Mode](library://rebel-system/help-for-humans/privacy-mode.md)
 

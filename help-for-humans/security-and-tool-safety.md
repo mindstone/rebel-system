@@ -1,6 +1,6 @@
 ---
 description: "How Rebel protects you from risky actions and what requires your explicit permission"
-last_updated: "2026-09-28"
+last_updated: "2026-11-11"
 ---
 
 # Security and Tool Safety
@@ -10,7 +10,7 @@ Rebel has access to powerful tools — your files, connectors, and system settin
 
 ## The Approval System
 
-At the centre of Rebel's safety system are your **Safety Rules** — natural language rules you write yourself. Every time Rebel is about to use a tool or write to memory, it evaluates the action against your rules. If the rules say it's OK, Rebel proceeds. If not, you get an approval prompt.
+At the centre of Rebel's safety system are your **Safety Rules** — natural language rules you write yourself. When Rebel is about to do something that could change things or reach other people, such as sending, posting, deleting or saving to a shared Space, it checks the action against your rules. If the rules say it's OK, Rebel proceeds. If not, you get an approval prompt. Everyday low-risk actions, such as reading your files, run without this check: see [When your Safety Rules are checked](#when-your-safety-rules-are-checked).
 
 For the short promise behind every approval, see [The Approval Contract](rebel://library/rebel-system%2Fhelp-for-humans%2Fapproval-contract.md).
 
@@ -188,9 +188,23 @@ Safety Rules are the heart of Rebel's safety system. They're natural language ru
 
 ### How It Works
 
-Every time Rebel is about to use a tool or write to memory, a fast AI model evaluates the action against your Safety Rules in the background — you won't even notice the check. If the action passes your rules, Rebel proceeds. If not, you get an approval prompt.
+For the actions your rules cover (see below), a fast AI model checks the action against your Safety Rules in the background — you won't even notice the check. If the action passes your rules, Rebel proceeds. If not, you get an approval prompt. The check is best effort: it's an AI reading your words, not a lock, so treat a rule as a strong instruction rather than a guarantee.
 
-This isn't vague guidance — your rules are the policy engine. Rebel takes them seriously.
+### When your Safety Rules are checked
+
+Each tool has one of four safety levels: **Only looks things up**, **Makes changes only you see**, **Rebel can act for you** and **Rebel always asks about this one** (see [How Rebel Decides Whether to Ask](#how-rebel-decides-whether-to-ask)). You can see and change a tool's level in [Settings → Privacy & Safety](rebel://settings/safety). Your Safety Rules are checked for the higher levels: actions that send, post, delete, overwrite, pay for something or otherwise change things out in the world. Saves to a shared Space (a folder of notes you share with others) and updates to what Rebel remembers are checked too.
+
+Everyday low-risk actions run **without** a Safety Rules check, so they never wait on one:
+
+- **Reading, listing and searching files**, anywhere on your computer
+- **Low-risk terminal commands**, such as listing a folder, printing a file or running a script. Rebel rates a command by its command line, so running a script usually counts as low-risk whatever the script does inside, and your rules won't see what it does. Riskier commands, such as ones that delete, move, overwrite, download or send something, are checked.
+- **Connector tools** (from apps you've connected, such as your email or calendar) **at the two lowest levels**, **Only looks things up** and **Makes changes only you see**
+
+A few low-risk tools still get a quick check, such as web searches and a connector tool Rebel hasn't given a level yet.
+
+So a rule like "ask before reading my Finance folder" won't stop Rebel reading it: reading is a low-risk action, and your rules aren't consulted. Write rules about actions with consequences instead, such as "Never email anything from the Finance folder to people outside the company."
+
+**A folder Block is different from a rule.** A Block doesn't ask: Rebel simply refuses to read a Blocked folder, without an approval card, in every conversation and automation, even if you allowed it earlier. That includes terminal commands that name the folder. Your Blocks are listed in **[Settings → Privacy & Safety](rebel://settings/safety#approvalAuthorityLedger) → What Rebel can do → Never allowed**, where you can remove them. You can't add a new folder Block in Settings yet. Your computer's own file permissions always apply, so a folder your computer doesn't let Rebel open stays closed to it. See [Reading Beyond Your Workspace](library://rebel-system/help-for-humans/permissions.md#reading-beyond-your-workspace) for what a Block covers.
 
 ### What Makes a Good Rule
 
@@ -226,7 +240,7 @@ Rules work best when they're specific and actionable. Think about the situations
 
 - **Be specific about the action or context** — mention tool names, folder paths, channels, or recipient types
 - **You can have multiple rules** — write them on separate lines, like a short checklist
-- **Rules are the authority** — they determine what gets approved automatically and what triggers a prompt
+- **Rules are the authority for the actions they're checked on** — they determine whether those go ahead automatically or trigger a prompt. Low-risk actions such as reading files don't consult them ([When your Safety Rules are checked](#when-your-safety-rules-are-checked))
 - **Rules apply to all conversations** — they're a global setting, not per-conversation
 - **Update them as your needs change** — working on something sensitive this week? Add a temporary rule, then remove it later
 

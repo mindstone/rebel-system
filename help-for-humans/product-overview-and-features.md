@@ -1,6 +1,6 @@
 ---
 description: "Complete overview of what Rebel does: product vision, all features, and how Rebel compares to ChatGPT, Claude Cowork, and OpenClaw"
-last_updated: "2026-09-04"
+last_updated: "2026-11-11"
 ---
 
 # Product Overview and Features
@@ -126,7 +126,7 @@ Independent Listen and Speak modes — use either separately or together:
 
 Layered protection that stays out of your way:
 
-- **Tool safety** — Every tool action is evaluated against your Safety Rules before execution. Safe actions run automatically; flagged actions ask for approval
+- **Tool safety** — Higher-risk tool actions are checked against your Safety Rules before they run; flagged actions ask for approval. Everyday low-risk actions, such as reading files, run without the check ([details](library://rebel-system/help-for-humans/security-and-tool-safety.md#when-your-safety-rules-are-checked))
 - **Memory safety** — Approval flow for memory writes, with extra checks for shared spaces
 - **Privacy Mode** — Per-conversation toggle for sensitive work
 - **Safety Rules** — Write natural language rules that tell Rebel what needs your approval. Plus trusted tools, per-space memory settings, and Privacy Mode for sensitive work.
