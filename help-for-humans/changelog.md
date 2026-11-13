@@ -59,6 +59,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 - **GPT sees the pictures tools return** — With a ChatGPT account, GPT models now see the images a tool hands back, such as a screenshot or a picture Rebel opens. If a model can't take an image, Rebel tells it one was left out, so it doesn't guess. In the desktop app, a very large photo or screenshot is now shrunk to fit instead of refused.
 
+- **Cloud copies don't get forgotten** — If Rebel can't confirm that your workspace files finished copying to the cloud, **Settings → Cloud** now says so, even after a restart. **Copy now** lets you try again, with a warning before replacing the cloud's files. “All good” waits its turn.
+
 - **One sign-in is enough** — If you connected an app partway through a conversation, a brief hiccup on that app's side could make Rebel ask you to sign in to it again, even though your sign-in was fine. Rebel now waits for the hiccup to pass and keeps you signed in. Rebel also no longer stumbles when a task needs it to check more than ten of its tools at once. Once was always the plan.
 
 - **Recovered apps come back to search** — After a brief cloud outage, an app you've connected, such as Slack, could keep looking unavailable to Rebel even once it was working again: Rebel might say it was paused, or pick another app for the job. Rebel now checks the app again shortly after the outage, or as soon as a request to it works. Nothing for you to do. No more blaming the cloud for yesterday's weather.
