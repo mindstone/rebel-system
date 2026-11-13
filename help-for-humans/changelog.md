@@ -58,6 +58,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **Replies after sleep** — Fixed a case where Rebel would not resume a reply after your computer went to sleep when your subscription had already selected a model included in your plan instead of the one you saved.
+
 - **Your numbers count** — Ask why the 10% fee took a $500 payment to $450 and Rebel explains it from the figures you gave, instead of asking for records first. It still asks when a figure is missing.
 
 - **Clearer reports when something is blocked** — When Rebel hits something it can't get past, such as an action waiting for your approval, used-up credit or a missing browser, it now says what you can do about each one, including ones it worked around.
