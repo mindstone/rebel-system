@@ -315,6 +315,18 @@ Conversation drafts should persist automatically. If they're disappearing:
 
 ---
 
+## Company-provided AI keys
+
+If your company provides your AI and Rebel keeps saying **"Checking organisation connection..."**, or an admin sees your key stuck on **Set** on the Transformation Engine:
+
+1. **Update Rebel to the latest version.** Version 0.4.103 of Rebel has a bug that stops it finishing the collection of OpenRouter and Fireworks keys; nothing your admin does helps until you update.
+2. **Open Settings**, or switch back to the Rebel window, so Rebel checks in straight away.
+3. If **Settings → Agent & Voice** says "Organisation connection needs attention", sign out and back in. If that doesn't fix it, tell your admin.
+
+How company keys work, what each status means, and what admins can try: [Company-provided keys](rebel://library/rebel-system%2Fhelp-for-humans%2Fcompany-provided-keys.md).
+
+---
+
 ## Corporate or Managed Networks
 
 If you're on a work network that uses extra security (common in larger organisations), Rebel may occasionally have trouble reaching its services.
@@ -345,6 +357,7 @@ If you're on a work network that uses extra security (common in larger organisat
 | "Request was too large" | The message or attached file is too big | Break your request into smaller parts |
 | "Your Library isn't set up yet" | No workspace folder configured | Go to Settings → Workspace and select a folder |
 | "Tool conflict detected" | Multiple tool operations collided | Rebel retries automatically |
+| "Your organisation's connection needs attention" (or "…OpenRouter connection…") | The key your company provides isn't working yet | See [Company-provided AI keys](#company-provided-ai-keys) above |
 | "Connection interrupted" | Network dropped during a request | Rebel retries automatically; if the turn was in progress, it resumes when connectivity returns |
 
 
