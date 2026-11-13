@@ -1,7 +1,7 @@
 ---
 name: memory-update
 description: "Compact memory update skill — gated-structured reasoning: no-op gate → per-fact source/sensitivity classification → save/skip decision → routing → write."
-last_updated: 2026-05-19
+last_updated: 2026-11-13
 tools_required: []
 agent_type: subagent
 ---
@@ -28,6 +28,8 @@ If **NO** (the conversation is ONLY debugging, error recovery, file browsing, ca
 - Respond with: `Memory checked: no new facts to save`
 - Make **NO** tool calls. STOP here.
 
+**Already handled by this turn.** A note the main turn already saved, or whose save is waiting for the person's approval or choice of where it goes, is handled. Do not save its content again in any space, even to correct its location: the person decides where it goes in that save, not you. Merely discussing a note does not count. Other facts from the turn remain candidates; if none remain, this is a NO.
+
 If **YES**, continue to Step 1.
 
 ### Step 1 — For each candidate fact, classify its SOURCE
@@ -49,7 +51,7 @@ Check **Spaces available** in the system prompt for available spaces and their d
 4. **Cross-cutting**: A single turn may contain facts for MULTIPLE spaces. Split them correctly.
 5. **Privacy override**: When in doubt about sensitivity, route to the MORE private space.
 6. **Sharing default**: Do NOT hide shareable company info in Chief-of-Staff — use the appropriate shared space instead.
-7. **Wrong-space correction**: If existing content is in the wrong space (e.g. company info already saved in Chief-of-Staff), update the CORRECT space rather than reinforcing the duplicate. But when the user asks to move/share/copy source-backed content across spaces, do not paraphrase it into a new summary by default — route via [share-across-spaces](../share-across-spaces/SKILL.md) and its source-copy ladder.
+7. **Wrong-space correction**: If content saved in an earlier turn is in the wrong space (e.g. company info already saved in Chief-of-Staff), update the CORRECT space rather than reinforcing the duplicate. This never applies to this turn's own save (Step 0). But when the user asks to move/share/copy source-backed content across spaces, do not paraphrase it into a new summary by default — route via [share-across-spaces](../share-across-spaces/SKILL.md) and its source-copy ladder.
 
 ### Step 3 — Decide save vs. skip per fact
 
