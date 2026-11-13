@@ -51,6 +51,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **Slack setup points the right way** — While you set up Slack during onboarding, its tile now says **Continue in your browser**, then **Connecting…** once Slack says yes. Gone: a hint about a developer-tools dialog that never appeared and didn't fit the tile.
+
 - **Neighbouring links stay two links** — Two links right next to each other in a Library file, or a web address pasted up against a link, no longer merge into one link pointing at the second address when you save. Each keeps its own address.
 
 - **First-time tips, first time round** — New people who quit and reopened Rebel soon after setting it up never saw the first-time tips, because Rebel decided they'd already seen them. Now they appear when you first need them, restart or no restart.
