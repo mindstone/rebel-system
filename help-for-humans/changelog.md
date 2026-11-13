@@ -24,6 +24,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Improvements
 
+- **Updates on Mac say how they finish** — A downloaded update installs when you restart or quit Rebel. Closing the window leaves Rebel running, so the update notice now says so instead of letting the update wait for a quit that never comes.
+
 - **Ask Rebel about company keys** — If your company provides your AI, Rebel can now explain how your key gets to you, what "Set" and "Claimed by the app" mean on the admin side, and what to do when a key seems stuck (spoiler: usually update Rebel). Admins get the full tour of the Transformation Engine pages too. See [Company-provided keys](rebel://library/rebel-system%2Fhelp-for-humans%2Fcompany-provided-keys.md).
 
 - **Smart picking on by default** — New people now start with Rebel picking the right model for each step when it plans a task. Already have it off? Rebel asks once on Home, then leaves you be.
