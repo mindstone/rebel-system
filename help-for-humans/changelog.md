@@ -14,7 +14,7 @@ What's new in Rebel. We ship fast, so there's always something.
 
 - **Places on a map (coming soon)** — Ask Rebel to show places and their figures on a street map, inspect a place, or send Rebel a request from its actions. Switch between **Map first** and **List first**; if the map cannot load, the full place list stays available.
 
-- **Meeting follow-ups, already written** — When a meeting leaves you owing an email ("Sure, I'll send it today"), its Action now comes with the email drafted: open it, adjust it on the draft, press **Send**. Rebel uses your own follow-up skill if you have one. Your promises, kept before you forget them.
+- **Meeting follow-ups, already written** — When a meeting leaves you owing an email ("Sure, I'll send it today"), the to-do Rebel adds to your **Actions** list now comes with that email drafted. Press **Start** to open it, change anything you like, then press **Send**: nothing goes out before that. If you've taught Rebel how you write follow-ups (a skill of your own), it writes them your way. Your promises, kept before you forget them.
 
 - **Requests from your meeting** — Anyone in your meeting can ask the notetaker to pass a request to your Rebel. Your usual permissions decide what runs; results appear in Rebel.
 
