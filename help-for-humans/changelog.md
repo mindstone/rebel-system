@@ -55,6 +55,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **One sign-in is enough** — If you connected an app partway through a conversation, a brief hiccup on that app's side could make Rebel ask you to sign in to it again, even though your sign-in was fine. Rebel now waits for the hiccup to pass and keeps you signed in. Rebel also no longer stumbles when a task needs it to check more than ten of its tools at once. Once was always the plan.
+
 - **Recovered apps come back to search** — After a brief cloud outage, an app you've connected, such as Slack, could keep looking unavailable to Rebel even once it was working again: Rebel might say it was paused, or pick another app for the job. Rebel now checks the app again shortly after the outage, or as soon as a request to it works. Nothing for you to do. No more blaming the cloud for yesterday's weather.
 
 - **Answer an Action anywhere** — If an Inbox Action asked you a question and you answered on another device (say, started on your laptop, answered on the web), it could stay on "Needs your answer" even after the work was done. The device you answer on now finishes the job and every device sees it done.
