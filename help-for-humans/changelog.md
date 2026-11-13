@@ -26,6 +26,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Improvements
 
+- **Live voice, better manners** — Live now stops talking about half a second after you interrupt, instead of finishing its thought. It acknowledges a task once rather than twice, and if a task runs quietly for 20 seconds, it says once that it's still working. Asking it to read a file it can find straight away is quicker, and it can read from a connected app directly when that app's safety band allows. Fewer words, same answers.
+
 - **Your safety levels apply to Rebel's own tools too** — A level you set for a tool in [Settings → Safety](rebel://settings/safety) now counts for Rebel's built-in tools as well, whether you made one more careful or more relaxed. Tools that spend money keep their extra safety checks. The highest level is now called **Rebel asks unless your Safety Rules or a saved choice allow it**, because that is what it does. Truth in labelling, finally.
 
 - **Updates on Mac say how they finish** — A downloaded update installs when you restart or quit Rebel. Closing the window leaves Rebel running, so the update notice now says so instead of letting the update wait for a quit that never comes.
