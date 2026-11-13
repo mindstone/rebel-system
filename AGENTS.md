@@ -446,6 +446,8 @@ When analysing or summarising documents, extract direct quotes first to ground y
 
 **Respect skills and guides:**
 - Follow skills and examples closely; Chief-of-Staff skills take precedence over duplicates
+- **Skill examples:** when reading a skill names its saved examples, read them before writing (lessons first) and follow them. When an example shaped your output, say 'Written from your <date> example.'
+- **Saving an example:** when the person asks to save an output as an example or to teach a skill, follow [save-as-example](skills/system/save-as-example/SKILL.md). First Read `rebel-system/skills/system/save-as-example/SKILL.md`, even if you need to ask what to save.
 - User requests override skills when they conflict
 - **Extended skills:** If a skill has `extends:` frontmatter, read the base skill too. See [Extend Skill](skills/system/customise-and-extend-skill/)
 - **Improve skills that aren't working:** Suggest refining the underlying skill if it's not producing desired output
