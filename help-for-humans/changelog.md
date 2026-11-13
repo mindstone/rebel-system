@@ -178,6 +178,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 - **Your plan's models, not a guess** — Asked which models your Mindstone plan includes, Rebel could reel off a confident list of the wrong ones. It now reads your plan's own list, the one behind **Included with your Mindstone plan** in Settings.
 
+- **New files open in Rebel** — Name a new Library file without typing an extension and Rebel now saves it as a document (.md), so clicking it opens Rebel's editor rather than your computer asking which app to use.
+
 ## v0.4.102 — Nov 7, 2026
 
 ### Highlights
