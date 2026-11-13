@@ -26,6 +26,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Improvements
 
+- **One approval card, on every device** — When Rebel waits for your OK, the desktop now shows the same card as your phone and the web, with the same wording and buttons. Your answer grants only what the card shows: that action, once, for this conversation or always, as the button you pressed says. When one task makes the same request several times at once, you get one grouped card instead of a stack. Want an answer to stick? **Make this a rule** writes one sentence for your [Safety Rules](rebel://settings/safety#safetyRules) and adds it only when you confirm; it replaces the list of AI-suggested rules the desktop offered before, and the rules you already have stay as they are. And a card asking to save a note or file now names the Space and what is being saved, in full. Fewer cards, same say.
+
 - **Live voice, better manners** — Live now stops talking about half a second after you interrupt, instead of finishing its thought. It acknowledges a task once rather than twice, and if a task runs quietly for 20 seconds, it says once that it's still working. Asking it to read a file it can find straight away is quicker, and it can read from a connected app directly when that app's safety band allows. Fewer words, same answers.
 
 - **Your safety levels apply to Rebel's own tools too** — A level you set for a tool in [Settings → Safety](rebel://settings/safety) now counts for Rebel's built-in tools as well, whether you made one more careful or more relaxed. Tools that spend money keep their extra safety checks. The highest level is now called **Rebel asks unless your Safety Rules or a saved choice allow it**, because that is what it does. Truth in labelling, finally.
