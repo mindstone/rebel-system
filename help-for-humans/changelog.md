@@ -60,6 +60,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **Your notetaker, your name** — The meeting bot now joins as "Sam's Rebel" (when your name is Sam) using the name in **Settings → Account → Your name**, not whatever your sign-in profile happens to say. It answers to that same name.
+
 - **Replies after sleep** — Fixed a case where Rebel would not resume a reply after your computer went to sleep when your subscription had already selected a model included in your plan instead of the one you saved.
 
 - **Your numbers count** — Ask why the 10% fee took a $500 payment to $450 and Rebel explains it from the figures you gave, instead of asking for records first. It still asks when a figure is missing.
