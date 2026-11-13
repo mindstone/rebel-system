@@ -1,6 +1,6 @@
 ---
 description: "What syncs — and what does not — when you use Rebel on more than one computer, or with the web and mobile companions"
-last_updated: "2026-05-27"
+last_updated: "2026-11-13"
 ---
 
 # Using Rebel on Multiple Devices
@@ -96,11 +96,13 @@ Turn it on in **[Settings → Workspace → Cloud Sync](rebel://settings/cloud)*
 
 Cloud continuity is what makes the web and mobile companions work. A shared workspace folder alone is **not** enough.
 
-### Heads-up: not every desktop conversation appears on mobile
+### Finding conversations on mobile
 
-Cloud continuity intentionally syncs only the conversations you've **pinned** or **continued from another device**. Everything else stays on your desktop, out of the way. If something seems missing on your phone, pin it on desktop and it'll show up within a minute.
+With Cloud Continuity on for a computer, Rebel syncs all your conversations from that computer to your cloud, including conversations marked done. Conversations you've removed with **Remove from cloud** stay out of syncing until you choose **Keep in cloud** on desktop. Conversations belonging to another account aren't sent to your cloud.
 
-See [Which Conversations Show Up On Mobile?](library://rebel-system/help-for-humans/cloud-continuity-and-mobile.md#which-conversations-show-up-on-mobile) for the full explanation.
+Mobile and browser may organise or filter the list differently from desktop. If a conversation seems missing, check the current filter, refresh, and give the desktop that last changed it time to finish syncing. You don't need to pin a conversation for it to sync.
+
+See [Which Conversations Show Up On Mobile?](rebel://library/rebel-system%2Fhelp-for-humans%2Fcloud-continuity-and-mobile.md#which-conversations-show-up-on-mobile) for details.
 
 ## Quick comparison
 

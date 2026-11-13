@@ -1,6 +1,6 @@
 ---
 description: "Common problems and solutions for Rebel: startup issues, connector sign-in expiry, voice and transcription, conversation errors, and getting help"
-last_updated: "2026-10-26"
+last_updated: "2026-11-13"
 ---
 
 # Troubleshooting
@@ -243,7 +243,7 @@ Rebel automatically detects and recovers from these situations. When recovery ki
 
 **Silent turn diagnostics:** If a response goes quiet for a few minutes, Rebel doesn't just sit there. After roughly five minutes of silence, it runs a quick diagnostic and updates the status text with what it found — for example, "the AI provider looks degraded right now," "no internet connection," or "the response is genuinely just slow." This lets you see what's going on well before any deeper recovery or timeout kicks in.
 
-**After sleep or restart:** If your computer sleeps or restarts while a conversation is active, Rebel detects that context may have been lost and automatically reconstructs it from your conversation history. You can continue where you left off without starting over.
+**After sleep or restart:** With Cloud Continuity on, eligible replies can carry on in the cloud while your computer sleeps. If a reply is interrupted, Rebel uses your saved conversation history to recover context. Check the conversation, and use **Resume** if Rebel offers it. See [Cloud Continuity](rebel://library/rebel-system%2Fhelp-for-humans%2Fcloud-continuity-and-mobile.md) for setup and limits.
 
 **Model unavailable:** If the AI model you're using becomes temporarily unavailable — or can't be found at all — Rebel automatically falls back to a working model and carries on rather than stopping with an error. Brief streaming hiccups partway through a reply are retried on their own too. No action needed.
 
