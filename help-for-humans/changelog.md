@@ -67,6 +67,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 - **First-time tips, first time round** — New people who quit and reopened Rebel soon after setting it up never saw the first-time tips, because Rebel decided they'd already seen them. Now they appear when you first need them, restart or no restart.
 
+- **Quitting keeps your latest changes** — When you quit, Rebel now sends recent changes that had not yet reached your cloud before it closes, and gives file uploads a few seconds to finish. Any upload still unfinished is sent again next time you open Rebel. Closing time, done properly.
+
 - **Start now, now with reasons** — On the very first screen, pressing **Start now** before ticking the licence agreement used to do nothing at all, which looked a lot like a broken app. It now tells you to tick the box first.
 
 - **Try again after answering a question** — If Rebel stumbles right after you answer one of its questions, or when it checks back on something, **Try again** now picks up where it left off on the desktop app, as it already did on web and phone. No more being told to type “carry on”.
