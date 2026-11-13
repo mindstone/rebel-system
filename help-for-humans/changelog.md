@@ -49,6 +49,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **Start now, now with reasons** — On the very first screen, pressing **Start now** before ticking the licence agreement used to do nothing at all, which looked a lot like a broken app. It now tells you to tick the box first.
+
 - **Try again after answering a question** — If Rebel stumbles right after you answer one of its questions, or when it checks back on something, **Try again** now picks up where it left off on the desktop app, as it already did on web and phone. No more being told to type “carry on”.
 
 - **Your words stay put** — Typed something in **Something else** on one of Rebel's questions, then picked an option? The text is no longer thrown away. On a question where you can pick several, it is sent along with your picks; on a pick-one question it waits for you to come back to it, and the card waits for **Submit** rather than sending itself.
