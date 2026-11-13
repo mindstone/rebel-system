@@ -89,7 +89,19 @@ If the user wants to keep an existing folder **outside** the Rebel workspace but
    - Absolute path to the existing folder (e.g. `/Users/yourname/Dropbox/ClientX` or `C:\Users\YourName\Documents\ClientX`).
    - That the user understands this will create a **link** under the Rebel workspace.
 
-2. From the Rebel workspace root, propose OS-specific commands:
+2. **Write the README first, before any link or folder.**
+
+   **If saving the README is refused or declined, stop: make no link and no folders, and tell the user nothing was connected.**
+
+   If the folder has no `README.md` with `rebel_space_description` frontmatter:
+
+   - Read its `README.md` if there is one, and keep every line of it: add only the frontmatter block at the top. If there is none, create it from the template (step 4 of section 2).
+   - Write it through the folder's own absolute path (`/absolute/path/to/source/folder/README.md`), never through `<Space Name>/` under the workspace: the link doesn't exist yet.
+   - Wait for that write to succeed. If it is refused or declined, for any reason, stop there: don't write the README another way (a shell command, the link path, a different tool), and create no link and no folders. Tell the user plainly that nothing was linked or created and why. If they then approve it, write it again the same way, then make the link with the step 3 command: a Space is connected only by that link, never by writing a settings file.
+
+   Only once the README is saved, create the link below.
+
+3. From the Rebel workspace root, propose OS-specific commands:
 
    - **macOS / Linux** (symbolic link):
 
@@ -103,13 +115,13 @@ If the user wants to keep an existing folder **outside** the Rebel workspace but
      mklink /J "<Space Name>" "C:\Path\To\Source\Folder"
      ```
 
-3. Rules:
+4. Rules:
 
    - Run these commands **from the Rebel workspace root**, so the link appears as `<workspace_root>/<Space Name>`.
    - Only create links to **local folders** that the OS can watch reliably.
    - Avoid linking where symlinks are known to be fragile (e.g. from Google Drive paths, to network shares). If unavoidable, confirm the user understands Windows Developer Mode vs junctions, Cursor indexing limits for external links, and keep link depth shallow.
 
-4. After creating the link, treat `<Space Name>` under the Rebel workspace exactly like a regular space folder and initialise its structure as below (without overwriting existing content).
+5. After creating the link, initialise its structure as below (without overwriting existing content), still writing through the folder's own absolute path rather than the link until the space shows up in Rebel.
 
 ### 4. Initialise / verify space structure
 

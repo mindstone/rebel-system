@@ -63,7 +63,10 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **Spaces and blocked folders, tidied up** — Add Space now refuses Rebel's own Library folder and says why, keeps what you typed when you pick another folder, and explains when a folder's settings come from its README and that **Remove link** keeps your files. If setup fails, Rebel names the actual cause. A Space whose folder Rebel can't open stays listed with a warning, and one you removed no longer comes back as "Ready to add". Settings now has **Block a folder…**: a Block wins over a folder you'd allowed inside it, and Rebel says so, including when you attach a file from a Blocked folder. Fewer surprises, more say.
+
 - **The notetaker turns up late rather than not at all** — With auto-join on, Rebel now sends the notetaker to a meeting at any point until it ends, not only in its first two minutes. If your laptop was asleep or offline when the meeting started, the notetaker joins as soon as Rebel is back. It still never joins the same meeting twice. Fashionably late beats absent.
+
 - **Model setup tells the truth** — In **Settings → Models**, a Test result stays put when you leave and come back, and a failed Test says why in plain words, without repeating keys or addresses. A model whose account you've disconnected shows **Needs setup** instead of an old **Works**, and disconnecting an account takes it off your In use and Backup list. A non-Claude model can no longer be sent to Anthropic by mistake; Rebel says so and keeps your message. ChatGPT-subscription replies no longer stop partway after a sign-in renewal, and the note when your monthly Mindstone allowance runs out is shorter and says what to do. Green now means green.
 
 - **Long transcripts, saved whole** — Ask Rebel to save a long meeting transcript, email thread or document into a file, and it now copies the full text across instead of giving up and saying it couldn't. If Rebel didn't try something, it now says so plainly, and asking "Why not?" gets the real reason and then the job done. No more mystery shrugs.
@@ -590,7 +593,7 @@ What's new in Rebel. We ship fast, so there's always something.
 
 - **Cloud repair joins the conversation** — Ask Rebel to check your cloud or run the same check and fix as Settings. It can inspect the evidence and recent cloud logs, with your usual Safety Rules. Fewer mystery warnings; no terminal required.
 
-- **Reading, minus the paperwork** — Reading files no longer asks by default. Your Safety Rules now cover reads, and folders you've blocked stay blocked. The filing cabinet has retired its receptionist.
+- **Reading, minus the paperwork** — Reading files no longer asks by default, and folders you've blocked stay blocked. To keep Rebel out of a folder, Block it: your Safety Rules don't hold back ordinary reads. The filing cabinet has retired its receptionist.
 - **Always means Always** — An Always you set on your phone or the web now works on your computer too, for the same connected service. It also stays put when Rebel re-rates a tool's risk. Apparently "always" needed a reminder.
 - **Report a hiccup in one click** — When a conversation hits an error in the desktop app, its error card now offers **Send report** next to the way to fix it. One click sends this conversation, recent app logs and app checks privately to Mindstone, and the **i** says what goes. It asks at most once an hour and twice a day, and **Don't ask again** means it. If you already share logs weekly, you can let it send without asking.
 - **Your saved permissions now move with you to a new computer** — The things you've told Rebel it can do without asking are now kept in your Library. Open the same Library on a new computer and Rebel already knows them (folder choices stay with the computer they were made on). Close Rebel on the old computer first.
