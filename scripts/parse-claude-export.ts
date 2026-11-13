@@ -1,4 +1,4 @@
-#!/usr/bin/env -S npx -y -p tsx@^4 tsx
+#!/usr/bin/env -S npx -y -p tsx@4.23.15 tsx
 
 /**
  * Claude.ai Export Parser
@@ -17,11 +17,11 @@
  * to avoid memory issues.
  *
  * Usage:
- *   npx tsx rebel-system/scripts/parse-claude-export.ts <export-folder>
- *   npx tsx rebel-system/scripts/parse-claude-export.ts ~/Downloads/claude-export
- *   npx tsx rebel-system/scripts/parse-claude-export.ts ~/Downloads/claude-export --output ~/Documents
- *   npx tsx rebel-system/scripts/parse-claude-export.ts ~/Downloads/claude-export --verbose
- *   npx tsx rebel-system/scripts/parse-claude-export.ts ~/Downloads/claude-export --json
+ *   npx -y -p tsx@4.23.15 tsx rebel-system/scripts/parse-claude-export.ts <export-folder>
+ *   npx -y -p tsx@4.23.15 tsx rebel-system/scripts/parse-claude-export.ts ~/Downloads/claude-export
+ *   npx -y -p tsx@4.23.15 tsx rebel-system/scripts/parse-claude-export.ts ~/Downloads/claude-export --output ~/Documents
+ *   npx -y -p tsx@4.23.15 tsx rebel-system/scripts/parse-claude-export.ts ~/Downloads/claude-export --verbose
+ *   npx -y -p tsx@4.23.15 tsx rebel-system/scripts/parse-claude-export.ts ~/Downloads/claude-export --json
  *
  * Output:
  *   - Console summary of what was found
@@ -118,7 +118,7 @@ Claude.ai Export Parser
 Parses a Claude.ai data export and extracts valuable content for migration to Rebel.
 
 Usage:
-  npx tsx parse-claude-export.ts <export-folder> [options]
+  npx -y -p tsx@4.23.15 tsx parse-claude-export.ts <export-folder> [options]
 
 Arguments:
   export-folder    Path to the unzipped Claude.ai export folder
@@ -130,10 +130,10 @@ Options:
   -h, --help           Show this help message
 
 Examples:
-  npx tsx parse-claude-export.ts ~/Downloads/claude-export
-  npx tsx parse-claude-export.ts ~/Downloads/claude-export --output ~/Documents
-  npx tsx parse-claude-export.ts ~/Downloads/claude-export --verbose
-  npx tsx parse-claude-export.ts ~/Downloads/claude-export --json > export.json
+  npx -y -p tsx@4.23.15 tsx parse-claude-export.ts ~/Downloads/claude-export
+  npx -y -p tsx@4.23.15 tsx parse-claude-export.ts ~/Downloads/claude-export --output ~/Documents
+  npx -y -p tsx@4.23.15 tsx parse-claude-export.ts ~/Downloads/claude-export --verbose
+  npx -y -p tsx@4.23.15 tsx parse-claude-export.ts ~/Downloads/claude-export --json > export.json
 
 Output:
   - claude-imported-context.md: Markdown file with extracted content ready for Rebel

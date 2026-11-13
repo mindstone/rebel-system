@@ -1,4 +1,4 @@
-#!/usr/bin/env -S npx -y -p tsx@^4 tsx
+#!/usr/bin/env -S npx -y -p tsx@4.23.15 tsx
 
 /**
  * ChatGPT Export Parser
@@ -13,11 +13,11 @@
  * to avoid memory issues. Custom instructions and memories are always extracted.
  *
  * Usage:
- *   npx tsx rebel-system/scripts/parse-chatgpt-export.ts <export-folder>
- *   npx tsx rebel-system/scripts/parse-chatgpt-export.ts ~/Downloads/chatgpt-export
- *   npx tsx rebel-system/scripts/parse-chatgpt-export.ts ~/Downloads/chatgpt-export --output ~/Documents
- *   npx tsx rebel-system/scripts/parse-chatgpt-export.ts ~/Downloads/chatgpt-export --verbose
- *   npx tsx rebel-system/scripts/parse-chatgpt-export.ts ~/Downloads/chatgpt-export --json
+ *   npx -y -p tsx@4.23.15 tsx rebel-system/scripts/parse-chatgpt-export.ts <export-folder>
+ *   npx -y -p tsx@4.23.15 tsx rebel-system/scripts/parse-chatgpt-export.ts ~/Downloads/chatgpt-export
+ *   npx -y -p tsx@4.23.15 tsx rebel-system/scripts/parse-chatgpt-export.ts ~/Downloads/chatgpt-export --output ~/Documents
+ *   npx -y -p tsx@4.23.15 tsx rebel-system/scripts/parse-chatgpt-export.ts ~/Downloads/chatgpt-export --verbose
+ *   npx -y -p tsx@4.23.15 tsx rebel-system/scripts/parse-chatgpt-export.ts ~/Downloads/chatgpt-export --json
  *
  * Output:
  *   - Console summary of what was found
@@ -125,7 +125,7 @@ ChatGPT Export Parser
 Parses a ChatGPT data export and extracts valuable content for migration to Rebel.
 
 Usage:
-  npx tsx parse-chatgpt-export.ts <export-folder> [options]
+  npx -y -p tsx@4.23.15 tsx parse-chatgpt-export.ts <export-folder> [options]
 
 Arguments:
   export-folder    Path to the unzipped ChatGPT export folder
@@ -137,10 +137,10 @@ Options:
   -h, --help           Show this help message
 
 Examples:
-  npx tsx parse-chatgpt-export.ts ~/Downloads/chatgpt-export
-  npx tsx parse-chatgpt-export.ts ~/Downloads/chatgpt-export --output ~/Documents
-  npx tsx parse-chatgpt-export.ts ~/Downloads/chatgpt-export --verbose
-  npx tsx parse-chatgpt-export.ts ~/Downloads/chatgpt-export --json > export.json
+  npx -y -p tsx@4.23.15 tsx parse-chatgpt-export.ts ~/Downloads/chatgpt-export
+  npx -y -p tsx@4.23.15 tsx parse-chatgpt-export.ts ~/Downloads/chatgpt-export --output ~/Documents
+  npx -y -p tsx@4.23.15 tsx parse-chatgpt-export.ts ~/Downloads/chatgpt-export --verbose
+  npx -y -p tsx@4.23.15 tsx parse-chatgpt-export.ts ~/Downloads/chatgpt-export --json > export.json
 
 Output:
   - chatgpt-imported-context.md: Markdown file with extracted content ready for Rebel

@@ -1,4 +1,4 @@
-#!/usr/bin/env -S npx -y -p tsx@^4 tsx
+#!/usr/bin/env -S npx -y -p tsx@4.23.15 tsx
 
 /**
  * Markdown Description Scanner
@@ -10,11 +10,11 @@
  * - Documentation validation (find docs missing descriptions)
  *
  * Usage:
- *   npx tsx rebel-system/scripts/scan-md-descriptions.ts <path>
- *   npx tsx rebel-system/scripts/scan-md-descriptions.ts rebel-system/skills/
- *   npx tsx rebel-system/scripts/scan-md-descriptions.ts rebel-system/skills/ --verbose
- *   npx tsx rebel-system/scripts/scan-md-descriptions.ts rebel-system/skills/ --flat
- *   npx tsx rebel-system/scripts/scan-md-descriptions.ts . --filter "AGENTS.md"
+ *   npx -y -p tsx@4.23.15 tsx rebel-system/scripts/scan-md-descriptions.ts <path>
+ *   npx -y -p tsx@4.23.15 tsx rebel-system/scripts/scan-md-descriptions.ts rebel-system/skills/
+ *   npx -y -p tsx@4.23.15 tsx rebel-system/scripts/scan-md-descriptions.ts rebel-system/skills/ --verbose
+ *   npx -y -p tsx@4.23.15 tsx rebel-system/scripts/scan-md-descriptions.ts rebel-system/skills/ --flat
+ *   npx -y -p tsx@4.23.15 tsx rebel-system/scripts/scan-md-descriptions.ts . --filter "AGENTS.md"
  *
  * Output format (hierarchical, default):
  *   {
@@ -147,7 +147,7 @@ Scans a folder recursively for .md files and extracts their \`description\`
 field from YAML frontmatter.
 
 Usage:
-  npx tsx scan-md-descriptions.ts <folder> [options]
+  npx -y -p tsx@4.23.15 tsx scan-md-descriptions.ts <folder> [options]
 
 Options:
   --verbose, -v    Show detailed output during scanning
@@ -156,10 +156,10 @@ Options:
   --help, -h       Show this help message
 
 Examples:
-  npx tsx scan-md-descriptions.ts rebel-system/skills/
-  npx tsx scan-md-descriptions.ts rebel-system/skills/ --verbose
-  npx tsx scan-md-descriptions.ts rebel-system/skills/ --flat
-  npx tsx scan-md-descriptions.ts . --filter "AGENTS.md"
+  npx -y -p tsx@4.23.15 tsx scan-md-descriptions.ts rebel-system/skills/
+  npx -y -p tsx@4.23.15 tsx scan-md-descriptions.ts rebel-system/skills/ --verbose
+  npx -y -p tsx@4.23.15 tsx scan-md-descriptions.ts rebel-system/skills/ --flat
+  npx -y -p tsx@4.23.15 tsx scan-md-descriptions.ts . --filter "AGENTS.md"
 
 Output (hierarchical, default):
   {

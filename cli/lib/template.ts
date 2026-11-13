@@ -38,8 +38,8 @@ async function getNunjucksEnv(): Promise<import('nunjucks').Environment> {
   } catch {
     throw new Error(
       'Failed to load nunjucks. Make sure to run with the full shebang:\n' +
-      '#!/usr/bin/env -S npx -y -p tsx@^4 -p nunjucks tsx\n\n' +
-      'Or install the package: npm install nunjucks'
+      '#!/usr/bin/env -S npx -y -p tsx@4.23.15 -p nunjucks@3.2.4 tsx\n\n' +
+      'Or install the package: npm install nunjucks@3.2.4'
     );
   }
 }

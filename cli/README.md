@@ -77,11 +77,11 @@ cd rebel-system/cli
 The shebang approach doesn't work on Windows. Use explicit npx invocation:
 
 ```powershell
-npx -y -p tsx@^4 tsx cli/rebel-cli.ts list
-npx -y -p tsx@^4 tsx cli/rebel-cli.ts validate
+npx -y -p tsx@4.23.15 tsx cli/rebel-cli.ts list
+npx -y -p tsx@4.23.15 tsx cli/rebel-cli.ts validate
 
 # run command needs additional packages
-npx -y -p tsx@^4 -p @anthropic-ai/sdk -p nunjucks tsx cli/rebel-cli.ts run <skill> "message"
+npx -y -p tsx@4.23.15 -p @anthropic-ai/sdk@1.5.0 -p nunjucks@3.2.4 tsx cli/rebel-cli.ts run <skill> "message"
 ```
 
 ---

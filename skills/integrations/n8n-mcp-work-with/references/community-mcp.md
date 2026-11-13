@@ -6,7 +6,7 @@ Catalog id: `n8n-community`. See [SKILL.md](../SKILL.md) for when to pick this v
 
 `czlonkowski/n8n-mcp` (<https://github.com/czlonkowski/n8n-mcp>), a community MCP server that bundles deep n8n node knowledge (1,650+ node schemas, 2,300+ templates, validation, autofix) and acts as a proxy to the n8n public REST API for workflow management.
 
-- Runs as a separate process — local stdio (`npx -y n8n-mcp`), local HTTP, Docker, or the maintainer's hosted SaaS at `dashboard.n8n-mcp.com`.
+- Runs as a separate process — local stdio (`npx -y n8n-mcp@<version>`), local HTTP, Docker, or the maintainer's hosted SaaS at `dashboard.n8n-mcp.com`.
 - Talks to your n8n instance via the public REST API (`/api/v1/...`) — **not** the same endpoint as the Official MCP.
 - Independent of the Official MCP — you can run both side-by-side.
 
@@ -23,7 +23,7 @@ Catalog id: `n8n-community`. See [SKILL.md](../SKILL.md) for when to pick this v
    - Non-enterprise API keys have full account access. Treat like a powerful secret.
 
 3. **Configure the connector**:
-   - Catalog id `n8n-community` runs via `npx -y n8n-mcp` in stdio mode.
+   - Catalog id `n8n-community` runs a pinned `n8n-mcp` release via `npx`, in stdio mode. If you add it by hand, pin the version too (`npx -y n8n-mcp@<version>`), never bare `n8n-mcp`.
    - Required env vars:
      ```
      MCP_MODE=stdio
@@ -112,7 +112,7 @@ These work without any n8n instance or API key. They use only the local SQLite o
 | All `n8n_*` tools fail with 404 | Free-trial Cloud, or self-hosted instance with public API disabled | Upgrade to paid Cloud plan, or enable public API in self-hosted config |
 | All `n8n_*` tools fail with 401 | Wrong credential — using MCP Access Token (`aud=mcp-server-api`) instead of REST API key | Generate a real REST API key in Settings → n8n API |
 | `n8n_test_workflow` errors with "no externally triggerable entrypoint" | Workflow has no Webhook/Form/Chat trigger | Add one, or use the Official MCP's `execute_workflow` instead |
-| `npx -y n8n-mcp` is slow on first boot | First fetch downloads the package + prebuilt SQLite (~50MB) | Pre-warm by running it once during connector setup |
+| `npx -y n8n-mcp@<version>` is slow on first boot | First fetch downloads the package + prebuilt SQLite (~50MB) | Pre-warm by running it once during connector setup |
 | Stdio MCP crashes / disconnects | Renderer's MCP supervisor restarts it on crash; check logs for the npm subprocess | Check Rebel's MCP logs in `~/Library/Application\ Support/mindstone-rebel/logs/` |
 
 ## When NOT to use the Community MCP
