@@ -55,6 +55,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 - **Neighbouring links stay two links** — Two links right next to each other in a Library file, or a web address pasted up against a link, no longer merge into one link pointing at the second address when you save. Each keeps its own address.
 
+- **Check and fix stops restarting your cloud twice** — When your cloud had stopped, **Check and fix** started it and then restarted it again to re-save an access key it already had. It now checks first, so your cloud is back sooner and only restarts once.
+
 - **First-time tips, first time round** — New people who quit and reopened Rebel soon after setting it up never saw the first-time tips, because Rebel decided they'd already seen them. Now they appear when you first need them, restart or no restart.
 
 - **Start now, now with reasons** — On the very first screen, pressing **Start now** before ticking the licence agreement used to do nothing at all, which looked a lot like a broken app. It now tells you to tick the box first.
