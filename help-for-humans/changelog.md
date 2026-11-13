@@ -63,6 +63,7 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **The notetaker turns up late rather than not at all** — With auto-join on, Rebel now sends the notetaker to a meeting at any point until it ends, not only in its first two minutes. If your laptop was asleep or offline when the meeting started, the notetaker joins as soon as Rebel is back. It still never joins the same meeting twice. Fashionably late beats absent.
 - **Model setup tells the truth** — In **Settings → Models**, a Test result stays put when you leave and come back, and a failed Test says why in plain words, without repeating keys or addresses. A model whose account you've disconnected shows **Needs setup** instead of an old **Works**, and disconnecting an account takes it off your In use and Backup list. A non-Claude model can no longer be sent to Anthropic by mistake; Rebel says so and keeps your message. ChatGPT-subscription replies no longer stop partway after a sign-in renewal, and the note when your monthly Mindstone allowance runs out is shorter and says what to do. Green now means green.
 
 - **Long transcripts, saved whole** — Ask Rebel to save a long meeting transcript, email thread or document into a file, and it now copies the full text across instead of giving up and saying it couldn't. If Rebel didn't try something, it now says so plainly, and asking "Why not?" gets the real reason and then the job done. No more mystery shrugs.
