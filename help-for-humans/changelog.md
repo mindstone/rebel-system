@@ -270,6 +270,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 - **Reading isn't editing** — Rebel's activity list now says **Reading** or **Looking through** when Rebel only opened, listed or searched a file or folder, and keeps **Editing** for real changes. It had been saying "Editing" about folders it merely glanced at, which is a lot of drama for a look.
 
+- **Menus that fit the window** — In a short window, a conversation's menu could run off the edge and take its Delete option with it. Menus now fit the window and scroll, and in the conversation, operator and workshop menus the arrow keys walk through every option. No more chasing buttons off-screen.
+
 ## v0.4.102 — Nov 7, 2026
 
 ### Highlights
