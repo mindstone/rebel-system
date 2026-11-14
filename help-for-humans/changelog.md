@@ -75,6 +75,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 - **Phone pairing directions, checked** — The phone's pairing screen now points to **Settings → Workspace → Continue on mobile**, the same words the computer shows, and the code you paste is called the **access token** on your computer, the web and your phone. One thing, one name.
 
+- **A fairer cloud sync notice** — When your cloud doesn't accept a conversation's latest changes, the cloud icon's notice no longer claims the conversation is damaged or that **Try again** only works after a repair. It says the changes are safe on this computer and that **Try again** sends them again. Less alarm, same button.
+
 - **Every file a tool touched, shown** — With some AI models, Rebel could miss which files a tool worked on, so file activity, memory indicators, step details and failure notices quietly left them out. They now show up whichever model you use.
 
 - **Photos sent mid-task go through** — Sending a photo of a few megabytes while Rebel was still working on something could get it refused with "One of those files couldn't be read", even though nothing was wrong with it. Rebel now takes it, whether you attach it or @-mention it. Your photo was fine all along.
