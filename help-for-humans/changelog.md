@@ -26,6 +26,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Improvements
 
+- **"Always allow" says what you're agreeing to** — The confirm step after **Always allow** or **Block** now uses the button's own words and tells you where to change your mind: **Settings → Privacy & Safety → What Rebel can do**. Everything you already allowed or blocked stays exactly as it was, so nothing asks you again. Fine print, but finer.
+
 - **Full screen for any view** — Every app or view in a conversation, and the one pinned beside it, now has a full-screen button. Zoom from 25% to 400% with the − / + buttons, Ctrl/Cmd with + or −, or a pinch; the view keeps updating while it's open, and Esc puts it back. Squinting is now optional.
 
 - **Some connector tools stay off for safety** — A few tools in community connectors (ones built by other people, not by us) could read files or run code on your computer without the checks Rebel puts its own tools through, so they are now turned off, even if you allowed them before. Pipedrive can no longer upload files from your computer, and Playwright, the connector that drives a web browser for you, can no longer run code on your computer itself. Everything else in both still works, and there is nothing for you to do. Rebel says plainly when a tool is off and why.
