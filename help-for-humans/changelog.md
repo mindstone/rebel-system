@@ -249,6 +249,12 @@ What's new in Rebel. We ship fast, so there's always something.
 
 - **One less thing to dismiss** — When Rebel loses track of a step that only read information, it no longer leaves a "could not confirm whether this ran" notice: nothing changed, so there's nothing to check. Steps that could have changed something still tell you what to check.
 
+- **Settings search goes where it says** — Picking a Settings search result now lands on that row and lights the right **On this page** shortcut (the row of section buttons at the top of each Settings page), even while lists above it are still loading; scroll or click and it lets go. Those buttons now put each section just under the row, and search only offers what you can actually see: no **Shared links** section unless you use a Rebel cloud. Searching "Destroy cloud instance" takes you to the button and leaves pressing it to you.
+
+- **Windows words on Windows** — Windows and Linux users no longer get sent to Mac System Settings: shortcut tips name your own keys, folder buttons say **Show in folder**, and when Rebel can't reach your Library folder you can choose another one right there. A voice model whose install Windows briefly blocked now finishes instead of failing at the last step.
+
+- **One more look before destroying a stray cloud** — **Destroy it** on a cloud this computer isn't connected to now asks first and says that work kept only in that cloud may be lost. Holding down Enter can no longer press it twice and destroy the cloud by accident.
+
 ## v0.4.102 — Nov 7, 2026
 
 ### Highlights
