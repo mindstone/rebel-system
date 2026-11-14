@@ -275,6 +275,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 - **Menus that fit the window** — In a short window, a conversation's menu could run off the edge and take its Delete option with it. Menus now fit the window and scroll, and in the conversation, operator and workshop menus the arrow keys walk through every option. No more chasing buttons off-screen.
 
+- **Deleted messages stay deleted** — A message you deleted from a conversation could come back later, for example after you edited another message or reopened the conversation. Now it stays gone. Closing Rebel could also, rarely, remove a message you had not deleted; that no longer happens. Delete means delete, and nothing else.
+
 ## v0.4.102 — Nov 7, 2026
 
 ### Highlights
