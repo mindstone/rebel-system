@@ -150,14 +150,14 @@ Configure the trigger word and response mode (voice or chat) in **Settings → M
 
 Answers start with the current meeting transcript. By default, Rebel answers from this meeting only.
 
-The saved default is initially Off. To let new meetings also use your notes, past meetings and connected apps such as email and calendar, enable **Also answer from my notes and connected apps** in **Settings → Meetings**. This saved default applies to new meetings.
+The saved default is initially Off. To let new meetings also use your notes, past meetings and Connectors such as email and calendar, enable **Also answer from my notes and Connectors** in **Settings → Meetings**. This saved default applies to new meetings.
 
 During a meeting, the brain button (🧠) in the recording indicator at the top of Rebel's title bar controls wider context for that meeting:
 
 | Setting | What Rebel Can Answer From | Example |
 |---------|---------------------------|---------|
 | **Off** | Only what's been said in this meeting | "What did Sarah just say about the deadline?" |
-| **On** | Your notes, past meetings and connected apps | "What deadline did we agree on in last week's meeting?" |
+| **On** | Your notes, past meetings and Connectors | "What deadline did we agree on in last week's meeting?" |
 
 **How to use it:**
 
@@ -166,9 +166,9 @@ During a meeting, the brain button (🧠) in the recording indicator at the top 
 3. Meeting participants can ask questions like "Spark, what was the budget we discussed last month?"
 4. Rebel searches the enabled sources and speaks (or chats) the answer
 
-The brain choice is for this meeting only. It survives a connection recovery and an app restart. To change the saved default for new meetings, use **Also answer from my notes and connected apps** in **Settings → Meetings**; changing that saved default during a meeting affects new meetings, not the one already under way.
+The brain choice is for this meeting only. It survives a connection recovery and an app restart. To change the saved default for new meetings, use **Also answer from my notes and Connectors** in **Settings → Meetings**; changing that saved default during a meeting affects new meetings, not the one already under way.
 
-**Privacy consideration:** Answers that use wider context are checked against your Safety Rules before they are shared with everyone in the meeting — either spoken aloud or posted in the meeting chat. You can review those rules in [Settings → Privacy & Safety](rebel://settings/safety#safetyRules). Only enable this when you're comfortable sharing information from your notes, past meetings or connected apps with the current participants.
+**Privacy consideration:** Answers that use wider context are checked against your Safety Rules before they are shared with everyone in the meeting — either spoken aloud or posted in the meeting chat. You can review those rules in [Settings → Privacy & Safety](rebel://settings/safety#safetyRules). Only enable this when you're comfortable sharing information from your notes, past meetings or Connectors with the current participants.
 
 Meeting questions only look things up, including when you ask aloud. If an answer is withheld, the notetaker directs the question back to its owner. If someone asks Rebel to send, save or change something, it explains that the owner can do it in Rebel. It does not automatically forward or queue the request.
 
@@ -178,8 +178,8 @@ Meeting questions only look things up, including when you ask aloud. If an answe
 - Recurring meetings where you want to recall previous decisions
 
 **When to leave it off:**
-- Meetings with external parties where your notes, past meetings or connected apps contain sensitive info
-- When you do not want Rebel to use your notes, past meetings or connected apps
+- Meetings with external parties where your notes, past meetings or Connectors contain sensitive info
+- When you do not want Rebel to use your notes, past meetings or Connectors
 - General meetings where transcript-only context is sufficient
 
 

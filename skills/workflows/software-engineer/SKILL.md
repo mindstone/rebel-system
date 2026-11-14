@@ -1,6 +1,6 @@
 # The Software Engineer Workflow
 
-Instructions for orchestrating coding tasks — building MCP servers, plugins, scripts, and integrations — by delegating to specialized subagents and synthesizing their outputs.
+Instructions for orchestrating coding tasks — building MCP servers, scripts, and integrations — by delegating to specialized subagents and synthesizing their outputs.
 
 > **Sync Notice** — Derived from Rebel's internal engineering workflow (2026-04-09). Token-efficient user-facing derivative. When updating the upstream quality philosophy, core phase structure, or review principles, check whether changes should propagate here.
 
@@ -13,7 +13,7 @@ This workflow coordinates structured coding work — the kind that benefits from
 **When to use this workflow:** When a coding task is complex enough to benefit from planning and review. Examples:
 
 - "Build me an MCP server for [service]" (→ also reference the [build-custom-mcp-server](../../skills/coding/build-custom-mcp-server/SKILL.md) skill)
-- "Create a plugin that shows [dashboard/tracker/view]" (→ also reference the [build-custom-plugin](../../skills/system/build-custom-plugin/SKILL.md) skill)
+- "Create an app that shows [dashboard/tracker/view]" (→ also reference the [build-app](../../apps/build-app/SKILL.md) skill)
 - "Write a script that processes [data] and outputs [format]"
 - "Integrate [API] with [existing system]"
 - Any multi-file coding task requiring research, planning, and verification
@@ -36,7 +36,7 @@ This workflow uses four roles:
 - **Token-efficient** — Single planner, single reviewer. Quality through fresh perspective, not parallel redundancy.
 
 **How this relates to existing skills:**
-Skills are atomic operations (building an MCP server, creating a plugin). This workflow *orchestrates* skills and subagents across multiple steps. A Software Engineer task might invoke the `build-custom-mcp-server` skill's phases as part of its execution. Skills are the building blocks; the Software Engineer is the construction plan.
+Skills are atomic operations (building an MCP server, creating an app). This workflow *orchestrates* skills and subagents across multiple steps. A Software Engineer task might invoke the `build-custom-mcp-server` skill's phases as part of its execution. Skills are the building blocks; the Software Engineer is the construction plan.
 
 **When invoked by another skill:**
 If another skill delegates coding work to this workflow (e.g., [build-custom-mcp-server](../../skills/coding/build-custom-mcp-server/SKILL.md) Phase 4, [extend-mcp-server](../../skills/coding/extend-mcp-server/SKILL.md) Phase 4), treat that skill as the **parent workflow**.
@@ -263,7 +263,7 @@ Log: `[SOFTWARE-ENGINEER] Review synthesized. Accepted: N, Rejected: M. Final co
    - Run all available validation commands (lint, type check, build)
    - Run tests — both existing and any new tests added
    - For MCPs: verify startup, tool registration, and basic tool execution
-   - For plugins: verify the plugin loads and renders
+   - For apps: verify the app opens and renders
 
 2. **Verify completeness** — Check the working document's definition of done. Has every item been addressed?
 
@@ -310,7 +310,7 @@ The working document is the task's internal memory — the source of truth that 
 
 ### 2. Deliverables (task-dependent)
 
-The actual code, scripts, configurations, or other outputs the user asked for. Location depends on the task — MCP servers go in their project directory, plugins in the plugin system, scripts where specified.
+The actual code, scripts, configurations, or other outputs the user asked for. Location depends on the task — MCP servers go in their project directory, apps in the Library, scripts where specified.
 
 ---
 
@@ -347,9 +347,9 @@ When invoked from [build-custom-mcp-server](../../skills/coding/build-custom-mcp
 - **Phase 5 (Test):** Use the testing strategy from the testing guide
 - **Working document:** Place at `docs/build-plan.md` (new MCP) or `docs/extension-plan.md` (extending) inside the project directory — this file is included in the contribution PR
 
-### Plugins
+### Apps
 
-When building plugins, reference the [build-custom-plugin](../../skills/system/build-custom-plugin/SKILL.md) skill for the full API, UI components, and constraints.
+When building an app, read the [build-app](../../apps/build-app/SKILL.md) skill. Save with `rebel_save_app`; never generate TSX plugins.
 
 ---
 

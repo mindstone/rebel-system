@@ -18,7 +18,7 @@ Settings is organised into eight destinations:
 - **Privacy & Safety** — Safety Rules, trusted tools, Privacy Mode, and activity log
 - **Account & Preferences** — profile, appearance, and notifications
 - **Usage** — API usage and estimated costs
-- **Advanced** — diagnostics, updates, plugins, developer tools, and advanced operations
+- **Advanced** — diagnostics, updates, apps, developer tools, and advanced operations
 
 If your window is narrow, the Settings sidebar may collapse. Expand it to see the full destination list.
 
@@ -88,7 +88,7 @@ The page is organised into two main areas:
 
 **To connect a service:** click the connector and follow the authentication or setup steps.
 
-At the bottom of the Connectors page, open **Advanced** if you need connector *platform* settings (for example letting other desktop apps use Rebel as an MCP server, interactive views, or file paths for configuration). This is different from **Settings → Advanced**, which covers app-wide diagnostics, updates, and plugins.
+At the bottom of the Connectors page, open **Advanced** if you need connector *platform* settings (for example letting other desktop apps use Rebel as an MCP server, interactive views, or file paths for configuration). This is different from **Settings → Advanced**, which covers app-wide diagnostics, updates, and apps.
 
 See [MCP tools and other knowledge sources](library://rebel-system/help-for-humans/mcp-connectors-tools-and-integrations.md) for the full guide.
 
@@ -178,13 +178,13 @@ Use **Settings → Usage** for:
 
 ## Advanced
 
-Troubleshooting, updates, plugins, and power-user controls.
+Troubleshooting, updates, apps, and power-user controls.
 
 Use **Settings → Advanced** for:
 
 - **Support & Diagnostics** — system health checks, diagnostics exports, safe mode, onboarding actions
 - **App updates** — current version, changelog, and update checks
-- **Plugins** — plugin catalog, shared plugins, and management tools
+- **Apps** — earlier app management tools (browse your apps in Library → Apps)
 - **Prevent sleep** — keeps your computer awake while Rebel is working on a task, so long-running jobs aren't interrupted by your machine going to sleep (off by default)
 - **Context management** — toggle automatic context management on or off. When enabled, Rebel automatically keeps long conversations within the AI model's limits by summarising earlier context. Disable it if you prefer to manage conversation length manually
 - **Developer Tools** — available when Developer Mode is enabled

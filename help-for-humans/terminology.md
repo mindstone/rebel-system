@@ -81,8 +81,8 @@ Bring multiple AI models into one conversation for second opinions. Rebel consul
 ### Skill
 Step-by-step instructions (in Markdown files) that tell AI agents how to perform actions or handle specific workflows — think recipes for common tasks like meeting prep, documentation writing, research, or system maintenance. Stored in `skills/` folders across spaces (and in the shared `rebel-system/skills/` core). Every edit is tracked with version history and contributor attribution, so you can review changes, compare versions, and revert if needed. (Also called "playbooks" in v1)
 
-### Plugin
-A custom tab that extends Rebel's sidebar. Ask Rebel to build one — describe what you want and it writes the code, compiles it, and adds the tab automatically. Plugins can search your files, embed AI helpers, display calendar events, and more. Share plugins with your team through shared Spaces. ([Plugins and Custom Tabs](library://rebel-system/help-for-humans/plugins-and-custom-tabs.md))
+### App
+A page, dashboard or small tool you keep in Rebel. Find it in **Library → Apps**, pin it to **Your apps**, or share it through a Space. Pages use the same app view. Ask for updates when you need them; they run through Automations, using your own sign-ins for Connectors. ([Apps](library://rebel-system/help-for-humans/apps.md))
 
 ### Memory
 Your working area for personal or team-specific context and files inside a given space (for example a `memory/` folder under that space) - like your desk workspace for things you're actively working on. The auto-loaded memory now lives in the `README.md` file for that space (often the top-level `Chief-of-Staff/README.md` for personal context), and detailed context lives in `memory/topics/` files that are loaded on-demand.

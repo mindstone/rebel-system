@@ -26,6 +26,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Improvements
 
+- **Apps, all in one place** — Pages, dashboards and small tools are now Apps. Find them in Library → Apps; your earlier plugins came along with their data. The services you connect are called Connectors. One Rebel, fewer nouns. Updates run through Automations when you ask for them.
+
 - **Email drafts sign off as you** — When Rebel drafts an email for you, the draft now has its own **Signature** box under the message. Rebel fills it in for you: with the signature you used last, or, the first time, with the one you already set up in Gmail. If you edit the box, Rebel saves your new signature for future drafts when you press the draft's **Send** or **Feedback** button (Feedback asks Rebel to rework the draft); an edit to a draft you never send or rework isn't kept. The signature goes on once, at the end, so nobody gets "Best, Sam / Best, Sam" — no need to type it into the message yourself.
 
 - **Email drafts go out your way** — When more than one connected app can send an email draft, for example Outlook, or a sequence tool such as Mixmax, the draft now has a **Delivery** choice next to **Send**. Rebel picks your usual one; change it, choose which sequence and step if it's a sequence, and press **Send**. Nothing goes out before that, and drafts that only one app can send look exactly as before. Gmail no longer gets all the fun.

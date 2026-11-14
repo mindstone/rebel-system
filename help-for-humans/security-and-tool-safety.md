@@ -249,7 +249,7 @@ Rules work best when they're specific and actionable. Think about the situations
 A common wish is "let Rebel *prepare* things but never *pull the trigger*" — draft the email but don't send it, build the post but don't publish it. You have two ways to do this:
 
 - **Write a rule that distinguishes the actions.** Because your rules are read in plain English, you can say "Drafting emails is fine; always ask before sending" and Rebel will treat the two differently. This is the flexible option — it keeps the helpful half and gates the risky half.
-- **Turn an individual tool off entirely.** In **[Settings → Connectors](rebel://settings/tools)** you can disable a single tool within a connected app — for example, switch off "send email" while leaving "draft email" and "read email" on. A disabled tool simply can't be used; it's the firmest version of "never."
+- **Turn an individual tool off entirely.** In **[Settings → Connectors](rebel://settings/tools)** you can disable a single tool within a Connector — for example, switch off "send email" while leaving "draft email" and "read email" on. A disabled tool simply can't be used; it's the firmest version of "never."
 
 Rules are the right tool when you want nuance; turning a tool off is the right tool when you want a hard, no-exceptions boundary.
 

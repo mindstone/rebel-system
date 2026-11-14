@@ -63,7 +63,7 @@ Download IB Gateway from [Interactive Brokers](https://www.interactivebrokers.co
 | **Account Mode** | `paper` | `paper` for simulated trading, `live` for real money |
 | **Gateway Port** | `4002` | Paper: 4002, Live: 4001, TWS Paper: 7497, TWS Live: 7496 |
 | **Gateway Host** | `127.0.0.1` | Leave as-is unless Gateway runs on another machine |
-| **Client ID** | `1` | Must be unique per connected application |
+| **Client ID** | `1` | Must be unique per Connectorlication |
 
 4. Click **Connect**
 

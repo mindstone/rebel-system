@@ -19,7 +19,7 @@ This guide explains what makes Rebel different and helps you decide when to use 
 |---------|---------------------|---------------|----------|----------------------|-------|
 | Remembers you across sessions | Limited | No | Yes (daily logs) | No | **Yes** (structured memory spaces) |
 | Accesses your files | No | Yes (sandbox) | Yes | Yes (workspace) | **Yes** (workspace + spaces) |
-| Connects to work tools | Limited plugins | Basic (manual MCP) | Via messaging apps | MCP servers | **120+ plug-and-play connectors** |
+| Connects to work tools | Limited integrations | Basic (manual MCP) | Via messaging apps | MCP servers | **120+ plug-and-play connectors** |
 | Voice interaction | Basic | Basic dictation | Voice wake + talk | No | **Full (Listen + Speak + custom vocab)** |
 | Safety guardrails | Platform-level | Model-level | Minimal | Minimal | **App-layer tool + memory safety** |
 | Scheduled automation | No | Basic (app must be open) | Heartbeat (background) | No | **Headless with run history** |

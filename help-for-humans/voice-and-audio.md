@@ -51,7 +51,7 @@ The difference from tapping is worth knowing:
 | Rebel replies | In writing | Out loud |
 | Interrupting | n/a | Just start talking |
 
-It's the same Rebel behind the voice, with everything it normally has — your connected apps, your files, your Spaces — so you can ask it to actually go and do things, not just chat. "Look at my calendar and tell me what I'm walking into" works out loud.
+It's the same Rebel behind the voice, with everything it normally has — your Connectors, your files, your Spaces — so you can ask it to actually go and do things, not just chat. "Look at my calendar and tell me what I'm walking into" works out loud.
 
 **When Rebel isn't sure yet.** Talking is faster than working, so Rebel will sometimes answer while it's still checking. It'll say so, and if what it finds changes the answer, it comes back and corrects itself rather than letting the earlier version stand.
 

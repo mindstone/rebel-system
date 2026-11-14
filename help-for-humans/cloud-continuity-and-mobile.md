@@ -370,7 +370,7 @@ A few honest caveats while cloud continuity and mobile are still in beta:
 - **Not live sharing.** If you're typing on desktop right now, your phone won't see the reply stream in real time. Desktop turns sync when they finish. Mobile-initiated turns run on the cloud and stream live to your phone. One device at a time is the relaxed norm.
 - **Your cloud instance is a single machine.** It's not replicated across a fleet. If the underlying cloud instance is lost, the cloud copy of your synced data goes with it — but your desktop still has everything. For retention and backup specifics, contact Mindstone (`hello@mindstone.com`) for Mindstone Cloud instances, or your cloud provider for self-managed ones.
 - **Sync isn't instantaneous.** Changes typically propagate in under a minute, but there's a short delay. Pull to refresh on mobile if something seems missing.
-- **Mobile is thinner than desktop.** Full settings, library/file browsing, space management, memory management, plugin editing, connector setup, and the meeting notetaker's admin controls all still live on the desktop.
+- **Mobile is thinner than desktop.** Full settings, library/file browsing, space management, memory management, app editing, connector setup, and the meeting notetaker's admin controls all still live on the desktop.
 - **Historical conversation detail is trimmed on mobile.** For older conversations pulled from the cloud, very long tool outputs and large images may be truncated to keep mobile snappy. Currently active conversations show full fidelity.
 - **No in-app lock screen.** The app relies on your phone's own unlock (passcode, Face ID, fingerprint).
 

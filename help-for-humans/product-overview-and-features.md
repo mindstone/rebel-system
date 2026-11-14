@@ -240,21 +240,18 @@ Find files by meaning, not just keywords:
 
 **See also:** [File Search](library://rebel-system/help-for-humans/file-search.md)
 
-### Plugins (Labs)
+### Apps
 
-Custom tabs that extend Rebel's sidebar. Ask Rebel to build one — describe what you want, and it writes the code, compiles it, and adds the tab automatically.
+Pages, dashboards and small tools you keep in Rebel. Describe what you need, and Rebel builds it.
 
-- **AI-generated** — Describe a dashboard, list, or view and Rebel creates it
-- **Source search** — Plugins can search your files and connected sources
-- **AI helpers** — Embed AI-powered summaries, suggestions, or analysis right in the tab
-- **Calendar hooks** — Display and interact with your calendar events
-- **Clipboard integration** — Read from and write to your clipboard for quick data transfer
-- **Sharing via Spaces** — Share plugins with your team through shared Spaces
-- **Themed** — Plugin components match Rebel's look and feel in both light and dark mode
-- **Persistent** — Plugins survive app restarts
-- **Self-correcting** — If compilation fails, Rebel reviews errors and fixes the code automatically
+- **One app view** — Open saved pages and apps in the same place
+- **Easy to find** — Browse Library → Apps, pin to Your apps, or add to Home
+- **Updates when you ask** — Refresh through Automations, on a schedule or when you open the app
+- **Your own sign-ins** — Apps use your Connectors; sharing an app does not share your accounts
+- **Sharing via Spaces** — Move or copy apps into shared Spaces
+- **Your data stays** — Earlier apps keep their data; any differences are explained when you open them
 
-**See also:** [Plugins and Custom Tabs](library://rebel-system/help-for-humans/plugins-and-custom-tabs.md)
+**See also:** [Apps](library://rebel-system/help-for-humans/apps.md)
 
 ### Keyboard Shortcuts
 
@@ -320,7 +317,7 @@ ChatGPT and Claude.ai are great for quick questions. Rebel is for ongoing work:
 
 - **Memory**: They forget between sessions. Rebel remembers and compounds
 - **Files**: They can't access your local files. Rebel works against your workspace
-- **Tools**: Limited plugins. Rebel has 120+ connectors to your actual work tools
+- **Tools**: Limited integrations. Rebel has 120+ connectors to your actual work tools
 - **Models**: Locked to one provider. Rebel lets you use any model, route to models by name mid-conversation, or bring multiple models together in Council Mode
 - **Voice**: Basic or none. Rebel is voice-first with custom vocabulary and global hotkey
 - **Automation**: None. Rebel has scheduled tasks, Actions, and headless execution

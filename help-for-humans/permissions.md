@@ -32,7 +32,7 @@ For file-related actions, approval cards show the **full file path**. That is in
 
 Clicking a card's button approves that one action. Requests a card makes in the background use your ordinary Safety Rules and saved permissions, and appear in the notification drawer when a decision is needed. Click **View** in the approval bar at the bottom of the conversation to open the notification drawer. To stop a tool action, use **Block** or turn the tool off in Settings. Your organisation's restrictions still apply.
 
-The separate **Connected app permissions** panel has retired. See [Connected apps and trust](rebel://library/rebel-system%2Fhelp-for-humans%2Fconnected-apps-and-trust.md) for what happens when a card hands a request to approvals.
+The separate **Connector permissions** panel has retired. See [Connectors and trust](rebel://library/rebel-system%2Fhelp-for-humans%2Fconnectors-and-trust.md) for what happens when a card hands a request to approvals.
 
 ## Managing Safety Rules, Saved Permissions, and Memory Permissions
 

@@ -1,11 +1,11 @@
 ---
-name: html-pages-and-dashboards
+name: build-app
 description: "Build a page to print or open in a browser, a report needing a page layout, or a code app: a small interactive tool the shared blocks can't express. For charts, tables or dashboards the blocks can express, asked for or not, use rebel_canvas_view, and rebel_save_app when the person wants to keep the view."
-last_updated: 2026-11-04
+last_updated: 2026-11-14
 agent_type: main_agent
 ---
 
-# HTML pages and dashboards
+# Build or change an app
 
 [GOAL]
 Make a useful visual page to keep, share or print, a report built from files or several sources,
@@ -18,8 +18,10 @@ Use their data, not invented figures.
 - A tool the person will keep using that the blocks can't express (a timer, a tracker, a checklist
   that remembers what was ticked) is a code app: follow [CODE APPS] below. Blocks first: never write
   code for a chart, table or dashboard the blocks can show.
-- A sidebar tab that stays current from Rebel’s own meetings, memory or conversations is still a
-  plugin: read [build-custom-plugin](../../system/build-custom-plugin/SKILL.md).
+- A sidebar tab, dashboard or page that stays current is an app too. Use an automation to refresh
+  it only when asked; read [refresh-app](../refresh-app/AUTOMATION.md). Never generate TSX plugins, even
+  when the person uses the old word. Use Apps for saved tools and pages, and Connectors for integrations.
+- An app uses the viewer’s own sign-ins for Connectors. Sharing an app never shares its author’s accounts.
 - A page stays an HTML page. When a page needs what an app has (remembering things, using the
   person's files, being kept current), offer once to make it an app. When they agree, or ask, save
   it with `rebel_save_app` (`fromPage` set to the page's path), which brings its scripts and the kit
