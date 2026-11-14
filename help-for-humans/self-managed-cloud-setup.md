@@ -200,9 +200,9 @@ Rebel auto-reconnects after drops, and backs off in escalating windows (roughly 
 
 For other connection issues — company VPN, network policies, QR-code problems — see the [general troubleshooting section](rebel://library/rebel-system%2Fhelp-for-humans%2Fcloud-continuity-and-mobile.md#troubleshooting) in the main cloud continuity guide.
 
-### My pairing token may be compromised — how do I invalidate all devices?
+### My access token may be compromised — how do I invalidate all devices?
 
-Use **Overwrite token** in the Cloud Sync repair actions. This generates a new pairing token, and every previously-paired phone, tablet, or browser will need to re-scan the QR code with the new one. Use this if you suspect someone else has your token, or if you just want a clean slate. (Pairing tokens don't currently auto-rotate — automatic rotation is on the improvement list.)
+Use **Overwrite token** in the Cloud Sync repair actions. This generates a new access token, and every previously-paired phone, tablet, or browser will need to re-scan the QR code with the new one. Use this if you suspect someone else has your token, or if you just want a clean slate. (Access tokens don't currently auto-rotate — automatic rotation is on the improvement list.)
 
 
 ---
@@ -298,7 +298,7 @@ Yes. You can switch modes from **Settings → Workspace → Cloud Sync**. Conver
 
 ### What happens to paired mobile devices if I rebuild my cloud?
 
-They'll need to be re-paired — the server URL and token change. Scan the new QR code from **Cloud Sync → Continue on mobile** on each device. The same is true if you use **Overwrite token** to rotate the pairing token for any reason.
+They'll need to be re-paired — the server URL and token change. Scan the new QR code from **Cloud Sync → Continue on mobile** on each device. The same is true if you use **Overwrite token** to rotate the access token for any reason.
 
 ### Where can I see what Rebel is doing on my Fly account?
 

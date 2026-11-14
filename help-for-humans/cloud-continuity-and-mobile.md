@@ -319,7 +319,7 @@ If the connection says "Authentication failed":
 
 1. Go to **Settings → Workspace → Cloud Sync**
 2. Look for the repair option in the warning banner
-3. Repair the cloud token
+3. Repair the access token
 4. If Rebel warns about replacing the existing token, continue only if you're happy to re-pair any other devices afterward
 
 ### Connection drops or reconnects frequently
