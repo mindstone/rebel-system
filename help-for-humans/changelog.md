@@ -26,6 +26,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Improvements
 
+- **Full screen for any view** — Every app or view in a conversation, and the one pinned beside it, now has a full-screen button. Zoom from 25% to 400% with the − / + buttons, Ctrl/Cmd with + or −, or a pinch; the view keeps updating while it's open, and Esc puts it back. Squinting is now optional.
+
 - **Some connector tools stay off for safety** — A few tools in community connectors (ones built by other people, not by us) could read files or run code on your computer without the checks Rebel puts its own tools through, so they are now turned off, even if you allowed them before. Pipedrive can no longer upload files from your computer, and Playwright, the connector that drives a web browser for you, can no longer run code on your computer itself. Everything else in both still works, and there is nothing for you to do. Rebel says plainly when a tool is off and why.
 
 - **Failures that say what actually failed** — When a service Rebel relies on can't be reached, Rebel no longer tells you your internet is down or that your plan is "still syncing". It names what failed when it knows, and says plainly when it doesn't. Notices about updating your Mindstone Cloud, or switching it to another release, now point to the button that tries again. Choosing **Retry** on a message that wasn't sent no longer leaves a second copy of it in the message box (a draft you changed, or one with attachments, stays put). Connected apps that were paused when Rebel started are checked again on your computer, so they come back on their own. Your Wi-Fi is off the hook.
