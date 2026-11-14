@@ -79,6 +79,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **Live notes in Teams meetings** — In Teams meetings with the newer link format, the notetaker joined and saved the transcript afterwards, but nothing live worked: no live transcript in Rebel, no answers to questions in the meeting chat. The live connection now opens for every meeting link. Better late than only afterwards.
+
 - **Submit where you can see it** — In the web app, a question from Rebel could sit in a small box of its own, with its **Submit** button hidden below, so picking an answer looked like the end of it while Rebel kept waiting. The question now shows in full, Submit included, and scrolls with the rest of the conversation.
 
 - **No more replies that never end** — Now and then the AI behind a reply could get stuck: it repeated an action it had already taken, came back with nothing to say, and went round again without end. Rebel now sends it one automatic reminder to carry on; if it only repeats itself again, the reply stops and asks you to type **Continue**. A long task that keeps doing new things is not affected, and everything done so far stays in the conversation. Persistence is a virtue; repetition isn't.
