@@ -8,6 +8,9 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Highlights
 
+- **Meeting notes, on the call** — The notetaker's video tile now shows decisions, actions with owners and open questions beside your Rebel character, for everyone in the meeting. Your usual permissions decide what can be shared. With a known calendar end, it becomes a recap for the last five minutes. The character stays; the meeting gets a memory.
+  Use the board icon beside Listen / Coach / Join in to hide it from the call, or bring back the latest notes. Your character can hold the floor alone.
+
 - **Teach a skill by example** — Say “save this as an example” after finishing a document or draft. Pick what Rebel should learn from your changes, keep the example for yourself or share it with your team, and the skill reads it next time. Repeating yourself can retire early.
 
 - **Amount flow views (coming soon)** — Follow money, funnel, or time-use amounts between categories or stages with Sankey flows or signed waterfalls (ups and downs) on desktop, web, and phone. Hover, select, or tap to inspect only the original entries included in the view, such as a purchase or time entry; inspecting does not change source data or fetch more automatically.
