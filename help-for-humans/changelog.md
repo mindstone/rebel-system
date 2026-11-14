@@ -63,6 +63,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **Photos sent mid-task go through** — Sending a photo of a few megabytes while Rebel was still working on something could get it refused with "One of those files couldn't be read", even though nothing was wrong with it. Rebel now takes it, whether you attach it or @-mention it. Your photo was fine all along.
+
 - **Sent just before you closed the lid** — A chat you send just before closing your laptop now appears on your phone and the web straight away, marked as running, so you can see it there and stop it if you need to.
 
 - **Spaces and blocked folders, tidied up** — Add Space now refuses Rebel's own Library folder and says why, keeps what you typed when you pick another folder, and explains when a folder's settings come from its README and that **Remove link** keeps your files. If setup fails, Rebel names the actual cause. A Space whose folder Rebel can't open stays listed with a warning, and one you removed no longer comes back as "Ready to add". Settings now has **Block a folder…**: a Block wins over a folder you'd allowed inside it, and Rebel says so, including when you attach a file from a Blocked folder. Fewer surprises, more say.
