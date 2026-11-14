@@ -79,6 +79,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **Submit where you can see it** — In the web app, a question from Rebel could sit in a small box of its own, with its **Submit** button hidden below, so picking an answer looked like the end of it while Rebel kept waiting. The question now shows in full, Submit included, and scrolls with the rest of the conversation.
+
 - **No more replies that never end** — Now and then the AI behind a reply could get stuck: it repeated an action it had already taken, came back with nothing to say, and went round again without end. Rebel now sends it one automatic reminder to carry on; if it only repeats itself again, the reply stops and asks you to type **Continue**. A long task that keeps doing new things is not affected, and everything done so far stays in the conversation. Persistence is a virtue; repetition isn't.
 
 - **Pictures from desktop show on the web** — A picture a tool took while Rebel worked on your computer could sit on "Syncing image…" in the web app long after it had synced. It now appears as soon as it arrives, and full size when you open it. Synced now means showing.
