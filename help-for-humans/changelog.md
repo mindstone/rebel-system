@@ -26,6 +26,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Improvements
 
+- **Save it from the notification** — When Rebel asks your OK to save something to memory or to a file, the phone notification now has the same two buttons as the request in Rebel (**Save** and **Skip**, or **Save** and **Discard**). Press one, unlock your phone, and it's settled without opening Rebel; the notification says what happened. If the request needs more than a yes or no, the notification opens Rebel instead. Fewer detours on the way to "yes".
+
 - **"Always allow" says what you're agreeing to** — The confirm step after **Always allow** or **Block** now uses the button's own words and tells you where to change your mind: **Settings → Privacy & Safety → What Rebel can do**. Everything you already allowed or blocked stays exactly as it was, so nothing asks you again. Fine print, but finer.
 
 - **Full screen for any view** — Every app or view in a conversation, and the one pinned beside it, now has a full-screen button. Zoom from 25% to 400% with the − / + buttons, Ctrl/Cmd with + or −, or a pinch; the view keeps updating while it's open, and Esc puts it back. Squinting is now optional.
