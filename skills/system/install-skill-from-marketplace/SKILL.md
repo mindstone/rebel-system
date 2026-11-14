@@ -88,7 +88,6 @@ This skill orchestrates a three-phase workflow to install skills from external s
 7. **NOTIFY** — Confirm installation and next steps
    - "Installed [skill-name] to [target_path]"
    - "Provenance log saved to [target_path]/.skill-provenance.json"
-   - "You may need to reload Rebel for the skill to appear in discovery"
 
 [IMPORTANT]
 

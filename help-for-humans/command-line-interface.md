@@ -108,7 +108,7 @@ The CLI returns exit codes you can check in scripts:
 
 ## Sessions and Sharing with the App
 
-Sessions you create from the CLI appear in the app's sidebar (on next app reload). Both the app and the CLI read and write the same session store, so you can start something in the CLI and continue it in the app, or vice versa.
+Sessions you create from the CLI appear in the app's sidebar; if one isn't there yet, restart Rebel. Both the app and the CLI read and write the same session store, so you can start something in the CLI and continue it in the app, or vice versa.
 
 ---
 

@@ -455,4 +455,4 @@ Turning cloud continuity off also asks the cloud to remove the saved keys this c
 
 The notice says which of the two applies.
 
-If forgetting fails on this computer itself, the connection stays and Rebel tells you to reload and try again.
+If forgetting fails on this computer itself, the connection stays and Rebel tells you to restart Rebel and try again.
