@@ -223,6 +223,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 - **New files open in Rebel** — Name a new Library file without typing an extension and Rebel now saves it as a document (.md), so clicking it opens Rebel's editor rather than your computer asking which app to use.
 
+- **The cloud doesn't speak for your computer** — If your computer goes to sleep mid-reply and your cloud finishes the job, Rebel no longer says an earlier step (adding a line to a file, say) didn't happen just because the cloud can't see your computer's files. It tells you when it can't confirm what your computer did, and any new step uses the cloud's own tools rather than a command written for your computer. Honesty, across machines.
+
 ## v0.4.102 — Nov 7, 2026
 
 ### Highlights
