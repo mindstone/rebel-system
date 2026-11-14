@@ -26,6 +26,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Improvements
 
+- **Email drafts sign off as you** — When Rebel drafts an email for you, the draft now has its own **Signature** box under the message. Rebel fills it in for you: with the signature you used last, or, the first time, with the one you already set up in Gmail. If you edit the box, Rebel saves your new signature for future drafts when you press the draft's **Send** or **Feedback** button (Feedback asks Rebel to rework the draft); an edit to a draft you never send or rework isn't kept. The signature goes on once, at the end, so nobody gets "Best, Sam / Best, Sam" — no need to type it into the message yourself.
+
 - **Save it from the notification** — When Rebel asks your OK to save something to memory or to a file, the phone notification now has the same two buttons as the request in Rebel (**Save** and **Skip**, or **Save** and **Discard**). Press one, unlock your phone, and it's settled without opening Rebel; the notification says what happened. If the request needs more than a yes or no, the notification opens Rebel instead. Fewer detours on the way to "yes".
 
 - **"Always allow" says what you're agreeing to** — The confirm step after **Always allow** or **Block** now uses the button's own words and tells you where to change your mind: **Settings → Privacy & Safety → What Rebel can do**. Everything you already allowed or blocked stays exactly as it was, so nothing asks you again. Fine print, but finer.
