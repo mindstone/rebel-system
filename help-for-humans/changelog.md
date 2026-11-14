@@ -29,6 +29,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Improvements
 
+- **Apps that keep up** — Save a live view and choose to keep it up to date in the same step, or keep this version. Desktop, web and phone show its freshness; refresh it where its updates run, and review any request for your OK. The snapshot can retire from pretending to be news.
+
 - **No more mystery freeze after an update** — When an update changes how Rebel stores your conversations, Rebel now says so while it reorganises them, instead of sitting on a frozen loading screen. With a long history it takes a minute or so; nothing is lost.
 
 - **Cloud changes, without the reload** — Cloud settings now refresh after switching, reconnecting or copying your data. If Rebel hits an unexpected error, **Try again** and **Restart Rebel** do what they say.
