@@ -75,11 +75,14 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **A new conversation, by its proper name** — A conversation you've started but not sent now shows as **New conversation** in your list, the same as on the web and your phone. Before, one holding only a draft could come back after a restart under its old in-house label, "New Agent Run", which sounded like something we'd forgotten to rename. We had.
+
 - **Safety messages that say what happened** — When Rebel's safety check can't finish, it now says so plainly instead of calling it a temporary glitch or a bug on our side. A step you blocked yourself reads "because you blocked it" rather than "for an unknown reason", and Settings no longer repeats the same sentence twice in your allowed list. Fewer mysteries, same safety.
 
 - **No false alarm while tools start** — Opening Rebel, especially on Windows, could pop up a warning that your tools were down while they were simply still starting. Rebel now waits until they have had their chance. If they really do stop, the warning names what is affected, and its **Open Settings** button takes you straight to **Restart tools connection**. Patience, now built in.
 
 - **No more endless "Planning approach…" after your laptop sleeps** — If you close the lid while Rebel is working and the reply can't carry on, the conversation now says "Stopped when your laptop slept." with a **Retry** button, on desktop, web and phone. Your message is safe, and Retry sends the same one again. A progress line that never ends was optimism, not progress.
+
 - **Deleted from search, gone from search** — Moving a conversation to Trash from the sidebar search results now takes it out of the results straight away, every time; it waits in Trash, where you can still restore it. Before, it could stay listed until you cleared the search, as if Delete hadn't worked. Pasting the link or ID of a conversation already in Trash into search still finds it, so you can open it.
 
 - **Phone pairing directions, checked** — The phone's pairing screen now points to **Settings → Workspace → Continue on mobile**, the same words the computer shows, and the code you paste is called the **access token** on your computer, the web and your phone. One thing, one name.
