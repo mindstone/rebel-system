@@ -50,7 +50,6 @@ dm:
   recipient: "Firstname Lastname | @handle | email"   # hint for user match
   text: "..."                                        # message body
   preview: true                                       # default true; show the draft card first
-  imStrategy: "im_lookup_only"                        # do not open new IMs
 
 channel:
   channelHint: "#channel-name | C123456"              # name or ID
@@ -78,13 +77,13 @@ teamDirectory:
    - Otherwise:
      - Users: list users and fuzzy match on `real_name`, `display_name`, or email; capture `userId`
      - Channels: list channels (include `public_channel`, `private_channel`, `mpim`, `im` as relevant); capture `channelId`
-   - For DMs, list `im` channels and match `im.user == userId` (do not open new IMs by default)
+   - For DMs, the person is the target: use their user ID (or email), never a `D…` channel ID on its own. The send tools open that person's DM themselves, so the message cannot land in someone else's DM
    - **Conservative attribution**: If you cannot confidently identify a user, label them as `[User ID: U123...] (display_name)` and explicitly state uncertainty rather than guessing
 
 2) For action == "dm"
    - Construct the message text (optionally apply lightweight template formatting)
    - Show it as a `rebel_canvas_view` draft (kind `message`, a To field with the recipient's name, the text as the body) and stop; never ask for approval of the message in prose
-   - When the person presses Send, use the card's fields and body exactly as submitted: if the To field changed, resolve the new recipient's existing IM `channelId` first (lookup only); then post the body as the authenticated user
+   - When the person presses Send, use the card's fields and body exactly as submitted: post the body as the authenticated user with the recipient's user ID (or email) as the channel; if the To field changed, look up the new person's user ID first
    - Return: `ok`, `channelId`, `ts`, and `permalink` if available
 
 3) For action == "channel_post"
@@ -107,7 +106,7 @@ teamDirectory:
 
 ## [IMPORTANT]
 - Send as the authenticated user only, and only a message the person has seen and sent from the draft card
-- Avoid opening new IMs unless the user explicitly asks; default `im_lookup_only`
+- Address a DM to the person (user ID or email), not to a `D…` channel ID; a `D…` ID is sent only with `intended_recipient` naming its person
 - Do not post PII or sensitive data into public channels
 - Always capture and return identifiers (`channelId`, `ts`, `permalink`) for auditability
 - If Slack MCP auth is missing, produce a copy-ready message and request the user to enable auth
@@ -122,7 +121,6 @@ dm:
   recipient: "Jane Doe"
   text: "Heads-up: shipping the feature updates today. Ok to proceed?"
   preview: true
-  imStrategy: "im_lookup_only"
 ```
 
 Draft card (example `rebel_canvas_view` input)
@@ -226,6 +224,6 @@ This directory is optional. The skill works without it by dynamically looking up
 
 ## [SUCCESS]
 - Messages sent only from the draft card's Send; IDs and permalinks returned
-- Channel posts follow consistent formatting; DMs target the intended recipient without opening new IMs
+- Channel posts follow consistent formatting; DMs are addressed to the person, so they reach the intended recipient
 - Fetch returns the correct time-bounded set with permalinks for follow-up
 
