@@ -75,6 +75,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **No more promises about planning** — The quality picker no longer says a level "Responds directly" or "Plans the work first". Whichever models you pick, Rebel can answer simple questions straight away and plan the bigger jobs, and **Settings → Agent & Voice** now says which model does which. Fewer claims, all of them true.
+
 - **A new conversation, by its proper name** — A conversation you've started but not sent now shows as **New conversation** in your list, the same as on the web and your phone. Before, one holding only a draft could come back after a restart under its old in-house label, "New Agent Run", which sounded like something we'd forgotten to rename. We had.
 
 - **Safety messages that say what happened** — When Rebel's safety check can't finish, it now says so plainly instead of calling it a temporary glitch or a bug on our side. A step you blocked yourself reads "because you blocked it" rather than "for an unknown reason", and Settings no longer repeats the same sentence twice in your allowed list. Fewer mysteries, same safety.
