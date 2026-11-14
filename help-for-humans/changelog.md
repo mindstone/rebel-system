@@ -260,6 +260,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 - **One more look before destroying a stray cloud** — **Destroy it** on a cloud this computer isn't connected to now asks first and says that work kept only in that cloud may be lost. Holding down Enter can no longer press it twice and destroy the cloud by accident.
 
+- **Reading isn't editing** — Rebel's activity list now says **Reading** or **Looking through** when Rebel only opened, listed or searched a file or folder, and keeps **Editing** for real changes. It had been saying "Editing" about folders it merely glanced at, which is a lot of drama for a look.
+
 ## v0.4.102 — Nov 7, 2026
 
 ### Highlights
