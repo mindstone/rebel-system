@@ -73,6 +73,7 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **No more endless "Planning approach…" after your laptop sleeps** — If you close the lid while Rebel is working and the reply can't carry on, the conversation now says "Stopped when your laptop slept." with a **Retry** button, on desktop, web and phone. Your message is safe, and Retry sends the same one again. A progress line that never ends was optimism, not progress.
 - **Deleted from search, gone from search** — Moving a conversation to Trash from the sidebar search results now takes it out of the results straight away, every time; it waits in Trash, where you can still restore it. Before, it could stay listed until you cleared the search, as if Delete hadn't worked. Pasting the link or ID of a conversation already in Trash into search still finds it, so you can open it.
 
 - **Phone pairing directions, checked** — The phone's pairing screen now points to **Settings → Workspace → Continue on mobile**, the same words the computer shows, and the code you paste is called the **access token** on your computer, the web and your phone. One thing, one name.
