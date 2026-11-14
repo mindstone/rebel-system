@@ -7,7 +7,7 @@ use_cases:
   - "Remember this version"
   - "Use this as a template next time"
 tags: [skills, examples, personalisation]
-last_updated: 2026-11-12
+last_updated: 2026-11-14
 tools_required: [Read, Write, LS, AskUserQuestion, inspect_prior_turns, get_tool_call]
 agent_type: main_agent
 ---
@@ -51,18 +51,10 @@ Use the existing view tool to show one `diff` section with the full recovered te
 `before` is the first version, `after` is the finished version,
 `beforeLabel` is “First draft” and `afterLabel` is “Your version”.
 If either version is longer, show labelled changed passages instead, keeping each `before` and `after` text
-within 12,000 characters. Say that the comparison shows excerpts. Still save both complete versions in step 8.
+within 12,000 characters. Say that the comparison shows excerpts. Still save both complete versions in step 7.
 Introduce it simply: “Here's what you changed.” Skip the comparison if the first version is missing.
 
-## 5. Choose the lessons
-
-Propose two or three single-line lessons grounded in those changes, useful for future work.
-Use an AskUserQuestion multi-select: “What should this skill remember?”
-The person ticks the lessons they want and can add their own through Other. Wait for their answer.
-Keep only their choices. If no comparison is possible, ask what to remember about the finished version instead.
-For example quality guidance, see [Improve Skill](../improve-skill/SKILL.md#example-best-practices).
-
-## 6. Choose where to keep it
+## 5. Choose where to keep it
 
 - **Their own private space or Chief of Staff:** use the skill's own examples folder.
 - **A core skill in `rebel-system/`:** use their own version in Chief of Staff, never the bundled folder.
@@ -82,16 +74,31 @@ A single-file skill at `<category>/<name>.md` keeps them in `<category>/<name>/e
 Never move or rename the single-file skill to make room for examples.
 When creating a personal version of a single-file skill, use `<Chief-of-Staff>/skills/<category>/<name>/SKILL.md`.
 
-## 7. Add or replace
+Then list that examples folder (LS), including examples saved earlier in this conversation.
 
-List the destination's examples. If three or more exist, offer “Replace <oldest>” first,
-then “Add as new”. Otherwise offer “Add as new” first, with replacement choices for existing examples.
-Use an AskUserQuestion single-select and wait. Name replacements clearly enough to recognise them.
-Replace only the chosen file; adding must not overwrite an existing example.
+## 6. Choose the lessons, and add or replace, in one card
 
-## 8. Save one example file
+Propose two or three single-line lessons grounded in those changes, useful for future work.
+If no comparison is possible, propose lessons about the finished version instead.
+For example quality guidance, see [Improve Skill](../improve-skill/SKILL.md#example-best-practices).
 
-For a team example, apply step 9 before writing.
+Ask with one AskUserQuestion call and wait for the answer:
+
+1. A multi-select: “What should this skill remember?” with the proposed lessons.
+   The person can add their own through Other.
+2. **Whenever the examples folder already has at least one example, you must add** a second, single-select
+   question in the same call: “Add this as a new example, or replace one?” Offer “Add as new” and at most
+   three “Replace <name>” choices, each named clearly enough to recognise. With one or two examples, list
+   “Add as new” first, then each. With three or more, list “Replace <oldest>” first, then “Add as new”,
+   then up to two of the newest. Never decide this yourself, even when the new output looks like a fresh
+   one; the person chooses.
+
+When the folder is empty or missing, ask only the lessons question and add a new example.
+Keep only the lessons they ticked. Replace only the chosen file; adding must not overwrite an existing example.
+
+## 7. Save one example file
+
+For a team example, apply step 8 before writing.
 For a new example, write `examples/yyMMdd-<short-slug>.md`; use a different slug if it already exists.
 For replacement, write the chosen existing file. Keep everything in that one file:
 
@@ -114,7 +121,7 @@ lessons:
 <last agent-authored text before the person's changes, or: First version unavailable.>
 ```
 
-## 9. Keep team examples suitable for sharing
+## 8. Keep team examples suitable for sharing
 
 Before any team write, remove other people's email addresses, phone numbers and names other than the person's own
 from the whole example, including both versions, lessons and source. Use neutral labels where needed.
