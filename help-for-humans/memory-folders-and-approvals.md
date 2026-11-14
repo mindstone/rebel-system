@@ -1,6 +1,6 @@
 ---
 description: "User-facing guide to where memory belongs, how sensitivity markers work, and what approval buttons mean when Rebel wants to save something"
-last_updated: "2026-07-26"
+last_updated: "2026-11-14"
 ---
 
 # Memory Folders and Approvals
@@ -99,14 +99,12 @@ There are two common memory approval flows.
 This is the most common cautious path. Rebel saves the draft safely first, then asks you what to do with it.
 
 Buttons you may see:
-- **Allow** — publish the memory to its intended space
-- **Deny** — keep it out of that target space and save it privately instead
+- **Save** or **Save to [space]** — save the memory to the space it was meant for, named on the card
+- **Keep private** — save it to your private space instead, when offered
+- **Discard** — delete the waiting draft without saving it anywhere; this can't be undone
 - **Preview** — open the full diff before deciding
-- **Allow All / Deny All** — batch actions when several staged files are waiting
 
-If your safety rules were the reason Rebel stopped, you may also see:
-- **Allow & choose rule update…**
-- **Deny & choose rule update…**
+In **Memory > Waiting to remember**, the same choices appear as **Allow once**, which saves the waiting draft like **Save**, and **Discard**, which removes it. When several are waiting, you may see **Allow all** and **Discard all**, which act on every draft in that list.
 
 ### 2) Direct memory approvals
 Sometimes Rebel needs an immediate yes/no decision instead of the staged-file route.
@@ -125,14 +123,7 @@ Buttons you may see:
 
 ## Where staged files live before you decide
 
-When Rebel stages a memory write for review, it puts the draft in:
-
-`Chief-of-Staff/memory/pending/`
-
-That means:
-- nothing is silently lost
-- pending memory stays in your private area until you decide
-- you can review it before it moves into a shared space
+Review waiting drafts from the approval card or **Memory > Waiting to remember**. Rebel keeps them in a private working folder until you decide. That folder is not shown in **Files**; hiding it deletes nothing.
 
 If a save would overwrite something that changed in the meantime, Rebel shows you the conflict instead of quietly bulldozing it.
 
