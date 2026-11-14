@@ -86,6 +86,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 - **Recovered apps come back to search** — After a brief cloud outage, an app you've connected, such as Slack, could keep looking unavailable to Rebel even once it was working again: Rebel might say it was paused, or pick another app for the job. Rebel now checks the app again shortly after the outage, or as soon as a request to it works. Nothing for you to do. No more blaming the cloud for yesterday's weather.
 
+- **Automations say what actually happened** — Quitting Rebel mid-run no longer marks the run failed: Rebel picks it up again the next time it opens. A run Rebel stopped for taking too long now says so, with a **Try again** button that runs the automation again, instead of the old catch-all "Something went sideways". **Run now** on a paused automation now tells you it's paused instead of doing nothing, and the next-run date counts calendar days, so late on Tuesday a run due early Thursday no longer says "tomorrow". Your schedules don't change; the messages just got honest.
+
 - **Your Library follows you to a new computer** — After you reconnect Mindstone Cloud on a new computer, your Library files now start coming over straight away. Before, they could wait minutes for you to click somewhere else, leaving the Library looking empty. Your notes were never gone; they just took the scenic route.
 
 - **Answer an Action anywhere** — If an Inbox Action asked you a question and you answered on another device (say, started on your laptop, answered on the web), it could stay on "Needs your answer" even after the work was done. The device you answer on now finishes the job and every device sees it done.
