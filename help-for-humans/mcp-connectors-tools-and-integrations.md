@@ -264,7 +264,7 @@ If tools you expect aren't appearing:
 
 6. **Update key / Update details** — Some connectors show an **Update key** or **Update details** button directly on the connector tile in Settings → Connectors. If you see it, click it to update your credentials in place without fully disconnecting and reconnecting. A Notice also appears in the conversation itself when credentials have expired, with the same button ready to hand — no need to go hunting in Settings.
 
-7. **Restart Super-MCP** — Go to Settings → Advanced and use "Restart Super-MCP". This restarts the tool router that manages all your connections. Usually fixes temporary glitches.
+7. **Restart the tools connection** — Go to Settings → Advanced and choose "Restart tools connection". This restarts the part of Rebel that manages all your connections. Usually fixes temporary glitches.
 
 ### "Queued" connector actions
 

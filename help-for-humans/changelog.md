@@ -75,6 +75,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **No false alarm while tools start** — Opening Rebel, especially on Windows, could pop up a warning that your tools were down while they were simply still starting. Rebel now waits until they have had their chance. If they really do stop, the warning names what is affected, and its **Open Settings** button takes you straight to **Restart tools connection**. Patience, now built in.
+
 - **No more endless "Planning approach…" after your laptop sleeps** — If you close the lid while Rebel is working and the reply can't carry on, the conversation now says "Stopped when your laptop slept." with a **Retry** button, on desktop, web and phone. Your message is safe, and Retry sends the same one again. A progress line that never ends was optimism, not progress.
 - **Deleted from search, gone from search** — Moving a conversation to Trash from the sidebar search results now takes it out of the results straight away, every time; it waits in Trash, where you can still restore it. Before, it could stay listed until you cleared the search, as if Delete hadn't worked. Pasting the link or ID of a conversation already in Trash into search still finds it, so you can open it.
 
