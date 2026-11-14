@@ -13,4 +13,4 @@ When an approved action is already waiting, what you approved is what runs: the 
 
 A remembered permission is not a ceremonial rubber stamp. Rebel can still ask again when its protections find something unusual — say, an email's recipients or content look unlike the routine you meant to allow. That extra question is the deliberate mistake-catcher: mildly inconvenient in exactly the useful way.
 
-If Rebel loses track after an action may have started, it says the outcome is unknown and tells you what to check. It does not quietly turn uncertainty into permission, or claim success because optimism was available.
+If an action that could have changed something may have started and Rebel loses track of it, Rebel says the outcome is unknown and tells you what to check. It does not quietly turn uncertainty into permission, or claim success because optimism was available. If the action only read information, nothing could have changed and there is nothing for you to check, so Rebel doesn't show you a notice; it still knows the outcome is unknown.

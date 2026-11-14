@@ -233,6 +233,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 - **The cloud doesn't speak for your computer** — If your computer goes to sleep mid-reply and your cloud finishes the job, Rebel no longer says an earlier step (adding a line to a file, say) didn't happen just because the cloud can't see your computer's files. It tells you when it can't confirm what your computer did, and any new step uses the cloud's own tools rather than a command written for your computer. Honesty, across machines.
 
+- **One less thing to dismiss** — When Rebel loses track of a step that only read information, it no longer leaves a "could not confirm whether this ran" notice: nothing changed, so there's nothing to check. Steps that could have changed something still tell you what to check.
+
 ## v0.4.102 — Nov 7, 2026
 
 ### Highlights
