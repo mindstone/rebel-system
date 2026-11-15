@@ -22,6 +22,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Improvements
 
+- **“Rebel, show our pipeline”** — With wider context on, ask the notetaker to show a saved app beside your Rebel character, for everyone in the call. Your usual permissions apply. Ask for the board back when the numbers have made their point.
+
 - **Apps for every account** — If you've connected two accounts for the same connector, say a work and a personal email, apps can now use both. A shared email app can show each of your mailboxes, or just the one you pick, and never sees anyone else's. One inbox per tab is so last week.
 
 - **A preview you can read** — When Rebel asks for your OK on the web, you now see the email, message or action written out plainly instead of a block of code. When it asks to save a file, **Keep private** is now a proper button. [▶ Watch it](https://storage.googleapis.com/mindstone-rebel/release-videos/261115-keep-private-button.mp4)
