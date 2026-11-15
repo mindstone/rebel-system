@@ -39,6 +39,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 - **A useful nudge for stubborn automations** — After three failures for something you can fix, Rebel tells you once and takes you straight to the fix. It keeps trying on schedule. Persistence, with manners.
 
+- Mindstone runs your cloud? Add storage in Settings → Cloud, at no charge. A little more room, a little less digital Tetris.
+
 - **The meeting board, for the room** — While recording a meeting on your phone, tap **Show board** for decisions, actions with owners and open questions in large type. The screen stays awake; stop recording and the board stays open as a recap. Your phone has volunteered as the whiteboard.
 
 - **Security fixes, still arriving** — Rebel now runs on a newer version of the browser engine inside it, which still gets security fixes; the old one stopped getting them on October 20. On a Mac, this version needs macOS 13 or later. Patched, quietly.
