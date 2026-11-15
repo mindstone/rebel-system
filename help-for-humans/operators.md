@@ -54,6 +54,8 @@ Rebel ships a set of ready-made Operators you can **activate** into a Space. Bun
 
 From the Operators panel you can **rename** an Operator (display name), **duplicate** one to tweak your own version, and **remove** ones you don't want. Activated Operators live in the relevant Space, so different Spaces can have different advisors.
 
+You can also just ask Rebel: it can create, activate, edit and remove Operators, and tidy up duplicates. When Rebel removes one, it moves the Operator's folder to your computer's Trash, so you can restore it; Remove in the panel deletes the file. In a Space synced from Google Drive or another shared store, the deletion reaches everyone once you import the deleted Operator file in Settings, Spaces. Each change asks first if your permission settings say it should.
+
 You can also teach an Operator about your context so its advice is more tailored.
 
 
