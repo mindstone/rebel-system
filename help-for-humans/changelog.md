@@ -19,6 +19,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 - **Places on a map** — Ask Rebel to show places and their figures on a street map, inspect a place, or send Rebel a request from its actions. Switch between **Map first** and **List first**; if the map cannot load, the full place list stays available.
 
+- **Progress, at a glance** — Ask Rebel to show goals, quotas or budgets from a connected spreadsheet, and they appear as bars or rings, in rows or cards, on your computer, the web and your phone. Press **Update** on a card to change a number in that spreadsheet, or **Refresh** to read it again; Rebel asks you first whenever your levels in [Settings → Safety](rebel://settings/safety) say it should. If Rebel can't confirm an Update, the card keeps the last number it could confirm. The change may still have reached the spreadsheet, so press **Refresh** to see what it holds now before you press **Update** again; otherwise the change could be entered twice. Ninety percent finally looks like ninety percent.
+
 - **Meeting follow-ups, already written** — When a meeting leaves you owing an email ("Sure, I'll send it today"), the to-do Rebel adds to your **Actions** list now comes with that email drafted. Press **Start** to open it, change anything you like, then press **Send**: nothing goes out before that. If you've taught Rebel how you write follow-ups (a skill of your own), it writes them your way. Your promises, kept before you forget them.
 
 - **Requests from your meeting** — Anyone in your meeting can ask the notetaker to pass a request to your Rebel. Your usual permissions decide what runs; results appear in Rebel.
@@ -32,6 +34,8 @@ What's new in Rebel. We ship fast, so there's always something.
 - **The notetaker answers out loud, properly** — With your own OpenAI key added, say the notetaker's name and ask: it answers aloud in about two seconds, in a real voice, whether your desktop is on the call or Rebel is handling the meeting from the cloud. It answers from the meeting, looks things up when your settings allow, and says when it is checking only when it actually is. Ask it to do something and it tells you who can. No key, no change.
 
 ### Improvements
+
+- **"Updated" means updated** — The "Updated" time at the bottom of a chart, table or other view Rebel draws is now recorded by Rebel itself when the data change, instead of being written in by the AI. A brand-new view shows no time until Rebel records one. If you've saved the view as an app, the app also shows when you saved it.
 
 - **A useful nudge for stubborn automations** — After three failures for something you can fix, Rebel tells you once and takes you straight to the fix. It keeps trying on schedule. Persistence, with manners.
 
