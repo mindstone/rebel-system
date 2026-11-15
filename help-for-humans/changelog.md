@@ -110,6 +110,7 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **Answered Actions reach Done** — When an Action set to finish by itself asked you a question and you answered it from the Action, Rebel did the work but left the Action at **Needs your answer**, on every device. Now it moves to **Done** by itself once the work is finished, as it should. Answering a question now counts as answering it.
 - **Better advice when Rebel can't use a Library folder** — If you type a Library location in **Settings → Workspace** that Rebel can't use, such as a name your computer doesn't allow or a system folder, Rebel now suggests choosing a different folder instead of sending you to your privacy settings, which couldn't help. Folder-access advice now appears only when your computer actually refused access. Your edit and your current Library stay as they were. Fewer wild-goose chases through Settings.
 - **Phone and web catch up with lots of conversations** — When the Rebel phone app or web companion came back after a while away with many conversations to follow (around 175 or more), catching up could fail, so changes made in the meantime didn't appear until something else refreshed them. It now catches up in smaller batches, however many conversations there are. Popularity no longer has a downside.
 
