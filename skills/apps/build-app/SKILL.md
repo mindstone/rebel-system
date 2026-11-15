@@ -156,8 +156,12 @@ async function useConnector(family, account, name, args) {
   return answer.content.map(part => part.text ?? '').join(''); // often JSON: parse it if so
 }
 const { accounts } = await tool('connector_accounts', { family: 'GoogleWorkspace' });
-const perAccount = await Promise.allSettled(accounts.map(account =>
+// A picker keeps the person's choice: app_state_get returns null until something is saved.
+const picked = await tool('app_state_get', { key: 'account' });
+const shown = accounts.includes(picked) ? [picked] : accounts; // all, unless they picked one still connected
+const perAccount = await Promise.allSettled(shown.map(account =>
   useConnector('GoogleWorkspace', account, 'search_workspace_emails', { query: 'is:unread' })));
+// When they pick: await tool('app_state_set', { key: 'account', value: account }); for "All", app_state_delete.
 ```
 - The bridge exists only inside Rebel: don't build a test page or harness of your own to run the
   app. Save it, and the person sees it working when they open it.
