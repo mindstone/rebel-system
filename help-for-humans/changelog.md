@@ -8,6 +8,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Highlights
 
+- **Kanban boards (coming soon)** — See tasks or a pipeline in columns named and ordered for your work. Drag a card or use **Move** to choose its place. For a board from a connected app, Rebel makes the change under your usual permissions, then redraws; shared boards stay read-only.
+
 - **Shared apps, your own numbers** — When a colleague shares an app that keeps itself current, opening it now sets up an update of your own, over your own data and connected apps. What you see stays yours: your results never go back into the shared app, and theirs never show up as yours. It updates when you open it, at most every 15 minutes; press **Keep this current** to put it on a schedule. Same app, no peeking.
 
 - **Outlines you can rearrange** — Plans, agendas and other lists with levels can now open as an outline you can fold up, rename and reorder. Press **Save changes** and Rebel updates the document or list it came from, with your usual permissions. Indentation, now negotiable. [▶ Watch it](https://storage.googleapis.com/mindstone-rebel/release-videos/261115-outlines-you-can-rearrange.mp4)
