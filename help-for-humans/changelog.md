@@ -8,6 +8,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Highlights
 
+- **Shared apps, your own numbers** — When a colleague shares an app that keeps itself current, opening it now sets up an update of your own, over your own data and connected apps. What you see stays yours: your results never go back into the shared app, and theirs never show up as yours. It updates when you open it, at most every 15 minutes; press **Keep this current** to put it on a schedule. Same app, no peeking.
+
 - **Outlines you can rearrange** — Plans, agendas and other lists with levels can now open as an outline you can fold up, rename and reorder. Press **Save changes** and Rebel updates the document or list it came from, with your usual permissions. Indentation, now negotiable. [▶ Watch it](https://storage.googleapis.com/mindstone-rebel/release-videos/261115-outlines-you-can-rearrange.mp4)
 
 - **Meeting follow-ups, already written** — When a meeting leaves you owing an email ("I'll send it today"), the to-do Rebel adds to your **Actions** now comes with the email drafted. Press **Start**, change what you like, then **Send**: nothing goes out before that. Your promises, kept before you forget them. [▶ Watch it](https://storage.googleapis.com/mindstone-rebel/release-videos/261115-meeting-follow-ups-already-written.mp4)
