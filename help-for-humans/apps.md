@@ -23,7 +23,7 @@ If an update needs your OK, review the request in Rebel. If an update fails, the
 
 ## Share an app
 
-Move or copy an app into a shared [Space](library://rebel-system/help-for-humans/spaces.md), a folder you share with your team, through the Library's sharing action. Each person uses their own sign-ins for Connectors, the accounts you link to Rebel, such as your calendar or email; sharing an app never shares your accounts. An app may keep personal data for each viewer or shared data for everyone in that Space.
+Move or copy an app into a shared [Space](library://rebel-system/help-for-humans/spaces.md), a folder you share with your team, through the Library's sharing action. Each person uses their own sign-ins for Connectors, the accounts you link to Rebel, such as your calendar or email; sharing an app never shares your accounts. If you've connected more than one account for a connector, say two email accounts, an app can use each of them, or just the one you pick. An app may keep personal data for each viewer or shared data for everyone in that Space.
 
 The first time an app reads your accounts or acts for you, Rebel may ask you to allow it, saying what it wants to do; you can say no. Your Safety Rules, the limits you set on what Rebel may do without asking, still apply to its actions. See [Connectors and trust](library://rebel-system/help-for-humans/connectors-and-trust.md).
 

@@ -22,6 +22,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Improvements
 
+- **Apps for every account** — If you've connected two accounts for the same connector, say a work and a personal email, apps can now use both. A shared email app can show each of your mailboxes, or just the one you pick, and never sees anyone else's. One inbox per tab is so last week.
+
 - **A preview you can read** — When Rebel asks for your OK on the web, you now see the email, message or action written out plainly instead of a block of code. When it asks to save a file, **Keep private** is now a proper button. [▶ Watch it](https://storage.googleapis.com/mindstone-rebel/release-videos/261115-keep-private-button.mp4)
 
 - **"Always allow" says what you're agreeing to** — The confirm step after **Always allow** or **Block** now uses the button's own words and says where to change your mind later: **Settings → Privacy & Safety → What Rebel can do**. Nothing you already allowed or blocked changes. [▶ Watch it](https://storage.googleapis.com/mindstone-rebel/release-videos/261114-what-rebel-can-do.mp4)

@@ -132,9 +132,14 @@ const tool = (name, args = {}) => rebel('tools/call', { name, arguments: args })
   `rebel_conversations_list`, `rebel_conversations_search` and `rebel_conversations_get_summary`.
   An app in a shared Space reads only that Space, and no conversations.
 - Use a connector: `tool('use_tool', { family, tool, arguments })`, where `family` is the connector's
-  name without an account, such as `GoogleWorkspace`. A call that needs the person's OK returns
-  `{ status: 'waiting' }`: say so in the app and don't retry. If they approve while the app is open,
-  the result arrives as a `notifications/app-tool-result` message with the same `requestId`.
+  name without an account, such as `GoogleWorkspace`. The viewer may have several accounts of it:
+  `tool('connector_accounts', { family })` returns `{ accounts }`, the viewer's own (emails or
+  workspace names). With more than one, add `account` to each call: run reads over every account
+  and show them together, or let the person pick, and remember the pick with `app_state_set`. Never
+  write an account into the app, since a shared app runs with each viewer's own accounts. A call
+  that needs the person's OK returns `{ status: 'waiting' }`: say so in the app and don't retry. If
+  they approve while the app is open, the result arrives as a `notifications/app-tool-result`
+  message with the same `requestId`.
 - Open a link: `rebel('ui/open-external-link', { url })`; `rebel://` links open inside Rebel.
   Copy: `rebel('ui/clipboard/write', { text })`. Both work only while the person is using the app.
 - Before an app uses the person's data, Rebel may ask whether it may. An update the person set
