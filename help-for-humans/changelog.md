@@ -323,6 +323,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 - **Deleted messages stay deleted** — A message you deleted no longer comes back, and closing Rebel no longer removes one you didn't. Delete means delete, and nothing else.
 
+- **Your Browser, in plain words** — Setting up Your Browser and fetching pages through it now speaks human. Permission cards name Rebel's own tools properly instead of in-house labels, setup messages stay short, a stalled browser connection gives up and says so instead of hanging, and when something goes wrong Rebel says what to do next without suggesting you pair again when you don't need to. When a browser action can’t find or use the expected part of a page, Rebel says the page wasn’t what it expected. Failures with the same cause share one explanation; Details still show every attempt. Fewer riddles, more pages.
+
 ## v0.4.102 — Nov 7, 2026
 
 ### Highlights

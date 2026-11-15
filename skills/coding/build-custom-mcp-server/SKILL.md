@@ -172,7 +172,7 @@ Before building anything, determine what the user wants to do and systematically
 
 ### 0.0 Seeded Conversation Fast-Path
 
-If this conversation was started via the in-app "Set up a connector" button (the `rebel_mcp_report_contribution_state` tool is available, or the opening message matches the seeded pattern like "I want to build a new connector"), the user has already decided to build. Skip intent classification and the multi-tier build-vs-buy check.
+If this conversation was started via the in-app "Build a connector" button (the `rebel_mcp_report_contribution_state` tool is available, or the opening message matches the seeded pattern like "I want to build a new connector"), the user has already decided to build. Skip intent classification and the multi-tier build-vs-buy check.
 
 **If a service name was provided in the seeded message** (e.g., "I want to build a new connector for Zendesk"):
 
