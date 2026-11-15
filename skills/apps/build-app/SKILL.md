@@ -125,6 +125,10 @@ const rebel = (method, params) => new Promise((resolve, reject) => {
 const tool = (name, args = {}) => rebel('tools/call', { name, arguments: args });
 ```
 
+Call `rebel(...)` only with `tools/call` and the `ui/` requests below. Everything else (`use_tool`,
+`connector_accounts`, `app_state_*` and the reads) is a tool: `tool('connector_accounts', ...)`,
+never `rebel('connector_accounts', ...)`, which Rebel refuses.
+
 - Remember things: `tool('app_state_set', { key, value })`, `tool('app_state_get', { key })` and
   `tool('app_state_delete', { key })`. Values are JSON. Add `scope: 'shared'` for data everyone in a
   shared Space sees; otherwise it is the person's own.
@@ -138,8 +142,25 @@ const tool = (name, args = {}) => rebel('tools/call', { name, arguments: args })
   and show them together, or let the person pick, and remember the pick with `app_state_set`. Never
   write an account into the app, since a shared app runs with each viewer's own accounts. A call
   that needs the person's OK returns `{ status: 'waiting' }`: say so in the app and don't retry. If
-  they approve while the app is open, the result arrives as a `notifications/app-tool-result`
-  message with the same `requestId`.
+  they approve while the app is open, a `notifications/app-tool-result` message with the same
+  `requestId` brings a short summary (`summarised: true`): show its text as it is. Otherwise `content[0].text` is an error message when `isError`
+  is true, and else JSON whose `result` is the connector's own answer. Show an account's error
+  beside that account rather than dropping it:
+
+```js
+async function useConnector(family, account, name, args) {
+  const res = await tool('use_tool', { family, account, tool: name, arguments: args });
+  if (res.status === 'waiting') return { waiting: true };
+  if (res.isError) throw new Error(res.content[0].text);
+  const answer = JSON.parse(res.content[0].text).result;
+  return answer.content.map(part => part.text ?? '').join(''); // often JSON: parse it if so
+}
+const { accounts } = await tool('connector_accounts', { family: 'GoogleWorkspace' });
+const perAccount = await Promise.allSettled(accounts.map(account =>
+  useConnector('GoogleWorkspace', account, 'search_workspace_emails', { query: 'is:unread' })));
+```
+- The bridge exists only inside Rebel: don't build a test page or harness of your own to run the
+  app. Save it, and the person sees it working when they open it.
 - Open a link: `rebel('ui/open-external-link', { url })`; `rebel://` links open inside Rebel.
   Copy: `rebel('ui/clipboard/write', { text })`. Both work only while the person is using the app.
 - Before an app uses the person's data, Rebel may ask whether it may. An update the person set
