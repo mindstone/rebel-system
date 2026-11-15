@@ -114,6 +114,7 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **Files stay where you left them** — Files attached but not yet sent no longer follow you into the next conversation. They wait in their own conversation's message box until you come back, and the "Attachments will be lost" warning has retired, because switching conversations keeps your files. A failed send from Home also no longer gives you the same photo twice.
 - **Saving a view as an app works first time** — Rebel no longer turns away a view it has just shown you when you ask to keep it as an app. And when a save needs a second go and Rebel sends the corrected view, the end of the reply no longer says it failed.
 - **Your messages stay put when a conversation syncs** — A message still waiting for its reply no longer vanishes as a conversation syncs across your computer, phone and web, and a reply you stopped on phone or web stays stopped. If deleting a conversation fails after you've moved on, Rebel leaves you where you are. Nothing goes missing in transit.
 - **Answered Actions reach Done** — When you answer a question from an Action set to finish by itself, it now moves to **Done** once the work is finished, instead of sitting at **Needs your answer** on every device. Answering a question now counts as answering it.

@@ -40,6 +40,8 @@ When you attach a file, Rebel processes it before sending:
 
 The AI receives the extracted content as part of your conversation, so it can answer questions, summarize, analyze, or help you work with the material.
 
+**Unsent files stay with their conversation.** On desktop, if you attach files and then switch to another conversation or start a new one before sending, the files wait in the first conversation's message box and are there when you go back. They aren't kept if Rebel quits or restarts, so send them before closing the app.
+
 
 ## Big Files: Linked Instead of Rejected
 
