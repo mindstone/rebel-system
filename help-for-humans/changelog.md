@@ -17,7 +17,7 @@ What's new in Rebel. We ship fast, so there's always something.
 
 - **Amount flow views (coming soon)** — Follow money, funnel, or time-use amounts between categories or stages with Sankey flows or signed waterfalls (ups and downs) on desktop, web, and phone. Hover, select, or tap to inspect only the original entries included in the view, such as a purchase or time entry; inspecting does not change source data or fetch more automatically.
 
-- **Places on a map (coming soon)** — Ask Rebel to show places and their figures on a street map, inspect a place, or send Rebel a request from its actions. Switch between **Map first** and **List first**; if the map cannot load, the full place list stays available.
+- **Places on a map** — Ask Rebel to show places and their figures on a street map, inspect a place, or send Rebel a request from its actions. Switch between **Map first** and **List first**; if the map cannot load, the full place list stays available.
 
 - **Meeting follow-ups, already written** — When a meeting leaves you owing an email ("Sure, I'll send it today"), the to-do Rebel adds to your **Actions** list now comes with that email drafted. Press **Start** to open it, change anything you like, then press **Send**: nothing goes out before that. If you've taught Rebel how you write follow-ups (a skill of your own), it writes them your way. Your promises, kept before you forget them.
 

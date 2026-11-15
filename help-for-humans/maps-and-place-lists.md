@@ -4,8 +4,6 @@ description: "Compare places, inspect their details, and ask Rebel to act from a
 
 # Maps and place lists
 
-**Coming soon** — Geographic map views are not in a released version of Rebel yet.
-
 Ask Rebel to put places on a street map so you can compare locations and the information attached to them. For example: “Show these customer sites on a map, with the open issues for each site.”
 
 ## Choose what comes first
