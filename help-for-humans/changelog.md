@@ -33,6 +33,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Improvements
 
+- **The meeting board, for the room** — While recording a meeting on your phone, tap **Show board** for decisions, actions with owners and open questions in large type. The screen stays awake; stop recording and the board stays open as a recap. Your phone has volunteered as the whiteboard.
+
 - **Security fixes, still arriving** — Rebel now runs on a newer version of the browser engine inside it, which still gets security fixes; the old one stopped getting them on October 20. On a Mac, this version needs macOS 13 or later. Patched, quietly.
 
 - **Home leads with what's due** — The line under your greeting now says how many Actions need you today, each Action shows when it's due, and once you've opened your Actions list they sit above the setup steps, which now share one quieter **Finish setting up** card. Your to-dos, first thing.
