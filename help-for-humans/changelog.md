@@ -96,6 +96,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
+- **Enter saves your own AI service** — In **Connect your own AI service** (during setup, or in **Settings → Agent & Voice**), pressing Enter now saves the service, just like clicking **Save**. A blank name or a mistyped address still can't be saved. The mouse can have a rest.
+
 - **The allowance notice knows when to leave** — After your monthly Mindstone AI allowance ran out and you added your own AI account in Settings, the conversation kept showing the "allowance used up" notice until you closed it by hand. It now goes away as soon as you change which account Rebel uses, as your waiting messages already did. If the new account has a problem of its own, you'll see that instead.
 
 - **Live notes in Teams meetings** — In Teams meetings with the newer link format, the notetaker joined and saved the transcript afterwards, but nothing live worked: no live transcript in Rebel, no answers to questions in the meeting chat. The live connection now opens for every meeting link. Better late than only afterwards.
