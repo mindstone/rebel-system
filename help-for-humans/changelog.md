@@ -104,6 +104,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 - **The allowance notice knows when to leave** — After your monthly Mindstone AI allowance ran out and you added your own AI account in Settings, the conversation kept showing the "allowance used up" notice until you closed it by hand. It now goes away as soon as you change which account Rebel uses, as your waiting messages already did. If the new account has a problem of its own, you'll see that instead.
 
+- **Second opinions you can let go of** — In **Settings → Agent & Voice → Customise**, **Your models** lets you turn on **Second opinions** for each model Rebel should consult. If your plan stopped including a model you'd turned on there, it stayed on and couldn't be turned off. Now you can turn it off. You still can't turn it back on until your plan includes that model again.
+
 - **Live notes in Teams meetings** — In Teams meetings with the newer link format, the notetaker joined and saved the transcript afterwards, but nothing live worked: no live transcript in Rebel, no answers to questions in the meeting chat. The live connection now opens for every meeting link. Better late than only afterwards.
 
 - **Submit where you can see it** — In the web app, a question from Rebel could sit in a small box of its own, with its **Submit** button hidden below, so picking an answer looked like the end of it while Rebel kept waiting. The question now shows in full, Submit included, and scrolls with the rest of the conversation.
