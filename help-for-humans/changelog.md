@@ -10,21 +10,21 @@ What's new in Rebel. We ship fast, so there's always something.
 
 - **Kanban boards (coming soon)** — See tasks or a pipeline in columns named and ordered for your work. Drag a card or use **Move** to choose its place. For a board from a connected app, Rebel makes the change under your usual permissions, then redraws; shared boards stay read-only.
 
-- **Shared apps, your own numbers** — When a colleague shares an app that keeps itself current, opening it now sets up an update of your own, over your own data and connected apps. What you see stays yours: your results never go back into the shared app, and theirs never show up as yours. It updates when you open it, at most every 15 minutes; press **Keep this current** to put it on a schedule. Same app, no peeking.
-
-- **Outlines you can rearrange** — Plans, agendas and other lists with levels can now open as an outline you can fold up, rename and reorder. Press **Save changes** and Rebel updates the document or list it came from, with your usual permissions. Indentation, now negotiable. [▶ Watch it](https://storage.googleapis.com/mindstone-rebel/release-videos/261115-outlines-you-can-rearrange.mp4)
-
 - **Meeting follow-ups, already written** — When a meeting leaves you owing an email ("I'll send it today"), the to-do Rebel adds to your **Actions** now comes with the email drafted. Press **Start**, change what you like, then **Send**: nothing goes out before that. Your promises, kept before you forget them. [▶ Watch it](https://storage.googleapis.com/mindstone-rebel/release-videos/261115-meeting-follow-ups-already-written.mp4)
 
 - **Apps, all in one place** — Pages, dashboards and small tools Rebel makes for you are now called Apps, and they live in **Library → Apps**; your earlier plugins came along with their data. The services you connect are now called Connectors. One Rebel, fewer nouns. [▶ Watch it](https://storage.googleapis.com/mindstone-rebel/release-videos/261114-apps-in-library.mp4)
 
-- **Ask the notetaker in meeting chat** — In the meeting chat, type the notetaker's name, a comma and your question ("What did we decide?"), and it answers there for everyone. It answers from this meeting; the brain button lets it use your notes and connected apps too for the meeting you're in, and **Settings → Meetings** sets that for new meetings. [▶ Watch it](https://storage.googleapis.com/mindstone-rebel/release-videos/261111-meeting-answers-from-notes.mp4)
-
 - **Home leads with what's due** — The line under your greeting now says how many Actions need you today, and each Action shows when it's due. Once you've opened your Actions, they sit above the setup steps, which now share one quieter **Finish setting up** card. [▶ Watch it](https://storage.googleapis.com/mindstone-rebel/release-videos/261115-home-leads-with-whats-due.mp4)
 
-- **A softer landing for old files** — Rebel can now send files and folders to your computer's Trash (Recycle Bin on Windows), so a clean-up can be undone. Routine tidying in a Space only you use asks for fewer approvals. [▶ Watch it](https://storage.googleapis.com/mindstone-rebel/release-videos/261115-softer-landing-for-old-files.mp4)
-
 ### Improvements
+
+- **Shared apps, your own numbers** — When a colleague shares an app that keeps itself current, opening it now sets up an update of your own, over your own data and connected apps. What you see stays yours: your results never go back into the shared app, and theirs never show up as yours. It updates when you open it, at most every 15 minutes; press **Keep this current** to put it on a schedule. Same app, no peeking.
+
+- **Outlines you can rearrange** — Plans, agendas and other lists with levels can now open as an outline you can fold up, rename and reorder. Press **Save changes** and Rebel updates the document or list it came from, with your usual permissions. Indentation, now negotiable. [▶ Watch it](https://storage.googleapis.com/mindstone-rebel/release-videos/261115-outlines-you-can-rearrange.mp4)
+
+- **Ask the notetaker in meeting chat** — In the meeting chat, type the notetaker's name, a comma and your question ("What did we decide?"), and it answers there for everyone. It answers from this meeting; the brain button lets it use your notes and connected apps too for the meeting you're in, and **Settings → Meetings** sets that for new meetings. [▶ Watch it](https://storage.googleapis.com/mindstone-rebel/release-videos/261111-meeting-answers-from-notes.mp4)
+
+- **A softer landing for old files** — Rebel can now send files and folders to your computer's Trash (Recycle Bin on Windows), so a clean-up can be undone. Routine tidying in a Space only you use asks for fewer approvals. [▶ Watch it](https://storage.googleapis.com/mindstone-rebel/release-videos/261115-softer-landing-for-old-files.mp4)
 
 - **“Rebel, show our pipeline”** — With wider context on, ask the notetaker to show a saved app beside your Rebel character, for everyone in the call. Your usual permissions apply. Ask for the board back when the numbers have made their point.
 
@@ -115,6 +115,34 @@ What's new in Rebel. We ship fast, so there's always something.
 - **Clearer browser choices** — Rebel now tells your own signed-in browser apart from its separate one, and asks before switching if the one you asked for isn't available.
 
 - **Saving outside your Library follows your safety choices** — When Rebel saves somewhere outside your Library, your safety settings and Safety Rules decide whether it asks first, instead of an extra question every time.
+
+- **A conversation in its own window** — Open a conversation's menu and choose **Open in new window** to keep it beside your work, live and in sync. Two meetings' prep, side by side at last.
+
+- **Set up your models in one go** — Ask Rebel to set up your models (say, one for everyday work, one for planning, smart picking on) and it shows what will change and applies it with one approval. Changed your mind? Ask it to undo.
+
+- **Feedback on any draft** — Email, message and invite drafts now have a **Feedback** button in place of Tone: add a comment or tap Warmer, More formal or Shorter, and Rebel updates the same draft with your edits in mind. Nothing goes out until you press **Send**.
+
+- **Links in drafts you can follow** — Links and web addresses in a draft card are now clickable on desktop, web and phone, so you can check one before sending. While editing, Ctrl or Cmd-click opens it.
+
+- **The meeting map, one click from your notes** — When a meeting ends, its notes now start the meeting map section with **Open the meeting map**, which takes you to the conversation with the map pinned.
+
+- **Automations come with you** — Reconnect Mindstone Cloud on a new laptop and your automations come back, switched-off ones included. Edit, pause or delete one on any of your computers and the change applies to all; a scheduled run happens once.
+
+- **Save an app to any Space** — When you save or move an app, pick any Space you can write to; it goes to your Private Space unless you choose otherwise. Long app pages now scroll, and weekly refreshes say they run every Monday.
+
+- **Saved apps look right on the web** — Key figures, charts and tables in a saved app now draw on the web as they do on desktop, instead of as plain text.
+
+- **Shared Space links survive a rename** — A link to a file in a shared Space still opens after the Space is renamed. If a link could mean two Spaces, Rebel says the file didn't open rather than guessing.
+
+- **The question, right on the list** — When Rebel stops to ask you something, the conversation's row now shows the question itself, on desktop, web and phone.
+
+- **Thinking notes about your work, not Rebel's** — The thinking line and check-in answers no longer narrate Rebel's own bookkeeping, such as plan mechanics, rules or character counts. Only the parts you'd care about.
+
+- **Windows updates check who signed them** — Rebel on Windows now installs an update only if Mindstone signed it, and deletes one that isn't.
+
+- **Storage costs, said up front** — Before you grow a cloud you host on Fly.io, the dialog says Fly.io bills the full volume size every month, and that accounts without a card stop at 20 GB.
+
+- **No hidden Focus runs** — Focus's weekly prep and monthly review no longer run while Focus is switched off, so they stop spending your allowance on briefings nobody sees.
 
 ### Fixes
 
@@ -330,6 +358,86 @@ What's new in Rebel. We ship fast, so there's always something.
 - **Deleted messages stay deleted** — A message you deleted no longer comes back, and closing Rebel no longer removes one you didn't. Delete means delete, and nothing else.
 
 - **Your Browser, in plain words** — Setting up Your Browser and fetching pages through it now speaks human. Permission cards name Rebel's own tools properly instead of in-house labels, setup messages stay short, a stalled browser connection gives up and says so instead of hanging, and when something goes wrong Rebel says what to do next without suggesting you pair again when you don't need to. When a browser action can’t find or use the expected part of a page, Rebel says the page wasn’t what it expected. Failures with the same cause share one explanation; Details still show every attempt. Fewer riddles, more pages.
+
+- **Stop clears what it was waiting on** — Stopping a reply now withdraws the approvals it was still waiting for, wherever they showed, and the conversation notes that you stopped them. Nothing runs from a withdrawn card.
+
+- **Stop on Windows really stops** — Stop now also ends anything a request left running in the background on Windows, such as a sound still playing. If Rebel can't check, it says so.
+
+- **Quicker word when the AI service can't be reached** — If the AI service is unreachable, Rebel now tells you in under a minute instead of thinking for over two.
+
+- **Editing a sent message keeps your draft** — Editing an earlier message and then cancelling puts back what you'd been typing, files included.
+
+- **@-mentions with spaces** — Mentioning a file with spaces in its name no longer closes the picker halfway, and a quick Return picks what you typed. A 21st file mention is refused with a note: up to 20 per message.
+
+- **Offline sends come back** — On the web, a message sent while offline and left behind when you switched conversation is now put back in the message box when you return, ready to send once.
+
+- **Your photos in your own messages** — On the web, the photos and files you sent now show in your message bubble, not just its text.
+
+- **No more green photos** — An iPhone photo that hadn't finished downloading is now refused with a note to add it again, instead of attached as a mostly green picture.
+
+- **First launch on Windows stays responsive** — Opening Rebel for the first time after installing it on Windows no longer freezes as "Not Responding" for several seconds.
+
+- **Uninstalling on Windows cleans up** — Uninstalling Rebel on Windows now also removes its command-line tool and its web-link handling, instead of leaving them pointing at nothing.
+
+- **Mac updates install the newest build** — If a newer update comes out after one has downloaded, Rebel fetches it in the background, so **Install & Relaunch** installs the newest version in one restart, not two.
+
+- **A key is saved only once it works** — In Settings, a pasted API key is now checked with the provider and saved only when it's accepted; a rejected key is explained and your previous one is left alone.
+
+- **Your model names stay yours** — Changing a model's ID or thinking level in Settings no longer replaces the name you gave it.
+
+- **Settings in a narrow window** — With Rebel snapped to half the screen, the Settings menu now wraps into a few rows and leaves room for the settings themselves.
+
+- **Plan models count as connected** — On a Mindstone plan, models added from your plan no longer show **Needs setup** or ask you to connect OpenRouter, and smart picking can use them.
+
+- **Notetaker refusals say why** — When a notetaker invite is refused for an account reason (no subscription, payment due, signed out), the card now says which and offers the button that fixes it.
+
+- **Each line once** — The live meeting transcript no longer shows every spoken line twice.
+
+- **Join with Rebel responds straight away** — After you press **Join with Rebel**, the title bar updates at once, and a meeting the notetaker has already left isn't offered again.
+
+- **Phone messages reach the running reply** — A message sent from your phone while Rebel is replying now reaches that reply, instead of arriving afterwards as its own message.
+
+- **Block this tool works from phone and web** — Choosing **Block this tool** on an approval card from your phone or the web now saves the block, and the waiting step is declined cleanly.
+
+- **Library search opens the right folders** — In the Library's Folders view, the folders and Spaces holding matches now open by themselves while you search, and go back to your layout when you clear it.
+
+- **Slack DMs answered sooner** — A direct message to your own Rebel Slack app is now picked up within about a minute, not up to five.
+
+- **Add storage works again** — Growing a cloud you host on Fly.io no longer fails with a "page not found" error.
+
+- **Files from cloud connectors land on your computer** — With cloud continuity on, a file a connected app saves now comes back to your computer with a path you can open, and idle syncing no longer waits for a nudge.
+
+- **Clear word when a reply needed your computer** — If a reply carried on in your cloud needed your OK or something only your computer has, it now says so and asks you to open Rebel there, instead of claiming it's waiting for you.
+
+- **Declined suggestions stay declined** — When a skill's owner declines a teammate's suggestion, the teammate's next edit no longer brings the declined words back.
+
+- **Tables and charts that read whole** — Tables in replies no longer split ordinary words mid-word, and long legend names in narrow chart cards end with "…" (hover to see them in full).
+
+- **Replies don't arrive blank** — A reply or question that arrived while Rebel was in the background no longer stays blank until you click back in.
+
+- **Conversations open at the latest message** — Opening a conversation with an answered question in it no longer leaves you parked on that old card.
+
+- **Cut-off replies say so** — A reply cut off by an error now shows **Interrupted**, not a green Done, and a dropped connection says it could be your network or the AI service.
+
+- **Drive Spaces searchable again** — When your Library sits in a cloud folder such as Dropbox, Spaces linked from another drive, such as Google Drive, are indexed again, so search and memory find new files.
+
+- **Each step counted once** — Tool steps are no longer stored twice, so duplicate cards and inflated "Used N tools" counts are gone.
+
+- **Replaced company keys arrive** — If your admin replaces or removes your company's AI key, Rebel now picks up the change instead of holding on to the old key.
+
+- **Library search ready sooner** — Searching inside notes works right after launch, links to folders open the folder, and note search comes back by itself after **Resume**.
+
+- **Used-up allowance, said at setup** — If your Mindstone plan's monthly allowance is already used up, setup now says so and when it resets, so your first message doesn't fail out of the blue.
+
+- **Read-only Spaces explain themselves** — When Rebel stores a Space's files and you can't save to it, Rebel now says why: no paid plan, storage full, or the plan couldn't be checked.
+
+- **The safer answer leads** — On an approval card, **Allow once** now comes first only when your Safety Rules raised no objection; otherwise **Don't allow** leads.
+
+- **Welcome scrolls from anywhere** — On the first screen, the mouse wheel now scrolls from anywhere in the window, so **Start now** is never stuck out of reach.
+
+- **Long replies keep the laptop awake** — With **Prevent sleep during turns** on, Rebel now keeps your computer awake for the whole reply, and interruption notices clear when the work finishes or when you dismiss them.
+
+- **New File keeps your place** — Creating a file in a Library folder no longer collapses the Spaces view, and the new file opens straight away.
 
 ## v0.4.102 — Nov 7, 2026
 
