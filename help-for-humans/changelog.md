@@ -8,12 +8,12 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Highlights
 
-- **Outlines you can rearrange** — Plans, agendas and other lists with levels can now appear as an outline you can collapse, rename and reorder. Make several changes, then press **Save changes** to send them together; Rebel updates the document or list it came from, through the apps you've connected, with the same permissions as always. You can also pin an outline, or save it as an app to reopen later. Edit an outline inside a saved app and each **Save changes** opens a new conversation, so you can see how Rebel got on; shared links stay read-only. Saving an outline as an app keeps the version you last saved; changes you haven't saved yet stay in the conversation where you made them, not lost. Indentation, now negotiable.
+- **Outlines you can rearrange** — Plans, agendas and other lists with levels can now appear as an outline you can collapse, rename and reorder. Make several changes, then press **Save changes** to send them together; Rebel updates the document or list it came from, through the apps you've connected, with the same permissions as always. You can also pin an outline, or save it as an app to reopen later. Edit an outline inside a saved app and each **Save changes** opens a new conversation, so you can see how Rebel got on; shared links stay read-only. Saving an outline as an app keeps the version you last saved; changes you haven't saved yet stay in the conversation where you made them, not lost. Indentation, now negotiable. [▶ Watch it](https://storage.googleapis.com/mindstone-rebel/release-videos/261115-outlines-you-can-rearrange.mp4)
 
 - **Meeting notes, on the call** — The notetaker's video tile now shows decisions, actions with owners and open questions beside your Rebel character, for everyone in the meeting. Your usual permissions decide what can be shared. With a known calendar end, it becomes a recap for the last five minutes. The character stays; the meeting gets a memory.
   Use the board icon beside Listen / Coach / Join in to hide it from the call, or bring back the latest notes. Your character can hold the floor alone.
 
-- **Teach a skill by example** — Say “save this as an example” after finishing a document or draft. Pick what Rebel should learn from your changes, keep the example for yourself or share it with your team, and the skill reads it next time. Repeating yourself can retire early.
+- **Teach a skill by example** — Say “save this as an example” after finishing a document or draft. Pick what Rebel should learn from your changes, keep the example for yourself or share it with your team, and the skill reads it next time. Repeating yourself can retire early. [▶ Watch it](https://storage.googleapis.com/mindstone-rebel/release-videos/261115-teach-a-skill-by-example.mp4)
 
 - **Amount flow views (coming soon)** — Follow money, funnel, or time-use amounts between categories or stages with Sankey flows or signed waterfalls (ups and downs) on desktop, web, and phone. Hover, select, or tap to inspect only the original entries included in the view, such as a purchase or time entry; inspecting does not change source data or fetch more automatically.
 
@@ -21,11 +21,9 @@ What's new in Rebel. We ship fast, so there's always something.
 
 - **Progress, at a glance** — Ask Rebel to show goals, quotas or budgets from a connected spreadsheet, and they appear as bars or rings, in rows or cards, on your computer, the web and your phone. Press **Update** on a card to change a number in that spreadsheet, or **Refresh** to read it again; Rebel asks you first whenever your levels in [Settings → Safety](rebel://settings/safety) say it should. If Rebel can't confirm an Update, the card keeps the last number it could confirm. The change may still have reached the spreadsheet, so press **Refresh** to see what it holds now before you press **Update** again; otherwise the change could be entered twice. Ninety percent finally looks like ninety percent.
 
-- **Meeting follow-ups, already written** — When a meeting leaves you owing an email ("Sure, I'll send it today"), the to-do Rebel adds to your **Actions** list now comes with that email drafted. Press **Start** to open it, change anything you like, then press **Send**: nothing goes out before that. If you've taught Rebel how you write follow-ups (a skill of your own), it writes them your way. Your promises, kept before you forget them.
+- **Meeting follow-ups, already written** — When a meeting leaves you owing an email ("Sure, I'll send it today"), the to-do Rebel adds to your **Actions** list now comes with that email drafted. Press **Start** to open it, change anything you like, then press **Send**: nothing goes out before that. If you've taught Rebel how you write follow-ups (a skill of your own), it writes them your way. Your promises, kept before you forget them. [▶ Watch it](https://storage.googleapis.com/mindstone-rebel/release-videos/261115-meeting-follow-ups-already-written.mp4)
 
 - **Requests from your meeting** — Anyone in your meeting can ask the notetaker to pass a request to your Rebel. Your usual permissions decide what runs; results appear in Rebel.
-
-- **Ask the notetaker in meeting chat** — Start with its displayed name and a comma, such as "Spark, what did we decide?" (Spark is a fictional example.) Replies appear for everyone in the meeting. Answers start with this meeting; **Also answer from my notes and connected apps** in **Settings → Meetings** is the saved default for new meetings and starts Off. The brain button controls wider context for the current meeting, and questions only look things up — actions stay with their owner in Rebel.
 
 - **Live voice, rebuilt on a newer model** — Live, where you talk to Rebel out loud, now runs on OpenAI's newer GPT-Live 1 voice model when you've added your own OpenAI key. Quick questions get a quick answer; longer tasks, like research, carry on in the background so the conversation doesn't stall, and Rebel no longer keeps telling you it's still working. When a task finishes, Rebel tells you once. End the call before then and the answer waits in the conversation.
 
@@ -34,6 +32,8 @@ What's new in Rebel. We ship fast, so there's always something.
 - **The notetaker answers out loud, properly** — With your own OpenAI key added, say the notetaker's name and ask: it answers aloud in about two seconds, in a real voice, whether your desktop is on the call or Rebel is handling the meeting from the cloud. It answers from the meeting, looks things up when your settings allow, and says when it is checking only when it actually is. Ask it to do something and it tells you who can. No key, no change.
 
 ### Improvements
+
+- **Ask the notetaker in meeting chat** — Start with its displayed name and a comma, such as "Spark, what did we decide?" (Spark is a fictional example.) Replies appear for everyone in the meeting. Answers start with this meeting; **Also answer from my notes and connected apps** in **Settings → Meetings** is the saved default for new meetings and starts Off. The brain button controls wider context for the current meeting, and questions only look things up — actions stay with their owner in Rebel. [▶ Watch it](https://storage.googleapis.com/mindstone-rebel/release-videos/261111-meeting-answers-from-notes.mp4)
 
 - **"Updated" means updated** — The "Updated" time at the bottom of a chart, table or other view Rebel draws is now recorded by Rebel itself when the data change, instead of being written in by the AI. A brand-new view shows no time until Rebel records one. If you've saved the view as an app, the app also shows when you saved it.
 
@@ -45,15 +45,15 @@ What's new in Rebel. We ship fast, so there's always something.
 
 - **Security fixes, still arriving** — Rebel now runs on a newer version of the browser engine inside it, which still gets security fixes; the old one stopped getting them on October 20. On a Mac, this version needs macOS 13 or later. Patched, quietly.
 
-- **Home leads with what's due** — The line under your greeting now says how many Actions need you today, each Action shows when it's due, and once you've opened your Actions list they sit above the setup steps, which now share one quieter **Finish setting up** card. Your to-dos, first thing.
+- **Home leads with what's due** — The line under your greeting now says how many Actions need you today, each Action shows when it's due, and once you've opened your Actions list they sit above the setup steps, which now share one quieter **Finish setting up** card. Your to-dos, first thing. [▶ Watch it](https://storage.googleapis.com/mindstone-rebel/release-videos/261115-home-leads-with-whats-due.mp4)
 
 - **Phone approvals you can read** — When Rebel asks your OK on your phone, the card now shows who it goes to, the subject and the message, or the command it will run, the same way desktop and web do. No more squinting at raw code to decide.
 
-- **A softer landing for old files** — Rebel can now send files and folders from your Library or linked Spaces to your computer's Trash (Recycle Bin on Windows). Routine clean-ups in a Space only you use need fewer approval cards; your own ask-first rules still apply. Restore files from your computer's Trash.
+- **A softer landing for old files** — Rebel can now send files and folders from your Library or linked Spaces to your computer's Trash (Recycle Bin on Windows). Routine clean-ups in a Space only you use need fewer approval cards; your own ask-first rules still apply. Restore files from your computer's Trash. [▶ Watch it](https://storage.googleapis.com/mindstone-rebel/release-videos/261115-softer-landing-for-old-files.mp4)
 
 - **Apps that keep up** — Save a live view and choose to keep it up to date in the same step, or keep this version. Desktop, web and phone show its freshness; refresh it where its updates run, and review any request for your OK. The snapshot can retire from pretending to be news.
 
-- **A preview you can read** — When Rebel asks for your OK on the web, you now see the email, message or action it wants to send or run, written out plainly, instead of a block of code. And when Rebel asks to save a file, **Keep private** (keep the file for yourself instead of saving it where it was headed) is now a proper button rather than easy-to-miss plain text.
+- **A preview you can read** — When Rebel asks for your OK on the web, you now see the email, message or action it wants to send or run, written out plainly, instead of a block of code. And when Rebel asks to save a file, **Keep private** (keep the file for yourself instead of saving it where it was headed) is now a proper button rather than easy-to-miss plain text. [▶ Watch it](https://storage.googleapis.com/mindstone-rebel/release-videos/261115-keep-private-button.mp4)
 
 - **A clearer note on a new computer** — If your company picks the AI model and its key hasn't reached this computer, Rebel now says exactly that, and that your company admin can issue it again for this computer. Less guessing at what "set up" meant.
 
@@ -61,7 +61,7 @@ What's new in Rebel. We ship fast, so there's always something.
 
 - **Cloud changes, without the reload** — Cloud settings now refresh after switching, reconnecting or copying your data. If Rebel hits an unexpected error, **Try again** and **Restart Rebel** do what they say.
 
-- **Apps, all in one place** — Pages, dashboards and small tools are now Apps. Find them in Library → Apps; your earlier plugins came along with their data. The services you connect are called Connectors. One Rebel, fewer nouns. Updates run through Automations when you ask for them.
+- **Apps, all in one place** — Pages, dashboards and small tools are now Apps. Find them in Library → Apps; your earlier plugins came along with their data. The services you connect are called Connectors. One Rebel, fewer nouns. Updates run through Automations when you ask for them. [▶ Watch it](https://storage.googleapis.com/mindstone-rebel/release-videos/261114-apps-in-library.mp4)
 
 - **Email drafts sign off as you** — When Rebel drafts an email for you, the draft now has its own **Signature** box under the message. Rebel fills it in for you: with the signature you used last, or, the first time, with the one you already set up in Gmail. If you edit the box, Rebel saves your new signature for future drafts when you press the draft's **Send** or **Feedback** button (Feedback asks Rebel to rework the draft); an edit to a draft you never send or rework isn't kept. The signature goes on once, at the end, so nobody gets "Best, Sam / Best, Sam" — no need to type it into the message yourself.
 
@@ -69,9 +69,9 @@ What's new in Rebel. We ship fast, so there's always something.
 
 - **Save it from the notification** — When Rebel asks your OK to save something to memory or to a file, the phone notification now has the same two buttons as the request in Rebel (**Save** and **Skip**, or **Save** and **Discard**). Press one, unlock your phone, and it's settled without opening Rebel; the notification says what happened. If the request needs more than a yes or no, the notification opens Rebel instead. Fewer detours on the way to "yes".
 
-- **"Always allow" says what you're agreeing to** — The confirm step after **Always allow** or **Block** now uses the button's own words and tells you where to change your mind: **Settings → Privacy & Safety → What Rebel can do**. Everything you already allowed or blocked stays exactly as it was, so nothing asks you again. Fine print, but finer.
+- **"Always allow" says what you're agreeing to** — The confirm step after **Always allow** or **Block** now uses the button's own words and tells you where to change your mind: **Settings → Privacy & Safety → What Rebel can do**. Everything you already allowed or blocked stays exactly as it was, so nothing asks you again. Fine print, but finer. [▶ Watch it](https://storage.googleapis.com/mindstone-rebel/release-videos/261114-what-rebel-can-do.mp4)
 
-- **Full screen for any view** — Every app or view in a conversation, and the one pinned beside it, now has a full-screen button. Zoom from 25% to 400% with the − / + buttons, Ctrl/Cmd with + or −, or a pinch; the view keeps updating while it's open, and Esc puts it back. Squinting is now optional.
+- **Full screen for any view** — Every app or view in a conversation, and the one pinned beside it, now has a full-screen button. Zoom from 25% to 400% with the − / + buttons, Ctrl/Cmd with + or −, or a pinch; the view keeps updating while it's open, and Esc puts it back. Squinting is now optional. [▶ Watch it](https://storage.googleapis.com/mindstone-rebel/release-videos/261115-full-screen-for-any-view.mp4)
 
 - **Some connector tools stay off for safety** — A few tools in community connectors (ones built by other people, not by us) could read files or run code on your computer without the checks Rebel puts its own tools through, so they are now turned off, even if you allowed them before. Pipedrive can no longer upload files from your computer, and Playwright, the connector that drives a web browser for you, can no longer run code on your computer itself. Everything else in both still works, and there is nothing for you to do. Rebel says plainly when a tool is off and why.
 
