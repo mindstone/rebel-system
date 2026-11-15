@@ -114,6 +114,7 @@ What's new in Rebel. We ship fast, so there's always something.
 
 - **Your messages stay put when a conversation syncs** — A message still waiting for its reply no longer vanishes as a conversation syncs across your computer, phone and web, and a reply you stopped on phone or web stays stopped. If deleting a conversation fails after you've moved on, Rebel leaves you where you are. Nothing goes missing in transit.
 - **Answered Actions reach Done** — When you answer a question from an Action set to finish by itself, it now moves to **Done** once the work is finished, instead of sitting at **Needs your answer** on every device. Answering a question now counts as answering it.
+- **Quiet meetings keep their notes** — When the notetaker recorded a meeting where nobody spoke, meeting history showed it as missed. Rebel now saves it as a note saying no speech was transcribed. Silence counts too.
 - **Library folder trouble, told straight** — If Rebel can't open or use your Library folder, it now says which folder and why, in the page rather than over your chat, and suggests picking another folder only when that would help. Fewer wild-goose chases through Settings.
 
 - **Phone and web catch up, however many conversations you have** — Coming back after a while away with lots of conversations no longer leaves the phone app or web out of date.
