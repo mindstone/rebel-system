@@ -27,6 +27,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 - **A page, straight to Rebel** — With Rebel's Chrome extension installed, right-click a page or selected text and choose **Ask Rebel**. Check what will be sent, add an optional note and press **Send to Rebel**: a new conversation opens in Rebel. On Android, share a page to Rebel or select text and choose **Ask Rebel**; on iPhone, share from Safari to Rebel. The same box opens in the app. Android page sharing sends only the title and link, and says so. Copy and paste can take the afternoon off.
 
+- **The notetaker answers out loud, properly** — With your own OpenAI key added, say the notetaker's name and ask: it answers aloud in about two seconds, in a real voice, whether your desktop is on the call or Rebel is handling the meeting from the cloud. It answers from the meeting, looks things up when your settings allow, and says when it is checking only when it actually is. Ask it to do something and it tells you who can. No key, no change.
+
 ### Improvements
 
 - **Home leads with what's due** — The line under your greeting now says how many Actions need you today, each Action shows when it's due, and once you've opened your Actions list they sit above the setup steps, which now share one quieter **Finish setting up** card. Your to-dos, first thing.
