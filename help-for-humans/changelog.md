@@ -8,6 +8,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Highlights
 
+- **Your rules decide** — Rebel no longer asks solely because an action is not named in your Safety Rules. It still checks your rules, but testing found it missed some broad “ask first” rules more often than before.
+
 - **Kanban boards (coming soon)** — See tasks or a pipeline in columns named and ordered for your work. Drag a card or use **Move** to choose its place. For a board from a connected app, Rebel makes the change under your usual permissions, then redraws; shared boards stay read-only.
 
 - **Meeting follow-ups, already written** — When a meeting leaves you owing an email ("I'll send it today"), the to-do Rebel adds to your **Actions** now comes with the email drafted. Press **Start**, change what you like, then **Send**: nothing goes out before that. Your promises, kept before you forget them. [▶ Watch it](https://storage.googleapis.com/mindstone-rebel/release-videos/261115-meeting-follow-ups-already-written.mp4)
