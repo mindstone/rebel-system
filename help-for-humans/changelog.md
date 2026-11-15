@@ -20,6 +20,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Improvements
 
+- **Old saving levels, retired with a note** — Very old versions of Rebel let you set how careful to be when saving to each Space. If you're upgrading from one of those, Rebel now keeps a backup of those levels, tells you once that they didn't carry over, and asks again the next time it needs your OK. To change what needs your OK, say so in your [Safety Rules](rebel://settings/safety#safetyRules). One way to set permissions, not two.
+
 - **Shared apps, your own numbers** — When a colleague shares an app that keeps itself current, opening it now sets up an update of your own, over your own data and connected apps. What you see stays yours: your results never go back into the shared app, and theirs never show up as yours. It updates when you open it, at most every 15 minutes; press **Keep this current** to put it on a schedule. Same app, no peeking.
 
 - **Outlines you can rearrange** — Plans, agendas and other lists with levels can now open as an outline you can fold up, rename and reorder. Press **Save changes** and Rebel updates the document or list it came from, with your usual permissions. Indentation, now negotiable. [▶ Watch it](https://storage.googleapis.com/mindstone-rebel/release-videos/261115-outlines-you-can-rearrange.mp4)
