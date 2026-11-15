@@ -8,6 +8,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Highlights
 
+- **Outlines you can rearrange** — Plans, agendas and other lists with levels can now appear as an outline you can collapse, rename and reorder. Make several changes, then press **Save changes** to send them together; Rebel updates the document or list it came from, through the apps you've connected, with the same permissions as always. You can also pin an outline, or save it as an app to reopen later. Edit an outline inside a saved app and each **Save changes** opens a new conversation, so you can see how Rebel got on; shared links stay read-only. Saving an outline as an app keeps the version you last saved; changes you haven't saved yet stay in the conversation where you made them, not lost. Indentation, now negotiable.
+
 - **Meeting notes, on the call** — The notetaker's video tile now shows decisions, actions with owners and open questions beside your Rebel character, for everyone in the meeting. Your usual permissions decide what can be shared. With a known calendar end, it becomes a recap for the last five minutes. The character stays; the meeting gets a memory.
   Use the board icon beside Listen / Coach / Join in to hide it from the call, or bring back the latest notes. Your character can hold the floor alone.
 
