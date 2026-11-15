@@ -29,6 +29,8 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Improvements
 
+- **A softer landing for old files** — Rebel can now send files and folders from your Library or linked Spaces to your computer's Trash (Recycle Bin on Windows). Routine clean-ups in a Space only you use need fewer approval cards; your own ask-first rules still apply. Restore files from your computer's Trash.
+
 - **Apps that keep up** — Save a live view and choose to keep it up to date in the same step, or keep this version. Desktop, web and phone show its freshness; refresh it where its updates run, and review any request for your OK. The snapshot can retire from pretending to be news.
 
 - **A clearer note on a new computer** — If your company picks the AI model and its key hasn't reached this computer, Rebel now says exactly that, and that your company admin can issue it again for this computer. Less guessing at what "set up" meant.
