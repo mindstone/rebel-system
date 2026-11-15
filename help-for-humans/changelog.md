@@ -101,6 +101,7 @@ What's new in Rebel. We ship fast, so there's always something.
 ### Fixes
 
 - **Keyboard focus stays with you** — On the web, waking a conversation or cancelling its check-back returns keyboard focus to the conversation. If you've moved to Search, focus stays there.
+- **A failed memory update says why, even after you click** — Hovering the red **Memory update failed** label explained what went wrong, but clicking it opened the list of files Rebel used and dropped the explanation. That list now starts with the reason too, and makes clear the reply itself is fine. Two places to look, one answer.
 
 - **Enter saves your own AI service** — In **Connect your own AI service** (during setup, or in **Settings → Agent & Voice**), pressing Enter now saves the service, just like clicking **Save**. A blank name or a mistyped address still can't be saved. The mouse can have a rest.
 
