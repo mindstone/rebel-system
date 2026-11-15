@@ -28,8 +28,6 @@ What's new in Rebel. We ship fast, so there's always something.
 
 - **"Always allow" says what you're agreeing to** — The confirm step after **Always allow** or **Block** now uses the button's own words and says where to change your mind later: **Settings → Privacy & Safety → What Rebel can do**. Nothing you already allowed or blocked changes. [▶ Watch it](https://storage.googleapis.com/mindstone-rebel/release-videos/261114-what-rebel-can-do.mp4)
 
-- **More room in your cloud** — Mindstone runs your cloud? Add storage in **Settings → Cloud**, at no charge. A little more room, a little less digital Tetris.
-
 - **Meeting notes, on the call** — When Rebel's notetaker is in your meeting, its video tile now shows the decisions, actions and open questions so far, for everyone in the meeting, and a recap near the end. Use the board icon beside Listen / Coach / Join in to hide it or bring it back. The meeting gets a memory.
 
 - **Teach a skill by example** — After finishing a document or draft, say "save this as an example", pick what Rebel should learn from your changes, and the skill uses it next time. Keep it for yourself or share it with your team. Repeating yourself can retire early. [▶ Watch it](https://storage.googleapis.com/mindstone-rebel/release-videos/261115-teach-a-skill-by-example.mp4)
