@@ -73,6 +73,16 @@ A key that stays **Set** for more than about 10 minutes while the person is usin
 2. If they're on a current version and the key is still **Set** after they've opened Rebel, use **Replace** to give them a fresh key, then ask them to open Settings. The fresh key comes from your company's account with the provider: make a new one there and paste it in (for OpenRouter and Fireworks AI you can also make it with **Bulk set API keys**, below).
 3. If that doesn't clear it, contact your Mindstone contact (or **hello@mindstone.com**) with the person's name and the provider. Never send the key itself.
 
+### "Your company's AI key isn't on this computer yet"
+
+A member sees this in a chat or an automation when their company has chosen a Fireworks AI model for them (one of the AI providers a company can pay for), and the key, the private code that lets Rebel use the company's Fireworks account, isn't on the computer they're using. Chats that need that model stop until the key arrives; nothing else changes.
+
+It happens on a new computer, after reinstalling Rebel, or when the key went to the person's other computer. Each key is handed over once: the first Rebel to check in with Mindstone (it does this every few minutes, and whenever you open it) saves it, and Mindstone's servers then delete their copy, so there's nothing left to send to a second computer.
+
+**If you're the admin:** on the Transformation Engine (Mindstone's company admin site), open that person's Fireworks AI key and use **Replace** to send a new one (that is how a key is issued again). The new key goes to whichever of their computers checks in first, so ask them to have Rebel open on the computer that showed the message. Replace doesn't switch the old key off, so their first computer keeps working with the key it already has; revoke it with Fireworks AI only if you want it to stop (see [Replacing and removing keys](#replacing-and-removing-keys)).
+
+**If you're the member:** once your admin has done that, open Rebel's **Settings** (or just switch back to the Rebel window) and the key arrives within a moment. Opening it is enough; there's nothing to click.
+
 ### Which Rebel versions handle this
 
 - **0.4.103** had a bug: it saved OpenRouter and Fireworks keys but couldn't confirm them, so they never left **Set** and Rebel didn't use them. Update.
