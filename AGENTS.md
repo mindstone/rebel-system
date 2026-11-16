@@ -49,7 +49,6 @@ model: {{ env.model }}
 
 workspace_path: {{ env.workspacePath }}
 mcp_config_path: {{ env.mcpConfigPath }}
-{% if env.sessionId %}session_id: {{ env.sessionId }}{{ '\n' }}{% endif %}
 {% if env.sessionType %}session_type: {{ env.sessionType }}{{ '\n' }}{% endif %}
 {% if env.privacyMode %}privacy_mode: true{{ '\n' }}{% endif %}
 {% if env.voiceActive %}voice_active: true{{ '\n' }}{% endif %}
