@@ -1,7 +1,7 @@
 ---
 name: pdf-read-extract
-description: "Read and extract text, tables, and data from PDF files using Python libraries (pdfplumber, pypdf). For filling out a PDF form, use pdf-fill-form instead (no Python required)."
-last_updated: 2025-11-08
+description: "Read and extract tables and data from PDF files using Python libraries (pdfplumber, pypdf). For plain text, or pages as images, use pdf-edit first (nothing to install). For filling out a PDF form, use pdf-fill-form instead (no Python required)."
+last_updated: 2026-11-16
 tools_required: '["Python 3", "pdfplumber", "pypdf"]'
 dependencies: '["python-setup-and-check.md"]'
 reference: 'https://github.com/anthropics/skills/tree/main/document-skills/pdf'
@@ -15,10 +15,10 @@ reference: 'https://github.com/anthropics/skills/tree/main/document-skills/pdf'
 
 ## See also
 
+- **[PDF text and page images →](../pdf-edit/SKILL.md)** — use first for plain text (`pdf.cjs read`) and for pages as images (`pdf.cjs render`). Built in, nothing to install. Come here for tables or Python-specific work.
 - **[PDF form filling →](../pdf-fill-form/SKILL.md)** — fill in PDF forms (AcroForm). Node-based, no Python required. Use this for any "fill out this PDF" request.
 - [python-setup-and-check](../../coding/python-setup-and-check/SKILL.md) - **Start here if this is your first time using Python** (non-technical friendly)
 - **[Anthropic pdf skill](../../Anthropic-official-skills/document-skills/pdf/SKILL.md)** - **Comprehensive guide** with advanced examples, form handling, merging/splitting, and complete API reference
-- [PDF-read-extract-by-converting-to-images-ImageMagick](../pdf-read-extract-by-converting-to-images-imagemagick/SKILL.md) - **Fallback approach** for when text extraction fails - converts PDFs to images for visual reading in Cursor
 - [Anthropic pdf on GitHub](https://github.com/anthropics/skills/tree/main/document-skills/pdf) - Source repository
 
 ## Quick Start

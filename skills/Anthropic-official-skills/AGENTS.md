@@ -6,7 +6,7 @@ description: Official Anthropic skills - reference implementations for Claude Co
 
 This folder contains the official skills from Anthropic, sourced from their open-source repository.
 
-For supported document tasks, use Rebel's built-in skills first: [Word creation](../utilities/word-docx/SKILL.md), [PowerPoint creation](../utilities/powerpoint-pptx/SKILL.md), [Excel creation and recalculation](../utilities/excel-xlsx/SKILL.md), [PDF merge, stamp and text](../utilities/pdf-edit/SKILL.md), and [PDF form filling](../utilities/pdf-fill-form/SKILL.md). These work offline. Use the document skills here for tracked changes, redlining and other existing-OOXML edits.
+For supported document tasks, use Rebel's built-in skills first: [Word creation](../utilities/word-docx/SKILL.md), [PowerPoint creation](../utilities/powerpoint-pptx/SKILL.md), [Excel creation and recalculation](../utilities/excel-xlsx/SKILL.md), [PDF merge, stamp, text and page images](../utilities/pdf-edit/SKILL.md), [PDF form filling](../utilities/pdf-fill-form/SKILL.md), and [charts as images](../utilities/chart-image/SKILL.md). These work offline. Use the document skills here for tracked changes, redlining and other existing-OOXML edits.
 
 ## Key Resources
 

@@ -10,7 +10,7 @@ For more information, check out:
 - [How to create custom skills](https://support.claude.com/en/articles/12512198-creating-custom-skills)
 - [Equipping agents for the real world with Agent Skills](https://anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills)
 
-For supported document tasks, use Rebel's built-in skills first: [Word creation](../utilities/word-docx/SKILL.md), [PowerPoint creation](../utilities/powerpoint-pptx/SKILL.md), [Excel creation and recalculation](../utilities/excel-xlsx/SKILL.md), [PDF merge, stamp and text](../utilities/pdf-edit/SKILL.md), and [PDF form filling](../utilities/pdf-fill-form/SKILL.md). These work offline. Use the document skills here for tracked changes, redlining and other existing-OOXML edits.
+For supported document tasks, use Rebel's built-in skills first: [Word creation](../utilities/word-docx/SKILL.md), [PowerPoint creation](../utilities/powerpoint-pptx/SKILL.md), [Excel creation and recalculation](../utilities/excel-xlsx/SKILL.md), [PDF merge, stamp, text and page images](../utilities/pdf-edit/SKILL.md), [PDF form filling](../utilities/pdf-fill-form/SKILL.md), and [charts as images](../utilities/chart-image/SKILL.md). These work offline. Use the document skills here for tracked changes, redlining and other existing-OOXML edits.
 
 # About This Repository
 
