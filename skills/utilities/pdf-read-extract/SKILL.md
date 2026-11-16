@@ -1,6 +1,6 @@
 ---
 name: pdf-read-extract
-description: "Read and extract tables and data from PDF files using Python libraries (pdfplumber, pypdf). For plain text, or pages as images, use pdf-edit first (nothing to install). For filling out a PDF form, use pdf-fill-form instead (no Python required)."
+description: "Read and extract tables and data from PDF files using Python libraries (pdfplumber, pypdf). For plain text, pages as images, or OCR of a scan or photo, use pdf-edit first (nothing to install). For filling out a PDF form, use pdf-fill-form instead (no Python required)."
 last_updated: 2026-11-16
 tools_required: '["Python 3", "pdfplumber", "pypdf"]'
 dependencies: '["python-setup-and-check.md"]'
@@ -15,7 +15,7 @@ reference: 'https://github.com/anthropics/skills/tree/main/document-skills/pdf'
 
 ## See also
 
-- **[PDF text and page images →](../pdf-edit/SKILL.md)** — use first for plain text (`pdf.cjs read`) and for pages as images (`pdf.cjs render`). Built in, nothing to install. Come here for tables or Python-specific work.
+- **[PDF text and page images →](../pdf-edit/SKILL.md)** — use first for plain text (`pdf.cjs read`), pages as images (`pdf.cjs render`) and the words in a scan or photo (`pdf.cjs ocr`). Built in, nothing to install. Come here for tables or Python-specific work.
 - **[PDF form filling →](../pdf-fill-form/SKILL.md)** — fill in PDF forms (AcroForm). Node-based, no Python required. Use this for any "fill out this PDF" request.
 - [python-setup-and-check](../../coding/python-setup-and-check/SKILL.md) - **Start here if this is your first time using Python** (non-technical friendly)
 - **[Anthropic pdf skill](../../Anthropic-official-skills/document-skills/pdf/SKILL.md)** - **Comprehensive guide** with advanced examples, form handling, merging/splitting, and complete API reference
@@ -82,14 +82,13 @@ print(f"Pages: {len(reader.pages)}")
 
 - **pdfplumber** - Best for text extraction with layout preservation and table detection
 - **pypdf** - Best for metadata, form fields, and basic text extraction
-- **pytesseract + pdf2image** - For scanned PDFs requiring OCR
 
 ## Important Notes
 
 - **CRITICAL**: Always ask for explicit user permission before any write/modify/destructive operations (writing files, modifying PDFs, deleting content)
 - **Mac**: Use `python3` and `pip3`; **Windows**: Use `python` and `pip`
 - Use pdfplumber for most text/table extraction (better layout preservation)
-- For scanned PDFs without text layer, you'll need OCR (pytesseract)
+- For scanned PDFs without a text layer, use `pdf.cjs ocr` in [pdf-edit](../pdf-edit/SKILL.md)
 - Always use `encoding='utf-8'` when writing extracted text to files
 - Password-protected PDFs require decryption: `reader.decrypt("password")`
 
@@ -99,7 +98,6 @@ See the **[Anthropic pdf skill](../../Anthropic-official-skills/document-skills/
 - Advanced text extraction and region-specific extraction
 - Form field reading and manipulation
 - PDF merging, splitting, and page manipulation
-- OCR for scanned documents
 - Batch processing patterns
 - Performance optimization
 - Complete API reference
