@@ -95,6 +95,10 @@ if the CDN library is unavailable too, the HTML table still works.
 A code app is one HTML document. Look for an existing app with the same purpose first
 (Glob **/*.rebelapp), then save it with `rebel_save_app`: `mode: 'create'`, a `name`, and the
 document as `html`. To change one, read it and pass the whole updated document as `html`.
+When the person says an app shows nothing or an error, read it: an app saved before the rules below
+may send a tool's name to `rebel(...)`, such as `rebel('connector_accounts', ...)`, or call `use_tool`
+without `account` when they have several accounts. Change those calls as below and save the app at
+the same path, so it keeps its data.
 A converted plugin, including one that failed to convert, keeps its old code in `legacy.source`.
 Read that before changing or rebuilding it on the person's request; save the replacement as `html`
 at the same path. Rebel keeps its identity, data and legacy source, and removes the old runtime.
