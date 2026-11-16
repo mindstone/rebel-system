@@ -1,6 +1,6 @@
 ---
 description: "Friendly glossary of key concepts and terms in Mindstone Rebel, including definitions for spaces, skills, memory, MCPs, wikilinks, and other core terminology"
-last_updated: "2026-11-11"
+last_updated: "2026-11-15"
 ---
 
 # Mindstone Rebel Terminology
@@ -45,7 +45,7 @@ A red badge on the dock icon (or taskbar) that appears when background conversat
 Unsent messages that persist when you switch conversations. If you start typing something and navigate away, your draft will be there when you return. Use **Ctrl+Tab** (or **⌘+Tab** on Mac) to cycle through conversations that have drafts waiting.
 
 ### Homepage
-The landing surface you see when you open Rebel or start fresh. Organized into three sections: **Today** (actionable items like meetings and tasks), **Chat** (recent conversations), and **Coach** (contextual suggestions based on your work). ([Homepage guide](library://rebel-system/help-for-humans/the-spark.md))
+The landing surface you see when you open Rebel or start fresh. Organized into three sections: **Today** (actionable items like meetings and tasks), **Chat** (recent conversations), and **Coach** (contextual suggestions based on your work). ([Homepage guide](library://rebel-system/help-for-humans/homepage.md))
 
 ### Starred
 Conversations you've starred, which appear at the top of your history sidebar. Click the star icon on any conversation to star it for quick access later.
@@ -64,9 +64,6 @@ A quick-capture window for jotting down thoughts. Press **⌘/Ctrl+Shift+N** to 
 
 ### Quick Capture
 Record a voice note without starting a conversation. Tap the Quick Capture button, speak, and the transcript is stored in your context automatically. Works on desktop and mobile — handy for capturing ideas while you're on the move.
-
-### The Spark
-Now called [Homepage](#homepage). Previously the discovery hub shown when you start a new conversation.
 
 ### Coaching Insights
 Reflections generated after conversations suggesting what you might want to explore next. These appear on the [Homepage](#homepage) and help you discover follow-up opportunities you might have missed.
@@ -139,7 +136,7 @@ See [Session Modes](library://rebel-system/help-for-humans/session-modes.md) for
 A way to find files by meaning rather than exact keywords. Rebel indexes your workspace and enriches each chunk with document metadata (title, path) to understand what files are about. Trigger with `@files` in the composer. Indexing runs automatically in the background when you open a workspace.
 
 ### Library
-The sidebar panel in Rebel where you browse files, skills, and memory. Click the folder icon to open it. (Previously called "Workspace panel" — note that your workspace folder on disk is still called a "workspace", but the UI panel is now "Library".)
+The sidebar panel in Rebel where you browse **Files**, **Skills**, **Apps**, and **Memory**. Each section has views suited to its contents, and the header lets you choose a Space and search within the section. Click the folder icon to open it. (Previously called "Workspace panel" — note that your workspace folder on disk is still called a "workspace", but the UI panel is now "Library".)
 
 ### Privacy Mode
 A per-conversation toggle for extra-sensitive work. When enabled, Rebel won't learn from the conversation automatically, and riskier actions ask you whenever the safety check can't give a clear answer. Everyday actions like reading and searching still run without asking, and your Always and Block choices still apply. Turn it on with **Private mode** in the session settings menu in the message box. ([Privacy Mode guide](privacy-mode.md))
@@ -173,7 +170,6 @@ Some terms have changed over time. If you see these in older documentation or co
 | Browse (Library tab) | Files | Library tab renamed Jan 2026 |
 | What Rebel Knows | Your Context | Memory section renamed Jan 2026 |
 | Forget (memory action) | Remove | Memory action renamed Jan 2026 |
-| The Spark | Homepage | Landing surface renamed Feb 2026 |
 
 ---
 

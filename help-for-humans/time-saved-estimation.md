@@ -83,5 +83,5 @@ When disabled, no estimation calls are made after conversations and the header i
 ## See Also
 
 - [Settings and Configuration](library://rebel-system/help-for-humans/settings-and-configuration.md) -- Where to toggle time-saved tracking
-- [The Spark](library://rebel-system/help-for-humans/the-spark.md) -- Your personal profile and goals (not yet connected to impact ratings)
+- [Homepage](library://rebel-system/help-for-humans/homepage.md) -- Your personal profile and goals (not yet connected to impact ratings)
 - [Rebel Interface](library://rebel-system/help-for-humans/Rebel-interface.md) -- Overview of the header, sidebar, and other UI elements

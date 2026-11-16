@@ -130,3 +130,9 @@ Run @`skills/meetings/meeting-prep/SKILL.md` for my call with Jane Doe at Acme C
 - [Connectors & Integrations](library://rebel-system/help-for-humans/mcp-connectors-tools-and-integrations.md) — connecting Rebel to external tools
 - [Teams and admin controls](library://rebel-system/help-for-humans/teams-and-admin-controls.md) — sharing skills across a team and what stays personal
 
+
+## Ways to put me to work
+
+Open **[Library › Skills](rebel://library?filter=skills&view=worth)** and choose **Worth your time**. Below your skills, **Ways to put me to work** offers personalised workflows from your connected tools.
+
+Pick a workflow to start a conversation. **Generate Workflows** creates your first suggestions; **Regenerate workflows** refreshes them. Expand the list to see Your Workflows, New, and Suggestions, including how often you have used them. **By kind** is the other Skills view.

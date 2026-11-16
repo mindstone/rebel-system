@@ -146,7 +146,7 @@ Your landing surface when you open Rebel, with three sections:
 - **Coach** — Reflections and coaching insights from previous conversations suggesting what to explore next
 - **Quick suggestions** — Fresh prompts, help links, community links, and what's new when you're starting from zero
 
-**See also:** [Homepage](library://rebel-system/help-for-humans/the-spark.md)
+**See also:** [Homepage](library://rebel-system/help-for-humans/homepage.md)
 
 ### Focus
 

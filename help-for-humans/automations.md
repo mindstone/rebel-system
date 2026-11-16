@@ -102,7 +102,6 @@ Rebel includes system automations out of the box. You can usually enable or disa
 | **Morning Triage** | Reviews what matters today across inbox, calendar, and related context |
 | **Daily Wins & Learnings** | Surfaces useful wins, lessons, and signals from the last day |
 | **Source Capture** | Captures citable sources such as meetings, documents, and files into memory |
-| **Community Highlights** | Pulls relevant topics from the Rebels community |
 | **Community Video Picks** | Monthly curation of relevant community talks |
 | **Calendar Sync (Other Providers)** | Calendar syncing for non-Google / non-Microsoft setups; off by default |
 

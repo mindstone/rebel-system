@@ -170,7 +170,7 @@ workspace/
 9. Save the use cases to the library using the `rebel_usecases_add` tool with the [OUTPUT FORMAT] JSON schema:
    - Convert each use case to the JSON format: title, description, prompt, icon, qualityRating
    - Call `rebel_usecases_add` with the array of use cases
-   - If the tool is unavailable (e.g., RebelSettings MCP not connected), inform the user they can save use cases later via The Spark tab's "Regenerate" button.
+   - If the tool is unavailable (e.g., RebelSettings MCP not connected), inform the user they can save use cases later via Library › Skills’ "Regenerate" button.
 
 [USE CASE TEMPLATE]
 
@@ -250,4 +250,4 @@ These examples set the bar for what great looks like. Each demonstrates a differ
 - Don't assume access to systems or data you don't have direct access to
 - Professional use cases are preferred over personal use cases, but personal use cases are also fine if you don't have access to professional systems
 - Make the use cases as clearly personalised as possible
-- After presenting use cases to the user, always save them using `rebel_usecases_add` so they appear in The Spark
+- After presenting use cases to the user, always save them using `rebel_usecases_add` so they appear in Library › Skills

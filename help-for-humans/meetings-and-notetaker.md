@@ -428,7 +428,7 @@ The enhanced transcript upgrade usually completes within minutes, but can take u
 - **Wait it out:** Most upgrades complete within 30 minutes
 - **If it's been hours:** The basic transcript is your fallback — it's still useful
 
-### Missing Meetings in The Spark
+### Missing Meetings on Home
 
 - Ensure your calendar is connected (Google Calendar via Google Workspace integration)
 - Only meetings with video links (Zoom, Meet, Teams) appear in the Today's Meetings section

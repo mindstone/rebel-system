@@ -11,7 +11,7 @@ Under the hood, Rebel runs on **Rebel Core** — the app's built-in, in-process 
 
 Here's the mental model: **Conversations + Spaces + Skills + Connectors + Memory + Safety**
 
-In daily use, you'll mostly move between the [Homepage](rebel://usecases), [Actions](rebel://tasks), and [Automations](rebel://automations): the Homepage shows what needs attention, Actions holds saved work, and Automations handles recurring jobs in the background.
+In daily use, you'll mostly move between the [Homepage](rebel://home), [Library](rebel://library), [Actions](rebel://tasks), and [Automations](rebel://automations): the Homepage shows what needs attention, Library holds your files, skills, apps and memory, Actions holds saved work, and Automations handles recurring jobs in the background.
 
 ---
 

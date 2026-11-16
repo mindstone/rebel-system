@@ -48,7 +48,7 @@ Five things to know during onboarding:
    Do NOT create calendar events during onboarding. No "Rebel Time" scheduling, no recurring blocks. If the user asks about calendar integration, say: "You can set that up anytime later — just ask me to block time on your calendar."
 
 4. GOALS MUST BE IN FRONTMATTER (CRITICAL)
-   The Spark dashboard reads goals from YAML frontmatter, NOT from markdown body text.
+   The goals reader reads goals from YAML frontmatter, NOT from markdown body text.
    
    When saving goals, you MUST write them to Chief-of-Staff/README.md frontmatter like this:
    

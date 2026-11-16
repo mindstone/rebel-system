@@ -84,12 +84,6 @@ Coach also shows personalised use case cards — suggestions for things Rebel ca
 
 If one looks useful, click it to start with that prompt already prepared.
 
-## What Homepage is called
-
-The canonical user-facing name is **Homepage**.
-
-Older docs and older conversations may still mention **The Spark**, but that is the old name for this surface.
-
 ## Customization
 
 Homepage adapts as you use Rebel:

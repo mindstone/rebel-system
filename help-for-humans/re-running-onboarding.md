@@ -1,6 +1,6 @@
 ---
 description: "How to restart the onboarding wizard, reset the checklist, or revisit individual setup steps later"
-last_updated: "2026-04-16"
+last_updated: "2026-11-15"
 ---
 
 # Restarting Onboarding or Re-running Setup Steps
@@ -81,7 +81,7 @@ Go to **[Settings → Workspace](rebel://settings/spaces)** to adjust your libra
 
 If what you want is **fresh goals, updated use cases, or more context in memory**, you usually do **not** need to restart onboarding.
 
-- Open **[The Spark](rebel://usecases)** if you want help discovering new use cases
+- Open **[Library › Skills](rebel://usecases)** if you want help discovering new use cases. Library has four sections — Files, Skills, Apps and Memory — and Skills is where Ways to put me to work now lives.
 - Ask Rebel to help you revisit goals
 - Ask Rebel to refresh memory from your connected tools
 
@@ -91,5 +91,5 @@ That is more like a tune-up than a restart.
 
 - [Getting Started](library://rebel-system/help-for-humans/getting-started.md) — What the full setup wizard covers
 - [Settings and configuration](library://rebel-system/help-for-humans/settings-and-configuration.md) — Where each setup area now lives
-- [The Spark](library://rebel-system/help-for-humans/the-spark.md) — Discovery and coaching
+- [Library](rebel://library?filter=skills&view=worth) — the four Library sections, including Skills and Ways to put me to work
 - [Spaces](library://rebel-system/help-for-humans/spaces.md) — Understanding memory spaces

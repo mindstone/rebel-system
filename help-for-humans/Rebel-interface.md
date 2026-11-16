@@ -1,6 +1,6 @@
 ---
 description: "Overview of the Rebel desktop app interface: layout, unified voice mic buttons, Homepage, file attachments, and workspace integration"
-last_updated: "2026-09-24"
+last_updated: "2026-11-15"
 ---
 
 # Rebel Interface (Mindstone Rebel desktop app)
@@ -49,11 +49,13 @@ Drag files into the composer or paste from clipboard.
 
 ### Library & Skills
 
-- **Skills panel** — Browse and run skills from the Library drawer; configure which system skills are available
+- **Library** — One place for four kinds of work: **Files**, **Skills**, **Apps**, and **Memory**. Choose a Space from the header and search within the section you're using.
+- **Skills** — **Worth your time** lists the skills you use most that could get better, with a next step for each, followed by **Ways to put me to work**. **By kind** holds the full list.
+- **Apps** — **Gallery** previews each app's own content; **List** shows its name, Space, update time and refresh schedule.
+- **Memory** — Memories waiting for your yes come first. The rest appear as rows **By date**, or **By space** when all Spaces are shown, with four memories per Space and **See all**.
+- **Files** — **Folders** keeps deep trees shallow and folds long breadcrumbs; **List** shows files newest first.
 - **Document Editor** — A unified editor for viewing and editing files inline without leaving Rebel. Files open in edit mode by default, with annotated markdown support and document actions. Seamlessly transitions between Library and conversation views.
 - **Document outline** — Long documents show a navigable outline sidebar in the editor. Click any heading to jump directly to that section.
-- **Memory panel** — See what Rebel knows about you: facts, preferences, and context organized by space
-- **Atlas panel** — Browse your skills, memories, spaces, and files in one calm list. Pick any item to see its details and a quiet rail of what's related — "more like this", without the graphics. Start a conversation from any item, or get the gist in one click.
 - **Share files** — Share a dated, read-only copy of a Library file with a public link, with optional password protection and expiry. Text files are readable in the browser; other files get a download link. Only this file is included; other files in the folder stay private. Later edits don't change the shared copy: choose **Update link** to replace it. Find file, conversation and app links together under **Shared links** in **Settings** → **Workspace**, with **Copy link**, **Update link** and **Stop sharing**.
 - **Content search** — Search across your workspace to find files quickly
 - **File search** — Find files by meaning, not just keywords. Use `@files` in the composer
@@ -98,7 +100,7 @@ The Homepage is your landing surface — the screen you see when you open Rebel,
 - **Chat** — Shows your recent conversations so you can pick up where you left off. The Home chat input includes a mic button; **double-tap while recording** to send your message straight away.
 - **Coach** — A carousel of insights and suggestions based on your previous conversations and connected tools, including a hero card highlighting what to work on next. Insights expire after 3 days and prioritise by how often you act on them.
 
-At the bottom, find quick links to "What's New", the community, and help. See [Homepage](library://rebel-system/help-for-humans/the-spark.md) for the full guide.
+At the bottom, find quick links to "What's New", the community, and help. See [Homepage](library://rebel-system/help-for-humans/homepage.md) for the full guide.
 
 ### Focus
 
@@ -135,7 +137,7 @@ Use `rebel://` links in conversations to direct users to specific parts of the a
 | `rebel://settings/usage` | Settings → Usage |
 | `rebel://settings/cloud` | Settings → Workspace → Cloud Sync |
 | `rebel://automations` | Automations panel |
-| `rebel://usecases` | The Spark (homepage) |
+| `rebel://usecases` | Library › Skills (Ways to put me to work) |
 | `rebel://tasks` | Actions |
 | `rebel://feedback/bug` | Bug report form |
 | `rebel://feedback/improvement` | Feedback/idea form |
