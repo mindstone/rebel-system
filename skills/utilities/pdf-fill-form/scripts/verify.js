@@ -4,55 +4,10 @@ const fs = require('fs');
 const os = require('os');
 const path = require('path');
 
-const SKILL_SCRIPTS_RELATIVE_PATH = 'rebel-system/skills/utilities/pdf-fill-form/scripts';
-
-function buildMissingDependencyError() {
-  const error = new Error(
-    [
-      'Missing dependency: "pdf-lib" is not installed for this scripts copy.',
-      'Run:',
-      `cp -r ${SKILL_SCRIPTS_RELATIVE_PATH} /tmp/pdf-fill-form-stage3-test`,
-      'cd /tmp/pdf-fill-form-stage3-test',
-      'npm install',
-      'node verify.js',
-    ].join('\n')
-  );
-  error.code = 'MISSING_DEPENDENCY';
-  return error;
-}
-
-function assertPdfLibInstalled() {
-  const localNodeModules = path.resolve(__dirname, 'node_modules');
-  const localPdfLibPackage = path.resolve(localNodeModules, 'pdf-lib', 'package.json');
-
-  if (!fs.existsSync(localPdfLibPackage)) {
-    throw buildMissingDependencyError();
-  }
-
-  try {
-    require.resolve('pdf-lib', { paths: [localNodeModules] });
-  } catch (_error) {
-    throw buildMissingDependencyError();
-  }
-}
-
 function resolveFixturePath(filename) {
-  const candidates = [
-    path.resolve(__dirname, '..', 'fixtures', filename),
-    path.resolve(__dirname, 'fixtures', filename),
-  ];
-
-  for (const candidate of candidates) {
-    if (fs.existsSync(candidate)) return candidate;
-  }
-
-  const error = new Error(
-    `Fixture ${filename} not found. Tried:\n  ${candidates.join(
-      '\n  '
-    )}\nCopy the fixtures/ folder from the skill into your temp dir.`
-  );
-  error.code = 'MISSING_FIXTURE';
-  throw error;
+  const fixture = path.resolve(__dirname, '..', 'fixtures', filename);
+  if (!fs.existsSync(fixture)) throw new Error('A built-in PDF verification fixture was not found. Report this installation problem.');
+  return fixture;
 }
 
 function valuesMatch(requested, actual, type) {
@@ -80,9 +35,7 @@ function hasStepFailure(results, step) {
   return results.failed.some((entry) => entry.step === step);
 }
 
-async function verify() {
-  assertPdfLibInstalled();
-
+async function verify(outputDirectory = os.tmpdir()) {
   const { checkFillable } = require('./check-fillable');
   const { extractFields } = require('./extract-fields');
   const { fillFillable } = require('./fill-fillable');
@@ -142,7 +95,7 @@ async function verify() {
 
   // 3) fill-fillable
   const tmpOut = path.resolve(
-    os.tmpdir(),
+    outputDirectory,
     `pdf-fill-form-verify-${process.pid}-${Date.now()}.pdf`
   );
   const fillResult = await fillFillable(fixturePdfPath, fixtureValuesPath, {
@@ -189,12 +142,12 @@ async function verify() {
   return results;
 }
 
-module.exports = { verify, valuesMatch, assertPdfLibInstalled, resolveFixturePath };
+module.exports = { verify, valuesMatch, resolveFixturePath };
 
 if (require.main === module) {
   (async () => {
     try {
-      const result = await verify();
+      const result = await verify(process.argv[2]);
       if (result.failed.length === 0) {
         console.log(
           JSON.stringify(
@@ -207,9 +160,6 @@ if (require.main === module) {
             null,
             2
           )
-        );
-        console.log(
-          `\nNext step: open ${result.filledPdfPath} in Preview + Chrome and confirm all fields render populated (D10 visual acceptance).`
         );
         process.exit(0);
       }
@@ -241,7 +191,7 @@ if (require.main === module) {
           2
         )
       );
-      process.exit(error && error.code === 'MISSING_DEPENDENCY' ? 2 : 1);
+      process.exit(1);
     }
   })();
 }

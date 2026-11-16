@@ -2,7 +2,11 @@
 
 const fs = require('fs');
 const path = require('path');
-const { PDFDocument, PDFName } = require('pdf-lib');
+function missingBundle() {
+  throw new Error("Rebel's built-in document libraries were not found. This is a problem with the Rebel installation, not with your file: report it, and don't try to install packages.");
+}
+const bundled = require('node:module').createRequire(path.join(process.env.REBEL_BUNDLED_NODE_MODULES || missingBundle(), 'x.js'));
+const { PDFDocument, PDFName } = bundled('pdf-lib');
 
 function usage() {
   return [

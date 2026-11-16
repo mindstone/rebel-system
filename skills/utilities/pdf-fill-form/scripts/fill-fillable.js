@@ -3,6 +3,10 @@
 const fs = require('fs');
 const os = require('os');
 const path = require('path');
+function missingBundle() {
+  throw new Error("Rebel's built-in document libraries were not found. This is a problem with the Rebel installation, not with your file: report it, and don't try to install packages.");
+}
+const bundled = require('node:module').createRequire(path.join(process.env.REBEL_BUNDLED_NODE_MODULES || missingBundle(), 'x.js'));
 const {
   PDFDocument,
   PDFTextField,
@@ -13,7 +17,7 @@ const {
   StandardFonts,
   PDFName,
   PDFBool,
-} = require('pdf-lib');
+} = bundled('pdf-lib');
 const { extractFields, hasXfaForm } = require('./extract-fields');
 
 const XFA_UNSUPPORTED_MESSAGE =

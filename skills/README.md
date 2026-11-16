@@ -7,6 +7,8 @@ description: "Technical skills and reference guides for AI agents, documenting e
 Efficient, composable patterns and best practices for common operations by AI agents.
 
 
+For creating documents, use [word-docx](utilities/word-docx/SKILL.md), [powerpoint-pptx](utilities/powerpoint-pptx/SKILL.md) and [excel-xlsx](utilities/excel-xlsx/SKILL.md) first. For PDF merge, stamp and text reading, use [pdf-edit](utilities/pdf-edit/SKILL.md); for AcroForms, use [pdf-fill-form](utilities/pdf-fill-form/SKILL.md). They use built-in libraries and work offline. Existing-document redlining and tracked changes use the Anthropic skills.
+
 ## Skill categories
 
 - `Anthropic-official-skills/` — Reference implementations from Anthropic's open-source skills repository

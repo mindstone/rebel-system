@@ -2,6 +2,10 @@
 
 const fs = require('fs');
 const path = require('path');
+function missingBundle() {
+  throw new Error("Rebel's built-in document libraries were not found. This is a problem with the Rebel installation, not with your file: report it, and don't try to install packages.");
+}
+const bundled = require('node:module').createRequire(path.join(process.env.REBEL_BUNDLED_NODE_MODULES || missingBundle(), 'x.js'));
 const {
   PDFDocument,
   PDFTextField,
@@ -10,7 +14,7 @@ const {
   PDFOptionList,
   PDFDropdown,
   PDFName,
-} = require('pdf-lib');
+} = bundled('pdf-lib');
 
 const XFA_UNSUPPORTED_MESSAGE =
   "This PDF uses XFA forms (Adobe LiveCycle). pdf-lib doesn't support XFA. Fall back to the Anthropic Python PDF skill, or convert the PDF in Acrobat first (Tools → Forms → Convert).";

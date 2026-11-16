@@ -1,7 +1,7 @@
 ---
 name: pdf-fill-form
 description: "Fill out a PDF form for the user. Handles fillable AcroForm PDFs (text fields, checkboxes, radio groups, dropdowns) using Node.js (no Python required). Use this first for any 'fill out this PDF' request before the Anthropic PDF skill."
-last_updated: 2026-05-19
+last_updated: 2026-11-15
 tools_required: ["Node.js (bundled with Rebel)"]
 agent_type: main_agent
 ---
@@ -16,38 +16,17 @@ Use this skill before `Anthropic-official-skills/document-skills/pdf` for any us
 - The user wants those fields populated and saved into a new PDF
 - You need a local, no-Python path for text fields, checkboxes, radio groups, and dropdown/choice fields
 
-## Surface Support
-
-**Desktop only.** Cloud and mobile surfaces don't execute local scripts; users on those surfaces should fill PDFs via the Rebel desktop app or fall back to a web-based form filler. See the [Cross-Surface Parity Checklist](../../../../docs/project/CROSS_SURFACE_PARITY_CHECKLIST.md).
-
 ## Process
 
-1. Confirm the PDF is fillable:
-   - `node check-fillable.js <path-to-pdf>`
-2. Extract field metadata:
-   - `node extract-fields.js <path-to-pdf>`
-3. Map user answers to field IDs and create `field_values.json`:
-   - Shape: `[{"field_id":"...","value":"...|true|false|null"}]`
-4. Fill the form:
-   - `node fill-fillable.js <path-to-pdf> <field_values.json> [--output <path>] [--flatten]`
-
-## Setup — Copy to temp + npm install
-
-The scripts require npm dependencies. Since `rebel-system/` may be read-only in production builds, always copy scripts to a writable temp directory before running:
+The built-in pdf-lib library works on desktop and in the cloud (including tasks started from a phone). Run these scripts in place; no copy or package installation is needed. Quote each path and write outputs into the workspace.
 
 ```bash
-# POSIX (macOS/Linux)
-cp -r rebel-system/skills/utilities/pdf-fill-form/scripts /tmp/pdf-fill-form
-cd /tmp/pdf-fill-form
-npm install
+node "rebel-system/skills/utilities/pdf-fill-form/scripts/check-fillable.js" "form.pdf"
+node "rebel-system/skills/utilities/pdf-fill-form/scripts/extract-fields.js" "form.pdf"
+node "rebel-system/skills/utilities/pdf-fill-form/scripts/fill-fillable.js" "form.pdf" "field_values.json" --output "filled.pdf"
 ```
 
-```powershell
-# Windows (PowerShell/cmd)
-xcopy /E /I rebel-system\skills\utilities\pdf-fill-form\scripts %TEMP%\pdf-fill-form
-cd %TEMP%\pdf-fill-form
-npm install
-```
+Map the user's answers to the extracted field IDs in `field_values.json`: `[{"field_id":"...","value":"..."}]` (booleans and null are also supported). Confirm required answers before filling. Use `--flatten` only when an uneditable result is wanted. If built-in libraries are missing, report an installation problem; do not try to install packages.
 
 ## Script Reference
 
@@ -182,16 +161,13 @@ If Python setup is questionable, run:
 
 ## Testing
 
-After running `npm install`, run:
+Run from the workspace with the normal Rebel shell environment:
 
 ```bash
-node verify.js
+node "rebel-system/skills/utilities/pdf-fill-form/scripts/verify.js"
 ```
 
-Fixture availability is required for `verify.js`:
-
-- If running from the skill source tree, run it from `rebel-system/skills/utilities/pdf-fill-form/scripts` (it will use `../fixtures/`).
-- If running from a copied temp scripts directory, also copy `fixtures/` alongside that scripts directory (so `./fixtures/` exists next to `verify.js`).
+The script reads its bundled fixtures and writes the filled test PDF to a temporary folder. An optional directory argument chooses the output folder.
 
 This checks the AcroForm path end-to-end against the smoke fixture (`smoke-fillable.pdf`):
 

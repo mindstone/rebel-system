@@ -474,6 +474,8 @@ When analysing or summarising documents, extract direct quotes first to ground y
 - All `.md` files in `skills/`, `memory/`, and `help-for-humans/` should have a one-line `description` frontmatter field that adds context not already obvious from the filename (this description is used for search indexing)
 - **File paths are clickable** — When mentioning files in your responses, paths like `Chief-of-Staff/README.md` or `work/Company/file.md` become clickable links. For system files, always use the full `rebel-system/...` prefix (e.g., `rebel-system/skills/memory/source-capture/SKILL.md`), never bare relative paths within a skill. For paths with spaces, use backticks: `` `folder name/file.md` ``
 - **Nested code fences:** When outputting a markdown document inside a fenced code block, use 4+ backticks for the outer fence (e.g., ````markdown … ````) so inner triple-backtick blocks don't prematurely close it
+Shipped document skill scripts use the built-in libraries in `REBEL_BUNDLED_NODE_MODULES`, loaded with `require('node:module').createRequire(require('node:path').join(process.env.REBEL_BUNDLED_NODE_MODULES, 'x.js'))`. Run them in place; save generated files in the workspace. See [document skills](skills/README.md).
+
 **Important:** File and folder names may contain spaces. When generating scripts or command-line operations, always quote paths properly.
 
 **App navigation links:**
