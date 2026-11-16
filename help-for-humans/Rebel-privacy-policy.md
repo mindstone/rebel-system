@@ -1,7 +1,7 @@
 ---
 description: "Privacy policy for the Rebel app (managed app and open-source build)"
-last_updated: "2026-10-30"
-version: "3.5"
+last_updated: "2026-11-16"
+version: "3.6"
 ---
 
 
@@ -20,7 +20,7 @@ This Privacy Policy explains how Mindstone Learning Limited ("Mindstone", "we", 
 
 Rebel is distributed in two builds — the **managed app** that Mindstone operates, and an **open-source build** that you install and run yourself. A few parts of this policy apply differently to each. Unless a section says otherwise, it describes the managed app; see "Open-Source / Self-Hosted Build" below for what differs.
 
-Last updated: 30 Oct 2026 | Version: 3.5 | Owners: CTO & COO
+Last updated: 16 Nov 2026 | Version: 3.6 | Owners: CTO & COO
 
 How Rebel Works
 Rebel is a desktop application that works with data on your local machine and connects to external services you authorise (for example, cloud storage, email, or collaboration tools). It uses AI to help you complete tasks against that data. Rebel stores content and conversations on your device and, when Cloud Continuity is on, on the configured cloud machine. Cloud Continuity turns on when you enable it, or by itself on a computer that never made a choice when your Rebel account already has a Mindstone Cloud (see Section 7). It also routes your instructions to the configured services and AI providers and, in the managed app, collects limited telemetry to ensure reliability. (The open-source build sends Mindstone anonymous usage data by default, which you can switch off, and no error reports at all — see "Open-Source / Self-Hosted Build".)
@@ -77,7 +77,7 @@ In-app surveys: the occasional in-product survey (for example the "how likely ar
 
 Technical data: device type, operating system, app version
 
-Log data: error logs and crash reports. These are filtered by a strict allow-list before they leave your device — only safe operational detail (error type, technical metadata) is sent, never your conversational content, calendar entries, message text, or files. This technical and log data is collected as part of the managed app's analytics and error monitoring, and the automatic reporting of it is covered by the Share crash & error reports switch — see "Your Telemetry Choices (Managed App)". In the open-source build, error monitoring is off (no Mindstone error-monitoring credentials are bundled), so this data is not sent to Mindstone; any error monitoring you enable with your own credentials goes to your own account, not Mindstone — see "Open-Source / Self-Hosted Build".
+Log data: error logs and crash reports. These have passwords, keys, tokens and email addresses removed before they leave your device, but can include file and folder names and error messages; never your conversation text, calendar entries, message text or file contents. This technical and log data is collected as part of the managed app's analytics and error monitoring, and the automatic reporting of it is covered by the Share crash & error reports switch — see "Your Telemetry Choices (Managed App)". In the open-source build, error monitoring is off (no Mindstone error-monitoring credentials are bundled), so this data is not sent to Mindstone; any error monitoring you enable with your own credentials goes to your own account, not Mindstone — see "Open-Source / Self-Hosted Build".
 
 3. Information in Your Workspace and Cloud Custody
 With Cloud Continuity off, your prompts, AI outputs, files, and memory remain on your local device and chosen file-storage services. With your own cloud provider, Rebel copies them to a machine 100% under your control and Mindstone does not get them. With Mindstone Cloud, Mindstone holds a copy and never looks at it. With a manual cloud connection, Rebel cannot verify who operates the configured machine. This content may also be transmitted to third-party AI providers and services you authorise — see sections below.
