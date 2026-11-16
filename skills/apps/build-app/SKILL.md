@@ -132,6 +132,9 @@ never `rebel('connector_accounts', ...)`, which Rebel refuses.
 - Remember things: `tool('app_state_set', { key, value })`, `tool('app_state_get', { key })` and
   `tool('app_state_delete', { key })`. Values are JSON. Add `scope: 'shared'` for data everyone in a
   shared Space sees; otherwise it is the person's own.
+- An app reopens as the person left it: save every choice they make in it (a picked account, a
+  filter, a tab, a sort) with `app_state_set` when they make it, and read it back with
+  `app_state_get` when the app opens, as the example below does with its account picker.
 - Read: `read_library_file` (`{ path }`), `rebel_search_files`, `rebel_search_sources`,
   `rebel_conversations_list`, `rebel_conversations_search` and `rebel_conversations_get_summary`.
   An app in a shared Space reads only that Space, and no conversations.
@@ -156,12 +159,20 @@ async function useConnector(family, account, name, args) {
   return answer.content.map(part => part.text ?? '').join(''); // often JSON: parse it if so
 }
 const { accounts } = await tool('connector_accounts', { family: 'GoogleWorkspace' });
-// A picker keeps the person's choice: app_state_get returns null until something is saved.
-const picked = await tool('app_state_get', { key: 'account' });
-const shown = accounts.includes(picked) ? [picked] : accounts; // all, unless they picked one still connected
-const perAccount = await Promise.allSettled(shown.map(account =>
-  useConnector('GoogleWorkspace', account, 'search_workspace_emails', { query: 'is:unread' })));
-// When they pick: await tool('app_state_set', { key: 'account', value: account }); for "All", app_state_delete.
+let picked = await tool('app_state_get', { key: 'account' }); // null until they pick
+async function show() {
+  const shown = accounts.includes(picked) ? [picked] : accounts; // all, unless they picked one still connected
+  const perAccount = await Promise.allSettled(shown.map(account =>
+    useConnector('GoogleWorkspace', account, 'search_workspace_emails', { query: 'is:unread' })));
+  // Render a section per account from perAccount, and a picker: "All" plus each account, calling pick().
+}
+async function pick(account) { // null for "All"
+  picked = account;
+  if (account) await tool('app_state_set', { key: 'account', value: account });
+  else await tool('app_state_delete', { key: 'account' });
+  show();
+}
+show();
 ```
 - The bridge exists only inside Rebel: don't build a test page or harness of your own to run the
   app. Save it, and the person sees it working when they open it.
