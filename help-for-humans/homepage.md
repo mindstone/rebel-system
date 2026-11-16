@@ -15,7 +15,7 @@ Its job is simple: help you decide what matters next without making you rummage 
 - [Connectors](library://rebel-system/help-for-humans/mcp-connectors-tools-and-integrations.md) — connecting the tools Homepage draws from
 - [Automations](library://rebel-system/help-for-humans/automations.md) — background work that can feed into Homepage
 - [Meetings and notetaker](library://rebel-system/help-for-humans/meetings-and-notetaker.md) — meeting prep and transcripts
-- [Daily Spark](rebel://library/rebel-system%2Fhelp-for-humans%2Fdaily-spark.md) — the small local note that can appear on Home each morning
+- [Daily Spark](rebel://library/rebel-system%2Fhelp-for-humans%2Fdaily-spark.md) — the small personal note that can appear on Home each morning
 
 ## How Homepage is laid out
 

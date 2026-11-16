@@ -51,10 +51,10 @@ Use **Settings → Agent & Voice** for:
 - **Fallbacks** — in **Customise**, choose backup models if your primary choice is unavailable
 - **Permission mode** — whether Rebel runs actions freely or stays in plan-only mode
 - **Auto memory updates** — whether Rebel should save useful facts automatically
-- **Expose provider keys in agent shell** — make provider keys available to Rebel-run shell sessions if you need that
+- **Let Rebel's commands use your AI keys** — lets tools Rebel runs for you use the AI provider keys you've added; leave it off unless a tool needs one
 - **File indexing** — GPU acceleration and the quick link to Library indexing controls
 - **Learned model limits** — Rebel remembers what it learns about each model's effective context-window limit on your specific setup, so you don't have to re-establish the boundary after restarts or app updates
-- **Daily recommendations** — controls when Rebel generates daily recommendations for you. Three modes: **Ask** (shows a prompt card on your Homepage so you can trigger recommendations on demand), **Automatic** (Rebel generates recommendations daily on its own), or **Off** (disabled entirely)
+- **Daily recommendations** — choose **Ask me each time** to show a card on Home and make recommendations when you ask; **Run automatically** to have Rebel make them each morning; or **Off** to stop them. Your selected AI model makes the recommendations, which may cost money.
 - **Backups**: in **Settings → Agent & Voice**, choose which connections Rebel can use when your main one is busy or hits a limit, and set their order. There is one Backup list; the separate keys card has none. See [AI models](rebel://library/rebel-system%2Fhelp-for-humans%2FAI-models.md#backup-connections).
 
 See [AI models](library://rebel-system/help-for-humans/AI-models.md) for the full model guide.
