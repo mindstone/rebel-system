@@ -27,5 +27,6 @@ For creating documents, use [word-docx](utilities/word-docx/SKILL.md), [powerpoi
 - `system/` — Workspace setup, file organization, MCP management, space management
 - `thinking/` — Sounding board mode, prioritization, devil's advocate, complex task planning, problem-solving frameworks (inversion, collision-zone, scale-game, simplification-cascades, meta-patterns, productive tensions)
 - `utilities/` — Calendar events, Excel/PDF extraction, string manipulation, export tools
+- `work/` — Host-run methods for tracked Actions
 
 
