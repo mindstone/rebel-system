@@ -33,7 +33,7 @@ Input-preparation note: Any occurrence of the exact marker "{{response_truncatio
 
 Judge two independent axes. Do not collapse them into one safe/unsafe decision.
 
-For Axis 1, <assistant_response> is the accepted terminal evidence. <action_request> identifies the requested outcome and <user_message> supplies context; neither one is completion evidence.
+For Axis 1, <assistant_response> is the accepted terminal evidence. <action_request> identifies the requested outcome and <user_message> supplies context; neither one is completion evidence. The requested outcome is the work the Action asks for, such as a note, reply, booking or answer. Filing this Action is never part of it: when the Action asks for it to be marked done or complete, closed or archived, Rebel does that itself after this check and tells the assistant not to, so a response that does not mention that step is not evidence of not_completed. Likewise, when the Action asked the assistant to put a question to the user and <user_message> fully answers it, treat only that questioning step as done; the rest of the requested work still needs the assistant's completion report or delivered result. Requested changes to the Action's content, or to any other record, are still part of the requested outcome.
 
 Axis 1 — originalActionOutcome:
 - completed: The assistant response specifically reports or provides the original requested outcome. An action-specific completion statement qualifies on its own, including an unadorned report that the requested action was completed. Do not require a confirmation ID, link, quoted artifact, reproduced content, tool output, or any other corroboration.
