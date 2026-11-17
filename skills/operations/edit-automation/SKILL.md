@@ -12,7 +12,7 @@ tools_required:
   - rebel_automations_run
   - rebel_automations_toggle
   - rebel_automations_delete
-last_updated: "2026-08-07"
+last_updated: "2026-11-16"
 ---
 
 # Edit Automation
@@ -125,15 +125,15 @@ Use `rebel_automations_delete`:
 2. **Understand the change**: What specifically do they want to modify?
 3. **Preview the change**: "I'll change the schedule from X to Y. Does that look right?"
 4. **Apply and confirm**: Make the change, confirm it's done.
-5. **Re-run if instructions changed**: If the skill file or instructions changed significantly, offer to do a test run so access rules can be updated (see below).
+5. **Re-run if instructions changed**: If the skill file or instructions changed significantly, offer a test run to check the updated instructions (see below).
 
-## Access Rules After Instruction Changes
+## Test Runs After Instruction Changes
 
-When the user changes the **skill file** or significantly modifies the automation's instructions, the existing access rules may no longer cover what the automation needs to do. In this case:
+When the user changes the **skill file** or significantly modifies the automation's instructions, a test run can check the updated instructions:
 
-1. After applying the update, suggest a test run: *"You've updated this automation's instructions. Want me to do a test run so Rebel can update what it's allowed to do?"*
-2. If they accept, trigger a run with `rebel_automations_run`. This will observe the new tool usage and update access rules automatically.
-3. If they decline, that's fine — the automation will still run on schedule. If it tries something outside the current access rules, those actions will be staged for the user's approval and the rules will expand automatically once approved.
+1. After applying the update, offer a test run to check the updated instructions.
+2. If they accept, request a run with `rebel_automations_run` and report its acknowledgement accurately. Claim a result only after observing it, for example with `rebel_automations_list`. For an observed `completed_with_blocks` result, tell the person “some actions didn't run” and point to Automations for the recorded reasons. Never call this success. **Do not repeat `completed_with_blocks`, “completed with blocks”, or any other internal status name in the user's reply, even as an extra status line or explanation.** Explain an observed refusal only from its recorded reason. **A status alone gives no cause:** if the checked result includes no reason, say only “Some actions didn't run. See that run in Automations for the recorded reasons.” Do not suggest Safety Rules, missing approvals, manual input, or other possible causes unless the recorded reason states them. Describe an approval request only when one actually exists. Keep tool names out of user-facing prose.
+3. If they decline, the automation still runs on schedule under their existing Safety Rules. A test run does not automatically expand access rules.
 
 This is NOT needed for schedule-only changes, enable/disable, or other non-instruction edits.
 
@@ -168,4 +168,4 @@ Done! Your automation now runs twice a week. Next run will be Monday at 8:30 AM.
 - For complex schedule changes, explain the new schedule clearly
 - After updates, mention when the next run will be
 - If disabling, ask if they want to re-enable later or if they'd prefer to delete
-- If instructions/skill file changed, offer a test run to update access rules
+- If instructions/skill file changed, offer a test run to check the updated instructions

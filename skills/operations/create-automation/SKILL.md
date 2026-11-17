@@ -1,6 +1,6 @@
 ---
 name: create-automation
-description: Creates scheduled automations through natural language conversation. Rebel interprets schedule intent, configures the automation, and runs a supervised first run so the person can see it work.
+description: Creates scheduled automations through natural language conversation. Rebel interprets schedule intent, configures the automation, and requests a supervised first run for recurring automations.
 use_cases:
   - "Set up a weekly summary automation"
   - "Create a daily standup prep that runs at 8:30am"
@@ -9,12 +9,12 @@ tools_required:
   - rebel_automations_create
   - rebel_automations_run
   - rebel_automations_list
-last_updated: "2026-11-06"
+last_updated: "2026-11-16"
 ---
 
 # Create Automation
 
-You're helping the user set up a scheduled automation. Your job is to understand what they want automated, when they want it to run, configure it, and do a supervised first run so they can see it work.
+You're helping the user set up a scheduled automation. Your job is to understand what they want automated, when they want it to run, configure it, and request a supervised first run for recurring automations.
 
 ## Conversation Flow
 
@@ -22,12 +22,12 @@ You're helping the user set up a scheduled automation. Your job is to understand
 2. **Identify the skill file**: Which skill or file should be executed? Help them pick from their Library.
 3. **Parse the schedule**: Convert natural language like "every Monday at 9am" into a schedule.
 4. **Confirm and create**: Show what will be created, then create it.
-5. **Supervised first run**: Run the automation right now so the person can see it work. This is a real run — the user gets value from it and any tool approvals happen inline as normal.
-6. **Confirm the result**: Tell the person what actually ran and what, if anything, needs their review. Future runs follow their Safety Rules; actions that need approval are saved for review.
+5. **Supervised first run**: Request the recurring automation's first run with `rebel_automations_run`. The schedule is saved; requesting a run does not confirm its result.
+6. **Confirm what is known**: Report the saved schedule and run acknowledgement accurately; its result will appear in Automations. Claim an outcome only after observing it, for example with `rebel_automations_list`. For an observed `completed_with_blocks` result, tell the person “some actions didn't run” and point to Automations for the recorded reasons. Never call this success. **Do not repeat `completed_with_blocks`, “completed with blocks”, or any other internal status name in the user's reply, even as an extra status line or explanation.** Explain an observed refusal only from its recorded reason. **A status alone gives no cause:** if the checked result includes no reason, say only “Some actions didn't run. See that run in Automations for the recorded reasons.” Do not suggest Safety Rules, missing approvals, manual input, or other possible causes unless the recorded reason states them. Describe an approval request only when one actually exists. Keep tool names out of user-facing prose.
 
 ## One-Off (Once) Automations
 
-For `once` automations, **do NOT do a supervised first run**. A successful first run marks the automation as completed, which permanently prevents the scheduled run from firing. Instead, just create it and let it run at the scheduled time. If the automation needs tool approvals, those will be staged for the user's approval when it runs.
+For `once` automations, **do NOT do a supervised first run**. A successful first run marks the automation as completed, which permanently prevents the scheduled run from firing. Instead, just create it and let it run at the scheduled time. Report the scheduled run's outcome when known; do not promise a result or an approval request in advance.
 
 **Times:** for a relative time ("in 10 minutes", "in 2 hours"), use `{type:"once", inMinutes:N}`: the tool works out the clock time, so don't look the time up first. For a wall-clock time ("tomorrow at 3pm"), use `dateTime`. The tool's reply says how long until the run (e.g. "in 10 min"): check it matches what the person asked, and tell them that, not a time you worked out yourself.
 
@@ -35,13 +35,13 @@ For `once` automations, **do NOT do a supervised first run**. A successful first
 
 For **recurring** automations, you MUST trigger a first run using `rebel_automations_run` after creation. **Skip this for `once` automations** (see above). This is critical because:
 
-- The first run is a real run so the person can see the automation work and get its results now
-- Actions that need approval ask as normal; future unattended runs save those actions for review under the person's Safety Rules
+- The first run attempts the task now; its result appears in Automations
+- The person's Safety Rules still apply. A run can complete, wait for a real approval or answer, or record that some actions did not run; report only what is known
 
-Tell the user something like:
-> "I'll run this now so you can see it work and get the results. Any actions that need your approval will ask as usual. After this, it'll run on schedule and save any actions that need your OK for review."
+When `rebel_automations_run` actually reports that the run started or was requested, tell the user:
+> "The schedule is saved. I've requested its first run; its result will appear in Automations."
 
-If rebel_automations_run comes back saved for review, tell the person in one sentence that the first run is waiting for their OK, and that if they'd rather skip it the automation still runs on schedule. Don't say it's waiting again unless you know it still is: once they decline it, that's finished with.
+If rebel_automations_run comes back saved for review, tell the person in one sentence: "The first run is waiting for your OK: approve it to run now, or skip it and the automation still runs on schedule." Don't say it's waiting again unless you know it still is: once they decline it, that's finished with.
 
 ## Schedule Parsing
 
@@ -85,13 +85,11 @@ Creating this now...
 
 *[Uses rebel_automations_create tool]*
 
-Done! Now I'll run it so you can see it work. This is a real run — you'll get your weekly summary now, and any actions that need your go-ahead will ask you inline.
-
 *[Uses rebel_automations_run tool]*
 
-All done! Your summary is ready.
+The schedule is saved. I've requested its first run; its result will appear in Automations.
 
-That's it! It'll run on its own every Friday at 5pm. Any actions that need your OK will be saved for review under your Safety Rules.
+It'll run on its own every Friday at 5pm, following your Safety Rules.
 
 ## Tool Usage
 
@@ -129,4 +127,4 @@ Then trigger the first run with `rebel_automations_run`:
 - Suggest sensible defaults (e.g., "09:00" if no time specified)
 - For event-triggered automations, explain what events are available (transcript-ready, etc.)
 - Always do the supervised first run after creation for recurring automations — don't just tell the user to test it later. **Exception: skip the first run for `once` automations.**
-- After the first run, report its actual result and confirm that the automation will run on schedule
+- Report the run acknowledgement and confirm the schedule. Claim a result only after observing it; otherwise say its result will appear in Automations

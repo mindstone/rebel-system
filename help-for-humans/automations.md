@@ -1,6 +1,6 @@
 ---
 description: "How to schedule recurring or event-triggered work in Rebel, including built-in automations, transcript triggers, Focus automations, and run status meanings"
-last_updated: "2026-11-02"
+last_updated: "2026-11-16"
 ---
 
 # Automations
@@ -132,7 +132,7 @@ These are the current status labels to know:
 | **Running** | Currently in progress |
 | **Completed** | Finished successfully |
 | **Asked you a question** | Asked for your answer in its conversation |
-| **Some actions held back** | Finished, but some actions still needed review or were blocked |
+| **Some actions didn't run** | Finished with actions that did not run; the recorded reasons are shown under that run in the run history |
 | **Didn't finish** | Couldn't complete its work; open the conversation for the reason |
 | **Blocked by security** | Stopped because approvals or safety rules blocked it |
 | **Cancelled** | Stopped before completion |
@@ -158,7 +158,7 @@ To see automation runs in the conversation list, open the filter and choose **Sh
 
 Automations are more independent than normal conversations, but they do **not** get extra powers.
 
-Your safety rules still apply. If an automation tries to do something outside its rules, Rebel stages it for review instead of pretending everything is fine.
+Your safety rules still apply. An action may wait for your approval or be refused outright. A refusal does not create an approval request; its recorded reason appears in the run history.
 
 That includes memory writes as well as tool actions.
 
@@ -181,10 +181,10 @@ An automation whose saved schedule is broken — for example a weekly one with n
 - Review the staged approval
 - Update the automation's permissions if needed
 
-### It says “Some actions held back”
+### It says “Some actions didn't run”
 
-- The automation finished, but some steps still need your attention
-- Open the run details and check what was staged or skipped
+- The run finished, but some actions did not run. Read the recorded reasons shown under that run in the run history
+- Open Show details to see the full record or use Retry. If an approval request exists, review it in Notifications in the desktop app
 
 ### It seems stuck
 
