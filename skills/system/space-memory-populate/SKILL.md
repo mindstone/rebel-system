@@ -467,7 +467,7 @@ Safe to run multiple times:
 ## Troubleshooting
 
 - **MCP tools not working:** Check Settings > Connectors to verify connections
-- **No matching MCPs:** Add email associations to the space (Settings > Spaces > Edit)
+- **No matching MCPs:** Add email associations to the space (Settings → Workspace → Spaces → Edit)
 - **Missing content:** Some MCPs have date range limits; try specifying a narrower focus
 - **Slow execution:** Ensure subagents are launched in parallel, not sequentially
 - **People directories incomplete:** Re-run Phase 2 with extended timespan

@@ -22,7 +22,7 @@ Your Voice provider in Rebel therefore does not affect Plaud imports.
 
 ### Setup
 
-1. Go to **Settings → Meetings → Voice Recorders**.
+1. Go to **Settings → Meetings → Voice recorder**.
 2. Choose **Connect Plaud** and sign in.
 3. Allow Rebel to access your Plaud recordings.
 
@@ -47,7 +47,7 @@ There is no **Retranscribe** action in Rebel. Plaud owns the Plaud transcript, w
 |---------|------------|
 | Recording is waiting for a transcript | Open the Plaud app and let Plaud finish transcribing it, then choose **Sync** |
 | Recordings are not appearing | Check that they uploaded in the Plaud app and that Plaud shows a finished transcript |
-| Plaud says it is not connected | Reconnect it in **Settings → Meetings → Voice Recorders** |
+| Plaud says it is not connected | Reconnect it in **Settings → Meetings → Voice recorder** |
 | Sync looks stuck | Choose **Sync** for a fresh check |
 
 ## Quick Capture
@@ -62,15 +62,15 @@ On success, Rebel saves the transcript in your configured meeting transcript des
 
 If transcription fails, Rebel keeps the original WAV instead of throwing away the only copy. The error includes **Show file**; choose it to reveal the recording on your computer. You can preserve or transcribe it elsewhere while you sort out the Voice setting or provider error.
 
-If you selected an on-device provider and it fails, Rebel tells you. It does not silently send that recording through a managed cloud key. You can choose a different provider in **Settings → Voice** and make a new recording when you are ready.
+If you selected an on-device provider and it fails, Rebel tells you. It does not silently send that recording through a managed cloud key. You can choose a different provider in **Settings → Agent & Voice → Voice & Audio** and make a new recording when you are ready.
 
 ### Quick Capture troubleshooting
 
 | Problem | What to do |
 |---------|------------|
 | **Record from mic** cannot start | Check microphone permission, then try again |
-| Transcription failed | Choose **Show file** first so you know where the kept WAV is, then check **Settings → Voice** |
-| On-device model is not ready | Download or repair it in **Settings → Voice**, or explicitly choose another provider |
+| Transcription failed | Choose **Show file** first so you know where the kept WAV is, then check **Settings → Agent & Voice → Voice & Audio** |
+| On-device model is not ready | Download or repair it in **Settings → Agent & Voice → Voice & Audio**, or explicitly choose another provider |
 | A long recording seems busy | Leave Rebel open; the progress count shows completed pieces |
 
 ## Transcript notes

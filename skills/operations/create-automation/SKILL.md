@@ -112,7 +112,7 @@ Use `rebel_automations_create` with:
 }
 ```
 
-**Run location**: leave `executeIn` out unless the person says where this automation should run. Rebel then uses their "New automations run on" choice (Settings → Cloud), and this computer if they haven't made one. Sending `executeIn` overrides that choice, so only send it when they asked: `"cloud"` for always-on requests ("even when my laptop is closed", "overnight", "across time zones"), `"local"` for "on this computer". Cloud execution needs Cloud continuity set up (Settings → Cloud); without it the automation still runs on the desktop, so tell them if that's missing. When you confirm the automation, say where it runs from what `rebel_automations_create` returned, not from what you assumed.
+**Run location**: leave `executeIn` out unless the person says where this automation should run. Rebel then uses their "New automations run on" choice (Settings → Workspace → Cloud sync), and this computer if they haven't made one. Sending `executeIn` overrides that choice, so only send it when they asked: `"cloud"` for always-on requests ("even when my laptop is closed", "overnight", "across time zones"), `"local"` for "on this computer". Cloud execution needs Cloud continuity set up (Settings → Workspace → Cloud sync); without it the automation still runs on the desktop, so tell them if that's missing. When you confirm the automation, say where it runs from what `rebel_automations_create` returned, not from what you assumed.
 
 Then trigger the first run with `rebel_automations_run`:
 

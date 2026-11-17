@@ -146,7 +146,7 @@ When Rebel is about to use a tool, a fast AI model checks the action against you
 
 **A calendar tool's safety rating decides when Rebel asks.** Calendar and scheduling tools follow the same four levels as other tools. At either of the first two levels, Rebel can be allowed to change an event without a separate approval; that includes when an automation uses the tool on your behalf.
 
-At **Rebel can act for you**, Rebel checks every request and may ask first; if you choose **Any time**, it still checks every request for obvious mistakes. At **Rebel asks unless your Safety Rules or a saved choice allow it**, Rebel asks unless your Safety Rules or a saved choice cover the change. You can review or change a tool's rating in [Settings → Safety](rebel://settings/safety), and your Safety Rules can add narrower limits — for example, requiring approval for invitations with external attendees.
+At **Rebel can act for you**, Rebel checks every request and may ask first; if you choose **Any time**, it still checks every request for obvious mistakes. At **Rebel asks unless your Safety Rules or a saved choice allow it**, Rebel asks unless your Safety Rules or a saved choice cover the change. You can review or change a tool's rating in [Settings → Privacy & Safety → How Rebel judges actions](rebel://settings/safety), and your Safety Rules can add narrower limits — for example, requiring approval for invitations with external attendees.
 
 
 ## App Settings and Configuration

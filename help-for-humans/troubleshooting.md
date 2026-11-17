@@ -30,7 +30,7 @@ Quit and relaunch the app. Many transient issues resolve themselves on restart. 
 Open **Settings → Advanced** and click **Run System Check**. This tests your configuration and shows exactly what's working and what isn't. Failed checks include specific recommendations.
 
 **Export diagnostics**
-If you need to share details with support, use **Settings → Advanced → Download Enhanced (.zip)** to create a diagnostic bundle. Review [diagnostics-logging.md](diagnostics-logging.md) for what's included and how to check for sensitive data before sharing.
+If you need to share details with support, use **Settings → Advanced → Support → Download Diagnostic Logs** and choose **Detailed (.zip)** to create a diagnostic bundle. Review [diagnostics-logging.md](diagnostics-logging.md) for what's included and how to check for sensitive data before sharing.
 
 **Disk full**
 If your computer runs out of disk space, Rebel now shows a calm warning saying so plainly, rather than failing in confusing ways. Free up some space (empty the trash, clear large downloads) and the warning clears on its own.
@@ -106,7 +106,7 @@ If expected tools aren't appearing:
 
 1. **Check the Connectors tab** — Open **Settings → Connectors** and verify the service shows "Connected". If it shows an error or is disconnected, click to reconnect.
 
-2. **Run System Check** — Go to **Settings → Advanced → Run System Check**. The health report shows which connectors loaded successfully and which were skipped.
+2. **Run System Check** — Go to **Settings → Advanced → Support → Run System Check**. The health report shows which connectors loaded successfully and which were skipped.
 
 3. **Re-authenticate** — OAuth tokens can expire. Remove the connection and add it again to get fresh credentials.
 
@@ -174,7 +174,7 @@ Rebel handles connector failures gracefully. If one service is down or misconfig
 
 **Check permissions:**
 - **Mac:** System Settings → Privacy & Security → Microphone → ensure Rebel is enabled
-- **Windows:** Settings → Privacy → Microphone → ensure Rebel has access
+- **Windows:** Windows Settings → Privacy → Microphone → ensure Rebel has access
 
 **Test your microphone:** Make sure it works in other apps first.
 
@@ -338,9 +338,9 @@ If you're on a work network that uses extra security (common in larger organisat
 
 **What to try:**
 
-1. **Run System Check** — Go to **Settings → Advanced → Run System Check**. This will flag any connectivity issues and suggest next steps.
+1. **Run System Check** — Go to **Settings → Advanced → Support → Run System Check**. This will flag any connectivity issues and suggest next steps.
 2. **Retry** — Some managed networks add extra steps that slow things down the first time. Simply retrying often works.
-3. **Export diagnostics** — If the problem persists, use **Settings → Advanced → Download Enhanced (.zip)** to create a diagnostic bundle. This includes network connectivity details that can help your IT team or Rebel support pinpoint the issue.
+3. **Export diagnostics** — If the problem persists, use **Settings → Advanced → Support → Download Diagnostic Logs** and choose **Detailed (.zip)** to create a diagnostic bundle. This includes network connectivity details that can help your IT team or Rebel support pinpoint the issue.
 4. **Talk to IT** — If your organisation uses a proxy, VPN, or custom security certificates, your IT team may need to allow Rebel's network access. Share the diagnostic bundle with them.
 
 

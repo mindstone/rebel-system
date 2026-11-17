@@ -31,7 +31,7 @@ Rebel guides you through setup with a short step-by-step wizard. You'll see Rebe
 
 When you finish, Rebel prepares your workspace and reveals the homepage with a guided tour of the key features.
 
-The wizard appears automatically on first launch. If you want to revisit it later, go to Settings → Relaunch Onboarding.
+The wizard appears automatically on first launch. If you want to revisit it later, go to Settings → Advanced → Onboarding & Actions.
 
 ---
 

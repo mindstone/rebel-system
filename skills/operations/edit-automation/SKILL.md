@@ -94,7 +94,7 @@ Use `rebel_automations_update`:
 }
 ```
 
-Cloud runs 24/7 on the user's Rebel Cloud (timezone is captured automatically). It needs Cloud continuity set up (Settings → Cloud) — without it the automation still runs on the desktop, so mention that if they're not set up. Use `executeIn: "local"` to switch back. Event-triggered and built-in system automations always run locally.
+Cloud runs 24/7 on the user's Rebel Cloud (timezone is captured automatically). It needs Cloud continuity set up (Settings → Workspace → Cloud sync) — without it the automation still runs on the desktop, so mention that if they're not set up. Use `executeIn: "local"` to switch back. Event-triggered and built-in system automations always run locally.
 
 ### Enable/Disable
 

@@ -46,7 +46,7 @@ Non-technical users struggle because the old process required opening Terminal, 
 Ask: "Do you have a personal **Claude Pro or Max subscription** from [claude.ai](https://claude.ai/upgrade)?"
 
 - **Yes** → continue
-- **No / unsure** → "You'll need a personal subscription first — [sign up here](https://claude.ai/upgrade). Team and Enterprise plans use API keys instead — select 'API Key' in [Settings > Agents & Voice](rebel://settings/agents)."
+- **No / unsure** → "You'll need a personal subscription first — [sign up here](https://claude.ai/upgrade). Team and Enterprise plans use API keys instead — select 'API Key' in [Settings → Agent & Voice](rebel://settings/agents)."
 - **Team/Enterprise** → stop, direct to API key flow
 - **Token expired / need to regenerate** → skip to step 5
 
@@ -184,7 +184,7 @@ Tell the user:
 
 > "Done! Your token is shown in the output above — it's the long string starting with `sk-ant-oat01-...`
 >
-> **Copy it**, then go to [Settings > Agents & Voice](rebel://settings/agents), select **Claude Max Token**, and paste it in."
+> **Copy it**, then go to [Settings → Agent & Voice](rebel://settings/agents), select **Claude Max Token**, and paste it in."
 
 ⚠️ **Security note for skill developers:** The token will appear in Rebel's command output. This is a known Layer 1 limitation; see the internal tracker for the planned `RebelAuth__set_claude_max_token` MCP tool to capture and store the token securely without it appearing in conversation history.
 

@@ -69,7 +69,7 @@ This happens only on a computer that has never made a choice here. If you picked
 
 ### Step 1: Choose your mode
 
-Go to **Settings → Workspace → Cloud Sync**.
+Go to **Settings → Workspace → Cloud sync**.
 
 You'll see two options:
 
@@ -122,7 +122,7 @@ Once connected, you should see:
 
 Once cloud continuity is connected on desktop:
 
-1. Go to **Settings → Workspace → Cloud Sync**
+1. Go to **Settings → Workspace → Cloud sync**
 2. Scroll to **Continue on mobile**
 3. Copy the **Server URL** shown below the QR code
 4. Open that address in any web browser
@@ -162,7 +162,7 @@ Once cloud continuity is active on your desktop, you can pair the Rebel mobile a
 
 ### Using the QR Code (Easiest)
 
-1. On your desktop, go to **Settings → Workspace → Cloud Sync**
+1. On your desktop, go to **Settings → Workspace → Cloud sync**
 2. Scroll down to **Continue on mobile**
 3. Open the **Rebel app** on your phone or tablet
 4. Tap **Scan QR code** in the app's setup screen
@@ -173,7 +173,7 @@ Once cloud continuity is active on your desktop, you can pair the Rebel mobile a
 
 If scanning doesn't work (or you prefer typing):
 
-1. On your desktop, go to **Settings → Workspace → Cloud Sync** → **Continue on mobile**
+1. On your desktop, go to **Settings → Workspace → Cloud sync** → **Continue on mobile**
 2. Copy the **Server URL** and **Token** shown below the QR code
 3. On your phone or tablet, open the Rebel app and choose **Manual setup**
 4. Paste the URL and token
@@ -306,7 +306,7 @@ Not today. The app relies on your phone's own lock screen (passcode, Face ID, fi
 
 If Rebel says your cloud instance is not publicly reachable:
 
-1. Go to **Settings → Workspace → Cloud Sync**
+1. Go to **Settings → Workspace → Cloud sync**
 2. Read the warning shown there carefully
 3. Follow the repair action Rebel offers
 4. Wait for the status to return to healthy before trying mobile or browser again
@@ -317,7 +317,7 @@ Without public access, your phone and browser have nothing to connect to. Rude b
 
 If the connection says "Authentication failed":
 
-1. Go to **Settings → Workspace → Cloud Sync**
+1. Go to **Settings → Workspace → Cloud sync**
 2. Look for the repair option in the warning banner
 3. Repair the access token
 4. If Rebel warns about replacing the existing token, continue only if you're happy to re-pair any other devices afterward
@@ -440,7 +440,7 @@ What offline mode **can't** do: start an agent turn (Rebel needs the cloud to th
 
 If you want to turn off cloud continuity:
 
-1. Go to **Settings → Workspace → Cloud Sync**
+1. Go to **Settings → Workspace → Cloud sync**
 2. Switch back to **Only this computer**
 3. Confirm the change
 

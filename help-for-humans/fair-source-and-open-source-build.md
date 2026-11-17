@@ -76,7 +76,7 @@ This is separate from the services you actually use. When you connect an AI prov
 
 ### Turning it off
 
-Open **Settings → Safety → Privacy & Data** and switch off **"Share anonymous usage data."** It takes effect right away, and Rebel stops sending. Your choice sticks.
+Open **Settings → Privacy & Safety → Privacy & data** and switch off **"Share anonymous usage data."** It takes effect right away, and Rebel stops sending. Your choice sticks.
 
 ### Pointing it at your own analytics instead
 

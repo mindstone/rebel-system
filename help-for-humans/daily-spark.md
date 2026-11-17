@@ -44,6 +44,6 @@ There is nothing to run manually. The point is a small note, not another workflo
 
 ## How to turn it off
 
-Go to **Settings → Agent & Voice → Personalisation** and choose **Off** for **Daily Spark**.
+Go to **Settings → Agent & Voice → Daily Spark** and choose **Off**.
 
 You can turn it back on from the same place if you miss being gently heckled by your calendar.

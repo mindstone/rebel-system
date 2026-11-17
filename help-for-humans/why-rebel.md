@@ -44,7 +44,7 @@ This guide explains what makes Rebel different and helps you decide when to use 
 
 ### Safety Without Friction
 
-**Tool safety layer** — Before Rebel runs potentially risky operations (deleting files, sending emails, modifying data), it evaluates the risk and asks for approval. Guided by your Safety Rules — natural language rules you write in [Settings → Account & Preferences → Privacy & Safety](rebel://settings/safety).
+**Tool safety layer** — Before Rebel runs potentially risky operations (deleting files, sending emails, modifying data), it evaluates the risk and asks for approval. Guided by your Safety Rules — natural language rules you write in [Settings → Privacy & Safety → Your rules](rebel://settings/safety).
 
 **Memory safety** — Writes to your memory spaces go through an approval flow, so Rebel won't accidentally overwrite important context.
 

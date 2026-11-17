@@ -83,7 +83,7 @@ Rebel does not touch anything else in your Fly account. If you stop using BYOK, 
 
 In Rebel:
 
-1. Open **Settings → Workspace → Cloud Sync**
+1. Open **Settings → Workspace → Cloud sync**
 2. Choose **Cloud continuity**
 3. Click **Use your own cloud provider instead**
 4. Select **Fly.io**
@@ -131,7 +131,7 @@ If you're in multiple Fly organisations, create the token from the org you want 
 
 ## Step 4: Paste the Token into Rebel
 
-1. Back in **Settings → Workspace → Cloud Sync**, paste your token into the **Fly.io access token** field
+1. Back in **Settings → Workspace → Cloud sync**, paste your token into the **Fly.io access token** field
 2. Click **Connect** (or the equivalent button Rebel shows you)
 
 Rebel now:
@@ -196,7 +196,7 @@ Rebel auto-reconnects after drops, and backs off in escalating windows (roughly 
 
 - Your local internet is stable
 - The Fly machine hasn't run out of disk or memory (visible in the Fly dashboard)
-- **Settings → Cloud Sync → Troubleshooting** for detailed connection info
+- **Settings → Workspace → Cloud sync → Advanced troubleshooting** for detailed connection info
 
 For other connection issues — company VPN, network policies, QR-code problems — see the [general troubleshooting section](rebel://library/rebel-system%2Fhelp-for-humans%2Fcloud-continuity-and-mobile.md#troubleshooting) in the main cloud continuity guide.
 
@@ -225,7 +225,7 @@ This pulls the latest published cloud build and redeploys it.
 
 ### Option 2: Switch to Managed temporarily
 
-Disconnect BYOK in **Settings → Workspace → Cloud Sync**, enable **Mindstone Cloud**, let it settle, then switch back. (Your desktop data is unaffected either way.)
+Disconnect BYOK in **Settings → Workspace → Cloud sync**, enable **Mindstone Cloud**, let it settle, then switch back. (Your desktop data is unaffected either way.)
 
 ### Option 3: Just leave it
 
@@ -240,7 +240,7 @@ The cloud service is designed to degrade gracefully. If you're happy with the fe
 
 To fully stop using BYOK:
 
-1. In Rebel: **Settings → Workspace → Cloud Sync → Only this computer**. This stops syncing.
+1. In Rebel: **Settings → Workspace → Cloud sync → Only this computer**. This stops syncing.
 2. In the [Fly dashboard](https://fly.io/dashboard): find the `rebel-cloud-<something>` app and **Destroy** it. This removes the machine, the volume, and all associated resources.
 3. Double-check the **Volumes** section of your Fly dashboard is empty — Fly charges for volumes as long as they exist, even if the machine is stopped.
 
@@ -294,7 +294,7 @@ No. Your cloud instance lives in your Fly account, under your billing, on your v
 
 ### Can I move from BYOK to Mindstone Cloud later (or vice versa)?
 
-Yes. You can switch modes from **Settings → Workspace → Cloud Sync**. Conversations and most workspace files transfer, though individual files above **~7 MB** (and anything excluded by workspace-size limits — roughly **~50 MB** per file) may need to re-sync from your desktop after the switch rather than travelling via the cloud. Give your desktop a minute to finish the resync once the new mode is healthy.
+Yes. You can switch modes from **Settings → Workspace → Cloud sync**. Conversations and most workspace files transfer, though individual files above **~7 MB** (and anything excluded by workspace-size limits — roughly **~50 MB** per file) may need to re-sync from your desktop after the switch rather than travelling via the cloud. Give your desktop a minute to finish the resync once the new mode is healthy.
 
 ### What happens to paired mobile devices if I rebuild my cloud?
 
@@ -309,7 +309,7 @@ In your [Fly dashboard](https://fly.io/dashboard). You'll see one app named `reb
 
 ## Quick Reference
 
-- **In-app path:** Settings → Workspace → Cloud Sync → Cloud continuity → Use your own cloud provider → Fly.io
+- **In-app path:** Settings → Workspace → Cloud sync → Cloud continuity → Use your own cloud provider → Fly.io
 - **Token page:** [fly.io/user/personal_access_tokens](https://fly.io/user/personal_access_tokens)
 - **SSO command:** `fly tokens create org --org <your-org-slug>`
 - **Fly dashboard:** [fly.io/dashboard](https://fly.io/dashboard)

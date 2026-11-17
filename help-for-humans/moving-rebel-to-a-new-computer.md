@@ -21,7 +21,7 @@ If Rebel cannot use your Library folder, choose **Choose a folder for your Libra
 
 This brings back **conversations and conversation folders already on your cloud**. It does not transfer local files, Library contents, your profile or settings, connector sign-ins, saved keys, or control of the cloud from your old computer.
 
-Your old computer stays connected. The usual cloud management options remain available in **[Settings → Continuity & Messaging](rebel://settings/cloud)**. Which computer can change your Safety Rules and saved cloud keys stays the same.
+Your old computer stays connected. The usual cloud management options remain available in **[Settings → Workspace → Cloud sync](rebel://settings/cloud)**. Which computer can change your Safety Rules and saved cloud keys stays the same.
 
 The reconnect itself does not send this computer's fresh default settings or saved keys to the cloud. Later saves and restarts on this computer use the usual cloud sync behaviour.
 
@@ -50,7 +50,7 @@ If you run Rebel in the cloud -- your own self-managed Fly.io instance or a Mind
 
 **Steps:**
 
-1. **Get to the welcome screen.** On a fresh install it's already there. On a machine that's already set up, open **[Settings → Account](rebel://settings)** and **Sign out** -- you'll land back on the welcome screen.
+1. **Get to the welcome screen.** On a fresh install it's already there. On a machine that's already set up, open **[Settings → Account & Preferences → Profile](rebel://settings)** and **Sign out** -- you'll land back on the welcome screen.
 2. Choose **"Already using Rebel? Bring it over"**, then **"From your cloud"**.
 3. **Enter your cloud address** -- your instance URL, like `https://rebel-cloud-xxxxxxxx.fly.dev`. If you self-host on Fly.io, it's your app's URL in the Fly dashboard.
 4. **Enter your access token.** Don't have it to hand? Under *"Don't have your access token?"* click **"Recover with Fly"**, paste a **Fly API token** (generate one at [fly.io/user/personal_access_tokens](https://fly.io/user/personal_access_tokens)), and Rebel mints a fresh access token for you -- no command line needed. Then click through.
@@ -194,7 +194,7 @@ After the router reset, your connected services (Google Workspace, Microsoft 365
 
 Go to **Settings → Connectors** and reconnect each service. You'll sign in to each one as you normally would.
 
-If you use Rebel's web or mobile companions, you'll also need to **pair cloud continuity again** on the new machine -- device pairings don't travel. Turn it back on in **[Settings → Continuity & Messaging](rebel://settings/cloud)** and re-pair your phone, tablet, or browser. See [Cloud continuity and mobile](library://rebel-system/help-for-humans/cloud-continuity-and-mobile.md) for the full setup.
+If you use Rebel's web or mobile companions, you'll also need to **pair cloud continuity again** on the new machine -- device pairings don't travel. Turn it back on in **[Settings → Workspace → Cloud sync](rebel://settings/cloud)** and re-pair your phone, tablet, or browser. See [Cloud continuity and mobile](library://rebel-system/help-for-humans/cloud-continuity-and-mobile.md) for the full setup.
 
 
 ## Advanced: recovering your cloud by hand

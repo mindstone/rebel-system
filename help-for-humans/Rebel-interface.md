@@ -135,7 +135,7 @@ Use `rebel://` links in conversations to direct users to specific parts of the a
 | `rebel://settings/safety` | Settings → Privacy & Safety |
 | `rebel://settings/diagnostics` | Settings → Advanced → Support (alias: `rebel://settings/support`) |
 | `rebel://settings/usage` | Settings → Usage |
-| `rebel://settings/cloud` | Settings → Workspace → Cloud Sync |
+| `rebel://settings/cloud` | Settings → Workspace → Cloud sync |
 | `rebel://automations` | Automations panel |
 | `rebel://usecases` | Library › Skills (Ways to put me to work) |
 | `rebel://tasks` | Actions |
@@ -164,8 +164,8 @@ When users want to report a bug or share feedback, always use the `rebel://feedb
 ### Additional Features
 
 - **Actions** — Save actionable items for later and execute them when ready (see [actions](actions.md))
-- **Automations** — Schedule recurring tasks like daily briefings (Settings → Automations)
-- **Time Saved** — Track how much time Rebel saves you. Weekly stats show in the header; click for detailed breakdowns including all-time totals. Toggle in Settings → Display.
+- **Automations** — Schedule recurring tasks like daily briefings ([Automations](rebel://automations))
+- **Time Saved** — Track how much time Rebel saves you. Weekly stats show in the header; click for detailed breakdowns including all-time totals. Toggle in Settings → Account & Preferences → Appearance.
 - **Usage & Insights** — View your API usage, costs, and session statistics in Settings → Usage
 
 

@@ -42,7 +42,7 @@ You need an active Slack connection in **Settings → Connectors**. Some older S
 
 ### Enabling @-Mention Monitoring
 
-1. Open **Settings → Continuity & Messaging → Messaging**.
+1. Open **Settings → Workspace → Messaging**.
 2. Connect Slack if prompted — Rebel needs the Slack connector before it can listen for @-mentions and reply in the thread.
 3. Set the toggle to **On**.
 

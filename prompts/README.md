@@ -73,4 +73,4 @@ The system validates prompt files at startup and on-demand:
 - **Render check**: All prompts parse and render without errors
 - **Variable check**: Frontmatter-declared variables are referenced in the template
 
-Run health checks via Settings > Diagnostics, or programmatically via the health check API.
+Run health checks via Settings → Advanced → Support, or programmatically via the health check API.

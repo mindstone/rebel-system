@@ -112,9 +112,8 @@ const result = await window.systemHealthApi.safeModeCheckDiagnostics();
 - `checks.mcpRouterConfig.validJson === false`
 
 **Common fixes**:
-1. For settings: Reset via Settings > Diagnostics > Reset Settings
-2. For MCP config: Reset via Settings > Connections > Reset to defaults
-3. **Always get user approval before resetting anything**
+1. Follow the diagnostics' `suggestedFix` for the broken file (`settingsStore` or `mcpRouterConfig`): Settings has no reset button, so the fix is to back up the file, then repair it or move it aside so Rebel recreates it
+2. **Always get user approval before resetting anything**
 
 ### PERMISSION Issues
 
@@ -173,7 +172,7 @@ Format your response clearly:
 ### Need More Help?
 
 If these steps don't resolve the issue:
-1. Export a diagnostic bundle: Settings > Diagnostics > Export
+1. Export a diagnostic bundle: Settings → Advanced → Support → Download Diagnostic Logs → Detailed (.zip)
 2. Contact support with the bundle
 ```
 
@@ -209,7 +208,7 @@ Would you like me to proceed with this reset?
 |------|---------|-------------|
 | SETTINGS_MISSING | No settings file | Will be created on restart |
 | SETTINGS_PERMISSION | Can't read settings | Check file permissions |
-| SETTINGS_CORRUPT | Invalid settings JSON | Reset to defaults |
+| SETTINGS_CORRUPT | Invalid settings JSON | With approval, back up and repair or move aside app-settings.json |
 | MCP_CONFIG_CORRUPT | Invalid MCP JSON | Reset MCP config |
 | REPEATED_TIMEOUTS | Multiple timeouts in logs | Check network/firewall |
 | PERMISSION_ERRORS_IN_LOGS | Permission issues detected | Check folder permissions |
@@ -223,7 +222,7 @@ Would you like me to proceed with this reset?
 
 If you can't resolve the issue:
 
-1. **Export diagnostic bundle**: Settings > Diagnostics > Export Bundle
+1. **Export diagnostic bundle**: Settings → Advanced → Support → Download Diagnostic Logs → Detailed (.zip)
 2. **Note the Sentry event ID** (if available in `env.safeModeSentryEventId`)
 3. **Summarize what was tried** and what happened
 4. **Recommend contacting support** with the bundle

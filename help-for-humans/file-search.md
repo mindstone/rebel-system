@@ -136,7 +136,7 @@ This is separate from very large libraries that show a **partial Library** notic
 
 ### Cloud folder briefly unreachable
 
-When a cloud-backed Space is reconnecting, Library may show your **last-known results** with a calm reconnecting note. Hover the (i) for a plain-English explanation, or use **Manage in Settings** to open [Settings → Spaces](rebel://settings/spaces) and nudge a re-check. See [Library and very large workspaces](rebel://library/rebel-system%2Fhelp-for-humans%2Flibrary-and-very-large-workspaces.md) for how reconnecting works, and [Spaces](rebel://library/rebel-system%2Fhelp-for-humans%2Fspaces.md) if the folder is gone for good.
+When a cloud-backed Space is reconnecting, Library may show your **last-known results** with a calm reconnecting note. Hover the (i) for a plain-English explanation, or use **Manage in Settings** to open [Settings → Workspace → Spaces](rebel://settings/spaces) and nudge a re-check. See [Library and very large workspaces](rebel://library/rebel-system%2Fhelp-for-humans%2Flibrary-and-very-large-workspaces.md) for how reconnecting works, and [Spaces](rebel://library/rebel-system%2Fhelp-for-humans%2Fspaces.md) if the folder is gone for good.
 
 ### Search not finding expected files
 

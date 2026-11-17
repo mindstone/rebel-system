@@ -61,7 +61,7 @@ ssh -i "C:\Users\YourName\.ssh\replit" -p <PORT> <USER>@<HOST>
   - Ensure your key is added in Replit Keys and you used the exact Host/User/Port
   - Confirm the command points to `C:\Users\YourName\.ssh\replit`
 - “ssh is not recognized”
-  - Install “OpenSSH Client” (Settings → Apps → Optional features → View features → “OpenSSH Client” → Install)
+  - Install “OpenSSH Client” (Windows Settings → Apps → Optional features → View features → “OpenSSH Client” → Install)
   - Or install Git for Windows (includes ssh): https://git-scm.com/
 - Timeouts / connection fails
   - Confirm SSH is enabled for the Repl and “Connect” shows details

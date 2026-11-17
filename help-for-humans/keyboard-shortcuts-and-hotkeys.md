@@ -6,7 +6,7 @@ description: "Keyboard shortcuts for Mindstone Rebel app."
 
 Use keyboard shortcuts to work more efficiently with Mindstone Rebel.
 
-> **Tip:** View all shortcuts in **Settings → Shortcuts**.
+> **Tip:** View all shortcuts from the **Help** menu → **Keyboard shortcuts**.
 
 ## Quick Reference
 

@@ -86,7 +86,7 @@ To get there: press Win+R, type `%APPDATA%`, press Enter, and delete the `mindst
 ### 3. Uninstall Rebel
 
 - **macOS:** Drag Rebel from Applications to the Trash
-- **Windows:** Go to Settings → Apps → Installed apps, find Rebel, and uninstall
+- **Windows:** Go to Windows Settings → Apps → Installed apps, find Rebel, and uninstall
 - **Linux:** Remove using your package manager or delete the AppImage
 
 ### 4. Reinstall Rebel

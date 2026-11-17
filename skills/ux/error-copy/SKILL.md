@@ -33,7 +33,7 @@ Bad: "Failed to load conversation."
 Good: "That conversation didn't come back. Try once more?"
 
 Bad: "An error occurred. Please try again."
-Good: "Something went sideways. Try again, or check Settings → Diagnose."
+Good: "Something went sideways. Try again, or check Settings → Advanced → Support."
 
 Bad: "Error: Network connection failed."
 Good: "Can't reach the internet. Check your connection and we'll pick this back up."

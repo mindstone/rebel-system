@@ -274,7 +274,7 @@ If you've added exclusions but Rebel still isn't working:
 
 1. **Restart your computer** — Some exclusions require a restart to take effect
 2. **Check for multiple security products** — If you have more than one antivirus installed, add exclusions to all of them
-3. **Run System Check** — Open Rebel, go to **Settings → Advanced → Run System Check** to identify specific issues
-4. **Export diagnostics** — Use **Settings → Advanced → Download Enhanced (.zip)** and contact support
+3. **Run System Check** — Open Rebel, go to **Settings → Advanced → Support → Run System Check** to identify specific issues
+4. **Export diagnostics** — Use **Settings → Advanced → Support → Download Diagnostic Logs**, choose **Detailed (.zip)**, and contact support
 
 For general troubleshooting, see [troubleshooting.md](library://rebel-system/help-for-humans/troubleshooting.md).

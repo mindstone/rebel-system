@@ -137,11 +137,11 @@ If you had set a Space to always ask before saving, that choice is now a line in
 
 ## Grouping spaces by organisation
 
-You can tag work spaces with an **organisation** — for example, the company or client they belong to. Rebel uses this to group your spaces in Settings → Spaces, and to show the agent which spaces are related.
+You can tag work spaces with an **organisation** — for example, the company or client they belong to. Rebel uses this to group your spaces in Settings → Workspace → Spaces, and to show the agent which spaces are related.
 
 ### What it looks like
 
-In Settings → Spaces, spaces with the same organisation tag are grouped under a heading like **Mindstone** or **Acme Corp**. If a space has no organisation set, it appears under **No organisation set** — you can add one using the "Set organisation" option on each card.
+In Settings → Workspace → Spaces, spaces with the same organisation tag are grouped under a heading like **Mindstone** or **Acme Corp**. If a space has no organisation set, it appears under **No organisation set** — you can add one using the "Set organisation" option on each card.
 
 ### How to set one
 

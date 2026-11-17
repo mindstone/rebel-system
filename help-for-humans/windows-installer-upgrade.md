@@ -108,5 +108,5 @@ The new installer uses the same code signing certificate (Mindstone Learning Lim
 If you run into any issues during the upgrade:
 
 1. Check [troubleshooting.md](library://rebel-system/help-for-humans/troubleshooting.md) for common solutions
-2. Use **Settings → Advanced → Run System Check** to identify problems
+2. Use **Settings → Advanced → Support → Run System Check** to identify problems
 3. Contact us at support@mindstone.com with your diagnostic export

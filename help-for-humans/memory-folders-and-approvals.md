@@ -117,7 +117,7 @@ Buttons you may see:
 
 ## Getting too many approval cards?
 
-- **Edit your saving preferences.** Open [Safety Rules](rebel://settings/safety#safetyRules) and change the line for the Space. Settings → Spaces also links there.
+- **Edit your saving preferences.** Open [Safety Rules](rebel://settings/safety#safetyRules) and change the line for the Space. Settings → Workspace → Spaces also links there.
 - **Review each waiting save.** The “Ask less” shortcut has gone. For now, in-Library save cards let you allow the save once or decline it; saved Space permissions arrive in a later update.
 - **Check what happened without a card.** **Recent activity** under **[What Rebel can do](rebel://settings/safety#approvalAuthorityLedger)** shows what Rebel saved without asking and why.
 

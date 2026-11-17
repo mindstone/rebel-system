@@ -57,7 +57,7 @@ It's the same Rebel behind the voice, with everything it normally has — your C
 
 **One voice at a time.** If a meeting coach is already speaking, Live waits its turn — they won't talk over each other.
 
-Live mode needs an **OpenAI API key** (Settings → Voice). Without one, Rebel tells you so and points you at the right place.
+Live mode needs an **OpenAI API key** (Settings → Agent & Voice → OpenAI API key). Without one, Rebel tells you so and points you at the right place.
 
 ### Microphones around Rebel
 

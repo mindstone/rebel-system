@@ -8,7 +8,7 @@ Mention Rebel in a Slack thread and it can reply there, using the same conversat
 
 ## Getting started
 
-1. Open **Settings → Continuity & Messaging → Messaging**.
+1. Open **Settings → Workspace → Messaging**.
 2. Connect Slack.
 3. In Slack, mention Rebel in a thread.
 4. Keep talking in that thread if you want follow-up help.

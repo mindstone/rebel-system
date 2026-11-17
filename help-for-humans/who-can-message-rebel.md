@@ -8,7 +8,7 @@ By default, Rebel only listens to you on Slack. You can keep it that strict, ope
 
 ## Settings you'll see
 
-Open **Settings → Continuity & Messaging → Messaging**.
+Open **Settings → Workspace → Messaging**.
 These settings live in the desktop app. If you only use Rebel on mobile, ask whoever set up your desktop to review them.
 
 - **Owner only** *(default for new installs)* — only you can trigger Rebel from Slack.

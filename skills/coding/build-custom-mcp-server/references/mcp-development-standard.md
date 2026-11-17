@@ -460,7 +460,7 @@ Connectors published as open-source packages must not contain internal reference
 
 | What to check | Allowed | Not allowed |
 |---|---|---|
-| Error messages | "Reconnect in your MCP host's settings" | "Reconnect in Mindstone Settings > Integrations" |
+| Error messages | "Reconnect in your MCP host's settings" | "Reconnect in Rebel's Settings → Connectors" |
 | User-Agent | "mcp-server-zendesk/0.2.0" | Product-host-specific User-Agent strings |
 | Environment variables | Service-specific (`ZENDESK_API_TOKEN`) | `REBEL_WORKSPACE_PATH`, `MINDSTONE_REBEL_BRIDGE_STATE` |
 | Bridge code | Not present | `src/bridge.ts`, localhost bridge calls |

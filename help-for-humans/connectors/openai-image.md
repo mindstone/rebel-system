@@ -24,7 +24,7 @@ This connector uses your OpenAI API key:
 
 1. Open **Settings → Connectors**
 2. Find **OpenAI Image Generation** and enable it
-3. Ensure your OpenAI API key is configured in **Settings → Voice** (shared with voice features)
+3. Ensure your OpenAI API key is configured in **Settings → Agent & Voice → OpenAI API key** (shared with voice features)
 
 > **Cost note**: Images are billed directly to your OpenAI account — not Rebel. At 1024×1024, OpenAI currently charges roughly $0.006 (low), $0.053 (medium), and $0.211 (high) per image. Batch requests multiply linearly by `count` (for example, `count: 8` at `high` is about $1.68). Edits cost more than generations because reference images are also billed — roughly $0.25-$0.40 per square edit at high quality. See [OpenAI pricing](https://openai.com/pricing) for current rates.
 

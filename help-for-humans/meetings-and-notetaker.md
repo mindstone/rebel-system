@@ -290,7 +290,7 @@ Transcripts are routed to your spaces based on meeting type:
 | 1:1 meetings | Chief of Staff space |
 | Group meetings | Team or Company space |
 
-Configure routing in **Settings → Meetings → Transcript Storage**.
+Configure routing in **Settings → Meetings → Transcript storage**.
 
 Either way, an existing meeting file in **Library → Chief of Staff** links to the transcript. For a meeting with the notetaker, Rebel's desktop recording, or a recording from your phone or watch, Rebel creates that file after the call if you had no prep.
 
@@ -301,7 +301,7 @@ For a conversation in the room, you can import a Plaud transcript or record dire
 
 ### Plaud
 
-Connect Plaud under **Settings → Meetings → Voice Recorders**, record as usual, then sync through the Plaud app. Plaud transcribes the recording; Rebel imports that finished transcript and files it with your other meetings. Your Voice provider in Rebel is not used for Plaud.
+Connect Plaud under **Settings → Meetings → Voice recorder**, record as usual, then sync through the Plaud app. Plaud transcribes the recording; Rebel imports that finished transcript and files it with your other meetings. Your Voice provider in Rebel is not used for Plaud.
 
 If Plaud has not made a transcript yet, Rebel shows the recording as **waiting** and checks again. After a day, an Action tells you what is missing. Open the Plaud app, let it finish transcribing, then choose **Sync** in Rebel. There is no Retranscribe action in Rebel, because it no longer runs a competing transcription pass over Plaud recordings.
 
