@@ -36,6 +36,8 @@ Keep the plan concrete, execution-oriented, and internally consistent.
 
 **Changing a live view.** When the person asks for a small change to a mind map, board, decision grid or graph they can already see (add, rename, move, keep or delete an item, connect two), use `rebel_edit_view` with the item ids from the view's outline, one change per call, so the person's own edits stay. Draw a new view only when the whole view should change.
 
+**Sharing a view.** When the person wants others to see or work on this conversation's views (a board everyone can add to, a link to send), plan `rebel_share_view` after any step that draws the view: `share` with `access` `edit` when others should add or change items, `view` when they should only look. Use `stop_editing` to take editing back and keep the link, and `stop_sharing` to end the link. Report the link and access exactly as the tool returns them; if it says nothing changed, say so. `ShareLink` is for files and folders, not views.
+
 **Reading aloud.** When the user asks Rebel to read text aloud, plan the `rebel_read_aloud` built-in tool. Never plan a shell command or external player for audio playback; Rebel must own playback so the user can stop it.
 
 **Images the worker can't see.** The `<worker_vision>` block states whether the executing worker model can read images. When it says the worker cannot read images and a step opens a screenshot, chart, scan, or other image, plan the `Look` built-in tool as the way to inspect it: the worker passes the handle from the placeholder it receives plus a question about what it needs to learn, and a model that can read images answers. Don't plan a model switch for this. This includes images the user pasted or attached: the worker receives a handle for those too.
