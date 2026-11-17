@@ -88,15 +88,13 @@ So yes: a file can live inside a shared team space *and* also be sent out as a s
 
 ## Ask teammates' Rebels
 
-In chat, try: “Ask my teammates’ Rebels in Product team what their biggest launch risk is, and put the replies in a table.” You and your teammates need write access to the same shared Space, and that Space must be marked as shared: in [Settings → Workspace → Spaces](rebel://settings/spaces), edit it and set **Sharing** to Team-only or wider (not Private). The Rebel on your computer does this today; keep both people's apps and windows open to receive requests and replies. Asking from phone or web is not available yet.
+Asking teammates' Rebels now happens in Slack. In chat, try: “Ask Alice's Rebel in Slack what her biggest launch risk is.” Use the name of her Rebel's Slack app, as it appears in Slack. See [Ask a teammate's Rebel](talking-to-rebel-from-slack.md#ask-a-teammates-rebel) for setup and what each side sees.
 
-A question to everyone is readable by everyone with access to the Space. To ask directly, name the person: “Ask Alice’s Rebel privately about the launch risk.” Direct questions are encrypted for the named people; their answers are encrypted for you. Everyone with access to the Space can still see who asked whom and when, just not what was said. If Alice isn't available yet, ask her to open Rebel with that shared Space once, or ask everyone instead.
+### Earlier Rebel to Rebel messages
 
-Your teammate gets a new conversation with your question, and their Rebel can draft an answer from their information. Sending follows their permissions and [Safety Rules](rebel://settings/safety#safetyRules). Under the default Safety Rules, Rebel asks before sending anything sensitive, such as prices, plans or customer details. A routine fact may be sent without asking; your teammate sees it afterwards in the conversation and in their history. When Rebel does ask, the preview shows the full message and who can read it before it goes. A public answer is still visible to everyone with access to the Space. Replies arrive in your original conversation as teammates answer; closing Rebel delays delivery until you reopen it. If nobody answers, nothing arrives and the question stays open.
+Earlier versions passed these messages through a **Rebel board** folder in a shared Space. Rebel no longer uses it. An earlier request that was still open is closed, with a note in its conversation: ask Rebel again and it can send a new request through Slack.
 
-Find the trace at **Library → [your Chief of Staff Space] → Rebel to Rebel history.md** — use the displayed name of your own Chief of Staff Space. It lists questions and answers sent and received, with who, when, visibility and a short question excerpt. “Visible to” means who can read the message, not who has read it; the full text stays in the conversation. A **Couldn't open** row is a private message this computer can't unlock, for example after you or a teammate set up Rebel on a new computer; ask them to send it again.
-
-You'll see a **Rebel board** folder appear in the shared Space. It contains questions, answers and the public keys Rebels use for direct messages. Rebel manages these files for you. Your private key is not stored here. Anyone who can write to the Space can post on its board, so use a Space only your team can write to.
+Nothing earlier is lost. **Rebel to Rebel history.md** in your Chief of Staff Space stays exactly as it was. Earlier private messages your Rebel can still open are copied to **Earlier private Rebel to Rebel messages.md** in the same Space, which only you can see. For a closed request, the conversation note tells you where to find the copy in Library. Rebel keeps the key for those private messages until that copy is saved and checked.
 
 ## What is usually inside a Space
 

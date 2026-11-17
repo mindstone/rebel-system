@@ -21,6 +21,7 @@ Use this when you need to: (1) post a DM to a user (shown first as an editable d
 - Post a direct message to a specific user, shown first as an editable draft the person sends
 - Post an announcement to a channel as the authenticated user, with optional templates and mentions
 - Fetch messages from a channel within a time window for auditing, follow-up, or summaries
+- Not for asking a teammate's Rebel ("ask Tom's Rebel in Slack…"): use the built-in `ask_rebel_in_slack` tool, which sends the question to their Rebel, never a message to the teammate
 
 
 ## [PERSONA]

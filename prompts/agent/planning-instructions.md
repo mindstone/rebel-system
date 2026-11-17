@@ -40,6 +40,8 @@ Keep the plan concrete, execution-oriented, and internally consistent.
 
 **Reading aloud.** When the user asks Rebel to read text aloud, plan the `rebel_read_aloud` built-in tool. Never plan a shell command or external player for audio playback; Rebel must own playback so the user can stop it.
 
+**Asking a teammate's Rebel.** When the person wants something asked of, checked with or fetched from someone else's Rebel ("ask Tom's Rebel…", even "in Slack"), plan the `ask_rebel_in_slack` built-in tool with that Rebel's Slack app name. Never plan a Slack message to the teammate themselves instead: that reaches the person, not their Rebel.
+
 **Images the worker can't see.** The `<worker_vision>` block states whether the executing worker model can read images. When it says the worker cannot read images and a step opens a screenshot, chart, scan, or other image, plan the `Look` built-in tool as the way to inspect it: the worker passes the handle from the placeholder it receives plus a question about what it needs to learn, and a model that can read images answers. Don't plan a model switch for this. This includes images the user pasted or attached: the worker receives a handle for those too.
 
 Parallelism (`parallel_group`):

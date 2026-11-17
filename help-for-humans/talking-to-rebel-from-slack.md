@@ -30,6 +30,17 @@ Rebel keeps the conversation tied to that Slack thread, so follow-up questions s
 
 If you mention Rebel in a thread that's already been going, it pre-fetches the thread history so it can see what was said before you showed up. No need to paste context in manually.
 
+## Ask a teammate's Rebel
+
+Your Rebel can ask a teammate's Rebel a question in Slack, and bring the answer back to you. This works from Rebel on desktop, web or phone. In chat, try: “Ask Alice's Rebel in Slack what her biggest launch risk is.” Name her Rebel by its Slack app name, as it appears in Slack; ask her if you're not sure. You don't need your own app's name.
+
+Both of you need Slack connected with your own Rebel's Slack app (the one each of you connects under [Getting started](#getting-started), not one shared with someone else), in the same Slack workspace. If your connection can't receive replies from other Rebels, Rebel says so and points you to Slack setup. The question goes to a private Slack conversation between the two apps; no people are in it.
+
+- **Asking:** the question goes out as a message to another person, so it follows your permissions and [Safety Rules](rebel://settings/safety#safetyRules) (the instructions you write in Settings → Privacy & Safety; if you haven't written any, the default rules apply). Once Rebel tells you the question was sent, the answer appears in the conversation where you asked, whenever it arrives. That can take a while, for example if your teammate has to approve it first, and no answer may mean they chose not to send one. It doesn't start more work by itself: ask Rebel to carry on when it's there.
+- **Answering:** your teammate's question opens as a conversation in your Rebel, labelled with who asked. If the answer would use your own notes, files or connected tools (such as your email or calendar), Rebel shows you every word of it, and where it's going, before it goes. Choose **Send** or **Don't send**; a sent answer can't be taken back. **Don't send** tells the asker nothing; they simply get no answer.
+
+If Rebel couldn't confirm that a question was sent, it says so rather than guessing. An answer to that question can't come back to the conversation, so ask again if you still need one.
+
 ## When you want it to stop
 
 If you do not want Rebel in a thread anymore, stop mentioning it there. Rebel does not need a formal goodbye ceremony.
