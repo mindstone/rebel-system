@@ -29,6 +29,8 @@ To keep a Connector connected but switch off one of its tools, in **[Settings �
 
 You may also see tools your **organisation** has switched off for everyone — these show a shield icon and a "Disabled" badge, and can't be turned back on from your machine. That's an admin control rather than a personal one; see [Teams and admin controls](library://rebel-system/help-for-humans/teams-and-admin-controls.md). For how tool approvals work more generally, see [Security and tool safety](library://rebel-system/help-for-humans/security-and-tool-safety.md).
 
+Community connector safety checks are explained in [MCPs, tools and external knowledge sources](rebel://library/rebel-system%2Fhelp-for-humans%2Fmcp-connectors-tools-and-integrations.md).
+
 ## Keep it manageable
 
 Only use Connectors you actively use. If you connected something for a one-off task and haven't used it since, consider removing its access — it's one less thing to keep track of.

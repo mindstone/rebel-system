@@ -26,6 +26,8 @@ Exact title and keyword matches are no longer filtered out just because their me
 
 Search now covers all your messages in each conversation (not just the first one), plus the first assistant response — so mid-conversation insights are just as findable as the opening question. Results scan up to 200 matches, ranked by relevance, and are deduplicated so you won't see the same conversation listed more than once.
 
+On your phone and in the web app, conversation search also looks through the words inside conversations, not only their titles.
+
 ### Understanding Search Sections
 
 You may notice **"Also relevant"** and **"Search all messages"** sections in your results. Hover over each heading to see a tooltip explaining what it shows — "Also relevant" surfaces conversations that are topically related, while "Search all messages" does a broader scan across all message content.

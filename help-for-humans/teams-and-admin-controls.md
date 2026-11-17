@@ -31,6 +31,14 @@ If your organisation has a team arrangement with Mindstone, it can set a handful
 - **Give each person their own AI and voice keys.** An admin sets a key per person (Anthropic, OpenAI, OpenRouter, Fireworks AI, voice, or a custom endpoint), or makes OpenRouter and Fireworks keys for many people at once. Each person's Rebel collects their key on its own, and the admin page shows whether it has. How it works, what each status means, and what to do when a key looks stuck: [Company-provided keys](rebel://library/rebel-system%2Fhelp-for-humans%2Fcompany-provided-keys.md).
 - **Set company-wide options.** The voice provider (and so which voice key people need), a shared drive for spaces, shared spaces themselves, whether people can share logs with Mindstone, and how fast the desktop app updates: **Current** (each new version as it's released) or **Steady** (a version only after it has run well for at least a week; security and serious bug fixes still arrive straight away). Individuals can be put on **Beta** or Current.
 
+### The company page and the Transformation dashboard
+
+The Rebel company page and the **Transformation dashboard** use different sign-in systems. The Transformation dashboard is the site this page calls the Transformation Engine, where your admins find the **Rebel** tab in **Settings**; it is part of the Mindstone learning platform and uses its sign-in. Use the company link your organisation provided and choose the sign-in methods shown there: Google, Apple where offered, organisation SSO, or email and password. That page may also offer an email code or password reset. These are learning-platform options, not extra sign-in steps for the Rebel app.
+
+If your organisation also uses a Transformation Collector, see [Transformation collectors](rebel://library/rebel-system%2Fhelp-for-humans%2Ftransformation-collectors.md).
+
+On the Rebel company page (open **Company** in the platform sidebar), the **Business** view shows account-level adoption, activity, estimated time saved, and aggregate cost/value signals for selected periods. The **Engineering** view appears when its required connection is available. These are enablement signals, not individual productivity rankings. Transformation reports depend on your role, licence, and connected sources: learners see their own progress, Champions (people assigned to particular teams or learner groups) see their assigned teams or cohorts, and an admin role alone does not grant company reporting. In **Members**, choose **Export CSV** to download member and status details; it does not expose raw access keys.
+
 What an organisation **cannot** currently do: push a shared set of Safety Rules, enforce an approval workflow across people, or force a connector to install. The shared-Safety-Rules limit is a deliberate security choice (explained under "What stays personal" below); the others simply aren't part of the current admin controls.
 
 ## How a team actually stays consistent

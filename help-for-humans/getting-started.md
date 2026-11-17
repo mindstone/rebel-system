@@ -7,6 +7,8 @@ last_updated: "2026-04-16"
 
 Welcome to Rebel. Let's get you set up and running your first conversation.
 
+When Rebel asks you to sign in, choose **Continue with Google** or **Continue with Microsoft**. Prefer email? Choose **Or continue with email**, enter your address, choose **Send code**, and enter the code Rebel emails you.
+
 ---
 
 ## 1. Open Rebel and Pick Your Workspace

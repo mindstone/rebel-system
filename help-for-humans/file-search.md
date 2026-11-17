@@ -62,7 +62,7 @@ Rebel offers two distinct search experiences:
 
 **Composer @files** — Semantic search to inject context into your message. Type `@files` followed by your query to find and attach relevant files to your conversation. This uses meaning-based matching to find conceptually related content.
 
-**Library search** — Unified search in the Library panel that searches across files, folders, and content. Click the search icon in the Library panel to search by filename or explore your file tree.
+**Library search** — Unified search in the Library panel that searches across files, folders, and content. Click the search icon in the Library panel to search by filename or explore your file tree. On phone and web, it can also search inside indexed file content as well as by filename.
 
 
 ## Previewing the files you find

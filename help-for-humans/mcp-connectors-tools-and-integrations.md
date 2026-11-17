@@ -82,10 +82,13 @@ These connect directly to official MCP servers hosted by service providers.
 - May require Python (with uv/uvx), Docker, or other runtimes
 - Some require manual API key setup
 - These use version-managed packages that are kept up to date with new features and fixes
-- **[Xero](library://rebel-system/help-for-humans/connectors/xero.md)** is now maintained by Mindstone as part of the open connector catalog — its source is public — with multi-currency invoices, invoice attachments, invoice history/notes, contacts, payments, and bank transactions. (Setup still uses Xero's Custom Connection flow — see the [Xero guide](library://rebel-system/help-for-humans/connectors/xero.md).)
+- Community tools are checked individually before they run. Unreviewed tools, tools that can run local code, and tools with unrestricted access to local files are kept off for safety. That is an enforced safety block, not a personal toggle. A tool may still work when its local-file argument is omitted, or other tools in the same connector may remain available.
+- **[Xero](rebel://library/rebel-system%2Fhelp-for-humans%2Fconnectors%2Fxero.md)** is now maintained by Mindstone as part of the open connector catalog — its source is public — with multi-currency invoices, invoice attachments, invoice history/notes, contacts, payments, and bank transactions. Setup uses a free Xero app you create: add its Client ID and Secret, then choose Connect and select your company. Existing Custom Connections keep working; see the [Xero guide](rebel://library/rebel-system%2Fhelp-for-humans%2Fconnectors%2Fxero.md).
 - Other examples: [GitLab](library://rebel-system/help-for-humans/connectors/gitlab.md), [Zoom](library://rebel-system/help-for-humans/connectors/zoom.md), [Databricks](library://rebel-system/help-for-humans/connectors/databricks.md), [Pipedrive](library://rebel-system/help-for-humans/connectors/pipedrive.md), [Google Maps](library://rebel-system/help-for-humans/connectors/google-maps.md), [ElevenLabs](rebel://library/rebel-system%2Fhelp-for-humans%2Felevenlabs-text-to-speech.md) (audio generation and voices), [ElevenLabs Agents](rebel://library/rebel-system%2Fhelp-for-humans%2Fconnectors%2Felevenlabs-agents.md) (voice agents and phone calls), specialized data connectors
 
 **Custom MCP servers** – In **Settings → Connectors**, click **Add a tool** to add any MCP server manually (HTTP/SSE or stdio transport). Useful for your own internal tools or self-hosted services.
+
+If you build a connector and choose **Share with everyone**, Rebel shows its submission status and lets you choose how to attribute it. If it is published, you may receive an email about the publication.
 
 **Missing a connector?** Click the **Request a connector** button at the bottom of the Connectors page to let us know which integrations you need.
 

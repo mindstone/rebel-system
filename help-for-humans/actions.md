@@ -60,6 +60,8 @@ This filtering works both for new items and retroactively: when Rebel's filterin
 
 ## Viewing and Executing
 
+At the top of Actions, choose **Go through my Actions with Rebel**. Rebel proposes items that look done or stale, applies the selection only after you decide, and may prepare replies for you to review and **Send**. This review is separate from automatic stale-item cleanup.
+
 A sidebar down the left lets you switch between six views:
 
 **Active** — Everything still waiting for you. Items are grouped by when they're due — **Today**, **This Week**, **Future date**, and **Someday** — so the list reads like a plan, not a pile. Each item shows its title and description, when it was added, any referenced files, links, or emails (Linear issues, GitHub PRs, Asana tasks included), and draft content if Rebel prepared something ahead of time.
@@ -138,7 +140,7 @@ Not every task needs Rebel to run it. Archive items when:
 
 To archive: Click the archive button on any pending item.
 
-To restore: Open the Archived section and click restore to move an item back to Pending.
+Items you archived yourself are under **Dismissed** on desktop. To restore an item Rebel cleared, use **Handled by Rebel** on desktop. On the web, use **Archived**. Restore it there to bring it back into your active list.
 
 
 ## Sending While Rebel Is Working

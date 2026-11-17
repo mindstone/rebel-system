@@ -34,11 +34,13 @@ These limits are soft ceilings for non-image files you attach straight from your
 When you attach a file, Rebel processes it before sending:
 
 1. **Images** are resized if needed (to avoid slow processing) and sent to the AI, which can see and describe them. HEIC/HEIF photos (common from iPhones) are automatically converted to JPEG
-2. **PDFs** under 25MB are sent whole; larger PDFs have their text extracted so the AI can read the content (but won't see images or charts in the PDF)
+2. **PDFs** under 25MB are sent whole; larger PDFs have their text extracted automatically so the AI can read the content. If you need the visual layout, ask Rebel to inspect selected PDF pages instead.
 3. **Office documents** (Word, Excel, PowerPoint, RTF) have their text extracted so the AI can read the content
 4. **Text files** are included directly in your message
 
 The AI receives the extracted content as part of your conversation, so it can answer questions, summarize, analyze, or help you work with the material.
+
+When you explicitly ask Rebel to inspect PDF pages visually, it can render selected pages as images, read English text in scanned pages and photos, and create bar, line, or pie chart images. This visual reading is different from automatic attachment text extraction.
 
 **Unsent files stay with their conversation.** On desktop, if you attach files and then switch to another conversation or start a new one before sending, the files wait in the first conversation's message box and are there when you go back. They aren't kept if Rebel quits or restarts, so send them before closing the app.
 
@@ -96,9 +98,9 @@ The quick extraction above works well for most tasks. But if you need more from 
 
 **What this enables:**
 - **PowerPoint**: Access to speaker notes, slide layouts, detailed structure, and the ability to create or edit presentations
-- **Other documents**: Full access to document metadata, structure, and advanced manipulation
+- **Word, PowerPoint, Excel, and PDF**: Supported built-in creation, analysis, and document operations without a separate installation. Some advanced operations still need Python; if Rebel mentions it, see [coding-setup-with-Python](rebel://library/rebel-system%2Fhelp-for-humans%2Fcoding-setup-with-Python.md) for setup instructions.
 
-**Note for Windows users:** Some advanced document skills require Python to be installed on your system. If Rebel mentions needing Python, see [coding-setup-with-Python](library://rebel-system/help-for-humans/coding-setup-with-Python.md) for setup instructions.
+Some local document processing can work offline, but the whole AI conversation still needs the selected AI provider unless you choose an on-device option.
 
 
 ## Troubleshooting

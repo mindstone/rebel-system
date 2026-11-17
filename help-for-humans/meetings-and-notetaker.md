@@ -68,6 +68,10 @@ If the bot waits too long in a waiting room, you'll see a warning. Some meetings
 
 **Error banners:** If something goes wrong, an error banner appears. You can dismiss these banners once you've acknowledged them.
 
+### Live meeting board
+
+In the meeting conversation, ask Rebel to share a live board. People with the link can follow the board and recent captions. If the host permits it, guests can enter a name and add notes; otherwise the link is watch-only. Sharing ends when the notetaker leaves or after 12 hours. This live surface is separate from a published conversation snapshot.
+
 
 ## Active Participation
 

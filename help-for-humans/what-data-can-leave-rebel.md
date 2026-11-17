@@ -31,6 +31,8 @@ Two of these you can switch off right now, in **[Settings → Privacy & Safety](
 
 The rest of this page explains each one.
 
+If your organisation uses a separate **Transformation Collector**, its data flows are different from Rebel's own reporting. See [Transformation collectors](rebel://library/rebel-system%2Fhelp-for-humans%2Ftransformation-collectors.md) for the two collection models and their controls.
+
 ## What you can turn off
 
 Both toggles live in **[Settings → Privacy & Safety](rebel://settings/safety)** → Privacy & Data. Both are on by default, including for people who have been using Rebel for a while — nothing changed under you when these controls arrived. Turning either off takes effect on this device immediately. Your other devices pick it up too — but only if you use Cloud Continuity, which is what carries the choice between them. Without it, each device keeps whatever you set on it. The fine print at the end spells this out.
