@@ -8,7 +8,7 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Highlights
 
-- **Fill in the blanks** — Rebel can ask a question as a sentence with blanks. Pick a blank to see its choices, use a small grid for two things at once, or type something else. Change a filled blank before you finish; Rebel carries on once every answer is confirmed. On desktop, web and phone. Less form, more conversation.
+- **Fill in the blanks** — Rebel can ask a question as a sentence with blanks. Pick a blank to see its choices, use a small grid for two things at once, or type something else. Change a filled blank before you finish; Rebel carries on once every answer is confirmed. On desktop, web and phone. Less form, more conversation. [▶ Watch it](https://storage.googleapis.com/mindstone-rebel/release-videos/261116-fill-in-the-blanks.mp4)
 
 - **Your rules decide** — Rebel no longer asks solely because an action is not named in your Safety Rules. It still checks your rules, but testing found it missed some broad “ask first” rules more often than before.
 
