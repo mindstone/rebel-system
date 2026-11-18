@@ -1,6 +1,6 @@
 ---
 name: build-app
-description: "Build a page to print or open in a browser, a report needing a page layout, or a code app: a small interactive tool the shared blocks can't express. For charts, tables or dashboards the blocks can express, asked for or not, use rebel_canvas_view, and rebel_save_app when the person wants to keep the view."
+description: "Build a page to print or open in a browser, a report needing a page layout, or a code app: a small interactive tool the shared blocks can't express. For anything a native view covers, including pictures to pick from (gallery), use rebel_canvas_view, and rebel_save_app when the person wants to keep the view."
 last_updated: 2026-11-14
 agent_type: main_agent
 ---
@@ -14,7 +14,7 @@ Use their data, not invented figures.
 
 [WHEN TO USE]
 - A page to print or open in a browser, including a tracker presented as a page, or a report needing a page layout beyond the available blocks, belongs here.
-- A chart, table or dashboard the shared blocks can express belongs in `rebel_canvas_view`, asked for or not, whether its data comes from the conversation, files or connectors. When the person wants to keep the view, use `rebel_save_app`. Before creating an app, look for an existing one with the same purpose (Glob **/*.rebelapp). Update an existing app when the person means that app; otherwise save alongside it under a clear name (for example with the period in the name). Offer to save at most once, only for a view the person asked for and will clearly reuse. Never schedule anything unless asked.
+- Anything a native view covers, including pictures to pick from (gallery), belongs in `rebel_canvas_view`; its tool description lists the available views, asked for or not, whether its data comes from the conversation, files or connectors. When the person wants to keep the view, use `rebel_save_app`. Before creating an app, look for an existing one with the same purpose (Glob **/*.rebelapp). Update an existing app when the person means that app; otherwise save alongside it under a clear name (for example with the period in the name). Offer to save at most once, only for a view the person asked for and will clearly reuse. Never schedule anything unless asked.
 - A tool the person will keep using that the blocks can't express (a timer, a tracker, a checklist
   that remembers what was ticked) is a code app: follow [CODE APPS] below. Blocks first: never write
   code for a chart, table or dashboard the blocks can show.
