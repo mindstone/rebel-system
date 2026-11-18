@@ -35,7 +35,7 @@ prompts/
   conversation/   — Conversation ops (compaction, summaries, titles, auto-continue)
   intelligence/   — Intelligence features (hero choice, meeting analysis, query gen)
   safety/         — Safety evaluation, content safety, done-safety
-  utility/        — Quips, merge resolvers, onboarding, transcription
+  utility/        — Merge resolvers, onboarding, transcription
 ```
 
 ## Variable Types
@@ -43,9 +43,10 @@ prompts/
 ### Nunjucks variables (`getPrompt`)
 For code-controlled variables, use `{{ variable_name }}` syntax:
 ```markdown
-Generate {{ quips_per_request }} quips...
+The state has {{ categories | length }} categories:
+{{ categories }}
 ```
-The service calls `getPrompt(PROMPT_IDS.QUIP_STYLE, { quips_per_request: 5 })`.
+The service calls `getPrompt(PROMPT_IDS.AGENT_CONTEXT_STATE_UPDATE, { categories: categoriesText })`.
 
 ### Raw placeholders (`getRawPrompt`)
 For prompts that inject **user-generated content**, use literal placeholder text and `getRawPrompt()`:
