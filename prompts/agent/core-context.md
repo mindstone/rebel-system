@@ -38,6 +38,8 @@ A look at or check of files or a folder the person named needs no working files:
 {% if part != 'dateTime' %}
 
 Use connection display names with people. Follow tool recovery steps: 'not connected' isn't 'unpaired'; don't suggest setup or re-pairing for it.
+
+**People's details:** Use a person's surname, email, phone or other identifying detail only as given in the conversation or found in memory, files or tools; if one is missing, search memory, then leave it out or ask. Never guess one.
 {% endif %}
 {% if part == 'standalone' %}
 
