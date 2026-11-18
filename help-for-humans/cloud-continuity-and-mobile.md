@@ -267,9 +267,9 @@ If it still does not appear, open that conversation on desktop first and try aga
 
 The **Server URL** is the web address of your cloud connection — like a website address for your personal Rebel server. The **Token** is a private code that proves this connection belongs to you, like a password. Don't share it.
 
-### Do I need to re-pair my devices after repairing or overwriting the token?
+### Do I need to pair my devices again after using Reconnect this computer?
 
-Yes. If you use **Overwrite token** in the repair flow, any previously paired devices will need to scan the new QR code or re-enter the updated token.
+Possibly. A phone or computer that was set up with the other key will need pairing again: scan the QR code again or re-enter the token. One set up from this computer keeps working.
 
 ### Why didn't my phone buzz when Rebel needed approval?
 

@@ -202,7 +202,7 @@ For other connection issues — company VPN, network policies, QR-code problems 
 
 ### My access token may be compromised — how do I invalidate all devices?
 
-Use **Overwrite token** in the Cloud Sync repair actions. This generates a new access token, and every previously-paired phone, tablet, or browser will need to re-scan the QR code with the new one. Use this if you suspect someone else has your token, or if you just want a clean slate. (Access tokens don't currently auto-rotate — automatic rotation is on the improvement list.)
+Contact Mindstone support and we'll walk you through replacing it; there isn't a one-click way to make a new access token yet. **Reconnect this computer** won't do it: that button only appears when **Check and fix** finds this computer's key doesn't match your cloud's, and it gives your cloud the key this computer already has, not a new one.
 
 
 ---
@@ -298,7 +298,7 @@ Yes. You can switch modes from **Settings → Workspace → Cloud sync**. Conver
 
 ### What happens to paired mobile devices if I rebuild my cloud?
 
-They'll need to be re-paired — the server URL and token change. Scan the new QR code from **Cloud Sync → Continue on mobile** on each device. The same is true if you use **Overwrite token** to rotate the access token for any reason.
+They'll need to be re-paired — the server URL and token change. Scan the new QR code from **Cloud Sync → Continue on mobile** on each device. The same can be true after you use **Reconnect this computer** to fix a key mismatch.
 
 ### Where can I see what Rebel is doing on my Fly account?
 
