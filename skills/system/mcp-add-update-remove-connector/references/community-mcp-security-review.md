@@ -45,10 +45,10 @@ When a user wants to add a community/custom MCP, ask:
 
 ### Step 2: Parallel Security Review (if authorized)
 
-Launch 2 research/review subagents in parallel for diverse perspectives:
+Launch 2 helpers in parallel with the `Agent` tool (`agent: "knowledge-worker"`), one researching and one reviewing, for diverse perspectives:
 
 ```
-Task(researcher, "Research the MCP package [package-name]:
+Agent(knowledge-worker, "Research the MCP package [package-name]:
 1. Find the source repository (GitHub/GitLab)
 2. Check repo stats: stars, recent activity, open issues
 3. Verify the license is permissive (MIT, Apache 2.0, BSD, ISC)
@@ -56,7 +56,7 @@ Task(researcher, "Research the MCP package [package-name]:
 5. Check if this is an official/vendor package or community-maintained
 Report findings with links.")
 
-Task(reviewer, "Review the MCP repository at [repo-url] for security concerns.
+Agent(knowledge-worker, "Review the MCP repository at [repo-url] for security concerns.
 Check the ENTIRE codebase for these red flags:
 
 RED FLAGS (high risk):

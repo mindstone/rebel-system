@@ -152,20 +152,18 @@ The specific models assigned to each role depend on what's available (see Model 
 | **Reviewer** | Reviews plans and deliverables through quality lenses | Phase 4 (Plan Review), Phase 7 (Quality Review) |
 | **Researcher** | Deep research on specific topics (web, documents, analysis) | Phase 3 (Research), ad-hoc |
 
-### Subagent Type for MCP Access
+### Which Helper to Start
 
-When running inside Rebel, subagents that need MCP tool access (Gmail, Slack, Calendar, etc.) should use `subagent_type: "knowledge-worker"` when delegating. The default subagent type only has built-in tools (Read, Write, Bash, etc.).
+When running inside Rebel, start every role with the `Agent` tool and `agent: "knowledge-worker"`: it is the general helper, with Rebel's connectors (Gmail, Slack, Calendar, etc.) as well as the built-in tools (Read, Write, Bash, etc.). The role itself goes in the prompt.
 
-**Which roles need MCP access:**
+**Which roles use connectors:**
 - **Forager** — Almost always. Foraging by definition involves querying external tools.
 - **Implementer** — Often. Execution stages frequently need to search emails, post messages, check calendars, etc.
 - **Researcher** — Sometimes. Deep research may require MCP tools for email/Slack/calendar queries.
-- **Planner** — Rarely. Planning typically uses filesystem tools only. Use default subagent type unless the planner needs to query external sources directly.
+- **Planner** — Rarely. Planning typically uses filesystem tools only.
 - **Reviewer** — Never. Reviewers read the working document and deliverables — they don't need external tool access.
 
-This is a recommendation, not a hard requirement. The orchestrator should assess each delegation based on whether the subagent needs external tool access.
-
-**Background subagents:** Subagents running in the background (`run_in_background: true`) do NOT have MCP tool access. MCP-dependent tasks must use foreground execution.
+Tell each role in its prompt whether to use connectors, so a reviewer stays on the working document.
 
 ---
 
