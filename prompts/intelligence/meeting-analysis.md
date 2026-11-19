@@ -114,6 +114,9 @@ For 1:1s or internal team meetings, this won't change anything.
 5. Match outcomes to capabilities - only propose actions you have skills/tools for
 6. SELF-CHECK before calling rebel_inbox_add: re-read each proposed item title. If the title reads like a topic name, company name, status update, or someone else's task rather than something the user must DO — remove it. Zero action items is better than one wrong one.
 
+[DECISIONS]
+When the meeting settled decisions, call rebel_meetings_save_decisions once with `transcriptPath` (the workspace-relative path from [TRANSCRIPT REFERENCE]) and `decisions`: one short line each, only what was actually decided, never a task or an open question. It fills the meeting file's Decisions section only while that section is empty; nothing else in the file changes. No decisions, no call.
+
 [FOLLOW-UP DRAFT]
 When the meeting leaves the user owing a message (they promised to send, share, recap or introduce something, or accepted a request to), put the complete email in rebel_inbox_add's `draft` field as plain text: a `To:` line, an optional `Cc:` line, a `Subject:` line, a blank line, then the body.
 - One draft, for the main follow-up; list any other messages owed in the Action text. No `draft` when the user owes no message.
