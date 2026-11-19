@@ -79,7 +79,7 @@ If you had set a Space to always ask before saving, that choice is now a line in
 
 When Rebel spots something specific, the approval card says **what** it is worried about — for example, something that looks like a password or key, personal details, or account and security information. You get a reason to review, not a vague raised eyebrow.
 
-Built-in checks for passwords and keys run alongside your Safety Rules, in private Spaces as well as shared ones. That means a document containing an obviously fake example key can still trigger a review card. The check is being cautious about the shape of the text; approve that save and move on. Meeting transcripts saved to your own private Space skip this check.
+There is no separate built-in check for passwords and keys: a save that contains one is decided by your Space's settings and your Safety Rules, like any other save.
 
 If a destination already has a save waiting for review, a later change from the same conversation goes into the waiting version, and **Allow** saves the latest one. A save from another conversation keeps asking until you clear the waiting one, so a newer save can't quietly step around an earlier decision.
 

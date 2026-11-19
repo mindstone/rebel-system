@@ -95,7 +95,7 @@ That is **not** a secure vault. Don't paste passwords, API keys, or private toke
 - Share API keys in conversations or notes
 - Store credentials in documents within your workspace
 
-> **Built-in protection:** If Rebel is about to save something to memory and spots what looks like a password or API key, it'll pause and ask you first — even in spaces set to save automatically. This is a safety net, not a guarantee, so it's still best to keep credentials in Settings rather than in your workspace files.
+> **Keep keys in Settings:** Rebel doesn't stop a save just because it contains something that looks like a password or API key; your Space's settings and your Safety Rules decide. Settings is still the best place for credentials, rather than your workspace files.
 
 ## See Also
 

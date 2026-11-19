@@ -92,9 +92,7 @@ Rebel normally saves routine notes to private Spaces without asking. A rule that
 
 If you had set a Space to always ask before saving, that choice is now a line in your Safety Rules, and the safety check follows it. In [Privacy Mode](rebel://library/rebel-system%2Fhelp-for-humans%2Fprivacy-mode.md), saves get the same checks, and Rebel doesn't add anything from that conversation to its memory afterwards.
 
-For **shared spaces**, Rebel's built-in checks for passwords and keys run alongside your Safety Rules. If one spots something credential-shaped, the approval card says what it noticed.
-
-When text looks credential-shaped, these checks prefer a review to quietly sharing a real credential. A document containing an obviously fake example key can therefore trigger a review card — that is the built-in credential check doing its job. Approve that save once and move on. Rebel may also ask if a safety check could not complete, rather than guessing.
+Rebel doesn't scan saves for passwords or keys on its own. Something that looks like a key is saved the same way as anything else: your Space's settings and your Safety Rules decide. The default Safety Rules include one about not storing credentials, so a check that reads them may still mention a key; edit that line if it isn't what you want. Rebel may also ask if a safety check could not complete, rather than guessing.
 
 ### Live rule updates
 
