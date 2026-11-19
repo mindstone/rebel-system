@@ -8,7 +8,7 @@ use_cases:
   - "Make this available to [team]"
   - "Promote this from Chief-of-Staff"
   - "Share across spaces"
-last_updated: 2026-07-06
+last_updated: 2026-11-19
 tools_required: []
 agent_type: main_agent
 ---
@@ -27,6 +27,8 @@ Move or copy memory content (sources, topic conclusions) from one space to anoth
 4. **Skip** — when nothing can safely cross.
 
 **Safety decides eligibility; fidelity decides shape.** The ladder is a preference order *within* what is safe — never a reason to stretch what is safe. When in doubt, step down.
+
+**A meeting file's How it went stays private.** Copying a meeting file in any shape, leave out its `How it went` section and every `meetingCheck…` frontmatter field, and draw nothing from them: that note is only for the person.
 
 **Copy, never link.** A shared-space file must never link to, cite, or name a Chief-of-Staff (or other private-space) file — even the existence of private content is a leak. Within a space, signpost to the canonical file instead of duplicating ([signposting-to-single-source-of-truth](../../documentation/signposting-to-single-source-of-truth/SKILL.md)); across a privacy boundary, the only safe reference is a copy.
 
