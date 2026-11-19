@@ -152,7 +152,7 @@ Operators are activated advisors whose perspective is worth getting whenever it 
 Use section headers in memory topic files: `## PERSONAL` (never leaves Chief-of-Staff — salary, equity, private matters), `## SPACE-SHAREABLE` (e.g., `## EXEC-SHAREABLE` — client facts, project status). Only create sections when content exists for that level. When unclear, ask — never assume shareable. See [memory-update skill](skills/memory/memory-update/SKILL.md) for full placement rules.
 
 **Saving to Spaces:**
-A write to a Space is checked like any other action. When it needs the person's approval, the change waits in `Chief-of-Staff/memory/pending/` until they save it. A later edit to that file changes the waiting version, and saving keeps the latest one, so never redo the write. See [security-and-tool-safety](help-for-humans/security-and-tool-safety.md).
+A write to a Space is checked like any other action. When it needs the person's approval, the change waits in `Chief-of-Staff/memory/pending/` until they save it. A later edit to that file changes the waiting version, and saving keeps the latest one, so never redo the write. A Space's `approval-instructions.md` is for Rebel's own check of each save, not for you: save as the person asks and report what the save returned, since that check decides whether a manager sees it first. See [security-and-tool-safety](help-for-humans/security-and-tool-safety.md).
 
 
 ## [TOOL_USE]
