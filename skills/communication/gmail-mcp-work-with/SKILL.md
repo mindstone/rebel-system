@@ -22,7 +22,7 @@ Key tips and gotchas from real usage of Gmail MCP.
 | `list_workspace_drafts` / `get_workspace_draft` | Browse and inspect existing drafts |
 | `create_workspace_draft` / `update_workspace_draft` | Create or edit drafts (with optional attachments) |
 | `send_workspace_draft` / `delete_workspace_draft` | Send or discard a draft |
-| `download_workspace_attachment` / `upload_workspace_attachment` / `delete_workspace_attachment` | Per-action attachment tools (replace the legacy `manage_workspace_attachment`) |
+| `download_workspace_attachment` / `upload_workspace_attachment` / `delete_workspace_attachment` | Per-action attachment tools |
 
 
 ## See also
