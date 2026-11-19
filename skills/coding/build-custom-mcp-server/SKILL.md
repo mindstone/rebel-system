@@ -651,10 +651,10 @@ npm run build
 
 Never ask the user to paste an API key, token, or password into chat or a question card.
 
-On desktop:
+When `list_credentials` is available:
 
 1. Call `list_credentials`. Use only the returned credential id; the secret value is never shown.
-2. If the needed key is absent, direct the user to **Settings → Privacy & Safety → "Keys Rebel can use"**. Share the provider's key page as a plain Markdown link, for example [Create a <Provider> API key](https://<provider>.example.com/account/api-keys), then **PAUSE** until the user confirms they added it. Call `list_credentials` again to get its id.
+2. If the user has supplied a key for this task, save it with `rebel_settings_save_key` (pass the existing id to replace a key) and use the `id` it returns. From then on use the stored id, never the raw value again. If the needed key is absent and the user has not supplied it, explain which key is needed and point to **Settings → Privacy & Safety → "Keys Rebel can use"**. Share the provider's key page as a plain Markdown link, for example [Create a <Provider> API key](https://<provider>.example.com/account/api-keys). Continue parts of the task that do not need the key; call `list_credentials` again when it has been added.
 3. Before writing any credential, verify that `.gitignore` contains an exact `.env` entry:
 
 ```json
@@ -671,7 +671,7 @@ On desktop:
 }
 ```
 
-5. Append the credential through Bash's `credentials` injection. The command refers only to `process.env.PROVIDER_API_KEY`; Rebel resolves the stored id directly into the child process environment, so the model never sees the value:
+5. Append the credential through Bash's `credentials` injection. The command refers only to `process.env.PROVIDER_API_KEY`; Rebel resolves the stored id directly into the child process environment without returning the value to the model:
 
 ```json
 {
@@ -685,9 +685,9 @@ On desktop:
 }
 ```
 
-The `.env` intentionally stores the key as local plaintext so the sidecar can read it. The security improvement is that the model never sees the value and it never enters the conversation; `.gitignore` keeps the file out of version control.
+The `.env` intentionally stores the key as local plaintext so the sidecar can read it. Stored-key injection does not return the value to the model or repeat a user-supplied value in the conversation; `.gitignore` keeps the file out of version control.
 
-On cloud or mobile, stored keys and Bash credential injection are desktop-only. Say so plainly and offer to continue this setup on desktop; do not fall back to collecting the key in chat.
+Use the tools available in this turn to determine whether stored keys can be used, rather than assuming from desktop, cloud or mobile. Saving on the relay-managed cloud copy returns a "from your computer for now" error until the cloud write relay is built. Explain that limit if it occurs; a key the user supplied for this task can still be used for it. Otherwise continue the parts of the task that do not need the key; do not fall back to collecting the key in chat.
 
 ### 6.3 Test Locally
 

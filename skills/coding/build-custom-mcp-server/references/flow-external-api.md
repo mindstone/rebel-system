@@ -59,14 +59,16 @@ is the single most common cause of broken contributed connectors.
 1. **Set up a test API key securely** (sandbox/free tier preferred).
    Follow the credential-store recipe in
    [SKILL.md § 6.2 "Set Up Credentials"](../SKILL.md#62-set-up-credentials):
-   call `list_credentials`; if the key is absent, send the user to
-   Settings → Privacy & Safety → "Keys Rebel can use", share the
-   provider's key page as a plain Markdown link, and pause until they
-   confirm it has been added. Call `list_credentials` again, then use
-   the returned id through Bash's `credentials` injection. Never ask
-   the user to paste the key into chat or a question card.
-   If the user has not yet obtained one, pause research and help them
-   through the auth section below. Do not proceed with "I'll implement
+   call `list_credentials`. If the user has supplied a key for this task,
+   save it with `rebel_settings_save_key` and use the `id` it returns.
+   From then on use that id through Bash's `credentials`
+   injection, never the raw value again. If the key is absent and the user
+   has not supplied it, explain which key is needed and point to
+   Settings → Privacy & Safety → "Keys Rebel can use". Share the provider's key page as a plain
+   Markdown link. Never ask the user to paste the key into chat or a question card.
+   If the user has not yet obtained one, help them through the auth section
+   below and continue research that does not need the key. Call
+   `list_credentials` again when it has been added. Do not proceed with "I'll implement
    it and they can test later" — that's the pattern that produces
    broken PRs.
 2. **Probe each planned endpoint with `curl`** using the auth header
@@ -82,7 +84,8 @@ is the single most common cause of broken contributed connectors.
    arbitrary `notes` field), then send a visible chat message to the
    user that names the blocker — e.g. *"I need a test access key before
    I can safely try this with [provider]. Please add one in Settings →
-   Privacy & Safety → Keys Rebel can use, then tell me when it's there."*
+   Privacy & Safety → Keys Rebel can use.
+   I'll continue the parts that don't need it."* Include the provider's key page.
    Stay in
    `testing` until the probe can run; do not skip implementation on
    unverified endpoints and do not invent a new status. The user's

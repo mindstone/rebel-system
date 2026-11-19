@@ -42,7 +42,7 @@ Sometimes you want Rebel to *use* a key on your behalf — pull data from a serv
 
 Add one in **[Settings → Privacy & Safety](rebel://settings/safety)**, in the **"Keys Rebel can use"** section. In plain terms:
 
-- **You paste the key in once, into Settings.** It's encrypted using this computer's secure storage — the same protection your operating system uses for saved passwords.
+- **You add the key once**, in Settings, or by giving it to Rebel on your computer, which saves it here for you. It's encrypted using this computer's secure storage — the same protection your operating system uses for saved passwords.
 - **The AI only sees the *name* you gave it** (e.g. "Payments API key"), never the value. There's deliberately **no** "show me the key" command it can run — so a sneaky instruction hidden in an email or web page has nothing to read.
 - **The real value is unlocked only at the moment a command runs**, and slipped into *that one command's* environment — never into the conversation, your notes, or the logs. It normally disappears from the command's environment when the command finishes; when Rebel configures a local custom tool, that command may intentionally write the key to the tool's plaintext `.env` file so the tool can read it later, but the key still never enters the conversation or the AI's view.
 
