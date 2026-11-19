@@ -92,7 +92,7 @@ Rebel normally saves routine notes to private Spaces without asking. A rule that
 
 If you had set a Space to always ask before saving, that choice is now a line in your Safety Rules, and the safety check follows it. In [Privacy Mode](rebel://library/rebel-system%2Fhelp-for-humans%2Fprivacy-mode.md), saves get the same checks, and Rebel doesn't add anything from that conversation to its memory afterwards.
 
-Rebel doesn't scan saves for passwords or keys on its own. Something that looks like a key is saved the same way as anything else: your Space's settings and your Safety Rules decide. The default Safety Rules include one about not storing credentials, so a check that reads them may still mention a key; edit that line if it isn't what you want. Rebel may also ask if a safety check could not complete, rather than guessing.
+Rebel doesn't scan saves for passwords or keys on its own. Something that looks like a key is saved the same way as anything else: your Space's settings and your Safety Rules decide. The default Safety Rules suggest keeping passwords and API keys in **"Keys Rebel can use"** ([Settings → Privacy & Safety](rebel://settings/safety)) rather than as plain text in a Space; edit that line if it isn't what you want. Rebel may also ask if a safety check could not complete, rather than guessing.
 
 ### Live rule updates
 
