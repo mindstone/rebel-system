@@ -1,6 +1,6 @@
 ---
 description: "How to set up cloud continuity so Rebel works on your phone, tablet, or browser — step-by-step setup, pairing, privacy, limitations, and troubleshooting"
-last_updated: "2026-11-02"
+last_updated: "2026-11-20"
 ---
 
 # Cloud Continuity: Use Rebel on Your Phone, Tablet, or Browser
@@ -450,7 +450,7 @@ Your desktop data is unaffected. The cloud instance keeps the last synced copy u
 
 Turning cloud continuity off also asks the cloud to remove the saved keys this computer copied to it. Your desktop always forgets the cloud straight away, whether or not the cloud answers. If the cloud can't confirm the keys are gone (it's offline, or you're signed out), Rebel says so in a notice after forgetting:
 
-- **Rebel will try again** — for Mindstone Cloud, when the removal was recorded, Rebel retries the next time you reconnect this computer to that cloud.
+- **Rebel keeps trying** — for Mindstone Cloud, when the removal was recorded, Rebel keeps asking the cloud to remove the keys in the background whenever you're signed in, until it confirms. You don't need to reconnect. The notice goes once the keys are removed.
 - **The keys may still be there** — otherwise (for example your own cloud, or you were signed out), the keys can stay on that instance until it is deleted. If you no longer use that cloud, delete it to remove them.
 
 The notice says which of the two applies.
