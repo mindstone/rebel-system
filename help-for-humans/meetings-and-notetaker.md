@@ -70,7 +70,7 @@ If the bot waits too long in a waiting room, you'll see a warning. Some meetings
 
 ### Live meeting board
 
-In the meeting conversation, ask Rebel to share a live board. People with the link can follow the board and recent captions. If the host permits it, guests can enter a name and add notes; otherwise the link is watch-only. Sharing ends when the notetaker leaves or after 12 hours. This live surface is separate from a published conversation snapshot.
+In the meeting conversation, ask Rebel to share a live board. People with the link can follow the board and recent captions. If the host permits it, guests can enter a name and add notes; otherwise the link is watch-only. Sharing ends when the notetaker leaves or after 12 hours. This live surface is separate from a published conversation snapshot. Once a board is open, hosts can switch between Retro, Decisions & actions, Sprint planning, and Parking lot using the Board type menu on the card or by typing a request to the notetaker in meeting chat.
 
 
 ## Active Participation
