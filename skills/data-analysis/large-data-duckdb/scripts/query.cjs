@@ -2,25 +2,15 @@
 // Runs one SQL query with DuckDB, Rebel's on-demand large-data pack, and prints the rows as JSON.
 // The pack downloads once on first use; later runs work offline.
 'use strict';
-const fs = require('node:fs');
 const path = require('node:path');
 const { createRequire } = require('node:module');
-const { spawnSync } = require('node:child_process');
 
 const MAX_ROWS = 200;
 
 function packModules() {
   const installer = process.env.REBEL_INSTALL_PACK;
-  if (!installer || !process.env.REBEL_BUNDLED_PACKS_DIR) {
-    throw new Error('Rebel on-demand packs are not available in this shell; report an installation problem.');
-  }
-  const { packFolderName } = require(installer);
-  const modules = path.join(process.env.REBEL_BUNDLED_PACKS_DIR, packFolderName(path.dirname(installer), 'duckdb'), 'node_modules');
-  if (!fs.existsSync(modules)) {
-    const result = spawnSync(process.execPath, [installer, 'duckdb'], { stdio: ['ignore', 'inherit', 'inherit'] });
-    if (result.status !== 0) process.exit(result.status ?? 1);
-  }
-  return modules;
+  if (!installer) throw new Error('Rebel on-demand packs are not available in this shell; report an installation problem.');
+  return require(installer).ensurePack('duckdb');
 }
 
 async function main() {
