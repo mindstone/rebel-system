@@ -7,7 +7,7 @@ description: "Technical skills and reference guides for AI agents, documenting e
 Efficient, composable patterns and best practices for common operations by AI agents.
 
 
-For creating documents, use [word-docx](utilities/word-docx/SKILL.md), [powerpoint-pptx](utilities/powerpoint-pptx/SKILL.md) and [excel-xlsx](utilities/excel-xlsx/SKILL.md) first. For PDF merge, stamp, text reading and pages as images, use [pdf-edit](utilities/pdf-edit/SKILL.md); for AcroForms, use [pdf-fill-form](utilities/pdf-fill-form/SKILL.md); for a chart as an image, use [chart-image](utilities/chart-image/SKILL.md). They use built-in libraries and work offline. Existing-document redlining and tracked changes use the Anthropic skills.
+For creating documents, use [word-docx](utilities/word-docx/SKILL.md), [powerpoint-pptx](utilities/powerpoint-pptx/SKILL.md) and [excel-xlsx](utilities/excel-xlsx/SKILL.md) first. For PDF merge, stamp, text reading and pages as images, use [pdf-edit](utilities/pdf-edit/SKILL.md); for AcroForms, use [pdf-fill-form](utilities/pdf-fill-form/SKILL.md); for a chart as an image, use [chart-image](utilities/chart-image/SKILL.md). To read a saved email (.eml, .msg) or calendar invite (.ics), use [email-calendar-files](utilities/email-calendar-files/SKILL.md). They use built-in libraries and work offline. Existing-document redlining and tracked changes use the Anthropic skills.
 
 ## Skill categories
 

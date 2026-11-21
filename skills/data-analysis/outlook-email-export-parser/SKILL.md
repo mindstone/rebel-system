@@ -1,7 +1,7 @@
 ---
 name: outlook-email-export-parser
 description: "Parse Outlook PST/OLM email exports into searchable JSON files. Use when a user has an Outlook export (.pst or .olm) and wants to search, analyse, or work with their email data. Also handles OLM (Mac Outlook) exports. Cross-platform (Node.js). Fallback PowerShell script for Windows-only scenarios."
-last_updated: 2026-04-17
+last_updated: 2026-11-21
 tools_required: ["Node.js (bundled with Rebel)"]
 agent_type: main_agent
 ---
@@ -11,6 +11,8 @@ agent_type: main_agent
 Parse Outlook PST or OLM exports into individual JSON files for searching and analysis.
 
 ## When to use
+
+For a single saved email (.eml, .msg) or calendar invite (.ics), use [email-calendar-files](../../utilities/email-calendar-files/SKILL.md) instead.
 
 - User has a `.pst` or `.olm` file exported from Outlook and wants to search/analyse their email
 - Outlook MCP connector is unavailable (auth issues, 403s, no Graph API access)
