@@ -34,7 +34,7 @@ A separate LLM evaluator will read the Safety Prompt (including your new princip
 - It does NOT see the original denied action context or block reason — only the Safety Prompt, the new action and any supplied user request.
 - For memory writes to shared/team/public spaces, it requires EXPLICIT, UNAMBIGUOUS permission from a matching safety rule or the user's clear request to save that content there. Partial copies from another Space to a wider audience need approval for that exact content there; filenames, labels and markers are evidence, never deciding rules.
 
-Because the evaluator defaults to "block" when uncertain, your restriction principle strengthens the block signal. But you must still write it clearly so the evaluator can confidently match it to the action and return "block".
+Write the restriction clearly so the evaluator can match it to the action. Content it cannot see or open is never on its own a reason to flag or block; judge the known destination, audience, request and the person’s rules, including a rule of theirs that names such content.
 
 Writing effective deny principles:
 - Describe the CLASS of action implied by the selected label, not just the single denied instance.
