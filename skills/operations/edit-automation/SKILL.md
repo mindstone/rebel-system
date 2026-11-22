@@ -12,7 +12,7 @@ tools_required:
   - rebel_automations_run
   - rebel_automations_toggle
   - rebel_automations_delete
-last_updated: "2026-11-16"
+last_updated: "2026-11-19"
 ---
 
 # Edit Automation
@@ -79,6 +79,18 @@ Or convert to weekly if user wants different days:
 {
   "id": "<automation-id>",
   "filePath": "skills/weekly-summary-v2/SKILL.md"
+}
+```
+
+### Change What It Does
+
+**User**: Also send me the summary as a draft email
+
+Each run receives only the skill file and `userInstructions`, never `description`, so a change to the task goes in `userInstructions`. Send the whole new text, starting from the current "Your instructions" that `rebel_automations_list` shows (it replaces the old text); keep `description` a short card summary.
+```json
+{
+  "id": "<automation-id>",
+  "userInstructions": "Summarize my week and list what to prepare for next week. Also save the summary as a draft email to me."
 }
 ```
 

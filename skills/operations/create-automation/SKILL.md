@@ -9,7 +9,7 @@ tools_required:
   - rebel_automations_create
   - rebel_automations_run
   - rebel_automations_list
-last_updated: "2026-11-16"
+last_updated: "2026-11-19"
 ---
 
 # Create Automation
@@ -18,7 +18,7 @@ You're helping the user set up a scheduled automation. Your job is to understand
 
 ## Conversation Flow
 
-1. **Understand the task**: What should the automation do? Get a clear description.
+1. **Understand the task**: What should the automation do? Get the task and its constraints (what to make, for whom, where to save it, what to avoid).
 2. **Identify the skill file**: Which skill or file should be executed? Help them pick from their Library.
 3. **Parse the schedule**: Convert natural language like "every Monday at 9am" into a schedule.
 4. **Confirm and create**: Show what will be created, then create it.
@@ -93,12 +93,15 @@ It'll run on its own every Friday at 5pm, following your Safety Rules.
 
 ## Tool Usage
 
+**Where the task goes**: each run receives only the skill or file and `userInstructions`, never `description`. Put the person's task and its constraints in `userInstructions`, in their words, whenever the file alone doesn't say exactly what to do, as with a general skill. Keep `description` a short summary for the automation's card.
+
 Use `rebel_automations_create` with:
 
 ```json
 {
   "name": "Weekly Summary",
   "description": "Summarizes your week and prepares for the next one",
+  "userInstructions": "Summarize my week from my meetings and Actions, and list what to prepare for next week. Save it in Notes/Weekly.",
   "filePath": "skills/weekly-review/SKILL.md",
   "schedule": {
     "type": "weekly",
