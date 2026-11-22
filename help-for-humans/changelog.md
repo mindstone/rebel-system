@@ -8,15 +8,107 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Highlights
 
+- **Skills learn from finished work** — When Rebel finishes a file or draft for a skill, choose “Good as it is” or “Teach” to show it what good looks like. You can review your saved examples before replacing one, and each skill shows how it grows, up to “Exceptional”, which only you can approve with “Sign off”. Automation results in Actions now open the conversation that made them. Skills, it turns out, improve with experience too.
+
 - **Change your own events right on the Calendar** — Click an empty slot to add an event, drag one to move it, drag its bottom edge to make it longer or shorter, and click it to rename or delete it, with Undo for the change of heart. No more hopping over to Google or Outlook to shuffle your week: drag Friday's focus block to Monday, or stretch a 30-minute check-in to an hour. It works on any of your own Google or Outlook calendars, including extra ones you made yourself, and other people's meetings stay theirs.
-
-- **Ask a teammate's Rebel in Slack** — Rebel now sends requests to teammates' Rebels through Slack. Say “Ask Alice's Rebel in Slack…” and her answer turns up in the conversation where you asked. When someone else's Rebel asks yours, it shows as its own conversation, and Rebel asks you before its answer goes back, once per conversation if you let that Rebel follow your usual permissions. Earlier requests through a shared Space are closed and their history is kept. See [Ask a teammate's Rebel](rebel://library/rebel-system%2Fhelp-for-humans%2Ftalking-to-rebel-from-slack.md).
-
-- **Go through your Actions with Rebel** — Find it at the top of Actions on desktop, web and phone. Rebel reads your Actions, shows what looks done or stale, and only clears anything after you say yes. Ask Rebel to put cleared items back, or use Restore under **Handled by Rebel** on desktop or **Archived** on web. It asks the few questions that matter and drafts replies you approve with Send. On desktop, Desk Clearer, the advisor who makes those calls, joins your Operators by itself the first time you use it; teach it your rules in Operators. Your Actions remain yours, just less committed to haunting you.
 
 ### Improvements
 
+- Quit Rebel mid-answer and the answer no longer stops with it: your cloud picks it up where the laptop left off and finishes it, ready on your phone. The laptop gets to leave early; the work does not.
+
+- **Start an Action and keep going** — Press Start and Rebel takes it from there while you stay in Actions; the card shows Waiting to start, then Working. Drafts it hands back, and Actions it couldn't finish, wait in their own **Needs you** view with Mark done, Ask for a change or Try again, and a draft you've edited in the meantime stays yours. "Mark done when finished" now lives in Start's box, and files Rebel can't open are named before you send.
+
+### Fixes
+
+- Live talks less after you hand it a job: no extra sign-off once it has started, a quick correction replaces the job instead of starting a second one, and no "still working on it" while it is waiting for your answer.
+
+- A meeting card no longer offers Book again for a time Rebel has already booked, even when Rebel wrote the time a little differently. One meeting per slot is the polite number.
+
+- **Messages sent during an update get answered** — A message sent from your phone or the web just as Rebel paused for an update now gets its answer once Rebel is back, instead of sitting there marked Not sent.
+
+- If a file in your workspace is deleted while Rebel is copying it to your cloud, your cloud no longer thinks its copy is out of date, so it can still finish your reply when your laptop closes.
+
+- Ask Rebel to sort your email when no browser is set up and it now just uses your connected inbox, instead of explaining at length why it needs a browser it doesn't.
+
+- Your very first message after installing Rebel gets its reply straight away, instead of waiting while Rebel downloads the search model it uses to find your files. The download carries on quietly in the background.
+
+- When an app you have open disappears, because it moved or your access to its Space ended, Rebel now says so in plain words instead of quoting its own plumbing.
+
+- A form in a Space you can only view no longer pretends you can submit it: your answers stay visible, Submit steps aside, and the form says who to ask for edit access.
+
+- A model you picked that needs a connection you haven't set up no longer stops your message: another model you can reach answers that one, says so in a line, and the model you picked stays put for when you connect.
+
+- When your computer loses its connection mid-answer and your cloud finishes the job, the conversation now says so: no leftover "Can't reach the AI service" error, and the steps Rebel took stay listed.
+
+- Renaming or moving a file in a Space no longer reports a failure after it has quietly worked. Modesty is a virtue; false modesty about your own filing is not.
+
+- When Live says goodbye and hangs up, it now stays quiet instead of adding one last thought on its way out. Any answer that finishes afterwards waits for you in the conversation.
+
+- Long dropdowns, such as the model lists in Settings, now fit inside the window and scroll, so the choices at the top can be clicked again. Picking GPT-6 Luna for cloud conversations no longer takes a keyboard and a hunch.
+
+- When the AI service is too busy to answer a safety check in time, the approval card now says the check ran out of time, instead of just that it couldn't finish. The action still needs a finished check or your approval; we're only being straighter about why.
+
+- After you approve something on the web or your phone, the chat no longer shows Rebel's own "Approved. Please retry" note as if you had typed it. Rebel still reads it; you just don't have to.
+
+- Salesforce now checks its saved sign-in before trusting it, and reads the names you search for even when they contain an apostrophe, like O'Brien. If a sign-in file looks wrong, Rebel asks you to reconnect rather than guess.
+
+- When Rebel can't start on a message, the chat now says so in plain words, instead of an engine-room error about leases (or, sometimes, nothing at all).
+
+- Meeting recordings on iPhone keep going when you switch to another app, instead of quietly ending a minute later. The meeting doesn't stop when you look away, so neither do we.
+
+- Without an AI provider set up, Rebel no longer greets every launch by retrying your approved steps and complaining about a missing key. It waits, then carries on once you've added one.
+
+- The Continue button now stays on a stopped reply when you switch back to Rebel, instead of sometimes being swapped for Start again.
+
+- An email draft card no longer offers Send again after Rebel has already sent that exact draft for you. Once was plenty.
+
+- On your phone, choosing Always allow now asks its question right under the action it's about, instead of somewhere below the fold.
+
+- Fixed a case where a memory update in a shared Space could discard an unsaved draft or replace someone else’s newer edit.
+
+- **"Just this once" on your phone and the web** — Approve an action there and Rebel now does it and shows you the answer, instead of quietly doing the work and then insisting it was still waiting for your permission.
+
+- Retro live boards on your computer keep four columns in roomy windows and readable notes in narrow ones. Less squinting, same notes.
+
+- Meeting replies keep up with split questions and short follow-ups, without mistaking “thanks” for a new question. Slow lookups finish their hand-off, post the result and speak it when the floor is still theirs. Private details stay private. Stop means stop, too.
+
+- **Automations do the job you asked for** — An automation set up in chat now keeps your task under **Your instructions**, so each run does it instead of politely doing nothing and calling that a success.
+
+- **Views offline on your phone** — Reopen a finished conversation without a connection and its map or list now draws properly, instead of a wall of text with internal ids that only Rebel could love.
+
+- **Drafts after a retry** — If Rebel redrew a draft or booking card while trying again after a dropped connection, the card could stay stuck on "Asked Rebel to send" for good. It now opens again once Rebel has finished, with your words still there.
+
+- Helper cards read properly now: their notes show as formatted text, not a scatter of asterisks and hashes, and a stopped helper no longer dumps whole web pages onto its card. Rebel still gets everything it found.
+
+- **The answer stays the answer** — When Rebel ticks off its own to-do list after replying, the reply you asked for now stays put, and anything it adds shows as a short note underneath instead of quietly taking the reply's place.
+
+- More approved file updates now finish without another round of back-and-forth.
+
+- Morning Triage and Source Capture no longer claim they didn't finish just because they stopped at their own sensible limits. If something genuinely breaks, they'll still say so.
+
+- Saving notes and memories now follows your usual permissions everywhere: a very large save, or one made while Rebel's checker is down, goes ahead when your permissions allow it, and "Allow writes here" or filing a recovered note no longer fails because a few minutes passed. Recovered notes also show a **Save** button on desktop and phone.
+
+- When a model you've picked can't run, say because its account isn't connected or your company has locked it, Rebel now says why, both in chat and when you press **Test** in Settings. Your saved choice stays exactly as you left it.
+
+- Keys tucked into a connector's web address or settings no longer show up when Rebel lists your connectors or when another tool repeats them; they appear hidden instead. Secrets, kept secret.
+
+- When your computer's finished reply takes over from the cloud's, your phone and the web no longer flag that reply with a "Preserved" badge as if something had gone wrong.
+
+- Spaces in cloud folders are no longer marked unreachable at startup just because Rebel's own checker was slow to wake, mostly on Windows. A Space that misses its first check now gets another straight away.
+
+- Asking Rebel to summarise or export an automation run's conversation from its link now works, instead of insisting the conversation doesn't exist.
+
+- On an iPhone, a meeting recording left running in the background no longer ends by itself after a few minutes.
+
+## v0.4.107 — Nov 22, 2026
+
+### Highlights
+
+- Change your own events right on the Calendar: click an empty slot to add one, drag it to move it, drag its bottom edge to make it longer or shorter, and click it to rename or delete it, with Undo for the change of heart. It works on any of your own Google or Outlook calendars, and other people's meetings stay theirs.
+
 - How it went: each morning Rebel looks back at yesterday’s saved meetings and leaves a private note in each meeting file, covering the agenda, decisions, owners and one thing for next time. Week sums up last week, the Table gets a column, and one tap adds the suggestion to the next agenda. It’s about the meeting, never a ranking of people, and only you see it.
+
+- **Ask a teammate's Rebel in Slack** — Rebel now sends requests to teammates' Rebels through Slack. Say “Ask Alice's Rebel in Slack…” and her answer turns up in the conversation where you asked. When someone else's Rebel asks yours, it shows as its own conversation, and Rebel asks you before its answer goes back, once per conversation if you let that Rebel follow your usual permissions. Earlier requests through a shared Space are closed and their history is kept. See [Ask a teammate's Rebel](rebel://library/rebel-system%2Fhelp-for-humans%2Ftalking-to-rebel-from-slack.md).
 
 - **Shared links that people can edit** — When you share a conversation with views in it (mind maps, graphs, decision grids), you can now set **People with the link can** to **Can edit**. Anyone who opens the link gives their name and can add and change items in those views, and their changes show up in your copy as they make them. Switch back to **View only** whenever you like; what they changed stays. Or just ask Rebel: "share this so everyone can add to it" gets you the link, and "take editing back" makes it view-only again. Collaboration, minus the email thread titled "final_v3".
 
@@ -29,6 +121,8 @@ What's new in Rebel. We ship fast, so there's always something.
 - **A live board for the meeting** — Start a retro, decisions, sprint planning or parking lot board in your meeting conversation, then share a link so anyone can follow the board and recent captions. Or ask your notetaker in meeting chat. Your meeting map stays private; the link is watch-only and closes when the notetaker leaves or after 12 hours. The whiteboard has acquired an audience.
 
 - **Documents, without the setup** — Create Word documents, PowerPoint slides and Excel workbooks, recalculate supported spreadsheet formulas, and merge, stamp, fill or read PDFs without installing anything. Works offline, wherever Rebel is running. No package-installation intermission. [▶ Watch it](https://storage.googleapis.com/mindstone-rebel/release-videos/261116-documents-without-the-setup.mp4)
+
+- **Go through your Actions with Rebel** — Find it at the top of Actions on desktop, web and phone. Rebel reads your Actions, shows what looks done or stale, and only clears anything after you say yes. Ask Rebel to put cleared items back, or use Restore under **Handled by Rebel** on desktop or **Archived** on web. It asks the few questions that matter and drafts replies you approve with Send. On desktop, Desk Clearer, the advisor who makes those calls, joins your Operators by itself the first time you use it; teach it your rules in Operators. Your Actions remain yours, just less committed to haunting you.
 
 - **Live views show their workings** — New rows and decisions arrive with a small rise, changed figures roll into place, and updates get a brief glow. Anyone watching a live view can now spot the difference without playing spot the difference. [▶ Watch it](https://storage.googleapis.com/mindstone-rebel/release-videos/261116-live-views-show-their-workings.mp4)
 
@@ -43,6 +137,8 @@ What's new in Rebel. We ship fast, so there's always something.
 - **Apps, all in one place** — Pages, dashboards and small tools Rebel makes for you are now called Apps, and they live in **Library → Apps**; your earlier plugins came along with their data. The services you connect are now called Connectors. One Rebel, fewer nouns. [▶ Watch it](https://storage.googleapis.com/mindstone-rebel/release-videos/261114-apps-in-library.mp4)
 
 - **Home leads with what's due** — The line under your greeting now says how many Actions need you today, and each Action shows when it's due. Once you've opened your Actions, they sit above the setup steps, which now share one quieter **Finish setting up** card. [▶ Watch it](https://storage.googleapis.com/mindstone-rebel/release-videos/261115-home-leads-with-whats-due.mp4)
+
+### Improvements
 
 - "Go through with Rebel" now sits up top beside your Actions controls instead of hogging a whole row. Same tidy-up, less real estate.
 
@@ -82,8 +178,6 @@ What's new in Rebel. We ship fast, so there's always something.
 - **One less click for "Something else"** — When Rebel asks you a question, the "Something else" choice is now a box you can type in straight away. Typing picks it; no need to click it first.
 
 - **Calendar list stays beside your week** — With a long list of calendars, the list now scrolls in its own box, so your week stays in view while you switch calendars on and off. We also dropped a warning telling you that free time in your own calendar might not be free. It’s your calendar. You knew.
-
-- **Start an Action and keep going** — Press Start and Rebel takes it from there while you stay in Actions; the card shows Waiting to start, then Working. Drafts it hands back, and Actions it couldn't finish, wait in their own **Needs you** view with Mark done, Ask for a change or Try again, and a draft you've edited in the meantime stays yours. "Mark done when finished" now lives in Start's box, and files Rebel can't open are named before you send.
 
 - **Rebel explains itself before asking** — When Rebel asks your permission to save a note or to look in a folder, the request now quotes what it said just before asking. If it said nothing, the request admits that too.
 
@@ -268,16 +362,6 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Fixes
 
-- **Views offline on your phone** — Reopen a finished conversation without a connection and its map or list now draws properly, instead of a wall of text with internal ids that only Rebel could love.
-
-- **Drafts after a retry** — If Rebel redrew a draft or booking card while trying again after a dropped connection, the card could stay stuck on "Asked Rebel to send" for good. It now opens again once Rebel has finished, with your words still there.
-
-- Helper cards read properly now: their notes show as formatted text, not a scatter of asterisks and hashes, and a stopped helper no longer dumps whole web pages onto its card. Rebel still gets everything it found.
-
-- **The answer stays the answer** — When Rebel ticks off its own to-do list after replying, the reply you asked for now stays put, and anything it adds shows as a short note underneath instead of quietly taking the reply's place.
-
-- More approved file updates now finish without another round of back-and-forth.
-
 - Said Always to a tool? It now stays said. Rebel no longer stops to ask because it couldn't look inside a file, like a ZIP you asked it to send, or because the connector got an update.
 
 - **Drafts and bookings, without the lockout** — When Rebel finishes but a send or booking outcome is unclear, the card lets you edit and try again. Check Rebel’s reply above first; your words haven’t gone anywhere.
@@ -289,22 +373,6 @@ What's new in Rebel. We ship fast, so there's always something.
 - **Sent means sent** — When Rebel sends a draft from one of its cards, the card now says so on every device and after a restart, and Rebel no longer offers to send the same email twice.
 
 - Automations that stop partway through, say while your computer sleeps, now pick up where they left off instead of failing, as long as their next run isn't due yet.
-
-- Morning Triage and Source Capture no longer claim they didn't finish just because they stopped at their own sensible limits. If something genuinely breaks, they'll still say so.
-
-- Saving notes and memories now follows your usual permissions everywhere: a very large save, or one made while Rebel's checker is down, goes ahead when your permissions allow it, and "Allow writes here" or filing a recovered note no longer fails because a few minutes passed. Recovered notes also show a **Save** button on desktop and phone.
-
-- When a model you've picked can't run, say because its account isn't connected or your company has locked it, Rebel now says why, both in chat and when you press **Test** in Settings. Your saved choice stays exactly as you left it.
-
-- Keys tucked into a connector's web address or settings no longer show up when Rebel lists your connectors or when another tool repeats them; they appear hidden instead. Secrets, kept secret.
-
-- When your computer's finished reply takes over from the cloud's, your phone and the web no longer flag that reply with a "Preserved" badge as if something had gone wrong.
-
-- Spaces in cloud folders are no longer marked unreachable at startup just because Rebel's own checker was slow to wake, mostly on Windows. A Space that misses its first check now gets another straight away.
-
-- Asking Rebel to summarise or export an automation run's conversation from its link now works, instead of insisting the conversation doesn't exist.
-
-- On an iPhone, a meeting recording left running in the background no longer ends by itself after a few minutes.
 
 - Spark keeps up in meetings: a question asked in two breaths counts as one, a passing "mhm" no longer derails the answer, it stops mistaking its own captions for questions, and an answer that stalls is let go rather than left hanging.
 
