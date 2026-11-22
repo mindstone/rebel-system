@@ -80,7 +80,7 @@ Build a priority queue and check up to 15 completion candidates per run. Priorit
 
 **Backlog sweep exception:** if the user explicitly asks for a first-time cleanup / backlog sweep / "go through all my Actions", follow the [actions-review skill](../actions-review/SKILL.md). It carries the interactive receipt, approval, questions and drafts; this step remains the home of the evidence rules.
 
-**Hard budget stop:** use the existing automation cadence only. Normal runs must stop after the item cap, 30 read-only connector calls total, or 2 minutes, whichever comes first. Do not start a new background resolver, crawl whole workspaces, fetch large document bodies, or run per-item LLM judging. Backlog sweeps are dry-run receipts in batches and require user authorisation before applying.
+**Hard budget stop:** use the existing automation cadence only. Normal runs must stop at the item cap or after 30 read-only connector calls total, whichever comes first. Do not start a new background resolver, crawl whole workspaces, fetch large document bodies, or run per-item LLM judging. Backlog sweeps are dry-run receipts in batches and require user authorisation before applying.
 
 For email-action items ("reply to", "follow up with", "email X about"):
 - If the item has an email reference with threadId/messageId, fetch that specific thread first
@@ -133,7 +133,7 @@ For items with Linear/GitHub/Asana references:
 Log: N new items created, M items enriched, K items archived. Be brief.
 
 ## Rules
-- **If a source fails, process the others and say what you skipped.**
+- **If a source fails, process the others and say what you skipped.** If reading the inbox or calendar returned an error and no backup read it, also end with the `Incomplete:` line naming it. If there is no tool for one, it isn't connected: say so, without that line.
 - **Only update/archive with HIGH confidence.** When in doubt, leave unchanged.
 - **Use structured data, not the visual app UI.** Actions state must come from `rebel_inbox_list`, `rebel_inbox_query`, and `rebel_inbox_update`. Do not use `rebel_navigate_app`, `rebel_get_app_screenshot`, screenshot-capture skills, or any live UI inspection to understand Actions.
 - **Do NOT archive user-request items** — the user explicitly added them.
