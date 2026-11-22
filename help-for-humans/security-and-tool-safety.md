@@ -36,7 +36,7 @@ When a tool action needs your OK, the approval card shows what Rebel wants to do
 | **Just this once** | Approves just this one action. Rebel will ask again next time. (In an automation, this reads **Allow this run only**.) |
 | **This conversation** | Allows the tool for this conversation, within the limits shown on the card. |
 | **This tool** | Saves permission to use this tool on future tasks. Review the permission before confirming. |
-| **Everything from [app]** | When available, saves permission for actions from that app at the displayed level of impact or lower. Higher-impact actions still need approval. |
+| **Everything from [app]** | When available, saves permission for every action from that app, now or later. Blocks you've set still apply. |
 | **Don't allow** | Declines this action. |
 | **Block this tool** | Saves a block for the tool. Review or remove it in **What Rebel can do → Never allowed** in Settings. |
 
