@@ -250,10 +250,10 @@ Company models carry a **Managed** badge in **Settings → Agent & Voice**, with
 
 Open **Customise** in **Settings → Agent & Voice** to find **Your models**, the list of models Rebel can use. The job choices below it assign jobs like Planning and Everyday work; the list controls which models are available.
 
-- **On/Off per model** — each row has a clear On/Off toggle. Switch a model off and it stops showing up as a choice without leaving your list — flip it back on whenever. No deleting and re-adding.
+- **On/Off per model** — each row has a clear On/Off toggle. Switch a model off and Rebel stops using it. It stays in your list so you can turn it back on without deleting and re-adding it.
 - **Add a model** — opens a picker with a live **search** (by name or provider), a **Recommended for most people** shortlist for when you're not sure where to start, and — if you're on a Mindstone plan — an **Included with your Mindstone plan** group surfacing the models your subscription already covers, one click to add.
 
-Rebel won't offer a model in a picker if it can't serve it. If a model you'd already chosen later becomes unavailable — withdrawn access, disconnected provider, that sort of thing — Rebel falls back to a working alternative and keeps going rather than leaving the conversation stuck.
+Models that can't currently run are greyed out in the model pickers, with a reason. If a model you've already chosen can't run because an account is disconnected, a key is missing, the model is switched off or your company doesn't allow it, Rebel keeps your saved choice and explains what needs attention. It won't silently replace that choice. Follow the reason shown to reconnect an account, turn a model you control back on in **Your models**, choose another allowed model or ask your admin.
 
 ## Other providers and model profiles
 
