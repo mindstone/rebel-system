@@ -7,9 +7,9 @@ last_updated: "2026-11-03"
 
 A Connector is any outside service you have signed in to from **Settings → Connectors**, such as your email, calendar or CRM. When a Connector shows something interactive directly inside your conversation, Rebel makes sure you always know where it came from.
 
-## Safe view: knowing what's yours and what's not
+## Knowing where a view came from
 
-When a Connector renders an interactive view inside your conversation, the view is labelled **"From X · Safe view"** — where X is the name of the Connector. Rebel draws this label itself, on the view, so you can see at a glance that it came from that specific Connector, not from Rebel.
+When a Connector renders an interactive view inside your conversation, the view is labelled **"From X"**, where X is the name of the Connector. Rebel draws this label itself, on the view, so you can see at a glance that it came from that specific Connector, not from Rebel. Rebel's own views carry no label.
 
 A Connector cannot read this label or change it, so it cannot pretend to be someone else.
 
