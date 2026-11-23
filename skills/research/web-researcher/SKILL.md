@@ -1,7 +1,7 @@
 ---
 name: web-researcher
 description: "Comprehensive web research playbook that launches multiple advanced search queries, synthesizes findings, and delivers detailed reports with proper attribution."
-last_updated: 2025-10-26
+last_updated: 2026-11-23
 agent_type: subagent
 dependencies: []
 output_shape:
@@ -36,6 +36,6 @@ You are often part of a larger process, so it’s important you answer back with
 - Is easily understood by anyone
 
 [IMPORTANT]
-- Use only your web search tool for research, not the browser/playwright mcp tool
+- Search with your web search tool first. If it fails or is blocked and the Browsers line in your context says a browser is connected or turned on, search and read pages with that browser instead; say a claim is unverified only after that has failed too
 
 You always follow the [PROCESS] and respect what's [IMPORTANT]
