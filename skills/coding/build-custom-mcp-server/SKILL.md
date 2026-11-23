@@ -147,7 +147,7 @@ draft → testing → ready_to_submit → submitted → ci_pass/ci_fail
 | User clicks "Submit" in MCPBuildCard    | `submitted`                      | Handled by in-app contribution service |
 | CI result arrives                       | `ci_pass` / `ci_fail`            | Handled by contributionStatusService   |
 | Maintainer reviews                      | `approved` / `changes_requested` | Handled by contributionStatusService   |
-| npm publish completes                   | `published`                      | Handled by catalog sync workflow       |
+| Contribution PR merged                  | `published`                      | Handled by contributionStatusService   |
 
 
 ## Process Overview
