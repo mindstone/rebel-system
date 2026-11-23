@@ -24,7 +24,7 @@ What's new in Rebel. We ship fast, so there's always something.
 
 - A meeting card no longer offers Book again for a time Rebel has already booked, even when Rebel wrote the time a little differently. One meeting per slot is the polite number.
 
-- **Messages sent during an update get answered** — A message sent from your phone or the web just as Rebel paused for an update now gets its answer once Rebel is back, instead of sitting there marked Not sent.
+- **Messages sent during an update get answered** — A message sent from your phone or the web just as Rebel paused for an update now gets its answer once Rebel is back, instead of sitting there marked Not sent or showing twice. While it waits, the chat says Rebel restarted, not that it was closed on your computer.
 
 - If a file in your workspace is deleted while Rebel is copying it to your cloud, your cloud no longer thinks its copy is out of date, so it can still finish your reply when your laptop closes.
 
