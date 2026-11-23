@@ -104,17 +104,15 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Highlights
 
-- Change your own events right on the Calendar: click an empty slot to add one, drag it to move it, drag its bottom edge to make it longer or shorter, and click it to rename or delete it, with Undo for the change of heart. It works on any of your own Google or Outlook calendars, and other people's meetings stay theirs.
-
-- How it went: each morning Rebel looks back at yesterday’s saved meetings and leaves a private note in each meeting file, covering the agenda, decisions, owners and one thing for next time. Week sums up last week, the Table gets a column, and one tap adds the suggestion to the next agenda. It’s about the meeting, never a ranking of people, and only you see it.
+- **How it went** — Each morning Rebel looks back at yesterday’s saved meetings and leaves a private note in each meeting file, covering the agenda, decisions, owners and one thing for next time. Week sums up last week, the Table gets a column, and one tap adds the suggestion to the next agenda. It’s about the meeting, never a ranking of people, and only you see it.
 
 - **Ask a teammate's Rebel in Slack** — Rebel now sends requests to teammates' Rebels through Slack. Say “Ask Alice's Rebel in Slack…” and her answer turns up in the conversation where you asked. When someone else's Rebel asks yours, it shows as its own conversation, and Rebel asks you before its answer goes back, once per conversation if you let that Rebel follow your usual permissions. Earlier requests through a shared Space are closed and their history is kept. See [Ask a teammate's Rebel](rebel://library/rebel-system%2Fhelp-for-humans%2Ftalking-to-rebel-from-slack.md).
 
 - **Shared links that people can edit** — When you share a conversation with views in it (mind maps, graphs, decision grids), you can now set **People with the link can** to **Can edit**. Anyone who opens the link gives their name and can add and change items in those views, and their changes show up in your copy as they make them. Switch back to **View only** whenever you like; what they changed stays. Or just ask Rebel: "share this so everyone can add to it" gets you the link, and "take editing back" makes it view-only again. Collaboration, minus the email thread titled "final_v3".
 
-- Calendar takes Focus’s place: Day, Week, Month, List and Table, several calendars, and a notetaker choice for each meeting. On your computer, the web and your phone. Each meeting keeps one file, agenda to actions, and every row says whether its agenda is drafted, sent or changed since. Your week, with fewer loose ends.
+- **Calendar takes Focus’s place** — Day, Week, Month, List and Table, several calendars, and a notetaker choice for each meeting. On your computer, the web and your phone. Each meeting keeps one file, agenda to actions, and every row says whether its agenda is drafted, sent or changed since. Your week, with fewer loose ends.
 
-- A meeting board with room for everyone: let guests add their own notes from the shared link. You decide when the floor is open.
+- **A meeting board with room for everyone** — Let guests add their own notes from the shared link. You decide when the floor is open.
 
 - **A Library with room for everything that matters** — The Library, where your files, skills (the tasks Rebel knows how to do), apps and memories (what Rebel remembers for you) live, now gives each its own section with views that suit it: folders or a newest-first list for files, a shortlist of the skills most worth your time, previews of your apps, and memories by date or by Space (the areas of work you set up). The Spark tab is gone; its suggestions now sit in **Library → Skills**, under the heading **Ways to put me to work**. Atlas (the browse-everything view) and the Library's old Everything list have quietly made their exits. Fewer rooms, less wandering.
 
