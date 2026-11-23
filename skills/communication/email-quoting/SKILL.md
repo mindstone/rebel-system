@@ -9,9 +9,11 @@ agent_type: main_agent
 
 # Email Quoting Conventions
 
-When replying to or forwarding emails, **always include the quoted previous thread** in the body so recipients see full context. Threading headers (`In-Reply-To`, `References`, `threadId`) only group messages in some clients' threaded view — many recipients use non-threaded clients, see emails in notifications, or receive forwarded copies without the conversation history.
+Every connected mail account can reply in a thread: Gmail's `send_workspace_email` with `reply_to_message_id`, Outlook's `reply_to_email`, and other mail tools' reply-to-message field. Use that route for every reply.
 
-Before replying or forwarding, fetch the full conversation first (e.g., `get_workspace_email_thread` for Gmail).
+Below your reply, quote the message you are answering, so recipients who read outside a threaded view (non-threaded clients, notifications) still see what you are replying to. Outlook's `reply_to_email` adds the quote itself: there, write only your reply. For Gmail and other mail tools, fetch the conversation first (e.g. `get_workspace_email_thread`) and quote as below.
+
+**Quoting is good practice, never a reason to hold back a reply.** Once the user has approved a reply, send it. If you can't quote the earlier message, send the reply without the quote. If the tool warns that threading failed, tell the user. A forward always includes the original message, since that is its content.
 
 
 ## Reply formatting

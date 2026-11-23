@@ -99,9 +99,9 @@ for message in search_results:
 
 ## Replying to and forwarding emails
 
-The Gmail API does not auto-include previous messages in the body — you must compose the full body yourself.
+`send_workspace_email` with `reply_to_message_id` replies in the thread: it sets the threading headers for you. It does not add the earlier message to the body, so quote that yourself.
 
-- **Reply:** Use `get_workspace_email_thread` to fetch the conversation, compose your reply followed by quoted previous messages, then send with `send_workspace_email` using `replyToMessageId`.
+- **Reply:** Use `get_workspace_email_thread` to fetch the conversation, write your reply with the message you are answering quoted below it, then send with `send_workspace_email` using `reply_to_message_id`. Quoting is good practice, never a reason to hold back an approved reply: if you can't quote, send the reply anyway.
 - **Forward:** Fetch the original message, compose body with forwarded message block, send with `send_workspace_email` (no `replyToMessageId`).
 
 See [email-quoting skill](../email-quoting/SKILL.md) for formatting conventions: plain text `> ` quoting, HTML `<blockquote>`, forward headers, and attribution lines.
