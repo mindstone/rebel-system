@@ -28,7 +28,7 @@ If you see an approval bar at the bottom of a conversation, Rebel has an action 
 
 For file-related actions, approval cards show the **full file path**. That is intentional: the fastest safety check is usually “Is that the file I think it is?”
 
-## Actions on connected-app cards
+## Actions on connector cards
 
 Clicking a card's button approves that one action. Requests a card makes in the background use your ordinary Safety Rules and saved permissions, and appear in the notification drawer when a decision is needed. Click **View** in the approval bar at the bottom of the conversation to open the notification drawer. To stop a tool action, use **Block** or turn the tool off in Settings. Your organisation's restrictions still apply.
 

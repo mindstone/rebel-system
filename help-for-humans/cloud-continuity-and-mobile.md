@@ -448,7 +448,7 @@ Your desktop data is unaffected. The cloud instance keeps the last synced copy u
 
 ### If the cloud can't confirm it removed your keys
 
-Turning cloud continuity off also tries to remove the saved service keys this computer shared with the cloud through Rebel, if it shared any. Other keys and sign-ins, like your AI provider key or connected apps, aren't removed this way. Your desktop always forgets the cloud straight away, whether or not the cloud answers. If the cloud can't confirm the removal (it's offline, or you're signed out), Rebel says so in a notice after forgetting:
+Turning cloud continuity off also tries to remove the saved service keys this computer shared with the cloud through Rebel, if it shared any. Other keys and sign-ins, like your AI provider key or your connectors' sign-ins, aren't removed this way. Your desktop always forgets the cloud straight away, whether or not the cloud answers. If the cloud can't confirm the removal (it's offline, or you're signed out), Rebel says so in a notice after forgetting:
 
 - **Rebel keeps trying** — for Mindstone Cloud, when the removal was recorded, Rebel keeps asking the cloud to remove the keys in the background whenever you're signed in, until it confirms. You don't need to reconnect. The notice goes once the keys are removed.
 - **The keys may still be there** — otherwise (for example your own cloud), any keys or sign-ins this computer copied to that cloud can stay there. If you no longer use that cloud, delete it and its stored data, or ask whoever set it up to. For Mindstone Cloud, sign in and choose **Destroy it** on the **Your Mindstone Cloud is still running** card.
