@@ -8,9 +8,9 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Highlights
 
-- **Skills learn from finished work** — When Rebel finishes a file or draft for a skill, choose “Good as it is” or “Teach” to show it what good looks like. You can review your saved examples before replacing one, and each skill shows how it grows, up to “Exceptional”, which only you can approve with “Sign off”. Automation results in Actions now open the conversation that made them. Skills, it turns out, improve with experience too.
+- **Skills learn from finished work** — When Rebel finishes a file or draft for a skill, choose “Good as it is” or “Teach” to show it what good looks like. You can review your saved examples before replacing one, and each skill shows how it grows, up to “Exceptional”, which only you can approve with “Sign off”. Automation results in Actions now open the conversation that made them. Skills, it turns out, improve with experience too. [▶ Watch it](https://storage.googleapis.com/mindstone-rebel/release-videos/261123-skills-learn-from-finished-work.mp4)
 
-- **Change your own events right on the Calendar** — Click an empty slot to add an event, drag one to move it, drag its bottom edge to make it longer or shorter, and click it to rename or delete it, with Undo for the change of heart. No more hopping over to Google or Outlook to shuffle your week: drag Friday's focus block to Monday, or stretch a 30-minute check-in to an hour. It works on any of your own Google or Outlook calendars, including extra ones you made yourself, and other people's meetings stay theirs.
+- **Change your own events right on the Calendar** — Click an empty slot to add an event, drag one to move it, drag its bottom edge to make it longer or shorter, and click it to rename or delete it, with Undo for the change of heart. No more hopping over to Google or Outlook to shuffle your week: drag Friday's focus block to Monday, or stretch a 30-minute check-in to an hour. It works on any of your own Google or Outlook calendars, including extra ones you made yourself, and other people's meetings stay theirs. [▶ Watch it](https://storage.googleapis.com/mindstone-rebel/release-videos/261122-add-and-change-calendar-events.mp4)
 
 ### Improvements
 
@@ -104,7 +104,7 @@ What's new in Rebel. We ship fast, so there's always something.
 
 ### Highlights
 
-- **How it went** — Each morning Rebel looks back at yesterday’s saved meetings and leaves a private note in each meeting file, covering the agenda, decisions, owners and one thing for next time. Week sums up last week, the Table gets a column, and one tap adds the suggestion to the next agenda. It’s about the meeting, never a ranking of people, and only you see it.
+- **How it went** — Each morning Rebel looks back at yesterday’s saved meetings and leaves a private note in each meeting file, covering the agenda, decisions, owners and one thing for next time. Week sums up last week, the Table gets a column, and one tap adds the suggestion to the next agenda. It’s about the meeting, never a ranking of people, and only you see it. [▶ Watch it](https://storage.googleapis.com/mindstone-rebel/release-videos/261123-how-it-went.mp4)
 
 - **Ask a teammate's Rebel in Slack** — Rebel now sends requests to teammates' Rebels through Slack. Say “Ask Alice's Rebel in Slack…” and her answer turns up in the conversation where you asked. When someone else's Rebel asks yours, it shows as its own conversation, and Rebel asks you before its answer goes back, once per conversation if you let that Rebel follow your usual permissions. Earlier requests through a shared Space are closed and their history is kept. See [Ask a teammate's Rebel](rebel://library/rebel-system%2Fhelp-for-humans%2Ftalking-to-rebel-from-slack.md). [▶ Watch it](https://storage.googleapis.com/mindstone-rebel/release-videos/261117-slack-question-card.mp4)
 
