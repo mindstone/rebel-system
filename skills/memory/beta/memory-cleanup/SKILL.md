@@ -48,6 +48,7 @@ When this skill is run automatically for `Chief-of-Staff/README.md`, the user sh
 
 **Automatic safe actions:**
 - Create a backup and run manifest before editing.
+- Move dated one-line history entries older than 60 days from oversized Chief-of-Staff topics verbatim into yearly sibling archives, with verified bytes and occurrence counts, backups, and one archive signpost. Source-linked dated bullets qualify in any section; undated facts, `[updated …]` facts, tasks and ambiguous multiline items stay. Skip recently changed files, symlinks, conflict copies and other Spaces; never delete content or overwrite an unrecognised archive.
 - Remove exact duplicate platform/system instruction blocks after verifying there are no user customizations.
 - Move long private reference/detail sections from `Chief-of-Staff/README.md` into `Chief-of-Staff/memory/topics/`, then replace them with a short signpost and one-sentence blurb.
 - Archive stale current-priority sections inside Chief-of-Staff private memory, preserving the original wording.

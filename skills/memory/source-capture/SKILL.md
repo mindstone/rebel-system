@@ -156,6 +156,8 @@ If a matching source exists in Chief-of-Staff:
 - **Skip** creation if the content is identical
 - Report what was found to the user
 
+If the new source is the next item in a recurring series you have captured before, reuse that series' `description` slug in the filename so one pattern covers them all.
+
 ### 6. Gather source metadata
 
 Collect required frontmatter fields:
@@ -237,15 +239,19 @@ truncated: false
 [Complete, unedited content from source — full transcript with speaker attribution for meetings, full document text, full thread, etc. Preserve exactly as received.]
 ```
 
-### 9. Update related topics to cite the source
+### 9. Signpost from related topics, lightly.
 
-After creating the source file under `memory/sources/`, automatically update topic files under `memory/topics/` **within Chief-of-Staff only** to reference it; never write the captured source body to `memory/topics/`.
+Topic files hold lasting knowledge; source files are found by search. After creating the source, look at related Chief-of-Staff topics (see the search rule below) and do at most one of these per topic:
 
-1. **Search for related topics in Chief-of-Staff** using `@files` semantic search on the source's key subjects (people, projects, concepts from Key Takeaways). Restrict the search to Chief-of-Staff topic files.
-2. **Update each relevant Chief-of-Staff topic** per [memory-update](../memory-update/SKILL.md): add source citation to "Sources" section, add new facts with timestamps
-3. **Create new Chief-of-Staff topics** if warranted for significant subjects with no existing topic
+1. **A lasting fact changed** (a course, a rule, a deadline, a decision, where something lives): edit that fact where it already sits, cite the source inline, and mark it `[updated YYYY-MM-DD]`. Never add a second copy.
+2. **The topic has no pointer to this thread or series yet**: add one short line to the topic's `## Sources` section saying what it is and where it lives. For a recurring series (automated reports, digests, a regular update from the same sender), point at a filename pattern rather than one file, e.g. `memory/sources/**/*_email_weekly-canvas-digest.md`.
+3. **Otherwise**: leave the topic alone. Never append a dated summary of what an email or thread said; that is what the source file is for.
 
-Do not update topic files in shared spaces — citing a Chief-of-Staff source from a shared-space topic would leak information about private content. Shared-space topic updates are handled by the distribution automation after a source has been approved for distribution.
+Files named like `<topic>.archive-YYYY.md` are older lines moved out by weekly hygiene: read them for context, but make every edit in the current topic file, never in an archive.
+
+Create a new topic only for a significant subject that has lasting facts and no existing topic.
+
+Search using `@files` semantic search on the source’s key subjects (people, projects, concepts from Key Takeaways), restricted to `Chief-of-Staff/memory/topics/`. Never write the captured source body to topics: it always goes under `memory/sources/`, never `memory/topics/`. Do not update topic files in shared spaces — citing a Chief-of-Staff source from a shared-space topic would leak information about private content. Shared-space topic updates are handled by the distribution automation after a source has been approved for distribution.
 
 Do not ask permission — this is automatic maintenance following the source capture.
 
@@ -261,7 +267,7 @@ After completing source capture, check if any active action items have been reso
 
 ### 11. Acknowledge completion
 
-Report source creation and topic updates:
+Report source creation and any topic changes. An unchanged topic is a successful outcome:
 
 ```
 Source captured:
@@ -271,7 +277,7 @@ Topics updated:
 - Updated [Space Name](workspace://path/to/topic.md): added source citation
 ```
 
-If no related topics found: "No related topics to update"
+If related topics needed no change: "Related topics already have the facts and pointers they need." If no related topics found: "No related topics to update"
 
 ## Source-Type Specific Guidance
 

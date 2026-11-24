@@ -26,6 +26,12 @@ Use this skill when users want to:
 - Create a personal version of a platform skill
 - Add examples or format preferences to an existing skill
 
+## Built-in automation preferences: use Your instructions first
+
+If the request is about what a built-in automation should focus on or skip, direct the person to desktop [Automations](rebel://automations), open that built-in, and edit **Your instructions**. For Source Capture, for example: “Save emails, but leave topic files alone.” Offer text they can paste; only the person can save it there.
+
+Do not call the automation update tool to set or clear built-in instructions, retry through another field, or create a skill-file override for this request. If an update is refused, relay the refusal and do not claim anything changed. Built-in rules still decide the required file location, format and sharing permissions; instructions may narrow scope or exclude sharing destinations. A built-in with no instructions box has no prompt to customize this way. Continue below for customization of an ordinary skill, rather than built-in automation preferences.
+
 ## Important Principles
 
 1. **Extensions are deltas** - Only include what's new, extra, or different from the base skill. Don't restate what the base already covers.

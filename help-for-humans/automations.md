@@ -1,6 +1,6 @@
 ---
 description: "How to schedule recurring or event-triggered work in Rebel, including built-in automations, transcript triggers, Focus automations, and run status meanings"
-last_updated: "2026-11-16"
+last_updated: "2026-11-24"
 ---
 
 # Automations
@@ -94,6 +94,12 @@ These are especially useful if you want Rebel to react automatically after meeti
 ## Built-in automations
 
 Rebel includes system automations out of the box. You can usually enable or disable them, but they aren't regular user-created automations.
+
+Built-ins that run written instructions also have a **Your instructions** box on their card in desktop [Automations](rebel://automations). Use it to choose what Rebel should focus on or skip each time. For example, in Source Capture: “Save emails, but leave topic files alone.” Save applies your text to future runs; Clear returns to the built-in defaults.
+
+Built-in rules still control where files are saved, their format, and what can be shared. You can narrow sharing, but Rebel won't use this box to add destinations or give permission to share. Built-ins that do their work without a written prompt have no instructions box.
+
+Only you can change a built-in's instructions here. If you ask Rebel in chat, it can suggest text for you to paste. It cannot save that text for you. A small bit of typing; a useful bit of control.
 
 ### Day-to-day automations
 
