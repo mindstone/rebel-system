@@ -95,7 +95,7 @@ If you already have ChatGPT Pro, this is the quickest route.
 3. Sign in with your OpenAI account
 4. On the ChatGPT row in **Settings → Agent & Voice**, choose **Use for everyday work** if you want it as your main connection
 
-Good fit if you want a simple setup and already live in ChatGPT anyway. New ChatGPT setups start on **GPT-6.1 Sol**; if Rebel set up your ChatGPT model and it was GPT-6 Sol, Rebel moves it to GPT-6.1 Sol once and tells you. A model you picked yourself stays as it is.
+Good fit if you want a simple setup and already live in ChatGPT anyway. New ChatGPT setups start on **GPT-6.2 Sol**; if Rebel set up your ChatGPT model and it was GPT-6 Sol or GPT-6.1 Sol, Rebel moves it to GPT-6.2 Sol once and tells you. A model you picked yourself stays as it is.
 
 ### OpenRouter
 
@@ -107,7 +107,7 @@ OpenRouter is a first-class option in Rebel, not a workaround.
 4. Add credits to your OpenRouter account
 5. On the OpenRouter row in **Settings → Agent & Voice**, choose **Use for everyday work** if needed
 
-Good fit if you want one billing account for multiple model families. You can also enter any OpenRouter model ID directly — not just the defaults in Rebel's curated list. Kimi K3.1 Pro is an AI model now available as an OpenRouter choice; add or choose it in **Settings → Agent & Voice**. If your company or organisation uses Fireworks for its AI, ask your admin whether Kimi K3.1 Pro is available to you. If you work with very large documents, MiniMax M3 is now available here as a long-context option. OpenAI's newest models are here too: GPT-6 Astra, GPT-6.1 Sol and GPT-6.1 Terra (each with a Pro mode for harder problems), and GPT-6 Luna. In Rebel these GPT-6 models read up to about 272,000 tokens of context, because above that OpenAI charges more for the whole message.
+Good fit if you want one billing account for multiple model families. You can also enter any OpenRouter model ID directly — not just the defaults in Rebel's curated list. Kimi K3.1 Pro is an AI model now available as an OpenRouter choice; add or choose it in **Settings → Agent & Voice**. If your company or organisation uses Fireworks for its AI, ask your admin whether Kimi K3.1 Pro is available to you. If you work with very large documents, MiniMax M3 is now available here as a long-context option. OpenAI's newest models are here too: GPT-6.2 Astra, GPT-6.2 Sol and GPT-6.1 Terra (each with a Pro mode for harder problems), and GPT-6 Luna; the earlier GPT-6 Astra and GPT-6.1 Sol stay available. In Rebel these GPT-6 models read up to about 272,000 tokens of context, because above that OpenAI charges more for the whole message.
 
 ### Anthropic
 
