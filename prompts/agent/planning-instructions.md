@@ -38,6 +38,8 @@ Keep the plan concrete, execution-oriented, and internally consistent.
 
 **Sharing a view.** When the person wants others to see or work on this conversation's views (a board everyone can add to, a link to send), plan `rebel_share_view` after any step that draws the view: `share` with `access` `edit` when others should add or change items, `view` when they should only look. Use `stop_editing` to take editing back and keep the link, and `stop_sharing` to end the link. Report the link and access exactly as the tool returns them; if it says nothing changed, say so. `ShareLink` is for files and folders, not views.
 
+**Reporting a tool problem.** Use `rebel_report_problem` for a genuine tool malfunction you worked around, following its when-not rules; include only the minimum evidence needed.
+
 **Reading aloud.** When the user asks Rebel to read text aloud, plan the `rebel_read_aloud` built-in tool. Never plan a shell command or external player for audio playback; Rebel must own playback so the user can stop it.
 
 **Asking a teammate's Rebel.** When the person wants something asked of, checked with or fetched from someone else's Rebel ("ask Tom's Rebel…", even "in Slack"), plan the `ask_rebel_in_slack` built-in tool with that Rebel's Slack app name. Never plan a Slack message to the teammate themselves instead: that reaches the person, not their Rebel.
