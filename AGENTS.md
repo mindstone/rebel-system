@@ -144,7 +144,7 @@ Operators are activated advisors whose perspective is worth getting whenever it 
 - Topic knowledge → `memory/topics/` with descriptive filenames
 - Source captures → `memory/sources/` organized by date
 - A note drawn from a file outside the Library names that file by its full path, not just its file name, so a later chat can open the original when the note doesn't hold the answer
-- When searching for context, check both the relevant space's memory and Chief of Staff `/memory/`
+- When searching for context, check both the relevant space's memory and Chief of Staff `/memory/`, naming each memory folder as the search path
 - Cross-space sharing: copy, never link (a link leaks the existence of private content); choose the least-derived safe shape — see [share-across-spaces](skills/memory/share-across-spaces/SKILL.md)
 
 
@@ -168,7 +168,7 @@ For workspace files, use the tool ladder:
 - **LS** to list a single directory's contents (use `recursive: true` only when you genuinely need the tree).
 - **Bash** for aggregation and pipelines (`wc`, `head`, `cut`, `sort`, `uniq`) — not for file discovery.
 
-`Glob` and `LS` both follow symlinks by default, so they work correctly with Spaces and shared folders.
+`Glob` and `LS` follow symlinks into Spaces and shared folders. A search of the whole workspace (`Glob` or `SearchFiles`) skips Spaces linked from a cloud drive (such as Google Drive) and names the ones it skipped; to search one, name its folder as the path (e.g. `Chief-of-Staff/memory/`).
 
 **Parallel tool calls:** When you have multiple independent tool calls (e.g., reading several files, searching different patterns, fetching from different sources), emit them all in the same response rather than one at a time. The runtime executes independent tools concurrently — batching them reduces total wait time and completes your work faster. Only sequence tool calls when one depends on the output of another. Parts of one outgoing message (a file and its text, an email and its CC) are not independent: send them in one call (e.g. the file with the text as its comment), or try the part that might fail first and send the rest only once it succeeds; never in parallel.
 
@@ -244,7 +244,7 @@ When `<prefetched-documents>` are present and relevant to the user's request, tr
 Pre-loaded context may not cover the user's question — use `rebel_search_files` via RebelSearchAndConversations to find additional files. This is a semantic search — describe what you're looking for conceptually. If it returns no results, fall back to the filesystem search methods below — browse README.md files, then explore the directory tree to discover available files.
 
 **Filesystem search:**
-The workspace uses symlinks extensively (Spaces, shared folders). The built-in `Glob`, `LS`, and `SearchFiles` tools follow symlinks by default and respect the workspace zone — prefer them over `Bash` for any file discovery or directory listing. Use `find` / `rg` via `Bash` only when you need a flag the built-ins don't expose. See [Space Shared Folders](help-for-humans/space-shared-folders.md).
+The workspace uses symlinks extensively (Spaces, shared folders). The built-in `Glob`, `LS`, and `SearchFiles` tools follow symlinks (except into cloud-linked Spaces during a whole-workspace search, as above) and respect the workspace zone — prefer them over `Bash` for any file discovery or directory listing. Use `find` / `rg` via `Bash` only when you need a flag the built-ins don't expose. See [Space Shared Folders](help-for-humans/space-shared-folders.md).
 
 **File editing:**
 Use the built-in Edit tool. Make minimal, focused changes. `old_str` must match the file text exactly and appear exactly once — add surrounding context to disambiguate, or set `replace_all: true` to change every occurrence. For several changes to the same file, make ONE Edit call with `edits` (an array of `{old_str, new_str, replace_all?}`) instead of separate calls: edits apply in order, each against the content produced by the previous one, and the batch is atomic — if any element fails, nothing is written. Pass either the single pair or `edits`, never both. **Never modify `rebel-system/` files** — customizations belong in `Chief-of-Staff/` or other spaces.
