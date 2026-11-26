@@ -1,11 +1,11 @@
 ---
-description: "Google Gemini — connect your API key for Gemini 3.x and 2.5 models (Pro, Flash)"
-last_updated: "2026-07-05"
+description: "Google Gemini — connect your API key for Gemini 4 (Carbon, Neon, Argon, Hydrogen), 3.x and 2.5 models"
+last_updated: "2026-11-26"
 ---
 
 # Google Gemini
 
-**What it is:** Connect a Google Gemini API key to use Gemini models (Gemini 3.x and 2.5 — Pro, Flash).
+**What it is:** Connect a Google Gemini API key to use Gemini models (Gemini 4 Carbon, Neon, Argon and Hydrogen, plus Gemini 3.x and 2.5 Pro, Flash and Flash-Lite).
 
 **While a Mindstone plan is in use:** models from this connection use your plan's allowance first. Here, **in use** means the plan's row in **Settings → Agent & Voice** says **In use**. Local services stay on your computer, and company-managed models stay company-paid. Pay-per-use prices apply when this connection pays.
 

@@ -1,6 +1,6 @@
 ---
 description: "How to star conversations, mark conversations as done, and recover deleted ones from Trash"
-last_updated: "2026-06-18"
+last_updated: "2026-11-26"
 ---
 
 # Starred and Trash
@@ -21,7 +21,7 @@ Star conversations you want to find quickly. Starred conversations float to the 
 Two ways to add a conversation to Starred:
 
 1. **Star icon** — Click the star icon on any conversation in the sidebar or conversation header
-2. **Conversation menu** — Open the menu (three dots) on any conversation and select **Star**
+2. **Conversation menu** — Open the menu (three dots) on any conversation and choose **Organise → Add to Starred**, or right-click it in the sidebar
 
 ### Unstarring
 
@@ -78,9 +78,9 @@ Each section has its own icon so you can quickly tell where a conversation lives
 
 ### Active vs Done
 
-Conversations naturally move from Active to Done based on age and activity. You can also move one there yourself when it is finished and you want it out of the way without deleting it.
+Conversations naturally move from Active to Done based on age and activity. Finished automation runs and meeting recaps file themselves in Done, unless they're starred or still need you. You can also move one there yourself when it is finished and you want it out of the way without deleting it.
 
-To do that: use the conversation menu and select **Mark as done**.
+To do that: use the conversation menu and choose **Organise → Mark as done**, or right-click it in the sidebar.
 
 To bring it back: find it in **Done** and select **Reopen**.
 
@@ -95,5 +95,5 @@ The conversation filter's **Show** choice starts on **Your conversations**. Choo
 | Delete | Conversation menu → Delete |
 | Restore from Trash | Open Trash → Restore |
 | Permanently delete | Empty Trash |
-| Mark as done | Conversation menu → Mark as done |
+| Mark as done | Conversation menu → Organise → Mark as done |
 | Reopen | Open Done → Reopen |

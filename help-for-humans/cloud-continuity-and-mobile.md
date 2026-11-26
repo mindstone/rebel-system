@@ -1,6 +1,6 @@
 ---
 description: "How to set up cloud continuity so Rebel works on your phone, tablet, or browser — step-by-step setup, pairing, privacy, limitations, and troubleshooting"
-last_updated: "2026-11-20"
+last_updated: "2026-11-26"
 ---
 
 # Cloud Continuity: Use Rebel on Your Phone, Tablet, or Browser
@@ -61,6 +61,10 @@ If you connect a server manually, Rebel can copy data and credentials to it but 
 Then there's nothing to set up. When you sign in to Rebel on another computer, it connects to your Mindstone Cloud by itself and tells you so with a short notice. Its new chats can then carry on in the cloud when that computer sleeps, older chats follow when you next use them, and your Library joins the cloud's without replacing anything. Where a file is different on the two, Rebel keeps both: the cloud's version keeps the name and this computer's sits beside it as "(this computer's copy)".
 
 This happens only on a computer that has never made a choice here. If you picked **Only this computer** on it, it stays that way. Rebel never creates a cloud for you, and a cloud you run yourself is never connected automatically.
+
+### Switching your main computer
+
+One computer at a time is your **main computer**: the one your Rebel cloud runs from. On another computer, Rebel says so and offers **Use Rebel on the web** or **Make this my main computer**. Choose **Make this my main computer** if that's where you now work. Your chats and files stay where they are, and from then on your cloud takes its saved keys (the sign-ins and API keys your services use) from the new computer, so add any you need there. The old computer then works like the web does. You can switch back later.
 
 
 ---

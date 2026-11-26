@@ -1,6 +1,6 @@
 ---
 description: "Why choose Rebel over ChatGPT, Claude.ai, Claude Cowork, OpenClaw, Cursor, or Claude Code? A comparison of features, workflows, and what you gain (or lose) with each option."
-last_updated: "2026-04-16"
+last_updated: "2026-11-26"
 ---
 
 # Why Rebel?
@@ -58,13 +58,13 @@ This guide explains what makes Rebel different and helps you decide when to use 
 
 **Skills** — Reusable instruction sets for common workflows. Meeting prep, research, drafting—run them with a single command.
 
-### Focus
+### Calendar
 
-**Goal-aligned calendar** — Focus shows how your meetings map to your priorities, including whether something looks productive, blocked, noisy, or just travel in disguise.
+**Goal-aligned calendar** — Calendar puts your weekly and monthly briefings beside your goals, so you can see how your meetings map to your priorities.
 
 **Meeting prep and briefings** — Rebel can generate prep notes before important meetings and turn your week into concise briefings instead of a giant calendar wall.
 
-**Recommendation control** — You decide whether recommendations appear automatically, on demand, or not at all.
+**How it went** — The morning after, Rebel leaves a private note on each meeting: decisions, owners and one thing for next time.
 
 ### Voice-First Interaction
 

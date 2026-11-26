@@ -1,6 +1,6 @@
 ---
 description: "Tips for getting the most out of Rebel on complex, long-running tasks"
-last_updated: "2026-06-26"
+last_updated: "2026-11-26"
 ---
 
 # Running Big Jobs
@@ -81,7 +81,7 @@ Auto-done embodies the async mindset: start work, trust it to complete, and have
 
 **Why it matters:** Auto-done supports running multiple conversations simultaneously without clutter. Start five tasks, each with auto-done enabled. Check back later to find completed work in your Done section—and anything that needs attention still visible in your conversation list.
 
-This is about *your* conversations. [Automations](rebel://automations) are separate: scheduled or event-triggered runs live under Automations, not in **Active**, so they don't crowd the list while you parallelise your own work.
+This is about *your* conversations. [Automations](rebel://automations) are separate: scheduled or event-triggered runs are hidden by the default **Show → Your conversations** choice, so they don't crowd the list while you parallelise your own work. Choose **Show → Automations** or **Show → All conversations** to see them.
 
 Perfect for:
 - Background research you'll review later
@@ -110,7 +110,7 @@ Benefits:
 
 **Tip:** Combine with auto-done for maximum efficiency. Start multiple tasks, minimize Rebel, and check back later. Completed work will be in your Done section; anything requiring attention will be waiting in your conversation list.
 
-**Your conversations vs automations.** Parallel-workflow tips here apply to chats you start yourself. Automation runs stay under [Automations](rebel://automations) — kept out of **Active**, pinned tabs, and unread counts by design. Review them from Automations run history, or the **All** tab if you want the full picture.
+**Your conversations vs automations.** Parallel-workflow tips here apply to chats you start yourself. Automation runs stay out of your list unless you choose **Show → Automations**, and a finished one files itself in **Done**. Review them from [Automations](rebel://automations) run history, or with **Show → All conversations** if you want the full picture.
 
 
 ## Use Skills for Repeatable Jobs

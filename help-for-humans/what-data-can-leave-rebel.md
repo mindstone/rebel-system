@@ -1,6 +1,6 @@
 ---
 description: "Every point where data can leave Rebel — usage analytics, crash reports, AI providers, connectors, meetings, updates, sign-in, cloud sync and, if your company asked for it, its time-saved report, tips and success stories — which of them you can switch off, and exactly what the two Privacy & Data toggles do and don't cover"
-last_updated: "2026-11-09"
+last_updated: "2026-11-26"
 ---
 
 # What Data Can Leave Rebel
@@ -27,7 +27,7 @@ Two of these you can switch off right now, in **[Settings → Privacy & Safety](
 | **Your complete workspace, conversations, settings and saved service keys** | The cloud machine you choose: your own, Mindstone-run, or a manually configured host | Yes — choose Only this computer in Settings. It is on by itself only on a computer that never chose, when your account already has a Mindstone Cloud |
 | **Update checks** | Mindstone's update service | No — always on |
 | **Signing in and account checks** | Mindstone | No — required to sign in |
-| **Your company's time-saved report, tips and success stories** — only if your company asked for them: daily time saved and conversation counts as numbers, which tips fit you, and short success stories written by Rebel | Mindstone, for your company's dashboard | Not with a switch — your company decides. You can edit a story or keep it private. Private Mode chats are never used |
+| **Your company's time-saved report, tips and success stories** — only if your company asked for them: daily time saved and conversation counts as numbers, which tips fit you, and short success stories written by Rebel | Mindstone, for your company's dashboard | Not from Rebel — your company decides, and may let you choose to be asked before each story is shared. You can edit a story or keep it private. Private Mode chats are never used |
 
 The rest of this page explains each one.
 
@@ -111,11 +111,11 @@ That's the lot: numbers, dates and those fixed category names. No conversation t
 - Before a story leaves this computer, a privacy check removes any story that seems to name a colleague or to contain a password, another secret or contact details. For this check, Rebel gets your company's list of people's names from Mindstone and keeps it only in memory, never on disk.
 - **Mindstone gets the story before you've seen it** and emails it to you. Only you can see it until it's shared.
 - From that email, you can edit it, choose who sees it, or keep it private, which deletes it. Read it as your leaders would: if it says anything you'd rather they didn't see, edit it or keep it private.
-- If you do nothing, **3 working days** after that email your company's leaders and admins, and your team champion if you have one, see it with your name. You can still withdraw it after it's shared.
+- Usually, if you do nothing, **3 working days** after that email your company's leaders and admins, and your team champion if you have one, see it with your name. Your company can instead keep each story private until you share it: then it waits on your **My success stories** page with **Share** and **Keep private**, and nothing is shared unless you choose **Share**. Either way, you can still withdraw a story after it's shared.
 
-**Can you stop it?** Not with a switch: your company decides, which is why the note in Settings has none. You can still edit any story, or keep it private, before it's shared. **Share usage analytics** doesn't affect it — that switch covers Mindstone's product analytics only. Anything you send with Private Mode on stays out of it entirely.
+**Can you stop it?** Not from Rebel: your company decides, which is why the note in Settings has no switch. If your company lets people choose, your **My success stories** page on your company's Mindstone dashboard has **Share my stories automatically on their share date**: turn it off and you're asked before each story is shared. You can still edit any story, or keep it private, before it's shared. **Share usage analytics** doesn't affect it — that switch covers Mindstone's product analytics only. Anything you send with Private Mode on stays out of it entirely.
 
-**Who sees it.** Everything goes to Mindstone, linked to your Rebel account, so none of it is anonymous. Your company's leaders, and your team champion if you have one, see your daily figures by name, the same way they already see your other Rebel usage; colleagues without those roles don't. Only you see your tips. A success story is seen by its readers only once it's shared, as above. Apart from a shared story, nobody there sees what you or Rebel wrote. If you have questions about how your company uses them, ask whoever looks after Rebel there; for questions about the data itself, contact Mindstone (see the [privacy policy](rebel://library/rebel-system%2Fhelp-for-humans%2FRebel-privacy-policy.md)).
+**Who sees it.** Everything goes to Mindstone, linked to your Rebel account, so none of it is anonymous. Your company's leaders, and your team champion if you have one, see your daily figures by name, the same way they already see your other Rebel usage; so does any outside coach or consultancy Mindstone has given view-only access to your company's dashboard. Colleagues without those roles don't. Only you see your tips. A success story is seen by its readers only once it's shared, as above. Apart from a shared story, nobody there sees what you or Rebel wrote. If you have questions about how your company uses them, ask whoever looks after Rebel there; for questions about the data itself, contact Mindstone (see the [privacy policy](rebel://library/rebel-system%2Fhelp-for-humans%2FRebel-privacy-policy.md)).
 
 **When it stops.** If you sign out, Rebel stops estimating, writing and sending straight away. If your company turns it off, Rebel stops the next time it checks your account, within a few minutes. Figures, tips and stories already sent stay with Mindstone under the privacy policy.
 

@@ -1,6 +1,6 @@
 ---
 description: "How to use Rebel Actions to save tasks for later and have Rebel execute them on demand."
-last_updated: "2026-08-27"
+last_updated: "2026-11-26"
 ---
 
 # Rebel Actions
@@ -62,7 +62,9 @@ This filtering works both for new items and retroactively: when Rebel's filterin
 
 At the top of Actions, choose **Go through my Actions with Rebel**. Rebel proposes items that look done or stale, applies the selection only after you decide, and may prepare replies for you to review and **Send**. This review is separate from automatic stale-item cleanup.
 
-A sidebar down the left lets you switch between six views:
+A sidebar down the left lets you switch between seven views:
+
+**Needs you** — Work Rebel has handed back for you to check, and Actions it couldn't finish. A finished one offers **Mark done** or **Ask for a change**; a stuck one offers **Try again**, **See what happened** or **Mark done**.
 
 **Active** — Everything still waiting for you. Items are grouped by when they're due — **Today**, **This Week**, **Future date**, and **Someday** — so the list reads like a plan, not a pile. Each item shows its title and description, when it was added, any referenced files, links, or emails (Linear issues, GitHub PRs, Asana tasks included), and draft content if Rebel prepared something ahead of time.
 

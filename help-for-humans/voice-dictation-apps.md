@@ -1,6 +1,6 @@
 ---
 description: "Recommendations for voice dictation apps (Monologue, Aqua, VoiceInk, Wispr Flow, Superwhisper) and tips for using voice input to provide richer context when working with AI"
-last_updated: "2026-04-16"
+last_updated: "2026-11-26"
 ---
 
 # Voice dictation apps
@@ -13,7 +13,7 @@ Voice is better than typing, because it's faster and lower cognitive effort. And
 
 But usually reading > listening, because eyes are faster than ears, and reading makes it easier to digest, skim, and jump around.
 
-And if the conversation turns out useful, copy it as Markdown from the conversation menu. Civilised, really.
+And if the conversation turns out useful, choose **Export → Copy text** in the conversation menu. Civilised, really.
 
 
 ## Built-in Voice in Rebel

@@ -1,6 +1,6 @@
 ---
-description: "How to schedule recurring or event-triggered work in Rebel, including built-in automations, transcript triggers, Focus automations, and run status meanings"
-last_updated: "2026-11-24"
+description: "How to schedule recurring or event-triggered work in Rebel, including built-in automations, transcript triggers, meeting and calendar automations, and run status meanings"
+last_updated: "2026-11-26"
 ---
 
 # Automations
@@ -111,7 +111,7 @@ Only you can change a built-in's instructions here. If you ask Rebel in chat, it
 | **Community Video Picks** | Monthly curation of relevant community talks |
 | **Calendar Sync (Other Providers)** | Calendar syncing for non-Google / non-Microsoft setups; off by default |
 
-### Meeting and Focus automations
+### Meeting and calendar automations
 
 | Built-in automation | What it does |
 |---|---|
@@ -119,6 +119,7 @@ Only you can change a built-in's instructions here. If you ask Rebel in chat, it
 | **Distribute Transcript to Spaces** | Routes finished transcripts to the right spaces |
 | **Focus: Weekly Prep** | Weekly chief-of-staff style briefing around calendar, goals, and priorities |
 | **Focus: Monthly Review** | Monthly retrospective on time, patterns, and adjustments |
+| **Daily meeting check** | Each morning, looks back at yesterday's saved meetings and adds a private **How it went** note to each; on by default |
 
 If you use Rebel heavily for meetings, these are the ones doing the clever background lifting.
 

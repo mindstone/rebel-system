@@ -10,7 +10,7 @@ The conversation sidebar can hold a lot of history. Two tools keep it tidy: **fo
 
 Filter chips at the top of the sidebar switch what you're looking at:
 
-- **Active** — conversations you're still working on. This is the default view. Scheduled, event-triggered, and other background automation runs never appear here — those live under [Automations](rebel://automations).
+- **Active** — conversations you're still working on. This is the default view. Automation runs, meeting recaps and discovery runs show up here when you pick them under **Show**. A finished run files itself in **Done**; one that is starred or still needs you stays in Active, and replying to a finished run brings it back.
 - **Starred** (the star) — conversations you've starred for quick access, kept separate from everything else.
 - **Done** — conversations you've finished. They're out of Active but still here whenever you want them.
 - **All** — everything in one list.
@@ -40,6 +40,7 @@ Folders group related conversations — a project, a client, a recurring topic.
 - **Add a conversation to a folder** — right-click it and choose **Move to folder…**, then either pick an existing folder or type a name to create a new one. You can also **drag** a conversation onto a folder.
 - **Take one out** — **Remove from folder** puts it back in the ungrouped list.
 - **Rename or delete a folder** — use the actions on the folder's header row. Deleting a folder doesn't delete its conversations; they return to the ungrouped list.
+- **Let Rebel do the filing** — ask Rebel to tidy your conversations and it makes folders and moves conversations into them. It works from your phone or the web too, while Rebel is open and connected on your computer. Don't like its filing? Drag things back.
 
 If you create a great many folders, Rebel will gently suggest broader categories — folders are most useful when there aren't too many to scan.
 

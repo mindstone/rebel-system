@@ -13,7 +13,7 @@ Press **Cmd+O** (Mac) or **Ctrl+O** (Windows/Linux) to instantly open any file i
 3. **Use arrow keys** — Navigate results
 4. **Press Enter** — Open the selected file
 
-On very large workspaces you may see an honest **partial Library** notice — see [Library and very large workspaces](library-and-very-large-workspaces.md).
+Quick Open reaches every file, however large your workspace — see [Library and very large workspaces](library-and-very-large-workspaces.md).
 
 ## Recent Files
 

@@ -1,6 +1,6 @@
 ---
 description: "How to use file search in Rebel to find files by meaning, not just keywords"
-last_updated: "2026-09-04"
+last_updated: "2026-11-26"
 ---
 
 # File Search
@@ -131,8 +131,6 @@ When paused, Rebel stops all background indexing work. Your existing index remai
 ### Library stuck on "Scanning your files and folders…"
 
 On workspaces backed by **Google Drive, iCloud, or OneDrive**, the Library used to sit on "Scanning your files and folders…" indefinitely — it would try to follow shortcuts and links that pointed deep into cloud storage and never come back. Rebel now skips those problematic cloud-storage links while still indexing your actual files, so scanning can finish. Your files on disk were never at risk.
-
-This is separate from very large libraries that show a **partial Library** notice — that's a size limit, not a cloud-folder hang.
 
 ### Cloud folder briefly unreachable
 

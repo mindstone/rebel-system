@@ -1,6 +1,6 @@
 ---
 description: "Complete overview of what Rebel does: product vision, all features, and how Rebel compares to ChatGPT, Claude Cowork, and OpenClaw"
-last_updated: "2026-11-11"
+last_updated: "2026-11-26"
 ---
 
 # Product Overview and Features
@@ -148,14 +148,14 @@ Your landing surface when you open Rebel, with three sections:
 
 **See also:** [Homepage](library://rebel-system/help-for-humans/homepage.md)
 
-### Focus
+### Calendar
 
-A planning surface for your week, meetings, and priorities:
+Your meetings and priorities in one place, on your computer and the web (your phone shows Day, Week and Month):
 
-- **Goal-aligned calendar** — See how meetings support your priorities, including productive, blocker, noise, or travel signals
-- **Meeting prep** — Generate prep docs for important meetings before they start
-- **Briefings** — Get concise daily and weekly briefings instead of a wall of calendar chaos
-- **Recommendation control** — Choose whether recommendations are automatic, on-demand, or off
+- **Day, Week, Month, List or Table** — Every calendar you've connected, with your own events editable in place
+- **Meeting prep** — Generate prep docs for important meetings before they start, and choose whether the notetaker joins
+- **Briefings and goals** — Weekly and monthly briefings beside your goals, instead of a wall of calendar chaos
+- **How it went** — A private note on each meeting the morning after
 
 ### Document Editor
 

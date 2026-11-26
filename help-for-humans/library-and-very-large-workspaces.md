@@ -1,21 +1,17 @@
 ---
-description: "What Rebel's partial Library notice means on huge workspaces, how cloud spaces stay searchable (and show Reconnecting when a mount is flaky), and how to tell search-unavailable from no matches"
-last_updated: "2026-06-20"
+description: "How the Library handles huge workspaces, how cloud spaces stay searchable (and show Reconnecting when a mount is flaky), and how to tell search-unavailable from no matches"
+last_updated: "2026-11-26"
 ---
 
 # Library and Very Large Workspaces
 
-Some workspaces are simply too big to show in one go. Rebel handles that honestly — and won't get stuck on cloud folders forever either.
+Some workspaces are enormous. Rebel copes with that — and won't get stuck on cloud folders forever either.
 
-## The partial Library notice
+## Big workspaces
 
-If your workspace holds an enormous number of files — common when everything lives inside a big Google Drive, iCloud, or OneDrive folder — Rebel may show a **partial Library** notice in the Library, Quick Open, and search. That's deliberate: Rebel loads a safe slice of your file list instead of pretending it can display everything at once (or grinding until the app falls over).
+The Library, Quick Open and file-name search reach every file and folder, however big your workspace — including a huge Google Drive, iCloud or OneDrive folder. Searching inside notes shows the best-matching files first rather than every possible hit. Rebel fetches folders as you open them, so a long folder fills in as you go rather than all at once, and the app stays responsive.
 
-**What it means for you:**
-
-- Your files on disk are fine — this is about what Rebel can show and search at once
-- You'll still see plenty; you just won't get the full tree in every view
-- Quick Open and Library search work within what's loaded
+If Rebel can't read a folder, it says so and offers **Try again**. Your files on disk are fine either way.
 
 ## Cloud spaces: searchable when healthy, honest when not
 

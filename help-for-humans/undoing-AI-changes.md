@@ -48,8 +48,8 @@ If you want to start fresh from a specific point:
 
 If the problem keeps happening or you can't figure out what went wrong, ask Rebel to help diagnose:
 
-1. Right-click the conversation in the sidebar (or click the three-dot menu)
-2. Select **Diagnose Conversation**
+1. Right-click the conversation in the sidebar, or open its **…** menu and choose **Help with this conversation**
+2. Select **Diagnose conversation**
 3. Optionally describe what went wrong
 4. Rebel will analyze the session and help identify the issue
 

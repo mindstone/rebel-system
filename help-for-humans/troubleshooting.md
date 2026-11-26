@@ -1,6 +1,6 @@
 ---
 description: "Common problems and solutions for Rebel: startup issues, connector sign-in expiry, voice and transcription, conversation errors, and getting help"
-last_updated: "2026-11-13"
+last_updated: "2026-11-26"
 ---
 
 # Troubleshooting
@@ -400,8 +400,8 @@ Rebel can guide you through common solutions and help you understand diagnostic 
 
 If a specific conversation went wrong, use the built-in diagnose feature:
 
-1. Right-click the conversation in the sidebar (or use the conversation menu)
-2. Select **Diagnose Conversation**
+1. Right-click the conversation in the sidebar, or open its **…** menu and choose **Help with this conversation**
+2. Select **Diagnose conversation**
 3. Rebel will generate a diagnostic prompt with session details
 
 This helps you (or support) understand exactly what happened during that conversation, including any errors or unexpected tool behavior.

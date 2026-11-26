@@ -1,6 +1,6 @@
 ---
 description: "How Rebel captures online and in-person meetings, including Plaud waiting transcripts, Quick Capture recovery, meeting prep, and follow-up"
-last_updated: "2026-08-29"
+last_updated: "2026-11-26"
 ---
 
 # Meetings and Notetaker
@@ -71,6 +71,8 @@ If the bot waits too long in a waiting room, you'll see a warning. Some meetings
 ### Live meeting board
 
 In the meeting conversation, ask Rebel to share a live board. People with the link can follow the board and recent captions. If the host permits it, guests can enter a name and add notes; otherwise the link is watch-only. Sharing ends when the notetaker leaves or after 12 hours. This live surface is separate from a published conversation snapshot. Once a board is open, hosts can switch between Retro, Decisions & actions, Sprint planning, and Parking lot using the Board type menu on the card or by typing a request to the notetaker in meeting chat.
+
+Once the board is shared, choose **Show in meeting** on the meeting card to put it on screen in the call as the notetaker's shared screen, so everyone sees it without opening the link. **Stop showing** takes it off screen. You can also just ask Rebel to show the board in the meeting.
 
 
 ## Active Participation
@@ -284,7 +286,7 @@ Open **Library**, go to your **Chief of Staff** space and open the file named af
 
 **My notes** is yours: type there yourself, or ask Rebel in the **meeting companion** — the conversation Rebel opens for the meeting — to “note that…” and it adds your note there. Speaking to the notetaker in the call is a separate conversation. Rebel never changes your notes otherwise. When Rebel analyzes the transcript afterward, it uses your prep and notes to compare what you intended to discuss with what actually came up.
 
-Focus automations also classify each meeting relative to your goals—flagging whether it's productive, a blocker, noise, or travel—so your prep reflects what actually matters. Weekly briefings check previous briefings for follow-up accountability, surfacing anything that slipped through the cracks.
+The weekly and monthly briefing automations also classify each meeting relative to your goals—flagging whether it's productive, a blocker, noise, or travel—so your prep reflects what actually matters. Weekly briefings check previous briefings for follow-up accountability, surfacing anything that slipped through the cracks.
 
 
 ## Transcript Storage

@@ -1,6 +1,6 @@
 ---
 description: "Guide to the Homepage — Rebel's landing surface with Today, Chat, and Coach sections for staying on top of your day"
-last_updated: "2026-05-22"
+last_updated: "2026-11-26"
 ---
 
 # Homepage
@@ -35,7 +35,6 @@ You may see things like:
 - actions worth reviewing today
 - recent automation results
 - connector nudges if Rebel would be more useful with another tool connected
-- Focus-related nudges if that part of Rebel is available but not yet switched on
 
 Today refreshes while Homepage is visible, so it stays reasonably current instead of becoming decorative.
 

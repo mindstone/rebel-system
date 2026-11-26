@@ -1,6 +1,6 @@
 ---
 description: "Overview of the Rebel desktop app interface: layout, unified voice mic buttons, Homepage, file attachments, and workspace integration"
-last_updated: "2026-11-15"
+last_updated: "2026-11-26"
 ---
 
 # Rebel Interface (Mindstone Rebel desktop app)
@@ -16,7 +16,7 @@ Rebel is a user-friendly, voice-first desktop app. For Mindstone Rebel v3, it is
 Rebel's main window is now organised into four working zones:
 
 - **Left conversation sidebar**: your conversation history, filters, and starred chats. The filter's **Show** choice starts on **Your conversations**. Choose **Messages** for Slack threads, **Automations** for automation runs, **Meeting recaps** for recaps, or **All conversations** to see them together. A count beside a choice shows how many conversations need you.
-- **Main surface area** — the part you're actively using: a conversation, Homepage, Focus, Library, Actions, or another surface
+- **Main surface area** — the part you're actively using: a conversation, Homepage, Calendar, Library, Actions, or another surface
 - **Right-side drawer** — extra context such as **Behind the scenes**, document preview, or approvals
 - **Bottom interaction strip** — the composer, voice controls, attachments, mode toggle, and per-conversation settings
 
@@ -65,8 +65,8 @@ Drag files into the composer or paste from clipboard.
 - **Auto-save** — Conversations save automatically; no more lost work
 - **Message navigator** — Jump between your messages in long conversations
 - **Edit messages** — Click any of your previous messages to edit and branch the conversation
-- **Export** — Save conversations as PDF or DOCX
-- **Copy as Markdown** — Right-click any conversation in the sidebar and select "Copy as Markdown" to get a clean text version of the entire conversation
+- **Export** — In a conversation's **…** menu, choose **Export → Copy text** to copy it as Markdown, or **Export → Save file…** to save it as a Markdown file. In the sidebar, right-click a conversation and choose **Copy as Markdown**.
+- **Conversation menu** — The **…** menu groups its actions: **Share…**, **Export**, **View**, **Organise** (rename, move to a folder, star, mark as done and the like), **Open in new window**, **Help with this conversation** and **Delete**. Right-clicking a conversation in the sidebar gives a flat list of conversation actions.
 - **Reply & Comment** — Select text in Rebel's responses to copy, ask a follow-up question, or add inline comments. Collect multiple comments and send them all at once. See [Reply, Comment & Annotations](library://rebel-system/help-for-humans/reply-comment-annotations.md).
 - **Sidebar tabs & folders**: switch between **Active**, **Starred** (the star), **Done**, and **All**. Your **Show** choice applies in each tab, so choose **Show → Automations** to include automation runs or **Show → All conversations** to include every source. You can group related conversations into folders, and mark finished ones **done** to clear them out of Active without deleting them. See [Organising your conversations](rebel://library/rebel-system%2Fhelp-for-humans%2Forganising-conversations.md).
 - **Context menus** — Right-click in the conversation area for cut/copy/paste options. Right-click conversations in the sidebar for quick actions like mark as done, star, move to folder, or delete.
@@ -103,15 +103,15 @@ The Homepage is your landing surface — the screen you see when you open Rebel,
 
 At the bottom, find quick links to "What's New", the community, and help. See [Homepage](library://rebel-system/help-for-humans/homepage.md) for the full guide.
 
-### Focus
+### Calendar
 
-**Focus** is Rebel's planning surface for seeing your week or month in one place.
+**Calendar** shows your meetings across all your calendars by **Day**, **Week**, **Month**, **List** or **Table** on your computer and the web. On your phone it shows **Day**, **Week** and **Month**; editing events and hiding calendars are done on your computer or the web.
 
-- **Calendar overview** — upcoming meetings and time blocks
-- **Briefing column** — a written prep or review for the current period
-- **Goals rail** — the priorities you're meant to care about, next to the time that's competing with them
-
-If Focus is enabled for your workspace, it appears as its own surface in the main navigation so you can switch between day-to-day conversations and a wider planning view.
+- **Your own events** — add, move, resize, rename or delete them right on the Calendar; other people's meetings stay theirs
+- **Notetaker** — choose whether the notetaker joins each meeting
+- **Hide a calendar** — press the eye beside it in the list; bring it back from **Hidden calendars** at the end of the list
+- **Briefings and goals** — in Week, a weekly and monthly briefing sit next to your goals, so you can see how your time lines up with what you said mattered
+- **How it went** — the morning after a meeting, Rebel adds a private note to its meeting file
 
 ### What's New Widget
 
