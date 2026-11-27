@@ -14,7 +14,7 @@ This guide covers using the Google Drive Desktop app to sync files locally. This
   - [Setup](#setup)
   - [Finding Your Files](#finding-your-files)
   - [Offline Access](#offline-access)
-  - [Multi-Computer Behavior](#multi-computer-behavior)
+  - [How Files Come Down From the Cloud](#how-files-come-down-from-the-cloud)
   - [Rebel and your Drive folder](#rebel-and-your-drive-folder)
   - [Troubleshooting](#troubleshooting)
   - [References](#references)
@@ -74,26 +74,17 @@ By default, Google Drive streams files from the cloud. Some applications need fi
 > Mirror Mode downloads all your Drive files locally. Make sure you have enough disk space.
 
 
-## Multi-Computer Behavior
+## How Files Come Down From the Cloud
 
-If a Rebel workspace lives in Google Drive (or Dropbox, iCloud, OneDrive, or Box), Rebel now lets your cloud app handle keeping those files in step between your computers, instead of writing them itself. Your cloud app is already syncing that folder; having Rebel write the same files at the same time is exactly what makes Google Drive mint duplicate `"(1)"` copies. So Rebel steps back and lets the cloud app do the delivering.
+If a Space lives in Google Drive (or Dropbox, iCloud, OneDrive, or Box), new files Rebel writes in the cloud come straight down on the first completed sync. Files your cloud app has already delivered are left as they are.
 
-That can be a touch slower than Rebel writing the files directly, but it stops the duplicate pile-ups for good.
-
-This does **not** turn off phone/browser continuity — Rebel still sends your changes up so your phone and the web app can read them. It only changes how files come **back down** to your computers, for workspaces that live in cloud storage.
+Phone and browser continuity continues to work: Rebel sends your local changes up so you can read them on your other devices.
 
 ### "Newer version available" — when you edit on your phone or the web
 
-There's one case your cloud app can't cover: a file you edited on your **phone or in the web app**. That edit goes to Rebel's cloud, but it never reaches your Google Drive folder, so your cloud app has nothing to deliver — and your computer keeps showing the older version.
+There's one case your cloud app can't cover: a file you edited on your **phone or in the web app**, or one Rebel changed for you in the cloud. That edit goes to Rebel's cloud, but it never reaches your Google Drive folder, so your cloud app has nothing to deliver — and your computer keeps showing the older version.
 
 When that happens, Rebel notices and shows a calm note under **"Newer versions ready"**: **"A newer version is available from your synced workspace."** Click **Update to newest** and your computer fast-forwards to the version you made elsewhere. There's nothing to lose and nothing to choose — you're just one click away from up to date.
-
-> **Running on two computers? Keep both on the latest Rebel.** Recent versions of Rebel stop the
-> runaway `note (1).md` / `Project (1)/` duplicate pile-ups by letting your cloud app handle file
-> delivery — but that only works once **every** computer is up to date, so keep them all current. It's
-> still wise not to have two machines editing the **same** shared-Drive file at the exact same moment;
-> let one finish syncing before the other picks it up. If duplicates have already piled up, see
-> [Cleaning up duplicate files from cloud sync](cleaning-up-duplicate-files-from-cloud-sync.md).
 
 See [Using Rebel on Multiple Devices](library://rebel-system/help-for-humans/using-rebel-on-multiple-devices.md#if-your-workspace-is-in-google-drive) for the full multi-device setup picture.
 
@@ -116,7 +107,7 @@ For faster, more reliable access, mark folders you work in as **Available offlin
 | Files not syncing | Check the Drive app status icon; try restarting the app |
 | IDE not indexing files | Mark folders as "Available offline" (see above) |
 | Slow performance | Consider using Mirror Mode for frequently-accessed folders |
-| Duplicate `file (1).md` / `Folder (1)/` copies piling up | Update **all** your computers to the latest Rebel, then see [Cleaning up duplicate files from cloud sync](cleaning-up-duplicate-files-from-cloud-sync.md) |
+| Duplicate `file (1).md` / `Folder (1)/` copies piling up | See [Cleaning up duplicate files from cloud sync](cleaning-up-duplicate-files-from-cloud-sync.md) |
 
 
 ## References

@@ -52,13 +52,11 @@ That syncing is handled by **your storage provider**, not by Rebel itself.
 
 ### If your workspace is in Google Drive
 
-When Rebel sees a workspace in Google Drive and the same workspace is active on more than one computer, Rebel lets Google Drive deliver new workspace folders first.
+New files Rebel writes in the cloud come straight down to the computer on the next sync. If a file you already have changes on your phone, on the web or in Rebel's cloud, Rebel keeps your copy until you choose **Update to newest**.
 
-This avoids duplicate `"(1)"` folder copies. Delivery can be a little slower than writing the folder directly, but it's much cleaner once everything settles.
+Phone and browser access still works.
 
-Phone and browser access still works — this only changes how desktop folder delivery is handled for Google Drive workspaces.
-
-See [Google Drive Desktop: multi-computer behavior](library://rebel-system/help-for-humans/google-drive-desktop-local-sync.md#multi-computer-behavior).
+See [Google Drive Desktop: how files come down from the cloud](library://rebel-system/help-for-humans/google-drive-desktop-local-sync.md#how-files-come-down-from-the-cloud).
 
 ### What stays per computer
 
