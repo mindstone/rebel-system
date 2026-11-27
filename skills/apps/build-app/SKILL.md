@@ -115,7 +115,9 @@ and each answer carries the same `id`:
 ```js
 let nextId = 0;
 const waiting = new Map();
+const later = new Map(); // requestId -> what to do when an approved call's result arrives
 addEventListener('message', ({ data }) => {
+  if (data?.method === 'notifications/app-tool-result') return later.get(data.params?.requestId)?.(data.params.result);
   const call = data && waiting.get(data.id);
   if (data?.jsonrpc !== '2.0' || !call) return;
   waiting.delete(data.id);
@@ -147,28 +149,46 @@ never `rebel('connector_accounts', ...)`, which Rebel refuses.
   `tool('connector_accounts', { family })` returns `{ accounts }`, the viewer's own (emails or
   workspace names). With more than one, add `account` to each call: run reads over every account
   and show them together, or let the person pick, and remember the pick with `app_state_set`. Never
-  write an account into the app, since a shared app runs with each viewer's own accounts. A call
-  that needs the person's OK returns `{ status: 'waiting' }`: say so in the app and don't retry. If
-  they approve while the app is open, a `notifications/app-tool-result` message with the same
-  `requestId` brings a short summary (`summarised: true`): show its text as it is. Otherwise `content[0].text` is an error message when `isError`
-  is true, and else JSON whose `result` is the connector's own answer. Show an account's error
-  beside that account rather than dropping it:
+  write an account into the app, since a shared app runs with each viewer's own accounts. Name the
+  account only with `account`, never inside `arguments` (such as Google's `email`): Rebel fills
+  that in from the account it uses. If the viewer hasn't connected the connector,
+  `connector_accounts` fails: replace the app's loading text with a note asking them to connect it
+  in Rebel, as below. A call that needs the person's OK returns `{ status: 'waiting', requestId }`:
+  say so in the app and don't retry. If they approve while the app is open, a
+  `notifications/app-tool-result` message with the same `requestId` brings a short summary
+  (`summarised: true`): show its text as it is. Otherwise `content[0].text` is an error message when `isError`
+  is true, and else `structuredContent` is the connector's own answer, already parsed: its JSON (such
+  as `{ items: [...] }`) or, when it answered in words, that text. Every call can fail: catch
+  it and show the message where the result would go, so the app never stays on a loading note.
+  Show an account's error beside that account rather than dropping it:
 
 ```js
-async function useConnector(family, account, name, args) {
+async function useConnector(family, account, name, args, onApproved) {
   const res = await tool('use_tool', { family, account, tool: name, arguments: args });
-  if (res.status === 'waiting') return { waiting: true };
+  if (res.status === 'waiting') { // show res.message; onApproved gets the summary text if they approve
+    if (res.requestId) later.set(res.requestId, result => onApproved?.(result.content[0].text));
+    return { waiting: res.message };
+  }
   if (res.isError) throw new Error(res.content[0].text);
-  const answer = JSON.parse(res.content[0].text).result;
-  return answer.content.map(part => part.text ?? '').join(''); // often JSON: parse it if so
+  return res.structuredContent; // the connector's answer: an object or array, or text
 }
-const { accounts } = await tool('connector_accounts', { family: 'GoogleWorkspace' });
-let picked = await tool('app_state_get', { key: 'account' }); // null until they pick
+let accounts = [], picked = null;
+async function start() { // a plain <script> has no top-level await, so the app starts here
+  try { ({ accounts } = await tool('connector_accounts', { family: 'GoogleWorkspace' })); }
+  catch (error) { // not connected, or no permission yet: say so instead of loading forever
+    document.querySelector('#status').textContent = error.message; // Rebel's message says what to do
+    return;
+  }
+  picked = await tool('app_state_get', { key: 'account' }); // null until they pick
+  show();
+}
 async function show() {
   const shown = accounts.includes(picked) ? [picked] : accounts; // all, unless they picked one still connected
   const perAccount = await Promise.allSettled(shown.map(account =>
-    useConnector('GoogleWorkspace', account, 'search_workspace_emails', { query: 'is:unread' })));
-  // Render a section per account from perAccount, and a picker: "All" plus each account, calling pick().
+    useConnector('GoogleWorkspace', account, 'search_workspace_emails', { query: 'is:unread' },
+      text => showAccount(account, text)))); // after their OK, draw just that account's section
+  // Draw a section per account from perAccount with showAccount(account, ...): the answer, the
+  // waiting note or the error message. Add a picker: "All" plus each account, calling pick().
 }
 async function pick(account) { // null for "All"
   picked = account;
@@ -176,7 +196,7 @@ async function pick(account) { // null for "All"
   else await tool('app_state_delete', { key: 'account' });
   show();
 }
-show();
+start();
 ```
 - The bridge exists only inside Rebel: don't build a test page or harness of your own to run the
   app. Save it, and the person sees it working when they open it.
