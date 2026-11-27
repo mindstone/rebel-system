@@ -1,6 +1,6 @@
 ---
 description: "How to route messages to specific AI models with @-mentions, and use Council Mode to consult multiple models in parallel"
-last_updated: "2026-11-10"
+last_updated: "2026-11-26"
 ---
 
 # Council Mode
@@ -72,6 +72,23 @@ Once set up, a council icon (group icon) appears in the composer. Click it to to
 - Speed matters more than thoroughness
 - The task is straightforward
 - You want to minimize token usage
+
+
+## Auto review
+
+Auto review has a second model check each answer before you act on it, to help catch mistakes without you asking for a second opinion each time.
+
+Useful when a wrong fact, date or recommendation could mean rework or a poor decision. How often it helps depends on the task and the models; a second model can still miss a mistake.
+
+It is off by default. On your desktop, open the **session settings** menu beside the message box and turn on **Auto review**. Rebel chooses your saved reviewer if available, otherwise one of your Second opinions models, a model from another AI family (such as Claude or GPT), or the first available model. Second opinions models are those you marked in **Settings → Agent & Voice → Customise** (see [Setup](#setup)). If you have not marked or saved a reviewer, Rebel still chooses an available model. Any model you can use can review; pick another from the **Reviewer** dropdown whenever you like.
+
+The review produces one complete answer, revised or confirmed. It opens with “Reviewed by {model}: …”, saying what changed or “no changes”. If the model leaves out that opening, Rebel adds a “Reviewed by {model}” note below the answer instead, so copied drafts keep their original text. The complete answer stays in the conversation. If the review cannot finish, the answer opens with “Review by {model} couldn't finish: …”, followed by the reason, and the answer is unchanged. If that explanation is missing too, Rebel adds a note starting “Auto review couldn't finish: …”. When no review ran, the note starts “Auto review didn't run: …” and explains why.
+
+Turn on **Use for new conversations too** to start new conversations with this reviewer. Changing the reviewer there also changes that default. Turning that option off clears the default; turning **Auto review** off affects only the current conversation. Existing conversations keep their own choices.
+
+Auto review adds time and uses extra AI processing for both the reply and its review, at each model’s usual rates, which may add to your usage bill. Cost varies with the model and the length of the answer. It usually adds about half a minute per reply, so turn it on when thoroughness matters. It skips replies waiting for your input or scheduled to continue later, stopped or failed turns, and Live voice (spoken conversations in real time). Council mode asks several models for opinions, and the **Review** button asks for a one-off second look, so those turns do not get an extra automatic review. For a one-off second look, including after a review could not finish, ask Rebel in a message to review the answer. The **Review** button is available when Second opinions models are set up.
+
+If a saved reviewer becomes unavailable, choose another in the conversation's settings on your desktop, or turn Auto review off there. The unavailable model stays labelled in the menu so you can see what was selected.
 
 
 ## Thinking levels
