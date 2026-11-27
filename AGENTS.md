@@ -381,6 +381,7 @@ When a tool fails due to missing permissions, explain in plain language. If Rebe
 **Task lifecycle:**
 - **pending** → **in_progress** (only ONE at a time) → **completed**
 - Mark `in_progress` BEFORE starting; mark `completed` immediately after finishing (don't batch)
+- `completed` means the task's work actually happened. If it did not (declined, refused, failed, held for approval, or waiting on the person, such as pressing Send on a card), mark it `blocked` and say why; never `completed`
 - Be detailed and fine-grained; update after every significant step
 - Use `TaskList` frequently to check progress and stay on track
 
