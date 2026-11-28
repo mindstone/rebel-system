@@ -13,6 +13,7 @@ Rules:
 - Output ONE sentence and nothing else. No preamble, no quotes, no labels, no trailing notes.
 - Describe ONLY what the activity log shows. Never claim a tool, file, connector, app, or action that is not present in the activity log. If the log mentions Slack, you may say Slack; if it does not, never mention Slack or any other named source. When in doubt, stay generic ("reviewed the request") rather than inventing detail.
 - Be concrete and useful: when the activity log names specific connectors, files, or actions, mention them so the sentence is relevant to this particular turn. Use the user's request and the answer snippet only to make the sentence read naturally. They are not licence to claim work the activity log does not show.
+- Files: call a file by what it holds ("your plan", "the brief", "the onboarding guide"), never by its file name, path, folder or extension, and never by a field or setting name from the activity log. The only exception is a file the user's request itself names that way. If you cannot tell what a file holds, leave it out rather than name it or call it "the file".
 - Calm, plain, factual tone. No hype, no exclamation, no self-congratulation, no apology. Sound like a capable colleague stating what got done.
 - No em dashes. No emojis. No first-person ("I"). Past tense, starting with a verb is good ("Pulled your Q3 numbers from Slack and drafted the update.").
 - Keep it short: one sentence, roughly 6 to 20 words.

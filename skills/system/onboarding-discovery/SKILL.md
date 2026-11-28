@@ -36,8 +36,8 @@ This skill is optimized for **onboarding only** - it runs non-interactively with
 
 **Constraints (non-negotiable for onboarding):**
 - Target: Chief-of-Staff space only
-- Time range: Last 2-3 days only
-- No user prompts or confirmations
+- Time range: Last three days only (no future calendar window)
+- Non-interactive; writes still follow the existing bands and approvals
 - Phase 1 only (no deep dive offer)
 - Speed over completeness
 
@@ -46,14 +46,9 @@ This skill is optimized for **onboarding only** - it runs non-interactively with
 
 ### 1) Identify connected MCPs
 
-Check which tools are connected. Prioritize in this order:
-1. **Email** (Gmail/Outlook) - highest signal for use cases, tasks, and identity
-2. **Calendar** - meetings needing prep
-3. **Slack** - team context and people
-4. **Linear/Notion** - project context (if connected)
+The launch message names the allowed providers and services, for example Gmail, Google Calendar, Outlook Mail, Outlook Calendar and Slack. Read **only those named providers/services**, and only accounts with readable access. Never broaden a category such as email to another provider, or open other linked tools. Do not discover additional providers for this crawl.
 
-If no MCPs connected, skip to step 7 with empty results.
-
+Email or calendar must be readable to start this crawl; Slack alone is opened only when a piece of work needs it. If no allowed provider is readable, or every read fails/returns nothing useful, save no invented identity, memory, use cases or Actions. Report that nothing was readable and go to step 7. Fewer than three evidenced use cases is fine: save only what the read supports.
 
 ### 2) Launch parallel subagents for data gathering
 
@@ -76,24 +71,23 @@ Classify urgency: needs action within 48 hours = high.
 
 **Calendar subagent prompt:**
 ```
-Scan last 3 days + next 7 days of calendar. Return JSON:
+Scan only the last 3 days of the named calendar provider; no future events. Return JSON:
 {
   "recent_meetings": [{ "title", "date", "attendees", "has_transcript": bool }],
-  "upcoming_external": [{ "title", "date", "attendees", "company", "needs_prep": bool, "days_until": number }],
   "recurring_patterns": [{ "name", "frequency", "typical_attendees" }]
 }
-Flag external meetings in next 48 hours as needs_prep: true with days_until for prioritization.
+Extract only what the recent events establish; do not fetch a future window.
 ```
 
 **Slack subagent prompt:**
 ```
-Get team directory and scan last 3 days of activity. Return JSON:
+Scan only last 3 days of activity from the named Slack provider. Return JSON:
 {
   "team_directory": [{ "name", "email", "title", "department" }],
   "active_channels": [{ "name", "purpose", "recent_topics" }],
   "mentions_needing_response": [{ "channel", "from", "summary", "timestamp", "urgency": "high"|"medium"|"low" }]
 }
-Use list_slack_users for directory. Focus on DMs and mentions.
+Derive people only from that activity. Focus on DMs and mentions; no full directory crawl.
 ```
 
 
@@ -143,7 +137,7 @@ last_updated: YYYY-MM-DD
 
 ### 5) Generate and save use cases
 
-From the gathered data, identify 3 high-impact personalized use cases.
+From readable evidence, identify up to 3 high-impact personalized use cases. With no useful data, save none.
 
 **Quality criteria** (from [rebel-os-use-case-finder](../../operations/rebel-os-use-case-finder/SKILL.md)):
 - Title: Clear, action-oriented (5-8 words)
@@ -167,16 +161,16 @@ If `rebel_usecases_add` unavailable, output JSON for manual saving.
 
 ### 6) Seed Actions across all quadrants
 
-From potential_tasks, active_threads, mentions, and upcoming meetings, create 5-12 action items distributed across the Eisenhower grid.
+From potential_tasks, active_threads, mentions, and recent meetings, create 5-12 action items distributed across the Eisenhower grid.
 
 **Do Now** (urgent=true, important=true):
 - Email requiring response today from key stakeholder
-- Meeting in next 24 hours needing prep
+- Follow-up from a recent meeting with an explicit deadline
 - Explicit request with tight deadline
 
 **Schedule** (urgent=false, important=true):
 - Strategic thread to engage with this week
-- Upcoming external meeting (2-7 days out) needing prep
+- Follow-up from a recent external meeting needing thought
 - Important project update to review and respond to
 - Relationship-building outreach to prioritize
 
@@ -224,7 +218,7 @@ End with this exact marker so the UI knows discovery is complete:
 ## Important
 
 - Launch subagents in parallel (except Slack - sequence due to rate limits)
-- Never ask questions or wait for confirmation
+- Never ask coaching questions; honour any approval required by the bands
 - Speed over completeness - 2-3 minutes target
 - Only write to Chief-of-Staff space
 - If a tool fails, continue with others
@@ -232,5 +226,5 @@ End with this exact marker so the UI knows discovery is complete:
 - Use cases must feel personalized (specific names, not generic)
 - Action items should span all four quadrants, not just one
 - Always call `rebel_user_identity_set` if name/email discovered
-- Always call `rebel_usecases_add` with at least 3 use cases
+- Call `rebel_usecases_add` only for evidenced use cases; never fill a quota
 - Always call `rebel_inbox_add` for each discovered task (5-12 items typical)
